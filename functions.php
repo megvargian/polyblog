@@ -128,10 +128,10 @@ function wp_bootstrap_starter_scripts() {
 
     // ============= Load Custom stylesheets =============
 
-    wp_enqueue_style( 'host2media-swiper', get_template_directory_uri() . '/inc/assets/css/swiper.min.css' );
+    wp_enqueue_style( 'polyblog-swiper', get_template_directory_uri() . '/inc/assets/css/swiper.min.css' );
 
-    wp_enqueue_style( 'host2media-custom_style', get_template_directory_uri() . '/inc/assets/css/custom_style.css', array(), '1.39' );
-    wp_enqueue_style( 'host2media-responsive_style', get_template_directory_uri() . '/inc/assets/css/responsive.css', array(), '1.39' );
+    wp_enqueue_style( 'polyblog-custom_style', get_template_directory_uri() . '/inc/assets/css/custom_style.css', array(), '1.39' );
+    wp_enqueue_style( 'polyblog-responsive_style', get_template_directory_uri() . '/inc/assets/css/responsive.css', array(), '1.39' );
 
 	wp_enqueue_script('jquery');
 
@@ -145,7 +145,7 @@ function wp_bootstrap_starter_scripts() {
 
     // ========================================================================
     // Add all custom js libraries here
-    wp_enqueue_script('host2media-swiper-js', get_template_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '1', true );
+    wp_enqueue_script('polyblog-swiper-js', get_template_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '1', true );
 
     // jquery visibale
     wp_enqueue_script('queryvisible-js', get_template_directory_uri() . '/inc/assets/js/jquery.visible.js', array(), '1', true );
@@ -209,12 +209,12 @@ function search_domain_name(WP_REST_Request $request) {
 		'live' => [
 			'api_host_port' => 'https://rr-n1-tor.opensrs.net:55443',
 			'api_key' => '09310c1df9fc9e782f45eb770eb6d174407c573e0f565e9bf406d1dfe74d23ca56049f7f3a1cad1fa1155fa250e1c6f4980e4649f9b34fa7',
-			'reseller_username' => 'host2media'
+			'reseller_username' => 'polyblog'
 		],
 		'test' => [
 			'api_host_port' => 'https://horizon.opensrs.net:55443',
 			'api_key' => '09310c1df9fc9e782f45eb770eb6d174407c573e0f565e9bf406d1dfe74d23ca56049f7f3a1cad1fa1155fa250e1c6f4980e4649f9b34fa7',
-			'reseller_username' => 'host2media'
+			'reseller_username' => 'polyblog'
 		]
 	];
 

@@ -24,13 +24,13 @@
 <div id="page" class="site main_page_wrapper">
 	<script>
 		jQuery(document).ready(function($) {
-			fetch('https://ap.host2media.com/wp-json/api/v1/search-domain/', {
+			fetch('https://ap.polyblog.com/wp-json/api/v1/search-domain/', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					domain_name: 'host2media.com'
+					domain_name: 'polyblog.com'
 				})
 			})
 			.then(response => response.json())
