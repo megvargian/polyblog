@@ -1,1 +1,1 @@
-# polyblog-cms
+# polyblog
