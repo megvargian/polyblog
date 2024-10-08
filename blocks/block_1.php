@@ -15,3 +15,7 @@ $homepage_first_block = get_fields();
         </div>
     </div>
 </div>
+
+<?php foreach ($homepage_first_block['news_posts_list'] as $post) {
+    print_r($post);
+} ?>
