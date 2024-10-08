@@ -186,3 +186,24 @@ function gutenberg_editor_assets() {
 }
 // Add backend styles for Gutenberg.
 add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types()
+{
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+        // register a testimonial block.
+        // the first one is a demo
+        acf_register_block_type(
+            array(
+                'name'              => 'Block1',
+                'title'             => __('Block1'),
+                'description'       => __('This is the first Block of Homepage'),
+                'render_template'   => 'blocks/block_1.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
+	}
+}
