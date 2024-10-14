@@ -205,5 +205,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Bg Image Block',
+                'title'             => __('Bg Image Block'),
+                'description'       => __('This is the Background Image Block of Homepage'),
+                'render_template'   => 'blocks/bg_img_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
