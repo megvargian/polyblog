@@ -24,18 +24,6 @@
 <div id="page" class="site main_page_wrapper">
 	<script>
 		jQuery(document).ready(function($) {
-			fetch('https://ap.polyblog.com/wp-json/api/v1/search-domain/', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					domain_name: 'polyblog.com'
-				})
-			})
-			.then(response => response.json())
-			.then(data => console.log(data))
-			.catch(error => console.error('Error:', error));
         });
     </script>
 	<div id="content" class="site-content">

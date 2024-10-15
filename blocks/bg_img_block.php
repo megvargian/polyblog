@@ -5,7 +5,7 @@
 
 $bg_img_block = get_fields();
 ?>
-<section class="py-3">
+<section class="">
     <?php if($bg_img_block['main_image_url']) {?>
         <a href="<?php echo $bg_img_block['main_image_url'] ?>">
             <img class="w-100" src="<?php echo $bg_img_block['main_image']; ?>" alt="">
