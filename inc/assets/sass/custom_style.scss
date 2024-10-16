@@ -166,17 +166,23 @@ body.hide_scroll{
 
 	.youtube-featured-videos-row {
 		padding: 25px;
+		color: #fff;
+		font-size: 1.4em;
 
-		.youtube-featured-video-thumbnail{
-			padding: 10px 0;
-			border-radius: 25px;
-			opacity: 1;
-			transition: 0.3s ease-in-out;
-		}
-		
-		.youtube-featured-video-thumbnail:hover {
-			opacity: 0.8;
-			transition: 0.3s;
-		}
+		.youtube-featured-vid-button-col {
+			align-content: center;
+
+			.youtube-featured-video-thumbnail{
+				padding: 10px 0;
+				border-radius: 25px;
+				opacity: 1;
+				transition: 0.3s ease-in-out;
+			}
+			
+			.youtube-featured-video-thumbnail:hover {
+				opacity: 0.8;
+				transition: 0.3s;
+			}
+		}		
 	}
 }
