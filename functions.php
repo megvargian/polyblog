@@ -226,6 +226,6 @@ function my_acf_init_block_types()
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
-        )
+            );
 	}
 }
