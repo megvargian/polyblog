@@ -17,7 +17,7 @@ $yt_playlist_block = get_fields();
     }
 </style>
 <section class="">
-    <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['yt_playlist_link'] ?>">
+    <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['yt_playlist_link'] ?>" target="_blank">
         <img class="w-100 d-block" src="<?php echo $yt_playlist_block['yt_playlist_image']; ?>" alt="YouTube">
     </a>
 </section>
