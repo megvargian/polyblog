@@ -5,19 +5,25 @@
 
 $yt_playlist_block = get_fields();
 ?>
-<style>
-    .youtube_playlist_img {
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-    }
-
-    .youtube_playlist_img:hover {
-        opacity: 0.8;
-        transition: 0.3s;
-    }
-</style>
-<section class="">
-    <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['yt_playlist_link'] ?>" target="_blank">
-        <img class="w-100 d-block" src="<?php echo $yt_playlist_block['yt_playlist_image']; ?>" alt="YouTube">
-    </a>
-</section>
+<div class="container w-100 youtube-playlist-bg">
+    <div class="row">
+        <div class="col">
+            <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
+                <img src="<?php echo $yt_playlist_block['title']; ?>" alt="YouTube">
+            </a>
+        </div>
+        <div class="col">
+            <a href="<?php echo $yt_playlist_block['yt_link'] ?>" target="_blank">
+                <img src="http://polybloglb.com/wp-content/uploads/2024/10/clickformore.jpg" alt="YouTube">
+            </a>
+        </div>
+        <div class="col">
+            <img src="<?php echo $yt_playlist_block['yt_image']; ?>" alt="YouTube">
+        </div>
+        <div class="col">
+            <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['episodes_link'] ?>" target="_blank">
+                <img src="<?php echo $yt_playlist_block['episodes']; ?>" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</div>
