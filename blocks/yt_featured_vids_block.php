@@ -28,6 +28,5 @@ $yt_featured_vids_block = get_fields();
             <?php echo $yt_featured_vids_block['text_bottom'] ?>
             </p>
         </div>
-        <div class="col"></div>
     </div>
 </section>
