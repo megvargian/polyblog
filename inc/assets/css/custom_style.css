@@ -213,7 +213,7 @@ body.hide_scroll {
   color: #d09615;
 }
 
-.youtube-playlist-button {
+.youtube-playlist-button-col {
   align-content: center;
 }
 
@@ -221,12 +221,17 @@ body.hide_scroll {
   background-color: #3a1dd9;
 }
 
-.youtube_playlist_img {
+.youtube_featured_image {
+  padding: 12px 0;
+  border-radius: 66px;
+}
+
+.youtube-playlist-btn {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
 
-.youtube_playlist_img:hover {
+.youtube-playlist-btn:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
