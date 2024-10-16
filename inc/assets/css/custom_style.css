@@ -239,14 +239,16 @@ body.hide_scroll {
 .youtube-featured-vids-bg {
   background-color: #000;
 }
-
-.youtube-featured-video-thumbnail {
+.youtube-featured-vids-bg .youtube-featured-videos-row {
+  padding: 25px;
+}
+.youtube-featured-vids-bg .youtube-featured-videos-row .youtube-featured-video-thumbnail {
+  padding: 10px 0;
   border-radius: 25px;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-
-.youtube-featured-video-thumbnail:hover {
+.youtube-featured-vids-bg .youtube-featured-videos-row .youtube-featured-video-thumbnail:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
