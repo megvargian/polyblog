@@ -14,7 +14,7 @@ $yt_playlist_block = get_fields();
         </div>
         <div class="col">
             <a href="<?php echo $yt_playlist_block['yt_link'] ?>" target="_blank">
-                <img src="http://polybloglb.com/wp-content/uploads/2024/10/clickformore.jpg" alt="YouTube">
+                <img src="http://polybloglb.com/wp-content/uploads/2024/10/clickformore.png" alt="YouTube">
             </a>
         </div>
         <div class="col">
