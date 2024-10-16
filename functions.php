@@ -227,5 +227,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
             );
+            acf_register_block_type(
+                array(
+                    'name'              => 'YouTube Featured Videos Block',
+                    'title'             => __('YouTube Featured Videos Block'),
+                    'description'       => __('This is the YouTube Featured Videos Block of Homepage'),
+                    'render_template'   => 'blocks/yt_featured_vids_block.php',
+                    'category'          => 'formatting',
+                    'icon'              => 'admin-comments',
+                    'keywords'          => array('testimonial', 'quote'),
+                )
+                );
 	}
 }

@@ -160,3 +160,18 @@ body.hide_scroll{
 	opacity: 0.8;
 	transition: 0.3s;
 }
+
+.youtube-featured-vids-bg {
+	background-color: #000;
+}
+
+.youtube-featured-video-thumbnail{
+	border-radius: 25px;
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+}
+
+.youtube-featured-video-thumbnail:hover {
+	opacity: 0.8;
+	transition: 0.3s;
+}
