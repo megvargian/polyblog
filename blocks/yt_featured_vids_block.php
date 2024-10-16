@@ -19,7 +19,7 @@ $yt_featured_vids_block = get_fields();
             </a>
             <p><?php echo $yt_featured_vids_block['title_2'] ?></p>
         </div>
-        <div class="col">
+        <div class="col youtube-featured-vid-texts-col">
             <p>
             <?php echo $yt_featured_vids_block['text_top'] ?>
             </p>

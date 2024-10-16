@@ -257,3 +257,9 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.youtube-featured-vids-bg .youtube-featured-videos-row .youtube-featured-vid-texts-col {
+  align-content: space-around;
+}
+.youtube-featured-vids-bg .youtube-featured-videos-row .youtube-featured-vid-texts-col p {
+  margin-bottom: 50px;
+}
