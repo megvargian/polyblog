@@ -213,6 +213,10 @@ body.hide_scroll {
   color: #d09615;
 }
 
+.youtube-playlist-button {
+  align-content: center;
+}
+
 .youtube-playlist-bg {
   background-color: #3a1dd9;
 }
