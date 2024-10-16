@@ -7,7 +7,7 @@ $yt_featured_vids_block = get_fields();
 ?>
 <section class="w-100 youtube-featured-vids-bg">
     <div class="row youtube-featured-videos-row">
-        <div class="col"></div>
+        <div class="col-2"></div>
         <div class="col youtube-featured-vid-button-col">
             <a href="<?php echo $yt_featured_vids_block['link_1'] ?>" target="_blank">
                 <img class="youtube-featured-video-thumbnail" src="<?php echo $yt_featured_vids_block['thumbnail_1']; ?>" alt="YouTube">
