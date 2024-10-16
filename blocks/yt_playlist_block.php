@@ -5,7 +5,7 @@
 
 $yt_playlist_block = get_fields();
 ?>
-<div class="container w-100 youtube-playlist-bg">
+<section class="w-100 youtube-playlist-bg">
     <div class="row">
         <div class="col">
             <a class="youtube_playlist_img" href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
@@ -26,4 +26,4 @@ $yt_playlist_block = get_fields();
             </a>
         </div>
     </div>
-</div>
+</section>
