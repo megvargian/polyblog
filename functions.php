@@ -216,5 +216,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'YouTube Playlist Block',
+                'title'             => __('YouTube Playlist Block'),
+                'description'       => __('This is the YouTube Playlist Block of Homepage'),
+                'render_template'   => 'blocks/yt_playlist_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        )
 	}
 }
