@@ -211,6 +211,26 @@ body.hide_scroll{
 		text-transform: uppercase;
 	}
 	.custom-rotate{
-		writing-mode: vertical-lr;
+		display: flex;
+		gap: 10px;
+		button{
+			padding: 1rem .5rem;
+			border: 1px solid $sec_color;
+			width: 100%;
+			font-size: 20px;
+			color: $sec_color;
+			background-color: #000;
+			border-radius: 35px;
+			margin-bottom: 10px;
+			text-align: left;
+			text-transform: uppercase;
+			display: flex;
+			justify-content: start;
+			align-items: start;
+			cursor: pointer;
+			transform: rotate(-90deg); /* Rotates the button text */
+			transform-origin: start;
+			writing-mode: vertical-lr; /* Makes text vertical */
+		}
 	}
 }
