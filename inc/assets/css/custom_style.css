@@ -300,3 +300,7 @@ body.hide_scroll {
   color: #000 !important;
   writing-mode: horizontal-tb;
 }
+.footer-container .custom-width {
+  width: 13rem;
+  margin-left: 6px;
+}

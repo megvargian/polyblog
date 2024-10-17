@@ -11,7 +11,7 @@
 ?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="bg-black footer-container py-4">
+<footer class="bg-black footer-container py-5">
     <div class="container pt-3">
         <div class="row justify-content-center">
             <div class="col-8">
@@ -50,7 +50,7 @@
                             </button>
                         </div>
                         <div class="row">
-                            <button class="full text-center">Donate</button>
+                            <button class="full text-center custom-width">Donate</button>
                         </div>
                     </div>
                 </div>
