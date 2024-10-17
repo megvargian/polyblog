@@ -78,7 +78,7 @@ p {
 
 body {
   color: #000;
-  font-family: "montserrat-regular";
+  font-family: "Vazirmatn-Regular";
   background-color: #fff;
   overflow: auto;
   overflow-x: hidden !important;
@@ -262,6 +262,7 @@ body.hide_scroll {
 
 .footer-container {
   background-color: #000;
+  font-family: "Lexend-Bold";
 }
 .footer-container button {
   padding: 1rem 0.5rem;
@@ -276,9 +277,5 @@ body.hide_scroll {
   text-transform: uppercase;
 }
 .footer-container .custom-rotate {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  writing-mode: vertical-lr;
 }

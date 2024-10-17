@@ -206,3 +206,40 @@ td,
 th {
   padding: 0;
 }
+
+@font-face {
+	font-family: 'Lexend-Bold';
+	src:  url('inc/assets/fonts/Lexend-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lexend-Light';
+	src:  url('inc/assets/fonts/Lexend-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lexend-Regular';
+	src:  url('inc/assets/fonts/Lexend-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vazirmatn-Bold';
+	src:  url('inc/assets/fonts/Vazirmatn-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vazirmatn-Light';
+	src:  url('inc/assets/fonts/Vazirmatn-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vazirmatn-Regular';
+	src:  url('inc/assets/fonts/Vazirmatn-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
