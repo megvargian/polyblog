@@ -204,6 +204,16 @@ body.hide_scroll{
 		font-size: 20px;
 		color: $sec_color;
 		background-color: #000;
-		border-radius: 20px;
+		border-radius: 35px;
+		margin-bottom: 10px;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.custom-rotate{
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 }
