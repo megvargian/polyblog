@@ -199,8 +199,8 @@ body.hide_scroll{
 	background-color: #000;
 	font-family: $en-bold;
 	button{
-		padding: 1rem .5rem;
-		border: 1px solid $sec_color;
+		padding: 1rem .8rem;
+		border: 2px solid $sec_color;
 		width: 100%;
 		font-size: 20px;
 		color: $sec_color;
@@ -214,23 +214,22 @@ body.hide_scroll{
 		display: flex;
 		gap: 10px;
 		button{
-			padding: 1rem .5rem;
-			border: 1px solid $sec_color;
+			padding: 1rem .8rem;
+			border: 2px solid $sec_color;
 			width: 100%;
 			font-size: 20px;
 			color: $sec_color;
 			background-color: #000;
 			border-radius: 35px;
-			margin-bottom: 10px;
 			text-align: left;
 			text-transform: uppercase;
-			display: flex;
-			justify-content: start;
-			align-items: start;
 			cursor: pointer;
-			transform: rotate(-90deg); /* Rotates the button text */
-			transform-origin: start;
 			writing-mode: vertical-lr; /* Makes text vertical */
+			width: fit-content;
+		}
+		.full{
+			background-color: $sec_color !important;
+			color: #000 !important;
 		}
 	}
 }

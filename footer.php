@@ -13,10 +13,10 @@
 </div><!-- #page -->
 <footer class="bg-black footer-container py-4">
     <div class="container pt-3">
-        <div class="row">
-            <div class="col-10">
+        <div class="row justify-content-center">
+            <div class="col-8">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-8 px-1">
                         <button>
                             about us
                         </button>
@@ -24,18 +24,28 @@
                             Editorial line
                         </button>
                         <button>
-                            Join our collection
+                            Join our collective
                         </button>
+                        <div class="row">
+                            <div class="col-6">
+                                <button>
+                                    contact us
+                                </button>
+                                <button class="full">
+                                    Be our advocate
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4 custom-rotate d-flex">
+                    <div class="col-4 px-1 custom-rotate d-flex">
                         <button>
-                            Causes
+                            Mission
                         </button>
                         <button>
                             Vision
                         </button>
                         <button>
-                            Mission
+                            Causes
                         </button>
                     </div>
                 </div>
