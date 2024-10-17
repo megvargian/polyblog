@@ -14,16 +14,31 @@
 <footer class="bg-black footer-container">
     <div class="container pt-3">
         <div class="row">
-            <div class="col-8">
-                <button>
-                    about us
-                </button>
-                <button>
-                    Editorial line
-                </button>
-                <button>
-                    Join our collection
-                </button>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-8">
+                        <button>
+                            about us
+                        </button>
+                        <button>
+                            Editorial line
+                        </button>
+                        <button>
+                            Join our collection
+                        </button>
+                    </div>
+                    <div class="col-4 custom-rotate d-flex">
+                        <button>
+                            Causes
+                        </button>
+                        <button>
+                            Vision
+                        </button>
+                        <button>
+                            Mission
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
