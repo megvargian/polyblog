@@ -231,5 +231,6 @@ body.hide_scroll{
 	.full{
 		background-color: $sec_color !important;
 		color: #000 !important;
+		writing-mode: horizontal-tb;
 	}
 }

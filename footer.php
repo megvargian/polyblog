@@ -37,16 +37,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 px-1 custom-rotate">
-                        <button>
-                            Mission
-                        </button>
-                        <button>
-                            Vision
-                        </button>
-                        <button>
-                            Causes
-                        </button>
+                    <div class="col-4 px-1">
+                        <div class="custom-rotate">
+                            <button>
+                                Mission
+                            </button>
+                            <button>
+                                Vision
+                            </button>
+                            <button>
+                                Causes
+                            </button>
+                        </div>
                         <div class="row">
                             <button class="full">Donate</button>
                         </div>
