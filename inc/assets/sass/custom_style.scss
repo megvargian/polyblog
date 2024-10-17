@@ -197,7 +197,7 @@ body.hide_scroll{
 //footer
 .footer-container{
 	background-color: #000;
-	font-family: $en-bold;
+	font-family: $en-regular;
 	button{
 		padding: 1rem .8rem;
 		border: 2px solid $sec_color;
@@ -226,6 +226,7 @@ body.hide_scroll{
 			cursor: pointer;
 			writing-mode: vertical-lr; /* Makes text vertical */
 			width: fit-content;
+			height: 23rem;
 		}
 	}
 	.full{

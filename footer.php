@@ -50,7 +50,7 @@
                             </button>
                         </div>
                         <div class="row">
-                            <button class="full">Donate</button>
+                            <button class="full text-center">Donate</button>
                         </div>
                     </div>
                 </div>
