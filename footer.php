@@ -11,7 +11,7 @@
 ?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="bg-black footer-container">
+<footer class="bg-black footer-container py-4">
     <div class="container pt-3">
         <div class="row">
             <div class="col-10">

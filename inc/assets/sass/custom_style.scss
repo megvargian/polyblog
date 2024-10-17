@@ -66,7 +66,7 @@ p{
 }
 body{
 	color: $text_black;
-	font-family: $montserrat-regular;
+	font-family: $ar-regular;
 	background-color: $text_white;
 	overflow: auto;
 	overflow-x: hidden !important;
@@ -197,6 +197,7 @@ body.hide_scroll{
 //footer
 .footer-container{
 	background-color: #000;
+	font-family: $en-bold;
 	button{
 		padding: 1rem .5rem;
 		border: 1px solid $sec_color;
@@ -210,10 +211,6 @@ body.hide_scroll{
 		text-transform: uppercase;
 	}
 	.custom-rotate{
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-ms-transform: rotate(90deg);
-		transform: rotate(90deg);
+		writing-mode: vertical-lr;
 	}
 }
