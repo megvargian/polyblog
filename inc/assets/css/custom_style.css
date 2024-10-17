@@ -260,7 +260,10 @@ body.hide_scroll {
   margin-bottom: 50px;
 }
 
-.footer-conatainer button {
+.footer-container {
+  background-color: #000;
+}
+.footer-container button {
   padding: 1rem 0.5rem;
   border: 1px solid #87ed06;
   width: 100%;
