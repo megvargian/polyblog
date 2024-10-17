@@ -210,28 +210,24 @@ body.hide_scroll {
   animation: fa-beat 1.2s ease infinite;
   display: inline-block;
   padding: 0px 5px 0px 4px;
-  color: #d09615;
-}
-
-.youtube-playlist-button-col {
-  align-content: center;
+  color: #87ed06;
 }
 
 .youtube-playlist-bg {
   background-color: #3a1dd9;
 }
-
-.youtube_featured_image {
+.youtube-playlist-bg .youtube-playlist-button-col {
+  align-content: center;
+}
+.youtube-playlist-bg .youtube-playlist-button-col .youtube_featured_image {
   padding: 12px 0;
   border-radius: 66px;
 }
-
-.youtube-playlist-btn {
+.youtube-playlist-bg .youtube-playlist-button-col .youtube-playlist-btn {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-
-.youtube-playlist-btn:hover {
+.youtube-playlist-bg .youtube-playlist-button-col .youtube-playlist-btn:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
@@ -262,4 +258,14 @@ body.hide_scroll {
 }
 .youtube-featured-vids-bg .youtube-featured-videos-row .youtube-featured-vid-texts-col p {
   margin-bottom: 50px;
+}
+
+.footer-conatainer button {
+  padding: 1rem 0.5rem;
+  border: 1px solid #87ed06;
+  width: 100%;
+  font-size: 20px;
+  color: #87ed06;
+  background-color: #000;
+  border-radius: 20px;
 }

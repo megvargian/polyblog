@@ -138,8 +138,6 @@ body.hide_scroll{
 	color: $sec_color;
 }
 
-
-
 .youtube-playlist-bg {
 	background-color: #3a1dd9;
 
@@ -150,12 +148,12 @@ body.hide_scroll{
 			padding: 12px 0;
 			border-radius: 66px;
 		}
-		
+
 		.youtube-playlist-btn {
 			opacity: 1;
 			transition: 0.3s ease-in-out;
 		}
-		
+
 		.youtube-playlist-btn:hover {
 			opacity: 0.8;
 			transition: 0.3s;
@@ -180,7 +178,7 @@ body.hide_scroll{
 				opacity: 1;
 				transition: 0.3s ease-in-out;
 			}
-			
+
 			.youtube-featured-video-thumbnail:hover {
 				opacity: 0.8;
 				transition: 0.3s;
@@ -194,5 +192,17 @@ body.hide_scroll{
 				margin-bottom: 50px;
 			}
 		}
+	}
+}
+//footer
+.footer-conatainer{
+	button{
+		padding: 1rem .5rem;
+		border: 1px solid $sec_color;
+		width: 100%;
+		font-size: 20px;
+		color: $sec_color;
+		background-color: #000;
+		border-radius: 20px;
 	}
 }
