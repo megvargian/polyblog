@@ -265,8 +265,8 @@ body.hide_scroll {
   font-family: "Lexend-Bold";
 }
 .footer-container button {
-  padding: 1rem 0.5rem;
-  border: 1px solid #87ed06;
+  padding: 1rem 0.8rem;
+  border: 2px solid #87ed06;
   width: 100%;
   font-size: 20px;
   color: #87ed06;
@@ -281,21 +281,20 @@ body.hide_scroll {
   gap: 10px;
 }
 .footer-container .custom-rotate button {
-  padding: 1rem 0.5rem;
-  border: 1px solid #87ed06;
+  padding: 1rem 0.8rem;
+  border: 2px solid #87ed06;
   width: 100%;
   font-size: 20px;
   color: #87ed06;
   background-color: #000;
   border-radius: 35px;
-  margin-bottom: 10px;
   text-align: left;
   text-transform: uppercase;
-  display: flex;
-  justify-content: start;
-  align-items: start;
   cursor: pointer;
-  transform: rotate(-90deg); /* Rotates the button text */
-  transform-origin: start;
   writing-mode: vertical-lr; /* Makes text vertical */
+  width: fit-content;
+}
+.footer-container .custom-rotate .full {
+  background-color: #87ed06 !important;
+  color: #000 !important;
 }
