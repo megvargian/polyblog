@@ -38,17 +38,15 @@
                         </div>
                     </div>
                     <div class="col-4 px-1">
-                        <div class="custom-rotate d-flex">
-                            <button>
-                                Mission
-                            </button>
-                            <button>
-                                Vision
-                            </button>
-                            <button>
-                                Causes
-                            </button>
-                        </div>
+                        <button>
+                            Mission
+                        </button>
+                        <button>
+                            Vision
+                        </button>
+                        <button>
+                            Causes
+                        </button>
                         <div class="row">
                             <button class="full">Donate</button>
                         </div>
