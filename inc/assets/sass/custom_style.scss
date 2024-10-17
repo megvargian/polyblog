@@ -227,9 +227,9 @@ body.hide_scroll{
 			writing-mode: vertical-lr; /* Makes text vertical */
 			width: fit-content;
 		}
-		.full{
-			background-color: $sec_color !important;
-			color: #000 !important;
-		}
+	}
+	.full{
+		background-color: $sec_color !important;
+		color: #000 !important;
 	}
 }

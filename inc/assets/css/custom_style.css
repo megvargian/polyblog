@@ -294,7 +294,7 @@ body.hide_scroll {
   writing-mode: vertical-lr; /* Makes text vertical */
   width: fit-content;
 }
-.footer-container .custom-rotate .full {
+.footer-container .full {
   background-color: #87ed06 !important;
   color: #000 !important;
 }
