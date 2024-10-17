@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 px-1">
+                    <div class="col-4 px-1 custom-rotate">
                         <button>
                             Mission
                         </button>
