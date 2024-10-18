@@ -312,11 +312,11 @@ body.hide_scroll {
 .custom-modal .modal-body {
   background-color: #171717;
   border: 3px solid #87ed06;
-  border-radius: 20px;
+  border-radius: 50px;
   color: #fff;
   font-family: "Lexend-Regular";
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
 }
 .custom-modal .modal-header {
