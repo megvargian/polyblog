@@ -291,6 +291,9 @@ body.hide_scroll{
 		margin-bottom: 5px;
 		text-transform: uppercase;
 	}
+	::placeholder {
+	color: #fff;
+	}
 }
 // message-for-editor-section
 .message-for-editor-section{

@@ -352,6 +352,9 @@ body.hide_scroll {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+.contact-us-section ::placeholder {
+  color: #fff;
+}
 
 .message-for-editor-section .container-fluid {
   background-color: #ec4100;
