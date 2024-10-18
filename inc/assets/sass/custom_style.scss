@@ -292,12 +292,13 @@ body.hide_scroll{
 		text-transform: uppercase;
 		color: #fff;
 	}
-	::placeholder {
+	input::placeholder {
 		color: #fff;
 	}
 	.custom-text-size-for-placeholder{
-		::placeholder{
+		input::placeholder{
 			font-size: 5rem;
+			white-space: pre-line;
 		}
 	}
 }

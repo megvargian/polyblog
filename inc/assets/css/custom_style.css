@@ -353,11 +353,12 @@ body.hide_scroll {
   text-transform: uppercase;
   color: #fff;
 }
-.contact-us-section ::placeholder {
+.contact-us-section input::placeholder {
   color: #fff;
 }
-.contact-us-section .custom-text-size-for-placeholder ::placeholder {
+.contact-us-section .custom-text-size-for-placeholder input::placeholder {
   font-size: 5rem;
+  white-space: pre-line;
 }
 
 .message-for-editor-section .container-fluid {
