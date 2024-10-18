@@ -220,12 +220,10 @@ body.hide_scroll {
 }
 .header-container .video-container {
   flex-grow: 1;
+  position: relative;
 }
 .header-container .video-container .video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  object-fit: cover;
 }
 
 .youtube-playlist-bg {
