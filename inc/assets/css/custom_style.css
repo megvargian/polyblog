@@ -341,7 +341,7 @@ body.hide_scroll {
   font-family: "Lexend-Bold";
   color: #fff;
 }
-.contact-us-section input {
+.contact-us-section input, .contact-us-section textarea {
   font-family: "Lexend-Bold";
   background-color: #171717;
   width: 100%;
