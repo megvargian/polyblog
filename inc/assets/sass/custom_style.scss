@@ -138,6 +138,16 @@ body.hide_scroll{
 	color: $sec_color;
 }
 
+.header-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	.video-container {
+		flex-grow: 1;
+	}
+}
+
 .youtube-playlist-bg {
 	background-color: #3a1dd9;
 
