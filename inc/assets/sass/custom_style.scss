@@ -257,6 +257,27 @@ body.hide_scroll{
 		margin-left: 6px;
 	}
 }
+// message-for-editor-section
+.message-for-editor-section{
+	.container-fluid{
+		background-color: #ec4100;
+		p{
+			color: #fff;
+			font-size: 1.2rem;
+		}
+		.ar{
+			text-align: right;
+		}
+		.en{
+			text-align: left;
+		}
+		img{
+			border-radius: 100%;
+			border: 2px solid #000;
+		};
+	}
+}
+
 // make modal different for footer
 .custom-modal{
 	.modal-content{
