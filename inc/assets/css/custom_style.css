@@ -342,6 +342,7 @@ body.hide_scroll {
 .message-for-editor-section .container-fluid p {
   color: #fff;
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 .message-for-editor-section .container-fluid .ar {
   text-align: right;
