@@ -233,6 +233,14 @@ body.hide_scroll {
   bottom: 50px;
   margin: 0 25px;
 }
+.header-container .video-container .header-button-container img {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.header-container .video-container .header-button-container img:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 
 .youtube-playlist-bg {
   background-color: #3a1dd9;

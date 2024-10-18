@@ -158,6 +158,16 @@ body.hide_scroll{
 			position: absolute;
 			bottom: 50px;
 			margin: 0 25px;
+
+			img {
+				opacity: 1;
+				transition: 0.3s ease-in-out;
+			}
+	
+			img:hover {
+				opacity: 0.8;
+				transition: 0.3s;
+			}
 		}
 	}
 }
