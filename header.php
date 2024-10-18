@@ -27,3 +27,4 @@
         });
     </script>
 	<div id="content" class="site-content">
+	<img class="w-100 d-block" src="http://polybloglb.com/wp-content/uploads/2024/10/politics_not_news.png" alt="Politics, not news.">
