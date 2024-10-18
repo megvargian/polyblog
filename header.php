@@ -30,6 +30,9 @@
 	<div class="header-container">
 		<img class="w-100 d-block" src="http://polybloglb.com/wp-content/uploads/2024/10/politics_not_news.png" alt="Politics, not news.">
 		<div class="video-container">
-			test
+			<video class="video" muted>
+				<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+			</video>
 		</div>
 	</div>
