@@ -8,7 +8,7 @@ $message_from_deitor_fields = get_fields();
 <section class="message-for-editor-section">
     <div class="container">
         <div class="row">
-            <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/message_from_directo_bannerr.png.png" class="w-100 d-block" src="" alt="message_from_directo_bannerr">
+            <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/message_from_directo_bannerr.png" alt="message_from_directo_bannerr">
         </div>
     </div>
     <div class="container-fluid py-4 px-4">
