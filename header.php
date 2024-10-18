@@ -8,6 +8,9 @@
  *
  * @package WP_Bootstrap_Starter
  */
+
+$header_video_url = get_field('header_video', 'option');
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -31,7 +34,7 @@
 		<img class="w-100 d-block" src="http://polybloglb.com/wp-content/uploads/2024/10/politics_not_news.png" alt="Politics, not news.">
 		<div class="video-container">
 			<video class="video" width="100%" height="100%" autoplay loop muted>
-				<source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+				<source src="<?php echo esc_url($header_video_url); ?>" type="video/mp4">
 					Your browser does not support the video tag.
 			</video>
 		</div>
