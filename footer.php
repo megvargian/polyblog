@@ -17,7 +17,7 @@
             <div class="col-8">
                 <div class="row">
                     <div class="col-8 px-1">
-                        <button>
+                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
                         </button>
                         <button>
@@ -61,6 +61,18 @@
         </div>
     </div>
 </footer>
+<div class="modal fade" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit. Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus quaerat!
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     jQuery(document).ready(function($) {
     });
