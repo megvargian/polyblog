@@ -321,6 +321,24 @@ body.hide_scroll {
   margin-left: 6px;
 }
 
+.message-for-editor-section .container-fluid {
+  background-color: #ec4100;
+}
+.message-for-editor-section .container-fluid p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.message-for-editor-section .container-fluid .ar {
+  text-align: right;
+}
+.message-for-editor-section .container-fluid .en {
+  text-align: left;
+}
+.message-for-editor-section .container-fluid img {
+  border-radius: 100%;
+  border: 2px solid #000;
+}
+
 .custom-modal .modal-content {
   background-color: transparent;
   border-radius: 20px;
