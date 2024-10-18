@@ -1,6 +1,6 @@
 <?php
 /**
- * HomePage Bg Image Block Template
+ * HomePage message from editor Block Template
  */
 
 $message_from_deitor_fields = get_fields();
