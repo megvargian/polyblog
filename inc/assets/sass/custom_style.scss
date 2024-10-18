@@ -290,13 +290,14 @@ body.hide_scroll{
 		padding: 1rem .8rem;
 		margin-bottom: 5px;
 		text-transform: uppercase;
+		color: #fff;
 	}
 	::placeholder {
 		color: #fff;
 	}
 	.custom-text-size-for-placeholder{
 		::placeholder{
-			font-size: 20rem;
+			font-size: 10rem;
 		}
 	}
 }

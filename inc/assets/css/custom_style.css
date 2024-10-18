@@ -351,12 +351,13 @@ body.hide_scroll {
   padding: 1rem 0.8rem;
   margin-bottom: 5px;
   text-transform: uppercase;
+  color: #fff;
 }
 .contact-us-section ::placeholder {
   color: #fff;
 }
 .contact-us-section .custom-text-size-for-placeholder ::placeholder {
-  font-size: 20rem;
+  font-size: 10rem;
 }
 
 .message-for-editor-section .container-fluid {
