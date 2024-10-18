@@ -239,3 +239,23 @@ body.hide_scroll{
 		margin-left: 6px;
 	}
 }
+// make modal different for footer
+.custom-modal{
+	.modal-content{
+		background-color: #171717;
+		border: 2px solid $sec_color;
+		border-radius: 20px;
+	}
+	.modal-body{
+		color: #fff;
+		font-family: $en-regular;
+		font-size: 1rem;
+	}
+	.modal-header{
+		border: none !important;
+		.btn-close{
+			opacity: 1;
+			color: $sec_color;
+		}
+	}
+}

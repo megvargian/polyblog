@@ -61,7 +61,7 @@
         </div>
     </div>
 </footer>
-<div class="modal fade" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
+<div class="modal fade custom-modal" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">

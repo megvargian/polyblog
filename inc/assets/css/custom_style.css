@@ -304,3 +304,21 @@ body.hide_scroll {
   width: 13rem;
   margin-left: 6px;
 }
+
+.custom-modal .modal-content {
+  background-color: #171717;
+  border: 2px solid #87ed06;
+  border-radius: 20px;
+}
+.custom-modal .modal-body {
+  color: #fff;
+  font-family: "Lexend-Regular";
+  font-size: 1rem;
+}
+.custom-modal .modal-header {
+  border: none !important;
+}
+.custom-modal .modal-header .btn-close {
+  opacity: 1;
+  color: #87ed06;
+}
