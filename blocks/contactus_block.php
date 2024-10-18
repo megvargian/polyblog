@@ -25,7 +25,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="Links to previous writings if present" required>
                 </div>
                 <div class="col-6 custom-text-size-for-placeholder">
-                    <input class="h-100" type="text" placeholder="Write your pitch here">
+                    <input class="h-100" type="text" placeholder="Write&#10;your&#10;pitch&#10;here">
                 </div>
             </div>
         </form>
