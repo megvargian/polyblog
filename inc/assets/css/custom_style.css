@@ -232,6 +232,7 @@ body.hide_scroll {
   position: absolute;
   bottom: 50px;
   margin: 0 25px;
+  width: fill-available;
 }
 .header-container .video-container .header-button-container img {
   opacity: 1;
