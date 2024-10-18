@@ -165,7 +165,7 @@ body.hide_scroll{
 				opacity: 1;
 				transition: 0.3s ease-in-out;
 			}
-	
+
 			img:hover {
 				opacity: 0.8;
 				transition: 0.3s;
@@ -273,6 +273,23 @@ body.hide_scroll{
 	.custom-width{
 		width: 13rem;
 		margin-left: 6px;
+	}
+}
+// contact us block
+.contact-us-section{
+	background-color: #171717;
+	font-family: $en-bold;
+	color: #fff;
+	input{
+		font-family: $en-bold;
+		background-color: #171717;
+		width: 100%;
+		border-radius: 20px;
+		border: 2px solid #ec4100;
+		font-size: 1.2rem;
+		padding: 1rem .8rem;
+		margin-bottom: 5px;
+		text-transform: uppercase;
 	}
 }
 // message-for-editor-section
