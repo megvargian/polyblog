@@ -158,7 +158,8 @@ body.hide_scroll{
 			position: absolute;
 			bottom: 50px;
 			margin: 0 25px;
-			width: fill-available;
+			width: -moz-available;
+    		width: -webkit-fill-available;
 
 			img {
 				opacity: 1;
