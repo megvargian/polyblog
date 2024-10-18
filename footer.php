@@ -20,18 +20,18 @@
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
                         </button>
-                        <button>
+                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             Editorial line
                         </button>
-                        <button>
+                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             Join our collective
                         </button>
                         <div class="row">
                             <div class="col-6">
-                                <button>
+                                <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                     contact us
                                 </button>
-                                <button class="full">
+                                <button class="full" data-bs-toggle="modal" data-bs-target="#contact-us">
                                     Be our advocate
                                 </button>
                             </div>
@@ -42,18 +42,18 @@
                     </div>
                     <div class="col-4 px-1">
                         <div class="custom-rotate">
-                            <button>
+                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Mission
                             </button>
-                            <button>
+                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Vision
                             </button>
-                            <button>
+                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Causes
                             </button>
                         </div>
                         <div class="row">
-                            <button class="full text-center custom-width">Donate</button>
+                            <button class="full text-center custom-width" data-bs-toggle="modal" data-bs-target="#contact-us">Donate</button>
                         </div>
                     </div>
                 </div>
