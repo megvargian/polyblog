@@ -231,6 +231,7 @@ body.hide_scroll {
 .header-container .video-container .header-button-container {
   position: absolute;
   bottom: 50px;
+  margin: 0 25px;
 }
 
 .youtube-playlist-bg {
