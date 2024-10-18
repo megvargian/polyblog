@@ -35,6 +35,9 @@
                                     Be our advocate
                                 </button>
                             </div>
+                            <div class="col-6">
+                                <img class="wi-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/social_media_cell.png" alt="cell">
+                            </div>
                         </div>
                     </div>
                     <div class="col-4 px-1">
