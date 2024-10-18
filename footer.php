@@ -69,6 +69,7 @@
             </div>
             <div class="modal-body">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit. Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus quaerat!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit. Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus quaerat!
             </div>
         </div>
     </div>

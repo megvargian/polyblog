@@ -306,9 +306,11 @@ body.hide_scroll {
 }
 
 .custom-modal .modal-content {
-  background-color: #171717;
+  background-color: transparent;
+  border-radius: 20px;
 }
 .custom-modal .modal-body {
+  background-color: #171717;
   border: 3px solid #87ed06;
   border-radius: 20px;
   color: #fff;
@@ -319,6 +321,7 @@ body.hide_scroll {
 }
 .custom-modal .modal-header {
   border: none !important;
+  padding: 1rem 0;
 }
 .custom-modal .modal-header .btn-close {
   opacity: 1;
