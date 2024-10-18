@@ -296,12 +296,14 @@ body.hide_scroll{
 		color: #fff;
 	}
 	.custom-text-size-for-placeholder{
-		input::placeholder{
-			font-size: 5rem;
-			white-space: pre-line;
-			justify-content: start;
-			display: flex;
-			align-items: start;
+		textarea::placeholder{
+			font-size: 4rem;
+			color: white; /* White text for placeholder */
+			opacity: 1; /* Ensure placeholder is visible */
+			font-weight: bold; /* Bold text for placeholder */
+			text-transform: uppercase; /* Uppercase letters */
+			line-height: 1.2; /* Adjust line height for spacing */
+			white-space: pre-wrap; /* Preserve line breaks in placeholder */
 		}
 	}
 }

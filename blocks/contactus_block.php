@@ -13,7 +13,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="your Name" required>
                     <input type="email" placeholder="email Address" required>
                     <div class="row px-0">
-                        <div class="col-4">
+                        <div class="col-4 padding-left-0">
                             <input type="number" placeholder="country code" required>
                         </div>
                         <div class="col-8">
@@ -25,7 +25,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="Links to previous writings if present" required>
                 </div>
                 <div class="col-6 custom-text-size-for-placeholder">
-                    <input class="h-100" type="text" placeholder="Write your pitch here">
+                    <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
                 <div class="col-1">
                     <button type="submit">
