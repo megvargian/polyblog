@@ -299,6 +299,9 @@ body.hide_scroll{
 		input::placeholder{
 			font-size: 5rem;
 			white-space: pre-line;
+			justify-content: start;
+			display: flex;
+			align-items: start;
 		}
 	}
 }

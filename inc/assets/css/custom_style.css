@@ -359,6 +359,9 @@ body.hide_scroll {
 .contact-us-section .custom-text-size-for-placeholder input::placeholder {
   font-size: 5rem;
   white-space: pre-line;
+  justify-content: start;
+  display: flex;
+  align-items: start;
 }
 
 .message-for-editor-section .container-fluid {
