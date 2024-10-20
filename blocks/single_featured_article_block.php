@@ -5,13 +5,13 @@
 
 $featured_article_block = get_field('selected_article');
 
-$title = get_the_title($selected_post_id);
-$article_link = get_permalink($selected_post_id);
-$tags = get_the_tags($selected_post_id);
-$categories = get_the_category($selected_post_id);
-$author = get_field( 'author_field', $selected_post_id );
-$thumbnail = get_field( 'thumbnail_field', $selected_post_id )
+$title = get_the_title($featured_article_block);
+$article_link = get_permalink($featured_article_block);
+$tags = get_the_tags($featured_article_block);
+$categories = get_the_category($featured_article_block);
+$author = get_field('author_field', $featured_article_block);
+$thumbnail = get_field('thumbnail_field', $featured_article_block);
 ?>
 <section class="">
-        <h1><?php echo $title ?></h1>
+    <h1><?php echo $title ?></h1>
 </section>
