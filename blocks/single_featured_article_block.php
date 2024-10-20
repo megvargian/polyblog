@@ -12,6 +12,32 @@ $categories = get_the_category($featured_article_block);
 $author = get_field('author_field', $featured_article_block);
 $thumbnail = get_field('thumbnail_field', $featured_article_block);
 ?>
-<section class="">
-    <h1><?php echo $title ?></h1>
-</section>
+<div class="single-featured-article-container">
+    <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
+    <div class="right-container">
+        <div class="categories">
+            <?php foreach ($categories as $category) { ?>
+                <span class="category">
+                    <?php echo esc_html($category->name); ?>
+                </span>
+            <?php } ?>
+        </div>
+        <div class="title">
+            <h2>
+                <?php echo $title; ?>
+            </h2>
+        </div>
+        <div class="author-tags">
+            <div class="author">
+                <h3>
+                    <?php echo $author ?>
+                </h3>
+            </div>
+            <div class="tags">
+                <?php foreach ($tags as $tag) { ?>
+                    <?php echo esc_html($tag->name); ?>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
