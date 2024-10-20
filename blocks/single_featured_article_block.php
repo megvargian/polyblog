@@ -13,7 +13,9 @@ $author = get_field('author', $featured_article_block);
 $thumbnail = get_field('article_thumbnail', $featured_article_block);
 ?>
 <div class="single-featured-article-container">
-    <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
+    <a href="<?php echo $article_link; ?>">
+        <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
+    </a>
     <div class="right-container">
         <div class="categories">
             <?php foreach ($categories as $category) { ?>
@@ -23,9 +25,11 @@ $thumbnail = get_field('article_thumbnail', $featured_article_block);
             <?php } ?>
         </div>
         <div class="title">
-            <h2>
-                <?php echo $title; ?>
-            </h2>
+            <a href="<?php echo $article_link; ?>">
+                <h1>
+                    <?php echo $title; ?>
+                </h1>
+            </a>
         </div>
         <div class="author-tags">
             <div class="author">
