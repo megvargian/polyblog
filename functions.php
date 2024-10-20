@@ -260,5 +260,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Single featured article block',
+                'title'             => __('Single featured article block'),
+                'description'       => __('This is the Single featured article block of Homepage'),
+                'render_template'   => 'blocks/single_featured_article_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
