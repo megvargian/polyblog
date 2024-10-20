@@ -3,7 +3,7 @@
  * HomePage Single Featured Article Block Template
  */
 
-$featured_article_block = get_field('select_article');
+$featured_article_block = get_field('selected_article');
 
 $title = get_the_title($selected_post_id);
 $article_link = get_permalink($selected_post_id);
