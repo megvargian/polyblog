@@ -213,33 +213,33 @@ body.hide_scroll {
   color: #87ed06;
 }
 
-.header-container {
+.home-video-header-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-.header-container .video-container {
+.home-video-header-container .video-container {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
 }
-.header-container .video-container .video {
+.home-video-header-container .video-container .video {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.header-container .video-container .header-button-container {
+.home-video-header-container .video-container .header-button-container {
   position: absolute;
   bottom: 50px;
   margin: 0 25px;
   width: -moz-available;
   width: -webkit-fill-available;
 }
-.header-container .video-container .header-button-container img {
+.home-video-header-container .video-container .header-button-container img {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.header-container .video-container .header-button-container img:hover {
+.home-video-header-container .video-container .header-button-container img:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
