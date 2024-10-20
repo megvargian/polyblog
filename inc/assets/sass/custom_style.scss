@@ -180,6 +180,10 @@ body.hide_scroll{
 	flex-direction: row;
 	background-color: #131313;
 
+	a {
+		line-height: 0;
+	}
+
 	img {
 		filter: grayscale(100%);
 		transition: 0.3s;

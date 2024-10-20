@@ -250,6 +250,9 @@ body.hide_scroll {
   flex-direction: row;
   background-color: #131313;
 }
+.single-featured-article-container a {
+  line-height: 0;
+}
 .single-featured-article-container img {
   filter: grayscale(100%);
   transition: 0.3s;
