@@ -36,7 +36,7 @@
                                 </button>
                             </div>
                             <div class="col-6 justify-content-center d-flex">
-                                <img class="d-block bg-black" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/social_media_cell.png" alt="cell">
+                                <img class="d-block" style="background-color: black;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/social_media_cell.png" alt="cell">
                             </div>
                         </div>
                     </div>
