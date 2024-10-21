@@ -12,7 +12,6 @@ $categories = get_the_category($featured_article_block['selected_article']);
 $author_name = get_the_title(get_field('author', $featured_article_block['selected_article']));
 $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_article']);
 ?>
-<pre><?php print_r($featured_article_block); ?></pre>
 <div class="single-featured-article-container">
     <a href="<?php echo $article_link; ?>">
         <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
