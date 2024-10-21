@@ -3,7 +3,7 @@
  * HomePage Single Featured Article Block Template
  */
 
-$featured_article_block = get_field('selected_article');
+$featured_article_block = get_fields();
 
 $title = get_the_title($featured_article_block);
 $article_link = get_permalink($featured_article_block);
@@ -12,6 +12,7 @@ $categories = get_the_category($featured_article_block);
 $author = get_field('author', $featured_article_block);
 $thumbnail = get_field('article_thumbnail', $featured_article_block);
 ?>
+<pre><?php print_r($featured_article_block); ?></pre>
 <div class="single-featured-article-container">
     <a href="<?php echo $article_link; ?>">
         <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
