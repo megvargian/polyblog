@@ -182,11 +182,11 @@ body.hide_scroll{
 
 	a {
 		line-height: 0;
-	}
 
-	img {
-		filter: grayscale(100%);
-		transition: 0.3s;
+		img {
+			filter: grayscale(100%);
+			transition: 0.3s;
+		}
 	}
 
 	.right-container {

@@ -253,7 +253,7 @@ body.hide_scroll {
 .single-featured-article-container a {
   line-height: 0;
 }
-.single-featured-article-container img {
+.single-featured-article-container a img {
   filter: grayscale(100%);
   transition: 0.3s;
 }
