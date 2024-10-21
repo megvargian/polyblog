@@ -9,7 +9,7 @@ $title = get_the_title($featured_article_block['selected_article']);
 $article_link = get_permalink($featured_article_block['selected_article']);
 $tags = get_the_tags($featured_article_block['selected_article']);
 $categories = get_the_category($featured_article_block['selected_article']);
-$author = get_field('author', $featured_article_block['selected_article']);
+$author_name = get_the_title(get_field('author', $featured_article_block['selected_article']));
 $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_article']);
 ?>
 <pre><?php print_r($featured_article_block); ?></pre>
@@ -35,7 +35,7 @@ $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_ar
         <div class="author-tags">
             <div class="author">
                 <h3>
-                    <?php echo $author ?>
+                    <?php echo $author_name ?>
                 </h3>
             </div>
             <div class="tags">
