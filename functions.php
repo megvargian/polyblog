@@ -282,5 +282,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Special Productions Block',
+                'title'             => __('Special Productions Block'),
+                'description'       => __('This is the Special Productions Block of Homepage'),
+                'render_template'   => 'blocks/special_productions_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }

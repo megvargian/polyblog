@@ -296,6 +296,17 @@ body.hide_scroll{
 		}
 	}
 }
+
+.special-productions {
+	opacity: 1;
+	transition: 0.3s ease-in-out;
+}
+
+.special-productions:hover {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
 //footer
 .footer-container{
 	background-color: #171717;
