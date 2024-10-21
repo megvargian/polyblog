@@ -26,9 +26,9 @@ $thumbnail = get_field('article_thumbnail', $featured_article_block);
         </div>
         <div class="title">
             <a href="<?php echo $article_link; ?>">
-                <h1>
+                <h2>
                     <?php echo $title; ?>
-                </h1>
+                </h2>
             </a>
         </div>
         <div class="author-tags">

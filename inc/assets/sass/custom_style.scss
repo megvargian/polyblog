@@ -142,6 +142,7 @@ body.hide_scroll{
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	font-family: $en-regular;
 
 	.video-container {
 		flex-grow: 1;
@@ -179,6 +180,7 @@ body.hide_scroll{
 	display: flex;
 	flex-direction: row;
 	background-color: #131313;
+	font-family: $en-regular;
 
 	a {
 		line-height: 0;
@@ -214,6 +216,10 @@ body.hide_scroll{
 			display: flex;
 			justify-content: center;
 			color: #fff;
+
+			h2 {
+				font-size: 4em;
+			}
 		}
 
 		.author-tags {
@@ -234,6 +240,7 @@ body.hide_scroll{
 
 .youtube-playlist-bg {
 	background-color: #3a1dd9;
+	font-family: $en-regular;
 
 	.youtube-playlist-button-col {
 		align-content: center;
@@ -257,6 +264,7 @@ body.hide_scroll{
 
 .youtube-featured-vids-bg {
 	background-color: #000;
+	font-family: $en-regular;
 
 	.youtube-featured-videos-row {
 		padding: 25px;

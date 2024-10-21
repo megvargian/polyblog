@@ -217,6 +217,7 @@ body.hide_scroll {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: "Lexend-Regular";
 }
 .home-video-header-container .video-container {
   flex-grow: 1;
@@ -249,6 +250,7 @@ body.hide_scroll {
   display: flex;
   flex-direction: row;
   background-color: #131313;
+  font-family: "Lexend-Regular";
 }
 .single-featured-article-container a {
   line-height: 0;
@@ -281,6 +283,9 @@ body.hide_scroll {
   justify-content: center;
   color: #fff;
 }
+.single-featured-article-container .right-container .title h2 {
+  font-size: 4em;
+}
 .single-featured-article-container .right-container .author-tags {
   display: flex;
   flex-direction: row;
@@ -295,6 +300,7 @@ body.hide_scroll {
 
 .youtube-playlist-bg {
   background-color: #3a1dd9;
+  font-family: "Lexend-Regular";
 }
 .youtube-playlist-bg .youtube-playlist-button-col {
   align-content: center;
@@ -314,6 +320,7 @@ body.hide_scroll {
 
 .youtube-featured-vids-bg {
   background-color: #000;
+  font-family: "Lexend-Regular";
 }
 .youtube-featured-vids-bg .youtube-featured-videos-row {
   padding: 25px;
