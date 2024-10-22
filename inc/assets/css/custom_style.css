@@ -458,9 +458,17 @@ body.hide_scroll {
   color: #fff;
   text-align: center;
 }
-.author-swiper-container img {
+.author-swiper-container .author-image {
   width: 100%;
   height: 100%;
+}
+.author-swiper-container .custom-swiper-button-prev,
+.author-swiper-container .custom-swiper-button-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact centering */
+  z-index: 10; /* Ensure buttons are above slides */
 }
 
 .footer-container {

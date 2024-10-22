@@ -17,12 +17,18 @@ $authors_list = $author_swiper_block['authors_list'];
                             $author_title = get_the_title($author_id);
                             $author_image = get_field('author_profile', $author_id); ?>
                             <p><?php echo esc_html($author_title); ?></p>
-                            <img src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     <?php } ?>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="custom-swiper-button-prev">
+                    <img src="http://polybloglb.com/wp-content/uploads/2024/10/swiper_arrow_left.png"
+                        alt="previous author" />
+                </div>
+                <div class="custom-swiper-button-next">
+                    <img src="http://polybloglb.com/wp-content/uploads/2024/10/swiper_arrow_right.png"
+                        alt="next author" />
+                </div>
             </div>
         </div>
     </div>
@@ -33,8 +39,8 @@ $authors_list = $author_swiper_block['authors_list'];
             loop: true,
             slidesPerView: 5,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.custom-swiper-button-next',
+                prevEl: '.custom-swiper-button-prev',
             },
         });
     });
