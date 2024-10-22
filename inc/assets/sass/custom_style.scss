@@ -479,9 +479,27 @@ body.hide_scroll {
   .custom-swiper-button-next {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for exact centering */
-    z-index: 10; /* Ensure buttons are above slides */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    img {
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+
+    img:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+
+  .custom-swiper-button-prev {
+    left: 10px;
+  }
+
+  .custom-swiper-button-next {
+    right: 10px;
   }
 }
 
