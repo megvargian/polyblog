@@ -293,5 +293,16 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Author Swiper Block',
+                'title'             => __('Author Swiper Block'),
+                'description'       => __('This is the Author Swiper Block of Homepage'),
+                'render_template'   => 'blocks/author_swiper_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
