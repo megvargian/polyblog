@@ -13,6 +13,7 @@ $authors_list = $author_swiper_block['authors_list'];
     <?php foreach ($authors_list as $author) { ?>
         <div class="row">
             <div class="col">
+                <pre><?php echo $author; ?></pre>
                 <?php echo get_the_title($author); ?>
             </div>
         </div>
