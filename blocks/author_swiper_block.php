@@ -12,7 +12,7 @@ $authors_list = $author_swiper_block['authors_list'];
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <pre><?php echo $authors_list ?></pre>
+            <pre><?php echo $authors_list[0] ?></pre>
         </div>
     </div>
 </div>
