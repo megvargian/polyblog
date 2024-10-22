@@ -15,9 +15,13 @@ $authors_list = $author_swiper_block['authors_list'];
                         <div class="swiper-slide">
                             <?php $author_id = $author['author'];
                             $author_title = get_the_title($author_id);
-                            $author_image = get_field('author_profile', $author_id); ?>
+                            $author_image = get_field('author_profile', $author_id);
+                            $author_link = get_permalink($author_id); ?>
                             <p><?php echo esc_html($author_title); ?></p>
-                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                            <a href="<?php echo $author_link; ?>" target="_blank">
+                                <img class="author-image" src="<?php echo $author_image ?>"
+                                    alt="<?php echo $author_title ?>" />
+                            </a>
                         </div>
                     <?php } ?>
                 </div>
