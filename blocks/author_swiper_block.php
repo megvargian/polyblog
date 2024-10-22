@@ -14,12 +14,11 @@ $authors_list = $author_swiper_block['authors_list'];
     <?php foreach ($authors_list as $author) { ?>
         <div class="row">
             <div class="col">
-                <pre>print_r <?php print_r($author); ?></pre>
-
                 <?php $author_id = $author['author'];
-                $author_title = get_the_title($author_id); ?>
+                $author_title = get_the_title($author_id);
+                $author_image = get_field('author_profile', $author_id); ?>
 
-                <pre>echo <?php echo esc_html($author_title); ?></pre>
+                <img src="<?php echo $author_image ?>" />
                 <p><?php echo esc_html($author_title); ?></p>
             </div>
         </div>
