@@ -10,9 +10,11 @@ $author_swiper_block = get_fields();
 $authors_list = $author_swiper_block['authors_list'];
 ?>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <pre><?php echo $authors_list[0] ?></pre>
+    <?php foreach ($authors_list as $author) { ?>
+        <div class="row">
+            <div class="col">
+                <?php echo get_the_title($author); ?>
+            </div>
         </div>
-    </div>
+    <?php } ?>
 </div>
