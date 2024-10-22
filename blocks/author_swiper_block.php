@@ -16,7 +16,6 @@ $authors_list = $author_swiper_block['authors_list'];
             <div class="col">
                 <pre>print_r <?php print_r($author); ?></pre>
                 <pre>echo <?php echo get_the_title(get_field($author)); ?></pre>
-                <pre>echo <?php echo get_the_title(get_fields($author)); ?></pre>
                 <?php echo esc_html($author->title); ?>
             </div>
         </div>
