@@ -17,7 +17,7 @@ $authors_list = $author_swiper_block['authors_list'];
                             <?php $author_id = $author['author'];
                             $author_title = get_the_title($author_id);
                             $author_image = get_field('author_profile', $author_id); ?>
-                            <!-- <p><?php echo esc_html($author_title); ?></p> -->
+                            <p><?php echo esc_html($author_title); ?></p>
                             <img src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     <?php } ?>
