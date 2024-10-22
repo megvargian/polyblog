@@ -477,3 +477,8 @@ body.hide_scroll {
 .custom-modal .modal-header .btn-close:focus {
   box-shadow: none !important;
 }
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
