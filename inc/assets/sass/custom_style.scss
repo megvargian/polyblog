@@ -1,447 +1,602 @@
 @import 'variables';
 @charset "utf-8";
 
-
 // resettting classes
-html, body, div, span, applet,
-object, iframe,   h5, h6,
-blockquote, pre, a, abbr, acronym, address,
-big, cite, code, del, dfn, em,
-img, ins, kbd, q, s, samp, small, strike,
-strong, sub, sup, tt, var, b, u, i,
-center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav,
-output, ruby, section, summary,
-time, mark, audio, video,h1,h2,h3,p
-										{ margin: 0;
-										  padding: 0;
-										  border: 0;
-										  vertical-align: baseline;
-										}
-article, aside, details, figcaption,
-figure, footer, header, hgroup,
-menu, nav, section                      { display: block }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
 ol,
-ul                                      { list-style: none }
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
 // End of reset classes
 
 // defaults
-div:focus 								{ outline: none;}
-a,a:visited 							{ color: inherit;text-decoration: none;}
-a:hover, a:focus 						{ text-decoration: none; color: inherit;}
+div:focus {
+  outline: none;
+}
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 
-textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-background-clip: padding;
-	-moz-background-clip: padding;
-	background-clip:padding-box;
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	-ms-border-radius:0;
-	-o-border-radius:0;
-	border-radius:0;
-	-webkit-appearance:none;
-	border:none;
-	text-align: left;
-	font-size:1em;
-	vertical-align: middle;
-	padding: 10px 15px;
-	margin-bottom: 12px;
+textarea,
+select,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+  vertical-align: middle;
+  padding: 10px 15px;
+  margin-bottom: 12px;
 }
-input, textarea {
-	box-shadow: none !important;
-	border-radius: 0;
-
+input,
+textarea {
+  box-shadow: none !important;
+  border-radius: 0;
 }
-input:focus, textarea:focus, select:focus, option:focus {
-	outline: none;
+input:focus,
+textarea:focus,
+select:focus,
+option:focus {
+  outline: none;
 }
-p{
-	margin-bottom: 15px;
+p {
+  margin-bottom: 15px;
 }
-body{
-	color: $text_black;
-	font-family: $ar-regular;
-	background-color: $text_white;
-	overflow: auto;
-	overflow-x: hidden !important;
+body {
+  color: $text_black;
+  font-family: $ar-regular;
+  background-color: $text_white;
+  overflow: auto;
+  overflow-x: hidden !important;
 }
-body.hide_scroll{
-	padding-right: 17px;
-	overflow: hidden !important;
+body.hide_scroll {
+  padding-right: 17px;
+  overflow: hidden !important;
 }
 // END of resettting classes
 
 // Helper Classes
-.float-left								{ float: left !important;}
-.float-right							{ float: right !important;}
-.clear 									{ clear: both;}
-.upper									{ text-transform: uppercase;}
-.lower 									{ text-transform: lowercase !important;}
-.posrel  								{ position:relative}
-.posabs  								{ position:absolute}
-.mar0auto  								{ margin:0 auto}
-.text-left								{ text-align: left;}
-.text-right								{ text-align: right;}
-.no-padding								{ padding-left: 0px; padding-right: 0px;}
-.no-margin								{ margin-left: 0px; margin-right: 0px;}
-.text_main_color						{ color: $main_color;}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.clear {
+  clear: both;
+}
+.upper {
+  text-transform: uppercase;
+}
+.lower {
+  text-transform: lowercase !important;
+}
+.posrel {
+  position: relative;
+}
+.posabs {
+  position: absolute;
+}
+.mar0auto {
+  margin: 0 auto;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.text_main_color {
+  color: $main_color;
+}
 
 // end
 .noselect {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-::-moz-selection { /* Code for Firefox */
-	color: $text_black;
-	background: $main_color;
+::-moz-selection {
+  /* Code for Firefox */
+  color: $text_black;
+  background: $main_color;
 }
 ::selection {
-	color: $text_black;
-	background: $main_color;
+  color: $text_black;
+  background: $main_color;
 }
 
 :focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 @-webkit-keyframes fa-beat {
-	0% 		{transform:scale(1);}
-	5% 		{transform:scale(1.25);}
-	20% 	{transform:scale(1.15);}
-	30%		{transform:scale(1.8);}
-	45% 	{transform:scale(1);}
-	100%	{transform:scale(1);}
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.25);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1.8);
+  }
+  45% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes fa-beat {
-	0% 		{transform:scale(1);}
-	5% 		{transform:scale(1.25);}
-	20% 	{transform:scale(1.15);}
-	30%		{transform:scale(1.8);}
-	45% 	{transform:scale(1);}
-	100%	{transform:scale(1);}
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.25);
+  }
+  20% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1.8);
+  }
+  45% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .pulse {
-	animation: fa-beat 1.2s ease infinite;
-	display: inline-block;
-	padding: 0px 5px 0px 4px;
-	color: $sec_color;
+  animation: fa-beat 1.2s ease infinite;
+  display: inline-block;
+  padding: 0px 5px 0px 4px;
+  color: $sec_color;
 }
 
 .home-video-header-container {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	font-family: $en-regular;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: $en-regular;
 
-	.video-container {
-		flex-grow: 1;
-		position: relative;
-		overflow: hidden;
+  .video-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
 
-		.video {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
+    .video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
 
-		.header-button-container {
-			position: absolute;
-			bottom: 50px;
-			margin: 0 25px;
-			width: -moz-available;
-    		width: -webkit-fill-available;
+    .header-button-container {
+      position: absolute;
+      bottom: 50px;
+      margin: 0 25px;
+      width: -moz-available;
+      width: -webkit-fill-available;
 
-			img {
-				opacity: 1;
-				transition: 0.3s ease-in-out;
-			}
+      img {
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
 
-			img:hover {
-				opacity: 0.8;
-				transition: 0.3s;
-			}
-		}
-	}
+      img:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+    }
+  }
 }
 
 .single-featured-article-container {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	background-color: #131313;
-	font-family: $en-regular;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #131313;
+  font-family: $en-regular;
 
-	a {
-		line-height: 0;
+  a {
+    line-height: 0;
 
-		img {
-			filter: grayscale(100%);
-			transition: 0.3s;
-		}
-	}
+    img {
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+  }
 
-	.right-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 100%;
-		padding: 24px;
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
 
-		.categories {
-			display: flex;
-			flex-direction: row;
-			gap: 10px;
-			justify-content: flex-end;
+    .categories {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: flex-end;
 
-			.category {
-				padding: 2px 6px;
-				border-radius: 12px;
-				color: #000;
-				background-color: #f0eaea;
-			}
-		}
+      .category {
+        padding: 2px 6px;
+        border-radius: 12px;
+        color: #000;
+        background-color: #f0eaea;
+      }
+    }
 
-		.title {
-			display: flex;
-			justify-content: center;
-			color: #fff;
+    .title {
+      display: flex;
+      justify-content: center;
+      color: #fff;
 
-			h2 {
-				font-size: 4em;
-			}
-		}
+      h2 {
+        font-size: 4em;
+      }
+    }
 
-		.author-tags {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			color: #fff;
-		}
-	}
+    .author-tags {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #fff;
+    }
+  }
 }
 
 .single-featured-article-container:hover {
-	img {
-		filter: grayscale(0);
-		transition: 0.3s;
-	}
+  img {
+    filter: grayscale(0);
+    transition: 0.3s;
+  }
 }
 
 .youtube-playlist-bg {
-	background-color: #3a1dd9;
-	font-family: $en-regular;
+  background-color: #3a1dd9;
+  font-family: $en-regular;
 
-	.youtube-playlist-button-col {
-		align-content: center;
+  .youtube-playlist-button-col {
+    align-content: center;
 
-		.youtube_featured_image {
-			padding: 12px 0;
-			border-radius: 66px;
-		}
+    .youtube_featured_image {
+      padding: 12px 0;
+      border-radius: 66px;
+    }
 
-		.youtube-playlist-btn {
-			opacity: 1;
-			transition: 0.3s ease-in-out;
-		}
+    .youtube-playlist-btn {
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
 
-		.youtube-playlist-btn:hover {
-			opacity: 0.8;
-			transition: 0.3s;
-		}
-	}
+    .youtube-playlist-btn:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
 }
 
 .youtube-featured-vids-bg {
-	background-color: #000;
-	font-family: $en-regular;
+  background-color: #000;
+  font-family: $en-regular;
 
-	.youtube-featured-videos-row {
-		padding: 25px;
-		color: #fff;
-		font-size: 1.4em;
+  .youtube-featured-videos-row {
+    padding: 25px;
+    color: #fff;
+    font-size: 1.4em;
 
-		.youtube-featured-vid-button-col {
-			align-content: center;
+    .youtube-featured-vid-button-col {
+      align-content: center;
 
-			.youtube-featured-video-thumbnail{
-				padding: 10px 0;
-				border-radius: 25px;
-				opacity: 1;
-				transition: 0.3s ease-in-out;
-			}
+      .youtube-featured-video-thumbnail {
+        padding: 10px 0;
+        border-radius: 25px;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
 
-			.youtube-featured-video-thumbnail:hover {
-				opacity: 0.8;
-				transition: 0.3s;
-			}
-		}
+      .youtube-featured-video-thumbnail:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+    }
 
-		.youtube-featured-vid-texts-col {
-			align-content: space-around;
+    .youtube-featured-vid-texts-col {
+      align-content: space-around;
 
-			p {
-				margin-bottom: 50px;
-			}
-		}
-	}
+      p {
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 
 .special-productions {
-	opacity: 1;
-	transition: 0.3s ease-in-out;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 
 .special-productions:hover {
-	opacity: 0.8;
-	transition: 0.3s;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 //footer
-.footer-container{
-	background-color: #171717;
-	font-family: $en-regular;
-	button{
-		padding: 1rem .8rem;
-		border: 2px solid $sec_color;
-		width: 100%;
-		font-size: 20px;
-		color: $sec_color;
-		background-color: #171717;
-		border-radius: 35px;
-		margin-bottom: 10px;
-		text-align: left;
-		text-transform: uppercase;
-	}
-	.custom-rotate{
-		display: flex;
-		gap: 10px;
-		button{
-			padding: 1rem .8rem;
-			border: 2px solid $sec_color;
-			width: 100%;
-			font-size: 20px;
-			color: $sec_color;
-			background-color: #171717;
-			border-radius: 35px;
-			text-align: left;
-			text-transform: uppercase;
-			cursor: pointer;
-			writing-mode: vertical-lr; /* Makes text vertical */
-			width: fit-content;
-			height: 23rem;
-		}
-	}
-	.full{
-		background-color: $sec_color !important;
-		color: #000 !important;
-		writing-mode: horizontal-tb;
-	}
-	.custom-width{
-		width: 13rem;
-		margin-left: 6px;
-	}
+.footer-container {
+  background-color: #171717;
+  font-family: $en-regular;
+  button {
+    padding: 1rem 0.8rem;
+    border: 2px solid $sec_color;
+    width: 100%;
+    font-size: 20px;
+    color: $sec_color;
+    background-color: #171717;
+    border-radius: 35px;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .custom-rotate {
+    display: flex;
+    gap: 10px;
+    button {
+      padding: 1rem 0.8rem;
+      border: 2px solid $sec_color;
+      width: 100%;
+      font-size: 20px;
+      color: $sec_color;
+      background-color: #171717;
+      border-radius: 35px;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+      writing-mode: vertical-lr; /* Makes text vertical */
+      width: fit-content;
+      height: 23rem;
+    }
+  }
+  .full {
+    background-color: $sec_color !important;
+    color: #000 !important;
+    writing-mode: horizontal-tb;
+  }
+  .custom-width {
+    width: 13rem;
+    margin-left: 6px;
+  }
 }
 // contact us block
-.contact-us-section{
-	background-color: #171717;
-	font-family: $en-bold;
-	color: #fff;
-	input, textarea{
-		font-family: $en-bold;
-		background-color: #171717;
-		width: 100%;
-		border-radius: 35px;
-		border: 2px solid #ec4100;
-		font-size: 1.2rem;
-		padding: 1rem .8rem;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-		color: #fff;
-	}
-	input::placeholder {
-		color: #fff;
-	}
-	.custom-text-size-for-placeholder{
-		textarea::placeholder{
-			font-size: 4rem;
-			color: white; /* White text for placeholder */
-			opacity: 1; /* Ensure placeholder is visible */
-			font-weight: bold; /* Bold text for placeholder */
-			text-transform: uppercase; /* Uppercase letters */
-			line-height: 1.2; /* Adjust line height for spacing */
-			white-space: pre-wrap; /* Preserve line breaks in placeholder */
-		}
-	}
+.contact-us-section {
+  background-color: #171717;
+  font-family: $en-bold;
+  color: #fff;
+  input,
+  textarea {
+    font-family: $en-bold;
+    background-color: #171717;
+    width: 100%;
+    border-radius: 35px;
+    border: 2px solid #ec4100;
+    font-size: 1.2rem;
+    padding: 1rem 0.8rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  input::placeholder {
+    color: #fff;
+  }
+  .custom-text-size-for-placeholder {
+    textarea::placeholder {
+      font-size: 4rem;
+      color: white; /* White text for placeholder */
+      opacity: 1; /* Ensure placeholder is visible */
+      font-weight: bold; /* Bold text for placeholder */
+      text-transform: uppercase; /* Uppercase letters */
+      line-height: 1.2; /* Adjust line height for spacing */
+      white-space: pre-wrap; /* Preserve line breaks in placeholder */
+    }
+  }
 }
 // message-for-editor-section
-.message-for-editor-section{
-	.container-fluid{
-		background-color: #ec4100;
-		p{
-			color: #fff;
-			font-size: 1.2rem;
-			margin-bottom: 0;
-		}
-		.ar{
-			text-align: right;
-		}
-		.en{
-			text-align: left;
-		}
-		img{
-			border-radius: 100%;
-			border: 2px solid #000;
-		};
-	}
+.message-for-editor-section {
+  .container-fluid {
+    background-color: #ec4100;
+    p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+    .ar {
+      text-align: right;
+    }
+    .en {
+      text-align: left;
+    }
+    img {
+      border-radius: 100%;
+      border: 2px solid #000;
+    }
+  }
 }
 
 // make modal different for footer
-.custom-modal{
-	.modal-content{
-		background-color: transparent;
-		border-radius: 20px;
-	}
-	.modal-body{
-		background-color: #171717;
-		border: 3px solid $sec_color;
-		border-radius: 50px;
-		color: #fff;
-		font-family: $en-regular;
-		font-size: 1.5rem;
-		padding: 3rem;
-		text-align: center;
-	}
-	.modal-header{
-		border: none !important;
-		padding: 1rem 0;
-		.btn-close{
-			opacity: 1;
-			background-color: $sec_color;
-			border-radius: 100%;
-		}
-		.btn-close:focus{
-			box-shadow: none !important;
-		}
-	}
+.custom-modal {
+  .modal-content {
+    background-color: transparent;
+    border-radius: 20px;
+  }
+  .modal-body {
+    background-color: #171717;
+    border: 3px solid $sec_color;
+    border-radius: 50px;
+    color: #fff;
+    font-family: $en-regular;
+    font-size: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+  }
+  .modal-header {
+    border: none !important;
+    padding: 1rem 0;
+    .btn-close {
+      opacity: 1;
+      background-color: $sec_color;
+      border-radius: 100%;
+    }
+    .btn-close:focus {
+      box-shadow: none !important;
+    }
+  }
 }
 
 .author-swiper-container {
-	background-color: #131313;
-	color: #fff;
-	
-	.swiper {
-		width: 600px;
-		height: 300px;
-	}
+  background-color: #131313;
+  color: #fff;
+  text-align: center;
 }
