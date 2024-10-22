@@ -6,8 +6,7 @@
 $author_swiper_block = get_fields();
 $authors_list = $author_swiper_block['authors_list'];
 ?>
-<div class="container-fluid">
-
+<div class="container-fluid author-swiper-container">
     <div class="row">
         <div class="col">
             <div class="swiper">
@@ -25,11 +24,17 @@ $authors_list = $author_swiper_block['authors_list'];
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-
-
-
-
         </div>
     </div>
-
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+</script>

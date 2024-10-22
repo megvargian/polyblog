@@ -436,7 +436,12 @@ body.hide_scroll{
 	}
 }
 
-.swiper {
-	width: 600px;
-	height: 300px;
+.author-swiper-container {
+	background-color: #131313;
+	color: #fff;
+	
+	.swiper {
+		width: 600px;
+		height: 300px;
+	}
 }

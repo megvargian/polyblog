@@ -478,7 +478,11 @@ body.hide_scroll {
   box-shadow: none !important;
 }
 
-.swiper {
+.author-swiper-container {
+  background-color: #131313;
+  color: #fff;
+}
+.author-swiper-container .swiper {
   width: 600px;
   height: 300px;
 }
