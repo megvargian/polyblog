@@ -14,8 +14,9 @@ $authors_list = $author_swiper_block['authors_list'];
     <?php foreach ($authors_list as $author) { ?>
         <div class="row">
             <div class="col">
-                <pre><?php print_r($author[0]); ?></pre>
-                <?php echo get_the_title($author[0]); ?>
+                <pre>print_r <?php print_r($author); ?></pre>
+                <pre>echo <?php echo $author; ?></pre>
+                <?php echo esc_html($author->title); ?>
             </div>
         </div>
     <?php } ?>
