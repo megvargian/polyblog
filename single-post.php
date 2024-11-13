@@ -10,18 +10,21 @@
 get_header(); ?>
 <div class="container">
     <?php
-    while (have_posts()):
-        the_post();
-
-        get_template_part('template-parts/content', get_post_format());
-
-        the_post_navigation();
-
-    endwhile;
+    if (have_posts()):
+        while (have_posts()):
+            the_post(); ?>
+            <?php if (has_post_thumbnail()): ?>
+                <div class="post-thumbnail">
+                    <?php the_post_thumbnail('full'); ?>
+                </div>
+            <?php endif; ?>
+            <h1><?php the_title(); ?></h1>
+            <div>
+                <?php the_content(); ?>
+            </div>
+        <?php endwhile;
+    endif;
     ?>
-    <div>
-        testing single post type
-    </div>
 </div>
 <?php
 get_footer();
