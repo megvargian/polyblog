@@ -325,18 +325,18 @@ body.hide_scroll {
   width: 100%;
   height: 100%;
 }
-.home-video-header-container .video-container .header-button-container {
+.home-video-header-container .video-container .header-button-container-with-video {
   position: absolute;
   bottom: 50px;
   margin: 0 25px;
   width: -moz-available;
   width: -webkit-fill-available;
 }
-.home-video-header-container .video-container .header-button-container img {
+.home-video-header-container .video-container .header-button-container-with-video img {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.home-video-header-container .video-container .header-button-container img:hover {
+.home-video-header-container .video-container .header-button-container-with-video img:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
