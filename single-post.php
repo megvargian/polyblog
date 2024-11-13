@@ -9,6 +9,8 @@
 
 get_header(); ?>
 <?php
+$tags = get_the_tags();
+
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
@@ -21,6 +23,13 @@ if (have_posts()):
             <div class="row">
                 <div class="col">
                     <h1><?php the_title(); ?></h1>
+                </div>
+            </div>
+            <div class="row tags">
+                <div class="col">
+                    <?php foreach ($tags as $tag) { ?>
+                        <?php echo esc_html($tag->name); ?>
+                    <?php } ?>
                 </div>
             </div>
             <div class="row">

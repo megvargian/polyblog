@@ -629,3 +629,7 @@ body.hide_scroll {
 .single-post-container h1 {
   color: #fff;
 }
+.single-post-container .tags {
+  color: #ed4101;
+  text-align: end;
+}
