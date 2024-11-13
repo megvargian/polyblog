@@ -28,7 +28,7 @@ if (have_posts()):
             <div class="row tags">
                 <div class="col">
                     <?php foreach ($tags as $tag) { ?>
-                        <?php echo "#" + esc_html($tag->name); ?>
+                        <?php echo "#" . esc_html($tag->name); ?>
                     <?php } ?>
                 </div>
             </div>
