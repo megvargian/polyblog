@@ -31,25 +31,20 @@ $header_video_url = get_field('header_video', 'option');
 			});
 		</script>
 		<div id="content" class="site-content">
-			<div <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>">
+			<div <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
 				<a href="http://polybloglb.com/">
 					<img class="w-100 d-block"
 						src="http://polybloglb.com/wp-content/uploads/2024/10/politics_not_news.png"
 						alt="Politics, not news.">
 				</a>
-				<?php if (is_front_page()) { ?><?php } ?>
-
 				<?php if (is_front_page()) { ?>
 					<div class="video-container">
 						<video class="video" width="100%" height="100%" autoplay loop muted>
 							<source src="<?php echo esc_url($header_video_url); ?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
-
 					<?php } ?>
-
-					<div
-						class="row <?php is_front_page() ? 'header-button-container-with-video' : 'header-button-container-without-video' ?>">
+					<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
 								<img class="w-100 d-block"
