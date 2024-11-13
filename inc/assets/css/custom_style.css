@@ -174,7 +174,7 @@ p {
 body {
   color: #000;
   font-family: "Vazirmatn-Regular";
-  background-color: #fff;
+  background-color: #141213;
   overflow: auto;
   overflow-x: hidden !important;
 }
@@ -607,4 +607,12 @@ body.hide_scroll {
 }
 .custom-modal .modal-header .btn-close:focus {
   box-shadow: none !important;
+}
+
+.single-post-featured-image img {
+  width: 100%;
+}
+
+.single-post-container h1 {
+  color: #fff;
 }

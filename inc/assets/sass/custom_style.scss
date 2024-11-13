@@ -172,7 +172,7 @@ p {
 body {
   color: $text_black;
   font-family: $ar-regular;
-  background-color: $text_white;
+  background-color: #141213;
   overflow: auto;
   overflow-x: hidden !important;
 }
@@ -630,5 +630,17 @@ body.hide_scroll {
     .btn-close:focus {
       box-shadow: none !important;
     }
+  }
+}
+
+.single-post-featured-image {
+  img {
+    width: 100%;
+  }
+}
+
+.single-post-container {
+  h1 {
+    color: #fff;
   }
 }
