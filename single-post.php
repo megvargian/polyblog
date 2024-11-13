@@ -8,23 +8,23 @@
  */
 
 get_header(); ?>
-<div class="container">
-    <?php
-    if (have_posts()):
-        while (have_posts()):
-            the_post(); ?>
-            <?php if (has_post_thumbnail()): ?>
-                <div class="post-thumbnail">
-                    <?php the_post_thumbnail('full'); ?>
-                </div>
-            <?php endif; ?>
+<?php
+if (have_posts()):
+    while (have_posts()):
+        the_post(); ?>
+        <?php if (has_post_thumbnail()): ?>
+            <div>
+                <?php the_post_thumbnail('full'); ?>
+            </div>
+        <?php endif; ?>
+        <div class="container-fluid">
             <h1><?php the_title(); ?></h1>
             <div>
                 <?php the_content(); ?>
             </div>
-        <?php endwhile;
-    endif;
-    ?>
-</div>
+        </div>
+    <?php endwhile;
+endif;
+?>
 <?php
 get_footer();
