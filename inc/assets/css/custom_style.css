@@ -345,6 +345,14 @@ body.hide_scroll {
   background: #fff;
   padding: 25px;
 }
+.header-button-container-without-video img {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.header-button-container-without-video img:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 
 .single-featured-article-container {
   width: 100%;

@@ -336,6 +336,16 @@ body.hide_scroll {
 .header-button-container-without-video {
   background: #fff;
   padding: 25px;
+
+  img {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 }
 
 .single-featured-article-container {
