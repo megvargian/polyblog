@@ -341,6 +341,11 @@ body.hide_scroll {
   transition: 0.3s;
 }
 
+.header-button-container-without-video {
+  background: #fff;
+  padding: 25px;
+}
+
 .single-featured-article-container {
   width: 100%;
   display: flex;

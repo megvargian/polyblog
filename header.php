@@ -82,7 +82,7 @@ $header_video_url = get_field('header_video', 'option');
 						</div>
 					</div>
 				<?php } else { ?>
-					<div class="row header-button-container-with-video">
+					<div class="row header-button-container-without-video">
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
 								<img class="w-100 d-block"
