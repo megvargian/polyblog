@@ -633,3 +633,6 @@ body.hide_scroll {
   color: #ed4101;
   text-align: end;
 }
+.single-post-container .main-content {
+  color: #fff;
+}

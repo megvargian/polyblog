@@ -19,7 +19,7 @@ if (have_posts()):
                 <?php the_post_thumbnail('full'); ?>
             </div>
         <?php endif; ?>
-        <div class="container-fluid single-post-container">
+        <div class="container-fluid px-4 single-post-container">
             <div class="row">
                 <div class="col">
                     <h1><?php the_title(); ?></h1>
@@ -38,7 +38,7 @@ if (have_posts()):
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row main-content">
                 <div class="col">
                     <?php the_content(); ?>
                 </div>
