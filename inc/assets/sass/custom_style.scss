@@ -638,6 +638,9 @@ body.hide_scroll {
 		border: none !important;
 	}
   }
+  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	border: none !important;
+  }
   .submit-button{
 	background-color: transparent;
 	border: none;

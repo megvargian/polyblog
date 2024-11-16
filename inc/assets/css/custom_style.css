@@ -616,6 +616,9 @@ body.hide_scroll {
 .contact-us-section .select-language .select2-selection__choice {
   border: none !important;
 }
+.contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  border: none !important;
+}
 .contact-us-section .submit-button {
   background-color: transparent;
   border: none;
