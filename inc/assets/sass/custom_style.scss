@@ -579,7 +579,8 @@ body.hide_scroll {
   color: #fff;
   input,
   textarea,
-  label {
+  label,
+  .select2 {
     font-family: $en-bold;
     background-color: #171717;
     width: 100%;
@@ -590,6 +591,9 @@ body.hide_scroll {
     margin-bottom: 5px;
     text-transform: uppercase;
     color: #fff;
+  }
+  label{
+	width: fit-content;
   }
   input::placeholder {
     color: #fff;

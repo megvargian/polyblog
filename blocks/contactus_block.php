@@ -35,7 +35,7 @@ $contactus_fields = get_fields();
                 <div class="col-4 custom-text-size-for-placeholder">
                     <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
-                <div class="col-1 d-flex justify-content-center align-items-center">
+                <div class="col-1 d-flex justify-content-between align-items-center">
                     <button type="submit" class="submit-button">
                         <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
                     </button>

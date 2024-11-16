@@ -561,7 +561,8 @@ body.hide_scroll {
 }
 .contact-us-section input,
 .contact-us-section textarea,
-.contact-us-section label {
+.contact-us-section label,
+.contact-us-section .select2 {
   font-family: "Lexend-Bold";
   background-color: #171717;
   width: 100%;
@@ -572,6 +573,9 @@ body.hide_scroll {
   margin-bottom: 5px;
   text-transform: uppercase;
   color: #fff;
+}
+.contact-us-section label {
+  width: fit-content;
 }
 .contact-us-section input::placeholder {
   color: #fff;
