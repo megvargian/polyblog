@@ -604,16 +604,17 @@ body.hide_scroll {
   background: none;
   border: none;
   color: white;
+  padding: 0;
 }
 .contact-us-section .select-language .select2-selection__clear {
   display: none;
 }
 .contact-us-section .select-language .select2-selection__choice {
-  background-color: none;
+  background-color: transparent;
   border: none;
 }
 .contact-us-section .select-language .select2-selection__choice {
-  border: none;
+  border: none !important;
 }
 .contact-us-section .submit-button {
   background-color: transparent;
