@@ -578,7 +578,8 @@ body.hide_scroll {
   font-family: $en-bold;
   color: #fff;
   input,
-  textarea {
+  textarea,
+  label {
     font-family: $en-bold;
     background-color: #171717;
     width: 100%;
@@ -603,6 +604,25 @@ body.hide_scroll {
       line-height: 1.2; /* Adjust line height for spacing */
       white-space: pre-wrap; /* Preserve line breaks in placeholder */
     }
+  }
+  .select-language{
+	select {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 2px solid #ff5722;
+        border-radius: 5px;
+    }
+    select[multiple] {
+        height: auto;
+        min-height: 50px;
+    }
+  }
+  .submit-button{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
   }
 }
 // message-for-editor-section

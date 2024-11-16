@@ -560,7 +560,8 @@ body.hide_scroll {
   color: #fff;
 }
 .contact-us-section input,
-.contact-us-section textarea {
+.contact-us-section textarea,
+.contact-us-section label {
   font-family: "Lexend-Bold";
   background-color: #171717;
   width: 100%;
@@ -583,6 +584,23 @@ body.hide_scroll {
   text-transform: uppercase; /* Uppercase letters */
   line-height: 1.2; /* Adjust line height for spacing */
   white-space: pre-wrap; /* Preserve line breaks in placeholder */
+}
+.contact-us-section .select-language select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ff5722;
+  border-radius: 5px;
+}
+.contact-us-section .select-language select[multiple] {
+  height: auto;
+  min-height: 50px;
+}
+.contact-us-section .submit-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .message-for-editor-section .container-fluid {

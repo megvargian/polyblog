@@ -23,12 +23,20 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="social media links if relevant" required>
                     <input type="text" placeholder="areas of interest" required>
                     <input type="text" placeholder="Links to previous writings if present" required>
+                    <div class="d-flex align-items-center select-language">
+                        <label for="languages">I CAN WRITE IN:</label>
+                        <select id="languages" name="languages[]" multiple>
+                            <option value="english">English</option>
+                            <option value="arabic1">عربي</option>
+                            <option value="arabic2">عربي</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col-4 custom-text-size-for-placeholder">
                     <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
-                <div class="col-1 justify-content-center align-items-center">
-                    <button type="submit">
+                <div class="col-1 d-flex justify-content-center align-items-center">
+                    <button type="submit" class="submit-button">
                         <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
                     </button>
                 </div>
@@ -38,19 +46,16 @@ $contactus_fields = get_fields();
 </section>
 <script>
 jQuery(document).ready(function($) {
-    $('input').focus(function () {
-        var value = $(this).attr('placeholder');
+    $('input, textarea').focus(function () {
         $(this).attr('placeholder', '');
-    }).blur(function () {
-        // Optionally restore the placeholder when the input loses focus
-        $(this).attr('placeholder', value);
+    })
+    $('#languages').select2({
+        placeholder: "Select languages",
+        allowClear: true
     });
-    $('textarea').focus(function () {
-        var value = $(this).attr('placeholder');
-        $(this).attr('placeholder', '');
-    }).blur(function () {
-        // Optionally restore the placeholder when the input loses focus
-        $(this).attr('placeholder', value);
-    });
+
+    // $('textarea').focus(function () {
+    //     $(this).attr('placeholder', '');
+    // })
 });
 </script>
