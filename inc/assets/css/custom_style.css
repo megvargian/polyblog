@@ -600,6 +600,21 @@ body.hide_scroll {
   height: auto;
   min-height: 50px;
 }
+.contact-us-section .select-language .select2-selection {
+  background: none;
+  border: none;
+  color: white;
+}
+.contact-us-section .select-language .select2-selection__clear {
+  display: none;
+}
+.contact-us-section .select-language .select2-selection__choice {
+  background-color: none;
+  border: none;
+}
+.contact-us-section .select-language .select2-selection__choice {
+  border: none;
+}
 .contact-us-section .submit-button {
   background-color: transparent;
   border: none;

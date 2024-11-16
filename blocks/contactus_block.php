@@ -23,7 +23,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="social media links if relevant" required>
                     <input type="text" placeholder="areas of interest" required>
                     <input type="text" placeholder="Links to previous writings if present" required>
-                    <div class="d-flex align-items-center select-language">
+                    <div class="d-flex justify-content-between align-items-center select-language">
                         <label for="languages">I CAN WRITE IN:</label>
                         <select id="languages" name="languages[]" multiple>
                             <option value="english">English</option>
@@ -35,7 +35,7 @@ $contactus_fields = get_fields();
                 <div class="col-4 custom-text-size-for-placeholder">
                     <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
-                <div class="col-1 d-flex justify-content-between align-items-center">
+                <div class="col-1 d-flex justify-content-center align-items-center">
                     <button type="submit" class="submit-button">
                         <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
                     </button>
