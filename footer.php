@@ -36,7 +36,7 @@
                                 </button>
                             </div>
                             <div class="col-6 justify-content-center d-flex">
-                                <img class="d-block" style="background-color: black;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/social_media_cell.png" alt="cell">
+                                <img class="d-block" style="background-color: black;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/phone.svg" alt="phone">
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,10 @@
                             </button>
                         </div>
                         <div class="row">
-                            <button class="full text-center custom-width" data-bs-toggle="modal" data-bs-target="#contact-us">Donate</button>
+                            <button class="full text-center custom-width donate" data-bs-toggle="modal" data-bs-target="#contact-us">
+                                <img class="heart" src="<?php echo get_template_directory_uri();?>/inc/assets/images/heart.green.svg" alt="heart-donate">
+                                Donate
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -562,6 +562,18 @@ body.hide_scroll {
     width: 13rem;
     margin-left: 6px;
   }
+  .donate{
+	position: relative;
+	.heart{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		bottom: -10%;
+		left: 0;
+		right: 0;
+
+	}
+  }
 }
 // contact us block
 .contact-us-section {
