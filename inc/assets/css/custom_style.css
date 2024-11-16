@@ -617,7 +617,6 @@ body.hide_scroll {
   border: none !important;
 }
 .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
-  width: 100% !important;
   margin: 0 10px !important;
 }
 .contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {

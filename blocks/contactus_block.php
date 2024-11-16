@@ -28,7 +28,6 @@ $contactus_fields = get_fields();
                         <select id="languages" name="languages[]" multiple>
                             <option value="english">English</option>
                             <option value="arabic1">عربي</option>
-                            <option value="arabic2">عربي</option>
                         </select>
                     </div>
                 </div>
