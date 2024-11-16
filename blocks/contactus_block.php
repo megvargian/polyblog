@@ -24,7 +24,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="areas of interest" required>
                     <input type="text" placeholder="Links to previous writings if present" required>
                     <div class="d-flex justify-content-between align-items-center select-language">
-                        <label for="languages">I CAN WRITE IN:</label>
+                        <label for="languages" class="w-100">I CAN WRITE IN:</label>
                         <select id="languages" name="languages[]" multiple>
                             <option value="english">English</option>
                             <option value="arabic1">عربي</option>
