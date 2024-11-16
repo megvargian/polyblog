@@ -27,12 +27,30 @@ $contactus_fields = get_fields();
                 <div class="col-4 custom-text-size-for-placeholder">
                     <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
-                <div class="col-1">
+                <div class="col-1 justify-content-center align-items-center">
                     <button type="submit">
-                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/" alt="submit-icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
                     </button>
                 </div>
             </div>
         </form>
     </div>
 </section>
+<script>
+jQuery(document).ready(function($) {
+    $('input').focus(function () {
+        var value = $(this).attr('placeholder');
+        $(this).attr('placeholder', '');
+    }).blur(function () {
+        // Optionally restore the placeholder when the input loses focus
+        $(this).attr('placeholder', value);
+    });
+    $('textarea').focus(function () {
+        var value = $(this).attr('placeholder');
+        $(this).attr('placeholder', '');
+    }).blur(function () {
+        // Optionally restore the placeholder when the input loses focus
+        $(this).attr('placeholder', value);
+    });
+});
+</script>
