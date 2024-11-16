@@ -575,7 +575,7 @@ body.hide_scroll {
   color: #fff;
 }
 .contact-us-section label {
-  width: 100%;
+  width: fit-content;
 }
 .contact-us-section input::placeholder {
   color: #fff;
@@ -617,8 +617,8 @@ body.hide_scroll {
   border: none !important;
 }
 .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
-  width: 100%;
-  margin: 0 10px;
+  width: 100% !important;
+  margin: 0 10px !important;
 }
 .contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   border: none !important;

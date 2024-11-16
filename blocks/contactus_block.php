@@ -9,7 +9,7 @@ $contactus_fields = get_fields();
     <div class="container-fluid">
         <form action="">
             <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-5">
                     <input type="text" placeholder="your Name" required>
                     <input type="email" placeholder="email Address" required>
                     <div class="row px-0">
@@ -24,7 +24,7 @@ $contactus_fields = get_fields();
                     <input type="text" placeholder="areas of interest" required>
                     <input type="text" placeholder="Links to previous writings if present" required>
                     <div class="d-flex justify-content-between align-items-center select-language">
-                        <label for="languages" class="w-100">I CAN WRITE IN:</label>
+                        <label for="languages">I CAN WRITE IN:</label>
                         <select id="languages" name="languages[]" multiple>
                             <option value="english">English</option>
                             <option value="arabic1">عربي</option>
@@ -32,7 +32,7 @@ $contactus_fields = get_fields();
                         </select>
                     </div>
                 </div>
-                <div class="col-4 custom-text-size-for-placeholder">
+                <div class="col-5 custom-text-size-for-placeholder">
                     <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                 </div>
                 <div class="col-1 d-flex justify-content-center align-items-center">

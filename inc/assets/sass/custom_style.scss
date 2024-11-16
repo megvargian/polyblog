@@ -593,7 +593,7 @@ body.hide_scroll {
     color: #fff;
   }
   label{
-	width: 100%;
+	width: fit-content;
   }
   input::placeholder {
     color: #fff;
@@ -638,8 +638,8 @@ body.hide_scroll {
 		border: none !important;
 	}
 	.select2-container.select2-container--default.select2-container--below{
-		width: 100%;
-		margin: 0 10px;
+		width: 100% !important;
+		margin: 0 10px !important;
 	}
   }
   .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
