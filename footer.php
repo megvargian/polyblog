@@ -11,7 +11,7 @@
 ?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="bg-black footer-container py-5">
+<footer class="footer-container py-5">
     <div class="container pt-3">
         <div class="row justify-content-center">
             <div class="col-8">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="row">
                             <button class="full text-center custom-width donate" data-bs-toggle="modal" data-bs-target="#contact-us">
-                                <img class="heart" src="<?php echo get_template_directory_uri();?>/inc/assets/images/heart.green.svg" alt="heart-donate">
+                                <img class="heart" src="<?php echo get_template_directory_uri();?>/inc/assets/images/heart-green.svg" alt="heart-donate">
                                 Donate
                             </button>
                         </div>

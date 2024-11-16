@@ -501,7 +501,7 @@ body.hide_scroll {
 }
 
 .footer-container {
-  background-color: #171717;
+  background-color: #181617;
   font-family: "Lexend-Regular";
 }
 .footer-container button {
@@ -510,7 +510,7 @@ body.hide_scroll {
   width: 100%;
   font-size: 20px;
   color: #87ed06;
-  background-color: #171717;
+  background-color: #181617;
   border-radius: 35px;
   margin-bottom: 10px;
   text-align: left;
@@ -526,7 +526,7 @@ body.hide_scroll {
   width: 100%;
   font-size: 20px;
   color: #87ed06;
-  background-color: #171717;
+  background-color: #181617;
   border-radius: 35px;
   text-align: left;
   text-transform: uppercase;
