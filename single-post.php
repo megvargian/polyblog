@@ -9,6 +9,7 @@
 
 get_header(); ?>
 <?php
+$author_name = get_the_title(get_field('author'));
 $tags = get_the_tags();
 
 if (have_posts()):
@@ -26,7 +27,8 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row tags">
-                <div class="col-8">
+                <div class="col-4"></div>
+                <div class="col-4">
                     <?php
                     echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
                     ?>
@@ -39,7 +41,10 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row main-content">
-                <div class="col">
+                <div class="col-4">
+                        <p><?php echo $author_name; ?></p>
+                </div>
+                <div class="col-8">
                     <?php the_content(); ?>
                 </div>
             </div>
