@@ -732,6 +732,22 @@ body.hide_scroll {
     opacity: 0.8;
     transition: 0.3s;
   }
+  
+  .category-buttons {
+    button {
+      border-radius: 8px;
+    }
+
+    .english {
+      background-color: #ed4101;
+      color: #fff;
+    }
+
+    .arabic {
+      background-color: #fff;
+      color: #000;
+    }
+  }
 
   h1 {
     color: #fff;

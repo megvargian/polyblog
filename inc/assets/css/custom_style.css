@@ -698,6 +698,17 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.single-post-container .category-buttons button {
+  border-radius: 8px;
+}
+.single-post-container .category-buttons .english {
+  background-color: #ed4101;
+  color: #fff;
+}
+.single-post-container .category-buttons .arabic {
+  background-color: #fff;
+  color: #000;
+}
 .single-post-container h1 {
   color: #fff;
 }

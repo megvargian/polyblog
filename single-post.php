@@ -29,7 +29,10 @@ if (have_posts()):
                 <div class="col-4">
                     <button class="what-we-think">What we think</button>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-3 category-buttons">
+                    <button class="english">ENGLISH</button>
+                    <button class="arabic">عربي</button>
+                </div>
             </div>
             <div class="row py-2">
                 <div class="col">
