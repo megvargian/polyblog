@@ -698,7 +698,15 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.single-post-container .category-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
 .single-post-container .category-buttons button {
+  padding: 0 12px;
+  border: none;
   border-radius: 8px;
 }
 .single-post-container .category-buttons .english {
