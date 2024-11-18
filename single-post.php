@@ -24,12 +24,12 @@ if (have_posts()):
             </div>
         <?php endif; ?>
         <div class="container-fluid px-4 single-post-container">
-            <div class="row">
+            <div class="row py-2">
                 <div class="col">
-                    <h1><?php the_title(); ?></h1>
+                    <h1 class="align-text-arabic"><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div class="row article-info">
+            <div class="row py-2 article-info">
                 <div class="col-5"></div>
                 <div class="col-4">
                     <?php
@@ -43,7 +43,7 @@ if (have_posts()):
                     </p>
                 </div>
             </div>
-            <div class="row main-content">
+            <div class="row py-2 main-content">
                 <div class="col-5 author-info">
                     <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                     <h2><?php echo $author_name; ?></h2>
