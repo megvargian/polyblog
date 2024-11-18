@@ -49,7 +49,7 @@ if (have_posts()):
                     <h2><?php echo $author_name; ?></h2>
                     <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
                 </div>
-                <div class="col-7">
+                <div class="col-7 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>
