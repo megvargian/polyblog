@@ -714,12 +714,20 @@ body.hide_scroll {
     color: #fff;
   }
 
-  .tags {
+  .article-info {
     color: #ed4101;
-    text-align: end;
+
+    .tags {
+      text-align: end;
+    }
   }
 
   .main-content {
     color: #fff;
+
+    .author-info {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

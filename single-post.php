@@ -9,7 +9,10 @@
 
 get_header(); ?>
 <?php
-$author_name = get_the_title(get_field('author'));
+$author_id = get_field('author');
+$author_name = get_the_title($author_id);
+$author_image = get_field('author_profile', $author_id);
+$author_link = get_permalink($author_id);
 $tags = get_the_tags();
 
 if (have_posts()):
@@ -26,14 +29,14 @@ if (have_posts()):
                     <h1><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div class="row tags">
-                <div class="col-4"></div>
+            <div class="row article-info">
+                <div class="col-5"></div>
                 <div class="col-4">
                     <?php
                     echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
                     ?>
                 </div>
-                <div class="col-4">
+                <div class="col-3 tags">
                     <p> <?php foreach ($tags as $tag) { ?>
                             <?php echo "#" . esc_html($tag->name); ?>
                         <?php } ?>
@@ -41,10 +44,12 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row main-content">
-                <div class="col-4">
-                        <p><?php echo $author_name; ?></p>
+                <div class="col-5 author-info">
+                    <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                    <h3><?php echo $author_name; ?></h3>
+                    <button>View profile</button>
                 </div>
-                <div class="col-8">
+                <div class="col-7">
                     <?php the_content(); ?>
                 </div>
             </div>

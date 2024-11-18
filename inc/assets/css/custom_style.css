@@ -682,10 +682,16 @@ body.hide_scroll {
 .single-post-container h1 {
   color: #fff;
 }
-.single-post-container .tags {
+.single-post-container .article-info {
   color: #ed4101;
+}
+.single-post-container .article-info .tags {
   text-align: end;
 }
 .single-post-container .main-content {
   color: #fff;
+}
+.single-post-container .main-content .author-info {
+  display: flex;
+  flex-direction: column;
 }
