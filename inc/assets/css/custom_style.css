@@ -679,6 +679,13 @@ body.hide_scroll {
   width: 100%;
 }
 
+.single-post-container .what-we-think {
+  width: 100%;
+  background-color: #ed4101;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
 .single-post-container h1 {
   color: #fff;
 }

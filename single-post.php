@@ -29,6 +29,13 @@ if (have_posts()):
                     <h1 class="align-text-arabic"><?php the_title(); ?></h1>
                 </div>
             </div>
+            <div class="row py-2">
+                <div class="col-5"></div>
+                <div class="col-4">
+                    <button class="what-we-think">What we think</button>
+                </div>
+                <div class="col-3"></div>
+            </div>
             <div class="row py-2 article-info">
                 <div class="col-5"></div>
                 <div class="col-4">
