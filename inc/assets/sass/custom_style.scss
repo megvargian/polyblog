@@ -751,6 +751,13 @@ body.hide_scroll {
         transition: 0.3s;
       }
     }
+
+    p {
+      .align-text-arabic {
+        text-align: justify !important;
+        text-align-last: end !important;
+      }
+    }
   }
 }
 

@@ -712,6 +712,10 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.single-post-container .main-content p .align-text-arabic {
+  text-align: justify !important;
+  text-align-last: end !important;
+}
 
 .align-text-arabic {
   text-align: justify;
