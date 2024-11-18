@@ -46,8 +46,8 @@ if (have_posts()):
             <div class="row main-content">
                 <div class="col-5 author-info">
                     <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
-                    <h3><?php echo $author_name; ?></h3>
-                    <button>View profile</button>
+                    <h2><?php echo $author_name; ?></h2>
+                    <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
                 </div>
                 <div class="col-7">
                     <?php the_content(); ?>
