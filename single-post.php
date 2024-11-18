@@ -25,11 +25,11 @@ if (have_posts()):
         <?php endif; ?>
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
-                <div class="col-5"></div>
-                <div class="col-4">
-                    <button class="what-we-think">What we think</button>
+                <div class="col-5 d-none d-sm-block"></div>
+                <div class="col-12 col-sm-4 mb-2">
+                    <button class="what-we-think btn btn-primary w-100">What we think</button>
                 </div>
-                <div class="col-3 category-buttons">
+                <div class="col-12 col-sm-3 category-buttons">
                     <button class="english">ENGLISH</button>
                     <button class="arabic">عربي</button>
                 </div>
