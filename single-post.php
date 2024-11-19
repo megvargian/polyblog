@@ -44,13 +44,13 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row py-2 article-info">
-                <div class="col-5"></div>
-                <div class="col-4">
+                <div class="col-5 d-none d-sm-block"></div>
+                <div class="col-12 col-sm-4">
                     <?php
                     echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
                     ?>
                 </div>
-                <div class="col-3 tags">
+                <div class="col-12 col-sm-3 tags">
                     <p> <?php foreach ($tags as $tag) { ?>
                             <?php echo "#" . esc_html($tag->name); ?>
                         <?php } ?>
