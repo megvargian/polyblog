@@ -92,6 +92,7 @@
         $('#single-post-load-more').on('click', function () {
             const button = $(this);
             const offset = button.data('offset');
+            const currentPostId = <?php echo get_the_ID(); ?>;
 
             $.ajax({
                 url: '<?php echo admin_url('admin-ajax.php'); ?>',
@@ -99,6 +100,7 @@
                 data: {
                     action: 'single_post_load_more_posts',
                     offset: offset,
+                    current_post_id: currentPostId,
                 },
                 success: function (response) {
                     if (response) {

@@ -310,12 +310,18 @@ function my_acf_init_block_types()
 function single_post_load_more_posts() {
     if (isset($_POST['offset'])) {
         $offset = intval($_POST['offset']);
+        $current_post_id = isset($_POST['current_post_id']) ? intval($_POST['current_post_id']) : 0;
+
+        $author_post_id = get_field('author', $current_post_id);
+        $author_id = get_post_field('post_author', $author_post_id);
 
         $args = array(
+            'author' => $author_id,
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => 3,
-            'offset' => $offset,
+            'post__not_in' => array($current_post_id),
+            'offset' => $offset
         );
 
         $query = new WP_Query($args);

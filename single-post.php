@@ -23,6 +23,7 @@ $author_posts_args = array(
     'post_type' => 'post',
     'post_status' => 'publish',
     'posts_per_page' => -3,
+    'post__not_in' => array($post_id),
 );
 $author_posts_query = new WP_Query($author_posts_args);
 
