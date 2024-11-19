@@ -13,7 +13,7 @@ $author_id = get_field('author');
 $author_name = get_the_title($author_id);
 $author_image = get_field('author_profile', $author_id);
 $author_link = get_permalink($author_id);
-$categories = get_the_categories();
+$categories = get_the_category();
 $tags = get_the_tags();
 
 if (have_posts()):
