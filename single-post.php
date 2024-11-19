@@ -28,11 +28,11 @@ if (have_posts()):
             <div class="row py-2">
                 <div class="col-5 d-none d-sm-block"></div>
                 <div class="col-12 col-sm-4 mb-2">
-                    <button class="what-we-think btn btn-primary w-100">What we think</button>
+                    <button type="button" class="what-we-think w-100">What we think</button>
                 </div>
                 <div class="col-12 col-sm-3 category-buttons">
                     <?php foreach ($categories as $category) { ?>
-                        <button class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
+                        <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
                             <?php echo esc_html($category->name); ?>
                         </button>
                     <?php } ?>
@@ -59,9 +59,16 @@ if (have_posts()):
             </div>
             <div class="row py-2 main-content">
                 <div class="col-12 col-sm-5 py-2 author-info">
-                    <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
-                    <h2><?php echo $author_name; ?></h2>
-                    <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                            <h2><?php echo $author_name; ?></h2>
+                            <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="what-we-think">Articles written by <?php echo $author_name; ?></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-sm-7 py-2 align-text-arabic">
                     <?php the_content(); ?>
