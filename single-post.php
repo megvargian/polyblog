@@ -61,12 +61,17 @@ if (have_posts()):
                 <div class="col-12 col-sm-5 py-2 author-info">
                     <div class="container-fluid">
                         <div class="row">
-                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
-                            <h2><?php echo $author_name; ?></h2>
-                            <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
+                            <div class="col">
+                                <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                <h2><?php echo $author_name; ?></h2>
+                                <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
+                            </div>
                         </div>
                         <div class="row">
-                            <button type="button" class="what-we-think">Articles written by <?php echo $author_name; ?></button>
+                            <div class="col">
+                                <button type="button" class="what-we-think">Articles written by
+                                    <?php echo $author_name; ?></button>
+                            </div>
                         </div>
                     </div>
                 </div>
