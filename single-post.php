@@ -13,6 +13,7 @@ $author_id = get_field('author');
 $author_name = get_the_title($author_id);
 $author_image = get_field('author_profile', $author_id);
 $author_link = get_permalink($author_id);
+$categories = get_the_categories();
 $tags = get_the_tags();
 
 if (have_posts()):
@@ -30,8 +31,13 @@ if (have_posts()):
                     <button class="what-we-think btn btn-primary w-100">What we think</button>
                 </div>
                 <div class="col-12 col-sm-3 category-buttons">
-                    <button class="english">ENGLISH</button>
-                    <button class="arabic">عربي</button>
+                    <?php foreach ($categories as $category) { ?>
+                        <button class="<?php $category->name == 'ENGLISH' ? "english" : "arabic" ?>">
+                            <?php echo esc_html($category->name); ?>
+                        </button>
+                    <?php } ?>
+                    <!-- <button class="english">ENGLISH</button>
+                    <button class="arabic">عربي</button> -->
                 </div>
             </div>
             <div class="row py-2">
