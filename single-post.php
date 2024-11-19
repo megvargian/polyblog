@@ -58,12 +58,12 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row py-2 main-content">
-                <div class="col-5 author-info">
+                <div class="col-12 col-sm-5 py-2 author-info">
                     <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                     <h2><?php echo $author_name; ?></h2>
                     <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
                 </div>
-                <div class="col-7 align-text-arabic">
+                <div class="col-12 col-sm-7 py-2 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>
