@@ -9,12 +9,21 @@
 
 get_header(); ?>
 <?php
+$post_id = get_the_ID();
 $author_id = get_field('author');
 $author_name = get_the_title($author_id);
 $author_image = get_field('author_profile', $author_id);
 $author_link = get_permalink($author_id);
 $categories = get_the_category();
 $tags = get_the_tags();
+
+$author_posts_args = array(
+    'author' => $author_id,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => -3,
+);
+$author_posts_query = new WP_Query($author_posts_args);
 
 if (have_posts()):
     while (have_posts()):
@@ -67,10 +76,35 @@ if (have_posts()):
                                 <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
                             </div>
                         </div>
+                        <div class="row mt-5 mb-2">
+                            <div class="col">
+                                <button type="button" class="what-we-think w-100">Articles written by
+                                    <?php echo $author_name; ?></button>
+                            </div>
+                        </div>
+                        <div id="single-post-author-posts">
+                            <?php
+                            if ($author_posts_query->have_posts()):
+                                while ($author_posts_query->have_posts()):
+                                    $author_posts_query->the_post();
+                                    ?>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        </div>
+                                    </div>
+                                    <?php
+                                endwhile;
+                            else:
+                                echo '<p>No other posts</p>';
+                            endif;
+
+                            wp_reset_postdata();
+                            ?>
+                        </div>
                         <div class="row">
                             <div class="col">
-                                <button type="button" class="what-we-think">Articles written by
-                                    <?php echo $author_name; ?></button>
+                                <button id="single-post-load-more" data-offset="3">view more</button>
                             </div>
                         </div>
                     </div>

@@ -36,7 +36,9 @@
                                 </button>
                             </div>
                             <div class="col-6 justify-content-center d-flex">
-                                <img class="d-block" style="background-color: black;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/phone.svg" alt="phone">
+                                <img class="d-block" style="background-color: black;"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/phone.svg"
+                                    alt="phone">
                             </div>
                         </div>
                     </div>
@@ -53,8 +55,11 @@
                             </button>
                         </div>
                         <div class="row">
-                            <button class="full text-center custom-width donate" data-bs-toggle="modal" data-bs-target="#contact-us">
-                                <img class="heart" src="<?php echo get_template_directory_uri();?>/inc/assets/images/heart-green.svg" alt="heart-donate">
+                            <button class="full text-center custom-width donate" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+                                <img class="heart"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
+                                    alt="heart-donate">
                                 Donate
                             </button>
                         </div>
@@ -68,20 +73,49 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit. Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus quaerat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit. Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus quaerat!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit.
+                Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus
+                quaerat!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit.
+                Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus
+                quaerat!
             </div>
         </div>
     </div>
 </div>
 <script>
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
+        $('#single-post-load-more').on('click', function () {
+            const button = $(this);
+            const offset = button.data('offset');
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'load_more_posts',
+                    offset: offset,
+                },
+                success: function (response) {
+                    if (response) {
+                        $('#single-post-author-posts').append(response);
+                        button.data('offset', offset + 3);
+
+                        if (response.trim() === '') {
+                            button.hide();
+                        }
+                    }
+                }
+            });
+        });
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <?php wp_footer(); ?>
 </body>
+
 </html>
