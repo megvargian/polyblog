@@ -10,10 +10,11 @@
 get_header(); ?>
 <?php
 $post_id = get_the_ID();
-$author_id = get_field('author');
-$author_name = get_the_title($author_id);
-$author_image = get_field('author_profile', $author_id);
-$author_link = get_permalink($author_id);
+$author_post_id = get_field('author');
+$author_id = get_post_field('post_author', $author_post_id);
+$author_name = get_the_title($author_post_id);
+$author_image = get_field('author_profile', $author_post_id);
+$author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 
