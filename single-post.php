@@ -32,7 +32,7 @@ if (have_posts()):
                 </div>
                 <div class="col-12 col-sm-3 category-buttons">
                     <?php foreach ($categories as $category) { ?>
-                        <button class="<?php echo $category->name == 'ENGLISH' ? "english" : "arabic"; ?>">
+                        <button class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
                             <?php echo esc_html($category->name); ?>
                         </button>
                     <?php } ?>
