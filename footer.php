@@ -94,7 +94,7 @@
             const offset = button.data('offset');
 
             $.ajax({
-                url: ajaxurl,
+                url: '<?php echo admin_url('admin-ajax.php'); ?>',
                 type: 'POST',
                 data: {
                     action: 'load_more_posts',
