@@ -773,8 +773,15 @@ body.hide_scroll {
 .single-post-container .main-content .author-info .author-post-container .author-post-details-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between p;
-  justify-content-font-size: 12px;
+  justify-content: space-between;
+}
+.single-post-container .main-content .author-info .author-post-container .author-post-details-container p:first-of-type {
+  font-size: 12px;
+  line-height: 1;
+}
+.single-post-container .main-content .author-info .author-post-container .author-post-details-container p:nth-of-type(2) {
+  font-size: 9px;
+  line-height: 1;
 }
 .single-post-container .main-content .author-info .author-post-container .author-post-details-container small {
   font-size: 9px;

@@ -106,7 +106,7 @@ if (have_posts()):
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <small><?php echo esc_html($author_post_content_preview); ?></small>
+                                                        <p><?php echo esc_html($author_post_content_preview); ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">

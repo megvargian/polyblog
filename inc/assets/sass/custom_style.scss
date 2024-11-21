@@ -821,10 +821,16 @@ body.hide_scroll {
         .author-post-details-container {
           display: flex;
           flex-direction: column;
-          justify-content: space-between
+          justify-content: space-between;
 
-          p {
+          p:first-of-type {
             font-size: 12px;
+            line-height: 1;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 9px;
+            line-height: 1;
           }
 
           small {
