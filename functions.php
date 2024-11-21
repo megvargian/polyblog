@@ -333,14 +333,30 @@ function single_post_load_more_posts() {
                 $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                 $author_post_publish_date = get_the_date('M. j, Y');
                 ?>
-                <div class="row my-2 p-4 author-post-container">
-                    <div class="col">
-                        <img src="<?php echo esc_url($author_post_featured_image); ?>" />
-                        <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
-                        <p><?php echo esc_html($author_post_content_preview); ?></p>
-                        <p><?php echo esc_html($author_post_publish_date); ?></p>
-                    </div>
-                </div> 
+                <a href="<?php the_permalink(); ?>" target="_blank">
+                                        <div class="row my-2 p-4 author-post-container">
+                                            <div class="col">
+                                                <img class="author-post-thumbnail" src="<?php echo esc_url($author_post_featured_image); ?>" />
+                                            </div>
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h3><?php the_title(); ?></h3>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p><?php echo esc_html($author_post_content_preview); ?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p><?php echo esc_html($author_post_publish_date); ?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a> 
                 <?php
             endwhile;
         else:
