@@ -335,7 +335,7 @@ function single_post_load_more_posts() {
                 $author_post_publish_date = get_the_date('M. j, Y');
                 ?>
                <a href="<?php the_permalink(); ?>" target="_blank">
-                                        <div class="row my-2 p-4 author-post-container text-align-arabic">
+                                        <div class="row my-2 p-4 author-post-container align-text-arabic">
                                             <div class="col author-post-thumbnail-container">
                                                 <img src="<?php echo esc_url($author_post_featured_image); ?>" />
                                             </div>
@@ -351,7 +351,7 @@ function single_post_load_more_posts() {
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col">
+                                                    <div class="col details-container">
                                                         <small><?php echo $author_name; ?></small>
                                                         <small><?php echo esc_html($author_post_publish_date); ?></small>
                                                     </div>

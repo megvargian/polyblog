@@ -779,6 +779,10 @@ body.hide_scroll {
 .single-post-container .main-content .author-info .author-post-container .author-post-details-container small {
   font-size: 9px;
 }
+.single-post-container .main-content .author-info .author-post-container .author-post-details-container .details-container {
+  display: flex;
+  justify-content: space-between;
+}
 .single-post-container .main-content .author-info .author-post-container:hover {
   opacity: 0.8;
   transition: 0.3s;
