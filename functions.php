@@ -329,9 +329,9 @@ function single_post_load_more_posts() {
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post(); ?>
-                <div class="row my-2">
+                <div class="row my-2 p-4 author-post-container">
                     <div class="col">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
                     </div>
                 </div>
         <?php
