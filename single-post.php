@@ -89,15 +89,14 @@ if (have_posts()):
                             if ($author_posts_query->have_posts()):
                                 while ($author_posts_query->have_posts()):
                                     $author_posts_query->the_post();
-                                    $author_post_title = the_title();
                                     $author_post_featured_image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                                     $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                                     ?>
                                     <div class="row my-2 p-4 author-post-container">
                                         <div class="col">
-                                            <img src="<?php echo esc_url($author_post_featured_image) ?>" />
+                                            <img src="<?php echo esc_url($author_post_featured_image); ?>" />
                                             <a href="<?php the_permalink(); ?>"
-                                                target="_blank"><?php esc_html($author_post_title); ?></a>
+                                                target="_blank"><?php the_title(); ?></a>
                                             <p><?php echo esc_html($author_post_content_preview); ?></p>
                                         </div>
                                     </div>
