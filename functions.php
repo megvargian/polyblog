@@ -329,12 +329,13 @@ function single_post_load_more_posts() {
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
+                $author_name = get_the_title($current_post_id);
                 $author_post_featured_image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                 $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                 $author_post_publish_date = get_the_date('M. j, Y');
                 ?>
                <a href="<?php the_permalink(); ?>" target="_blank">
-                                        <div class="row my-2 p-4 author-post-container">
+                                        <div class="row my-2 p-4 author-post-container text-align-arabic">
                                             <div class="col author-post-thumbnail-container">
                                                 <img src="<?php echo esc_url($author_post_featured_image); ?>" />
                                             </div>
@@ -351,6 +352,7 @@ function single_post_load_more_posts() {
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
+                                                        <small><?php echo $author_name; ?></small>
                                                         <small><?php echo esc_html($author_post_publish_date); ?></small>
                                                     </div>
                                                 </div>
