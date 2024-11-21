@@ -787,6 +787,11 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.single-post-container .main-content .author-info #single-post-load-more {
+  border: none;
+  background: none;
+  color: #fff;
+}
 .single-post-container .main-content .align-text-arabic p {
   text-align: justify !important;
   text-align-last: end !important;
