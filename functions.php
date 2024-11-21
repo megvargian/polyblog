@@ -342,12 +342,12 @@ function single_post_load_more_posts() {
                                             <div class="col author-post-details-container">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p><?php the_title(); ?></p>
+                                                        <p class="title"><?php the_title(); ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <small><?php echo esc_html($author_post_content_preview); ?></small>
+                                                        <p class="preview"><?php echo esc_html($author_post_content_preview); ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
