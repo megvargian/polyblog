@@ -69,7 +69,7 @@ if (have_posts()):
                 </div>
             </div>
             <div class="row py-2 main-content">
-                <div class="col-12 col-sm-5 py-2 author-info">
+                <div class="col-12 col-sm-4 py-2 author-info">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col">
@@ -118,7 +118,7 @@ if (have_posts()):
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-7 py-2 align-text-arabic">
+                <div class="col-12 col-sm-8 py-2 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>
