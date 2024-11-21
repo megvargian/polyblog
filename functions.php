@@ -331,12 +331,14 @@ function single_post_load_more_posts() {
                 $query->the_post();
                 $author_post_featured_image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                 $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
+                $author_post_publish_date = get_the_date('M. j, Y');
                 ?>
                 <div class="row my-2 p-4 author-post-container">
                     <div class="col">
                         <img src="<?php echo esc_url($author_post_featured_image); ?>" />
                         <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
                         <p><?php echo esc_html($author_post_content_preview); ?></p>
+                        <p><?php echo esc_html($author_post_publish_date); ?></p>
                     </div>
                 </div> 
                 <?php
