@@ -93,8 +93,8 @@ if (have_posts()):
                                     $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                                     $author_post_publish_date = get_the_date('M. j, Y');
                                     ?>
-                                    <a href="<?php the_permalink(); ?>" target="_blank">
                                         <div class="row my-2 p-4 author-post-container align-text-arabic">
+                                            <a href="<?php the_permalink(); ?>" target="_blank">
                                             <div class="col author-post-thumbnail-container">
                                                 <img src="<?php echo esc_url($author_post_featured_image); ?>" />
                                             </div>
@@ -116,8 +116,8 @@ if (have_posts()):
                                                     </div>
                                                 </div>
                                             </div>
+                                        </a>
                                         </div>
-                                    </a>
                                     <?php
                                 endwhile;
                             else:
