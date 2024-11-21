@@ -96,7 +96,8 @@ if (have_posts()):
                                     <div class="row my-2 p-4 author-post-container">
                                         <div class="col">
                                             <img src="<?php echo esc_url($author_post_featured_image) ?>" />
-                                            <a href="<?php the_permalink(); ?>" target="_blank"><?php $author_post_title; ?></a>
+                                            <a href="<?php the_permalink(); ?>"
+                                                target="_blank"><?php esc_html($author_post_title); ?></a>
                                             <p><?php echo esc_html($author_post_content_preview); ?></p>
                                         </div>
                                     </div>
