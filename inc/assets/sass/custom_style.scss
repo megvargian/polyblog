@@ -808,9 +808,28 @@ body.hide_scroll {
         opacity: 1;
         transition: 0.3s ease-in-out;
 
-        .author-post-thumbnail {
-          width: 100px;
-          height: 100px;
+        .author-post-thumbnail-container {
+          align-content: center;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            aspect-ratio: 1;
+          }
+        }
+
+        .author-post-details-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between
+
+          p {
+            font-size: 12px;
+          }
+
+          small {
+            font-size: 9px;
+          }
         }
       }
 
