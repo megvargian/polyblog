@@ -94,6 +94,11 @@
             const offset = button.data('offset');
             const currentPostId = <?php echo get_the_ID(); ?>;
 
+            function countOccurrences(string, substring) {
+            const matches = string.match(new RegExp(substring, 'g'));
+            return matches ? matches.length : 0;
+                }
+
             $.ajax({
                 url: '<?php echo admin_url('admin-ajax.php'); ?>',
                 type: 'POST',
@@ -107,8 +112,10 @@
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
-                        console.log('response', response);
-                        if (response.trim() === '') {
+                        const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
+
+                        console.log('numberOfPostsLoaded', numberOfPostsLoaded);
+                        if (numberOfPostsLoaded < 3) {
                             button.hide();
                         }
                     }
