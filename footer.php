@@ -107,6 +107,7 @@
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
+                        console.log('response', response);
                         if (response.trim() === '') {
                             button.hide();
                         }
