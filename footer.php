@@ -114,7 +114,6 @@
 
                         const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
 
-                        console.log('numberOfPostsLoaded', numberOfPostsLoaded);
                         if (numberOfPostsLoaded < 3) {
                             button.hide();
                         }
