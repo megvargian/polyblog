@@ -329,7 +329,7 @@ function single_post_load_more_posts() {
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
-                $author_name = get_the_title($author_id);
+                $author_name = get_the_title($author_post_id);
                 $author_post_featured_image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                 $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                 $author_post_publish_date = get_the_date('M. j, Y');
