@@ -80,8 +80,8 @@ if (have_posts()):
                         </div>
                         <div class="row mt-5 mb-2">
                             <div class="col">
-                                <button type="button" class="what-we-think w-100">Articles written by
-                                    <?php echo $author_name; ?></button>
+                                <p class="what-we-think w-100">Articles written by
+                                    <?php echo $author_name; ?></p>
                             </div>
                         </div>
                         <div id="single-post-author-posts">
