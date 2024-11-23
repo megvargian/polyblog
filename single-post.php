@@ -129,7 +129,10 @@ if (have_posts()):
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button id="single-post-load-more" data-offset="3">view more</button>
+                                <button id="single-post-load-more" data-offset="3">
+                                    view more
+                                    <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/caret-down.svg" alt="view more" />
+                                </button>
                             </div>
                         </div>
                     </div>

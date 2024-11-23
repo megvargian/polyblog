@@ -114,6 +114,7 @@
 
                         const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
 
+                        // metodo abbastanza zozzosa per controlà se ce sono altri articolo da caricà. però funziona
                         if (numberOfPostsLoaded < 3) {
                             button.hide();
                         }
