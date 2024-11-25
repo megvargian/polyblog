@@ -152,7 +152,6 @@ if (have_posts()):
     
         if ($author_posts_query->have_posts()):
             $total_posts = $author_posts_query->found_posts;
-            echo $total_posts;
         endif;
         ?>
         <script>
@@ -179,14 +178,14 @@ if (have_posts()):
                 },
                 success: function (response) {
                     if (response) {
-                        console.log(<?php echo $total_posts; ?>);
+                        const totalPosts = <?php $total_posts; ?>
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
                         const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
+                        authorPostsCount += numberOfPostsLoaded;
 
-                        // metodo abbastanza zozzosa per controlà se ce sono altri articolo da caricà. però funziona
-                        if (numberOfPostsLoaded < 3) {
+                        if (authorPostsCount === totalPosts - 1) {
                             button.hide();
                         }
                     }
