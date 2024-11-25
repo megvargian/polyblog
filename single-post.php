@@ -152,20 +152,9 @@ if (have_posts()):
             const currentPostId = <?php echo get_the_ID(); ?>;
 
             function countOccurrences(string, substring) {
-            const matches = string.match(new RegExp(substring, 'g'));
-            return matches ? matches.length : 0;
-
-            // const totalPostCount = <?php echo $total_posts; ?>;
-            // $.ajax({
-            //     url: '<?php echo admin_url('admin-ajax.php') ?>',
-            //     type: 'POST',
-            //     data: {
-            //         action: 'get_total_author_posts',
-            //         current_post_id: currentPostId,
-            //         total_post_count: totalPostCount
-            //     }
-            // });
-                }
+                const matches = string.match(new RegExp(substring, 'g'));
+                return matches ? matches.length : 0;
+            }
 
             $.ajax({
                 url: '<?php echo admin_url('admin-ajax.php'); ?>',
@@ -177,7 +166,7 @@ if (have_posts()):
                 },
                 success: function (response) {
                     if (response) {
-                        console.log(<?php echo $total_posts ?>)
+                        console.log(<?php echo $total_posts; ?>);
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
