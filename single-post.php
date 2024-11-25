@@ -185,9 +185,6 @@ if (have_posts()):
                         const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
                         authorPostsCount += numberOfPostsLoaded;
 
-                        console.log('totalPosts', totalPosts);
-                        console.log('authorPostsCount', authorPostsCount);
-
                         if (authorPostsCount === totalPosts - 1) {
                             button.hide();
                         }
