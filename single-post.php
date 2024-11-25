@@ -143,15 +143,15 @@ if (have_posts()):
             </div>
         </div>
         <?php
-        $author_posts_query = new WP_Query(array(
+        $total_posts_query = new WP_Query(array(
             'author' => $author_id,
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => -1,
         ));
     
-        if ($author_posts_query->have_posts()):
-            $total_posts = $author_posts_query->found_posts;
+        if ($total_posts_query->have_posts()):
+            $total_posts = $total_posts_query->found_posts;
         endif;
         ?>
         <script>
