@@ -178,12 +178,15 @@ if (have_posts()):
                 },
                 success: function (response) {
                     if (response) {
-                        const totalPosts = <?php $total_posts; ?>
+                        const totalPosts = <?php $total_posts; ?>;
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
                         const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
                         authorPostsCount += numberOfPostsLoaded;
+
+                        console.log('totalPosts', totalPosts);
+                        console.log('authorPostsCount', authorPostsCount);
 
                         if (authorPostsCount === totalPosts - 1) {
                             button.hide();
