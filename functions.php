@@ -307,19 +307,19 @@ function my_acf_init_block_types()
 	}
 }
 
-function get_total_author_posts($author_id) {
-    $author_posts_query = new WP_Query(array(
-        'author' => $author_id,
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-    ));
+// function get_total_author_posts($author_id) {
+//     $author_posts_query = new WP_Query(array(
+//         'author' => $author_id,
+//         'post_type' => 'post',
+//         'post_status' => 'publish',
+//         'posts_per_page' => -1,
+//     ));
 
-    if ($author_posts_query->have_posts()):
-        $total_posts = $author_posts_query->found_posts;
-        return $total_posts;
-    endif;
-}
+//     if ($author_posts_query->have_posts()):
+//         $total_posts = $author_posts_query->found_posts;
+//         return $total_posts;
+//     endif;
+// }
 
 function single_post_load_more_posts() {
     if (isset($_POST['offset'])) {
@@ -340,7 +340,7 @@ function single_post_load_more_posts() {
 
         $query = new WP_Query($args);
 
-        $total_posts = get_total_author_posts($author_id);
+        // $total_posts = get_total_author_posts($author_id);
 
         if ($query->have_posts()):
             while ($query->have_posts()):

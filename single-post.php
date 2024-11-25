@@ -142,6 +142,19 @@ if (have_posts()):
                 </div>
             </div>
         </div>
+        <?php
+        $author_posts_query = new WP_Query(array(
+            'author' => $author_id,
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+        ));
+    
+        if ($author_posts_query->have_posts()):
+            $total_posts = $author_posts_query->found_posts;
+            echo $total_posts;
+        endif;
+        ?>
         <script>
     jQuery(document).ready(function ($) {
         let authorPostsCount = 3;
