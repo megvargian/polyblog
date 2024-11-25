@@ -178,7 +178,7 @@ if (have_posts()):
                 },
                 success: function (response) {
                     if (response) {
-                        const totalPosts = <?php $total_posts; ?>
+                        const totalPosts = <?php echo $total_posts; ?>
                         $('#single-post-author-posts').append(response);
                         button.data('offset', offset + 3);
 
