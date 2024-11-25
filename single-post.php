@@ -142,6 +142,57 @@ if (have_posts()):
                 </div>
             </div>
         </div>
+        <script>
+    jQuery(document).ready(function ($) {
+        let authorPostsCount = 3;
+
+        $('#single-post-load-more').on('click', function () {
+            const button = $(this);
+            const offset = button.data('offset');
+            const currentPostId = <?php echo get_the_ID(); ?>;
+
+            function countOccurrences(string, substring) {
+            const matches = string.match(new RegExp(substring, 'g'));
+            return matches ? matches.length : 0;
+
+            // const totalPostCount = <?php echo $total_posts; ?>;
+            // $.ajax({
+            //     url: '<?php echo admin_url('admin-ajax.php') ?>',
+            //     type: 'POST',
+            //     data: {
+            //         action: 'get_total_author_posts',
+            //         current_post_id: currentPostId,
+            //         total_post_count: totalPostCount
+            //     }
+            // });
+                }
+
+            $.ajax({
+                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                type: 'POST',
+                data: {
+                    action: 'single_post_load_more_posts',
+                    offset: offset,
+                    current_post_id: currentPostId,
+                },
+                success: function (response) {
+                    if (response) {
+                        console.log(<?php echo $total_posts ?>)
+                        $('#single-post-author-posts').append(response);
+                        button.data('offset', offset + 3);
+
+                        const numberOfPostsLoaded = countOccurrences(response, 'author-post-details-container');
+
+                        // metodo abbastanza zozzosa per controlà se ce sono altri articolo da caricà. però funziona
+                        if (numberOfPostsLoaded < 3) {
+                            button.hide();
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>
     <?php endwhile;
 endif;
 ?>
