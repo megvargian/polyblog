@@ -660,6 +660,13 @@ body.hide_scroll {
 
   .single-author-container {
     text-align: center;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+  .single-author-container:hover {
+    opacity: 0.8;
+    transition: 0.3s;
   }
 }
 
