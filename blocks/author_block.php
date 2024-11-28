@@ -17,14 +17,14 @@ $rows = array_chunk($authors_list, 4);
                     $author_image = get_field('author_profile', $author_id);
                     $author_expertise = get_field('expertise', $author_id);
                     $author_link = get_permalink($author_id); ?>
+                    <div class="single-author-container">
+                        <a href="<?php echo $author_link; ?>" target="_blank">
+                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                        </a>
+                        <p><?php echo esc_html($author_title); ?></p>
+                        <p><?php echo esc_html($author_expertise) ?></p>
+                    </div>
                 <?php } ?>
-                <div class="single-author-container">
-                    <a href="<?php echo $author_link; ?>" target="_blank">
-                        <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
-                    </a>
-                    <p><?php echo esc_html($author_title); ?></p>
-                    <p><?php echo esc_html($author_expertise) ?></p>
-                </div>
             </div>
         </div>
     <?php } ?>

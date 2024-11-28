@@ -658,7 +658,9 @@ body.hide_scroll {
 .author-block-container {
   color: #ec4100;
 
-  .single-author-container {}
+  .single-author-container {
+    text-align: center;
+  }
 }
 
 // message-for-editor-section

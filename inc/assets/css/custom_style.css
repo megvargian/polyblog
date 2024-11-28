@@ -632,6 +632,10 @@ body.hide_scroll {
 .author-block-container {
   color: #ec4100;
 }
+.author-block-container .single-author-container {
+  text-align: center;
+}
+
 .message-for-editor-section .container-fluid {
   background-color: #ec4100;
 }
