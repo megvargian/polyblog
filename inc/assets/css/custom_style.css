@@ -632,12 +632,17 @@ body.hide_scroll {
 .author-block-container {
   color: #ec4100;
 }
-.author-block-container .single-author-container {
+.author-block-container .single-author-col {
+  display: flex;
+  justify-content: center;
+}
+.author-block-container .single-author-col .single-author-container {
+  display: inline-block;
   text-align: center;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.author-block-container .single-author-container:hover {
+.author-block-container .single-author-col .single-author-container:hover {
   opacity: 0.8;
   transition: 0.3s;
 }

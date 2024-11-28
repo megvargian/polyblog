@@ -657,16 +657,22 @@ body.hide_scroll {
 // author block section
 .author-block-container {
   color: #ec4100;
+  
+  .single-author-col {
+    display: flex;
+    justify-content: center;
 
-  .single-author-container {
-    text-align: center;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
-  }
-
-  .single-author-container:hover {
-    opacity: 0.8;
-    transition: 0.3s;
+    .single-author-container {
+      display: inline-block;
+      text-align: center;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .single-author-container:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
   }
 }
 
