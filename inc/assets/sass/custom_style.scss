@@ -709,7 +709,12 @@ body.hide_scroll {
     }
     img {
       border-radius: 100%;
-      border: 2px solid #000;
+      border: 6px solid #000;
+      width: 100%;
+      height: auto;
+      height: 300px;
+      mix-blend-mode: multiply; /* Blend mode for the overlay effect */
+      background-color: rgba(237, 65, 1, 0.5); /* Overlay color */
     }
   }
 }
