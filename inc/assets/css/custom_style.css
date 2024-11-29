@@ -727,6 +727,19 @@ body.hide_scroll {
   background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
 }
 
+.single-author-article-swiper-section .single-red-border {
+  border: 4px solid #621A01;
+  border-radius: 20px;
+}
+.single-author-article-swiper-section img {
+  border-radius: 100%;
+  border: 4px solid #621A01;
+  width: 500px;
+  height: 500px;
+  mix-blend-mode: luminosity;
+  background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
+}
+
 .custom-modal .modal-content {
   background-color: transparent;
   border-radius: 20px;

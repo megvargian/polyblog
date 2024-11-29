@@ -315,6 +315,17 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Single Author Article Swiper Block',
+                'title'             => __('Single Author Article Swiper Block'),
+                'description'       => __('This is the Single Author Article Swiper Block of Homepage'),
+                'render_template'   => 'blocks/single-author-article-swiper.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
 
