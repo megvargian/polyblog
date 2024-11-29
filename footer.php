@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-6 justify-content-center d-flex">
                                 <img class="d-block" style="background-color: black;"
-                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/noun-phone.svg"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group.svg"
                                     alt="phone">
                             </div>
                         </div>
