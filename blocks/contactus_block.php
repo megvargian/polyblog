@@ -52,7 +52,10 @@ jQuery(document).ready(function($) {
         placeholder: "Select languages",
         allowClear: true
     });
-
+    $('#languages').on('change', function(){
+        var count = $('#select2-languages-container li').length;
+        console.log('Number of <li> tags:', count);
+    });
     // $('textarea').focus(function () {
     //     $(this).attr('placeholder', '');
     // })
