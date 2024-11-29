@@ -683,6 +683,10 @@ body.hide_scroll {
     outline: none;
     box-shadow: none;
   }
+  .select2-search .select2-search__field{
+    font-family: $en-bold !important;
+    color: #fff;
+  }
 }
 .contact-us-section-light{
   background-color: #e3e1e2 !important;
@@ -695,6 +699,12 @@ body.hide_scroll {
     background-color: #e3e1e2 !important;
   }
   .select2-selection {
+    color: #000 !important;
+  }
+  input::placeholder {
+    color: #000 !important;
+  }
+  .select2-search .select2-search__field{
     color: #000 !important;
   }
 }
