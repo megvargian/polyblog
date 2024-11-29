@@ -46,9 +46,9 @@ $single_author_article_swiper_block = get_fields();
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-prev swiper-button-prev-last-part"></div>
+            <div class="swiper-button-next swiper-button-next-last-part"></div>
         </div>
-        <div class="swiper-button-prev swiper-button-prev-last-part"></div>
-        <div class="swiper-button-next swiper-button-next-last-part"></div>
     </div>
 </section>
 <script>
