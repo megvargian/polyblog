@@ -320,7 +320,7 @@ function my_acf_init_block_types()
                 'name'              => 'Single Author Article Swiper Block',
                 'title'             => __('Single Author Article Swiper Block'),
                 'description'       => __('This is the Single Author Article Swiper Block of Homepage'),
-                'render_template'   => 'blocks/single-author-article-swiper.php',
+                'render_template'   => 'blocks/single_author_article_swiper_block.php',
                 'category'          => 'formatting',
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
