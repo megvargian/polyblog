@@ -609,7 +609,13 @@ body.hide_scroll {
     color: #fff;
   }
   label {
-    width: fit-content;
+    width: 330px;
+  }
+  .select2-search__field{
+    margin-top: 8px !important;
+  }
+  .select2-search.select2-search--inline{
+    line-height: 1 !important;
   }
   input::placeholder {
     color: #fff;
@@ -647,8 +653,9 @@ body.hide_scroll {
       display: none;
     }
     .select2-selection__choice {
-      background-color: transparent;
+      background-color: #ff5722;
       border: none;
+      border-radius: 15px;
     }
     .select2-selection__choice {
       border: none !important;
@@ -712,8 +719,8 @@ body.hide_scroll {
       border: 6px solid #000;
       width: 300px;
       height: 300px;
-      mix-blend-mode: multiply; /* Blend mode for the overlay effect */
-      background-color: rgba(237, 65, 1, 0.5); /* Overlay color */
+      mix-blend-mode: luminosity;
+      background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
     }
   }
 }

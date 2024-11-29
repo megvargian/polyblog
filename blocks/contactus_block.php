@@ -7,7 +7,7 @@ $contactus_fields = get_fields();
 ?>
 <section class="py-4 contact-us-section">
     <div class="container-fluid">
-        <form action="">
+        <form action="/">
             <div class="row justify-content-center">
                 <div class="col-5">
                     <input type="text" placeholder="your Name" required>
