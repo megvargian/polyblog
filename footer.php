@@ -44,23 +44,33 @@
                                     <p>
                                         Follow us !
                                     </p>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <img class="w-100"
-                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/instagram.svg"
-                                            alt="instagram"
-                                        >
-                                        <img class="w-100"
-                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/X.svg"
-                                            alt="X"
-                                        >
-                                        <img class="w-100"
-                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/facebook.svg"
-                                            alt="phone"
-                                        >
-                                        <img class="w-100"
-                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/youtube.svg"
-                                            alt="phone"
-                                        >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#">
+                                            <img class="w-100"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/instagram.svg"
+                                                alt="instagram"
+                                            >
+                                        </a>
+                                        <a href="#">
+                                            <img class="w-100"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/X.svg"
+                                                alt="X"
+                                            >
+                                        </a>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#">
+                                            <img class="w-100"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/facebook.svg"
+                                                alt="facebook"
+                                            >
+                                        </a>
+                                        <a href="#">
+                                            <img class="w-100"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/youtube.svg"
+                                                alt="youtube"
+                                            >
+                                        </a>
                                     </div>
                                 </div>
                             </div>
