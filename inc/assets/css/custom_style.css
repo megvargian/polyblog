@@ -670,6 +670,7 @@ body.hide_scroll {
 .contact-us-section-light label,
 .contact-us-section-light .select2 {
   color: #000 !important;
+  background-color: #e3e1e2 !important;
 }
 .contact-us-section-light .select2-selection {
   color: #000 !important;
