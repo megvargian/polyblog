@@ -35,11 +35,34 @@
                                     Be our advocate
                                 </button>
                             </div>
-                            <div class="col-6 justify-content-center d-flex">
-                                <img class="d-block"
+                            <div class="col-6 justify-content-center d-flex position-relative outer-phone">
+                                <img class="d-block w-100"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group.svg"
                                     alt="phone"
                                 >
+                                <div class="inner-phone">
+                                    <p>
+                                        Follow us !
+                                    </p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <img class="w-100"
+                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/instagram.svg"
+                                            alt="instagram"
+                                        >
+                                        <img class="w-100"
+                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/X.svg"
+                                            alt="X"
+                                        >
+                                        <img class="w-100"
+                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/facebook.svg"
+                                            alt="phone"
+                                        >
+                                        <img class="w-100"
+                                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/youtube.svg"
+                                            alt="phone"
+                                        >
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

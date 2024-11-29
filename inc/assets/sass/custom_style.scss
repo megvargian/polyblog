@@ -571,6 +571,21 @@ body.hide_scroll {
       bottom: -40%;
     }
   }
+  .outer-phone{
+    .inner-phone{
+      position: absolute;
+      top: 0;
+      z-index: 3;
+      p{
+        font-size: 20px;
+        color: $sec_color;
+        text-align: center;
+      }
+      img{
+        height: 40px;
+      }
+    }
+  }
 }
 // contact us block
 .contact-us-section {
@@ -657,7 +672,7 @@ body.hide_scroll {
 // author block section
 .author-block-container {
   color: #ec4100;
-  
+
   .single-author-col {
     display: flex;
     justify-content: center;
@@ -668,7 +683,7 @@ body.hide_scroll {
       opacity: 1;
       transition: 0.3s ease-in-out;
     }
-    
+
     .single-author-container:hover {
       opacity: 0.8;
       transition: 0.3s;
@@ -755,7 +770,7 @@ body.hide_scroll {
     opacity: 0.8;
     transition: 0.3s;
   }
-  
+
   .category-buttons {
     display: flex;
     justify-content: end;
