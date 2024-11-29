@@ -555,7 +555,7 @@ body.hide_scroll {
 }
 .footer-container .outer-phone .inner-phone {
   position: absolute;
-  top: 0;
+  top: 14%;
   z-index: 3;
 }
 .footer-container .outer-phone .inner-phone p {
@@ -564,7 +564,8 @@ body.hide_scroll {
   text-align: center;
 }
 .footer-container .outer-phone .inner-phone img {
-  height: 40px;
+  height: 55px;
+  margin-bottom: 15px;
 }
 
 .contact-us-section {

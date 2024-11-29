@@ -574,7 +574,7 @@ body.hide_scroll {
   .outer-phone{
     .inner-phone{
       position: absolute;
-      top: 0;
+      top: 14%;
       z-index: 3;
       p{
         font-size: 35px;
@@ -582,7 +582,8 @@ body.hide_scroll {
         text-align: center;
       }
       img{
-        height: 40px;
+        height: 55px;
+        margin-bottom: 15px;
       }
     }
   }
