@@ -734,6 +734,10 @@ body.hide_scroll {
   border: 4px solid #621A01;
   border-radius: 20px;
 }
+.single-author-article-swiper-section .single-red-border-right {
+  border-right: 4px solid #621A01;
+  border-radius: 20px;
+}
 .single-author-article-swiper-section .single-author-img {
   border-radius: 100%;
   border: 4px solid #621A01;
@@ -741,6 +745,9 @@ body.hide_scroll {
   height: 300px;
   mix-blend-mode: luminosity;
   background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
+}
+.single-author-article-swiper-section .swiper-button-prev:after, .single-author-article-swiper-section .swiper-button-next:after {
+  color: #fff;
 }
 
 .custom-modal .modal-content {
