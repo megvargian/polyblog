@@ -11,7 +11,7 @@
 ?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="footer-container py-5">
+<footer class="footer-container pt-5">
     <div class="container pt-3">
         <div class="row justify-content-center">
             <div class="col-8">
@@ -36,9 +36,10 @@
                                 </button>
                             </div>
                             <div class="col-6 justify-content-center d-flex">
-                                <img class="d-block" style="background-color: black;"
+                                <img class="d-block"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group.svg"
-                                    alt="phone">
+                                    alt="phone"
+                                >
                             </div>
                         </div>
                     </div>
