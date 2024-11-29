@@ -632,6 +632,9 @@ body.hide_scroll {
       white-space: pre-wrap; /* Preserve line breaks in placeholder */
     }
   }
+  .select2-results{
+    margin: 0 15px !important;
+  }
   .select-language {
     select {
       width: 100%;
@@ -664,10 +667,7 @@ body.hide_scroll {
     .select2-container.select2-container--default.select2-container--below {
       margin: 0 10px !important;
     }
-    .select2-results{
-      margin: 0 15px !important;
-    }
-    .select2-dropdown.select2-dropdown--below{
+    .select2-dropdown--below{
       border: none !important;
       background-color: transparent !important;
     }

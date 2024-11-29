@@ -613,6 +613,9 @@ body.hide_scroll {
   line-height: 1.2; /* Adjust line height for spacing */
   white-space: pre-wrap; /* Preserve line breaks in placeholder */
 }
+.contact-us-section .select2-results, .contact-us-section .select2-results {
+  margin: 0 15px !important;
+}
 .contact-us-section .select-language select, .contact-us-section .select-language select {
   width: 100%;
   padding: 10px;
@@ -644,10 +647,7 @@ body.hide_scroll {
 .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below, .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
   margin: 0 10px !important;
 }
-.contact-us-section .select-language .select2-results, .contact-us-section .select-language .select2-results {
-  margin: 0 15px !important;
-}
-.contact-us-section .select-language .select2-dropdown.select2-dropdown--below, .contact-us-section .select-language .select2-dropdown.select2-dropdown--below {
+.contact-us-section .select-language .select2-dropdown--below, .contact-us-section .select-language .select2-dropdown--below {
   border: none !important;
   background-color: transparent !important;
 }
