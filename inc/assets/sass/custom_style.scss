@@ -589,7 +589,7 @@ body.hide_scroll {
   }
 }
 // contact us block
-.contact-us-section {
+.contact-us-section, .contact-us-section {
   background-color: #171717;
   font-family: $en-bold;
   color: #fff;
@@ -609,7 +609,8 @@ body.hide_scroll {
     color: #fff;
   }
   label {
-    width: 330px;
+    width: 330px !important;
+    margin-right: 15px !important;
   }
   .select2-search__field{
     margin-top: 8px !important;

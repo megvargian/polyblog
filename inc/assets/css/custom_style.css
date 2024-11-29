@@ -568,12 +568,15 @@ body.hide_scroll {
   margin-bottom: 15px;
 }
 
-.contact-us-section {
+.contact-us-section, .contact-us-section {
   background-color: #171717;
   font-family: "Lexend-Bold";
   color: #fff;
 }
 .contact-us-section input,
+.contact-us-section textarea,
+.contact-us-section label,
+.contact-us-section .select2, .contact-us-section input,
 .contact-us-section textarea,
 .contact-us-section label,
 .contact-us-section .select2 {
@@ -588,19 +591,20 @@ body.hide_scroll {
   text-transform: uppercase;
   color: #fff;
 }
-.contact-us-section label {
-  width: 330px;
+.contact-us-section label, .contact-us-section label {
+  width: 330px !important;
+  margin-right: 15px !important;
 }
-.contact-us-section .select2-search__field {
+.contact-us-section .select2-search__field, .contact-us-section .select2-search__field {
   margin-top: 8px !important;
 }
-.contact-us-section .select2-search.select2-search--inline {
+.contact-us-section .select2-search.select2-search--inline, .contact-us-section .select2-search.select2-search--inline {
   line-height: 1 !important;
 }
-.contact-us-section input::placeholder {
+.contact-us-section input::placeholder, .contact-us-section input::placeholder {
   color: #fff;
 }
-.contact-us-section .custom-text-size-for-placeholder textarea::placeholder {
+.contact-us-section .custom-text-size-for-placeholder textarea::placeholder, .contact-us-section .custom-text-size-for-placeholder textarea::placeholder {
   font-size: 4rem;
   color: white; /* White text for placeholder */
   opacity: 1; /* Ensure placeholder is visible */
@@ -609,48 +613,48 @@ body.hide_scroll {
   line-height: 1.2; /* Adjust line height for spacing */
   white-space: pre-wrap; /* Preserve line breaks in placeholder */
 }
-.contact-us-section .select-language select {
+.contact-us-section .select-language select, .contact-us-section .select-language select {
   width: 100%;
   padding: 10px;
   font-size: 1em;
   border: 2px solid #ff5722;
   border-radius: 5px;
 }
-.contact-us-section .select-language select[multiple] {
+.contact-us-section .select-language select[multiple], .contact-us-section .select-language select[multiple] {
   height: auto;
   min-height: 50px;
 }
-.contact-us-section .select-language .select2-selection {
+.contact-us-section .select-language .select2-selection, .contact-us-section .select-language .select2-selection {
   background: none;
   border: none;
   color: white;
   padding: 0;
 }
-.contact-us-section .select-language .select2-selection__clear {
+.contact-us-section .select-language .select2-selection__clear, .contact-us-section .select-language .select2-selection__clear {
   display: none;
 }
-.contact-us-section .select-language .select2-selection__choice {
+.contact-us-section .select-language .select2-selection__choice, .contact-us-section .select-language .select2-selection__choice {
   background-color: #ff5722;
   border: none;
   border-radius: 10px;
 }
-.contact-us-section .select-language .select2-selection__choice {
+.contact-us-section .select-language .select2-selection__choice, .contact-us-section .select-language .select2-selection__choice {
   border: none !important;
 }
-.contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
+.contact-us-section .select-language .select2-container.select2-container--default.select2-container--below, .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
   margin: 0 10px !important;
 }
-.contact-us-section .select-language .select2-results {
+.contact-us-section .select-language .select2-results, .contact-us-section .select-language .select2-results {
   margin: 0 15px !important;
 }
-.contact-us-section .select-language .select2-dropdown.select2-dropdown--below {
+.contact-us-section .select-language .select2-dropdown.select2-dropdown--below, .contact-us-section .select-language .select2-dropdown.select2-dropdown--below {
   border: none !important;
   background-color: transparent !important;
 }
-.contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+.contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove, .contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   border: none !important;
 }
-.contact-us-section .submit-button {
+.contact-us-section .submit-button, .contact-us-section .submit-button {
   background-color: transparent;
   border: none;
   outline: none;
