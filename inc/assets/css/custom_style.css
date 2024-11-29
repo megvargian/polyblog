@@ -553,6 +553,19 @@ body.hide_scroll {
   position: absolute;
   bottom: -40%;
 }
+.footer-container .outer-phone .inner-phone {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+.footer-container .outer-phone .inner-phone p {
+  font-size: 20px;
+  color: #87ed06;
+  text-align: center;
+}
+.footer-container .outer-phone .inner-phone img {
+  height: 40px;
+}
 
 .contact-us-section {
   background-color: #171717;
