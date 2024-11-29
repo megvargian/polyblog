@@ -9,7 +9,7 @@ $message_from_deitor_fields = get_fields();
     <img class="w-100 d-block" src="<?php echo $message_from_deitor_fields['main_image']; ?>" alt="message_from_directo_bannerr">
     <div class="container-fluid py-4 px-4">
         <div class="row">
-            <div class="col">
+            <div class="col justify-content-center align-items-center d-flex">
                <p class="en">
                     <?php echo $message_from_deitor_fields['en_text']; ?>
                </p>
@@ -17,7 +17,7 @@ $message_from_deitor_fields = get_fields();
             <div class="col-3 justify-content-center d-flex">
                 <img src="<?php echo $message_from_deitor_fields['middle_profile_image'];?>" alt="profile">
             </div>
-            <div class="col">
+            <div class="col justify-content-center align-items-center d-flex">
                <p class="ar">
                     <?php echo $message_from_deitor_fields['ar_text']; ?>
                </p>
