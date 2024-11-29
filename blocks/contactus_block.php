@@ -5,7 +5,7 @@
 
 $contactus_fields = get_fields();
 ?>
-<section class="py-4 contact-us-section">
+<section class="py-4 <?php $contactus_fields['light_mode']? 'contact-us-section-light' : 'contact-us-section' ;?>">
     <div class="container-fluid">
         <form action="/">
             <div class="row justify-content-center">

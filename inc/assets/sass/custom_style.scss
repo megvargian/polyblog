@@ -589,7 +589,7 @@ body.hide_scroll {
   }
 }
 // contact us block
-.contact-us-section, .contact-us-section {
+.contact-us-section, .contact-us-section-light {
   background-color: #171717;
   font-family: $en-bold;
   color: #fff;
@@ -684,7 +684,19 @@ body.hide_scroll {
     box-shadow: none;
   }
 }
-
+.contact-us-section-light{
+  background-color: #e3e1e2 !important;
+  color: #000 !important;
+  input,
+  textarea,
+  label,
+  .select2 {
+    color: #000 !important;
+  }
+  .select2-selection {
+    color: #000 !important;
+  }
+}
 // author block section
 .author-block-container {
   color: #ec4100;
