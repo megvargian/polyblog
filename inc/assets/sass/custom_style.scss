@@ -599,7 +599,7 @@ body.hide_scroll {
   .select2 {
     font-family: $en-bold;
     background-color: #171717;
-    width: 100%;
+    width: 100% !important;
     border-radius: 35px;
     border: 2px solid #ec4100;
     font-size: 1.2rem;
@@ -655,13 +655,20 @@ body.hide_scroll {
     .select2-selection__choice {
       background-color: #ff5722;
       border: none;
-      border-radius: 15px;
+      border-radius: 10px;
     }
     .select2-selection__choice {
       border: none !important;
     }
     .select2-container.select2-container--default.select2-container--below {
       margin: 0 10px !important;
+    }
+    .select2-results{
+      margin: 0 15px !important;
+    }
+    .select2-dropdown.select2-dropdown--below{
+      border: none !important;
+      background-color: transparent !important;
     }
   }
   .select2-container--default

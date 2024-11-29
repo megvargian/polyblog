@@ -579,7 +579,7 @@ body.hide_scroll {
 .contact-us-section .select2 {
   font-family: "Lexend-Bold";
   background-color: #171717;
-  width: 100%;
+  width: 100% !important;
   border-radius: 35px;
   border: 2px solid #ec4100;
   font-size: 1.2rem;
@@ -632,13 +632,20 @@ body.hide_scroll {
 .contact-us-section .select-language .select2-selection__choice {
   background-color: #ff5722;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .contact-us-section .select-language .select2-selection__choice {
   border: none !important;
 }
 .contact-us-section .select-language .select2-container.select2-container--default.select2-container--below {
   margin: 0 10px !important;
+}
+.contact-us-section .select-language .select2-results {
+  margin: 0 15px !important;
+}
+.contact-us-section .select-language .select2-dropdown.select2-dropdown--below {
+  border: none !important;
+  background-color: transparent !important;
 }
 .contact-us-section .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   border: none !important;
