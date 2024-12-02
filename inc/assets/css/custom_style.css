@@ -579,7 +579,6 @@ body.hide_scroll {
   flex-direction: column;
   justify-content: flex-start;
   height: auto;
-  overflow: hidden;
 }
 .three-featured-articles-block-container .article-container img {
   width: 100%;
@@ -589,15 +588,13 @@ body.hide_scroll {
   filter: grayscale(100%);
 }
 .three-featured-articles-block-container .article-container .hover-text {
-  position: absolute;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
   font-size: 16px;
   color: #333;
   text-align: center;
-  width: 100%;
-  bottom: 10px;
+  margin-top: 10px;
 }
 .three-featured-articles-block-container .article-container:hover img {
   transform: scale(1.05);
