@@ -592,6 +592,14 @@ body.hide_scroll {
 // three featured articles block
 .three-featured-articles-block-container {
   color: #ec4100;
+
+  .article-container {
+    background-color: #bebebe;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 // contact us block

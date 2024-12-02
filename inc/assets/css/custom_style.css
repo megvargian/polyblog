@@ -571,6 +571,12 @@ body.hide_scroll {
 .three-featured-articles-block-container {
   color: #ec4100;
 }
+.three-featured-articles-block-container .article-container {
+  background-color: #bebebe;
+}
+.three-featured-articles-block-container .article-container img {
+  width: 100%;
+}
 
 .contact-us-section, .contact-us-section-light {
   background-color: #171717;
