@@ -609,12 +609,8 @@ body.hide_scroll {
     p {
       position: absolute;
       opacity: 0;
-      top: 50%;
-      left: -8%;
-      padding: 5px;
       text-align: center;
       width: 113%;
-      font-size: 20px;
       line-height: 20px;
       margin-top: -10px;
       z-index: 3;
@@ -631,6 +627,8 @@ body.hide_scroll {
       }
 
       p {
+        background-color: #bebebe;
+        transform: scale(1.2);
         opacity: 1;
       }
     }
