@@ -568,6 +568,10 @@ body.hide_scroll {
   margin-bottom: 15px;
 }
 
+.three-featured-articles-block-container {
+  color: #ec4100;
+}
+
 .contact-us-section, .contact-us-section-light {
   background-color: #171717;
   font-family: "Lexend-Bold";
