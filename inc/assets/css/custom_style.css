@@ -593,7 +593,7 @@ body.hide_scroll {
 .three-featured-articles-block-container .article-container img {
   display: block;
   width: 100%;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   filter: grayscale(100%);
 }
 .three-featured-articles-block-container .article-container .hover-text {
@@ -612,14 +612,11 @@ body.hide_scroll {
 .three-featured-articles-block-container .article-container:hover img {
   transform: scale(1.2);
   z-index: 2;
-  transition: opacity 0.3s ease;
-  transition: 0.3s;
   filter: grayscale(0);
 }
 .three-featured-articles-block-container .article-container:hover .hover-text {
   background-color: #bebebe;
   transform: scale(1.2);
-  transition: all 0.3s ease;
   filter: grayscale(0);
   opacity: 1;
 }
