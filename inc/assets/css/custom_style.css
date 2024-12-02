@@ -572,41 +572,40 @@ body.hide_scroll {
   color: #000;
 }
 .three-featured-articles-block-container .article-container {
-  background-color: #bebebe;
-  cursor: pointer;
+  display: inline-block;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: auto;
-  overflow: hidden;
+  cursor: pointer;
+  background-color: #bebebe;
 }
 .three-featured-articles-block-container .article-container img {
-  width: 100%;
-  height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  width: 100%;
+  transition: opacity 0.3s ease;
   filter: grayscale(100%);
 }
-.three-featured-articles-block-container .article-container .hover-text {
+.three-featured-articles-block-container .article-container p {
+  position: absolute;
   opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  font-size: 16px;
-  color: #333;
+  top: 50%;
+  left: -8%;
+  padding: 5px;
   text-align: center;
-  margin-top: 10px;
-}
-.three-featured-articles-block-container .article-container:hover {
-  height: auto;
+  width: 113%;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: -10px;
+  z-index: 3;
+  transition: 1s;
 }
 .three-featured-articles-block-container .article-container:hover img {
-  transform: scale(1.05);
+  transform: scale(1.2);
+  z-index: 2;
+  position: relative;
+  transition: 0.3s;
   filter: grayscale(0);
 }
-.three-featured-articles-block-container .article-container:hover .hover-text {
+.three-featured-articles-block-container .article-container:hover p {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .contact-us-section, .contact-us-section-light {

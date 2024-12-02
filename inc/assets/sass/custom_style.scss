@@ -594,47 +594,90 @@ body.hide_scroll {
   color: #000;
 
   .article-container {
-    background-color: #bebebe;
-    cursor: pointer;
+    display: inline-block;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: auto;
-    overflow: hidden;
+    cursor: pointer;
+    background-color: #bebebe;
 
     img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.3s ease;
-        filter: grayscale(100%);
+      display: block;
+      width: 100%;
+      transition: opacity 0.3s ease;
+      filter: grayscale(100%);
     }
 
-    .hover-text {
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-        font-size: 16px;
-        color: #333;
-        text-align: center;
-        margin-top: 10px;
+    p {
+      position: absolute;
+      opacity: 0;
+      top: 50%;
+      left: -8%;
+      padding: 5px;
+      text-align: center;
+      width: 113%;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: -10px;
+      z-index: 3;
+      transition :1s;
     }
 
     &:hover {
-      height: auto;
+      img {
+        transform: scale(1.2);
+        z-index: 2;
+        position: relative;
+        transition: 0.3s;
+        filter: grayscale(0);
+      }
 
-        img {
-            transform: scale(1.05);
-            filter: grayscale(0);
-        }
-
-        .hover-text {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      p {
+        opacity: 1;
+      }
     }
   }
+
+  // .article-container {
+  //   background-color: #bebebe;
+  //   cursor: pointer;
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   height: auto;
+  //   overflow: hidden;
+
+  //   img {
+  //       width: 100%;
+  //       height: auto;
+  //       display: block;
+  //       transition: transform 0.3s ease;
+  //       filter: grayscale(100%);
+  //   }
+
+  //   .hover-text {
+  //       opacity: 0;
+  //       transform: translateY(10px);
+  //       transition: all 0.3s ease;
+  //       font-size: 16px;
+  //       color: #333;
+  //       text-align: center;
+  //       margin-top: 10px;
+  //   }
+
+  //   &:hover {
+  //     height: auto;
+
+  //       img {
+  //           transform: scale(1.05);
+  //           filter: grayscale(0);
+  //       }
+
+  //       .hover-text {
+  //           opacity: 1;
+  //           transform: translateY(0);
+  //       }
+  //   }
+  // }
 }
 
 // contact us block
