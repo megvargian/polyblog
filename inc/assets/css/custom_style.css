@@ -516,6 +516,10 @@ body.hide_scroll {
   text-align: left;
   text-transform: uppercase;
 }
+.footer-container button:hover {
+  background-color: #87ed06;
+  color: #181617;
+}
 .footer-container .custom-rotate {
   display: flex;
   gap: 10px;

@@ -534,6 +534,10 @@ body.hide_scroll {
     text-align: left;
     text-transform: uppercase;
   }
+  button:hover{
+    background-color: $sec_color;
+    color: $bg_black;
+  }
   .custom-rotate {
     display: flex;
     gap: 10px;
@@ -600,7 +604,6 @@ body.hide_scroll {
 // three featured articles block
 .three-featured-articles-block-container {
   color: #000;
-
   .article-container {
     display: inline-block;
     position: relative;
