@@ -30,10 +30,10 @@ $query = new WP_Query($args);
                     <div class="col-12 col-sm-4 p-3 article-container">
                         <a href="<?php echo $article_link; ?>" target="_blank">
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>""/>
-                            <div class="hover-text">
-                                <p><?php echo $article_title; ?></p>
-                            </div>
-                        </a>
+                            <div class=" hover-text">
+                            <p><?php echo $article_title; ?></p>
+                    </div>
+                    </a>
                 </div>
             <?php } ?>
         <?php } ?>
