@@ -25,7 +25,7 @@ $query = new WP_Query($args);
                     $article_title = get_the_title();
                     $article_link = get_permalink();
                     $categories = get_the_category();
-                    $article_thumbnail = get_field('article_thumbnail');
+                    $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                     ?>
                     <div class="col-12 col-sm-4">
                         <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>""/>
