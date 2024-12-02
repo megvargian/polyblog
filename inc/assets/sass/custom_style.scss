@@ -606,11 +606,10 @@ body.hide_scroll {
       filter: grayscale(100%);
     }
 
-    p {
+    .hover-text {
       position: absolute;
       opacity: 0;
       text-align: center;
-      width: 113%;
       line-height: 20px;
       margin-top: -10px;
       z-index: 3;
@@ -626,7 +625,7 @@ body.hide_scroll {
         filter: grayscale(0);
       }
 
-      p {
+      .hover-text {
         background-color: #bebebe;
         transform: scale(1.2);
         opacity: 1;

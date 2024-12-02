@@ -583,11 +583,10 @@ body.hide_scroll {
   transition: opacity 0.3s ease;
   filter: grayscale(100%);
 }
-.three-featured-articles-block-container .article-container p {
+.three-featured-articles-block-container .article-container .hover-text {
   position: absolute;
   opacity: 0;
   text-align: center;
-  width: 113%;
   line-height: 20px;
   margin-top: -10px;
   z-index: 3;
@@ -600,7 +599,7 @@ body.hide_scroll {
   transition: 0.3s;
   filter: grayscale(0);
 }
-.three-featured-articles-block-container .article-container:hover p {
+.three-featured-articles-block-container .article-container:hover .hover-text {
   background-color: #bebebe;
   transform: scale(1.2);
   opacity: 1;
