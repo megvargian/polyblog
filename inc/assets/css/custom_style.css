@@ -600,6 +600,7 @@ body.hide_scroll {
   filter: grayscale(0);
 }
 .three-featured-articles-block-container .article-container:hover .hover-text {
+  position: relative;
   background-color: #bebebe;
   transform: scale(1.2);
   opacity: 1;

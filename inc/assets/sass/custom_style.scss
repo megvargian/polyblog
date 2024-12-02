@@ -626,6 +626,7 @@ body.hide_scroll {
       }
 
       .hover-text {
+        position: relative;
         background-color: #bebebe;
         transform: scale(1.2);
         opacity: 1;
