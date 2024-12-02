@@ -588,19 +588,20 @@ body.hide_scroll {
   filter: grayscale(100%);
 }
 .three-featured-articles-block-container .article-container .hover-text {
+  position: absolute;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
   font-size: 16px;
   color: #333;
   margin-top: 10px;
-  text-align: center;
 }
 .three-featured-articles-block-container .article-container:hover img {
   transform: scale(1.05);
   filter: grayscale(0);
 }
 .three-featured-articles-block-container .article-container:hover .hover-text {
+  position: relative;
   opacity: 1;
   transform: translateY(0);
 }

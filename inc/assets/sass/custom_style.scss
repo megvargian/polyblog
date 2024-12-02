@@ -611,13 +611,13 @@ body.hide_scroll {
     }
 
     .hover-text {
+        position: absolute;
         opacity: 0;
         transform: translateY(10px);
         transition: all 0.3s ease;
         font-size: 16px;
         color: #333;
         margin-top: 10px;
-        text-align: center;
     }
 
     &:hover {
@@ -627,6 +627,7 @@ body.hide_scroll {
         }
 
         .hover-text {
+            position: relative;
             opacity: 1;
             transform: translateY(0);
         }
