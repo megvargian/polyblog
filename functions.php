@@ -326,6 +326,17 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Three featured articles block',
+                'title'             => __('Three featured articles block'),
+                'description'       => __('This is the Three featured articles block of Homepage'),
+                'render_template'   => 'blocks/three_featured_articles_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
 
