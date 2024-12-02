@@ -194,17 +194,17 @@ function my_acf_init_block_types()
     if (function_exists('acf_register_block_type')) {
         // register a testimonial block.
         // the first one is a demo
-        acf_register_block_type(
-            array(
-                'name'              => 'Block1',
-                'title'             => __('Block1'),
-                'description'       => __('This is the first Block of Homepage'),
-                'render_template'   => 'blocks/block_1.php',
-                'category'          => 'formatting',
-                'icon'              => 'admin-comments',
-                'keywords'          => array('testimonial', 'quote'),
-            )
-        );
+        // acf_register_block_type(
+        //     array(
+        //         'name'              => 'Block1',
+        //         'title'             => __('Block1'),
+        //         'description'       => __('This is the first Block of Homepage'),
+        //         'render_template'   => 'blocks/block_1.php',
+        //         'category'          => 'formatting',
+        //         'icon'              => 'admin-comments',
+        //         'keywords'          => array('testimonial', 'quote'),
+        //     )
+        // );
         acf_register_block_type(
             array(
                 'name'              => 'Bg Image Block',

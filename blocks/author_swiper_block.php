@@ -9,7 +9,7 @@ $authors_list = $author_swiper_block['authors_list'];
 <div class="container-fluid author-swiper-container">
     <div class="row">
         <div class="col">
-            <div class="swiper">
+            <div class="swiper author_swiper_block">
                 <div class="swiper-wrapper">
                     <?php foreach ($authors_list as $author) { ?>
                         <div class="swiper-slide">
@@ -39,7 +39,7 @@ $authors_list = $author_swiper_block['authors_list'];
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.author_swiper_block', {
             loop: true,
             slidesPerView: 5,
             navigation: {
