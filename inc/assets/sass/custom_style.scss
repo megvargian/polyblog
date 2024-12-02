@@ -597,9 +597,10 @@ body.hide_scroll {
     background-color: #bebebe;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    transition: height 0.3s ease;
-    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
 
     img {
         width: 100%;
@@ -616,11 +617,10 @@ body.hide_scroll {
         font-size: 16px;
         color: #333;
         margin-top: 10px;
+        text-align: center;
     }
 
     &:hover {
-      max-height: 100%;
-
         img {
             transform: scale(1.05);
             filter: grayscale(0);
