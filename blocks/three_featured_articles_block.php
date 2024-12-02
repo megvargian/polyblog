@@ -1,16 +1,37 @@
 <?php
 /**
  * HomePage Three Featured Articles Block Template
+ * gets latest 3 published posts
  */
 
-$three_articles_block = get_fields();
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post_status' => 'publish'
+);
+
+$query = new WP_Query($args);
 ?>
 <section class="three-featured-articles-block-container">
     <div class="container">
         <div class="row">
-            <div class="col">1</div>
-            <div class="col">2</div>
-            <div class="col">3</div>
+            <?php
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+
+                    $article_title = get_the_title();
+                    $article_link = get_permalink();
+                    $categories = get_the_category();
+                    $article_thumbnail = get_field('article_thumbnail');
+                    ?>
+                    <div class="col-12 col-sm-4">
+                        <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>""/>
+                    </div>
+                <?php } ?>
+            <?php } ?>
         </div>
     </div>
 </section>
