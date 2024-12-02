@@ -596,8 +596,6 @@ body.hide_scroll {
   color: #333;
   margin-top: 10px;
   text-align: center;
-  width: 100%;
-  bottom: 0;
 }
 .three-featured-articles-block-container .article-container:hover img {
   transform: scale(1.05);
