@@ -27,7 +27,7 @@ $query = new WP_Query($args);
                     $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                     ?>
                     <div class="col-12 col-sm-4 p-3 article-container">
-                        <a href="<?php echo $article_link; ?>" target="_blank">
+                        <a class="position-relative" href="<?php echo $article_link; ?>" target="_blank">
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>
