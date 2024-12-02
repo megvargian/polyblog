@@ -604,6 +604,7 @@ body.hide_scroll {
   filter: grayscale(0);
 }
 .three-featured-articles-block-container .article-container:hover .hover-text {
+  position: relative;
   opacity: 1;
   transform: translateY(0);
 }

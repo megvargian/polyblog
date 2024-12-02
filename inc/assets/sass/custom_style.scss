@@ -630,6 +630,7 @@ body.hide_scroll {
         }
 
         .hover-text {
+            position: relative;
             opacity: 1;
             transform: translateY(0);
         }
