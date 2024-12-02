@@ -600,7 +600,7 @@ body.hide_scroll {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
+    height: auto;
 
     img {
         width: 100%;
@@ -618,6 +618,9 @@ body.hide_scroll {
         font-size: 16px;
         color: #333;
         margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        bottom: 0;
     }
 
     &:hover {
@@ -627,7 +630,6 @@ body.hide_scroll {
         }
 
         .hover-text {
-            position: relative;
             opacity: 1;
             transform: translateY(0);
         }
