@@ -16,7 +16,7 @@ $query = new WP_Query($args);
 ?>
 <section class="my-5 three-featured-articles-block-container">
     <div class="container">
-        <div class="row">
+        <div class="row position-relative z-1">
             <?php
             if ($query->have_posts()) {
                 while ($query->have_posts()) {

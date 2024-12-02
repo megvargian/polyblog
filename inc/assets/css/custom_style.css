@@ -588,6 +588,7 @@ body.hide_scroll {
   position: relative;
   cursor: pointer;
   background-color: #bebebe;
+  z-index: 2;
 }
 .three-featured-articles-block-container .article-container img {
   display: block;
@@ -604,6 +605,9 @@ body.hide_scroll {
   z-index: 3;
   transition: all 0.3s ease;
   filter: grayscale(100%);
+}
+.three-featured-articles-block-container .article-container:hover {
+  z-index: 4;
 }
 .three-featured-articles-block-container .article-container:hover img {
   transform: scale(1.2);
