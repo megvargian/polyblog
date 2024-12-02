@@ -591,13 +591,37 @@ body.hide_scroll {
 
 // three featured articles block
 .three-featured-articles-block-container {
-  color: #ec4100;
+  color: #000;
 
   .article-container {
     background-color: #bebebe;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 
     img {
       width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .article-container:hover img {
+      transform: scale(1.05);
+    }
+
+    .hover-text {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .hover-text:hover {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

@@ -569,13 +569,34 @@ body.hide_scroll {
 }
 
 .three-featured-articles-block-container {
-  color: #ec4100;
+  color: #000;
 }
 .three-featured-articles-block-container .article-container {
   background-color: #bebebe;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .three-featured-articles-block-container .article-container img {
   width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.three-featured-articles-block-container .article-container .article-container:hover img {
+  transform: scale(1.05);
+}
+.three-featured-articles-block-container .article-container .hover-text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+.three-featured-articles-block-container .article-container .hover-text:hover {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-us-section, .contact-us-section-light {

@@ -14,7 +14,7 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<section class="three-featured-articles-block-container">
+<section class="my-5 three-featured-articles-block-container">
     <div class="container">
         <div class="row">
             <?php
@@ -29,9 +29,12 @@ $query = new WP_Query($args);
                     ?>
                     <div class="col-12 col-sm-4 p-3 article-container">
                         <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>""/>
+                        <div class="hover-text">
+                        <p><?php echo $article_title; ?></p>
                     </div>
-                <?php } ?>
+                </div>
             <?php } ?>
-        </div>
+        <?php } ?>
+    </div>
     </div>
 </section>
