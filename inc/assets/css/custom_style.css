@@ -535,10 +535,18 @@ body.hide_scroll {
   width: fit-content;
   height: 23rem;
 }
+.footer-container .custom-rotate button:hover {
+  background-color: #87ed06;
+  color: #181617;
+}
 .footer-container .full {
   background-color: #87ed06 !important;
   color: #000 !important;
   writing-mode: horizontal-tb;
+}
+.footer-container .full:hover {
+  background-color: #181617 !important;
+  color: #87ed06 !important;
 }
 .footer-container .custom-width {
   width: 13rem;

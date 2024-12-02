@@ -552,11 +552,19 @@ body.hide_scroll {
       width: fit-content;
       height: 23rem;
     }
+    button:hover{
+      background-color: $sec_color;
+      color: $bg_black;
+    }
   }
   .full {
     background-color: $sec_color !important;
     color: #000 !important;
     writing-mode: horizontal-tb;
+  }
+  .full:hover{
+    background-color: $bg_black !important;
+    color: $sec_color !important;
   }
   .custom-width {
     width: 13rem;
