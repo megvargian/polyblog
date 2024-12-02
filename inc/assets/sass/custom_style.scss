@@ -598,12 +598,15 @@ body.hide_scroll {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    transition: height 0.3s ease;
+    max-height: 80%;
 
     img {
         width: 100%;
         height: auto;
         display: block;
         transition: transform 0.3s ease;
+        filter: grayscale(100%);
     }
 
     .hover-text {
@@ -616,8 +619,11 @@ body.hide_scroll {
     }
 
     &:hover {
+      max-height: 100%;
+
         img {
             transform: scale(1.05);
+            filter: grayscale(0);
         }
 
         .hover-text {
