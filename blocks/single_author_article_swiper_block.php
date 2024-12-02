@@ -72,7 +72,6 @@ $single_author_article_swiper_block = get_fields();
 <script>
     jQuery(document).ready(function ($) {
         var swiper = new Swiper('.single-author-article-swiper', {
-            loop: true,
             slidesPerView: 1,
             navigation: {
                 nextEl: '.swiper-button-next-last-part',
