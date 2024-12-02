@@ -583,9 +583,6 @@ body.hide_scroll {
   display: block;
   transition: transform 0.3s ease;
 }
-.three-featured-articles-block-container .article-container .article-container:hover img {
-  transform: scale(1.05);
-}
 .three-featured-articles-block-container .article-container .hover-text {
   opacity: 0;
   transform: translateY(10px);
@@ -594,7 +591,10 @@ body.hide_scroll {
   color: #333;
   margin-top: 10px;
 }
-.three-featured-articles-block-container .article-container .hover-text:hover {
+.three-featured-articles-block-container .article-container .article-container:hover img {
+  transform: scale(1.05);
+}
+.three-featured-articles-block-container .article-container .article-container:hover .hover-text {
   opacity: 1;
   transform: translateY(0);
 }

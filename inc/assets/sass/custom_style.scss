@@ -606,10 +606,6 @@ body.hide_scroll {
       transition: transform 0.3s ease;
     }
 
-    .article-container:hover img {
-      transform: scale(1.05);
-    }
-
     .hover-text {
       opacity: 0;
       transform: translateY(10px);
@@ -619,9 +615,15 @@ body.hide_scroll {
       margin-top: 10px;
     }
 
-    .hover-text:hover {
-      opacity: 1;
-      transform: translateY(0);
+    .article-container:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      .hover-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 }
