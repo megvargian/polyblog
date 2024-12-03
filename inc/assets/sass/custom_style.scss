@@ -825,6 +825,16 @@ body.hide_scroll {
       text-align: center;
       opacity: 1;
       transition: 0.3s ease-in-out;
+
+      .author-image {
+        max-width: 240px;
+        border-radius: 100%;
+        border: 5px solid #ED4101;
+      }
+
+      p {
+        margin: 0;
+      }
     }
 
     .single-author-container:hover {

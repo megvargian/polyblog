@@ -754,6 +754,14 @@ body.hide_scroll {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
+.author-block-container .single-author-col .single-author-container .author-image {
+  max-width: 240px;
+  border-radius: 100%;
+  border: 5px solid #ED4101;
+}
+.author-block-container .single-author-col .single-author-container p {
+  margin: 0;
+}
 .author-block-container .single-author-col .single-author-container:hover {
   opacity: 0.8;
   transition: 0.3s;

@@ -22,7 +22,7 @@ $rows = array_chunk($authors_list, 4);
                     <div class="col single-author-col">
                         <div class="single-author-container">
                             <a href="<?php echo $author_link; ?>" target="_blank">
-                                <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                <img class="author-image img-fluid" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                             </a>
                             <p><?php echo esc_html($author_title); ?></p>
                             <p><?php echo esc_html($author_expertise) ?></p>
