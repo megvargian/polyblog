@@ -910,6 +910,8 @@ body.hide_scroll {
 }
 .single-post-container .main-content .author-info .author-image {
   width: 50%;
+  border-radius: 100%;
+  border: 5px solid #ED4101;
 }
 .single-post-container .main-content .author-info .author-button {
   display: inline-block;
