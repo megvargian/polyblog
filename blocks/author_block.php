@@ -7,10 +7,10 @@ $author_block = get_fields();
 $authors_list = $author_block['authors_list'];
 $rows = array_chunk($authors_list, 4);
 ?>
-<section class="author-block-container">
+<section class="author-block-container py-5">
     <div class="container">
         <?php foreach ($rows as $row) { ?>
-            <div class="row justify-content-center">
+            <div class="row my-3 justify-content-center">
                 <?php foreach ($row as $author) { ?>
                     <?php
                         $author_id = $author['author'];

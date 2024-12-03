@@ -485,9 +485,15 @@ body.hide_scroll {
   color: #fff;
   text-align: center;
 
+  .swiper-wrapper {
+    gap: 8px;
+  }
+
   .author-image {
     width: 100%;
     height: 100%;
+    border-radius: 100%;
+    border: 5px solid #ED4101;
   }
 
   .custom-swiper-button-prev,

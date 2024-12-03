@@ -471,9 +471,14 @@ body.hide_scroll {
   color: #fff;
   text-align: center;
 }
+.author-swiper-container .swiper-wrapper {
+  gap: 8px;
+}
 .author-swiper-container .author-image {
   width: 100%;
   height: 100%;
+  border-radius: 100%;
+  border: 5px solid #ED4101;
 }
 .author-swiper-container .custom-swiper-button-prev,
 .author-swiper-container .custom-swiper-button-next {
