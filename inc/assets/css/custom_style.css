@@ -760,11 +760,13 @@ body.hide_scroll {
   transition: 0.3s ease-in-out;
 }
 .author-block-container .single-author-col .single-author-container .author-image {
+  display: inline-block;
   max-width: 240px;
   border-radius: 100%;
   border: 5px solid #ED4101;
 }
 .author-block-container .single-author-col .single-author-container .author-image img {
+  display: block;
   border-radius: 100%;
   transition: filter 0.1s ease;
 }
