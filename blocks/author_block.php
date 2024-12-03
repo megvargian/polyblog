@@ -13,21 +13,24 @@ $rows = array_chunk($authors_list, 4);
             <div class="row my-3 justify-content-center">
                 <?php foreach ($row as $author) { ?>
                     <?php
-                        $author_id = $author['author'];
-                        $author_title = get_the_title($author_id);
-                        $author_image = get_field('author_profile', $author_id);
-                        $author_expertise = get_field('expertise', $author_id);
-                        $author_link = get_permalink($author_id);
+                    $author_id = $author['author'];
+                    $author_title = get_the_title($author_id);
+                    $author_image = get_field('author_profile', $author_id);
+                    $author_expertise = get_field('expertise', $author_id);
+                    $author_link = get_permalink($author_id);
                     ?>
-                    <div class="col single-author-col">
-                        <div class="single-author-container">
-                            <a href="<?php echo $author_link; ?>" target="_blank">
-                                <img class="author-image img-fluid" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
-                            </a>
-                            <p><?php echo esc_html($author_title); ?></p>
-                            <p><?php echo esc_html($author_expertise) ?></p>
+                    <a href="<?php echo $author_link; ?>" target="_blank">
+                        <div class="col single-author-col">
+                            <div class="single-author-container">
+                                <div class="author-image">
+                                    <img class="img-fluid" src="<?php echo $author_image ?>"
+                                    alt="<?php echo $author_title ?>" />
+                                </div>
+                                <p><?php echo esc_html($author_title); ?></p>
+                                <p><?php echo esc_html($author_expertise) ?></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 <?php } ?>
             </div>
         <?php } ?>
