@@ -489,11 +489,34 @@ body.hide_scroll {
     gap: 8px;
   }
 
-  .author-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border: 5px solid #ED4101;
+  .swiper-slide {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+
+    .author-image {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      border: 5px solid #ED4101;
+  
+      img {
+        display: block;
+        border-radius: 100%;
+        transition: filter 0.1s ease;
+      }
+    }
+  }
+
+  .swiper-slide:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+
+    .author-image {
+      img {
+        filter: sepia(0.6) hue-rotate(-50deg) saturate(14) brightness(2);
+      }
+    }
   }
 
   .custom-swiper-button-prev,

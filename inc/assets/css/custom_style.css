@@ -474,11 +474,28 @@ body.hide_scroll {
 .author-swiper-container .swiper-wrapper {
   gap: 8px;
 }
-.author-swiper-container .author-image {
+.author-swiper-container .swiper-slide {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.author-swiper-container .swiper-slide .author-image {
+  display: inline-block;
   width: 100%;
   height: 100%;
   border-radius: 100%;
   border: 5px solid #ED4101;
+}
+.author-swiper-container .swiper-slide .author-image img {
+  display: block;
+  border-radius: 100%;
+  transition: filter 0.1s ease;
+}
+.author-swiper-container .swiper-slide:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.author-swiper-container .swiper-slide:hover .author-image img {
+  filter: sepia(0.6) hue-rotate(-50deg) saturate(14) brightness(2);
 }
 .author-swiper-container .custom-swiper-button-prev,
 .author-swiper-container .custom-swiper-button-next {

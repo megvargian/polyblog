@@ -17,10 +17,12 @@ $authors_list = $author_swiper_block['authors_list'];
                             $author_title = get_the_title($author_id);
                             $author_image = get_field('author_profile', $author_id);
                             $author_link = get_permalink($author_id); ?>
-                            <p><?php echo esc_html($author_title); ?></p>
+                            <!-- <p><?php echo esc_html($author_title); ?></p> -->
                             <a href="<?php echo $author_link; ?>" target="_blank">
-                                <img class="author-image" src="<?php echo $author_image ?>"
+                                <div class="author-image">
+                                    <img src="<?php echo $author_image ?>"
                                     alt="<?php echo $author_title ?>" />
+                                </div>
                             </a>
                         </div>
                     <?php } ?>
