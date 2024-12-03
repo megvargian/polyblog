@@ -480,7 +480,7 @@ body.hide_scroll {
 }
 .author-swiper-container .swiper-slide .author-image {
   display: inline-block;
-  width: 100%;
+  max-width: 240px;
   height: 100%;
   border-radius: 100%;
   border: 5px solid #ED4101;

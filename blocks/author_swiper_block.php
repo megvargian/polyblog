@@ -20,7 +20,7 @@ $authors_list = $author_swiper_block['authors_list'];
                             <!-- <p><?php echo esc_html($author_title); ?></p> -->
                             <a href="<?php echo $author_link; ?>" target="_blank">
                                 <div class="author-image">
-                                    <img src="<?php echo $author_image ?>"
+                                    <img class="img-fluid" src="<?php echo $author_image ?>"
                                     alt="<?php echo $author_title ?>" />
                                 </div>
                             </a>
