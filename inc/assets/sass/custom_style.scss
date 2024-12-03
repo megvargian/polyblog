@@ -838,6 +838,7 @@ body.hide_scroll {
         border: 5px solid #ED4101;
         
         img {
+          border-radius: 100%;
           transition: filter 0.1s ease;
         }
       }
