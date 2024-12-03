@@ -35,7 +35,7 @@ $header_video_url = get_field('header_video', 'option');
 			<div <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
 				<a href="http://polybloglb.com/">
 					<img class="w-100 d-block"
-						src="http://polybloglb.com/wp-content/uploads/2024/10/politics_not_news.png"
+						src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/politics-not-news.png"
 						alt="Politics, not news.">
 				</a>
 				<?php if (is_front_page()) { ?>
