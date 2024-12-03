@@ -763,7 +763,9 @@ body.hide_scroll {
   max-width: 240px;
   border-radius: 100%;
   border: 5px solid #ED4101;
-  transition: filter 0.3s ease;
+}
+.author-block-container .single-author-col .single-author-container .author-image img {
+  transition: filter 0.1s ease;
 }
 .author-block-container .single-author-col .single-author-container p {
   margin: 0;
@@ -772,7 +774,7 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
-.author-block-container .single-author-col .single-author-container:hover .author-image {
+.author-block-container .single-author-col .single-author-container:hover .author-image img {
   filter: sepia(0.6) hue-rotate(-50deg) saturate(14) brightness(2);
 }
 

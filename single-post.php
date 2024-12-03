@@ -73,7 +73,9 @@ if (have_posts()):
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col">
-                                <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                <div class="author-image">
+                                    <img src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                </div>
                                 <h2><?php echo $author_name; ?></h2>
                                 <a class="author-button" href="<?php echo $author_link; ?>" target="_blank">View profile</a>
                             </div>
