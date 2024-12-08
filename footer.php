@@ -15,7 +15,7 @@
     <div class="container pt-3">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-10">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-8 col-10 px-1">
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
@@ -108,7 +108,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-4 px-1 d-lg-flex d-none">
+                    <div class="col-4 px-1 d-lg-block d-none">
                         <div class="custom-rotate">
                             <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Mission
