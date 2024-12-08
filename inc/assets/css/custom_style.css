@@ -495,7 +495,7 @@ body.hide_scroll {
   transition: 0.3s;
 }
 .author-swiper-container .swiper-slide:hover .author-image img {
-  filter: sepia(0.6) hue-rotate(-50deg) saturate(14) brightness(2);
+  filter: sepia(0.45) hue-rotate(-48deg) saturate(16) brightness(2);
 }
 .author-swiper-container .custom-swiper-button-prev,
 .author-swiper-container .custom-swiper-button-next {
@@ -1017,4 +1017,8 @@ body.hide_scroll {
 .align-text-arabic {
   text-align: justify;
   text-align-last: end;
+}
+
+.swiper-authors-block .swiper-button-prev:after, .swiper-authors-block .swiper-button-next:after {
+  color: #fff;
 }

@@ -1144,3 +1144,8 @@ body.hide_scroll {
   text-align: justify;
   text-align-last: end;
 }
+.swiper-authors-block{
+  .swiper-button-prev:after, .swiper-button-next:after{
+    color: #fff;
+  }
+}

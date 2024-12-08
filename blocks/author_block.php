@@ -36,7 +36,7 @@ $rows = array_chunk($authors_list, 4);
         <?php } ?>
     </div>
     <div class="container d-md-none d-block">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="swiper swiper-authors-block">
                 <div class="swiper-wrapper">
                     <?php foreach ($rows as $row) {
@@ -48,7 +48,7 @@ $rows = array_chunk($authors_list, 4);
                                 $author_link = get_permalink($author_id);
                         ?>
                             <div class="swiper-slide">
-                                <a href="<?php echo $author_link; ?>" target="_blank">
+                                <a class="justify-content-center d-flex text-center" href="<?php echo $author_link; ?>" target="_blank">
                                     <div class="single-author-container">
                                         <div class="author-image">
                                             <img class="img-fluid" src="<?php echo $author_image ?>"
