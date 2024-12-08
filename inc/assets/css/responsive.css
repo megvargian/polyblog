@@ -1,3 +1,18 @@
+@media (max-width: 1199px) {
+  .footer-container button {
+    font-size: 16px;
+  }
+  .footer-container .outer-phone .inner-phone p {
+    font-size: 26px;
+  }
+  .footer-container .outer-phone .inner-phone img {
+    height: 40px;
+  }
+  .footer-container .donate .hear {
+    width: 70px;
+    height: 45px;
+  }
+}
 @media (min-width: 1390px) {
   /* change this, by default 1140px */
   .container {

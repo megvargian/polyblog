@@ -5,6 +5,26 @@
 }
 
 @media (max-width: 1199px){
+	//footer
+	.footer-container{
+		button{
+			font-size: 16px;
+		}
+		.outer-phone {
+			.inner-phone{
+				p{
+					font-size: 26px;
+				}
+				img{
+					height: 40px;
+				}
+			}
+		}
+		.donate .hear{
+			width: 70px;
+			height: 45px;
+		}
+	}
 }
 
 @media screen and (max-width: 991px) {
