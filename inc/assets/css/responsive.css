@@ -13,6 +13,16 @@
     height: 45px;
   }
 }
+@media (max-width: 767px) {
+  .footer-container button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .footer-container button {
+    font-size: 12px;
+  }
+}
 @media (min-width: 1390px) {
   /* change this, by default 1140px */
   .container {

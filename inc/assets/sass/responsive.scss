@@ -20,9 +20,11 @@
 				}
 			}
 		}
-		.donate .hear{
-			width: 70px;
-			height: 45px;
+		.donate{
+			.hear{
+				width: 70px;
+				height: 45px;
+			}
 		}
 	}
 }
@@ -31,10 +33,19 @@
 }
 
 @media (max-width: 767px){
+	.footer-container{
+		button{
+			font-size: 14px;
+		}
+	}
 }
 
 @media (max-width: 575px){
-
+	.footer-container{
+		button{
+			font-size: 12px;
+		}
+	}
 }
 @media (max-width: 470px){
 }
