@@ -14,9 +14,9 @@
 <footer class="footer-container pt-5">
     <div class="container pt-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-10">
+            <div class="col-lg-8 col-md-10 col-12">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-10 px-1">
+                    <div class="col-lg-8 col-md-10 col-12 px-1">
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
                         </button>
@@ -99,13 +99,15 @@
                             </div>
                         </div>
                         <div class="row d-lg-none d-flex justify-content-center">
-                            <button class="full text-center custom-width donate" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <img class="heart"
-                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
-                                    alt="heart-donate">
-                                Donate
-                            </button>
+                            <div class="col-12">
+                                <button class="full text-center custom-width donate" data-bs-toggle="modal"
+                                    data-bs-target="#contact-us">
+                                    <img class="heart"
+                                        src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
+                                        alt="heart-donate">
+                                    Donate
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="col-4 px-1 d-lg-block d-none">
