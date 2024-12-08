@@ -17,10 +17,16 @@
   .footer-container button {
     font-size: 14px;
   }
+  .footer-container .donate .heart {
+    width: 65px;
+  }
 }
 @media (max-width: 575px) {
   .footer-container button {
     font-size: 12px;
+  }
+  .footer-container .donate .heart {
+    width: 55px;
   }
 }
 @media (min-width: 1390px) {

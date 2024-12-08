@@ -100,7 +100,7 @@
                         </div>
                         <div class="row d-lg-none d-flex justify-content-center">
                             <div class="col-12">
-                                <button class="full text-center custom-width donate" data-bs-toggle="modal"
+                                <button class="full text-center custom-width w-100 donate" data-bs-toggle="modal"
                                     data-bs-target="#contact-us">
                                     <img class="heart"
                                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
