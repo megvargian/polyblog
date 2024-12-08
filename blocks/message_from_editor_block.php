@@ -14,7 +14,7 @@ $message_from_deitor_fields = get_fields();
                     <?php echo $message_from_deitor_fields['en_text']; ?>
                </p>
             </div>
-            <div class="col-3 justify-content-center d-flex">
+            <div class="col-lg-3 col-12 justify-content-center d-flex">
                 <img src="<?php echo $message_from_deitor_fields['middle_profile_image'];?>" alt="profile">
             </div>
             <div class="col justify-content-center align-items-center d-flex">

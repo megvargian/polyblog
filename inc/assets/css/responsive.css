@@ -1,4 +1,8 @@
 @media (max-width: 1199px) {
+  .message-for-editor-section img {
+    height: auto;
+    width: 100%;
+  }
   .footer-container button {
     font-size: 16px;
   }
@@ -14,6 +18,9 @@
   }
 }
 @media (max-width: 767px) {
+  .message-for-editor-section p {
+    font-size: 1rem;
+  }
   .footer-container button {
     font-size: 14px;
   }
@@ -22,6 +29,9 @@
   }
 }
 @media (max-width: 575px) {
+  .message-for-editor-section p {
+    font-size: 0.8rem;
+  }
   .footer-container button {
     font-size: 12px;
   }

@@ -5,6 +5,12 @@
 }
 
 @media (max-width: 1199px){
+	.message-for-editor-section{
+		img{
+			height: auto;
+			width: 100%;
+		}
+	}
 	//footer
 	.footer-container{
 		button{
@@ -33,6 +39,11 @@
 }
 
 @media (max-width: 767px){
+	.message-for-editor-section{
+		p{
+			font-size: 1rem;
+		}
+	}
 	.footer-container{
 		button{
 			font-size: 14px;
@@ -46,6 +57,11 @@
 }
 
 @media (max-width: 575px){
+	.message-for-editor-section{
+		p{
+			font-size: .8rem;
+		}
+	}
 	.footer-container{
 		button{
 			font-size: 12px;
