@@ -1,20 +1,14 @@
 @media (max-width: 1359px) {
-  .responsive-menu-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10;
-  }
-  .responsive-menu-container .responsive-menu-button {
+  .responsive-menu-button {
     position: sticky;
     top: 10px;
-    z-index: 10;
+    z-index: 20;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
   }
-  .responsive-menu-container .responsive-menu-button img {
+  .responsive-menu-button img {
     max-width: 40px;
     height: auto;
   }
