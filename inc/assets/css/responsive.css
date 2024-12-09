@@ -2,11 +2,6 @@
   #responsive-menu-button {
     display: none;
   }
-  .fixed-menu-button {
-    position: fixed;
-    top: 40px;
-    left: 15px;
-  }
 }
 @media (max-width: 1199px) {
   .message-for-editor-section img {
@@ -59,6 +54,11 @@
   }
   #responsive-menu-button img {
     height: auto;
+  }
+  .fixed-menu-button {
+    position: fixed;
+    top: 40px;
+    left: 15px;
   }
   .message-for-editor-section p {
     font-size: 0.8rem;
