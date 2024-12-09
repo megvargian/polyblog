@@ -159,7 +159,7 @@
 <?php wp_footer(); ?>
 </body>
 <script>
-    const button = document.getElementById('.menu-button');
+    const button = document.getElementById('menu-button');
     const initialPosition = button.offsetTop;
 
     window.addEventListener('scroll', () => {
