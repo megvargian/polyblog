@@ -852,7 +852,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 100px;
+  top: 40px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
@@ -882,6 +882,8 @@ body.hide_scroll {
 .side-menu-modal .modal-dialog .modal-body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 90vh;
   background-color: rgba(236, 65, 0, 0.9333333333);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;

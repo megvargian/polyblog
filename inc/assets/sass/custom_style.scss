@@ -943,7 +943,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 100px;
+  top: 40px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
@@ -974,6 +974,8 @@ body.hide_scroll {
     .modal-body {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      height: 90vh;
       background-color: #ec4100ee;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
