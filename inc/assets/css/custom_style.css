@@ -883,7 +883,7 @@ body.hide_scroll {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 85vh;
   background-color: rgba(236, 65, 0, 0.9333333333);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
