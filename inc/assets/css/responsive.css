@@ -54,7 +54,7 @@
     display: block;
   }
   .single-featured-article-container .title {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   .message-for-editor-section p {
     font-size: 0.8rem;
