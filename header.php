@@ -38,10 +38,12 @@ $header_video_url = get_field('header_video', 'option');
 						src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/politics-not-news.png"
 						alt="Politics, not news.">
 				</a>
-				<button class="responsive-menu-button">
-					<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg"
+				<div class="responsive-menu-container">
+					<button class="responsive-menu-button">
+						<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg"
 						alt="Menu" />
-				</button>
+					</button>
+				</div>
 				<?php if (is_front_page()) { ?>
 					<div class="video-container">
 						<video class="video" width="100%" height="100%" autoplay loop muted>
