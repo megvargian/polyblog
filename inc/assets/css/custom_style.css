@@ -397,6 +397,7 @@ body.hide_scroll {
 }
 .single-featured-article-container .right-container .title {
   color: #fff;
+  font-size: 2rem;
 }
 .single-featured-article-container .right-container .author-tags {
   display: flex;
