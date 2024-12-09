@@ -1,31 +1,3 @@
-@media (max-width: 1359px) {
-  .responsive-menu-button {
-    display: none;
-    background: black;
-    border: none;
-    padding: 0;
-    border-radius: 60px;
-    margin: 0;
-    position: absolute;
-    overflow: hidden;
-    width: 80px;
-    height: 80px;
-    overflow: auto;
-    top: 100px;
-    left: 15px;
-    cursor: pointer;
-    z-index: 20;
-    transition: top 0.3s ease;
-  }
-  .responsive-menu-button img {
-    height: auto;
-  }
-  .fixed-menu-button {
-    position: fixed;
-    top: 40px;
-    left: 15px;
-  }
-}
 @media (max-width: 1199px) {
   .message-for-editor-section img {
     height: auto;
