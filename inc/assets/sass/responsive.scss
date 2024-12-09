@@ -2,10 +2,15 @@
 @charset "utf-8";
 
 @media (max-width: 1359px){
-		
+
 	}
 
 @media (max-width: 1199px){
+	.single-author-article-swiper-section{
+		.single-author-img{
+			width: 300px;
+		}
+	}
 	.message-for-editor-section{
 		img{
 			height: auto;
@@ -37,6 +42,15 @@
 }
 
 @media screen and (max-width: 991px) {
+	.single-author-article-swiper-section{
+		.single-author-img{
+			width: 200px;
+		}
+		p{
+			font-size: .8rem;
+			padding-top: 10px;
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -59,6 +73,11 @@
 
 // mobile
 @media (max-width: 575px){
+	.single-author-article-swiper-section{
+		.single-author-img{
+			width: 100%;
+		}
+	}
 	.home-video-header-container {
 		display: none;
 	}

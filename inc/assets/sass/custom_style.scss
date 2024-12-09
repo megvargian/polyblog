@@ -921,7 +921,6 @@ body.hide_scroll {
     border-radius: 100%;
     border: 4px solid #621A01;
     width: 400px;
-    height: 400px;
     mix-blend-mode: luminosity;
     background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
   }
@@ -948,7 +947,7 @@ body.hide_scroll {
   cursor: pointer;
   z-index: 20;
   transition: top 0.3s ease;
-  
+
   img {
     height: auto;
   }
@@ -966,7 +965,7 @@ body.hide_scroll {
 
   .modal-dialog {
     margin: 0 !important;
-  
+
     .modal-content {
       width: 70%;
       background-color: transparent;
