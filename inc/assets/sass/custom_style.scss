@@ -931,10 +931,20 @@ body.hide_scroll {
 
 // site title
 .site-title {
+  width: 100%;
+  padding: 16px;
+  font-size: 3rem;
+  color: #fff;
+
   a {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
   }
 }
 

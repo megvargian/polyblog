@@ -839,10 +839,20 @@ body.hide_scroll {
   color: #fff;
 }
 
+.site-title {
+  width: 100%;
+  padding: 16px;
+  font-size: 3rem;
+  color: #fff;
+}
 .site-title a {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.site-title a p {
+  margin: 0;
 }
 
 .responsive-menu-button {
