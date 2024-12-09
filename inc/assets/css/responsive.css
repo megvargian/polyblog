@@ -1,5 +1,6 @@
 @media (max-width: 1359px) {
   .responsive-menu-button {
+    display: none;
     background: black;
     border: none;
     padding: 0;
@@ -56,6 +57,9 @@
   }
 }
 @media (max-width: 575px) {
+  .responsive-menu-button {
+    display: block;
+  }
   .message-for-editor-section p {
     font-size: 0.8rem;
   }
