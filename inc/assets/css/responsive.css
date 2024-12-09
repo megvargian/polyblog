@@ -1,15 +1,21 @@
 @media (max-width: 1359px) {
   .responsive-menu-button {
-    position: sticky;
-    top: 10px;
-    z-index: 20;
-    background: none;
+    background: black;
     border: none;
     padding: 0;
+    border-radius: 60px;
+    margin: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    overflow: auto;
+    top: 135px;
+    left: 15px;
     cursor: pointer;
+    z-index: 20;
   }
-  .responsive-menu-button img {
-    max-width: 40px;
+  img {
     height: auto;
   }
 }
