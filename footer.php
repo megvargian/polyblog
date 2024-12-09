@@ -158,27 +158,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <?php wp_footer(); ?>
 </body>
-<script>
-    jQuery(document).ready(function ($) {
-        const button = document.getElementById('menu-button');
-        const initialPosition = button.offsetTop;
-        let lastScrollTop = 0;
-    
-        window.addEventListener('scroll', () => {
-          const currentScroll = window.scrollY;
-    
-          if (currentScroll > initialPosition) {
-            button.classList.add('fixed-menu-button');
-          } else {
-            button.classList.remove('fixed-menu-button');
-          }
-    
-          if (currentScroll < lastScrollTop) {
-            button.classList.remove('fixed-button');
-          }
-    
-          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        });
-    });
-</script>
+<script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/custom-scripts/show-menu-button.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/custom-scripts/show-hide-responsive-sections.js"></script>
 </html>
