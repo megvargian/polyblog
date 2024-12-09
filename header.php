@@ -32,11 +32,12 @@ $header_video_url = get_field('header_video', 'option');
 			});
 		</script>
 		<div id="content" class="site-content">
-			<a href="http://polybloglb.com/">
-				<img class="w-100 d-block"
-					src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/politics-not-news.png"
-					alt="Politics, not news.">
-			</a>
+			<div class="site-title">
+				<a href="http://polybloglb.com/">
+					<p>Politics, not news</p>
+					<p>سيــاسة، مـش اخبـار.</p>
+				</a>
+			</div>
 			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal"
 				data-bs-target="#sideMenuModal">
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" />

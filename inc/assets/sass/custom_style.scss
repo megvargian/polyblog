@@ -929,6 +929,15 @@ body.hide_scroll {
   }
 }
 
+// site title
+.site-title {
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 // side menu
 .responsive-menu-button {
   display: none;
