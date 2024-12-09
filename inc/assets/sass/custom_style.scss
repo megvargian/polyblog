@@ -935,6 +935,7 @@ body.hide_scroll {
   padding: 16px;
   font-size: 3rem;
   color: #fff;
+  transition: 0.3s ease-in-out;
 
   a {
     width: 100%;
@@ -955,6 +956,7 @@ body.hide_scroll {
 
 .site-title:hover {
   color: #ffffffbb;
+  transition: 0.3s ease-in-out;
 }
 
 // side menu

@@ -844,6 +844,7 @@ body.hide_scroll {
   padding: 16px;
   font-size: 3rem;
   color: #fff;
+  transition: 0.3s ease-in-out;
 }
 .site-title a {
   width: 100%;
@@ -861,6 +862,7 @@ body.hide_scroll {
 
 .site-title:hover {
   color: rgba(255, 255, 255, 0.7333333333);
+  transition: 0.3s ease-in-out;
 }
 
 .responsive-menu-button {
