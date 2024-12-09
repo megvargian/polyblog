@@ -15,7 +15,7 @@ $single_author_article_swiper_block = get_fields();
                             <img class="w-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6">
-                            <div class="d-flex justify-content-center align-items-center px-5 h-100">
+                            <div class="d-flex justify-content-center align-items-center px-sm-5 px-2 h-100">
                                 <div class="inner-author mx-auto">
                                     <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
@@ -33,13 +33,13 @@ $single_author_article_swiper_block = get_fields();
                             <img class="w-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6">
-                            <div class="d-flex justify-content-center align-items-center px-5 h-100">
+                            <div class="d-flex justify-content-center align-items-center px-sm-5 px-2 h-100">
                                 <div class="inner-author mx-auto">
-                                    <p class="text-left">
+                                    <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
                                     <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
-                                    <p>Name of the Author</p>
+                                    <h6 class="pt-3">Name of the Author</h6>
                                 </div>
                             </div>
                         </div>
@@ -51,13 +51,13 @@ $single_author_article_swiper_block = get_fields();
                             <img class="w-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6">
-                            <div class="d-flex justify-content-center align-items-center px-5 h-100">
+                            <div class="d-flex justify-content-center align-items-center px-sm-5 px-2 h-100">
                                 <div class="inner-author mx-auto">
-                                    <p class="text-left">
+                                    <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
                                     <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
-                                    <p>Name of the Author</p>
+                                    <h6 class="pt-3">Name of the Author</h6>
                                 </div>
                             </div>
                         </div>
