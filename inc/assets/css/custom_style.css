@@ -867,6 +867,10 @@ body.hide_scroll {
   left: 15px;
 }
 
+.side-menu-modal {
+  padding: 0 !important;
+  width: 100vw;
+}
 .side-menu-modal .modal-dialog {
   margin: 0 !important;
 }
