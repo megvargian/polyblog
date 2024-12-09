@@ -936,30 +936,35 @@ body.hide_scroll {
 }
 
 .side-menu-modal {
-  .modal-content {
-    background-color: transparent;
-    border-radius: 20px;
-  }
-  .modal-body {
-    background-color: #171717;
-    border: 3px solid $sec_color;
-    border-radius: 50px;
-    color: #fff;
-    font-family: $en-regular;
-    font-size: 1.5rem;
-    padding: 3rem;
-    text-align: center;
-  }
-  .modal-header {
-    border: none !important;
-    padding: 1rem 0;
-    .btn-close {
-      opacity: 1;
-      background-color: $sec_color;
-      border-radius: 100%;
+  .modal-dialog {
+    margin: 0 !important;
+  
+    .modal-content {
+      width: 70%;
+      background-color: transparent;
     }
-    .btn-close:focus {
-      box-shadow: none !important;
+    .modal-body {
+      background-color: #ec4100ee;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      color: #fff;
+      font-family: $en-regular;
+      font-size: 1.5rem;
+      padding: 3rem;
+      text-align: center;
+      left: 0;
+    }
+    .modal-header {
+      border: none !important;
+      padding: 1rem 0;
+      .btn-close {
+        opacity: 1;
+        background-color: $sec_color;
+        border-radius: 100%;
+      }
+      .btn-close:focus {
+        box-shadow: none !important;
+      }
     }
   }
 }

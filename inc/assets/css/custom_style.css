@@ -844,30 +844,34 @@ body.hide_scroll {
   color: #fff;
 }
 
-.side-menu-modal .modal-content {
-  background-color: transparent;
-  border-radius: 20px;
+.side-menu-modal .modal-dialog {
+  margin: 0 !important;
 }
-.side-menu-modal .modal-body {
-  background-color: #171717;
-  border: 3px solid #87ed06;
-  border-radius: 50px;
+.side-menu-modal .modal-dialog .modal-content {
+  width: 70%;
+  background-color: transparent;
+}
+.side-menu-modal .modal-dialog .modal-body {
+  background-color: rgba(236, 65, 0, 0.9333333333);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   color: #fff;
   font-family: "Lexend-Regular";
   font-size: 1.5rem;
   padding: 3rem;
   text-align: center;
+  left: 0;
 }
-.side-menu-modal .modal-header {
+.side-menu-modal .modal-dialog .modal-header {
   border: none !important;
   padding: 1rem 0;
 }
-.side-menu-modal .modal-header .btn-close {
+.side-menu-modal .modal-dialog .modal-header .btn-close {
   opacity: 1;
   background-color: #87ed06;
   border-radius: 100%;
 }
-.side-menu-modal .modal-header .btn-close:focus {
+.side-menu-modal .modal-dialog .modal-header .btn-close:focus {
   box-shadow: none !important;
 }
 
