@@ -41,6 +41,9 @@
   }
 }
 @media (max-width: 575px) {
+  .site-title {
+    font-size: 2.5rem;
+  }
   .single-author-article-swiper-section .single-author-img {
     width: 100%;
   }
