@@ -95,7 +95,21 @@ $header_video_url = get_field('header_video', 'option');
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-body">
-							...
+							<button>
+								<img src="http://polybloglb.com/wp-content/uploads/2024/12/what_we_think2.png" alt="What we think">
+							</button>
+							<button>
+								<img src="http://polybloglb.com/wp-content/uploads/2024/12/get_to_know_us2.png" alt="get to know us">
+							</button>
+							<button>
+								<img src="http://polybloglb.com/wp-content/uploads/2024/12/how_we_see_it2.png" alt="how we see it">
+							</button>
+							<button>
+								<img src="http://polybloglb.com/wp-content/uploads/2024/12/our_productions2.png" alt="our productions">
+							</button>
+							<button>
+								<img src="http://polybloglb.com/wp-content/uploads/2024/12/our_segments2.png" alt="our segments">
+							</button>
 						</div>
 					</div>
 				</div>

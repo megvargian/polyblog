@@ -413,6 +413,7 @@ body.hide_scroll {
     align-content: center;
 
     .youtube_featured_image {
+      width: 100%;
       padding: 12px 0;
       border-radius: 66px;
     }
@@ -971,6 +972,8 @@ body.hide_scroll {
       background-color: transparent;
     }
     .modal-body {
+      display: flex;
+      flex-direction: column;
       background-color: #ec4100ee;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
@@ -981,6 +984,20 @@ body.hide_scroll {
       text-align: center;
       top: 40px;
       left: 0;
+
+      button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: inline-block;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
     }
     .modal-header {
       border: none !important;
