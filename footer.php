@@ -158,5 +158,16 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <?php wp_footer(); ?>
 </body>
+<script>
+    const button = document.getElementById('.menu-button');
+    const initialPosition = button.offsetTop;
 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > initialPosition) {
+            button.classList.add('fixed-menu-button');
+        } else {
+            button.classList.remove('fixed-menu-button');
+        }
+    });
+</script>
 </html>

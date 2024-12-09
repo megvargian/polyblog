@@ -37,7 +37,7 @@ $header_video_url = get_field('header_video', 'option');
 					src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/politics-not-news.png"
 					alt="Politics, not news.">
 			</a>
-			<button class="responsive-menu-button">
+			<button id="menu-button" class="responsive-menu-button">
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" />
 			</button>
 			<div <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
