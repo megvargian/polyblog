@@ -309,7 +309,7 @@ body.hide_scroll {
   color: #87ed06;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after {
+.swiper-button-prev:after, .swiper-button-next:after, .swiper-pagination-bullet-active {
   color: #fff;
 }
 
