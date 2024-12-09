@@ -2,6 +2,21 @@
 @charset "utf-8";
 
 @media (max-width: 1359px){
+	.responsive-menu-button {
+		position: sticky;
+		top: 10px;
+		margin-left: 10px;
+		z-index: 10;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+
+		img {
+			max-width: 40px;
+			height: auto;
+		}
+	  }
 }
 
 @media (max-width: 1199px){
