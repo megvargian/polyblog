@@ -942,7 +942,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 100px;
+  top: 40px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
@@ -976,6 +976,7 @@ body.hide_scroll {
       font-size: 1.5rem;
       padding: 3rem;
       text-align: center;
+      top: 40px;
       left: 0;
     }
     .modal-header {
