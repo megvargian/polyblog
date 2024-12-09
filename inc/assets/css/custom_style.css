@@ -877,7 +877,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 240px;
+  top: 200px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
