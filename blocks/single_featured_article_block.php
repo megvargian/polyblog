@@ -109,6 +109,7 @@ if ($featured_articles): ?>
                 }
                 ?>
             </div>
+            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev swiper-button-prev-last-part"></div>
             <div class="swiper-button-next swiper-button-next-last-part"></div>
         </div>
@@ -116,6 +117,9 @@ if ($featured_articles): ?>
             jQuery(document).ready(function ($) {
                 var swiper = new Swiper('.swiper-featured-articles-block', {
                     slidesPerView: 1,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
                     navigation: {
                         nextEl: '.swiper-button-next-last-part',
                         prevEl: '.swiper-button-prev-last-part',

@@ -309,6 +309,10 @@ body.hide_scroll {
   color: #87ed06;
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+  color: #fff;
+}
+
 .home-video-header-container {
   display: flex;
   flex-direction: column;
