@@ -84,7 +84,12 @@
 	}
 }
 
+// mobile
 @media (max-width: 575px){
+	.home-video-header-container {
+		display: none;
+	}
+
 	.responsive-menu-button {
 		display: block;
 	}

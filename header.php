@@ -37,7 +37,7 @@ $header_video_url = get_field('header_video', 'option');
 					src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/politics-not-news.png"
 					alt="Politics, not news.">
 			</a>
-			<button id="menu-button" class="responsive-menu-button">
+			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" />
 			</button>
 			<div <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
@@ -88,4 +88,26 @@ $header_video_url = get_field('header_video', 'option');
 					<?php if (is_front_page()) { ?>
 					</div>
 				<?php } ?>
+			</div>
+			<div class="modal fade side-menu-modal" id="sideMenuModal" tabindex="-1" aria-labelledby="side-menu-modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur
+							magnam fugit.
+							Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt,
+							repellendus
+							quaerat!
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur
+							magnam fugit.
+							Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt,
+							repellendus
+							quaerat!
+						</div>
+					</div>
+				</div>
 			</div>
