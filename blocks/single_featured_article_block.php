@@ -13,9 +13,11 @@ $author_name = get_the_title(get_field('author', $featured_article_block['select
 $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_article']);
 ?>
 <div class="row single-featured-article-container">
-    <div class="col-5"><a href="<?php echo $article_link; ?>">
+    <div class="col-5">
+        <a href="<?php echo $article_link; ?>">
             <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
-        </a></div>
+        </a>
+    </div>
     <div class="col-7 right-container">
         <div class="categories">
             <?php foreach ($categories as $category) { ?>
@@ -24,18 +26,16 @@ $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_ar
                 </span>
             <?php } ?>
         </div>
-        <div class="title">
+        <div class="title align-text-arabic">
             <a href="<?php echo $article_link; ?>">
-                <h2>
-                    <?php echo $title; ?>
-                </h2>
+                <?php echo $title; ?>
             </a>
         </div>
         <div class="author-tags">
             <div class="author">
-                <h3>
+                <p>
                     <?php echo $author_name ?>
-                </h3>
+                </p>
             </div>
             <div class="tags">
                 <?php foreach ($tags as $tag) { ?>

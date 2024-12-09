@@ -359,6 +359,7 @@ body.hide_scroll {
     line-height: 0;
 
     img {
+      width: 100%;
       filter: grayscale(100%);
       transition: 0.3s;
     }
@@ -366,9 +367,8 @@ body.hide_scroll {
 
   .right-container {
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
     padding: 24px;
 
     .categories {
@@ -386,13 +386,7 @@ body.hide_scroll {
     }
 
     .title {
-      display: flex;
-      justify-content: center;
       color: #fff;
-
-      h2 {
-        font-size: 4em;
-      }
     }
 
     .author-tags {
