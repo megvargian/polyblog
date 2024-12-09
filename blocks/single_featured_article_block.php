@@ -12,11 +12,11 @@ $categories = get_the_category($featured_article_block['selected_article']);
 $author_name = get_the_title(get_field('author', $featured_article_block['selected_article']));
 $thumbnail = get_field('article_thumbnail', $featured_article_block['selected_article']);
 ?>
-<div class="single-featured-article-container">
-    <a href="<?php echo $article_link; ?>">
-        <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
-    </a>
-    <div class="right-container">
+<div class="row single-featured-article-container">
+    <div class="col-5"><a href="<?php echo $article_link; ?>">
+            <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" />
+        </a></div>
+    <div class="col-7 right-container">
         <div class="categories">
             <?php foreach ($categories as $category) { ?>
                 <span class="category">

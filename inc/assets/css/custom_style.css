@@ -370,7 +370,6 @@ body.hide_scroll {
 }
 .single-featured-article-container .right-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   padding: 24px;
@@ -881,8 +880,8 @@ body.hide_scroll {
 }
 .side-menu-modal .modal-dialog .modal-body {
   background-color: rgba(236, 65, 0, 0.9333333333);
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   color: #fff;
   font-family: "Lexend-Regular";
   font-size: 1.5rem;

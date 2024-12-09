@@ -366,7 +366,7 @@ body.hide_scroll {
 
   .right-container {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: space-between;
     width: 100%;
     padding: 24px;
@@ -975,8 +975,8 @@ body.hide_scroll {
     }
     .modal-body {
       background-color: #ec4100ee;
-      border-top-right-radius: 50px;
-      border-bottom-right-radius: 50px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
       color: #fff;
       font-family: $en-regular;
       font-size: 1.5rem;
