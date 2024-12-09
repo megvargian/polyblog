@@ -840,6 +840,12 @@ body.hide_scroll {
   color: #fff;
 }
 
+.site-title a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .responsive-menu-button {
   display: none;
   background: black;
