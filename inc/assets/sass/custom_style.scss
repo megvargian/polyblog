@@ -945,7 +945,16 @@ body.hide_scroll {
     p {
       margin: 0;
     }
+
+    p:nth-of-type(2) {
+      text-align: end;
+      text-align-last: end;
+    }
   }
+}
+
+.site-title:hover {
+  color: #ffffffbb;
 }
 
 // side menu
@@ -961,7 +970,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 40px;
+  top: 200px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
