@@ -11,10 +11,6 @@ jQuery(document).ready(function ($) {
         // home three featured articles hide
         const threeFeaturedArticlesBlock = document.getElementById('three-featured-articles-block');
         threeFeaturedArticlesBlock.style.display = 'none';
-
-        // hide video header
-        const videoHeader = document.getElementById('home-video-header-container');
-        videoHeader.style.display = 'none';
       } else { // DESKTOP
         // switch home featured articles slider and normal view
         const homeFeaturedArticlesDesktop = document.getElementById('home-featured-articles-desktop');
@@ -25,10 +21,6 @@ jQuery(document).ready(function ($) {
         // home three featured articles show
         const threeFeaturedArticlesBlock = document.getElementById('three-featured-articles-block');
         threeFeaturedArticlesBlock.styles.display = 'block';
-
-        // hide video header
-        const videoHeader = document.getElementById('home-video-header-container');
-        videoHeader.style.display = 'block';
       }
     })
     .trigger('resize');
