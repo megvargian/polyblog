@@ -607,6 +607,7 @@ body.hide_scroll {
 }
 
 .three-featured-articles-block-container {
+  display: block;
   color: #000;
 }
 .three-featured-articles-block-container .article-container {
@@ -885,7 +886,7 @@ body.hide_scroll {
   width: 80px;
   height: 80px;
   overflow: auto;
-  top: 140px;
+  top: 120px;
   left: 15px;
   cursor: pointer;
   z-index: 20;
