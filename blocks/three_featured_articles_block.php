@@ -14,7 +14,7 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<section class="my-5 three-featured-articles-block-container">
+<section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container">
     <div class="container">
         <div class="row position-relative z-1">
             <?php
