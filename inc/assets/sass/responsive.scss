@@ -87,6 +87,8 @@
 				font-family: $en-bold;
 				text-align: center;
 				padding: .75rem 2rem;
+				width: 100%;
+				margin: 0 5rem;
 				border-radius: 30px;
 			}
 		}
@@ -130,6 +132,14 @@
 		.donate{
 			.heart{
 				width: 55px;
+			}
+		}
+	}
+	//contact form
+	.contact-us-section{
+		.container{
+			.next-button{
+				margin: 0 2rem;
 			}
 		}
 	}
