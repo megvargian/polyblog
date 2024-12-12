@@ -42,15 +42,15 @@
   .contact-us-section {
     background-color: #ec4100;
   }
-  .contact-us-section .container {
+  .contact-us-section .container form {
     border-radius: 40px;
     background-color: #171717;
   }
-  .contact-us-section .container h4 {
+  .contact-us-section .container form h4 {
     font-size: 1.2rem;
     color: #ec4100;
   }
-  .contact-us-section .container .next-button {
+  .contact-us-section .container form .next-button {
     outline: none;
     border: none;
     background-color: #ec4100;

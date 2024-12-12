@@ -73,23 +73,25 @@
 	.contact-us-section{
 		background-color: #ec4100;
 		.container{
-			border-radius: 40px;
-			background-color: #171717;
-			h4{
-				font-size: 1.2rem;
-				color: #ec4100;
-			}
-			.next-button{
-				outline: none;
-				border: none;
-				background-color: #ec4100;
-				color: #fff;
-				font-family: $en-bold;
-				text-align: center;
-				padding: .75rem 2rem;
-				width: 100%;
-				margin: 0 5rem;
-				border-radius: 30px;
+			form{
+				border-radius: 40px;
+				background-color: #171717;
+				h4{
+					font-size: 1.2rem;
+					color: #ec4100;
+				}
+				.next-button{
+					outline: none;
+					border: none;
+					background-color: #ec4100;
+					color: #fff;
+					font-family: $en-bold;
+					text-align: center;
+					padding: .75rem 2rem;
+					width: 100%;
+					margin: 0 5rem;
+					border-radius: 30px;
+				}
 			}
 		}
 		.swiper-mobile-pagination{

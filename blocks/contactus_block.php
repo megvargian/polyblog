@@ -15,7 +15,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     <input type="email" placeholder="email Address" required>
                     <div class="row px-0">
                         <div class="col-4 padding-left-0">
-                            <input type="number" placeholder="country code" required>
+                            <input type="tel" placeholder="country code" required>
                         </div>
                         <div class="col-8">
                             <input type="tel" placeholder="phone number" required>
@@ -56,7 +56,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                             <input type="email" placeholder="email Address" required>
                             <div class="row px-0">
                                 <div class="col-4 padding-left-0">
-                                    <input type="number" placeholder="country code" required>
+                                    <input type="tel" placeholder="country code" required>
                                 </div>
                                 <div class="col-8">
                                     <input type="tel" placeholder="phone number" required>
@@ -89,7 +89,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     </div>
                     <div class="swiper-slide">
                         <h4 class="text-center pb-2">Step 3:</h4>
-                        <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
+                        <textarea class="" style="height: 15rem;" type="text" placeholder="Write your pitch here"></textarea>
                         <div class="d-flex mx-auto justify-content-center py-2">
                             <button type="submit" name="submit" class="next-button">
                                 Submit
