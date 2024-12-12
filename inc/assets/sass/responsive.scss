@@ -73,11 +73,21 @@
 	.contact-us-section{
 		background-color: #ec4100;
 		.container{
-			border-radius: 35px;
+			border-radius: 40px;
 			background-color: #171717;
 			h4{
 				font-size: 1.2rem;
 				color: #ec4100;
+			}
+			.next-button{
+				outline: none;
+				border: none;
+				background-color: #ec4100;
+				color: #fff;
+				font-family: $en-bold;
+				text-align: center;
+				padding: .75rem 2rem;
+				border-radius: 30px;
 			}
 		}
 	}

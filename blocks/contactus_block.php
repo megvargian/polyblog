@@ -63,6 +63,11 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                 </div>
                             </div>
                             <input type="text" placeholder="social media links if relevant" required>
+                            <div class="d-flex mx-auto justify-content-center py-2">
+                                <button class="next-button" name="next-slide">
+                                    Next
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -76,13 +81,20 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                 <option value="arabic1">عربي</option>
                             </select>
                         </div>
+                        <div class="d-flex mx-auto justify-content-center py-2">
+                            <button class="next-button" name="next-slide">
+                                Next
+                            </button>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <h4 class="text-center pb-2">Step 3:</h4>
                         <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
-                        <button type="submit" class="submit-button">
-
-                        </button>
+                        <div class="d-flex mx-auto justify-content-center py-2">
+                            <button type="submit" name="submit" class="next-button">
+                                Submit
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +124,7 @@ jQuery(document).ready(function($) {
     // $('textarea').focus(function () {
     //     $(this).attr('placeholder', '');
     // })
-    const swiper = new Swiper('.contact-us-swiper-mobile', {
+    const swiperMobileContactForm = new Swiper('.contact-us-swiper-mobile', {
         slidesPerView: 1,
         spaceBetween: 30,
         dir: 'rtl',
@@ -121,6 +133,9 @@ jQuery(document).ready(function($) {
             type: 'bullets',
             clickable: true,
         },
+    });
+    $('.next-button').on('click', function () {
+        swiper.slideNext();
     });
 });
 </script>
