@@ -6,7 +6,7 @@
 $featured_articles = get_field('featured_articles');
 
 if ($featured_articles): ?>
-    <section id="home-featured-articles-desktop">
+    <section id="home-featured-articles-desktop" class="d-sm-block d-none">
         <div class="row featured-articles-container">
             <?php foreach ($featured_articles as $featured_article):
                 $article = $featured_article['article'];
@@ -55,7 +55,7 @@ if ($featured_articles): ?>
             <?php endforeach; ?>
         </div>
     </section>
-    <section id="home-featured-articles-mobile">
+    <section id="home-featured-articles-mobile" class="d-block d-sm-none">
         <div class="swiper swiper-featured-articles-block">
             <div class="swiper-wrapper">
                 <?php foreach ($featured_articles as $featured_article) {
