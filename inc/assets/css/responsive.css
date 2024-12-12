@@ -39,6 +39,17 @@
   .footer-container .donate .heart {
     width: 65px;
   }
+  .contact-us-section {
+    background-color: #ec4100;
+  }
+  .contact-us-section .container {
+    border-radius: 35px;
+    background-color: #171717;
+  }
+  .contact-us-section .container h4 {
+    font-size: 1.2rem;
+    color: #ec4100;
+  }
 }
 @media (max-width: 575px) {
   .site-title {

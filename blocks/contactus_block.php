@@ -6,8 +6,8 @@
 $contactus_fields = get_fields();
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
-<section class="py-4 <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
-    <div class="container-fluid d-md-block d-none">
+<section class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
+    <div class="container-fluid">
         <form action="/">
             <div class="row justify-content-center">
                 <div class="col-5">
@@ -43,12 +43,15 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             </div>
         </form>
     </div>
-    <div class="container d-block d-md-none bg-black" style="border-radius: 35px;">
+</section>
+<section class="py-4 contact-us-section d-md-none">
+    <div class="container d-block">
         <form action="/" class="p-3">
             <div class="swiper contact-us-swiper-mobile">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="d-block">
+                            <h4 class="text-center pb-2">Step 1:</h4>
                             <input type="text" placeholder="your Name" required>
                             <input type="email" placeholder="email Address" required>
                             <div class="row px-0">
@@ -63,6 +66,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                         </div>
                     </div>
                     <div class="swiper-slide">
+                        <h4 class="text-center pb-2">Step 3:</h4>
                         <input type="text" placeholder="areas of interest" required>
                         <input type="text" placeholder="Links to previous writings if present" required>
                         <div class="d-flex justify-content-between align-items-center select-language">
@@ -74,9 +78,10 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                         </div>
                     </div>
                     <div class="swiper-slide">
+                        <h4 class="text-center pb-2">Step 3:</h4>
                         <textarea class="h-100" type="text" placeholder="Write your pitch here"></textarea>
                         <button type="submit" class="submit-button">
-                            <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
+
                         </button>
                     </div>
                 </div>
@@ -110,6 +115,7 @@ jQuery(document).ready(function($) {
     const swiper = new Swiper('.contact-us-swiper-mobile', {
         slidesPerView: 1,
         spaceBetween: 30,
+        dir: 'rtl',
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',

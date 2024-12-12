@@ -69,6 +69,18 @@
 			}
 		}
 	}
+	//contact form
+	.contact-us-section{
+		background-color: #ec4100;
+		.container{
+			border-radius: 35px;
+			background-color: #171717;
+			h4{
+				font-size: 1.2rem;
+				color: #ec4100;
+			}
+		}
+	}
 }
 
 // mobile
@@ -90,7 +102,7 @@
 		display: block;
 	}
 
-	.single-featured-article-container { 
+	.single-featured-article-container {
 		.title {
 			font-size: 1rem !important;
 		}
