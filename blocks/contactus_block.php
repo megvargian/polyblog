@@ -74,7 +74,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                         <h4 class="text-center pb-2">Step 3:</h4>
                         <input type="text" placeholder="areas of interest" required>
                         <input type="text" placeholder="Links to previous writings if present" required>
-                        <div class="d-block">
+                        <div class="d-block mb-3">
                             <p class="px-3 mb-2">I CAN WRITE IN:</p>
                             <ul class="d-flex justify-content-start align-items-center langs">
                                 <li class="">

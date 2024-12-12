@@ -42,6 +42,11 @@
   .contact-us-section {
     background-color: #ec4100;
   }
+  .contact-us-section input,
+  .contact-us-section textarea,
+  .contact-us-section label {
+    margin-bottom: 15px;
+  }
   .contact-us-section .container form {
     border-radius: 40px;
     background-color: #171717;
@@ -49,6 +54,7 @@
   .contact-us-section .container form h4 {
     font-size: 1.2rem;
     color: #ec4100;
+    text-transform: uppercase;
   }
   .contact-us-section .container form .next-button {
     outline: none;
