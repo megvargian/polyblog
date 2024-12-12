@@ -98,7 +98,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-mobile-pagination"></div>
         </form>
     </div>
 </section>
@@ -129,7 +129,7 @@ jQuery(document).ready(function($) {
         spaceBetween: 30,
         dir: 'rtl',
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-mobile-pagination',
             type: 'bullets',
             clickable: true,
         },
