@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
         },
     });
     $('.next-button').on('click', function () {
-        swiper.slideNext();
+        swiperMobileContactForm.slideNext();
     });
 });
 </script>
