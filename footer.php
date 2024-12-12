@@ -157,7 +157,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <?php wp_footer(); ?>
-</body>
 <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/custom-scripts/show-menu-button.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/custom-scripts/show-hide-responsive-sections.js"></script>
+</body>
 </html>
