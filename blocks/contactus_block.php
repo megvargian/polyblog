@@ -44,7 +44,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
         </form>
     </div>
 </section>
-<section class="py-4 contact-us-section d-md-none" dir="rtl">
+<section class="py-4 contact-us-section d-md-none">
     <div class="container d-block">
         <form action="/" class="p-3 py-5 position-relative">
             <div class="swiper contact-us-swiper-mobile">
