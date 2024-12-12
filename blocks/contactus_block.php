@@ -75,11 +75,18 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                         <input type="text" placeholder="areas of interest" required>
                         <input type="text" placeholder="Links to previous writings if present" required>
                         <div class="d-flex justify-content-between align-items-center select-language">
-                            <label for="languages">I CAN WRITE IN:</label>
-                            <select id="languages" name="languages[]" multiple>
-                                <option value="english">English</option>
-                                <option value="arabic1">عربي</option>
-                            </select>
+                            <p class="px-3">I CAN WRITE IN:</p>
+                            <ul class="d-flex justify-content-start align-items-center langs">
+                                <li>
+                                    <button>English</button>
+                                </li>
+                                <li>
+                                    <button>Arabic</button>
+                                </li>
+                                <li>
+                                    <button>French</button>
+                                </li>
+                            </ul>
                         </div>
                         <div class="d-flex mx-auto justify-content-center py-2">
                             <button class="next-button" name="next-slide">
@@ -137,5 +144,8 @@ jQuery(document).ready(function($) {
     $('.next-button').on('click', function () {
         swiperMobileContactForm.slideNext();
     });
+    $('.langs button').on('click', function () {
+        $(this).addClass('active');
+    })
 });
 </script>

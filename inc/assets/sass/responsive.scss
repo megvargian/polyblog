@@ -92,6 +92,20 @@
 					margin: 0 5rem;
 					border-radius: 30px;
 				}
+				.langs{
+					button{
+						border: 1px solid #ec4100;
+						border-radius: 30px;
+						padding: .75rem 1rem;
+						font-size: 1rem;
+						font-family: $en-bold;
+						background-color: transparent;
+						color: #fff;
+					}
+					button.active{
+						background-color: #ec4100;
+					}
+				}
 			}
 		}
 		.swiper-mobile-pagination{
@@ -100,6 +114,7 @@
 			}
 			.swiper-pagination-bullet{
 				background-color: #D9D9D9;
+				opacity: 1;
 			}
 		}
 	}
