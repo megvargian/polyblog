@@ -28,6 +28,9 @@
     font-size: 0.8rem;
     padding-top: 10px;
   }
+  .custom-width {
+    margin-left: 0px;
+  }
 }
 @media (max-width: 767px) {
   .message-for-editor-section p {
