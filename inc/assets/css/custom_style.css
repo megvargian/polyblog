@@ -371,6 +371,7 @@ body.hide_scroll {
 }
 .single-featured-article-container a {
   line-height: 0;
+  font-family: "Vazirmatn-Regular";
 }
 .single-featured-article-container a img {
   width: 100%;
