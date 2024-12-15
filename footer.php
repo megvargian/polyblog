@@ -98,7 +98,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row d-lg-none d-flex justify-content-center">
+                        <div class="row gx-2 d-lg-none d-flex justify-content-center">
                             <div class="col-12">
                                 <button class="full text-center custom-width w-100 donate" data-bs-toggle="modal"
                                     data-bs-target="#contact-us">
