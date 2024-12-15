@@ -62,7 +62,24 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                     <input type="tel" placeholder="phone number" required>
                                 </div>
                             </div>
-                            <input type="text" placeholder="social media links if relevant" required>
+                            <!-- <input type="text" placeholder="social media links if relevant" required> -->
+                            <div class="d-block mb-3">
+                                <p class="px-3 mb-2">Social media links</p>
+                                <ul class="d-flex justify-content-between align-items-center social-icons-mobile">
+                                    <li class="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/X_logo_mobile.svg" alt="X">
+                                    </li>
+                                    <li class="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook-mobile.svg" alt="X">
+                                    </li>
+                                    <li class="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/X_logo_mobile.svg" alt="X">
+                                    </li>
+                                    <li class="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook-mobile.svg" alt="X">
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="d-flex mx-auto justify-content-center py-2">
                                 <button class="next-button" name="next-slide">
                                     Next

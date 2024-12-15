@@ -56,6 +56,16 @@
 			margin-left: 0px;
 		}
 	}
+	.social-icons-mobile{
+		li{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				cursor: pointer;
+			}
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -129,6 +139,11 @@
 			}
 		}
 	}
+	.custom-modal {
+		.modal-body {
+		  font-size: 1rem;
+		}
+	}
 }
 
 // mobile
@@ -177,6 +192,11 @@
 			.next-button{
 				margin: 0 2rem;
 			}
+		}
+	}
+	.custom-modal {
+		.modal-body {
+		  font-size: .8rem;
 		}
 	}
 }
