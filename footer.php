@@ -86,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row d-lg-none d-flex">
+                        <div class="row gx-2 d-lg-none d-flex">
                             <div class="col-6">
                                 <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                     contact us
