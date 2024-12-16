@@ -36,7 +36,7 @@ if (have_posts()):
 </div>
 <?php endif; ?>
 <div class="container-fluid px-4 single-post-container">
-    <div class="row py-2 justify-content-start">
+    <div class="row py-2 justify-content-end">
         <div class="col-12 col-sm-4 mb-2">
             <button type="button" class="what-we-think w-100">What we think</button>
         </div>
@@ -54,7 +54,7 @@ if (have_posts()):
         </div>
     </div>
     <div class="row py-2 main-content">
-        <div class="col-12 col-sm-4 py-2 author-info order-md-1 order-2">
+        <div class="col-12 col-lg-4 py-2 author-info order-lg-1 order-2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -123,9 +123,9 @@ if (have_posts()):
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-8 py-2 align-text-arabic order-md-2 order-1">
+        <div class="col-12 col-lg-8 py-2 align-text-arabic order-lg-2 order-1">
             <div class="row py-2 article-info">
-                <div class="col-6">
+                <div class="col-6 text-left">
                     <?php
                         echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
                     ?>
