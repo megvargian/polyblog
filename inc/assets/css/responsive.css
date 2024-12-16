@@ -107,6 +107,12 @@
   .custom-modal .modal-body {
     font-size: 1rem;
   }
+  .author-swiper-container .custom-swiper-button-prev img {
+    height: 50px;
+  }
+  .author-swiper-container .custom-swiper-button-next img {
+    height: 50px;
+  }
 }
 @media (max-width: 575px) {
   .site-title {
