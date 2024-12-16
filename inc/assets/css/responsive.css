@@ -28,6 +28,9 @@
     font-size: 0.8rem;
     padding-top: 10px;
   }
+  .single-author-article-swiper-section h6 {
+    text-align: center;
+  }
   .footer-container .custom-width {
     margin-left: 0px;
   }

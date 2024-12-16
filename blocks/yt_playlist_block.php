@@ -5,7 +5,7 @@
 
 $yt_playlist_block = get_fields();
 ?>
-<section class="w-100 youtube-playlist-bg">
+<section class="w-100 youtube-playlist-bg d-none d-lg-block">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col">
