@@ -125,9 +125,9 @@ if (have_posts()):
         </div>
         <div class="col-12 col-lg-8 py-2 align-text-arabic order-lg-2 order-1">
             <div class="row py-2 article-info">
-                <div class="col-6 text-left">
+                <div class="col-6 d-flex justify-content-start">
                     <?php
-                        echo 'Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '';
+                        echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
                     ?>
                 </div>
                 <div class="col-6 tags">
