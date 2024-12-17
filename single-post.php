@@ -127,7 +127,7 @@ if (have_posts()):
             <div class="row py-2 article-info">
                 <div class="col-6 text-left">
                     <?php
-                        echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
+                        echo 'Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '';
                     ?>
                 </div>
                 <div class="col-6 tags">
