@@ -317,6 +317,22 @@ body.hide_scroll {
   background: #fff;
 }
 
+.en-regular {
+  font-family: "Lexend-Regular";
+}
+
+.en-bold {
+  font-family: "Lexend-Bold";
+}
+
+.ar-regular {
+  font-family: "Vazirmatn-Regular";
+}
+
+.ar-bold {
+  font-family: "Vazirmatn-Bold";
+}
+
 .home-video-header-container {
   display: flex;
   flex-direction: column;

@@ -17,13 +17,13 @@ if ($featured_articles): ?>
                 $author_name = get_the_title(get_field('author', $article));
                 $thumbnail = get_field('article_thumbnail', $article);
                 ?>
-                <div class="row single-featured-article-container">
+                <div class="row single-featured-article-container ar-bold">
                     <div class="col-5">
                         <a href="<?php echo esc_url($article_link); ?>">
                             <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                         </a>
                     </div>
-                    <div class="col-7 right-container">
+                    <div class="col-7 p-5 right-container">
                         <div class="categories">
                             <?php if ($categories) {
                                 foreach ($categories as $category) { ?>

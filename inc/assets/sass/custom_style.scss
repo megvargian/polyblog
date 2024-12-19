@@ -303,7 +303,19 @@ body.hide_scroll {
 .swiper-pagination-bullet-active {
   background: #fff;
 }
-
+// general class (reusable)
+.en-regular{
+  font-family: $en-regular;
+}
+.en-bold{
+  font-family: $en-bold;
+}
+.ar-regular{
+  font-family: $ar-regular;
+}
+.ar-bold{
+  font-family: $ar-bold;
+}
 .home-video-header-container {
   display: flex;
   flex-direction: column;
