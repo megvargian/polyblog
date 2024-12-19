@@ -49,9 +49,8 @@ $header_video_url = get_field('header_video', 'option');
 					<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<img class="w-100 d-block"
-									src="http://polybloglb.com/wp-content/uploads/2024/10/what_we_think.png"
-									alt="What we think">
+								<p class="en">what we think</p>
+								<p>شــــــو منفكــــــر</p>
 							</a>
 						</div>
 						<div class="col">

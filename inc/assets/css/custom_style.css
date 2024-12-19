@@ -340,6 +340,23 @@ body.hide_scroll {
   width: -moz-available;
   width: -webkit-fill-available;
 }
+.home-video-header-container .video-container .header-button-container-with-video .en {
+  font-family: "Lexend-Regular";
+}
+.home-video-header-container .video-container .header-button-container-with-video .ar {
+  font-family: "Vazirmatn-Regular";
+}
+.home-video-header-container .video-container .header-button-container-with-video p {
+  font-size: 1.2rem;
+}
+.home-video-header-container .video-container .header-button-container-with-video a {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.home-video-header-container .video-container .header-button-container-with-video a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 .home-video-header-container .video-container .header-button-container-with-video img {
   opacity: 1;
   transition: 0.3s ease-in-out;
@@ -851,7 +868,7 @@ body.hide_scroll {
 
 .site-title {
   width: 100%;
-  padding: 16px;
+  padding: 16px 60px;
   font-size: 3rem;
   color: #fff;
   transition: 0.3s ease-in-out;

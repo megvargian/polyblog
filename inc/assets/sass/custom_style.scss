@@ -326,7 +326,24 @@ body.hide_scroll {
       margin: 0 25px;
       width: -moz-available;
       width: -webkit-fill-available;
+      .en{
+        font-family: $en-regular;
+      }
+      .ar{
+        font-family: $ar-regular;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+      a {
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
 
+      a:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
       img {
         opacity: 1;
         transition: 0.3s ease-in-out;
@@ -941,7 +958,7 @@ body.hide_scroll {
 // site title
 .site-title {
   width: 100%;
-  padding: 16px;
+  padding: 16px 60px;
   font-size: 3rem;
   color: #fff;
   transition: 0.3s ease-in-out;
