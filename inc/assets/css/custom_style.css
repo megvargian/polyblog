@@ -342,6 +342,7 @@ body.hide_scroll {
 }
 .home-video-header-container .video-container .header-button-container-with-video .en {
   font-family: "Lexend-Regular";
+  text-transform: uppercase;
 }
 .home-video-header-container .video-container .header-button-container-with-video .ar {
   font-family: "Vazirmatn-Regular";
@@ -350,10 +351,12 @@ body.hide_scroll {
   font-size: 1.5rem;
   margin-bottom: 0;
   color: white;
+  text-align: center;
+}
+.home-video-header-container .video-container .header-button-container-with-video .bg-black {
+  border-radius: 10px;
 }
 .home-video-header-container .video-container .header-button-container-with-video a {
-  background-color: #000;
-  border-radius: 10px;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }

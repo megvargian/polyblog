@@ -328,6 +328,7 @@ body.hide_scroll {
       width: -webkit-fill-available;
       .en{
         font-family: $en-regular;
+        text-transform: uppercase;
       }
       .ar{
         font-family: $ar-regular;
@@ -336,10 +337,12 @@ body.hide_scroll {
         font-size: 1.5rem;
         margin-bottom: 0;
         color: white;
+        text-align: center;
+      }
+      .bg-black{
+        border-radius: 10px;
       }
       a {
-        background-color: #000;
-        border-radius: 10px;
         opacity: 1;
         transition: 0.3s ease-in-out;
       }

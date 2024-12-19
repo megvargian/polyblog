@@ -49,8 +49,10 @@ $header_video_url = get_field('header_video', 'option');
 					<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<p class="en">what we think</p>
-								<p class="ar">شــــــو منفكــــــر</p>
+								<div class="bg-black">
+									<p class="en">what we think</p>
+									<p class="ar">شــــــو منفكــــــر</p>
+								</div>
 							</a>
 						</div>
 						<div class="col">
