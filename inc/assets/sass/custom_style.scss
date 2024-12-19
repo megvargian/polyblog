@@ -309,7 +309,6 @@ body.hide_scroll {
   flex-direction: column;
   height: calc(100dvh - 104px);
   font-family: $en-regular;
-
   .video-container {
     flex-grow: 1;
     position: relative;
@@ -323,7 +322,7 @@ body.hide_scroll {
 
     .header-button-container-with-video {
       position: absolute;
-      bottom: 50px;
+      bottom: 35px;
       margin: 0 25px;
       width: -moz-available;
       width: -webkit-fill-available;
@@ -960,6 +959,12 @@ body.hide_scroll {
     p:nth-of-type(2) {
       text-align: end;
       text-align-last: end;
+    }
+    .en{
+      font-family: $en-bold;
+    }
+    .ar{
+      font-family: $ar-bold;
     }
   }
 }

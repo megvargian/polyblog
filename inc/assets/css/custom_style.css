@@ -335,7 +335,7 @@ body.hide_scroll {
 }
 .home-video-header-container .video-container .header-button-container-with-video {
   position: absolute;
-  bottom: 50px;
+  bottom: 35px;
   margin: 0 25px;
   width: -moz-available;
   width: -webkit-fill-available;
@@ -868,6 +868,12 @@ body.hide_scroll {
 .site-title a p:nth-of-type(2) {
   text-align: end;
   text-align-last: end;
+}
+.site-title a .en {
+  font-family: "Lexend-Bold";
+}
+.site-title a .ar {
+  font-family: "Vazirmatn-Bold";
 }
 
 .site-title:hover {

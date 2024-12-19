@@ -30,8 +30,8 @@ $header_video_url = get_field('header_video', 'option');
 		<div id="content" class="site-content">
 			<div class="site-title">
 				<a href="http://polybloglb.com/">
-					<p>Politics, not news</p>
-					<p>سيــاسة، مـش اخبـار</p>
+					<p class="en">Politics, not news</p>
+					<p class="ar">سيــاسة، مـش اخبـار</p>
 				</a>
 			</div>
 			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal"
