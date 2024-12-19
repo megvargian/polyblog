@@ -347,9 +347,13 @@ body.hide_scroll {
   font-family: "Vazirmatn-Regular";
 }
 .home-video-header-container .video-container .header-button-container-with-video p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: white;
 }
 .home-video-header-container .video-container .header-button-container-with-video a {
+  background-color: #000;
+  border-radius: 10px;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }

@@ -50,7 +50,7 @@ $header_video_url = get_field('header_video', 'option');
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
 								<p class="en">what we think</p>
-								<p>شــــــو منفكــــــر</p>
+								<p class="ar">شــــــو منفكــــــر</p>
 							</a>
 						</div>
 						<div class="col">
