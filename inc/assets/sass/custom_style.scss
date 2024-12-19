@@ -307,7 +307,7 @@ body.hide_scroll {
 .home-video-header-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100dvh - 104px);
   font-family: $en-regular;
 
   .video-container {
@@ -318,7 +318,7 @@ body.hide_scroll {
     .video {
       object-fit: cover;
       width: 100%;
-      height: cacl(100dvh - 104px);
+      height: 100%;
     }
 
     .header-button-container-with-video {

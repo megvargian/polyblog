@@ -320,7 +320,7 @@ body.hide_scroll {
 .home-video-header-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100dvh - 104px);
   font-family: "Lexend-Regular";
 }
 .home-video-header-container .video-container {
