@@ -378,6 +378,31 @@ body.hide_scroll {
   background: #fff;
   padding: 25px;
 }
+.header-button-container-without-video .en {
+  font-family: "Lexend-Regular";
+  text-transform: uppercase;
+}
+.header-button-container-without-video .ar {
+  font-family: "Vazirmatn-Regular";
+}
+.header-button-container-without-video p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+}
+.header-button-container-without-video .bg-black {
+  border-radius: 15px;
+  background-color: #000;
+}
+.header-button-container-without-video a {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.header-button-container-without-video a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 .header-button-container-without-video img {
   opacity: 1;
   transition: 0.3s ease-in-out;

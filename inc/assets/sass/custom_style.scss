@@ -367,7 +367,31 @@ body.hide_scroll {
 .header-button-container-without-video {
   background: #fff;
   padding: 25px;
-
+  .en{
+    font-family: $en-regular;
+    text-transform: uppercase;
+  }
+  .ar{
+    font-family: $ar-regular;
+  }
+  p{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: white;
+    text-align: center;
+  }
+  .bg-black{
+    border-radius: 15px;
+    background-color: #000;
+  }
+  a {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+  a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
   img {
     opacity: 1;
     transition: 0.3s ease-in-out;

@@ -65,23 +65,26 @@ $header_video_url = get_field('header_video', 'option');
 						</div>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<img class="w-100 d-block"
-									src="http://polybloglb.com/wp-content/uploads/2024/10/our_segments.png"
-									alt="Our segments">
+								<div class="bg-black">
+									<p class="en">Our segments</p>
+									<p class="ar">فقـــــــــــــــــراتنا </p>
+								</div>
 							</a>
 						</div>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<img class="w-100 d-block"
-									src="http://polybloglb.com/wp-content/uploads/2024/10/out_productions.png"
-									alt="Our productions">
+								<div class="bg-black">
+									<p class="en">our productions</p>
+									<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
+								</div>
 							</a>
 						</div>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<img class="w-100 d-block"
-									src="http://polybloglb.com/wp-content/uploads/2024/10/get_to_know_us.png"
-									alt="Get to know us">
+								<div class="bg-black">
+									<p class="en">GET TO KNOW US</p>
+									<p class="ar">تعـــــــرف/ي علينـــا </p>
+								</div>
 							</a>
 						</div>
 					</div>
