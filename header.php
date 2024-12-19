@@ -57,9 +57,10 @@ $header_video_url = get_field('header_video', 'option');
 						</div>
 						<div class="col">
 							<a href="http://polybloglb.com/" target="_blank">
-								<img class="w-100 d-block"
-									src="http://polybloglb.com/wp-content/uploads/2024/10/how_we_see_it.png"
-									alt="How we see it">
+								<div class="bg-black">
+									<p class="en">how we see it</p>
+									<p class="ar">كيــف منشــوف</p>
+								</div>
 							</a>
 						</div>
 						<div class="col">
