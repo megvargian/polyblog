@@ -27,7 +27,7 @@ if ($featured_articles): ?>
                         <div class="categories">
                             <?php if ($categories) {
                                 foreach ($categories as $category) { ?>
-                                    <span class="category">
+                                    <span class="category ar-regular">
                                         <?php echo esc_html($category->name); ?>
                                     </span>
                                 <?php }
