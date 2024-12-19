@@ -27,10 +27,6 @@ $header_video_url = get_field('header_video', 'option');
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site main_page_wrapper">
-		<script>
-			jQuery(document).ready(function ($) {
-			});
-		</script>
 		<div id="content" class="site-content">
 			<div class="site-title">
 				<a href="http://polybloglb.com/">
@@ -45,7 +41,7 @@ $header_video_url = get_field('header_video', 'option');
 			<div id="home-video-header-container" <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
 				<?php if (is_front_page()) { ?>
 					<div class="video-container">
-						<video class="video" width="100%" height="100%" autoplay loop muted>
+						<video class="video" width="100%" autoplay loop muted>
 							<source src="<?php echo esc_url($header_video_url); ?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
@@ -115,3 +111,7 @@ $header_video_url = get_field('header_video', 'option');
 					</div>
 				</div>
 			</div>
+<script>
+	jQuery(document).ready(function ($) {
+	});
+</script>

@@ -318,7 +318,7 @@ body.hide_scroll {
     .video {
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      height: cacl(100dvh - 104px);
     }
 
     .header-button-container-with-video {
