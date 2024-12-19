@@ -19,7 +19,7 @@ $rows = array_chunk($authors_list, 4);
                     $author_expertise = get_field('expertise', $author_id);
                     $author_link = get_permalink($author_id);
                     ?>
-                    <div class="col single-author-col">
+                    <div class="col-3 single-author-col">
                         <a href="<?php echo $author_link; ?>" target="_blank">
                             <div class="single-author-container">
                                 <div class="author-image">

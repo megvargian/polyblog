@@ -128,9 +128,9 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 </section>
 <script>
 jQuery(document).ready(function($) {
-    $('input, textarea').focus(function () {
-        $(this).attr('placeholder', '');
-    })
+    // $('input, textarea').focus(function () {
+    //     $(this).attr('placeholder', '');
+    // })
     $('#languages').select2({
         placeholder: "Select languages",
         allowClear: true
