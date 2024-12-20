@@ -39,7 +39,7 @@ $authors_list = $author_swiper_block['authors_list'];
             loop: true,
             slidesPerView: 4,
             navigation: {
-                nextEl: '.swiper-button-prev-last-part-author',
+                nextEl: '.swiper-button-next-last-part-author',
                 prevEl: '.swiper-button-prev-last-part-author',
             },
         });
