@@ -463,13 +463,15 @@ body.hide_scroll {
 }
 .single-featured-article-container .right-container .title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 .single-featured-article-container .right-container .author-tags {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: #fff;
+  font-size: 1.5rem;
 }
 
 .single-featured-article-container:hover img {
@@ -541,9 +543,6 @@ body.hide_scroll {
   background-color: #131313;
   color: #fff;
   text-align: center;
-}
-.author-swiper-container .swiper-wrapper {
-  gap: 8px;
 }
 .author-swiper-container .swiper-slide {
   opacity: 1;
