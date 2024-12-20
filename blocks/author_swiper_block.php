@@ -29,8 +29,8 @@ $authors_list = $author_swiper_block['authors_list'];
                 </div>
             </div>
         </div>
-        <div class="swiper-button-prev swiper-button-prev-last-part"></div>
-        <div class="swiper-button-next swiper-button-next-last-part"></div>
+        <div class="swiper-button-prev swiper-button-prev-last-part-author"></div>
+        <div class="swiper-button-next swiper-button-next-last-part-author"></div>
     </div>
 </div>
 <script>
@@ -39,8 +39,8 @@ $authors_list = $author_swiper_block['authors_list'];
             loop: true,
             slidesPerView: 5,
             navigation: {
-                nextEl: '.swiper-button-next-last-part',
-                prevEl: '.swiper-button-prev-last-part',
+                nextEl: '.swiper-button-prev-last-part-author',
+                prevEl: '.swiper-button-prev-last-part-author',
             },
         });
     });
