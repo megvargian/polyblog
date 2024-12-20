@@ -145,7 +145,7 @@ if ($featured_articles): ?>
         const texts = $(".category"); // Replace with your element ID or class
         console.log(texts);
         for(let i=0; i<texts.length; i++){
-            if(isArabic(texts[i].text())){
+            if(isArabic(texts[i].innerText)){
                 $(texts[i]).addClass('ar-regular');
                 console.log(`The detected language is: ${texts[i]}`);
             } else {
