@@ -142,15 +142,14 @@ if ($featured_articles): ?>
                 return false;
             }
         }
-        const texts = $(".category"); // Replace with your element ID or class
-        console.log(texts);
+        // add class depending on innerText from .category class
+        const texts = $(".category");
         for(let i=0; i<texts.length; i++){
             if(isArabic(texts[i].innerText)){
                 $(texts[i]).addClass('ar-regular');
                 console.log(`The detected language is: ${texts[i]}`);
             } else {
                 $(texts[i]).addClass('en-regular');
-                console.log(`The detected language is: ${texts[i]}`);
             }
         }
         });

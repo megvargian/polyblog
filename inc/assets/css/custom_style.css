@@ -834,6 +834,14 @@ body.hide_scroll {
   color: #000 !important;
 }
 
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #ec4100 !important;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  background-color: #e3e1e2 !important;
+}
+
 .author-block-container {
   color: #ec4100;
 }
