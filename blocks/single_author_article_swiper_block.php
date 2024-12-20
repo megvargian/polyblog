@@ -21,7 +21,7 @@ $single_author_article_swiper_block = get_fields();
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
                                     <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
-                                    <h6 class="pt-3">Name of the Author</h6>
+                                    <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ $single_author_article_swiper_block = get_fields();
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
                                     <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
-                                    <h6 class="pt-3">Name of the Author</h6>
+                                    <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ $single_author_article_swiper_block = get_fields();
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
                                     <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
-                                    <h6 class="pt-3">Name of the Author</h6>
+                                    <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
                         </div>

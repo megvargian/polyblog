@@ -921,6 +921,12 @@ body.hide_scroll {
 .single-author-article-swiper-section .swiper-button-prev:after, .single-author-article-swiper-section .swiper-button-next:after {
   color: #fff;
 }
+.single-author-article-swiper-section p {
+  font-size: 1.2rem;
+}
+.single-author-article-swiper-section h6 {
+  font-size: 1.5rem;
+}
 
 .site-title {
   width: 100%;
