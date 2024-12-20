@@ -453,7 +453,8 @@ body.hide_scroll {
 
     .title {
       color: #fff;
-      font-size: 2rem;
+      font-size: 3rem;
+      line-height: 1.2;
     }
 
     .author-tags {
@@ -461,6 +462,7 @@ body.hide_scroll {
       flex-direction: row;
       justify-content: space-between;
       color: #fff;
+      font-size: 1.5rem;
     }
   }
 }

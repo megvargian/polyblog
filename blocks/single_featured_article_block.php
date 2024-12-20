@@ -29,7 +29,7 @@ if ($featured_articles): ?>
                                 <div class="categories">
                                     <?php if ($categories) {
                                         foreach ($categories as $category) { ?>
-                                            <span class="category ar-regular">
+                                            <span class="category">
                                                 <?php echo esc_html($category->name); ?>
                                             </span>
                                         <?php }
@@ -126,4 +126,32 @@ if ($featured_articles): ?>
             });
         </script>
     </section>
+<script>
+	jQuery(document).ready(function ($) {
+        function isArabic(text) {
+            // Regular expression for Arabic characters
+            const arabicRegex = /[\u0600-\u06FF]/;
+            // Regular expression for English characters
+            const englishRegex = /[A-Za-z]/;
+
+            if (arabicRegex.test(text)) {
+                return true;
+            } else if (englishRegex.test(text)) {
+                return false;
+            } else {
+                return false;
+            }
+        }
+        const texts = $(".category"); // Replace with your element ID or class
+        for(let i=0; i<texts.length; i++){
+            if(isArabic(texts[i].text())){
+                $(texts[i]).addClass('ar-regular');
+                console.log(`The detected language is: ${texts[i]}`);
+            } else {
+                $(texts[i]).addClass('en-regular');
+                console.log(`The detected language is: ${texts[i]}`);
+            }
+        }
+        });
+</script>
 <?php endif; ?>
