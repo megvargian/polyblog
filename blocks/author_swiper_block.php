@@ -7,8 +7,8 @@ $author_swiper_block = get_fields();
 $authors_list = $author_swiper_block['authors_list'];
 ?>
 <div class="container-fluid author-swiper-container py-5">
-    <div class="row">
-        <div class="col-11 position-relative justify-content-center">
+    <div class="row justify-content-center position-relative">
+        <div class="col-11">
             <div class="swiper author_swiper_block">
                 <div class="swiper-wrapper">
                     <?php foreach ($authors_list as $author) { ?>
@@ -28,9 +28,9 @@ $authors_list = $author_swiper_block['authors_list'];
                     <?php } ?>
                 </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev-last-part"></div>
-            <div class="swiper-button-next swiper-button-next-last-part"></div>
         </div>
+        <div class="swiper-button-prev swiper-button-prev-last-part"></div>
+        <div class="swiper-button-next swiper-button-next-last-part"></div>
     </div>
 </div>
 <script>
