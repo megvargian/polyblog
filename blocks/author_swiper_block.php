@@ -6,9 +6,9 @@
 $author_swiper_block = get_fields();
 $authors_list = $author_swiper_block['authors_list'];
 ?>
-<div class="container author-swiper-container py-5">
+<div class="container-fluid author-swiper-container py-5">
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <div class="swiper author_swiper_block">
                 <div class="swiper-wrapper">
                     <?php foreach ($authors_list as $author) { ?>
@@ -37,7 +37,7 @@ $authors_list = $author_swiper_block['authors_list'];
     document.addEventListener('DOMContentLoaded', function () {
         const swiper = new Swiper('.author_swiper_block', {
             loop: true,
-            slidesPerView: 5,
+            slidesPerView: 6,
             navigation: {
                 nextEl: '.swiper-button-next-last-part',
                 prevEl: '.swiper-button-prev-last-part',
