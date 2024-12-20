@@ -6,7 +6,7 @@
 $author_swiper_block = get_fields();
 $authors_list = $author_swiper_block['authors_list'];
 ?>
-<div class="container-fluid author-swiper-container">
+<div class="container-fluid author-swiper-container py-5">
     <div class="row">
         <div class="col">
             <div class="swiper author_swiper_block">
@@ -27,14 +27,8 @@ $authors_list = $author_swiper_block['authors_list'];
                         </div>
                     <?php } ?>
                 </div>
-                <div class="custom-swiper-button-prev">
-                    <img src="http://polybloglb.com/wp-content/uploads/2024/10/swiper_arrow_left.png"
-                        alt="previous author" />
-                </div>
-                <div class="custom-swiper-button-next">
-                    <img src="http://polybloglb.com/wp-content/uploads/2024/10/swiper_arrow_right.png"
-                        alt="next author" />
-                </div>
+                <div class="swiper-button-prev swiper-button-prev-last-part"></div>
+                <div class="swiper-button-next swiper-button-next-last-part"></div>
             </div>
         </div>
     </div>
@@ -43,10 +37,10 @@ $authors_list = $author_swiper_block['authors_list'];
     document.addEventListener('DOMContentLoaded', function () {
         const swiper = new Swiper('.author_swiper_block', {
             loop: true,
-            slidesPerView: 5,
+            slidesPerView: 4,
             navigation: {
-                nextEl: '.custom-swiper-button-next',
-                prevEl: '.custom-swiper-button-prev',
+                nextEl: '.swiper-button-next-last-part',
+                prevEl: '.swiper-button-prev-last-part',
             },
         });
     });
