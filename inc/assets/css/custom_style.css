@@ -333,16 +333,6 @@ body.hide_scroll {
   font-family: "Vazirmatn-Bold";
 }
 
-.bg-black {
-  border-radius: 15px;
-  background-color: #000;
-  width: fit-content;
-  padding: 0 1.5rem;
-}
-.bg-black p {
-  margin-bottom: 0;
-}
-
 .home-video-header-container {
   display: flex;
   flex-direction: column;
@@ -515,6 +505,17 @@ body.hide_scroll {
   margin-bottom: 0;
   font-size: 2.5rem;
   color: #fff;
+}
+.youtube-playlist-bg .youtube-playlist-button-col .bg-black {
+  border-radius: 15px;
+  background-color: #000;
+  width: fit-content;
+  padding: 0 1.5rem;
+}
+.youtube-playlist-bg .youtube-playlist-button-col .bg-black p {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .youtube-featured-vids-bg {
