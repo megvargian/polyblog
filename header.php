@@ -47,7 +47,7 @@ $header_video_url = get_field('header_video', 'option');
 						</video>
 					<?php } ?>
 					<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
-						<div class="col">
+						<div class="col d-flex justify-content-center align-items-center">
 							<a href="http://polybloglb.com/" target="_blank">
 								<div class="bg-black">
 									<p class="en">what we think</p>
@@ -55,7 +55,7 @@ $header_video_url = get_field('header_video', 'option');
 								</div>
 							</a>
 						</div>
-						<div class="col">
+						<div class="col d-flex justify-content-center align-items-center">
 							<a href="http://polybloglb.com/" target="_blank">
 								<div class="bg-black">
 									<p class="en">how we see it</p>
@@ -63,7 +63,7 @@ $header_video_url = get_field('header_video', 'option');
 								</div>
 							</a>
 						</div>
-						<div class="col">
+						<div class="col d-flex justify-content-center align-items-center">
 							<a href="http://polybloglb.com/" target="_blank">
 								<div class="bg-black">
 									<p class="en">Our segments</p>
@@ -71,7 +71,7 @@ $header_video_url = get_field('header_video', 'option');
 								</div>
 							</a>
 						</div>
-						<div class="col">
+						<div class="col d-flex justify-content-center align-items-center">
 							<a href="http://polybloglb.com/" target="_blank">
 								<div class="bg-black">
 									<p class="en">our productions</p>
@@ -79,7 +79,7 @@ $header_video_url = get_field('header_video', 'option');
 								</div>
 							</a>
 						</div>
-						<div class="col">
+						<div class="col d-flex justify-content-center align-items-center">
 							<a href="http://polybloglb.com/" target="_blank">
 								<div class="bg-black">
 									<p class="en">GET TO KNOW US</p>
