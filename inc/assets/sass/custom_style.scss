@@ -354,6 +354,8 @@ body.hide_scroll {
       .bg-black{
         border-radius: 15px;
         background-color: #000;
+        width: fit-content;
+        padding: 0 1.5rem;
       }
       a {
         opacity: 1;
@@ -498,7 +500,7 @@ body.hide_scroll {
     }
     p{
       margin-bottom: 0;
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       color: #fff;
     }
   }

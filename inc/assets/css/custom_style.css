@@ -372,6 +372,8 @@ body.hide_scroll {
 .home-video-header-container .video-container .header-button-container-with-video .bg-black {
   border-radius: 15px;
   background-color: #000;
+  width: fit-content;
+  padding: 0 1.5rem;
 }
 .home-video-header-container .video-container .header-button-container-with-video a {
   opacity: 1;
@@ -501,7 +503,7 @@ body.hide_scroll {
 }
 .youtube-playlist-bg .youtube-playlist-button-col p {
   margin-bottom: 0;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #fff;
 }
 
