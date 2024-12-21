@@ -316,6 +316,15 @@ body.hide_scroll {
 .ar-bold{
   font-family: $ar-bold;
 }
+.bg-black{
+  border-radius: 15px;
+  background-color: #000;
+  width: fit-content;
+  padding: 0 1.5rem;
+  p{
+    margin-bottom: 0;
+  }
+}
 .home-video-header-container {
   display: flex;
   flex-direction: column;

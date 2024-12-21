@@ -333,6 +333,16 @@ body.hide_scroll {
   font-family: "Vazirmatn-Bold";
 }
 
+.bg-black {
+  border-radius: 15px;
+  background-color: #000;
+  width: fit-content;
+  padding: 0 1.5rem;
+}
+.bg-black p {
+  margin-bottom: 0;
+}
+
 .home-video-header-container {
   display: flex;
   flex-direction: column;

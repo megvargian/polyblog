@@ -28,7 +28,11 @@ $yt_playlist_block = get_fields();
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $yt_playlist_block['episodes_link'] ?>" target="_blank">
-                    <img class="youtube-playlist-btn" src="<?php echo $yt_playlist_block['episodes']; ?>" alt="YouTube">
+                    <!-- <img class="youtube-playlist-btn" src="<?php //echo $yt_playlist_block['episodes']; ?>" alt="YouTube"> -->
+                    <div class="bg-black">
+                        <p class="en-regular">7 Episodes</p>
+                        <p class="ar-regular">٧ حلقــات</p>
+                    </div>
                 </a>
             </div>
         </div>
