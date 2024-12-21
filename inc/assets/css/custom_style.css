@@ -499,6 +499,11 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.youtube-playlist-bg .youtube-playlist-button-col p {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
 
 .youtube-featured-vids-bg {
   background-color: #000;

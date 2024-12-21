@@ -10,7 +10,11 @@ $yt_playlist_block = get_fields();
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
-                    <img class="youtube-playlist-btn" src="<?php echo $yt_playlist_block['title']; ?>" alt="YouTube">
+                    <!-- <img class="youtube-playlist-btn" src="<?php //echo $yt_playlist_block['title']; ?>" alt="YouTube"> -->
+                     <div class="d-block">
+                        <p class="en-bold">ASSAHA</p>
+                        <p class="ar-bold">الســـــاحة</p>
+                     </div>
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
