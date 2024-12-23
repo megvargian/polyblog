@@ -861,6 +861,9 @@ body.hide_scroll {
   background-color: #e3e1e2 !important;
   font-family: "Lexend-Bold" !important;
 }
+.select2-container--default .select2-results > .select2-results__options li:n-child(2) {
+  font-family: "Vazirmatn-Bold" !important;
+}
 
 .author-block-container {
   color: #ec4100;

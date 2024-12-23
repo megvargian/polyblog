@@ -928,6 +928,9 @@ body.hide_scroll {
 .select2-container--default .select2-results>.select2-results__options{
   background-color: #e3e1e2 !important;
   font-family: $en-bold !important;
+  li:n-child(2){
+    font-family: $ar-bold !important;
+  }
 }
 // author block section
 .author-block-container {
