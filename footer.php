@@ -136,7 +136,7 @@
 <footer class="footer-container pt-5">
     <div class="container pt-3">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-12">
+            <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-12 px-1">
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 px-1 d-lg-block d-none">
+                    <div class="col-4 px-1 d-lg-flex d-none justify-content-center">
                         <div class="custom-rotate">
                             <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Mission
