@@ -27,8 +27,9 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     <div class="d-flex justify-content-between align-items-center select-language">
                         <label for="languages">I CAN WRITE IN:</label>
                         <select id="languages" name="languages[]" multiple>
-                            <option value="english">English</option>
-                            <option value="arabic1">عربي</option>
+                            <option class="en-regular" value="english">English</option>
+                            <option class="ar-regular" value="arabic1">عربي</option>
+                            <option class="en-regular" value="francese">Francese</option>
                         </select>
                     </div>
                 </div>
