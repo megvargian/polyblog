@@ -859,14 +859,7 @@ body.hide_scroll {
 
 .select2-container--default .select2-results > .select2-results__options {
   background-color: #e3e1e2 !important;
-}
-
-#select2-languages-result-kb0u-english, #select2-languages-result-109c-francese {
   font-family: "Lexend-Bold" !important;
-}
-
-#select2-languages-result-7ph9-arabic1 {
-  font-family: "Vazirmatn-Bold" !important;
 }
 
 .author-block-container {
