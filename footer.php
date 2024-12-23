@@ -232,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 px-1 d-lg-flex d-none justify-content-center">
+                    <div class="col-3 px-1 d-lg-flex d-none">
                         <div class="custom-rotate">
                             <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Mission
