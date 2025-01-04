@@ -372,10 +372,11 @@ body.hide_scroll {
 .home-video-header-container .video-container .header-button-container-with-video .bg-black {
   border-radius: 15px;
   background-color: #000;
-  width: fit-content;
+  width: 100%;
   padding: 0 1.5rem;
 }
 .home-video-header-container .video-container .header-button-container-with-video a {
+  width: 100%;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
