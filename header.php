@@ -35,8 +35,7 @@ $header_video_url = get_field('header_video', 'option');
 					<p class="ar">سيــاسة، مـش اخبـار</p>
 				</a>
 			</div>
-			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal"
-				data-bs-target="#sideMenuModal">
+			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" />
 			</button>
 			<div id="home-video-header-container" <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
