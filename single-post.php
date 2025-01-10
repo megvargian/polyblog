@@ -84,18 +84,21 @@ if (have_posts()):
                             class="arabic">شــــــو منفكــــــر</span></button>
                 </div>
             </div>
-            <div class="row py-2 justify-content-end">
-                <div class="col-12 col-sm-3 category-buttons">
+            <div class="row py-2">
+                <div class="col">
+                    <h1 class="align-text-arabic"><?php the_title(); ?></h1>
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-4 col-sm-3 category-buttons">
                     <?php foreach ($categories as $category) { ?>
                         <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
                             <?php echo esc_html($category->name); ?>
                         </button>
                     <?php } ?>
-                </div>
-            </div>
-            <div class="row py-2">
-                <div class="col">
-                    <h1 class="align-text-arabic"><?php the_title(); ?></h1>
+                    <?php
+                    echo '<p>' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
+                    ?>
                 </div>
             </div>
             <div class="row py-2 main-content">
@@ -171,11 +174,7 @@ if (have_posts()):
                 </div>
                 <div class="col-12 col-lg-8 py-2 align-text-arabic order-lg-2 order-1">
                     <div class="row py-2 article-info">
-                        <div class="col-6 d-flex justify-content-start">
-                            <?php
-                            echo '<p>Published on: ' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
-                            ?>
-                        </div>
+
                         <div class="col-6 tags">
                             <p> <?php foreach ($tags as $tag) { ?>
                                     <?php echo "#" . esc_html($tag->name); ?>
