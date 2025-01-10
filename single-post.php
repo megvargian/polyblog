@@ -36,6 +36,11 @@ if (have_posts()):
 </div>
 <?php endif; ?>
 <div class="container-fluid px-4 single-post-container">
+    <div class="row py-2">
+        <div class="col">
+            <button type="button"><span class="english">WHAT WE THINK</span><span class="arabic">شــــــو منفكــــــر</span></button>
+        </div>
+    </div>
     <div class="row py-2 justify-content-end">
         <div class="col-12 col-sm-4 mb-2">
             <button type="button" class="what-we-think w-100">What we think</button>
