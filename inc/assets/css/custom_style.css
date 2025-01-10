@@ -988,17 +988,19 @@ body.hide_scroll {
   display: none;
   background: black;
   border: none;
-  padding: 0;
   border-radius: 60px;
   margin: 0;
   position: absolute;
   overflow: hidden;
+  overflow: auto;
   top: 120px;
   left: 10px;
   cursor: pointer;
   z-index: 20;
   transition: top 0.3s ease;
   border-radius: 24px;
+  padding: 1rem 0.5rem;
+  background-color: #EB4201;
 }
 .responsive-menu-button p {
   writing-mode: vertical-lr;
@@ -1006,7 +1008,9 @@ body.hide_scroll {
   color: #fff;
   font-family: "Lexend-Regular";
   font-size: 14px;
-  padding: 1rem 0.5rem;
+}
+.responsive-menu-button img {
+  margin-top: 8px;
 }
 .responsive-menu-button img {
   height: auto;
