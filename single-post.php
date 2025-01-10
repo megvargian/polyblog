@@ -33,47 +33,45 @@ if (have_posts()):
         <?php if (has_post_thumbnail()): ?>
             <div class="single-post-featured-image">
                 <div class="row single-article-header-button-container">
-                    <div class="col">
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">what we think</p>
-                                    <p class="ar">شــــــو منفكــــــر</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">how we see it</p>
-                                    <p class="ar">كيــف منشــوف</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">Our segments</p>
-                                    <p class="ar">فقـــــــــــــــــراتنا </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">our productions</p>
-                                    <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">GET TO KNOW US</p>
-                                    <p class="ar">تعـــــــرف/ي علينـــا </p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <a href="http://polybloglb.com/" target="_blank">
+                            <div class="bg-black">
+                                <p class="en">what we think</p>
+                                <p class="ar">شــــــو منفكــــــر</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <a href="http://polybloglb.com/" target="_blank">
+                            <div class="bg-black">
+                                <p class="en">how we see it</p>
+                                <p class="ar">كيــف منشــوف</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <a href="http://polybloglb.com/" target="_blank">
+                            <div class="bg-black">
+                                <p class="en">Our segments</p>
+                                <p class="ar">فقـــــــــــــــــراتنا </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <a href="http://polybloglb.com/" target="_blank">
+                            <div class="bg-black">
+                                <p class="en">our productions</p>
+                                <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <a href="http://polybloglb.com/" target="_blank">
+                            <div class="bg-black">
+                                <p class="en">GET TO KNOW US</p>
+                                <p class="ar">تعـــــــرف/ي علينـــا </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <?php the_post_thumbnail('full'); ?>
