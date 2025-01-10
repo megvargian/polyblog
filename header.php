@@ -45,49 +45,49 @@ $header_video_url = get_field('header_video', 'option');
 							<source src="<?php echo esc_url($header_video_url); ?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
+						<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
+							<div class="col d-flex justify-content-center align-items-center">
+								<a href="http://polybloglb.com/" target="_blank">
+									<div class="bg-black">
+										<p class="en">what we think</p>
+										<p class="ar">شــــــو منفكــــــر</p>
+									</div>
+								</a>
+							</div>
+							<div class="col d-flex justify-content-center align-items-center">
+								<a href="http://polybloglb.com/" target="_blank">
+									<div class="bg-black">
+										<p class="en">how we see it</p>
+										<p class="ar">كيــف منشــوف</p>
+									</div>
+								</a>
+							</div>
+							<div class="col d-flex justify-content-center align-items-center">
+								<a href="http://polybloglb.com/" target="_blank">
+									<div class="bg-black">
+										<p class="en">Our segments</p>
+										<p class="ar">فقـــــــــــــــــراتنا </p>
+									</div>
+								</a>
+							</div>
+							<div class="col d-flex justify-content-center align-items-center">
+								<a href="http://polybloglb.com/" target="_blank">
+									<div class="bg-black">
+										<p class="en">our productions</p>
+										<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
+									</div>
+								</a>
+							</div>
+							<div class="col d-flex justify-content-center align-items-center">
+								<a href="http://polybloglb.com/" target="_blank">
+									<div class="bg-black">
+										<p class="en">GET TO KNOW US</p>
+										<p class="ar">تعـــــــرف/ي علينـــا </p>
+									</div>
+								</a>
+							</div>
+						</div>
 					<?php } ?>
-					<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
-						<div class="col d-flex justify-content-center align-items-center">
-							<a href="http://polybloglb.com/" target="_blank">
-								<div class="bg-black">
-									<p class="en">what we think</p>
-									<p class="ar">شــــــو منفكــــــر</p>
-								</div>
-							</a>
-						</div>
-						<div class="col d-flex justify-content-center align-items-center">
-							<a href="http://polybloglb.com/" target="_blank">
-								<div class="bg-black">
-									<p class="en">how we see it</p>
-									<p class="ar">كيــف منشــوف</p>
-								</div>
-							</a>
-						</div>
-						<div class="col d-flex justify-content-center align-items-center">
-							<a href="http://polybloglb.com/" target="_blank">
-								<div class="bg-black">
-									<p class="en">Our segments</p>
-									<p class="ar">فقـــــــــــــــــراتنا </p>
-								</div>
-							</a>
-						</div>
-						<div class="col d-flex justify-content-center align-items-center">
-							<a href="http://polybloglb.com/" target="_blank">
-								<div class="bg-black">
-									<p class="en">our productions</p>
-									<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
-								</div>
-							</a>
-						</div>
-						<div class="col d-flex justify-content-center align-items-center">
-							<a href="http://polybloglb.com/" target="_blank">
-								<div class="bg-black">
-									<p class="en">GET TO KNOW US</p>
-									<p class="ar">تعـــــــرف/ي علينـــا </p>
-								</div>
-							</a>
-						</div>
-					</div>
 					<?php if (is_front_page()) { ?>
 					</div>
 				<?php } ?>
