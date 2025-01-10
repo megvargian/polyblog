@@ -100,9 +100,25 @@ if (have_posts()):
                     echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
                 </div>
+                <div class="col-8 col-sm-9">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2><?php echo $author_name; ?></h2>
+                            <div class="tags">
+                                <p> <?php foreach ($tags as $tag) { ?>
+                                        <?php echo "#" . esc_html($tag->name); ?>
+                                    <?php } ?>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row py-2 main-content">
-                <div class="col-12 col-lg-4 py-2 author-info order-lg-1 order-2">
+                <!-- <div class="col-12 col-lg-4 py-2 author-info order-lg-1 order-2">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col">
@@ -171,17 +187,8 @@ if (have_posts()):
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-lg-8 py-2 align-text-arabic order-lg-2 order-1">
-                    <div class="row py-2 article-info">
-
-                        <div class="col-6 tags">
-                            <p> <?php foreach ($tags as $tag) { ?>
-                                    <?php echo "#" . esc_html($tag->name); ?>
-                                <?php } ?>
-                            </p>
-                        </div>
-                    </div>
+                </div> -->
+                <div class="col py-2 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>
