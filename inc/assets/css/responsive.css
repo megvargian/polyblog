@@ -39,7 +39,7 @@
   .site-title a {
     justify-content: space-between;
   }
-  .site-title .white-line-mobile {
+  .site-title .white-line {
     width: 100%;
     border-bottom: 5px solid #fff;
   }
