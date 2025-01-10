@@ -31,9 +31,10 @@ $header_video_url = get_field('header_video', 'option');
 			<div class="site-title">
 				<a href="http://polybloglb.com/">
 					<p class="en">Politics, not news</p>
-					<div class="white-line"></div>
+					<div class="white-line d-none d-lg-flex"></div>
 					<p class="ar">سيــاسة، مـش اخبـار</p>
 				</a>
+				<div class="white-line d-block d-lg-none"></div>
 			</div>
 			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
 				<!-- <img src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" /> -->

@@ -34,6 +34,11 @@
 @media screen and (max-width: 991px) {
   .site-title {
     font-size: 2.5rem;
+    color: #87ED06;
+  }
+  .site-title .white-line {
+    width: 100%;
+    border-bottom: 5px solid #fff;
   }
   .single-author-article-swiper-section .single-author-img {
     width: 200px;
