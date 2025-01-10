@@ -97,7 +97,7 @@ if (have_posts()):
                         </button>
                     <?php } ?>
                     <?php
-                    echo '<p>' . get_the_date('d/m/Y') . ' ' . get_the_time('g:i A') . '</p>';
+                    echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
                 </div>
             </div>

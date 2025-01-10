@@ -1287,10 +1287,14 @@ body.hide_scroll {
   }
 
   .category-buttons {
-    display: flex;
     justify-content: start;
     align-items: center;
     gap: 8px;
+
+    .published-date {
+      margin-top: 8px;
+      color: #ed4101
+    }
 
     button {
       padding: 0 12px;
