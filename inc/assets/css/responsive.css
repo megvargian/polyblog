@@ -59,6 +59,9 @@
   .social-icons-mobile li img {
     cursor: pointer;
   }
+  .responsive-menu-button {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -140,9 +143,6 @@
   }
   #home-video-header-container {
     display: none;
-  }
-  .responsive-menu-button {
-    display: block;
   }
   .single-article-header-button-container {
     display: none;

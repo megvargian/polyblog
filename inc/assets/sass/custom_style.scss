@@ -1083,14 +1083,26 @@ body.hide_scroll {
   margin: 0;
   position: absolute;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
-  overflow: auto;
+  // width: 80px;
+  // height: 80px;
+  // overflow: auto;
   top: 120px;
-  left: 15px;
+  left: 10px;
   cursor: pointer;
   z-index: 20;
   transition: top 0.3s ease;
+  border-radius: 24px;
+  p{
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $en-regular;
+    font-size: 14px;
+    padding: 1rem .5rem;
+  }
+  img{
+
+  }
 
   img {
     height: auto;

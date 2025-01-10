@@ -83,6 +83,9 @@
 			}
 		}
 	}
+	.responsive-menu-button {
+		display: block;
+	}
 }
 
 @media (max-width: 767px){
@@ -187,9 +190,6 @@
 		display: none;
 	}
 
-	.responsive-menu-button {
-		display: block;
-	}
 
 	.single-article-header-button-container {
 		display: none;
