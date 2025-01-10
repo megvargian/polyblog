@@ -1123,17 +1123,19 @@ body.hide_scroll {
   background-color: #ed4101;
   color: #000;
   border: none;
-  border-radius: 8px;
-  font-size: 1.4rem;
-  font-weight: 700;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 900;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
 .single-post-container .what-we-think .english {
-  text-align: left;
+  float: left;
+  margin-left: 40px;
 }
 .single-post-container .what-we-think .arabic {
-  text-align: right;
+  float: right;
+  margin-right: 40px;
 }
 .single-post-container .what-we-think:hover {
   opacity: 0.8;
