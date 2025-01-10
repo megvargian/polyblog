@@ -37,7 +37,6 @@ $header_video_url = get_field('header_video', 'option');
 				<div class="white-line d-block d-lg-none"></div>
 			</div>
 			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
-				<!-- <img src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/menu-orange.svg" alt="Menu" /> -->
 				<p>on the agenda</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg" alt="on the agenda">
 			</button>

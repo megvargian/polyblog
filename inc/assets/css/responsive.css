@@ -42,6 +42,7 @@
   .site-title .white-line {
     width: 100%;
     border-bottom: 5px solid #fff;
+    margin: 0;
   }
   .single-author-article-swiper-section .single-author-img {
     width: 200px;
