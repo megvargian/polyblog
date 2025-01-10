@@ -55,7 +55,10 @@
 	.site-title {
 		font-size: 2.5rem;
 		color: #87ED06;
-		.white-line{
+		a{
+			justify-content: space-between;
+		}
+		.white-line-mobile{
 			width: 100%;
 			border-bottom: 5px solid #fff;
 		}
