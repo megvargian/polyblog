@@ -1092,7 +1092,12 @@ body.hide_scroll {
   box-shadow: none !important;
 }
 
+.single-post-featured-image {
+  position: relative;
+  display: inline-block;
+}
 .single-post-featured-image img {
+  display: block;
   width: 100%;
 }
 

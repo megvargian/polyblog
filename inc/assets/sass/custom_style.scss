@@ -1186,7 +1186,11 @@ body.hide_scroll {
 }
 
 .single-post-featured-image {
+  position: relative;
+  display: inline-block;
+
   img {
+    display: block;
     width: 100%;
   }
 }
