@@ -1191,6 +1191,44 @@ body.hide_scroll {
       margin: 0 25px;
       width: -moz-available;
       width: -webkit-fill-available;
+
+      .en{
+        font-family: $en-regular;
+        text-transform: uppercase;
+      }
+      .ar{
+        font-family: $ar-regular;
+      }
+      p{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        color: white;
+        text-align: center;
+      }
+      .bg-black{
+        border-radius: 15px;
+        background-color: #000;
+        width: 100%;
+        padding: 0 1.5rem;
+      }
+      a {
+        width: 100%;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+      a:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+      img {
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+
+      img:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
 }
 
 .single-post-featured-image {

@@ -1099,6 +1099,42 @@ body.hide_scroll {
   width: -moz-available;
   width: -webkit-fill-available;
 }
+.single-article-header-button-container .en {
+  font-family: "Lexend-Regular";
+  text-transform: uppercase;
+}
+.single-article-header-button-container .ar {
+  font-family: "Vazirmatn-Regular";
+}
+.single-article-header-button-container p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+}
+.single-article-header-button-container .bg-black {
+  border-radius: 15px;
+  background-color: #000;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.single-article-header-button-container a {
+  width: 100%;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.single-article-header-button-container a:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.single-article-header-button-container img {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.single-article-header-button-container img:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 
 .single-post-featured-image {
   position: relative;
