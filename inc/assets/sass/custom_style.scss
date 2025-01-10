@@ -1036,15 +1036,18 @@ body.hide_scroll {
 .site-title {
   width: 100%;
   padding: 16px 60px;
-  font-size: 3rem;
+  font-size: 5rem;
   color: #fff;
   transition: 0.3s ease-in-out;
-
+  .white-line{
+    width: 100%;
+    border-bottom: 15px solid #fff;
+  }
   a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     p {
       margin: 0;

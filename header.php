@@ -31,6 +31,7 @@ $header_video_url = get_field('header_video', 'option');
 			<div class="site-title">
 				<a href="http://polybloglb.com/">
 					<p class="en">Politics, not news</p>
+					<div class="white-line"></div>
 					<p class="ar">سيــاسة، مـش اخبـار</p>
 				</a>
 			</div>

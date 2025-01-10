@@ -1,3 +1,8 @@
+@media (max-width: 1550px) {
+  .site-title {
+    font-size: 4rem;
+  }
+}
 @media (max-width: 1199px) {
   .single-author-article-swiper-section .single-author-img {
     width: 300px;
