@@ -72,10 +72,10 @@ if ($featured_articles): ?>
                     $thumbnail = get_field('article_thumbnail', $article);
                     ?>
                     <div class="swiper-slide">
-                        <div class="row single-featured-article-container">
+                        <div class="row single-featured-article-container py-4">
                             <div class="col-5">
                                 <a href="<?php echo esc_url($article_link); ?>">
-                                    <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
+                                    <img class="d-block" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                                 </a>
                             </div>
                             <div class="col-7 right-container">
@@ -115,19 +115,15 @@ if ($featured_articles): ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>
-        <script>
-            jQuery(document).ready(function ($) {
-                var swiper = new Swiper('.swiper-featured-articles-block', {
-                    slidesPerView: 1,
-                    pagination: {
-                        el: '.swiper-pagination',
-                    },
-                });
-            });
-        </script>
     </section>
 <script>
 	jQuery(document).ready(function ($) {
+        var swiper = new Swiper('.swiper-featured-articles-block', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
         function isArabic(text) {
             // Regular expression for Arabic characters
             const arabicRegex = /[\u0600-\u06FF]/;
