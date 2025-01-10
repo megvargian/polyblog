@@ -336,7 +336,7 @@ body.hide_scroll {
 .home-video-header-container {
   display: flex;
   flex-direction: column;
-  height: calc(100dvh - 104px);
+  height: calc(100dvh - 150px);
   font-family: "Lexend-Regular";
 }
 .home-video-header-container .video-container {
@@ -955,19 +955,20 @@ body.hide_scroll {
 .site-title {
   width: 100%;
   padding: 16px 60px;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #fff;
-  transition: 0.3s ease-in-out;
 }
 .site-title .white-line {
   width: 100%;
   border-bottom: 15px solid #fff;
+  margin: 0 10px;
 }
 .site-title a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: baseline;
 }
 .site-title a p {
   margin: 0;
@@ -981,11 +982,6 @@ body.hide_scroll {
 }
 .site-title a .ar {
   font-family: "Vazirmatn-Bold";
-}
-
-.site-title:hover {
-  color: rgba(255, 255, 255, 0.7333333333);
-  transition: 0.3s ease-in-out;
 }
 
 .responsive-menu-button {
