@@ -1092,6 +1092,14 @@ body.hide_scroll {
   box-shadow: none !important;
 }
 
+.single-article-header-button-container {
+  position: absolute;
+  top: 35px;
+  margin: 0 25px;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
 .single-post-featured-image {
   position: relative;
   display: block;
