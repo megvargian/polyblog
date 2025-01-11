@@ -102,8 +102,8 @@ if (have_posts()):
                 </div>
                 <div class="col-8 col-sm-9">
                     <div class="row">
-                        <div class="col-8">
-                            <h2><?php echo $author_name; ?></h2>
+                        <div class="col-10 author-tags-container">
+                            <h2 class="author-name"><?php echo $author_name; ?></h2>
                             <div class="tags">
                                 <p> <?php foreach ($tags as $tag) { ?>
                                         <?php echo "#" . esc_html($tag->name); ?>
@@ -111,7 +111,7 @@ if (have_posts()):
                                 </p>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-2">
                             <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     </div>

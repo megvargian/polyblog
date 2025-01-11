@@ -1357,12 +1357,22 @@ body.hide_scroll {
     color: #fff;
   }
 
-  .article-info {
-    color: #ed4101;
+  .author-tags-container {
+    .author-name {
+      text-align: end;
+      color: #ed4101;
+    }
 
     .tags {
+      color: #fff;
       text-align: end;
     }
+  }
+
+  .author-image {
+    width: 100%;
+    border-radius: 100%;
+    border: 5px solid #ED4101;
   }
 
   .main-content {
@@ -1370,12 +1380,6 @@ body.hide_scroll {
 
     .author-info {
       text-align: center;
-
-      .author-image {
-        width: 50%;
-        border-radius: 100%;
-        border: 5px solid #ED4101;
-      }
 
       .author-button {
         display: inline-block;
