@@ -106,9 +106,16 @@ if (have_posts()):
                         <div class="col-10 author-tags-container">
                             <h2 class="author-name"><?php echo $author_name; ?></h2>
                             <div class="tags">
-                                <p> <?php foreach ($tags as $tag) { ?>
-                                        <?php echo esc_html($tag->name); ?>/
-                                    <?php } ?>
+                                <p>
+                                    <?php
+                                    $total_tags = count($tags);
+                                    foreach ($tags as $index => $tag) {
+                                        echo esc_html($tag->name);
+                                        if ($index < $total_tags - 1) {
+                                            echo ' /';
+                                        }
+                                    }
+                                    ?>
                                 </p>
                             </div>
                         </div>
