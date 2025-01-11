@@ -94,7 +94,8 @@
     width: 100px;
     border-radius: 100%;
     background-color: #D9D9D9;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-bottom: 25px;
   }
   .youtube-playlist-bg .youtube-production-slider .view-more-btn {
     border-radius: 10px;
@@ -102,8 +103,8 @@
     color: #fff;
     font-family: "Lexend-Regular";
     text-transform: uppercase;
-    padding: 0.4rem 0.6rem;
-    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
   .youtube-playlist-bg .custom-min-height {
     min-height: 400px;
