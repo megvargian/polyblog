@@ -123,6 +123,13 @@ if (have_posts()):
                     <?php the_content(); ?>
                 </div>
             </div>
+            <div class="row py-4 white-divider"><div class="col"></div></div>
+            <div class="row publish-with-us-img">
+                <div class="col">
+                    <img src="https://polybloglb.com/wp-content/uploads/2024/10/Artboard-1-copy-18.jpg" />
+                </div>
+            </div>
+            <div class="row py-4 white-divider"><div class="col"></div></div>
         </div>
         <?php
         $total_posts_query = new WP_Query(array(

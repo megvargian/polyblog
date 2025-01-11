@@ -1253,13 +1253,20 @@ body.hide_scroll {
   border: 5px solid #ED4101;
 }
 .single-post-container .white-divider {
-  height: 12px;
+  height: 8px;
 }
 .single-post-container .white-divider .col {
-  border-top: 12px solid #fff;
+  border-top: 8px solid #fff;
   position: absolute;
   left: 0;
   width: 100vw;
+}
+.single-post-container .publish-with-us-img {
+  opacity: 1;
+}
+.single-post-container .publish-with-us-img {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 .single-post-container .main-content {
   color: #fff;

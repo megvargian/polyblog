@@ -1378,14 +1378,23 @@ body.hide_scroll {
   }
 
   .white-divider {
-    height: 12px;
+    height: 8px;
 
     .col {
-      border-top: 12px solid #fff;
+      border-top: 8px solid #fff;
       position: absolute;
       left: 0;
       width: 100vw;
     }
+  }
+
+  .publish-with-us-img {
+    opacity: 1;
+  }
+
+  .publish-with-us-img {
+    opacity: 0.8;
+    transition: 0.3s;
   }
 
   .main-content {
