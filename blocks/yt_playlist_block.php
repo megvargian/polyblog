@@ -73,7 +73,7 @@ $yt_playlist_block = get_fields();
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div>
+                    <div class="d-flex justify-content-center align-items-center">
                         <div class="youtube-full-circle"></div>
                         <a href="#" class="view-more-btn">
                             View more
@@ -86,7 +86,7 @@ $yt_playlist_block = get_fields();
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div>
+                    <div class="d-flex justify-content-center align-items-center">
                         <div class="youtube-full-circle"></div>
                         <a href="#" class="view-more-btn">
                             View more
@@ -99,7 +99,7 @@ $yt_playlist_block = get_fields();
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div>
+                    <div class="d-flex justify-content-center align-items-center">
                         <div class="youtube-full-circle"></div>
                         <a href="#" class="view-more-btn">
                             View more
