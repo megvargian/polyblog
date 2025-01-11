@@ -486,6 +486,21 @@ body.hide_scroll {
   background-color: #3a1dd9;
   font-family: "Lexend-Regular";
 }
+.youtube-playlist-bg h3 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.youtube-playlist-bg .ar-regular, .youtube-playlist-bg .ar-bold {
+  text-align: right;
+}
+.youtube-playlist-bg .en-regular, .youtube-playlist-bg .en-bold {
+  text-align: left;
+}
+.youtube-playlist-bg p {
+  color: #fff;
+  font-size: 2rem;
+}
 .youtube-playlist-bg .youtube-playlist-button-col {
   align-content: center;
 }

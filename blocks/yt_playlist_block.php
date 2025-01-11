@@ -5,7 +5,7 @@
 
 $yt_playlist_block = get_fields();
 ?>
-<section class="w-100 youtube-playlist-bg d-none d-lg-block">
+<section class="w-100 youtube-playlist-bg">
     <div class="container py-4">
         <div class="row justify-content-between align-items-center">
             <div class="col">
@@ -23,17 +23,17 @@ $yt_playlist_block = get_fields();
         </div>
         <div class="row justify-content-between align-items-center">
             <div class="col">
-                <p class="en-regular">polyblog reduces special contenpolyblog reduces special content...t...</p>
+                <p class="en-regular">polyblog reduces special <br> contenpolyblog reduces <br> special content...t...</p>
                 <p></p>
             </div>
             <div class="col">
-                <p class="ar-regular">انتاجاتنـــــــــــــــــــــ
-ـــــا الخاصـــــــــــــةانتاجاتنـــــــــــــــــــــ
+                <p class="ar-regular">انتاجاتنـــــــــــــــــــــ <br>
+ـــــا الخاصـــــــــــــةانتاجاتنـــــــــــــــــــــ <br>
 ـــــا الخاصـــــــــــــة</p>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid d-lg-block d-none">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
@@ -61,6 +61,15 @@ $yt_playlist_block = get_fields();
                         <p class="ar-regular">٧ حلقــات</p>
                     </div>
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="swiper youtube-production-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                </div>
             </div>
         </div>
     </div>

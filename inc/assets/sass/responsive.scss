@@ -108,6 +108,14 @@
 			opacity: 1;
 		}
 	}
+	.youtube-playlist-bg {
+		h3{
+		  font-size: 2.5rem;
+		}
+		p{
+		  font-size: 1rem;
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -252,6 +260,14 @@
 	}
 	.custom-modal {
 		.modal-body {
+		  font-size: .8rem;
+		}
+	}
+	.youtube-playlist-bg {
+		h3{
+		  font-size: 1.5rem;
+		}
+		p{
 		  font-size: .8rem;
 		}
 	}

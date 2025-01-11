@@ -480,7 +480,21 @@ body.hide_scroll {
 .youtube-playlist-bg {
   background-color: #3a1dd9;
   font-family: $en-regular;
-
+  h3{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .ar-regular, .ar-bold{
+    text-align: right;
+  }
+  .en-regular, .en-bold{
+    text-align: left;
+  }
+  p{
+    color: #fff;
+    font-size: 2rem;
+  }
   .youtube-playlist-button-col {
     align-content: center;
 
