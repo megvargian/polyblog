@@ -16,7 +16,7 @@ $yt_playlist_block = get_fields();
                 <h3 class="ar-bold">انتاجاتنـــــــــــــــــــــ <br> ـــــا الخاصـــــــــــــة</h3>
             </div>
         </div>
-        <div class="row custom-min-height" style="min-height: 40rem">
+        <div class="row custom-min-height">
             <div class="col d-flex justify-content-center align-items-center">
                 <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
             </div>
