@@ -501,6 +501,9 @@ body.hide_scroll {
   color: #fff;
   font-size: 2rem;
 }
+.youtube-playlist-bg .custom-min-height {
+  min-height: 500px;
+}
 .youtube-playlist-bg .youtube-playlist-button-col {
   align-content: center;
 }

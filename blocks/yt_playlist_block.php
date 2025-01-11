@@ -16,7 +16,7 @@ $yt_playlist_block = get_fields();
                 <h3 class="ar-bold">انتاجاتنـــــــــــــــــــــ <br> ـــــا الخاصـــــــــــــة</h3>
             </div>
         </div>
-        <div class="row" style="min-height: 40rem">
+        <div class="row custom-min-height" style="min-height: 40rem">
             <div class="col d-flex justify-content-center align-items-center">
                 <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
             </div>
@@ -64,13 +64,63 @@ $yt_playlist_block = get_fields();
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid d-lg-none d-block py-4">
         <div class="swiper youtube-production-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-
+                    <div class="youtube-video-link">
+                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="youtube-full-circle"></div>
+                        <a href="#" class="view-more-btn">
+                            View more
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="youtube-video-link">
+                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="youtube-full-circle"></div>
+                        <a href="#" class="view-more-btn">
+                            View more
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="youtube-video-link">
+                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <div class="youtube-full-circle"></div>
+                        <a href="#" class="view-more-btn">
+                            View more
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>
+
+<script>
+    jQuery(document).ready(function ($) {
+        var swiper = new Swiper('.youtube-production-slider', {
+            slidesPerView: 2.8,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    });
+</script>
