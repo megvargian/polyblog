@@ -34,11 +34,11 @@
 @media screen and (max-width: 991px) {
   .menu_on_mobile {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     position: fixed;
     top: 0px;
-    right: 0px;
-    transform: translateX(100vw);
+    left: 0px;
+    transform: translateX(0vw);
     transition: cubic-bezier(0.32, 0.17, 0, 1) 1s;
     background-color: #ec4100;
     text-align: right;
@@ -62,7 +62,7 @@
     display: inline-block;
   }
   .menu_on_mobile.active {
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: cubic-bezier(0.32, 0.17, 0, 1) 0.5s;
     position: fixed;
   }
