@@ -137,8 +137,8 @@ $header_video_url = get_field('header_video', 'option');
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
-										<p class="en">what we think</p>
-										<p class="ar">شــــــو منفكــــــر</p>
+										<p class="en">how we see it</p>
+										<p class="ar">كيــف منشــوف</p>
 									</div>
 								</div>
 							</a>
@@ -146,8 +146,8 @@ $header_video_url = get_field('header_video', 'option');
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
-										<p class="en">what we think</p>
-										<p class="ar">شــــــو منفكــــــر</p>
+										<p class="en">Our segments</p>
+										<p class="ar">فقـــــــــــــــــراتنا </p>
 									</div>
 								</div>
 							</a>
@@ -155,8 +155,17 @@ $header_video_url = get_field('header_video', 'option');
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
-										<p class="en">what we think</p>
-										<p class="ar">شــــــو منفكــــــر</p>
+										<p class="en">our productions</p>
+										<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
+									</div>
+								</div>
+							</a>
+							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+								<div class="menu_item">
+									<?php //echo $menu_item['label']?>
+									<div class="bg-black">
+										<p class="en">GET TO KNOW US</p>
+										<p class="ar">تعـــــــرف/ي علينـــا </p>
 									</div>
 								</div>
 							</a>
