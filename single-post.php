@@ -112,7 +112,7 @@ if (have_posts()):
                                     foreach ($tags as $index => $tag) {
                                         echo esc_html($tag->name);
                                         if ($index < $total_tags - 1) {
-                                            echo '/';
+                                            echo ' / ';
                                         }
                                     }
                                     ?>
