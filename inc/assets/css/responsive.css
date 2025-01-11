@@ -82,15 +82,15 @@
     background-color: #D9D9D9;
     opacity: 1;
   }
-  .youtube-playlist-bg .youtube-production-slider .large-slide {
-    width: 325px !important;
-  }
-  .youtube-playlist-bg .youtube-production-slider .swiper-pagination-bullet-active {
+  .youtube-playlist-bg .swiper-pagination-youtube-production-slider .swiper-pagination-bullet-active {
     background-color: #ec4100 !important;
   }
-  .youtube-playlist-bg .youtube-production-slider .swiper-pagination-bullet {
+  .youtube-playlist-bg .swiper-pagination-youtube-production-slider .swiper-pagination-bullet {
     background-color: #D9D9D9;
     opacity: 1;
+  }
+  .youtube-playlist-bg .youtube-production-slider .large-slide {
+    width: 325px !important;
   }
   .youtube-playlist-bg .youtube-production-slider .youtube-full-circle {
     height: 100px;

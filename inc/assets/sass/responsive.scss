@@ -109,16 +109,18 @@
 		}
 	}
 	.youtube-playlist-bg {
-		.youtube-production-slider{
-			.large-slide{
-				width: 325px !important;
-			}
+		.swiper-pagination-youtube-production-slider{
 			.swiper-pagination-bullet-active{
 				background-color: #ec4100 !important;
 			}
 			.swiper-pagination-bullet{
 				background-color: #D9D9D9;
 				opacity: 1;
+			}
+		}
+		.youtube-production-slider{
+			.large-slide{
+				width: 325px !important;
 			}
 			.youtube-full-circle{
 				height: 100px;
