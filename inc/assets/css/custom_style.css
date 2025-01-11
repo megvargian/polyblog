@@ -1252,9 +1252,14 @@ body.hide_scroll {
   border-radius: 100%;
   border: 5px solid #ED4101;
 }
-.single-post-container .white-divider hr {
-  color: #fff;
+.single-post-container .white-divider {
   height: 12px;
+}
+.single-post-container .white-divider .col {
+  border-top: 12px solid #fff;
+  position: absolute;
+  left: 0;
+  width: 100vw;
 }
 .single-post-container .main-content {
   color: #fff;

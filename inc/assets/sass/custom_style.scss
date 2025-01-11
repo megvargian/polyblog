@@ -1378,9 +1378,13 @@ body.hide_scroll {
   }
 
   .white-divider {
-    hr {
-      color: #fff;
-      height: 12px;
+    height: 12px;
+
+    .col {
+      border-top: 12px solid #fff;
+      position: absolute;
+      left: 0;
+      width: 100vw;
     }
   }
 

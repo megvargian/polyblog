@@ -106,7 +106,7 @@ if (have_posts()):
                             <h2 class="author-name"><?php echo $author_name; ?></h2>
                             <div class="tags">
                                 <p> <?php foreach ($tags as $tag) { ?>
-                                        <?php esc_html($tag->name); ?>/
+                                        <?php echo esc_html($tag->name); ?>/
                                     <?php } ?>
                                 </p>
                             </div>
@@ -117,11 +117,7 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
-            <div class="row white-divider">
-                <div class="col">
-                    <hr>
-                </div>
-            </div>
+            <div class="row py-4 white-divider"><div class="col"></div></div>
             <div class="row py-2 main-content">
                 <div class="col py-2 align-text-arabic">
                     <?php the_content(); ?>
