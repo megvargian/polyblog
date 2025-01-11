@@ -38,7 +38,7 @@ $header_video_url = get_field('header_video', 'option');
 			</div>
 			<button id="menu-button" class="responsive-menu-button menu_mobile_nav" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
 				<p>on the agenda</p>
-				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg" alt="on the agenda">
+				<img class="arrow-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg" alt="on the agenda">
 			</button>
 			<div id="home-video-header-container" <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
 				<?php if (is_front_page()) { ?>
@@ -170,6 +170,7 @@ $header_video_url = get_field('header_video', 'option');
             $(this).toggleClass('active');
             $('html, body').toggleClass('hide_scroll');
             $('.menu_on_mobile').toggleClass('active');
+			$(".arrow-right").toggleClass('active');
         });
 	});
 </script>
