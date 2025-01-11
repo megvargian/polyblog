@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -117,19 +118,25 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
-            <div class="row py-4 white-divider"><div class="col"></div></div>
+            <div class="row py-4 white-divider">
+                <div class="col"></div>
+            </div>
             <div class="row py-2 main-content">
                 <div class="col py-2 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>
-            <div class="row py-4 white-divider"><div class="col"></div></div>
+            <div class="row py-4 white-divider">
+                <div class="col"></div>
+            </div>
             <div class="row publish-with-us-img">
                 <div class="col">
-                    <img src="https://polybloglb.com/wp-content/uploads/2024/10/Artboard-1-copy-18.jpg" />
+                    <a href="http://polybloglb.com"><img src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" /></a>
                 </div>
             </div>
-            <div class="row py-4 white-divider"><div class="col"></div></div>
+            <div class="row py-4 white-divider">
+                <div class="col"></div>
+            </div>
         </div>
         <?php
         $total_posts_query = new WP_Query(array(
@@ -144,10 +151,10 @@ if (have_posts()):
         endif;
         ?>
         <script>
-            jQuery(document).ready(function ($) {
+            jQuery(document).ready(function($) {
                 let authorPostsCount = 3;
 
-                $('#single-post-load-more').on('click', function () {
+                $('#single-post-load-more').on('click', function() {
                     const button = $(this);
                     const offset = button.data('offset');
                     const currentPostId = <?php echo get_the_ID(); ?>;
@@ -165,7 +172,7 @@ if (have_posts()):
                             offset: offset,
                             current_post_id: currentPostId,
                         },
-                        success: function (response) {
+                        success: function(response) {
                             if (response) {
                                 let totalPosts = <?php echo $total_posts; ?>;
                                 $('#single-post-author-posts').append(response);
@@ -184,7 +191,7 @@ if (have_posts()):
                 });
             });
         </script>
-    <?php endwhile;
+<?php endwhile;
 endif;
 ?>
 <?php

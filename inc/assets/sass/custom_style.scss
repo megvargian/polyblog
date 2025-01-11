@@ -1389,10 +1389,11 @@ body.hide_scroll {
   }
 
   .publish-with-us-img {
+    text-align: center;
     opacity: 1;
   }
 
-  .publish-with-us-img {
+  .publish-with-us-img:hover {
     opacity: 0.8;
     transition: 0.3s;
   }

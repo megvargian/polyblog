@@ -1262,9 +1262,10 @@ body.hide_scroll {
   width: 100vw;
 }
 .single-post-container .publish-with-us-img {
+  text-align: center;
   opacity: 1;
 }
-.single-post-container .publish-with-us-img {
+.single-post-container .publish-with-us-img:hover {
   opacity: 0.8;
   transition: 0.3s;
 }
