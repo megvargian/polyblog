@@ -82,6 +82,12 @@
     background-color: #D9D9D9;
     opacity: 1;
   }
+  .youtube-playlist-bg .swiper-pagination-youtube-production-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider .swiper-pagination-bullet-active {
     background-color: #ec4100 !important;
   }

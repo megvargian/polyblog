@@ -123,7 +123,7 @@ $yt_playlist_block = get_fields();
         var swiper = new Swiper('.youtube-production-slider', {
             slidesPerView: 2.8,
             spaceBetween: 10,
-            loop: true,
+            loop: false,
             pagination: {
                 el: '.swiper-pagination-youtube-production-slider',
             },

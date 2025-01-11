@@ -110,6 +110,10 @@
 	}
 	.youtube-playlist-bg {
 		.swiper-pagination-youtube-production-slider{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
 			.swiper-pagination-bullet-active{
 				background-color: #ec4100 !important;
 			}
