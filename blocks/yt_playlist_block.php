@@ -64,10 +64,10 @@ $yt_playlist_block = get_fields();
             </div>
         </div>
     </div>
-    <div class="container-fluid d-lg-none d-block py-4">
+    <div class="container-fluid d-lg-none d-block py-4 position-relative">
         <div class="swiper youtube-production-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
                         <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
                     </div>
@@ -113,8 +113,8 @@ $yt_playlist_block = get_fields();
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-pagination-youtube-production-slider"></div>
     </div>
 </section>
 
@@ -125,7 +125,7 @@ $yt_playlist_block = get_fields();
             spaceBetween: 10,
             loop: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.swiper-pagination-youtube-production-slider',
             },
         });
     });
