@@ -83,7 +83,7 @@
     opacity: 1;
   }
   .youtube-playlist-bg .youtube-production-slider .large-slide {
-    width: 325px;
+    width: 325px !important;
   }
   .youtube-playlist-bg .youtube-production-slider .swiper-pagination-bullet-active {
     background-color: #ec4100 !important;

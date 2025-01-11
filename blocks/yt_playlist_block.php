@@ -82,7 +82,7 @@ $yt_playlist_block = get_fields();
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
                         <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
                     </div>
@@ -97,7 +97,7 @@ $yt_playlist_block = get_fields();
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
                         <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
                     </div>
