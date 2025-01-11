@@ -106,7 +106,7 @@ if (have_posts()):
                             <h2 class="author-name"><?php echo $author_name; ?></h2>
                             <div class="tags">
                                 <p> <?php foreach ($tags as $tag) { ?>
-                                        <?php echo "#" . esc_html($tag->name); ?>
+                                        <?php esc_html($tag->name); ?>/
                                     <?php } ?>
                                 </p>
                             </div>
@@ -115,6 +115,11 @@ if (have_posts()):
                             <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row white-divider">
+                <div class="col">
+                    <hr>
                 </div>
             </div>
             <div class="row py-2 main-content">

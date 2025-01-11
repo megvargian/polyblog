@@ -1236,6 +1236,9 @@ body.hide_scroll {
 .single-post-container h1 {
   color: #fff;
 }
+.single-post-container .author-tags-container {
+  align-content: center;
+}
 .single-post-container .author-tags-container .author-name {
   text-align: end;
   color: #ed4101;
@@ -1248,6 +1251,10 @@ body.hide_scroll {
   width: 100%;
   border-radius: 100%;
   border: 5px solid #ED4101;
+}
+.single-post-container .white-divider hr {
+  color: #fff;
+  height: 12px;
 }
 .single-post-container .main-content {
   color: #fff;

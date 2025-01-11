@@ -1358,6 +1358,8 @@ body.hide_scroll {
   }
 
   .author-tags-container {
+    align-content: center;
+
     .author-name {
       text-align: end;
       color: #ed4101;
@@ -1373,6 +1375,13 @@ body.hide_scroll {
     width: 100%;
     border-radius: 100%;
     border: 5px solid #ED4101;
+  }
+
+  .white-divider {
+    hr {
+      color: #fff;
+      height: 12px;
+    }
   }
 
   .main-content {
