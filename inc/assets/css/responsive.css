@@ -247,6 +247,9 @@
   .custom-modal .modal-body {
     font-size: 0.8rem;
   }
+  .youtube-playlist-bg h3 {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 1390px) {
   /* change this, by default 1140px */
