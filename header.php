@@ -36,7 +36,7 @@ $header_video_url = get_field('header_video', 'option');
 				</a>
 				<div class="white-line d-block d-lg-none"></div>
 			</div>
-			<button id="menu-button" class="responsive-menu-button" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
+			<button id="menu-button" class="responsive-menu-button menu_mobile_nav" data-bs-toggle="modal" data-bs-target="#sideMenuModal">
 				<p>on the agenda</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg" alt="on the agenda">
 			</button>
@@ -94,7 +94,7 @@ $header_video_url = get_field('header_video', 'option');
 					</div>
 				<?php } ?>
 			</div>
-			<div class="modal fade side-menu-modal" id="sideMenuModal" tabindex="-1" aria-labelledby="side-menu-modal"
+			<!-- <div class="modal fade side-menu-modal" id="sideMenuModal" tabindex="-1" aria-labelledby="side-menu-modal"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -117,8 +117,59 @@ $header_video_url = get_field('header_video', 'option');
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+			<div id="menu_mobile" class="menu_on_mobile d-block d-lg-none">
+                <div class="menu_on_mobile_wrapper">
+                    <div class="menu_on_mobile_inner_wrapper" style="position: relative;">
+                        <div>
+                            <?php //foreach($header_fields as $key => $menu_item){
+                                    //if($menu_item['general_image'] == '' && $menu_item['has_child'] == false){?>
+							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+								<div class="menu_item">
+									<?php //echo $menu_item['label']?>
+									<div class="bg-black">
+										<p class="en">what we think</p>
+										<p class="ar">شــــــو منفكــــــر</p>
+									</div>
+								</div>
+							</a>
+							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+								<div class="menu_item">
+									<?php //echo $menu_item['label']?>
+									<div class="bg-black">
+										<p class="en">what we think</p>
+										<p class="ar">شــــــو منفكــــــر</p>
+									</div>
+								</div>
+							</a>
+							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+								<div class="menu_item">
+									<?php //echo $menu_item['label']?>
+									<div class="bg-black">
+										<p class="en">what we think</p>
+										<p class="ar">شــــــو منفكــــــر</p>
+									</div>
+								</div>
+							</a>
+							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+								<div class="menu_item">
+									<?php //echo $menu_item['label']?>
+									<div class="bg-black">
+										<p class="en">what we think</p>
+										<p class="ar">شــــــو منفكــــــر</p>
+									</div>
+								</div>
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 <script>
 	jQuery(document).ready(function ($) {
+		$('.menu_mobile_nav').click(function(event) {
+            $(this).toggleClass('active');
+            $('html, body').toggleClass('hide_scroll');
+            $('.menu_on_mobile').toggleClass('active');
+        });
 	});
 </script>

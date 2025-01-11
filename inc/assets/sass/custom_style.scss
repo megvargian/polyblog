@@ -1479,3 +1479,8 @@ body.hide_scroll {
     color: #fff;
   }
 }
+
+body.hide_scroll{
+	padding-right: 17px;
+	overflow: hidden !important;
+}
