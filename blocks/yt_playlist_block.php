@@ -74,10 +74,12 @@ $yt_playlist_block = get_fields();
                 </div>
                 <div class="swiper-slide">
                     <div class="d-flex justify-content-center align-items-center">
-                        <div class="youtube-full-circle"></div>
-                        <a href="#" class="view-more-btn">
-                            View more
-                        </a>
+                        <div class="d-block">
+                            <div class="youtube-full-circle"></div>
+                            <a href="#" class="view-more-btn">
+                                View more
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -87,10 +89,12 @@ $yt_playlist_block = get_fields();
                 </div>
                 <div class="swiper-slide">
                     <div class="d-flex justify-content-center align-items-center">
-                        <div class="youtube-full-circle"></div>
-                        <a href="#" class="view-more-btn">
-                            View more
-                        </a>
+                        <div class="d-block">
+                            <div class="youtube-full-circle"></div>
+                            <a href="#" class="view-more-btn">
+                                View more
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -100,10 +104,12 @@ $yt_playlist_block = get_fields();
                 </div>
                 <div class="swiper-slide">
                     <div class="d-flex justify-content-center align-items-center">
-                        <div class="youtube-full-circle"></div>
-                        <a href="#" class="view-more-btn">
-                            View more
-                        </a>
+                        <div class="d-block">
+                            <div class="youtube-full-circle"></div>
+                            <a href="#" class="view-more-btn">
+                                View more
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
