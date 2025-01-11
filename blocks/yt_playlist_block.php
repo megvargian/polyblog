@@ -121,9 +121,9 @@ $yt_playlist_block = get_fields();
 <script>
     jQuery(document).ready(function ($) {
         var swiper = new Swiper('.youtube-production-slider', {
-            slidesPerView: 2.8,
+            slidesPerView: 2,
             spaceBetween: 10,
-            loop: false,
+            loop: true,
             pagination: {
                 el: '.swiper-pagination-youtube-production-slider',
             },
