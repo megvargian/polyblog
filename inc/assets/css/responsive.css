@@ -37,6 +37,7 @@
   }
   .site-title {
     font-size: 2.5rem;
+    padding: 16px 10px;
     color: #87ED06;
   }
   .site-title a {
@@ -151,6 +152,9 @@
   }
   .author-swiper-container .custom-swiper-button-next img {
     height: 50px;
+  }
+  .single-featured-article-container .right-container .title {
+    font-size: 2rem;
   }
 }
 @media (max-width: 575px) {
