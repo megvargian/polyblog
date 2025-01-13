@@ -376,6 +376,13 @@
   .youtube-playlist-bg p {
     font-size: 1rem;
   }
+  .swiper-mobile-single-author-article-pagination .swiper-pagination-bullet-active {
+    background-color: #ec4100 !important;
+  }
+  .swiper-mobile-single-author-article-pagination .swiper-pagination-bullet {
+    background-color: #D9D9D9;
+    opacity: 1;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
