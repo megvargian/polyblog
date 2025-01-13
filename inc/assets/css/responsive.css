@@ -79,6 +79,7 @@
     background-color: #000;
     width: 100%;
     padding: 0 1.5rem;
+    min-height: 50px;
   }
   .menu_on_mobile.active {
     transform: translateX(0dvw);
@@ -105,6 +106,7 @@
   .menu_on_mobile .menu_on_mobile_wrapper .menu_on_mobile_inner_wrapper .animated_menu_el .menu_item {
     display: inline-block;
     cursor: pointer;
+    min-width: 100px;
   }
   .menu_on_mobile .menu_on_mobile_wrapper .menu_on_mobile_inner_wrapper .animated_menu_el .menu_item-request-demo {
     display: inline-block;

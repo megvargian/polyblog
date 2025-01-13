@@ -5,7 +5,7 @@
 
 $yt_featured_vids_block = get_fields();
 ?>
-<section class="w-100 youtube-featured-vids-bg">
+<section class="w-100 youtube-featured-vids-bg d-none d-lg-block">
    <div class="container">
         <div class="row youtube-featured-videos-row">
             <div class="col youtube-featured-vid-button-col d-block w-100">
