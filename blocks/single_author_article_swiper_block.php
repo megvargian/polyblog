@@ -6,7 +6,7 @@
 $single_author_article_swiper_block = get_fields();
 ?>
 <section class="py-5 single-author-article-swiper-section">
-    <div class="container">
+    <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide single-red-border">
@@ -67,6 +67,7 @@ $single_author_article_swiper_block = get_fields();
             <div class="swiper-button-prev swiper-button-prev-last-part"></div>
             <div class="swiper-button-next swiper-button-next-last-part"></div>
         </div>
+        <div class="swiper-mobile-single-author-article-pagination"></div>
     </div>
 </section>
 <script>
@@ -76,6 +77,11 @@ $single_author_article_swiper_block = get_fields();
             navigation: {
                 nextEl: '.swiper-button-next-last-part',
                 prevEl: '.swiper-button-prev-last-part',
+            },
+                pagination: {
+                el: '.swiper-mobile-single-author-article-pagination',
+                type: 'bullets',
+                clickable: true,
             },
         });
     });
