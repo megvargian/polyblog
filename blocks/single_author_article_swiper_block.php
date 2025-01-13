@@ -64,10 +64,12 @@ $single_author_article_swiper_block = get_fields();
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev-last-part"></div>
-            <div class="swiper-button-next swiper-button-next-last-part"></div>
+            <div class="d-lg-none d-flex swiper-button-prev swiper-button-prev-last-part"></div>
+            <div class="d-lg-flex d-flex swiper-button-next swiper-button-next-last-part"></div>
         </div>
-        <div class="swiper-mobile-single-author-article-pagination"></div>
+        <div class="swiper-button-prev swiper-button-prev-last-part"></div>
+        <div class="swiper-button-next swiper-button-next-last-part"></div>
+        <div class="d-lg-none my-4 d-flex justify-content-center align-items-center swiper-mobile-single-author-article-pagination"></div>
     </div>
 </section>
 <script>
