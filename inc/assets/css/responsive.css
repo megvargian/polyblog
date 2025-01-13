@@ -298,6 +298,7 @@
   }
   .single-author-article-swiper-section h6 {
     text-align: center;
+    font-size: 1.2rem;
   }
   .footer-container .custom-width {
     margin-left: 0px;
@@ -473,6 +474,9 @@
   }
   .single-author-article-swiper-section .single-author-img {
     width: 100%;
+  }
+  .single-author-article-swiper-section h6 {
+    font-size: 1rem;
   }
   .single-article-header-button-container {
     display: none;
