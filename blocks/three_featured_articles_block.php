@@ -14,8 +14,8 @@ $args = array(
 
 $query = new WP_Query($args);
 ?>
-<section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container d-sm-block d-none">
-    <div class="container">
+<section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container">
+    <div class="container d-md-block d-none">
         <div class="row position-relative z-1 p-5">
             <?php
             if ($query->have_posts()) {
@@ -37,7 +37,58 @@ $query = new WP_Query($args);
                         </a>
                     </div>
             <?php } ?>
-        <?php } ?>
+            <?php } ?>
+        </div>
     </div>
+    <div class="container d-md-none d-block">
+        <div class="row position-relative">
+            <div class="swiper swiper-three-featured-articles-block">
+                <div class="swiper-wrapper">
+                    <?php
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            $article_title = get_the_title();
+                            $article_link = get_permalink();
+                            $categories = get_the_category();
+                            $article_thumbnail = get_field('article_thumbnail', get_the_ID());
+                            ?>
+                            <div class="swiper-slide article-container">
+                                <a class="position-relative" href="<?php echo $article_link; ?>" target="_blank">
+                                    <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
+                                    <div class="hover-text">
+                                        <p>
+                                            <?php echo $article_title; ?>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                    <?php } ?>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="swiper-button-next-swiper-three-featured-articles-block swiper-button-prev-last-part"></div>
+            <div class="swiper-button-prev-swiper-three-featured-articles-block swiper-button-next-last-part"></div>
+        </div>
     </div>
 </section>
+<script>
+    var swiper = new Swiper('.swiper-three-featured-articles-block', {
+        slidesPerView: 3, // Show a few slides on the screen
+        spaceBetween: 30, // Spacing between slides
+        centeredSlides: true, // Center the active slide
+        loop: true, // Infinite scrolling
+        navigation: {
+            nextEl: '.swiper-button-next-swiper-three-featured-articles-block',
+            prevEl: '.swiper-button-prev-swiper-three-featured-articles-block',
+        },
+        effect: 'coverflow', // Adds a depth effect
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+    });
+</script>
