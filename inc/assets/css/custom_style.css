@@ -945,6 +945,14 @@ body.hide_scroll {
   mix-blend-mode: luminosity;
   background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
 }
+.message-for-editor-section .languages {
+  text-transform: uppercase;
+  background-color: #181617;
+  color: #FFFFFF;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 0 5px;
+}
 
 .single-author-article-swiper-section {
   color: #fff;
