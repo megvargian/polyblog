@@ -36,11 +36,11 @@ $rows = array_chunk($authors_list, 4);
         <?php } ?>
     </div>
     <div class="container d-md-none d-block">
-        <div class="row">
+        <div class="row single-red-border">
             <div class="col-6">
                 <div class="d-flex justify-content-center align-items-center px-sm-5 px-2 h-100">
                     <div class="inner-author mx-auto">
-                        <p class="text-center d-md-block d-none">
+                        <p class="text-center" style="color: #fff;">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                         </p>
                     </div>
