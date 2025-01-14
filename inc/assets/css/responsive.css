@@ -473,7 +473,7 @@
     font-size: 1.5rem;
   }
   .site-title .white-line {
-    display: none;
+    display: none !important;
   }
   .single-author-article-swiper-section .single-author-img {
     width: 100%;
@@ -504,6 +504,15 @@
   }
   .youtube-playlist-bg h3 {
     font-size: 1.25rem;
+  }
+  .single-post-container .what-we-think {
+    font-size: 0.8rem;
+  }
+  .single-post-container .what-we-think .english {
+    margin-left: 10px;
+  }
+  .single-post-container .what-we-think .arabic {
+    margin-right: 10px;
   }
 }
 @media (min-width: 1390px) {

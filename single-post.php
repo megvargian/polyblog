@@ -81,8 +81,8 @@ if (have_posts()):
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
-                    <button type="button" class="what-we-think w-100"><span class="english">WHAT WE THINK</span><span
-                            class="arabic">شــــــو منفكــــــر</span></button>
+                    <button type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
+                            class="arabic"><strong>شــــــو منفكــــــر</strong></span></button>
                 </div>
             </div>
             <div class="row py-2">
