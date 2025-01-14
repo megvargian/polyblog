@@ -9,7 +9,7 @@ $message_from_deitor_fields = get_fields();
     <img class="w-100 d-lg-block d-none" src="<?php echo $message_from_deitor_fields['main_image']; ?>" alt="message_from_directo_bannerr">
     <div class="container-fluid py-4 px-4">
         <div class="row justify-content-between d-flex d-lg-none">
-            <div class="col d-flex justify-content-center align-items-center">
+            <div class="col d-flex justify-content-start align-items-center">
                 <div class="d-flex justify-content-end align-items-center">
                     <div class="mx-1 languages en-regular">
                     ع
