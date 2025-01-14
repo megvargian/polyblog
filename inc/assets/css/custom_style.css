@@ -563,7 +563,7 @@ body.hide_scroll {
   max-width: 240px;
   height: 100%;
   border-radius: 100%;
-  border: 5px solid #ED4101;
+  border: 2px solid #ED4101;
 }
 .author-swiper-container .swiper-slide .author-image img {
   display: block;
@@ -890,7 +890,7 @@ body.hide_scroll {
   display: inline-block;
   max-width: 240px;
   border-radius: 100%;
-  border: 5px solid #ED4101;
+  border: 2px solid #ED4101;
 }
 .author-block-container .single-author-col .single-author-container .author-image img {
   display: block;
@@ -1247,7 +1247,7 @@ body.hide_scroll {
 .single-post-container .single-article-header-desktop .author-image {
   width: 100%;
   border-radius: 100%;
-  border: 5px solid #ED4101;
+  border: 2px solid #ED4101;
 }
 .single-post-container .single-article-header-mobile {
   display: none;
@@ -1294,7 +1294,7 @@ body.hide_scroll {
 .single-post-container .author-tags-container-mobile .author-image {
   width: 100%;
   border-radius: 100%;
-  border: 5px solid #ED4101;
+  border: 2px solid #ED4101;
 }
 .single-post-container h1 {
   color: #fff;
