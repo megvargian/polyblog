@@ -80,7 +80,7 @@ if ($featured_articles): ?>
                                         <?php if ($categories) {
                                             foreach ($categories as $category) { ?>
                                                 <span class="category">
-                                                    <?php echo esc_html($category->name) === 'ENGLISH' ? substr($category->name, 0, 2) : substr($category->name, 0, 1); ?>
+                                                    <?php echo esc_html($category->name) === 'ENGLISH' ? substr($category->name, 0, 2) : mb_substr($category->name, 0, 1, "UTF-8"); ?>
                                                 </span>
                                             <?php }
                                         } ?>

@@ -393,6 +393,13 @@
     text-align: center;
     font-size: 10px;
   }
+  .categories-mobile .category {
+    padding: 2px 6px;
+    border-radius: 12px;
+    color: #000;
+    background-color: #f0eaea;
+    font-size: 1rem;
+  }
   .single-featured-article-container a {
     line-height: 1.2;
     font-size: 1.4rem;
@@ -537,6 +544,9 @@
   }
   .single-featured-article-container a {
     font-size: 1.2rem;
+  }
+  .categories-mobile .category {
+    font-size: 0.7rem;
   }
 }
 @media (min-width: 1390px) {

@@ -371,6 +371,13 @@
 		align-items: center;
 		text-align: center;
 		font-size: 10px;
+		.category {
+			padding: 2px 6px;
+			border-radius: 12px;
+			color: #000;
+			background-color: #f0eaea;
+			font-size: 1rem;
+		  }
 	}
 	.single-featured-article-container {
 		a {
@@ -576,6 +583,11 @@
 		a {
 		  font-size: 1.2rem;
 		}
+	}
+	.categories-mobile{
+		.category {
+			font-size: .7rem;
+		  }
 	}
 }
 @media (max-width: 470px){
