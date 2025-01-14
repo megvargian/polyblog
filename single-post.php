@@ -81,8 +81,8 @@ if (have_posts()):
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
-                    <button type="button" class="what-we-think w-100"><span class="english">WHAT WE THINK</span><span
-                            class="arabic">شــــــو منفكــــــر</span></button>
+                    <button type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
+                            class="arabic"><strong>شــــــو منفكــــــر</strong></span></button>
                 </div>
             </div>
             <div class="row py-2">
@@ -90,7 +90,7 @@ if (have_posts()):
                     <h1 class="align-text-arabic"><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div class="row py-2">
+            <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
                     <?php foreach ($categories as $category) { ?>
                         <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
@@ -104,7 +104,7 @@ if (have_posts()):
                 <div class="col-8 col-sm-9">
                     <div class="row">
                         <div class="col-10 author-tags-container">
-                            <h2 class="author-name"><?php echo $author_name; ?></h2>
+                            <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>
                             <div class="tags">
                                 <p>
                                     <?php
@@ -125,8 +125,43 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
+            <div class="row py-2 single-article-header-mobile">
+                <div class="col category-buttons">
+                    <?php foreach ($categories as $category) { ?>
+                        <button type="button">
+                            <strong><?php echo $category->name == 'ENGLISH' ? 'EN' : 'ع'; ?></strong>
+                        </button>
+                    <?php } ?>
+                </div>
+                <div class="col published-date">
+                    <?php
+                    echo '<p>' . get_the_date('d/m/Y') . '</p>';
+                    ?>
+                </div>
+            </div>
             <div class="row py-4 white-divider">
                 <div class="col"></div>
+            </div>
+            <div class="row py-2 author-tags-container-mobile">
+                <div class="col">
+                    <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                </div>
+                <div class="col author-info-container">
+                    <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>
+                    <div class="tags">
+                        <p>
+                            <?php
+                            $total_tags = count($tags);
+                            foreach ($tags as $index => $tag) {
+                                echo esc_html($tag->name);
+                                if ($index < $total_tags - 1) {
+                                    echo ' / ';
+                                }
+                            }
+                            ?>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="row py-2 main-content">
                 <div class="col py-2 align-text-arabic">

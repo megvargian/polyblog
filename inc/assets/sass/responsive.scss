@@ -538,6 +538,34 @@
 			font-size: 1.25rem;
 		}
 	}
+
+	.single-post-container {
+		.what-we-think {
+			line-height: 10px;
+			min-height: 10px;
+			font-size: 0.8rem;
+
+			.english {
+				margin-left: 10px;
+			  }
+		  
+			.arabic {
+				margin-right: 10px;
+			  }
+		}
+
+		.single-article-header-desktop {
+			display: none;
+		}
+
+		.single-article-header-mobile {
+			display: flex;
+		}
+
+		.author-tags-container-mobile {
+			display: flex;
+		}
+	}
 }
 @media (max-width: 470px){
 }

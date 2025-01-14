@@ -511,6 +511,26 @@
   .youtube-playlist-bg h3 {
     font-size: 1.25rem;
   }
+  .single-post-container .what-we-think {
+    line-height: 10px;
+    min-height: 10px;
+    font-size: 0.8rem;
+  }
+  .single-post-container .what-we-think .english {
+    margin-left: 10px;
+  }
+  .single-post-container .what-we-think .arabic {
+    margin-right: 10px;
+  }
+  .single-post-container .single-article-header-desktop {
+    display: none;
+  }
+  .single-post-container .single-article-header-mobile {
+    display: flex;
+  }
+  .single-post-container .author-tags-container-mobile {
+    display: flex;
+  }
 }
 @media (min-width: 1390px) {
   /* change this, by default 1140px */
