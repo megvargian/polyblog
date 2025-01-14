@@ -536,6 +536,8 @@
 
 	.single-post-container {
 		.what-we-think {
+			line-height: 10px;
+			min-height: 10px;
 			font-size: 0.8rem;
 
 			.english {
@@ -545,6 +547,10 @@
 			.arabic {
 				margin-right: 10px;
 			  }
+		}
+
+		.single-article-header-desktop {
+			display: hidden;
 		}
 	}
 }

@@ -90,7 +90,7 @@ if (have_posts()):
                     <h1 class="align-text-arabic"><?php the_title(); ?></h1>
                 </div>
             </div>
-            <div class="row py-2">
+            <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
                     <?php foreach ($categories as $category) { ?>
                         <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
