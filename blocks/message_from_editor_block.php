@@ -23,19 +23,29 @@ $message_from_deitor_fields = get_fields();
                 <h4 class="en-bold">A Message from <br> the editor</h4>
             </div>
         </div>
-        <div class="row">
+        <div class="row d-none d-lg-flex">
             <div class="col justify-content-center align-items-center d-lg-flex d-none">
                <p class="en">
                     <?php echo $message_from_deitor_fields['en_text']; ?>
                </p>
             </div>
-            <div class="col-lg-3 col-12 justify-content-center d-flex">
+            <div class="col-lg-3 justify-content-center d-flex">
                 <img src="<?php echo $message_from_deitor_fields['middle_profile_image'];?>" alt="profile">
             </div>
-            <div class="col-lg col-9 justify-content-center align-items-center d-flex">
+            <div class="col justify-content-center align-items-center d-flex">
                <p class="ar">
                     <?php echo $message_from_deitor_fields['ar_text']; ?>
                </p>
+            </div>
+        </div>
+        <div class="row d-flex d-lg-none">
+            <div class="col-9 justify-content-center align-items-center d-flex">
+               <p class="ar">
+                    <?php echo $message_from_deitor_fields['ar_text']; ?>
+               </p>
+            </div>
+            <div class="col-3 justify-content-center d-flex">
+                <img src="<?php echo $message_from_deitor_fields['middle_profile_image'];?>" alt="profile">
             </div>
         </div>
     </div>
