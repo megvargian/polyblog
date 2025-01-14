@@ -98,8 +98,11 @@ if ($featured_articles): ?>
                                     } ?>
                                 </div>
                                 <div class="title align-text-arabic">
-                                    <a href="<?php echo esc_url($article_link); ?>">
+                                    <a class="d-none d-lg-block" href="<?php echo esc_url($article_link); ?>">
                                         <?php echo esc_html($title); ?>
+                                    </a>
+                                    <a class="d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
+                                        <?php echo get_the_excerpt($article); ?>
                                     </a>
                                 </div>
                                 <div class="author-tags d-lg-flex d-none">
