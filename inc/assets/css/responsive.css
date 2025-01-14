@@ -527,6 +527,10 @@
   .youtube-playlist-bg p {
     font-size: 0.8rem;
   }
+  .message-for-editor-section .container-fluid img {
+    width: 250px;
+    height: 250px;
+  }
 }
 @media (max-width: 575px) {
   .site-title {
@@ -546,6 +550,10 @@
   }
   .message-for-editor-section .container-fluid p {
     font-size: 0.8rem;
+  }
+  .message-for-editor-section .container-fluid img {
+    width: 200px;
+    height: 200px;
   }
   .footer-container button {
     font-size: 12px;
@@ -592,6 +600,24 @@
     font-size: 0.8rem;
     padding: 0.35rem 0.6rem;
     text-align: center;
+  }
+}
+@media (max-width: 470px) {
+  .message-for-editor-section .container-fluid img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .message-for-editor-section .container-fluid img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 350px) {
+  .message-for-editor-section .container-fluid img {
+    width: 120px;
+    height: 120px;
   }
 }
 @media (min-width: 1390px) {
