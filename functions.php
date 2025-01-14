@@ -422,3 +422,8 @@ function single_post_load_more_posts() {
 
 add_action('wp_ajax_single_post_load_more_posts', 'single_post_load_more_posts');
 add_action('wp_ajax_nopriv_single_post_load_more_posts', 'single_post_load_more_posts');
+
+function trim_words_with_limits($text, $word_limit = 20) {
+    $words = wp_trim_words($text, $word_limit, '...');
+    return $words;
+}

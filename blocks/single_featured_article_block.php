@@ -102,7 +102,7 @@ if ($featured_articles): ?>
                                         <?php echo esc_html($title); ?>
                                     </a>
                                     <a class="d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
-                                        <?php echo get_the_excerpt($article); ?>
+                                        <?php echo trim_words_with_limits(get_the_excerpt($article), 15); ?>
                                     </a>
                                     <a class="read-more-btn d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
                                         read more
