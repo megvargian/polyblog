@@ -13,6 +13,7 @@ $args = array(
 );
 
 $query = new WP_Query($args);
+$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container">
     <div class="container">
@@ -46,22 +47,24 @@ $query = new WP_Query($args);
 
 <script>
 	jQuery(document).ready(function ($) {
-        $('.article-container').hover(
-            function () {
+        <?php if(!$isMob){ ?>
+            $('.article-container').hover(
+                function () {
+                    $('.article-container').removeClass('hovered');
+                    $(this).addClass('hovered'); // Add class on hover
+                    $(this).find('postion-relative').attr('disabled', false);
+                },
+                function () {
+                    $(this).removeClass('hovered'); // Remove class when mouse leaves
+                    $(this).find('postion-relative').attr('disabled', true);
+                }
+            );
+        <?php } else {?>
+            $('.article-container').click(function() {
                 $('.article-container').removeClass('hovered');
-                $(this).addClass('hovered'); // Add class on hover
                 $(this).find('postion-relative').attr('disabled', false);
-            },
-            function () {
-                $(this).removeClass('hovered'); // Remove class when mouse leaves
-                $(this).find('postion-relative').attr('disabled', true);
-            }
-        );
-        $('.article-container').click(function() {
-            $('.article-container').removeClass('hovered');
-            $(this).find('postion-relative').attr('disabled', false);
-            $(this).addClass('hovered');
-            window.location.href = $(this).find('postion-relative').attr('href');
-        })
+                $(this).addClass('hovered');
+            });
+        <?php } ?>
     });
 </script>
