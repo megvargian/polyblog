@@ -45,7 +45,7 @@ if(!isMob()){ ?>
         </div>
     </section>
 <?php } else { ?>
-    <section class="py-4 contact-us-section d-md-none">
+    <section class="py-4 contact-us-section d-lg-none">
         <div class="container d-block">
             <form action="/" class="p-3 py-5 position-relative">
                 <div class="swiper contact-us-swiper-mobile">
