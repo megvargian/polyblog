@@ -4,7 +4,6 @@
  */
 
 $single_author_article_swiper_block = get_fields();
-$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section class="py-5 single-author-article-swiper-section">
     <div class="container position-relative">
@@ -66,13 +65,13 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                 </div>
             </div>
             <?php
-                if(!$isMob){
+                if(!isMob()){
             ?>
                 <div class="d-lg-flex d-none swiper-button-prev swiper-button-prev-last-part"></div>
                 <div class="d-lg-flex d-none swiper-button-next swiper-button-next-last-part"></div>
             <?php } ?>
         </div>
-        <?php if($isMob){ ?>
+        <?php if(isMob()){ ?>
             <div class="d-lg-none d-flex swiper-button-prev swiper-button-prev-last-part" style="top: 100%;"></div>
             <div class="d-lg-none d-flex swiper-button-next swiper-button-next-last-part" style="top: 100%;"></div>
         <?php } ?>

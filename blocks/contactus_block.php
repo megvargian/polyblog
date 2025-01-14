@@ -4,7 +4,6 @@
  */
 
 $contactus_fields = get_fields();
-$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
     <div class="container-fluid">

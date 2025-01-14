@@ -427,3 +427,7 @@ function trim_words_with_limits($text, $word_limit = 20) {
     $words = wp_trim_words($text, $word_limit, '...');
     return $words;
 }
+
+function isMob(){
+    return is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+}
