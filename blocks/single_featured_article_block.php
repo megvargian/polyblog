@@ -130,12 +130,12 @@ if ($featured_articles): ?>
             </div>
             <div class="swiper-pagination"></div>
         </div>
-    </section>
-    <div class="container d-lg-none d-flex">
-        <div class="row">
-            <div class="white-line"></div>
+        <div class="container d-lg-none d-flex py-4">
+            <div class="row">
+                <div class="white-line"></div>
+            </div>
         </div>
-    </div>
+    </section>
 <script>
 	jQuery(document).ready(function ($) {
         var swiper = new Swiper('.swiper-featured-articles-block', {

@@ -250,11 +250,6 @@
 		a{
 			justify-content: space-between;
 		}
-		.white-line{
-			width: 100%;
-			border-bottom: 5px solid #fff;
-			margin: 0;
-		}
 	}
 	.single-author-article-swiper-section{
 		.single-author-img{
@@ -307,6 +302,11 @@
 			border-radius: 10px;
 			float: right;
 			margin-top: 15px;
+		}
+		.white-line{
+			width: 100%;
+			border-bottom: 5px solid #fff;
+			margin: 0;
 		}
 	}
 	.youtube-playlist-bg {
@@ -392,6 +392,9 @@
 		  }
 	}
 	.single-featured-article-container {
+		.align-text-arabic{
+			text-align-last: start;
+		}
 		a {
 		  line-height: 1.2;
 		  font-size: 1.4rem;

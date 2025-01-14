@@ -284,11 +284,6 @@
   .site-title a {
     justify-content: space-between;
   }
-  .site-title .white-line {
-    width: 100%;
-    border-bottom: 5px solid #fff;
-    margin: 0;
-  }
   .single-author-article-swiper-section .single-author-img {
     width: 200px;
   }
@@ -335,6 +330,11 @@
     border-radius: 10px;
     float: right;
     margin-top: 15px;
+  }
+  .swiper-featured-articles-block .white-line {
+    width: 100%;
+    border-bottom: 5px solid #fff;
+    margin: 0;
   }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider {
     display: flex;
@@ -411,6 +411,9 @@
     color: #000;
     background-color: #f0eaea;
     font-size: 1rem;
+  }
+  .single-featured-article-container .align-text-arabic {
+    text-align-last: start;
   }
   .single-featured-article-container a {
     line-height: 1.2;
