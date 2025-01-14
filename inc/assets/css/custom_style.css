@@ -1275,6 +1275,9 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.single-post-container .author-tags-container-mobile {
+  display: none;
+}
 .single-post-container h1 {
   color: #fff;
 }

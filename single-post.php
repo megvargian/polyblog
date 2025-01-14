@@ -104,7 +104,7 @@ if (have_posts()):
                 <div class="col-8 col-sm-9">
                     <div class="row">
                         <div class="col-10 author-tags-container">
-                            <h2 class="author-name"><?php echo $author_name; ?></h2>
+                            <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>
                             <div class="tags">
                                 <p>
                                     <?php
@@ -141,6 +141,27 @@ if (have_posts()):
             </div>
             <div class="row py-4 white-divider">
                 <div class="col"></div>
+            </div>
+            <div class="row py-2 author-tags-container-mobile">
+                <div class="col">
+                    <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                </div>
+                <div class="col">
+                    <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>
+                    <div class="tags">
+                        <p>
+                            <?php
+                            $total_tags = count($tags);
+                            foreach ($tags as $index => $tag) {
+                                echo esc_html($tag->name);
+                                if ($index < $total_tags - 1) {
+                                    echo ' / ';
+                                }
+                            }
+                            ?>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="row py-2 main-content">
                 <div class="col py-2 align-text-arabic">
