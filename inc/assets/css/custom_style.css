@@ -1278,6 +1278,19 @@ body.hide_scroll {
 .single-post-container .author-tags-container-mobile {
   display: none;
 }
+.single-post-container .author-tags-container-mobile .author-name {
+  text-align: end;
+  color: #ed4101;
+}
+.single-post-container .author-tags-container-mobile .tags {
+  color: #fff;
+  text-align: end;
+}
+.single-post-container .author-tags-container-mobile .author-image {
+  width: 100%;
+  border-radius: 100%;
+  border: 5px solid #ED4101;
+}
 .single-post-container h1 {
   color: #fff;
 }
