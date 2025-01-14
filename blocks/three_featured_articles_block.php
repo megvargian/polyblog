@@ -28,7 +28,7 @@ $query = new WP_Query($args);
                     $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                     $count++;
                     ?>
-                    <div class="col-4 p-3 article-container <?php echo $count === 1 ? 'hovered' : '' ?>">
+                    <div class="col-4 p-3 article-container <?php echo $count == 2 ? 'hovered' : '' ?>">
                         <a class="position-relative" href="<?php echo $article_link; ?>" target="_blank">
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
