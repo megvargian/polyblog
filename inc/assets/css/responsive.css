@@ -106,7 +106,7 @@
   .menu_on_mobile .menu_on_mobile_wrapper .menu_on_mobile_inner_wrapper .animated_menu_el .menu_item {
     display: inline-block;
     cursor: pointer;
-    min-width: 100px;
+    min-width: 240px;
   }
   .menu_on_mobile .menu_on_mobile_wrapper .menu_on_mobile_inner_wrapper .animated_menu_el .menu_item-request-demo {
     display: inline-block;

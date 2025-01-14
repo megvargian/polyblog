@@ -712,6 +712,18 @@ body.hide_scroll {
   height: 55px;
   margin-bottom: 15px;
 }
+.footer-container .outer-phone .inner-phone a:hover .empty {
+  display: none;
+}
+.footer-container .outer-phone .inner-phone a:hover .fill {
+  display: block;
+}
+.footer-container .outer-phone .inner-phone a .empty {
+  display: block;
+}
+.footer-container .outer-phone .inner-phone a .fill {
+  display: none;
+}
 
 .three-featured-articles-block-container {
   display: block;

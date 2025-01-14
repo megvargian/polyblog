@@ -179,28 +179,44 @@
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="#">
-                                            <img class="w-100"
+                                            <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer.svg"
+                                                alt="instagram"
+                                            >
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer_fill.svg"
                                                 alt="instagram"
                                             >
                                         </a>
                                         <a href="#">
-                                            <img class="w-100"
+                                            <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer.svg"
+                                                alt="X"
+                                            >
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer_fill.svg"
                                                 alt="X"
                                             >
                                         </a>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="#">
-                                            <img class="w-100"
+                                            <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer.svg"
+                                                alt="facebook"
+                                            >
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer_fill.svg"
                                                 alt="facebook"
                                             >
                                         </a>
                                         <a href="#">
-                                            <img class="w-100"
+                                            <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer.svg"
+                                                alt="youtube"
+                                            >
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer_fill.svg"
                                                 alt="youtube"
                                             >
                                         </a>

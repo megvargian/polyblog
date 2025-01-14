@@ -726,6 +726,22 @@ body.hide_scroll {
         height: 55px;
         margin-bottom: 15px;
       }
+      a:hover{
+        .empty{
+          display: none;
+        }
+        .fill{
+          display: block;
+        }
+      }
+      a{
+        .empty{
+          display: block;
+        }
+        .fill{
+          display: none;
+        }
+      }
     }
   }
 }
