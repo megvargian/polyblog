@@ -1410,6 +1410,10 @@ body.hide_scroll {
     display: none;
 
     .author-info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       .author-name {
         text-align: end;
         color: #ed4101;

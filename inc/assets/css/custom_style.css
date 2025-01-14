@@ -1278,6 +1278,11 @@ body.hide_scroll {
 .single-post-container .author-tags-container-mobile {
   display: none;
 }
+.single-post-container .author-tags-container-mobile .author-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .single-post-container .author-tags-container-mobile .author-info-container .author-name {
   text-align: end;
   color: #ed4101;
