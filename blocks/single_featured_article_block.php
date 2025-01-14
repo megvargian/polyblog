@@ -74,12 +74,21 @@ if ($featured_articles): ?>
                     <div class="swiper-slide">
                         <div class="row single-featured-article-container py-4">
                             <div class="col-5">
-                                <a href="<?php echo esc_url($article_link); ?>">
+                                <a class="position-relative" href="<?php echo esc_url($article_link); ?>">
                                     <img class="d-block" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
+                                    <div class="categories-mobile d-lg-none d-flex">
+                                        <?php if ($categories) {
+                                            foreach ($categories as $category) { ?>
+                                                <span class="category">
+                                                    <?php echo esc_html($category->name) === 'ENGLISH' ? substr($category->name, 0, 2) : substr($category->name, 0, 1); ?>
+                                                </span>
+                                            <?php }
+                                        } ?>
+                                    </div>
                                 </a>
                             </div>
                             <div class="col-7 right-container">
-                                <div class="categories">
+                                <div class="categories d-lg-flex d-none">
                                     <?php if ($categories) {
                                         foreach ($categories as $category) { ?>
                                             <span class="category">
@@ -93,7 +102,7 @@ if ($featured_articles): ?>
                                         <?php echo esc_html($title); ?>
                                     </a>
                                 </div>
-                                <div class="author-tags">
+                                <div class="author-tags d-lg-flex d-none">
                                     <div class="author">
                                         <p><?php echo esc_html($author_name); ?></p>
                                     </div>
