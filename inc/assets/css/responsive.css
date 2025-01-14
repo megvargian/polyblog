@@ -517,7 +517,10 @@
     margin-right: 10px;
   }
   .single-post-container .single-article-header-desktop {
-    display: hidden;
+    display: none;
+  }
+  .single-post-container .single-article-header-mobile {
+    display: flex;
   }
 }
 @media (min-width: 1390px) {

@@ -1375,6 +1375,36 @@ body.hide_scroll {
     }
   }
 
+  .single-article-header-mobile {
+    display: none;
+  
+    .category-buttons {
+      justify-content: start;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .published-date {
+      text-align: end;
+      color: #ed4101
+    }
+
+    button {
+      padding: 0 12px;
+      border: none;
+      border-radius: 8px;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+      background-color: #fff;
+      color: #000;
+    }
+
+    button:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+
   h1 {
     color: #fff;
   }

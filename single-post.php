@@ -125,6 +125,20 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
+            <div class="row py-2 single-article-header-mobile">
+                <div class="col category-buttons">
+                    <?php foreach ($categories as $category) { ?>
+                        <button type="button">
+                            <?php echo $category->name == 'ENGLISH' ? 'EN' : 'ع'; ?>
+                        </button>
+                    <?php } ?>
+                </div>
+                <div class="col published-date">
+                    <?php
+                    echo '<p>' . get_the_date('d/m/Y') . '</p>';
+                    ?>
+                </div>
+            </div>
             <div class="row py-4 white-divider">
                 <div class="col"></div>
             </div>

@@ -550,7 +550,11 @@
 		}
 
 		.single-article-header-desktop {
-			display: hidden;
+			display: none;
+		}
+
+		.single-article-header-mobile {
+			display: flex;
 		}
 	}
 }
