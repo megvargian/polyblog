@@ -4,6 +4,7 @@
  */
 
 $single_author_article_swiper_block = get_fields();
+$isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section class="py-5 single-author-article-swiper-section">
     <div class="container position-relative">
@@ -64,11 +65,17 @@ $single_author_article_swiper_block = get_fields();
                     </div>
                 </div>
             </div>
-            <div class="d-lg-flex d-none swiper-button-prev swiper-button-prev-last-part"></div>
-            <div class="d-lg-flex d-none swiper-button-next swiper-button-next-last-part"></div>
+            <?php
+                if(!$isMob){
+            ?>
+                <div class="d-lg-flex d-none swiper-button-prev swiper-button-prev-last-part"></div>
+                <div class="d-lg-flex d-none swiper-button-next swiper-button-next-last-part"></div>
+            <?php } ?>
         </div>
-        <div class="d-lg-none d-flex swiper-button-prev swiper-button-prev-last-part" style="top: 100%;"></div>
-        <div class="d-lg-none d-flex swiper-button-next swiper-button-next-last-part" style="top: 100%;"></div>
+        <?php if($isMob){ ?>
+            <div class="d-lg-none d-flex swiper-button-prev swiper-button-prev-last-part" style="top: 100%;"></div>
+            <div class="d-lg-none d-flex swiper-button-next swiper-button-next-last-part" style="top: 100%;"></div>
+        <?php } ?>
         <div class="d-lg-none my-4 d-flex justify-content-center align-items-center swiper-mobile-single-author-article-pagination"></div>
     </div>
 </section>
