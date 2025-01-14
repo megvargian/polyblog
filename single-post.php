@@ -129,7 +129,7 @@ if (have_posts()):
                 <div class="col category-buttons">
                     <?php foreach ($categories as $category) { ?>
                         <button type="button">
-                            <?php echo $category->name == 'ENGLISH' ? 'EN' : 'ع'; ?>
+                            <strong><?php echo $category->name == 'ENGLISH' ? 'EN' : 'ع'; ?></strong>
                         </button>
                     <?php } ?>
                 </div>
