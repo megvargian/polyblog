@@ -296,6 +296,13 @@
 			background-color: #D9D9D9;
 			opacity: 1;
 		}
+		.read-more-btn{
+			font-size: 1rem;
+			font-family: $en-regular;
+			text-transform: uppercase;
+			padding: .5rem .7rem;
+			text-align: center;
+		}
 	}
 	.youtube-playlist-bg {
 		.swiper-pagination-youtube-production-slider{
@@ -588,6 +595,13 @@
 		.category {
 			font-size: .7rem;
 		  }
+	}
+	.swiper-featured-articles-block{
+		.read-more-btn{
+			font-size: .8rem;
+			padding: .35rem .6rem;
+			text-align: center;
+		}
 	}
 }
 @media (max-width: 470px){
