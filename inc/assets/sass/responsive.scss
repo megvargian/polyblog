@@ -417,9 +417,9 @@
 				display: none;
 			}
 			filter: blur(10px);
-			&:hover {
-				filter: blur(0px);
-			}
+		}
+		.article-container.hovered{
+			filter: blur(0px);
 		}
 	}
 }

@@ -743,15 +743,15 @@ body.hide_scroll {
   padding: 10px 10px;
   padding-bottom: 0px;
 }
-.three-featured-articles-block-container .article-container:hover {
+.three-featured-articles-block-container .article-container.hovered {
   z-index: 4;
 }
-.three-featured-articles-block-container .article-container:hover img {
+.three-featured-articles-block-container .article-container.hovered img {
   transform: scale(1.2);
   z-index: 2;
   filter: grayscale(0);
 }
-.three-featured-articles-block-container .article-container:hover .hover-text {
+.three-featured-articles-block-container .article-container.hovered .hover-text {
   background-color: #bebebe;
   transform: scale(1.2);
   filter: grayscale(0);
