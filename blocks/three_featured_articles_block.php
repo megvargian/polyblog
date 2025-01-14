@@ -45,13 +45,13 @@ $query = new WP_Query($args);
 </section>
 
 <script>
-    $(document).ready(function () {
+	jQuery(document).ready(function ($) {
         $('.article-container').hover(
             function () {
-            $(this).addClass('hovered'); // Add class on hover
+                $(this).addClass('hovered'); // Add class on hover
             },
             function () {
-            $(this).removeClass('hovered'); // Remove class when mouse leaves
+                $(this).removeClass('hovered'); // Remove class when mouse leaves
             }
         );
     });
