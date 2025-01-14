@@ -438,6 +438,7 @@
   }
   .three-featured-articles-block-container .article-container.hovered {
     filter: blur(0px);
+    scale: 1.2;
   }
 }
 @media (max-width: 767px) {
