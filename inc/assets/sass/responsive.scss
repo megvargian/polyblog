@@ -250,6 +250,11 @@
 		a{
 			justify-content: space-between;
 		}
+		.white-line{
+			width: 100%;
+			border-bottom: 5px solid #fff;
+			margin: 0;
+		}
 	}
 	.single-author-article-swiper-section{
 		.single-author-img{
@@ -304,9 +309,8 @@
 			margin-top: 15px;
 		}
 		.white-line{
+			border-bottom: 10px solid #fff;
 			width: 100%;
-			border-bottom: 5px solid #fff;
-			margin: 0;
 		}
 	}
 	.youtube-playlist-bg {

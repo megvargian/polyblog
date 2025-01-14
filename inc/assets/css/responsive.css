@@ -284,6 +284,11 @@
   .site-title a {
     justify-content: space-between;
   }
+  .site-title .white-line {
+    width: 100%;
+    border-bottom: 5px solid #fff;
+    margin: 0;
+  }
   .single-author-article-swiper-section .single-author-img {
     width: 200px;
   }
@@ -332,9 +337,8 @@
     margin-top: 15px;
   }
   .swiper-featured-articles-block .white-line {
+    border-bottom: 10px solid #fff;
     width: 100%;
-    border-bottom: 5px solid #fff;
-    margin: 0;
   }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider {
     display: flex;
