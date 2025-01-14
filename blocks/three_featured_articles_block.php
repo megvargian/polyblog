@@ -48,6 +48,7 @@ $query = new WP_Query($args);
 	jQuery(document).ready(function ($) {
         $('.article-container').hover(
             function () {
+                $('.article-container').removeClass('hovered');
                 $(this).addClass('hovered'); // Add class on hover
             },
             function () {
