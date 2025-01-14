@@ -416,6 +416,13 @@
     line-height: 1.2;
     font-size: 1.4rem;
   }
+  .single-featured-article-container .right-container {
+    direction: rtl;
+    text-align: right;
+  }
+  .single-featured-article-container .right-container .title {
+    text-align: right;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
