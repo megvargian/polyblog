@@ -393,6 +393,10 @@
     text-align: center;
     font-size: 10px;
   }
+  .single-featured-article-container a {
+    line-height: 1.2;
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -530,6 +534,9 @@
   }
   .single-post-container .author-tags-container-mobile {
     display: flex;
+  }
+  .single-featured-article-container a {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1390px) {
