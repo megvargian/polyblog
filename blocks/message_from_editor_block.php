@@ -11,7 +11,7 @@ $message_from_deitor_fields = get_fields();
         <div class="container">
             <div class="row justify-content-between d-flex">
                 <div class="col text-right">
-                    <h4>A Message from <br> the editor</h4>
+                    <h4 class="en-bold">A Message from <br> the editor</h4>
                 </div>
                 <div class="col">
                     <div class="d-flex justify-content-center align-items-center">
