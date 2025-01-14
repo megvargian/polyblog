@@ -79,7 +79,7 @@ if ($featured_articles): ?>
                                     <div class="categories-mobile d-lg-none d-flex">
                                         <?php if ($categories) {
                                             foreach ($categories as $category) { ?>
-                                                <span class="category">
+                                                <span class="category mx-2">
                                                     <?php echo esc_html($category->name) === 'ENGLISH' ? substr($category->name, 0, 2) : mb_substr($category->name, 0, 1, "UTF-8"); ?>
                                                 </span>
                                             <?php }
