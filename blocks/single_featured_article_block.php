@@ -131,9 +131,7 @@ if ($featured_articles): ?>
             <div class="swiper-pagination"></div>
         </div>
         <div class="container d-lg-none d-flex py-4">
-            <div class="row">
-                <div class="white-line"></div>
-            </div>
+            <div class="white-line" style="border-bottom: 5px solid #fff; width: 100%"></div>
         </div>
     </section>
 <script>
