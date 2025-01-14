@@ -53,10 +53,12 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $('.article-container').removeClass('hovered');
                     $(this).addClass('hovered'); // Add class on hover
                     $(this).find('postion-relative').attr('disabled', false);
+                    console.log($(this).find('postion-relative').attr('href'));
                 },
                 function () {
                     $(this).removeClass('hovered'); // Remove class when mouse leaves
                     $(this).find('postion-relative').attr('disabled', true);
+                    console.log($(this).find('postion-relative').attr('href'));
                 }
             );
         <?php } else {?>
@@ -64,6 +66,8 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                 $('.article-container').removeClass('hovered');
                 $(this).find('postion-relative').attr('disabled', false);
                 $(this).addClass('hovered');
+                console.log($(this).find('postion-relative').attr('href'));
+                window.location.href = $(this).find('postion-relative').attr('href');
             });
         <?php } ?>
     });
