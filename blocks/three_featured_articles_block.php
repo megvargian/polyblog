@@ -29,7 +29,7 @@ $query = new WP_Query($args);
                     $count++;
                     ?>
                     <div class="col-4 p-3 article-container <?php echo $count == 2 ? 'hovered' : '' ?>">
-                        <a class="position-relative" href="<?php echo $article_link; ?>" target="_blank">
+                        <a class="position-relative" href="<?php echo $article_link; ?>" target="_blank" disabled>
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>
@@ -50,10 +50,18 @@ $query = new WP_Query($args);
             function () {
                 $('.article-container').removeClass('hovered');
                 $(this).addClass('hovered'); // Add class on hover
+                $(this).find('postion-relative').attr('disabled', false);
             },
             function () {
                 $(this).removeClass('hovered'); // Remove class when mouse leaves
+                $(this).find('postion-relative').attr('disabled', true);
             }
         );
+        $('.article-container').click(function() {
+            $('.article-container').removeClass('hovered');
+            $(this).find('postion-relative').attr('disabled', false);
+            $(this).addClass('hovered');
+            window.location.href = $(this).find('postion-relative').attr('href');
+        })
     });
 </script>
