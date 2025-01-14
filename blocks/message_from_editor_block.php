@@ -39,12 +39,12 @@ $message_from_deitor_fields = get_fields();
             </div>
         </div>
         <div class="row d-flex d-lg-none">
-            <div class="col-9 justify-content-center align-items-center d-flex">
+            <div class="col-md-9 col-7 justify-content-center align-items-center d-flex">
                <p class="ar">
                     <?php echo $message_from_deitor_fields['ar_text']; ?>
                </p>
             </div>
-            <div class="col-3 justify-content-center d-flex">
+            <div class="col-md-3 col-5 justify-content-center d-flex">
                 <img src="<?php echo $message_from_deitor_fields['middle_profile_image'];?>" alt="profile">
             </div>
         </div>
