@@ -411,6 +411,17 @@
 			}
 		}
 	}
+	.three-featured-articles-block-container {
+		.article-container {
+			.hover-text{
+				display: none;
+			}
+			filter: blur(10px);
+			&:hover {
+				filter: blur(0px);
+			}
+		}
+	}
 }
 
 @media (max-width: 767px){

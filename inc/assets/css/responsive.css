@@ -430,6 +430,15 @@
   .single-featured-article-container .right-container .title {
     text-align: right;
   }
+  .three-featured-articles-block-container .article-container {
+    filter: blur(10px);
+  }
+  .three-featured-articles-block-container .article-container .hover-text {
+    display: none;
+  }
+  .three-featured-articles-block-container .article-container:hover {
+    filter: blur(0px);
+  }
 }
 @media (max-width: 767px) {
   .site-title {
