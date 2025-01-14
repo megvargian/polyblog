@@ -180,13 +180,13 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="#">
                                             <img class="w-100"
-                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/instagram.svg"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer.svg"
                                                 alt="instagram"
                                             >
                                         </a>
                                         <a href="#">
                                             <img class="w-100"
-                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/X.svg"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer.svg"
                                                 alt="X"
                                             >
                                         </a>
@@ -194,13 +194,13 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="#">
                                             <img class="w-100"
-                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/facebook.svg"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer.svg"
                                                 alt="facebook"
                                             >
                                         </a>
                                         <a href="#">
                                             <img class="w-100"
-                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/youtube.svg"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer.svg"
                                                 alt="youtube"
                                             >
                                         </a>
