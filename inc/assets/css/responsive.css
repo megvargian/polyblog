@@ -389,9 +389,6 @@
   .site-title {
     font-size: 2rem;
   }
-  .site-title .white-line {
-    display: none;
-  }
   .message-for-editor-section p {
     font-size: 1rem;
   }
@@ -474,6 +471,9 @@
 @media (max-width: 575px) {
   .site-title {
     font-size: 1.5rem;
+  }
+  .site-title .white-line {
+    display: none;
   }
   .single-author-article-swiper-section .single-author-img {
     width: 100%;

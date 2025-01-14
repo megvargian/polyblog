@@ -368,10 +368,6 @@
 @media (max-width: 767px){
 	.site-title {
 		font-size: 2rem;
-
-		.white-line{
-			display: none;
-		  }
 	}
 	.message-for-editor-section{
 		p{
@@ -478,6 +474,10 @@
 @media (max-width: 575px){
 	.site-title {
 		font-size: 1.5rem;
+
+		.white-line{
+			display: none;
+		  }
 	}
 
 	.single-author-article-swiper-section{
