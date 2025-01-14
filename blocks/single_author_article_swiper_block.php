@@ -76,14 +76,14 @@ $single_author_article_swiper_block = get_fields();
     jQuery(document).ready(function ($) {
         var swiper = new Swiper('.single-author-article-swiper', {
             slidesPerView: 1,
-            navigation: {
-                nextEl: '.swiper-button-next-last-part',
-                prevEl: '.swiper-button-prev-last-part',
-            },
-                pagination: {
+            pagination: {
                 el: '.swiper-mobile-single-author-article-pagination',
                 type: 'bullets',
                 clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next-last-part',
+                prevEl: '.swiper-button-prev-last-part',
             },
         });
     });
