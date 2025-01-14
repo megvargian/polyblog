@@ -922,6 +922,21 @@ body.hide_scroll {
 .author-block-container .single-author-col .single-author-container:hover .author-image img {
   filter: sepia(0.45) hue-rotate(-48deg) saturate(16) brightness(2);
 }
+.author-block-container .single-red-border {
+  border: 4px solid #621A01;
+  border-radius: 20px;
+}
+.author-block-container .single-red-border-left {
+  border-left: 4px solid #621A01;
+  border-radius: 20px;
+}
+.author-block-container .single-author-img {
+  border-radius: 100%;
+  border: 4px solid #621A01;
+  width: 400px;
+  mix-blend-mode: luminosity;
+  background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
+}
 
 .message-for-editor-section .container-fluid {
   background-color: #ec4100;

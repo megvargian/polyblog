@@ -956,11 +956,9 @@ body.hide_scroll {
 // author block section
 .author-block-container {
   color: #ec4100;
-
   .single-author-col {
     display: flex;
     justify-content: center;
-
     .single-author-container {
       display: inline-block;
       text-align: center;
@@ -979,7 +977,6 @@ body.hide_scroll {
           transition: filter 0.1s ease;
         }
       }
-
       p {
         margin: 0;
       }
@@ -995,6 +992,21 @@ body.hide_scroll {
         }
       }
     }
+  }
+  .single-red-border{
+    border: 4px solid #621A01;
+    border-radius: 20px;
+  }
+  .single-red-border-left{
+    border-left: 4px solid #621A01;
+    border-radius: 20px;
+  }
+  .single-author-img {
+    border-radius: 100%;
+    border: 4px solid #621A01;
+    width: 400px;
+    mix-blend-mode: luminosity;
+    background-color: rgba(236, 164, 165, 0.5); /* Overlay color */
   }
 }
 
