@@ -77,7 +77,7 @@ if(!isMob()){ ?>
                                             <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/X_logo_mobile.svg" alt="X">
                                         </li>
                                         <li class="">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_mobile.svg" alt="X">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-mobile.svg" alt="X">
                                         </li>
                                     </ul>
                                 </div>
