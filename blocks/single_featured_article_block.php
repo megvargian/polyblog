@@ -102,7 +102,7 @@ if ($featured_articles): ?>
                                         <?php echo esc_html($title); ?>
                                     </a>
                                     <a class="d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
-                                        <?php echo trim_words_with_limits(get_the_excerpt($article), 15); ?>
+                                        <?php echo trim_words_with_limits(get_the_excerpt($article), 25); ?>
                                     </a>
                                     <a class="read-more-btn d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
                                         read more
@@ -131,6 +131,11 @@ if ($featured_articles): ?>
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    <div class="container d-lg-none d-flex">
+        <div class="row">
+            <div class="white-line"></div>
+        </div>
+    </div>
 <script>
 	jQuery(document).ready(function ($) {
         var swiper = new Swiper('.swiper-featured-articles-block', {

@@ -424,6 +424,10 @@ body.hide_scroll {
   flex-direction: row;
   background-color: #131313;
   font-family: $en-regular;
+  .white-line{
+    border-bottom: 5px solid #fff;
+    width: 100%;
+  }
 
   a {
     line-height: 0;
@@ -1324,12 +1328,12 @@ body.hide_scroll {
       justify-content: start;
       align-items: center;
       gap: 8px;
-  
+
       .published-date {
         margin-top: 8px;
         color: #ed4101
       }
-  
+
       button {
         padding: 0 12px;
         border: none;
@@ -1337,17 +1341,17 @@ body.hide_scroll {
         opacity: 1;
         transition: 0.3s ease-in-out;
       }
-  
+
       button:hover {
         opacity: 0.8;
         transition: 0.3s;
       }
-  
+
       .english {
         background-color: #ed4101;
         color: #fff;
       }
-  
+
       .arabic {
         background-color: #fff;
         color: #000;
@@ -1356,12 +1360,12 @@ body.hide_scroll {
 
     .author-tags-container {
       align-content: center;
-  
+
       .author-name {
         text-align: end;
         color: #ed4101;
       }
-  
+
       .tags {
         color: #fff;
         text-align: end;
@@ -1377,7 +1381,7 @@ body.hide_scroll {
 
   .single-article-header-mobile {
     display: none;
-  
+
     .category-buttons {
       justify-content: start;
       align-items: center;
@@ -1418,7 +1422,7 @@ body.hide_scroll {
         text-align: end;
         color: #ed4101;
       }
-  
+
       .tags {
         color: #fff;
         text-align: end;
