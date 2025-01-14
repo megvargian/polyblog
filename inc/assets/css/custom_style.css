@@ -1278,11 +1278,11 @@ body.hide_scroll {
 .single-post-container .author-tags-container-mobile {
   display: none;
 }
-.single-post-container .author-tags-container-mobile .author-name {
+.single-post-container .author-tags-container-mobile .author-info-container .author-name {
   text-align: end;
   color: #ed4101;
 }
-.single-post-container .author-tags-container-mobile .tags {
+.single-post-container .author-tags-container-mobile .author-info-container .tags {
   color: #fff;
   text-align: end;
 }

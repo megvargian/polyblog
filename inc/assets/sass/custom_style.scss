@@ -1409,14 +1409,16 @@ body.hide_scroll {
   .author-tags-container-mobile {
     display: none;
 
-    .author-name {
-      text-align: end;
-      color: #ed4101;
-    }
-
-    .tags {
-      color: #fff;
-      text-align: end;
+    .author-info-container {
+      .author-name {
+        text-align: end;
+        color: #ed4101;
+      }
+  
+      .tags {
+        color: #fff;
+        text-align: end;
+      }
     }
 
     .author-image {

@@ -146,7 +146,7 @@ if (have_posts()):
                 <div class="col">
                     <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                 </div>
-                <div class="col">
+                <div class="col author-info-container">
                     <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>
                     <div class="tags">
                         <p>
