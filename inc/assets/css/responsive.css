@@ -333,6 +333,8 @@
     width: fit-content;
     background-color: #ec4100;
     border-radius: 10px;
+    float: right;
+    margin-top: 15px;
   }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider {
     display: flex;
