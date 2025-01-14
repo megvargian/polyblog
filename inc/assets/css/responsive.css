@@ -389,6 +389,9 @@
   .site-title {
     font-size: 2rem;
   }
+  .site-title .white-line {
+    display: none;
+  }
   .message-for-editor-section p {
     font-size: 1rem;
   }

@@ -368,6 +368,10 @@
 @media (max-width: 767px){
 	.site-title {
 		font-size: 2rem;
+
+		.white-line{
+			display: none;
+		  }
 	}
 	.message-for-editor-section{
 		p{
