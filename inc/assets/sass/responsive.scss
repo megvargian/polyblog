@@ -423,16 +423,22 @@
 			scale: 1.2;
 		}
 	}
+	.message-for-editor-section {
+		.container-fluid {
+			img{
+				height: auto;
+				width: 100%;
+			}
+			p{
+				font-size: 1rem;
+			}
+		}
+	}
 }
 
 @media (max-width: 767px){
 	.site-title {
 		font-size: 2rem;
-	}
-	.message-for-editor-section{
-		p{
-			font-size: 1rem;
-		}
 	}
 	.footer-container{
 		button{
@@ -557,8 +563,10 @@
 	}
 
 	.message-for-editor-section{
-		p{
-			font-size: .8rem;
+		.container-fluid{
+			p{
+				font-size: .8rem;
+			}
 		}
 	}
 	.footer-container{

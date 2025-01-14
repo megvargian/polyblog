@@ -440,13 +440,17 @@
     filter: blur(0px);
     scale: 1.2;
   }
+  .message-for-editor-section .container-fluid img {
+    height: auto;
+    width: 100%;
+  }
+  .message-for-editor-section .container-fluid p {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
     font-size: 2rem;
-  }
-  .message-for-editor-section p {
-    font-size: 1rem;
   }
   .footer-container button {
     font-size: 14px;
@@ -540,7 +544,7 @@
   .single-featured-article-container .title {
     font-size: 1rem !important;
   }
-  .message-for-editor-section p {
+  .message-for-editor-section .container-fluid p {
     font-size: 0.8rem;
   }
   .footer-container button {
