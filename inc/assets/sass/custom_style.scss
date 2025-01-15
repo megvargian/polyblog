@@ -886,6 +886,21 @@ body.hide_scroll {
       white-space: pre-wrap; /* Preserve line breaks in placeholder */
     }
   }
+  .langs-desktop{
+    button{
+      border: none;
+      border-radius: 20px;
+      padding: .75rem 1rem;
+      font-size: 1rem;
+      background-color: white;
+      color: #141213;
+      text-transform: uppercase;
+    }
+    button.active{
+      background-color: #ec4100;
+      color: #fff;
+    }
+  }
   .select2-results{
     margin: 0 15px !important;
   }

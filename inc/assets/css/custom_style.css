@@ -818,6 +818,19 @@ body.hide_scroll {
   line-height: 1.2; /* Adjust line height for spacing */
   white-space: pre-wrap; /* Preserve line breaks in placeholder */
 }
+.contact-us-section .langs-desktop button, .contact-us-section-light .langs-desktop button {
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #141213;
+  text-transform: uppercase;
+}
+.contact-us-section .langs-desktop button.active, .contact-us-section-light .langs-desktop button.active {
+  background-color: #ec4100;
+  color: #fff;
+}
 .contact-us-section .select2-results, .contact-us-section-light .select2-results {
   margin: 0 15px !important;
 }
