@@ -41,7 +41,7 @@ if(!isMob()){ ?>
                         </button>
                     </div>
                 </div> -->
-                <?php do_shortcode('[contact-form-7 id="2989a8c" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="2989a8c" title="Contact form 1"]'); ?>
                 <div class="contact_success_message">
                     <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
                 </div>
