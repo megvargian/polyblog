@@ -887,7 +887,7 @@ body.hide_scroll {
     }
   }
   .langs-desktop{
-    button{
+    p{
       border: none;
       border-radius: 20px;
       padding: .75rem 1rem;
@@ -895,8 +895,9 @@ body.hide_scroll {
       background-color: white;
       color: #141213;
       text-transform: uppercase;
+      cursor: pointer;
     }
-    button.active{
+    p.active{
       background-color: #ec4100;
       color: #fff;
     }

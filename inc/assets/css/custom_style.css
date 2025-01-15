@@ -818,7 +818,7 @@ body.hide_scroll {
   line-height: 1.2; /* Adjust line height for spacing */
   white-space: pre-wrap; /* Preserve line breaks in placeholder */
 }
-.contact-us-section .langs-desktop button, .contact-us-section-light .langs-desktop button {
+.contact-us-section .langs-desktop p, .contact-us-section-light .langs-desktop p {
   border: none;
   border-radius: 20px;
   padding: 0.75rem 1rem;
@@ -826,8 +826,9 @@ body.hide_scroll {
   background-color: white;
   color: #141213;
   text-transform: uppercase;
+  cursor: pointer;
 }
-.contact-us-section .langs-desktop button.active, .contact-us-section-light .langs-desktop button.active {
+.contact-us-section .langs-desktop p.active, .contact-us-section-light .langs-desktop p.active {
   background-color: #ec4100;
   color: #fff;
 }
