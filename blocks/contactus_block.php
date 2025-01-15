@@ -176,8 +176,8 @@ jQuery(document).ready(function($) {
         if($(this).hasClass('active')){
             $('.hidden-input').attr('value', get_selected_langs + " " + $('.hidden-input').attr('value') );
         } else {
-            let currentInput=$('.hidden-input').attr('value');
-            let removedLangInput = currentInput.replace(get_selected_langs, '');
+            var currentInput=$('.hidden-input').attr('value');
+            var removedLangInput = currentInput.replace(get_selected_langs, '');
             $('.hidden-input').attr('value', currentInput);
         }
     })
