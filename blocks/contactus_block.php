@@ -7,7 +7,6 @@ $contactus_fields = get_fields();
 if(!isMob()){ ?>
     <section class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
         <div class="container-fluid">
-            <form action="/">
                 <!-- <div class="row justify-content-center">
                     <div class="col-5">
                         <input type="text" placeholder="your Name" required>
@@ -41,16 +40,15 @@ if(!isMob()){ ?>
                         </button>
                     </div>
                 </div> -->
-                <div class="form_validation_parent">
-					<?php echo do_shortcode('[contact-form-7 id="2989a8c" title="Contact form 1"]') ?>
-					<div class="contact_success_message">
-						<?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
-					</div>
-					<div class="contact_fail_message">
-						<?php //echo __('An error has occurred. Please try again!', 'contactuspage')?>
-					</div>
-				</div>
-            </form>
+            <div class="form_validation_parent">
+                <?php echo do_shortcode('[contact-form-7 id="2989a8c" title="Contact form 1"]') ?>
+                <div class="contact_success_message">
+                    <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
+                </div>
+                <div class="contact_fail_message">
+                    <?php //echo __('An error has occurred. Please try again!', 'contactuspage')?>
+                </div>
+            </div>
         </div>
     </section>
 <?php } else { ?>
