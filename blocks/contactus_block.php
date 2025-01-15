@@ -8,7 +8,7 @@ if(!isMob()){ ?>
     <section class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
         <div class="container-fluid">
             <form action="/">
-                <div class="row justify-content-center">
+                <!-- <div class="row justify-content-center">
                     <div class="col-5">
                         <input type="text" placeholder="your Name" required>
                         <input type="email" placeholder="email Address" required>
@@ -40,6 +40,13 @@ if(!isMob()){ ?>
                             <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
                         </button>
                     </div>
+                </div> -->
+                <?php do_shortcode('[contact-form-7 id="2989a8c" title="Contact form 1"]'); ?>
+                <div class="contact_success_message">
+                    <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
+                </div>
+                <div class="contact_fail_message">
+                    <?php //echo __('An error has occurred. Please try again!', 'contactuspage')?>
                 </div>
             </form>
         </div>
@@ -166,5 +173,34 @@ jQuery(document).ready(function($) {
     $('.langs button').on('click', function () {
         $(this).toggleClass('active');
     })
+    var cf7form = $('.wpcf7');
+    if (cf7form) {
+        $(cf7form).each(function(index, el) {
+            if (el) {
+                $(el).find('form').submit(function(event) {
+                    $(el).find('form').find('.wpcf7-submit').addClass('disabled');
+                    $(el).parents('.form_validation_parent').find('.contact_success_message').hide();
+                    $(el).parents('.form_validation_parent').find('.contact_fail_message').hide();
+                });
+                el.addEventListener( 'wpcf7mailsent', function( event ) {
+                    $(el).parents('.form_validation_parent').find('.contact_success_message').slideDown(300);
+                    $(el).parents('.form_validation_parent').find('.wpcf7-response-output').slideDown(300);
+
+                }, false );
+                el.addEventListener( 'wpcf7mailfailed', function( event ) {
+                    $(el).find('form').find('.wpcf7-submit').removeClass('disabled');
+                    $(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
+                }, false );
+                el.addEventListener( 'wpcf7spam', function( event ) {
+                    $(el).find('form').find('.wpcf7-submit').removeClass('disabled');
+                    $(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
+                }, false );
+                el.addEventListener( 'wpcf7invalid', function( event ) {
+                    $(el).find('form').find('.wpcf7-submit').removeClass('disabled');
+                    $(el).parents('.form_validation_parent').find('.contact_fail_message').slideDown(300);
+                }, false );
+            }
+        });
+    }
 });
 </script>
