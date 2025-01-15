@@ -794,7 +794,6 @@ body.hide_scroll {
   color: #fff;
 }
 .contact-us-section label, .contact-us-section-light label {
-  width: 330px !important;
   margin-right: 15px !important;
 }
 .contact-us-section .select2-search__field, .contact-us-section-light .select2-search__field {
