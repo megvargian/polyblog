@@ -825,6 +825,7 @@ body.hide_scroll {
   justify-content: center;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 .contact-us-section .select-language select, .contact-us-section-light .select-language select {
   width: 100%;
