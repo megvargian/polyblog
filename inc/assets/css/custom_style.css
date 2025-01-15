@@ -818,6 +818,11 @@ body.hide_scroll {
 .contact-us-section .select2-results, .contact-us-section-light .select2-results {
   margin: 0 15px !important;
 }
+.contact-us-section .select-language p, .contact-us-section-light .select-language p {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 .contact-us-section .select-language select, .contact-us-section-light .select-language select {
   width: 100%;
   padding: 10px;
