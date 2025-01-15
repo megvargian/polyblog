@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
             console.log(currentInput)
             var removedLangInput = currentInput.replace(get_selected_langs, '');
             console.log(removedLangInput)
-            $('.hidden-input').attr('value', currentInput);
+            $('.hidden-input').attr('value', removedLangInput);
         }
     })
     $('.langs button').on('click', function () {
