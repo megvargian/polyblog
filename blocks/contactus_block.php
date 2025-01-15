@@ -170,8 +170,10 @@ jQuery(document).ready(function($) {
     $('.next-button').on('click', function () {
         swiperMobileContactForm.slideNext();
     });
-    $('.langs-desktop button').on('click', function () {
+    $('.langs-desktop p').on('click', function () {
         $(this).toggleClass('active');
+        var get_selected_langs = $(this).text();
+        $('.hidden-input').attr('value', $('.hidden-input').attr('value') + " " + get_selected_langs);
     })
     $('.langs button').on('click', function () {
         $(this).toggleClass('active');
