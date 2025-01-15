@@ -176,8 +176,10 @@ jQuery(document).ready(function($) {
         if($(this).hasClass('active')){
             $('.hidden-input').attr('value', get_selected_langs + " " + $('.hidden-input').attr('value') );
         } else {
-            var currentInput=$('.hidden-input').attr('value');
+            var currentInput = $('.hidden-input').attr('value');
+            console.log(currentInput)
             var removedLangInput = currentInput.replace(get_selected_langs, '');
+            console.log(removedLangInput)
             $('.hidden-input').attr('value', currentInput);
         }
     })
