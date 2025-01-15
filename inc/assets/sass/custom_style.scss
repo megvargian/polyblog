@@ -873,6 +873,9 @@ body.hide_scroll {
     color: #fff;
   }
   .custom-text-size-for-placeholder {
+    p{
+      height: 100%;
+    }
     textarea::placeholder {
       font-size: 4rem;
       color: white; /* White text for placeholder */

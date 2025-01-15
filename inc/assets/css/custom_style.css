@@ -806,6 +806,9 @@ body.hide_scroll {
 .contact-us-section input::placeholder, .contact-us-section-light input::placeholder {
   color: #fff;
 }
+.contact-us-section .custom-text-size-for-placeholder p, .contact-us-section-light .custom-text-size-for-placeholder p {
+  height: 100%;
+}
 .contact-us-section .custom-text-size-for-placeholder textarea::placeholder, .contact-us-section-light .custom-text-size-for-placeholder textarea::placeholder {
   font-size: 4rem;
   color: white; /* White text for placeholder */
