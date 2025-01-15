@@ -174,9 +174,11 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         var get_selected_langs = $(this).text();
         if($(this).hasClass('active')){
-            $('.hidden-input').attr('value', $('.hidden-input').attr('value') + " " + get_selected_langs);
+            $('.hidden-input').attr('value', get_selected_langs + " " + $('.hidden-input').attr('value') );
         } else {
-            $('.hidden-input').attr('value', $('.hidden-input').attr('value') - get_selected_langs);
+            let currentInput=$('.hidden-input').attr('value');
+            let removedLangInput = currentInput.replace(get_selected_langs, '');
+            $('.hidden-input').attr('value', currentInput);
         }
     })
     $('.langs button').on('click', function () {
