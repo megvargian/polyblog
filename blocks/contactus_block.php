@@ -173,7 +173,11 @@ jQuery(document).ready(function($) {
     $('.langs-desktop p').on('click', function () {
         $(this).toggleClass('active');
         var get_selected_langs = $(this).text();
-        $('.hidden-input').attr('value', $('.hidden-input').attr('value') + " " + get_selected_langs);
+        if($(this).hasClass('active')){
+            $('.hidden-input').attr('value', $('.hidden-input').attr('value') + " " + get_selected_langs);
+        } else {
+            $('.hidden-input').attr('value', $('.hidden-input').attr('value') + " " - get_selected_langs);
+        }
     })
     $('.langs button').on('click', function () {
         $(this).toggleClass('active');
