@@ -54,7 +54,7 @@ if(!isMob()){ ?>
 <?php } else { ?>
     <section class="py-4 contact-us-section d-lg-none">
         <div class="container d-block">
-            <form action="/" class="p-3 py-5 position-relative">
+            <!-- <form action="/" class="p-3 py-5 position-relative">
                 <div class="swiper contact-us-swiper-mobile">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -70,7 +70,6 @@ if(!isMob()){ ?>
                                         <input type="tel" placeholder="phone number" required>
                                     </div>
                                 </div>
-                                <!-- <input type="text" placeholder="social media links if relevant" required> -->
                                 <div class="d-block mb-3">
                                     <p class="px-3 mb-2">Social media links</p>
                                     <ul class="d-flex justify-content-between align-items-center social-icons-mobile">
@@ -131,7 +130,16 @@ if(!isMob()){ ?>
                     </div>
                 </div>
                 <div class="swiper-pagination swiper-mobile-pagination"></div>
-            </form>
+            </form> -->
+            <div class="form_validation_parent">
+                <?php echo do_shortcode('[contact-form-7 id="4b6e9e7" title="Contact form Mobile"]') ?>
+                <div class="contact_success_message">
+                    <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
+                </div>
+                <div class="contact_fail_message">
+                    <?php //echo __('An error has occurred. Please try again!', 'contactuspage')?>
+                </div>
+            </div>
         </div>
     </section>
 <?php } ?>
