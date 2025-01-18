@@ -486,6 +486,7 @@
     width: 100%;
     margin: 0 5rem;
     border-radius: 30px;
+    cursor: pointer;
   }
   .contact-us-section .container form .langs button {
     border: 1px solid #ec4100;
