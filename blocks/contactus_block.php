@@ -40,7 +40,7 @@ if(!isMob()){ ?>
                         </button>
                     </div>
                 </div> -->
-            <div class="form_validation_parent p-3 py-5 position-relative">
+            <div class="form_validation_parent">
                 <?php echo do_shortcode('[contact-form-7 id="2989a8c" title="Contact form Desktop"]') ?>
                 <div class="contact_success_message">
                     <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
@@ -131,7 +131,7 @@ if(!isMob()){ ?>
                 </div>
                 <div class="swiper-pagination swiper-mobile-pagination"></div>
             </form> -->
-            <div class="form_validation_parent">
+            <div class="form_validation_parent p-3 py-5 position-relative">
                 <?php echo do_shortcode('[contact-form-7 id="4b6e9e7" title="Contact form Mobile"]') ?>
                 <div class="contact_success_message">
                     <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
