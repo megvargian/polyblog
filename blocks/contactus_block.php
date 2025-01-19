@@ -130,6 +130,20 @@ if(!isMob()){ ?>
                     </div>
                 </div>
                 <div class="swiper-pagination swiper-mobile-pagination"></div>
+                 <ul class="d-flex justify-content-between align-items-center social-icons-mobile">
+                      <li class="">
+                         <img src="https://polybloglb.com/wp-content/themes/main/inc/assets/icons/instagram_logo_mobile.svg" alt="instagram">
+                      </li>
+                      <li class="">
+                         <img src="https://polybloglb.com/wp-content/themes/main/inc/assets/icons/facebook_logo_mobile.svg" alt="facebook">
+                      </li>
+                     <li class="">
+                        <img src="https://polybloglb.com/wp-content/themes/main/inc/assets/icons/X_logo_mobile.svg" alt="X">
+                     </li>
+                     <li class="">
+                        <img src="https://polybloglb.com/wp-content/themes/main/inc/assets/icons/youtube-mobile.svg" alt="youtube">
+                     </li>
+                  </ul>
             </form> -->
             <div class="form_validation_parent position-relative">
                 <?php echo do_shortcode('[contact-form-7 id="4b6e9e7" title="Contact form Mobile"]') ?>
