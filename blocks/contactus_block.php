@@ -191,7 +191,7 @@ jQuery(document).ready(function($) {
             $('.hidden-input').attr('value', removedLangInput);
         }
     })
-    $('.langs button').on('click', function () {
+    $('.langs p').on('click', function () {
         $(this).toggleClass('active');
     })
     var cf7form = $('.wpcf7');
