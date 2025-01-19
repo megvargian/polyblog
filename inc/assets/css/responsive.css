@@ -507,6 +507,9 @@
   .contact-us-section .container form .langs p.active {
     background-color: #ec4100;
   }
+  .contact-us-section .container form .mobile-social-links li p {
+    margin-bottom: 0;
+  }
   .contact-us-section .swiper-mobile-pagination .swiper-pagination-bullet-active {
     background-color: #ec4100 !important;
   }

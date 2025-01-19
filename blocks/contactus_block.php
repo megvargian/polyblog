@@ -131,7 +131,7 @@ if(!isMob()){ ?>
                 </div>
                 <div class="swiper-pagination swiper-mobile-pagination"></div>
             </form> -->
-            <div class="form_validation_parent">
+            <div class="form_validation_parent position-relative">
                 <?php echo do_shortcode('[contact-form-7 id="4b6e9e7" title="Contact form Mobile"]') ?>
                 <div class="contact_success_message">
                     <?php //echo __('All right reserved Your message has been sent and we will contact you as soon as possible. Thank you!', 'contactuspage')?>
@@ -139,6 +139,7 @@ if(!isMob()){ ?>
                 <div class="contact_fail_message">
                     <?php //echo __('An error has occurred. Please try again!', 'contactuspage')?>
                 </div>
+                <div class="swiper-pagination swiper-mobile-pagination"></div>
             </div>
         </div>
     </section>
