@@ -178,22 +178,28 @@ jQuery(document).ready(function($) {
     $('.next-button').on('click', function () {
         swiperMobileContactForm.slideNext();
     });
-    $('.langs-desktop p').on('click', function () {
+    $('.langs-desktop p', '.langs p').on('click', function () {
         $(this).toggleClass('active');
         var get_selected_langs = $(this).text();
         if($(this).hasClass('active')){
             $('.hidden-input').attr('value', get_selected_langs + " " + $('.hidden-input').attr('value') );
         } else {
             var currentInput = $('.hidden-input').attr('value');
-            console.log(currentInput)
             var removedLangInput = currentInput.replace(get_selected_langs, '');
-            console.log(removedLangInput)
             $('.hidden-input').attr('value', removedLangInput);
         }
     })
-    $('.langs p').on('click', function () {
-        $(this).toggleClass('active');
-    })
+    // $('.langs p').on('click', function () {
+    //     $(this).toggleClass('active');
+    //     var get_selected_langs = $(this).text();
+    //     if($(this).hasClass('active')){
+    //         $('.hidden-input').attr('value', get_selected_langs + " " + $('.hidden-input').attr('value') );
+    //     } else {
+    //         var currentInput = $('.hidden-input').attr('value');
+    //         var removedLangInput = currentInput.replace(get_selected_langs, '');
+    //         $('.hidden-input').attr('value', removedLangInput);
+    //     }
+    // })
     var cf7form = $('.wpcf7');
     if (cf7form) {
         $(cf7form).each(function(index, el) {
