@@ -16,10 +16,11 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 mb-4">
                         <div class="card">
-                            <?php if (has_post_thumbnail()) : ?>
+                            <?php $article_thumbnail = get_field('article_thumbnail');
+                            if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail('medium', ['class' => 'img-fluid']); ?>
+                                        <img src="<?php echo esc_url($article_thumbnail['url']); ?>" alt="<?php echo esc_attr($article_thumbnail['alt']); ?>" class="img-fluid">
                                     </a>
                                 </div>
                             <?php endif; ?>
@@ -31,7 +32,7 @@
                             </div>
                         </div>
                     </div>
-            <?php if ($wp_query->current_post % 2 == 1) : ?>
+                    <?php if ($wp_query->current_post % 2 == 1) : ?>
         </div>
         <div class="row">
         <?php endif; ?>

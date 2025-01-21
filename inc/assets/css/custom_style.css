@@ -1471,6 +1471,9 @@ body.hide_scroll {
 .what-we-think-container .header {
   width: 100%;
 }
+.what-we-think-container .what-we-think-posts card {
+  background-color: #ed4101;
+}
 
 .align-text-arabic {
   text-align: justify;
