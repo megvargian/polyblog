@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<div class="container">
+<div class="container what-we-think-container">
     <div class="row">
         <div class="col">
-            <img src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
+            <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
         </div>
     </div>
     <div class="category-posts">
