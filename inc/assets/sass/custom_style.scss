@@ -1635,6 +1635,15 @@ body.hide_scroll {
     width: 100%;
   }
 
+  .search-input {
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: 33%;
+    }
+  }
+
   .what-we-think-posts {
     .card {
       max-width: 80%;

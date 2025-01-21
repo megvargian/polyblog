@@ -6,12 +6,12 @@
         </div>
     </div>
     <div class="row my-2">
-        <div class="col">
+        <div class="col search-input">
             <input placeholder="Search" />
         </div>
     </div>
     <div class="what-we-think-posts">
-        <div class="row my-2">
+        <div class="row my-4">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 my-2">
@@ -83,7 +83,7 @@
                     </div>
                     <?php if ($wp_query->current_post % 2 == 1) : ?>
         </div>
-        <div class="row my-2">
+        <div class="row my-4">
         <?php endif; ?>
     <?php endwhile; ?>
 <?php else : ?>
