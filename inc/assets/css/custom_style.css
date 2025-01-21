@@ -1482,8 +1482,10 @@ body.hide_scroll {
   font-weight: 700;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .category-buttons {
-  justify-content: start;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 8px;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .category-buttons button {
