@@ -7,7 +7,7 @@
     </div>
     <div class="row my-2">
         <div class="col search-input">
-            <input placeholder="Search" />
+            <input placeholder="Search bar" />
         </div>
     </div>
     <div class="what-we-think-posts">
