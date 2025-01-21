@@ -1692,6 +1692,12 @@ body.hide_scroll {
         .article-date {
           color: #fff;
         }
+
+        .author-image {
+          width: 100%;
+          border-radius: 100%;
+          border: 2px solid #000;
+        }
       }
     }
   }

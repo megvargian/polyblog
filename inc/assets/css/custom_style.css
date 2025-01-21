@@ -1518,6 +1518,11 @@ body.hide_scroll {
 .what-we-think-container .what-we-think-posts .card .card-body .article-date {
   color: #fff;
 }
+.what-we-think-container .what-we-think-posts .card .card-body .author-image {
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid #000;
+}
 
 .align-text-arabic {
   text-align: justify;

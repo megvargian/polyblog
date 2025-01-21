@@ -48,6 +48,33 @@
                                             <?php echo get_the_date('d/m/Y'); ?>
                                         </p>
                                     </div>
+                                    <?php
+                                    $author_post_id = get_field('author');
+                                    $author_id = get_post_field('post_author', $author_post_id);
+                                    $author_name = get_the_title($author_post_id);
+                                    $author_image = get_field('author_profile', $author_post_id);
+                                    $author_link = get_permalink($author_post_id);
+                                    $tags = get_the_tags();
+                                    ?>
+                                    <div class="col-6 author-info">
+                                        <h4><strong><?php echo $author_name; ?></strong></h4>
+                                        <div class="tags">
+                                            <p>
+                                                <?php
+                                                $total_tags = count($tags);
+                                                foreach ($tags as $index => $tag) {
+                                                    echo esc_html($tag->name);
+                                                    if ($index < $total_tags - 1) {
+                                                        echo ' / ';
+                                                    }
+                                                }
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
