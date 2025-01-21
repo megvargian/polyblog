@@ -1636,8 +1636,12 @@ body.hide_scroll {
   }
 
   .what-we-think-posts {
-    card {
+    .article-section {
       background-color: #ed4101;
+
+      .thumbnail {
+        width: 100%;
+      }
     }
   }
 }

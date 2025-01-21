@@ -11,16 +11,16 @@
         </div>
     </div>
     <div class="what-we-think-posts">
-        <div class="row">
+        <div class="row my-2">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <div class="col-md-6 mb-4">
-                        <div class="card">
+                    <div class="col-md-6 my-2">
+                        <div class="card article-section">
                             <?php $article_thumbnail = get_field('article_thumbnail');
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
-                                        <img src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php the_title(); ?>" class="img-fluid">
+                                        <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php the_title(); ?>" class="img-fluid">
                                     </a>
                                 </div>
                             <?php endif; ?>
@@ -34,7 +34,7 @@
                     </div>
                     <?php if ($wp_query->current_post % 2 == 1) : ?>
         </div>
-        <div class="row">
+        <div class="row my-2">
         <?php endif; ?>
     <?php endwhile; ?>
 <?php else : ?>
