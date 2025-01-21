@@ -15,7 +15,7 @@
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 my-2">
-                        <div class="card article-section">
+                        <div class="card">
                             <?php $article_thumbnail = get_field('article_thumbnail');
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
@@ -25,10 +25,28 @@
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title align-text-arabic">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h5>
-                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <?php
+                                            $categories = get_the_category();
+                                            if (!empty($categories)) {
+                                                $category_links = [];
+                                                foreach ($categories as $category) {
+                                                    $category_links[] = '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+                                                }
+                                                echo implode(', ', $category_links);
+                                            }
+                                            ?>
+                                            <p class="article-date">
+                                                <?php echo get_the_date('d/m/Y'); ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1471,11 +1471,18 @@ body.hide_scroll {
 .what-we-think-container .header {
   width: 100%;
 }
-.what-we-think-container .what-we-think-posts .article-section {
+.what-we-think-container .what-we-think-posts .card {
   background-color: #ed4101;
 }
-.what-we-think-container .what-we-think-posts .article-section .thumbnail {
+.what-we-think-container .what-we-think-posts .card .thumbnail {
   width: 100%;
+  padding: 8px;
+}
+.what-we-think-container .what-we-think-posts .card .card-title {
+  font-weight: 700;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .article-date {
+  color: #fff;
 }
 
 .align-text-arabic {

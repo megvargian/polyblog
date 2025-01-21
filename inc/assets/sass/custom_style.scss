@@ -1636,11 +1636,22 @@ body.hide_scroll {
   }
 
   .what-we-think-posts {
-    .article-section {
+    .card {
       background-color: #ed4101;
 
       .thumbnail {
         width: 100%;
+        padding: 8px;
+      }
+
+      .card-title {
+        font-weight: 700;
+      }
+
+      .card-body {
+        .article-date {
+          color: #fff;
+        }
       }
     }
   }
