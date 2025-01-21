@@ -1642,10 +1642,19 @@ body.hide_scroll {
       .thumbnail {
         width: 100%;
         padding: 8px;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
       }
 
       .card-title {
         font-weight: 700;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+
+      .thumbnail:hover, .card-title:hover {
+        opacity: 0.8;
+        transition: 0.3s;
       }
 
       .card-body {
