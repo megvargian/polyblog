@@ -28,23 +28,23 @@
                                 <h5 class="card-title align-text-arabic">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h5>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            <?php
-                                            $categories = get_the_category();
-                                            if (!empty($categories)) {
-                                                $category_links = [];
-                                                foreach ($categories as $category) {
-                                                    $category_links[] = '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
-                                                }
-                                                echo implode(', ', $category_links);
+                                <div class="row">
+                                    <div class="col-4 category-buttons">
+                                        <?php
+                                        $categories = get_the_category();
+                                        foreach ($categories as $category) {
+                                            if ($category->slug == 'arabic' || $category->slug == 'english') {
+                                        ?>
+                                                <button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
+                                                    <strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+                                                </button>
+                                        <?php
                                             }
-                                            ?>
-                                            <p class="article-date">
-                                                <?php echo get_the_date('d/m/Y'); ?>
-                                            </p>
-                                        </div>
+                                        }
+                                        ?>
+                                        <p class="article-date">
+                                            <?php echo get_the_date('d/m/Y'); ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

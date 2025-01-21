@@ -1649,6 +1649,34 @@ body.hide_scroll {
       }
 
       .card-body {
+        .category-buttons {
+          justify-content: start;
+          align-items: center;
+          gap: 8px;
+    
+          button {
+            padding: 0 12px;
+            border: none;
+            border-radius: 8px;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+          }
+    
+          button:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+    
+          .english {
+            background-color: #000;
+            color: #fff;
+          }
+    
+          .arabic {
+            background-color: #000;
+            color: #ed4101;
+          }
+        }
         .article-date {
           color: #fff;
         }

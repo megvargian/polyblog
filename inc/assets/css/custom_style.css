@@ -1481,6 +1481,30 @@ body.hide_scroll {
 .what-we-think-container .what-we-think-posts .card .card-title {
   font-weight: 700;
 }
+.what-we-think-container .what-we-think-posts .card .card-body .category-buttons {
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .category-buttons button {
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .category-buttons button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .category-buttons .english {
+  background-color: #000;
+  color: #fff;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .category-buttons .arabic {
+  background-color: #000;
+  color: #ed4101;
+}
 .what-we-think-container .what-we-think-posts .card .card-body .article-date {
   color: #fff;
 }
