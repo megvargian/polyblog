@@ -56,10 +56,10 @@
                                     $author_link = get_permalink($author_post_id);
                                     $tags = get_the_tags();
                                     ?>
-                                    <div class="col-6 author-info">
-                                        <h4><strong><?php echo $author_name; ?></strong></h4>
+                                    <div class="col-5 author-info">
+                                        <h4 class="align-text-arabic"><strong><?php echo $author_name; ?></strong></h4>
                                         <div class="tags">
-                                            <p>
+                                            <p class="align-text-arabic">
                                                 <?php
                                                 $total_tags = count($tags);
                                                 foreach ($tags as $index => $tag) {
@@ -72,7 +72,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-2">
+                                    <div class="col-3">
                                         <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
                                     </div>
                                 </div>
