@@ -1637,6 +1637,8 @@ body.hide_scroll {
 
   .what-we-think-posts {
     .card {
+      max-width: 80%;
+      justify-self: center;
       background-color: #ed4101;
 
       .thumbnail {
