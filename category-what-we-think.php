@@ -57,7 +57,7 @@
                                     $tags = get_the_tags();
                                     ?>
                                     <div class="col-5 author-info">
-                                        <h4 class="align-text-arabic"><strong><?php echo $author_name; ?></strong></h4>
+                                        <a href="<?php echo author_link; ?>"><h4 class="align-text-arabic"><strong><?php echo $author_name; ?></strong></h4></a>
                                         <div class="tags">
                                             <p class="align-text-arabic">
                                                 <?php

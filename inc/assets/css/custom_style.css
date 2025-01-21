@@ -1492,7 +1492,7 @@ body.hide_scroll {
 .what-we-think-container .what-we-think-posts .card .card-body .category-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   gap: 8px;
 }
@@ -1517,6 +1517,11 @@ body.hide_scroll {
 }
 .what-we-think-container .what-we-think-posts .card .card-body .article-date {
   color: #fff;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .author-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .author-image {
   width: 100%;

@@ -1661,7 +1661,7 @@ body.hide_scroll {
         .category-buttons {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: flex-start;
           gap: 8px;
     
@@ -1691,6 +1691,12 @@ body.hide_scroll {
 
         .article-date {
           color: #fff;
+        }
+
+        .author-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
         }
 
         .author-image {
