@@ -20,7 +20,7 @@
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
-                                        <img src="<?php echo esc_url($article_thumbnail['url']); ?>" alt="<?php echo esc_attr($article_thumbnail['alt']); ?>" class="img-fluid">
+                                        <img src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php the_title(); ?>" class="img-fluid">
                                     </a>
                                 </div>
                             <?php endif; ?>
