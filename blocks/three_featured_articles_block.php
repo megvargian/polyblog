@@ -51,7 +51,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                     <?php echo $article_title; ?>
                                 </p>
                             </div>
-                            <div class="hover-cat justify-content-end d-sm-none d-flex">
+                            <div class="hover-cat hover-cat-bottom justify-content-end d-sm-none d-flex">
                                 <div class="categories">
                                     <span class="category en-regular">
                                         EN
