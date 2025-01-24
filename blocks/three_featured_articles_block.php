@@ -30,7 +30,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $count++;
                     ?>
                     <div class="col-4 p-1 bg-gray">
-                        <a class="article-container w-100 <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
+                        <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>
