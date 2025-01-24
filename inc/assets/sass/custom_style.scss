@@ -786,10 +786,11 @@ body.hide_scroll {
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      top: -25%;
+      top: -15%;
       opacity: 0;
       background-color: transparent;
       z-index: 10;
+      width: 100%;
     }
     .cat{
       border-radius: 15px;
@@ -797,10 +798,10 @@ body.hide_scroll {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: .8rem .4rem;
+      padding: .35rem .4rem;
       background-color: #ec4100;
       span{
-        font-size: .8rem;
+        font-size: .7rem;
       }
     }
     .categories {
@@ -814,6 +815,7 @@ body.hide_scroll {
         border-radius: 12px;
         color: #000;
         background-color: #f0eaea;
+        font-size: .7rem;
       }
     }
   }

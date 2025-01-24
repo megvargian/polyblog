@@ -766,10 +766,11 @@ body.hide_scroll {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: -25%;
+  top: -15%;
   opacity: 0;
   background-color: transparent;
   z-index: 10;
+  width: 100%;
 }
 .three-featured-articles-block-container .article-container .cat {
   border-radius: 15px;
@@ -777,11 +778,11 @@ body.hide_scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0.4rem;
+  padding: 0.35rem 0.4rem;
   background-color: #ec4100;
 }
 .three-featured-articles-block-container .article-container .cat span {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .three-featured-articles-block-container .article-container .categories {
   display: flex;
@@ -794,6 +795,7 @@ body.hide_scroll {
   border-radius: 12px;
   color: #000;
   background-color: #f0eaea;
+  font-size: 0.7rem;
 }
 .three-featured-articles-block-container .article-container.hovered {
   z-index: 4;
