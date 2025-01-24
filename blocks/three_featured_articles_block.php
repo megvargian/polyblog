@@ -48,19 +48,19 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 <script>
 	jQuery(document).ready(function ($) {
         <?php if(!$isMob){ ?>
-            $('.article-container').hover(
-                function () {
-                    $('.article-container').removeClass('hovered');
-                    $(this).addClass('hovered'); // Add class on hover
-                    $(this).find('.position-relative').attr('disabled', false);
-                    console.log($(this).find('.position-relative').attr('href'));
-                },
-                function () {
-                    $(this).removeClass('hovered'); // Remove class when mouse leaves
-                    $(this).find('.position-relative').attr('disabled', true);
-                    console.log($(this).find('.position-relative').attr('href'));
-                }
-            );
+            // $('.article-container').hover(
+            //     function () {
+            //         $('.article-container').removeClass('hovered');
+            //         $(this).addClass('hovered'); // Add class on hover
+            //         $(this).find('.position-relative').attr('disabled', false);
+            //         console.log($(this).find('.position-relative').attr('href'));
+            //     },
+            //     function () {
+            //         $(this).removeClass('hovered'); // Remove class when mouse leaves
+            //         $(this).find('.position-relative').attr('disabled', true);
+            //         console.log($(this).find('.position-relative').attr('href'));
+            //     }
+            // );
         <?php } else {?>
             $('.article-container').click(function() {
                 $('.article-container').removeClass('hovered');
