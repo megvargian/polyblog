@@ -36,7 +36,7 @@ $rows = array_chunk($authors_list, 4);
         <?php } ?>
     </div>
     <div class="container d-md-none d-block">
-        <div class="row single-red-border">
+        <div class="row single-red-border mx-1">
             <div class="col-6">
                 <div class="d-flex justify-content-center align-items-center px-sm-5 px-2 h-100">
                     <div class="inner-author mx-auto">
