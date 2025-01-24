@@ -768,6 +768,7 @@ body.hide_scroll {
   position: absolute;
   top: 0;
   opacity: 0;
+  background-color: transparent;
 }
 .three-featured-articles-block-container .article-container .cat {
   border-radius: 15px;
