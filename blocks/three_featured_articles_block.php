@@ -34,7 +34,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                             <div class="hover-cat">
                                 <div class="cat">
                                     <span class="en-bold">what we think</span>
-                                    <span class="ar-regular ml-2">شو منفكر</span>
+                                    <span class="ar-regular">شو منفكر</span>
                                 </div>
                                 <div class="categories">
                                     <span class="category en-regular">

@@ -784,6 +784,9 @@ body.hide_scroll {
 .three-featured-articles-block-container .article-container .cat span {
   font-size: 0.7rem;
 }
+.three-featured-articles-block-container .article-container .cat .ar-regular {
+  margin-left: 5px;
+}
 .three-featured-articles-block-container .article-container .categories {
   display: flex;
   flex-direction: row;
