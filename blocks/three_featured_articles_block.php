@@ -29,8 +29,8 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                     $count++;
                     ?>
-                    <div class="col-4 p-3 article-container <?php echo $count == 2 ? 'hovered' : '' ?>">
-                        <a href="<?php echo $article_link; ?>" target="_blank" disabled>
+                    <div class="col-4 p-3">
+                        <a class="article-container <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
                             <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>

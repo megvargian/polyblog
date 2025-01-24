@@ -435,7 +435,7 @@
     text-align: right;
   }
   .three-featured-articles-block-container .article-container {
-    filter: blur(10px);
+    filter: blur(2px);
   }
   .three-featured-articles-block-container .article-container .hover-text {
     display: none;

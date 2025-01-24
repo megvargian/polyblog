@@ -758,14 +758,12 @@ body.hide_scroll {
     cursor: pointer;
     background-color: #bebebe;
     z-index: 2;
-
     img {
       display: block;
       width: 100%;
       transition: transform 0.3s ease, opacity 0.3s ease;
       filter: grayscale(100%);
     }
-
     .hover-text {
       position: absolute;
       opacity: 0;
@@ -778,6 +776,7 @@ body.hide_scroll {
       filter: grayscale(100%);
       padding: 10px 10px;
       padding-bottom: 0px;
+      left: 0;
     }
   }
   .article-container.hovered{

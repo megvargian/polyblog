@@ -755,6 +755,7 @@ body.hide_scroll {
   filter: grayscale(100%);
   padding: 10px 10px;
   padding-bottom: 0px;
+  left: 0;
 }
 .three-featured-articles-block-container .article-container.hovered {
   z-index: 4;
