@@ -443,6 +443,12 @@
   .three-featured-articles-block-container .article-container .hover-text {
     display: none;
   }
+  .three-featured-articles-block-container .article-container .cat span {
+    font-size: 0.4rem;
+  }
+  .three-featured-articles-block-container .article-container .categories .category {
+    font-size: 0.4rem;
+  }
   .three-featured-articles-block-container .article-container.hovered {
     filter: blur(0px);
     scale: 1.2;

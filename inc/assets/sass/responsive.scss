@@ -424,6 +424,16 @@
 				display: none;
 			}
 			filter: blur(2px);
+			.cat{
+				span{
+					font-size: .4rem;
+				}
+			}
+			.categories {
+				.category {
+				  font-size: .4rem;
+				}
+			}
 		}
 		.article-container.hovered{
 			filter: blur(0px);
