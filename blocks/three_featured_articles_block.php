@@ -36,7 +36,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                     <span class="en-bold">what we think</span>
                                     <span class="ar-regular">شو منفكر</span>
                                 </div>
-                                <div class="categories">
+                                <div class="categories d-sm-flex d-none">
                                     <span class="category en-regular">
                                         EN
                                     </span>
