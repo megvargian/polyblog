@@ -777,12 +777,13 @@ body.hide_scroll {
       padding: 10px 10px;
       padding-bottom: 0px;
       left: 0;
+      width: 100%;
     }
   }
   .article-container.hovered{
     z-index: 4;
     img {
-      transform: scale(1.2);
+      transform: scale(1.11);
       z-index: 2;
       filter: grayscale(0);
     }
