@@ -716,8 +716,17 @@
 			img{
 				transform: scale(1);
 			}
+			.hover-cat {
+				top: -14%;
+				.cat{
+					padding: .2rem .4rem;
+				}
+			}
 			.hover-cat.hover-cat-bottom {
 				top: 102% !important;
+				.categories{
+					gap: 5px;
+				}
 			}
 		}
 	}

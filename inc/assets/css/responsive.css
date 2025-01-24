@@ -653,8 +653,17 @@
   .three-featured-articles-block-container .article-container.hovered img {
     transform: scale(1);
   }
+  .three-featured-articles-block-container .article-container.hovered .hover-cat {
+    top: -14%;
+  }
+  .three-featured-articles-block-container .article-container.hovered .hover-cat .cat {
+    padding: 0.2rem 0.4rem;
+  }
   .three-featured-articles-block-container .article-container.hovered .hover-cat.hover-cat-bottom {
     top: 102% !important;
+  }
+  .three-featured-articles-block-container .article-container.hovered .hover-cat.hover-cat-bottom .categories {
+    gap: 5px;
   }
 }
 @media (max-width: 470px) {
