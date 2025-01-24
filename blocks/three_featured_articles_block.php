@@ -15,7 +15,7 @@ $args = array(
 $query = new WP_Query($args);
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
-<section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container">
+<section id="three-featured-articles-block" class="my-5 pb-sm-0 pb-5 three-featured-articles-block-container">
     <div class="container">
         <div class="row position-relative z-1 custom-desktop-padding">
             <?php
