@@ -751,6 +751,9 @@ body.hide_scroll {
 .three-featured-articles-block-container {
   display: block;
   color: #000;
+  .custom-desktop-padding{
+    padding: 8rem;
+  }
   .bg-gray{
     background-color: #bebebe;
   }

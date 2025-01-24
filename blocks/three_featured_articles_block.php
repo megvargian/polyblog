@@ -17,7 +17,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section id="three-featured-articles-block" class="my-5 three-featured-articles-block-container">
     <div class="container">
-        <div class="row position-relative z-1 p-lg-5 p-2">
+        <div class="row position-relative z-1 custom-desktop-padding">
             <?php
             $count=0;
             if ($query->have_posts()) {

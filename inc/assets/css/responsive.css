@@ -434,6 +434,9 @@
   .single-featured-article-container .right-container .title {
     text-align: right;
   }
+  .three-featured-articles-block-container .custom-desktop-padding {
+    padding: 2rem;
+  }
   .three-featured-articles-block-container .article-container {
     filter: blur(2px);
   }
