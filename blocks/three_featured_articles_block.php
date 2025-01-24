@@ -31,7 +31,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     ?>
                     <div class="col-4 p-1 bg-gray">
                         <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
-                            <img src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
+                            <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>
                                     <?php echo $article_title; ?>
@@ -48,19 +48,19 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 <script>
 	jQuery(document).ready(function ($) {
         <?php if(!$isMob){ ?>
-            // $('.article-container').hover(
-            //     function () {
-            //         $('.article-container').removeClass('hovered');
-            //         $(this).addClass('hovered'); // Add class on hover
-            //         $(this).find('.position-relative').attr('disabled', false);
-            //         console.log($(this).find('.position-relative').attr('href'));
-            //     },
-            //     function () {
-            //         $(this).removeClass('hovered'); // Remove class when mouse leaves
-            //         $(this).find('.position-relative').attr('disabled', true);
-            //         console.log($(this).find('.position-relative').attr('href'));
-            //     }
-            // );
+            $('.article-container').hover(
+                function () {
+                    $('.article-container').removeClass('hovered');
+                    $(this).addClass('hovered'); // Add class on hover
+                    $(this).find('.position-relative').attr('disabled', false);
+                    console.log($(this).find('.position-relative').attr('href'));
+                },
+                function () {
+                    $(this).removeClass('hovered'); // Remove class when mouse leaves
+                    $(this).find('.position-relative').attr('disabled', true);
+                    console.log($(this).find('.position-relative').attr('href'));
+                }
+            );
         <?php } else {?>
             $('.article-container').click(function() {
                 $('.article-container').removeClass('hovered');
