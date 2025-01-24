@@ -766,9 +766,10 @@ body.hide_scroll {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 0;
+  top: -25%;
   opacity: 0;
   background-color: transparent;
+  z-index: 10;
 }
 .three-featured-articles-block-container .article-container .cat {
   border-radius: 15px;
@@ -777,6 +778,7 @@ body.hide_scroll {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 0.4rem;
+  background-color: #ec4100;
 }
 .three-featured-articles-block-container .article-container .cat span {
   font-size: 0.8rem;

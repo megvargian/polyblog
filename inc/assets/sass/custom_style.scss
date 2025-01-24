@@ -786,9 +786,10 @@ body.hide_scroll {
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      top: 0;
+      top: -25%;
       opacity: 0;
       background-color: transparent;
+      z-index: 10;
     }
     .cat{
       border-radius: 15px;
@@ -797,6 +798,7 @@ body.hide_scroll {
       justify-content: space-between;
       align-items: center;
       padding: .8rem .4rem;
+      background-color: #ec4100;
       span{
         font-size: .8rem;
       }
