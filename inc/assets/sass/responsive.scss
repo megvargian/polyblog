@@ -306,7 +306,6 @@
 			background-color: #ec4100;
 			border-radius: 10px;
 			float: right;
-			margin-top: 15px;
 		}
 		.white-line{
 			border-bottom: 10px solid #fff;
@@ -398,6 +397,9 @@
 	.single-featured-article-container {
 		.align-text-arabic{
 			text-align-last: start;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
 		}
 		a {
 		  line-height: 1.2;
@@ -654,7 +656,7 @@
 	}
 	.single-featured-article-container {
 		a {
-		  font-size: 1.2rem;
+		  font-size: 1rem;
 		}
 	}
 	.categories-mobile{
