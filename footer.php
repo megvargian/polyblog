@@ -138,7 +138,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 col-12 px-1">
+                    <div class="col-lg-8 col-md-10 col-12 px-3">
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
                         </button>
