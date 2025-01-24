@@ -163,8 +163,8 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
-            <div class="row py-2 main-content">
-                <div class="col py-2 align-text-arabic">
+            <div class="row py-2 px-5 main-content">
+                <div class="col py-2 px-5 align-text-arabic">
                     <?php the_content(); ?>
                 </div>
             </div>

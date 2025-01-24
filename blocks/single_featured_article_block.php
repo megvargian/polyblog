@@ -75,7 +75,7 @@ if ($featured_articles): ?>
                         <div class="row single-featured-article-container py-4">
                             <div class="col-5">
                                 <a class="position-relative" href="<?php echo esc_url($article_link); ?>">
-                                    <img class="d-block" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
+                                    <img class="d-block w-100 h-100" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                                     <div class="categories-mobile d-lg-none d-flex">
                                         <?php if ($categories) {
                                             foreach ($categories as $category) { ?>
