@@ -709,15 +709,15 @@
 			.hover-cat {
 				top: -17%;
 			}
-			.hover-cat.hover-cat-bottom {
-				top: 102% !important;
-			}
 		}
 		.article-container.hovered{
 			filter: blur(0px);
 			scale: 1.9;
 			img{
 				transform: scale(1);
+			}
+			.hover-cat.hover-cat-bottom {
+				top: 102% !important;
 			}
 		}
 	}
