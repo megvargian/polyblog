@@ -31,6 +31,21 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     ?>
                     <div class="col-4 p-1 bg-gray">
                         <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
+                            <div class="hover-cat">
+                                <div class="cat">
+                                    <span class="en-regular">what we think</span>
+                                    <span class="ar-regular">شو منفكر</span>
+                                </div>
+                                <div class="categories">
+                                    <?php if ($categories) {
+                                        foreach ($categories as $category) { ?>
+                                            <span class="category">
+                                                <?php echo esc_html($category->name); ?>
+                                            </span>
+                                        <?php }
+                                    } ?>
+                                </div>
+                            </div>
                             <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
                             <div class="hover-text">
                                 <p>
