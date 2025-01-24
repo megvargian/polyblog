@@ -11,7 +11,7 @@ $message_from_deitor_fields = get_fields();
         <div class="row justify-content-between d-flex d-lg-none">
             <div class="col d-flex justify-content-start align-items-center">
                 <div class="d-flex justify-content-end align-items-center">
-                    <div class="mx-1 languages en-regular">
+                    <div class="mx-1 languages ar-regular">
                     ع
                     </div>
                     <div class="mx-1 languages en-regular">

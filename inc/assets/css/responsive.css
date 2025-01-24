@@ -571,6 +571,9 @@
   .single-author-article-swiper-section .single-red-border-right {
     border-right: 2px solid #621A01;
   }
+  .single-author-article-swiper-section .single-author-img {
+    border: 2px solid #621A01;
+  }
   .author-block-container {
     color: #ec4100;
   }
@@ -592,6 +595,7 @@
   .message-for-editor-section .container-fluid img {
     width: 200px;
     height: 200px;
+    border: 2px solid #000;
   }
   .footer-container button {
     font-size: 12px;

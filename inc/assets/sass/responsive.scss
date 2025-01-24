@@ -594,6 +594,9 @@
 		.single-red-border-right{
 		border-right: 2px solid #621A01;
 		}
+		.single-author-img {
+			border: 2px solid #621A01;
+		}
 	}
 
 	.author-block-container {
@@ -624,6 +627,7 @@
 			img{
 				width: 200px;
 				height: 200px;
+				border: 2px solid #000;
 			}
 		}
 	}
