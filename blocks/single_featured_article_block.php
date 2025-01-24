@@ -73,7 +73,7 @@ if ($featured_articles): ?>
                     ?>
                     <div class="swiper-slide">
                         <div class="row single-featured-article-container py-4">
-                            <div class="col-5">
+                            <div class="col-7">
                                 <a class="position-relative" href="<?php echo esc_url($article_link); ?>">
                                     <img class="d-block w-100 h-100" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                                     <div class="categories-mobile d-lg-none d-flex">
@@ -87,7 +87,7 @@ if ($featured_articles): ?>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-7 right-container">
+                            <div class="col-5 right-container">
                                 <div class="categories d-lg-flex d-none">
                                     <?php if ($categories) {
                                         foreach ($categories as $category) { ?>
