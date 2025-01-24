@@ -751,12 +751,13 @@ body.hide_scroll {
 .three-featured-articles-block-container {
   display: block;
   color: #000;
-
+  .bg-gray{
+    background-color: #bebebe;
+  }
   .article-container {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    background-color: #bebebe;
     z-index: 2;
     img {
       display: block;
