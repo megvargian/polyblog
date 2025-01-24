@@ -7,13 +7,13 @@ $yt_playlist_block = get_fields();
 ?>
 <section class="w-100 youtube-playlist-bg">
     <div class="container py-4">
-        <div class="row justify-content-between align-items-center">
+        <div class="row justify-content-between">
             <div class="col">
                 <h3 class="en-bold">our special <br> productions</h3>
                 <p></p>
             </div>
             <div class="col">
-                <h3 class="ar-bold">انتاجاتنـــــــــــــــــــــ <br> ـــــا الخاصـــــــــــــة</h3>
+                <h3 class="ar-bold" style="line-height: 1.27">انتاجاتنـــــــــــــــــــــ <br> ـــــا الخاصـــــــــــــة</h3>
             </div>
         </div>
         <div class="row custom-min-height">

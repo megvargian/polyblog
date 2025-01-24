@@ -1014,6 +1014,8 @@ body.hide_scroll {
 .author-block-container .single-red-border-left {
   border-left: 4px solid #621A01;
   border-radius: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .author-block-container .single-author-img {
   border-radius: 100%;
@@ -1069,6 +1071,8 @@ body.hide_scroll {
 .single-author-article-swiper-section .single-red-border-right {
   border-right: 4px solid #621A01;
   border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .single-author-article-swiper-section .single-author-img {
   border-radius: 100%;
