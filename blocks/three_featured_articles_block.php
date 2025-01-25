@@ -133,7 +133,6 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 20,
-            speed: 800,
             autoHeight: true,
             navigation: {
                 nextEl: '.swiper-button-next-last-part-three-featured-articles-block',

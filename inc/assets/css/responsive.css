@@ -453,6 +453,7 @@
     z-index: 1;
   }
   .three-featured-articles-block-container .swiper-slide-active .article-container {
+    transition: all 0.3s ease;
     filter: blur(0px);
     scale: 1.2;
   }
@@ -651,6 +652,7 @@
     top: -17%;
   }
   .three-featured-articles-block-container .swiper-slide-active .article-container {
+    transition: all 0.3s ease;
     filter: blur(0px);
     scale: 1.9;
   }

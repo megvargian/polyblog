@@ -438,6 +438,7 @@
 			overflow: visible !important;
 			z-index: 1;
 			.article-container{
+				transition: all 0.3s ease;
 				filter: blur(0px);
 				scale: 1.2;
 			}
@@ -717,6 +718,7 @@
 
 		.swiper-slide-active{
 			.article-container{
+				transition: all 0.3s ease;
 				filter: blur(0px);
 				scale: 1.9;
 				img{
