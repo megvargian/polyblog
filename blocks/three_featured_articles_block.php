@@ -16,7 +16,7 @@ $query = new WP_Query($args);
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 ?>
 <section id="three-featured-articles-block" class="my-5 pb-sm-0 pb-5 three-featured-articles-block-container">
-    <div class="container d-none d-md-block">
+    <div class="container d-none d-lg-block">
         <div class="row position-relative z-1 custom-desktop-padding">
             <?php
             $count=0;
@@ -29,7 +29,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                     $count++;
                     ?>
-                    <div class="swiper-slide p-1 bg-gray">
+                    <div class="col-4 p-1 bg-gray">
                         <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
                             <div class="hover-cat">
                                 <div class="cat">
@@ -67,7 +67,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             <?php } ?>
         </div>
     </div>
-    <div class="container d-md-none d-block">
+    <div class="container d-lg-none d-block">
        <div class="row position-relative">
             <div class="swiper three-featured-articles-block-swiper">
                 <div class="swiper-wrapper">
@@ -82,7 +82,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                 $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                                 $count++;
                                 ?>
-                                <div class="col-4 p-1 bg-gray">
+                                <div class="swiper-slide p-1 bg-gray">
                                     <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
                                         <div class="hover-cat">
                                             <div class="cat">
