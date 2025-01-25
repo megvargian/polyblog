@@ -435,6 +435,7 @@
 			}
 		}
 		.swiper-slide-active{
+			overflow: visible !important;
 			.article-container{
 				filter: blur(0px);
 				scale: 1.2;

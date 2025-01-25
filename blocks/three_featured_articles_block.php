@@ -67,9 +67,9 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             <?php } ?>
         </div>
     </div>
-    <div class="container d-lg-none d-block py-5">
-       <div class="row position-relative py-5">
-            <div class="swiper three-featured-articles-block-swiper py-5">
+    <div class="container d-lg-none d-block">
+       <div class="row position-relative">
+            <div class="swiper three-featured-articles-block-swiper" style="padding: 7rem 0;">
                 <div class="swiper-wrapper">
                     <?php
                         $count=0;
