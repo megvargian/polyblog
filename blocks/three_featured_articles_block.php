@@ -151,7 +151,8 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $(this).find('.position-relative').attr('disabled', true);
                 }
             );
-        <?php // } else {?>
+        <?php  }
+        //else {?>
             // $('.swiper-slide-active .article-container').click(function() {
             //     $('.article-container').removeClass('hovered');
             //     $(this).find('.position-relative').attr('disabled', false);
