@@ -67,7 +67,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             <?php } ?>
         </div>
     </div>
-    <div class="container d-lg-none d-block">
+    <div class="container d-lg-none d-block pb-5">
        <div class="row position-relative">
             <div class="swiper three-featured-articles-block-swiper">
                 <div class="swiper-wrapper">
@@ -133,6 +133,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 20,
+            autoHeight: true,
             navigation: {
                 nextEl: '.swiper-button-next-last-part-three-featured-articles-block',
                 prevEl: '.swiper-button-prev-last-part-three-featured-articles-block',
@@ -153,7 +154,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                 }
             );
         <?php } else {?>
-            $('.article-container').click(function() {
+            $('.swiper-slide-active .article-container').click(function() {
                 $('.article-container').removeClass('hovered');
                 $(this).find('.position-relative').attr('disabled', false);
                 $(this).addClass('hovered');
