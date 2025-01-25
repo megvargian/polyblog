@@ -437,6 +437,7 @@
     padding: 2rem;
   }
   .three-featured-articles-block-container .article-container {
+    pointer-events: none;
     filter: blur(2px);
   }
   .three-featured-articles-block-container .article-container .hover-text {
@@ -453,6 +454,7 @@
     z-index: 1;
   }
   .three-featured-articles-block-container .swiper-slide-active .article-container {
+    pointer-events: auto;
     transition: all 0.3s ease;
     filter: blur(0px);
     scale: 1.2;

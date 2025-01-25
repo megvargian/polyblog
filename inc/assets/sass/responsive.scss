@@ -419,6 +419,7 @@
 			padding: 2rem;
 		}
 		.article-container {
+			pointer-events: none;
 			.hover-text{
 				display: none;
 			}
@@ -438,6 +439,7 @@
 			overflow: visible !important;
 			z-index: 1;
 			.article-container{
+				pointer-events: auto;
 				transition: all 0.3s ease;
 				filter: blur(0px);
 				scale: 1.2;
