@@ -436,6 +436,7 @@
 		}
 		.swiper-slide-active{
 			overflow: visible !important;
+			z-index: 1;
 			.article-container{
 				filter: blur(0px);
 				scale: 1.2;

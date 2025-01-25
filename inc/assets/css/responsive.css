@@ -450,6 +450,7 @@
   }
   .three-featured-articles-block-container .swiper-slide-active {
     overflow: visible !important;
+    z-index: 1;
   }
   .three-featured-articles-block-container .swiper-slide-active .article-container {
     filter: blur(0px);
