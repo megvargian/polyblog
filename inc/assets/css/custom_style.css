@@ -1700,14 +1700,14 @@ body.hide_scroll {
   background-color: #412BBA;
 }
 .single-author-page .bg-black {
-  background-color: #000;
+  background-color: #181617;
   border-radius: 150px;
   padding: 2rem 3rem;
 }
 .single-author-page h2 span {
   display: block;
   font-size: 4rem;
-  text-align: center;
+  text-align: left;
   color: #fff;
 }
 .single-author-page .white-line {

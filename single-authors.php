@@ -12,15 +12,15 @@ get_header();
             <div class="col-12">
                 <div class="bg-black">
                     <h2>
-                        <span class="en-bold">MEET OUR VOICES</span>
-                        <span class="ar-bold">تعـــــــــرف على أصــــــــــــــــــواتنا</span>
+                        <span class="en-bold">HOW WE SEE IT</span>
+                        <span class="ar-bold">كيــــف منشـــوف</span>
                     </h2>
                 </div>
             </div>
         </div>
         <div class="row author-title">
             <div class="col-5">
-                <img class="d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
+                <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
             </div>
             <div class="col-7 text-left justify-content-center d-flex align-items-center">
                 <div>
