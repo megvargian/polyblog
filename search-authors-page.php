@@ -36,7 +36,7 @@ get_header();
                 </div>
             <?php } ?>
         </div>
-        <div class="row pt-5">
+        <div class="row py-5">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
