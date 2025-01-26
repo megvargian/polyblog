@@ -1639,3 +1639,17 @@ body.hide_scroll {
   top: 110%;
   right: 30%;
 }
+
+.search-authors-page {
+  background-color: #412BBA;
+}
+.search-authors-page .bg-black {
+  background-color: #000;
+  border-radius: 150px;
+  padding: 2rem 3rem;
+}
+.search-authors-page h1 span {
+  display: block;
+  font-size: 3rem;
+  text-align: center;
+}
