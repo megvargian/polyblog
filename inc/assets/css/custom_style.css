@@ -1683,16 +1683,17 @@ body.hide_scroll {
   border-radius: 20px;
   color: #F1E8E9;
 }
-.search-authors-page .last-footer-section {
+
+.last-footer-section {
   text-align: center;
 }
-.search-authors-page .last-footer-section .en, .search-authors-page .last-footer-section .ar {
+.last-footer-section .en, .last-footer-section .ar {
   font-size: 3rem;
 }
-.search-authors-page .last-footer-section .en {
+.last-footer-section .en {
   color: #fff;
 }
-.search-authors-page .last-footer-section .ar {
+.last-footer-section .ar {
   color: #87ED06;
 }
 

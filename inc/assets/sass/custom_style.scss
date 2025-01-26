@@ -1861,20 +1861,19 @@ body.hide_scroll{
       color: #F1E8E9;
     }
   }
-  .last-footer-section{
-    text-align: center;
-    .en, .ar{
-      font-size: 3rem;
-    }
-    .en{
-      color: #fff;
-    }
-    .ar{
-      color: #87ED06;
-    }
+}
+.last-footer-section{
+  text-align: center;
+  .en, .ar{
+    font-size: 3rem;
+  }
+  .en{
+    color: #fff;
+  }
+  .ar{
+    color: #87ED06;
   }
 }
-
 // signle author page
 .single-author-page{
   background-color: #412BBA;
