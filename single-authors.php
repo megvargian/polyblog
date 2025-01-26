@@ -22,12 +22,14 @@ get_header();
             <div class="col-5">
                 <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
             </div>
-            <div class="col-7 text-left">
-                <h1 class="text-left">
-                    <span class="en-bold">Dr. Ramzi Abou Ismail</span>
-                    <span class="ar-bold">د. رمزي أبو اسماعيل</span>
-                </h1>
-                <p class="en-regular">Socio-Political Activist</p>
+            <div class="col-7 text-left w-100 justify-content-center d-flex align-items-center">
+                <div>
+                    <h1 class="text-left">
+                        <span class="en-bold">Dr. Ramzi Abou Ismail</span>
+                        <span class="ar-bold">د. رمزي أبو اسماعيل</span>
+                    </h1>
+                    <p class="en-regular mt-2">Socio-Political Activist</p>
+                </div>
             </div>
         </div>
         <div class="row text-left pt-4 pb-5 bg-black">

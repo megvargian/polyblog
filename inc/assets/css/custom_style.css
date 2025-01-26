@@ -1696,6 +1696,9 @@ body.hide_scroll {
   color: #87ED06;
 }
 
+.single-author-page {
+  background-color: #412BBA;
+}
 .single-author-page .bg-black {
   background-color: #000;
   border-radius: 150px;
