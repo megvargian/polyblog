@@ -1729,3 +1729,11 @@ body.hide_scroll {
   font-size: 1.2rem;
   color: #F1E8E9;
 }
+.single-author-page .bg-black-sec {
+  background-color: #181617;
+  border-radius: 150px;
+  padding: 0.5rem 3rem;
+}
+.single-author-page .bg-black-sec .text-right h2 span {
+  text-align: right !important;
+}

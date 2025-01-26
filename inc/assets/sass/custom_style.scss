@@ -1910,4 +1910,12 @@ body.hide_scroll{
       color: #F1E8E9;
     }
   }
+  .bg-black-sec{
+    background-color: #181617;
+    border-radius: 150px;
+    padding: .5rem 3rem;
+    .text-right h2 span{
+      text-align: right !important;
+    }
+  }
 }
