@@ -47,12 +47,12 @@ get_header();
     <section class="bg-orange-section">
         <div class="white-line"></div>
         <div class="container py-5">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
                     <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/our-segements-first-img.png" alt="">
                 </div>
             </div>
-            <div class="row custom-border-radius px-4">
+            <div class="row custom-border-radius py-3 px-4">
                 <div class="col-6 text-left">
                     <h5 class="en-bold">SYNOPSIS</h5>
                     <p class="en-regular">
@@ -71,7 +71,7 @@ get_header();
     </section>
     <section>
         <div class="container">
-            <div class="row pb-5">
+            <div class="row py-5">
                 <div class="col-12 pb-5">
                     <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/our-segements-first-img.png" alt="">
                 </div>
@@ -93,12 +93,12 @@ get_header();
     <section class="bg-orange-section">
         <div class="white-line"></div>
         <div class="container py-5">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
                     <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/our-segements-first-img.png" alt="">
                 </div>
             </div>
-            <div class="row custom-border-radius px-4">
+            <div class="row custom-border-radius py-3 px-4">
                 <div class="col-6 text-left">
                     <h5 class="en-bold">SYNOPSIS</h5>
                     <p class="en-regular">
