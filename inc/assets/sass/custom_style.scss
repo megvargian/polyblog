@@ -1966,4 +1966,11 @@ body.hide_scroll{
   img{
     border-radius: 25px;
   }
+  .bg-orange-section{
+    background-color: #EE4200;
+    .custom-border-radius{
+      border-radius: 50px;
+      background-color: #181617;
+    }
+  }
 }

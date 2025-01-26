@@ -1786,3 +1786,10 @@ body.hide_scroll {
 .our-segements-page img {
   border-radius: 25px;
 }
+.our-segements-page .bg-orange-section {
+  background-color: #EE4200;
+}
+.our-segements-page .bg-orange-section .custom-border-radius {
+  border-radius: 50px;
+  background-color: #181617;
+}
