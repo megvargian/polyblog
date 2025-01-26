@@ -7,6 +7,11 @@ get_header();
 ?>
 <section class="search-authors-page">
     <div class="container">
+        <div class="row mt-2 mb-5">
+            <div class="col-12">
+                <div class="white-line"></div>
+            </div>
+        </div>
         <div class="row text-center py-5">
             <div class="col-12">
                 <div class="bg-black">
