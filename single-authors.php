@@ -18,7 +18,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row author-title justify-content-between">
+        <div class="row author-title justify-content-right">
             <div class="col-4">
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
             </div>
@@ -81,7 +81,7 @@ get_header();
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row publish-with-us-img justify-content-right">
+        <div class="row publish-with-us-img justify-content-center">
             <div class="col-7 py-5">
                 <a href="http://polybloglb.com">
                     <img class="w-100 d-block" src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />

@@ -1739,6 +1739,7 @@ body.hide_scroll {
 }
 .single-author-page .authors-article {
   background-color: #000;
+  border-radius: 43px;
 }
 .single-author-page .authors-article p {
   text-align: right;
