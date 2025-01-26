@@ -1716,7 +1716,8 @@ body.hide_scroll {
 }
 .single-author-page .author-title .single-article-img {
   border: 3px solid #000;
-  border: 100%;
+  border-radius: 100%;
+  width: 100%;
 }
 .single-author-page .author-title h1 span {
   font-size: 2.2rem;
@@ -1725,4 +1726,5 @@ body.hide_scroll {
 }
 .single-author-page .author-title p {
   font-size: 1.2rem;
+  color: #F1E8E9;
 }

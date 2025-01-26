@@ -1896,7 +1896,8 @@ body.hide_scroll{
   .author-title{
     .single-article-img{
       border: 3px solid #000;
-      border: 100%;
+      border-radius: 100%;
+      width: 100%;
     }
     h1{
       span {
@@ -1907,6 +1908,7 @@ body.hide_scroll{
     }
     p{
       font-size: 1.2rem;
+      color: #F1E8E9;
     }
   }
 }

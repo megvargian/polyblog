@@ -18,8 +18,8 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row author-title">
-            <div class="col-5">
+        <div class="row author-title justify-content-between">
+            <div class="col-4">
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
             </div>
             <div class="col-7 text-left justify-content-center d-flex align-items-center">
@@ -33,14 +33,14 @@ get_header();
             </div>
         </div>
         <div class="row text-left pt-4 pb-5 bg-black">
-            <div class="col-6 text-right">
-                <h2>
-                    <span class="ar-bold">مقالات</span>
-                </h2>
-            </div>
             <div class="col-6 text-left">
                 <h2>
                     <span class="en-bold">Articles</span>
+                </h2>
+            </div>
+            <div class="col-6 text-right">
+                <h2>
+                    <span class="ar-bold">مقالات</span>
                 </h2>
             </div>
         </div>
