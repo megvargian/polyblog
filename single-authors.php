@@ -32,7 +32,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row text-left mt-4 mb-5 bg-black">
+        <div class="row text-left mt-4 mb-5 bg-black-sec">
             <div class="col-6 text-left">
                 <h2>
                     <span class="en-bold">Articles</span>
@@ -42,6 +42,38 @@ get_header();
                 <h2>
                     <span class="ar-bold">مقالات</span>
                 </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="authors-article">
+                    <div class="row px-4 py-2">
+                        <div class="col-5">
+                            <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
+                        </div>
+                        <div class="col-7">
+                            <div>
+                                <p class="ar-regular mb-4">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
+                                <a class="en-regular" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="authors-article">
+                    <div class="row px-4 py-2">
+                        <div class="col-5">
+                            <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
+                        </div>
+                        <div class="col-7">
+                            <div>
+                                <p class="ar-regular mb-4">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
+                                <a class="en-regular" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row py-5">

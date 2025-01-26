@@ -1918,4 +1918,18 @@ body.hide_scroll{
       text-align: right !important;
     }
   }
+  .authors-article{
+    background-color: #000;
+    p{
+      text-align: right;
+      color: #fff;
+      font-size: 1.8rem;
+    }
+    a{
+      color: #fff;
+      background-color: #ED4101;
+      font-size: 1rem;
+      border-radius: 20px;
+    }
+  }
 }

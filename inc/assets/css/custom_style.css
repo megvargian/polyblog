@@ -1737,3 +1737,17 @@ body.hide_scroll {
 .single-author-page .bg-black-sec .text-right h2 span {
   text-align: right !important;
 }
+.single-author-page .authors-article {
+  background-color: #000;
+}
+.single-author-page .authors-article p {
+  text-align: right;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.single-author-page .authors-article a {
+  color: #fff;
+  background-color: #ED4101;
+  font-size: 1rem;
+  border-radius: 20px;
+}
