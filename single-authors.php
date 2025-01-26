@@ -32,7 +32,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row text-left pt-4 pb-5 bg-black">
+        <div class="row text-left mt-4 mb-5 bg-black">
             <div class="col-6 text-left">
                 <h2>
                     <span class="en-bold">Articles</span>
