@@ -23,7 +23,7 @@ get_header();
             </div>
         </div>
         <div class="row justify-content-center">
-            <?php for($i=0; i<15; i++){ ?>
+            <?php for($i=0; $i<15; $i++){ ?>
                 <div class="col-4 text-center">
                     <div class="single-author-block d-flex justify-content-center align-items-center p-4">
                         <div>
