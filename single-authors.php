@@ -18,7 +18,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row author-title justify-content-right">
+        <div class="row author-title">
             <div class="col-4">
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
             </div>
@@ -47,12 +47,12 @@ get_header();
         <div class="row">
             <div class="col-12 mb-5">
                 <div class="authors-article">
-                    <div class="row px-4 py-2">
+                    <div class="row px-5 py-3">
                         <div class="col-5">
                             <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div>
+                            <div class="text-right">
                                 <p class="ar-regular mb-4">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
                                 <a class="en-regular" href="#">Read More</a>
                             </div>
@@ -62,12 +62,12 @@ get_header();
             </div>
             <div class="col-12 mb-5">
                 <div class="authors-article">
-                    <div class="row px-4 py-2">
+                    <div class="row px-5 py-3">
                         <div class="col-5">
                             <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div>
+                            <div class="text-right px-3">
                                 <p class="ar-regular mb-4">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
                                 <a class="en-regular" href="#">Read More</a>
                             </div>

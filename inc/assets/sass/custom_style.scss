@@ -1880,7 +1880,7 @@ body.hide_scroll{
   .bg-black{
     background-color: #181617;
     border-radius: 150px;
-    padding: 2rem 3rem;
+    padding: 2rem 6rem;
   }
   h2 span{
     display: block;
@@ -1893,6 +1893,7 @@ body.hide_scroll{
     width: 100%;
   }
   .author-title{
+    justify-content: right;
     .single-article-img{
       border: 3px solid #000;
       border-radius: 100%;
@@ -1913,7 +1914,7 @@ body.hide_scroll{
   .bg-black-sec{
     background-color: #181617;
     border-radius: 150px;
-    padding: .5rem 3rem;
+    padding: .5rem 6rem;
     .text-right h2 span{
       text-align: right !important;
     }
@@ -1924,7 +1925,7 @@ body.hide_scroll{
     p{
       text-align: right;
       color: #fff;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
     a{
       color: #fff;
