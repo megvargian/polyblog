@@ -1650,11 +1650,36 @@ body.hide_scroll {
 }
 .search-authors-page h1 span {
   display: block;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   color: #412BBA;
+}
+.search-authors-page h1 .en-bold {
+  letter-spacing: 20px;
 }
 .search-authors-page .white-line {
   border-bottom: 6px solid #fff;
   width: 100%;
+}
+.search-authors-page .single-author-block {
+  background-color: #000;
+  border-radius: 43px;
+}
+.search-authors-page .single-author-block img {
+  border-radius: 100%;
+  border: 1px solid #412BBA;
+}
+.search-authors-page .single-author-block h4 {
+  color: #412BBA;
+  font-size: 1.3rem;
+}
+.search-authors-page .single-author-block p {
+  font-size: 1rem;
+  color: #F1E8E9;
+}
+.search-authors-page .single-author-block .view-more-btn {
+  background-color: #412BBA;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  color: #F1E8E9;
 }
