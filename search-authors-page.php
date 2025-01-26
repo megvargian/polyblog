@@ -36,6 +36,29 @@ get_header();
                 </div>
             <?php } ?>
         </div>
+        <div class="row pt-5">
+            <div class="col-12">
+                <div class="white-line"></div>
+            </div>
+        </div>
+        <div class="row publish-with-us-img">
+            <div class="col">
+                <a href="http://polybloglb.com"><img class="py-5" src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" /></a>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12">
+                <div class="white-line"></div>
+            </div>
+        </div>
+        <div class="row pb-3 pt-5 last-footer-section">
+            <div class="col-12 text-center">
+                <div>
+                    <h3 class="en-bold en">Youth-led, Lebanese political media</h3>
+                    <h3 class="ar-bold ar">منصة إعلامية سياسية شبابية ولبنانية</h3>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

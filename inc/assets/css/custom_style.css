@@ -1683,3 +1683,15 @@ body.hide_scroll {
   border-radius: 20px;
   color: #F1E8E9;
 }
+.search-authors-page .last-footer-section {
+  text-align: center;
+}
+.search-authors-page .last-footer-section .en, .search-authors-page .last-footer-section .ar {
+  font-size: 2.5rem;
+}
+.search-authors-page .last-footer-section .en {
+  color: #fff;
+}
+.search-authors-page .last-footer-section .ar {
+  color: #87ED06;
+}
