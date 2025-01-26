@@ -1756,3 +1756,33 @@ body.hide_scroll {
   border-radius: 20px;
   padding: 0.5rem 2rem;
 }
+
+.our-segements-page {
+  background-color: #131313;
+}
+.our-segements-page .bg-black {
+  background-color: #EE4200;
+  border-radius: 150px;
+  padding: 2rem 6rem;
+}
+.our-segements-page h1 span {
+  display: block;
+  font-size: 4rem;
+  text-align: left;
+  color: #fff;
+}
+.our-segements-page .white-line {
+  border-bottom: 6px solid #fff;
+  width: 100%;
+}
+.our-segements-page p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.our-segements-page h5 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.our-segements-page img {
+  border-radius: 25px;
+}

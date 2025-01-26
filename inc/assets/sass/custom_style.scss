@@ -1936,3 +1936,34 @@ body.hide_scroll{
     }
   }
 }
+
+// our segements page
+.our-segements-page{
+  background-color: #131313;
+  .bg-black{
+    background-color: #EE4200;
+    border-radius: 150px;
+    padding: 2rem 6rem;
+  }
+  h1 span{
+    display: block;
+    font-size: 4rem;
+    text-align: left;
+    color: #fff;
+  }
+  .white-line{
+    border-bottom: 6px solid #fff;
+    width: 100%;
+  }
+  p{
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  h5{
+    font-size: 1.8rem;
+    color: #fff;
+  }
+  img{
+    border-radius: 25px;
+  }
+}
