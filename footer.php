@@ -150,7 +150,7 @@
                         </button>
                         <div class="d-block d-lg-none">
                             <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                    Mission
+                                Mission
                             </button>
                             <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                 Vision

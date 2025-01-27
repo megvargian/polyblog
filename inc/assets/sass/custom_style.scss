@@ -675,7 +675,6 @@ body.hide_scroll {
       width: 100%;
       font-size: 20px;
       color: $sec_color;
-      background-color: $bg_black;
       border-radius: 35px;
       text-align: left;
       text-transform: uppercase;
@@ -695,7 +694,6 @@ body.hide_scroll {
     writing-mode: horizontal-tb;
   }
   .full:hover{
-    background-color: $bg_black !important;
     color: $sec_color !important;
   }
   .custom-width {
@@ -749,11 +747,27 @@ body.hide_scroll {
   button{
     background-color:$bg_black;
   }
+  .custom-rotate {
+    button {
+      background-color:$bg_black;
+    }
+  }
+  .full:hover{
+    background-color: $bg_black !important;
+  }
 }
 .footer-container-color{
   background-color: #412BBA;
   button{
     background-color:#412BBA;
+  }
+  .custom-rotate {
+    button {
+      background-color: #412BBA;
+    }
+  }
+  .full:hover{
+    background-color: #412BBA !important;
   }
 }
 

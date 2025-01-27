@@ -662,7 +662,6 @@ body.hide_scroll {
   width: 100%;
   font-size: 20px;
   color: #87ed06;
-  background-color: #181617;
   border-radius: 35px;
   text-align: left;
   text-transform: uppercase;
@@ -681,7 +680,6 @@ body.hide_scroll {
   writing-mode: horizontal-tb;
 }
 .footer-container .full:hover {
-  background-color: #181617 !important;
   color: #87ed06 !important;
 }
 .footer-container .custom-width {
@@ -730,12 +728,24 @@ body.hide_scroll {
 .footer-container-default button {
   background-color: #181617;
 }
+.footer-container-default .custom-rotate button {
+  background-color: #181617;
+}
+.footer-container-default .full:hover {
+  background-color: #181617 !important;
+}
 
 .footer-container-color {
   background-color: #412BBA;
 }
 .footer-container-color button {
   background-color: #412BBA;
+}
+.footer-container-color .custom-rotate button {
+  background-color: #412BBA;
+}
+.footer-container-color .full:hover {
+  background-color: #412BBA !important;
 }
 
 .three-featured-articles-block-container {
