@@ -133,7 +133,7 @@
 <?php }?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="footer-container pt-sm-5 pt-0">
+<footer class="footer-container pt-sm-5 pt-0" style="<?php echo is_single('authors') || is_page(293) ? 'background-color: #412BBA;' : 'background-color: #181617;' ?>">
     <div class="container pt-sm-3 pt-0">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
