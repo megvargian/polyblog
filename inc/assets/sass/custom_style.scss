@@ -657,7 +657,6 @@ body.hide_scroll {
     width: 100%;
     font-size: 20px;
     color: $sec_color;
-    background-color: $bg_black;
     border-radius: 35px;
     margin-bottom: 10px;
     text-align: left;
@@ -743,6 +742,18 @@ body.hide_scroll {
         }
       }
     }
+  }
+}
+.footer-container-default{
+  background-color: $bg_black;
+  button{
+    background-color:$bg_black;
+  }
+}
+.footer-container-color{
+  background-color: #412BBA;
+  button{
+    background-color:#412BBA;
   }
 }
 

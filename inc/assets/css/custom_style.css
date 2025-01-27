@@ -643,7 +643,6 @@ body.hide_scroll {
   width: 100%;
   font-size: 20px;
   color: #87ed06;
-  background-color: #181617;
   border-radius: 35px;
   margin-bottom: 10px;
   text-align: left;
@@ -723,6 +722,20 @@ body.hide_scroll {
 }
 .footer-container .outer-phone .inner-phone a .fill {
   display: none;
+}
+
+.footer-container-default {
+  background-color: #181617;
+}
+.footer-container-default button {
+  background-color: #181617;
+}
+
+.footer-container-color {
+  background-color: #412BBA;
+}
+.footer-container-color button {
+  background-color: #412BBA;
 }
 
 .three-featured-articles-block-container {

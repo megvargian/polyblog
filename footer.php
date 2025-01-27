@@ -133,7 +133,7 @@
 <?php }?>
 </div><!-- #content -->
 </div><!-- #page -->
-<footer class="footer-container pt-sm-5 pt-0" style="<?php echo get_post_type() === 'authors' || is_page(293) ? 'background-color: #412BBA;' : 'background-color: #181617;' ?>">
+<footer class="footer-container pt-sm-5 pt-0 <?php echo get_post_type() === 'authors' || is_page(293) ? 'footer-container-color' : 'footer-container-default' ?>">
     <div class="container pt-sm-3 pt-0">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
