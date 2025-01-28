@@ -20,7 +20,7 @@ get_header();
         </div>
         <div class="row author-title">
             <div class="col-4">
-                <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/search-authors-img.png" alt="">
+                <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
             </div>
             <div class="col-7 text-left justify-content-center d-flex align-items-center">
                 <div>
