@@ -36,7 +36,7 @@ get_header();
                 </div>
             <?php } ?>
         </div>
-        <div class="row justify-content-center pt-5 d-lg-none d-flex">
+        <div class="row justify-content-center d-lg-none d-flex">
             <div class="swiper search-authors-swiper">
                 <div class="swiper-wrapper">
                     <?php for($i=0; $i<15; $i++){ ?>
@@ -72,7 +72,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center pt-5 d-lg-none d-flex">
+        <div class="row justify-content-center py-5 d-lg-none d-flex">
             <div class="swiper search-authors-swiper">
                 <div class="swiper-wrapper">
                     <?php for($i=0; $i<15; $i++){ ?>
