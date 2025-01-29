@@ -88,7 +88,6 @@ get_header();
             centeredSlides: true,
             slidesPerView: 2.6,
             spaceBetween: 20,
-            autoHeight: true,
         });
     });
 </script>
