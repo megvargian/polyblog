@@ -41,7 +41,7 @@ get_header();
                 <div class="swiper-wrapper">
                     <?php for($i=0; $i<15; $i++){ ?>
                         <div class="swiper-slide text-center mb-4 hovered-single-author">
-                            <div class="single-author-block d-flex justify-content-center align-items-center p-4">
+                            <div class="single-author-block d-flex justify-content-center align-items-center p-sm-4 p-3">
                                 <div>
                                     <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
                                     <h4 class="ar-bold pt-2">د. رمزي أبو اسماعيل</h4>

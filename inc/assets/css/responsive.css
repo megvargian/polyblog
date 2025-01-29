@@ -576,6 +576,15 @@
   .search-authors-page h1 .en-bold {
     letter-spacing: 8px;
   }
+  .search-authors-page .single-author-block h4 {
+    font-size: 1rem;
+  }
+  .search-authors-page .single-author-block p {
+    font-size: 0.75rem;
+  }
+  .search-authors-page .single-author-block .view-more-btn {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 575px) {
   .site-title {
@@ -695,7 +704,7 @@
     padding-right: 0;
   }
   .search-authors-page h1 span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .search-authors-page h1 .en-bold {
     letter-spacing: 5px;
