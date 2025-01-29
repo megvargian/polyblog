@@ -95,7 +95,7 @@ get_header();
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row publish-with-us-img justify-content-center d-lg-flex d-none">
+        <div class="row publish-with-us-img justify-content-center">
             <div class="col-7 py-5">
                 <a href="http://polybloglb.com">
                     <img class="w-100 d-block" src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
@@ -107,7 +107,7 @@ get_header();
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row pb-3 pt-5 mt-5 last-footer-section d-lg-flex d-none">
+        <div class="row pb-3 pt-5 mt-5 last-footer-section">
             <div class="col-12 text-center">
                 <div>
                     <h3 class="en-regular en">Youth-led, Lebanese political media</h3>

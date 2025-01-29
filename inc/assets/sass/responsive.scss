@@ -472,6 +472,11 @@
 			letter-spacing: 10px;
 		}
 	}
+	.last-footer-section{
+		.en, .ar{
+		  font-size: 2rem;
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -613,6 +618,11 @@
 			.view-more-btn{
 				font-size: .8rem;
 			}
+		}
+	}
+	.last-footer-section{
+		.en, .ar{
+		  font-size: 1.5rem;
 		}
 	}
 }
@@ -792,6 +802,11 @@
 		}
 		.bg-black{
 			padding: 1rem 2rem;
+		}
+	}
+	.last-footer-section{
+		.en, .ar{
+		  font-size: 1rem;
 		}
 	}
 }

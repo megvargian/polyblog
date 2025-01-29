@@ -475,6 +475,9 @@
   .search-authors-page h1 .en-bold {
     letter-spacing: 10px;
   }
+  .last-footer-section .en, .last-footer-section .ar {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -584,6 +587,9 @@
   }
   .search-authors-page .single-author-block .view-more-btn {
     font-size: 0.8rem;
+  }
+  .last-footer-section .en, .last-footer-section .ar {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 575px) {
@@ -711,6 +717,9 @@
   }
   .search-authors-page .bg-black {
     padding: 1rem 2rem;
+  }
+  .last-footer-section .en, .last-footer-section .ar {
+    font-size: 1rem;
   }
 }
 @media (max-width: 470px) {
