@@ -1845,6 +1845,13 @@ body.hide_scroll{
 // search authors page
 .search-authors-page{
   background-color: #412BBA;
+  .hovered-single-author{
+    transition: all 0.3s ease;
+  }
+  .hovered-single-author:hover{
+    transition: all 0.3s ease;
+		scale: 1.1;
+  }
   .bg-black{
     background-color: #000;
     border-radius: 150px;
@@ -1884,10 +1891,6 @@ body.hide_scroll{
       border-radius: 20px;
       color: #F1E8E9;
     }
-  }
-  .hovered-single-author:hover{
-    transition: all 0.3s ease;
-		scale: 1.25;
   }
 }
 .last-footer-section{
