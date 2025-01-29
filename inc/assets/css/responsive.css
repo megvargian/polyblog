@@ -469,6 +469,12 @@
   .message-for-editor-section .container-fluid p {
     font-size: 1rem;
   }
+  .search-authors-page h1 span {
+    font-size: 2rem;
+  }
+  .search-authors-page h1 .en-bold {
+    letter-spacing: 10px;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -563,6 +569,12 @@
   .message-for-editor-section .container-fluid img {
     width: 250px;
     height: 250px;
+  }
+  .search-authors-page h1 span {
+    font-size: 1.5rem;
+  }
+  .search-authors-page h1 .en-bold {
+    letter-spacing: 8px;
   }
 }
 @media (max-width: 575px) {
@@ -681,6 +693,15 @@
   }
   .custom-padding-right {
     padding-right: 0;
+  }
+  .search-authors-page h1 span {
+    font-size: 1.3rem;
+  }
+  .search-authors-page h1 .en-bold {
+    letter-spacing: 5px;
+  }
+  .search-authors-page .bg-black {
+    padding: 1rem 2rem;
   }
 }
 @media (max-width: 470px) {

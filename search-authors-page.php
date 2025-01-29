@@ -7,7 +7,7 @@ get_header();
 ?>
 <section class="search-authors-page">
     <div class="container">
-        <div class="row pt-2 mb-5">
+        <div class="row pt-2 mb-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
