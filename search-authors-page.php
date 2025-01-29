@@ -22,7 +22,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center pt-5 d-lg-block d-none">
+        <div class="row justify-content-center pt-5 d-lg-flex d-none">
             <?php for($i=0; $i<15; $i++){ ?>
                 <div class="col-4 text-center mb-4 hovered-single-author">
                     <div class="single-author-block d-flex justify-content-center align-items-center p-4">
@@ -36,7 +36,7 @@ get_header();
                 </div>
             <?php } ?>
         </div>
-        <div class="row justify-content-center pt-5 d-lg-none d-block">
+        <div class="row justify-content-center pt-5 d-lg-none d-flex">
             <div class="swiper search-authors-swiper">
                 <div class="swiper-wrapper">
                     <?php for($i=0; $i<15; $i++){ ?>
@@ -54,24 +54,24 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row py-5 d-lg-block d-none">
+        <div class="row py-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row publish-with-us-img justify-content-center d-lg-block d-none">
+        <div class="row publish-with-us-img justify-content-center d-lg-flex d-none">
             <div class="col-7 py-5">
                 <a href="http://polybloglb.com">
                     <img class="w-100 d-block" src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
                 </a>
             </div>
         </div>
-        <div class="row pt-5 d-lg-block d-none">
+        <div class="row pt-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row pb-3 pt-5 mt-5 last-footer-section d-lg-block d-none">
+        <div class="row pb-3 pt-5 mt-5 last-footer-section d-lg-flex d-none">
             <div class="col-12 text-center">
                 <div>
                     <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
