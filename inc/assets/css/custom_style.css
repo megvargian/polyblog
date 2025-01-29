@@ -1705,6 +1705,10 @@ body.hide_scroll {
   border-radius: 20px;
   color: #F1E8E9;
 }
+.search-authors-page .hovered-single-author:hover {
+  transition: all 0.3s ease;
+  scale: 1.25;
+}
 
 .last-footer-section {
   text-align: center;

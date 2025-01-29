@@ -1885,6 +1885,10 @@ body.hide_scroll{
       color: #F1E8E9;
     }
   }
+  .hovered-single-author:hover{
+    transition: all 0.3s ease;
+		scale: 1.25;
+  }
 }
 .last-footer-section{
   text-align: center;
