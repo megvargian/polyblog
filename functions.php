@@ -444,4 +444,12 @@ function search_what_we_think($query) {
     }
     return $query;
 }
-add_action('pre_get_posts', 'search_what_we_think');
+function basic_search_query($query) {
+    if ($query->is_search && !is_admin() && $query->is_main_query()) {
+        // Debugging: Just check if any posts are found
+        error_log('Search query: ' . print_r($query->query_vars, true));
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'basic_search_query');
+// add_action('pre_get_posts', 'search_what_we_think');
