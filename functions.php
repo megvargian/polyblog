@@ -434,6 +434,14 @@ function isMob(){
 
 function search_what_we_think($query) {
     if ($query->is_search && !is_admin()) {
+
+    // debug
+    if ($query->is_main_query()) {
+        echo '<pre>';
+        print_r($query->query_vars);
+        echo '</pre>';
+    }
+
         if (isset($_GET['cat']) && $_GET['cat'] === 'what-we-think') {
             $category = get_category_by_slug('what-we-think');
             if ($category) {
