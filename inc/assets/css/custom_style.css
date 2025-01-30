@@ -1610,6 +1610,7 @@ body.hide_scroll {
 }
 .what-we-think-container .what-we-think-posts .card {
   max-width: 80%;
+  height: 100%;
   justify-self: center;
   background-color: #ed4101;
 }

@@ -440,6 +440,13 @@ function search_what_we_think($query) {
                 $query->set('cat', $category->term_id);
             }
         }
+
+        if (isset($_GET['s']) && !empty($_GET['s'])) {
+            
+            $query->set('s', $_GET['s']);
+            $query->set('post_type', 'post');
+            $query->set('posts_per_page', -1);
+        }
     }
     return $query;
 }
