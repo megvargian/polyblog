@@ -1580,6 +1580,7 @@ body.hide_scroll {
   padding-left: 20px;
   border: none;
   border-radius: 24px;
+  font-weight: 700;
 }
 .what-we-think-container .search-input .input-with-icon input::-moz-placeholder {
   color: #141213;
@@ -1594,6 +1595,18 @@ body.hide_scroll {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+}
+.what-we-think-container .search-input .search-btn {
+  padding: 4px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 50px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.what-we-think-container .search-input .search-btn:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 .what-we-think-container .what-we-think-posts .card {
   max-width: 80%;

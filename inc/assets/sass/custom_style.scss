@@ -1747,6 +1747,7 @@ body.hide_scroll {
         padding-left: 20px;
         border: none;
         border-radius: 24px;
+        font-weight: 700;
       }
 
       input::placeholder {
@@ -1760,6 +1761,20 @@ body.hide_scroll {
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+
+    .search-btn {
+      padding: 4px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 50px;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+
+    .search-btn:hover {
+      opacity: 0.8;
+      transition: 0.3s;
     }
   }
 
