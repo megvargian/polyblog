@@ -81,7 +81,7 @@
                                         </a>
                                     </div>
                                     <div class="col-3">
-                                        <img class="author-image" src="<?php echo get_the_post_thumbnail($author); ?>" alt="<?php echo get_the_title($author); ?>" />
+                                        <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author); ?>" alt="<?php echo get_the_title($author); ?>" />
                                     </div>
                                 </div>
                             </div>
