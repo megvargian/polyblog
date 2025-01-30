@@ -77,11 +77,11 @@
                                     ?>
                                     <div class="col-5 author-info">
                                         <a href="<?php echo get_permalink($author); ?>">
-                                            <h4 class="align-text-arabic"><strong><?php get_the_title($author); ?></strong></h4>
+                                            <h4 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h4>
                                         </a>
                                     </div>
                                     <div class="col-3">
-                                        <img class="author-image" src="<?php echo get_the_post_thumbnail($author_profile); ?>" alt="<?php echo get_the_title($author); ?>" />
+                                        <img class="author-image" src="<?php echo get_the_post_thumbnail($author); ?>" alt="<?php echo get_the_title($author); ?>" />
                                     </div>
                                 </div>
                             </div>
