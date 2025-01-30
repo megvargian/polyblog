@@ -5,7 +5,7 @@
             <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
         </div>
     </div>
-    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
         <div class="row my-2">
             <div class="col search-input">
                 <div class="div input-with-icon">
@@ -23,21 +23,17 @@
         </div>
     </form>
     <?php
-    // Get search term
     $search_term = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
 
-    // Set up the custom query for "What We Think" category
     $args = array(
         'post_type' => 'post',
-        's' => $search_term, // Add search term
-        'cat' => get_category_by_slug('what-we-think')->term_id, // Filter by the "What We Think" category
-        'posts_per_page' => 10, // Limit to 10 posts (change as needed)
+        's' => $search_term,
+        'cat' => get_category_by_slug('what-we-think')->term_id,
+        'posts_per_page' => 10,
     );
 
-    // Run the custom query
     $query = new WP_Query($args);
 
-    // Start the loop to display posts
     if ($query->have_posts()) : ?>
         <div class="what-we-think-posts">
             <div class="row my-4">
@@ -99,8 +95,6 @@
     <?php else : ?>
         <p>No posts found for this search.</p>
     <?php endif;
-
-    // Reset post data
     wp_reset_postdata();
     ?>
 
