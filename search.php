@@ -73,7 +73,7 @@ if ($query->have_posts()) : ?>
 							<h5 class="card-title align-text-arabic">
 								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							</h5>
-							<div class="row mt-3">
+							<div class="row">
 								<div class="col-4 category-buttons">
 									<div>
 										<?php
