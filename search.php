@@ -41,7 +41,81 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</section>
+	<!-- #primary -->
+<?php
+$search_term = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
 
+$args = array(
+	'post_type' => 'post',
+	's' => $search_term,
+	'cat' => get_category_by_slug('what-we-think')->term_id,
+);
+
+$query = new WP_Query($args);
+
+if ($query->have_posts()) : ?>
+	<div class="what-we-think-posts">
+		<div class="row my-4">
+			<?php while ($query->have_posts()) : $query->the_post(); ?>
+				<div class="col-md-6 my-2">
+					<div class="card">
+						<?php
+						$article_thumbnail = get_field('article_thumbnail');
+						if ($article_thumbnail) : ?>
+							<div class="card-img-top">
+								<a href="<?php the_permalink(); ?>">
+									<img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php the_title(); ?>" class="img-fluid">
+								</a>
+							</div>
+						<?php endif; ?>
+						<div class="card-body">
+							<h5 class="card-title align-text-arabic">
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							</h5>
+							<div class="row mt-3">
+								<div class="col-4 category-buttons">
+									<div>
+										<?php
+										$categories = get_the_category();
+										foreach ($categories as $category) {
+											if ($category->slug == 'arabic' || $category->slug == 'english') {
+										?>
+												<button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
+													<strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+												</button>
+										<?php
+											}
+										}
+										?>
+									</div>
+									<p class="article-date">
+										<?php echo get_the_date('d/m/Y'); ?>
+									</p>
+								</div>
+								<div class="col-5 author-info">
+									<a href="<?php echo get_permalink(get_field('author')); ?>">
+										<h4 class="align-text-arabic"><strong><?php the_author(); ?></strong></h4>
+									</a>
+								</div>
+								<div class="col-3">
+									<img class="author-image" src="<?php echo get_field('author_profile'); ?>" alt="<?php the_author(); ?>" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php if ($query->current_post % 2 == 1) : ?>
+		</div>
+		<div class="row my-4">
+		<?php endif; ?>
+	<?php endwhile; ?>
+		</div>
+	</div>
+<?php else : ?>
+	<p>No posts found for this search.</p>
+<?php endif;
+wp_reset_postdata();
+?>
 <?php
 get_footer();
