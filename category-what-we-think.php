@@ -72,13 +72,16 @@
                                             <?php echo get_the_date('d/m/Y'); ?>
                                         </p>
                                     </div>
+                                    <?php
+                                        $author = get_field('author');
+                                    ?>
                                     <div class="col-5 author-info">
-                                        <a href="<?php echo get_permalink(get_field('author')); ?>">
-                                            <h4 class="align-text-arabic"><strong><?php the_author(); ?></strong></h4>
+                                        <a href="<?php echo get_permalink($author); ?>">
+                                            <h4 class="align-text-arabic"><strong><?php get_the_title($author); ?></strong></h4>
                                         </a>
                                     </div>
                                     <div class="col-3">
-                                        <img class="author-image" src="<?php echo get_field('author_profile'); ?>" alt="<?php the_author(); ?>" />
+                                        <img class="author-image" src="<?php echo get_the_post_thumbnail($author_profile); ?>" alt="<?php echo get_the_title($author); ?>" />
                                     </div>
                                 </div>
                             </div>
