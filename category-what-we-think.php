@@ -6,8 +6,8 @@
         </div>
     </div>
     <div class="row my-2">
+        <div class="col search-input">
         <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
-            <div class="col search-input">
                 <div class="div input-with-icon">
                     <input type="text" name="s" id="searchInput" placeholder="Search bar" />
                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,8 +19,8 @@
                         <path d="M19.0862 19.1051L25.375 25.375M21.75 12.6875C21.75 17.6925 17.6925 21.75 12.6875 21.75C7.68241 21.75 3.625 17.6925 3.625 12.6875C3.625 7.68241 7.68241 3.625 12.6875 3.625C17.6925 3.625 21.75 7.68241 21.75 12.6875Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
     <div class="what-we-think-posts">
         <div class="row my-4">

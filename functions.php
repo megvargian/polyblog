@@ -438,18 +438,13 @@ function search_what_we_think($query) {
             if (!empty($_GET['s'])) {
                 $query->set('s', sanitize_text_field($_GET['s']));
                 $query->set('post_type', 'post');
-                // $query->set('cat', get_category_by_slug('what-we-think')->term_id);
+                $category = get_category_by_slug('what-we-think');
+                if ($category) {
+                    $query->set('cat', $category->term_id);
+                }
             }
         }
     }
     return $query;
 }
-function basic_search_query($query) {
-    if ($query->is_search && !is_admin() && $query->is_main_query()) {
-        // Debugging: Just check if any posts are found
-        error_log('Search query: ' . print_r($query->query_vars, true));
-    }
-    return $query;
-}
-add_action('pre_get_posts', 'basic_search_query');
-// add_action('pre_get_posts', 'search_what_we_think');
+add_action('pre_get_posts', 'search_what_we_think');
