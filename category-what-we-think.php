@@ -5,9 +5,9 @@
             <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
         </div>
     </div>
-    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
-    <div class="row my-2">
-        <div class="col search-input">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
+        <div class="row my-2">
+            <div class="col search-input">
                 <div class="div input-with-icon">
                     <input type="text" name="s" id="searchInput" placeholder="Search bar" />
                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,13 +22,30 @@
             </div>
         </div>
     </form>
-    <div class="what-we-think-posts">
-        <div class="row my-4">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+    <?php
+    // Get search term
+    $search_term = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
+
+    // Set up the custom query for "What We Think" category
+    $args = array(
+        'post_type' => 'post',
+        's' => $search_term, // Add search term
+        'cat' => get_category_by_slug('what-we-think')->term_id, // Filter by the "What We Think" category
+        'posts_per_page' => 10, // Limit to 10 posts (change as needed)
+    );
+
+    // Run the custom query
+    $query = new WP_Query($args);
+
+    // Start the loop to display posts
+    if ($query->have_posts()) : ?>
+        <div class="what-we-think-posts">
+            <div class="row my-4">
+                <?php while ($query->have_posts()) : $query->the_post(); ?>
                     <div class="col-md-6 my-2">
                         <div class="card">
-                            <?php $article_thumbnail = get_field('article_thumbnail');
+                            <?php
+                            $article_thumbnail = get_field('article_thumbnail');
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
@@ -60,49 +77,33 @@
                                             <?php echo get_the_date('d/m/Y'); ?>
                                         </p>
                                     </div>
-                                    <?php
-                                    $author_post_id = get_field('author');
-                                    $author_id = get_post_field('post_author', $author_post_id);
-                                    $author_name = get_the_title($author_post_id);
-                                    $author_image = get_field('author_profile', $author_post_id);
-                                    $author_link = get_permalink($author_post_id);
-                                    $tags = get_the_tags();
-                                    ?>
                                     <div class="col-5 author-info">
-                                        <a href="<?php echo $author_link; ?>">
-                                            <h4 class="align-text-arabic"><strong><?php echo $author_name; ?></strong></h4>
+                                        <a href="<?php echo get_permalink(get_field('author')); ?>">
+                                            <h4 class="align-text-arabic"><strong><?php the_author(); ?></strong></h4>
                                         </a>
-                                        <div class="tags">
-                                            <p class="align-text-arabic">
-                                                <?php
-                                                $total_tags = count($tags);
-                                                foreach ($tags as $index => $tag) {
-                                                    echo esc_html($tag->name);
-                                                    if ($index < $total_tags - 1) {
-                                                        echo ' / ';
-                                                    }
-                                                }
-                                                ?>
-                                            </p>
-                                        </div>
                                     </div>
                                     <div class="col-3">
-                                        <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                                        <img class="author-image" src="<?php echo get_field('author_profile'); ?>" alt="<?php the_author(); ?>" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <?php if ($wp_query->current_post % 2 == 1) : ?>
+                    <?php if ($query->current_post % 2 == 1) : ?>
+            </div>
+            <div class="row my-4">
+            <?php endif; ?>
+        <?php endwhile; ?>
+            </div>
         </div>
-        <div class="row my-4">
-        <?php endif; ?>
-    <?php endwhile; ?>
-<?php else : ?>
-    <p>No posts found in this category.</p>
-<?php endif; ?>
-        </div>
-    </div>
+    <?php else : ?>
+        <p>No posts found for this search.</p>
+    <?php endif;
+
+    // Reset post data
+    wp_reset_postdata();
+    ?>
+
 </div>
 <?php get_footer(); ?>
 <script>

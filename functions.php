@@ -431,20 +431,3 @@ function trim_words_with_limits($text, $word_limit = 20) {
 function isMob(){
     return is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 }
-
-function search_what_we_think($query) {
-    if ($query->is_search && !is_admin() && $query->is_main_query()) {
-        if (is_category('what-we-think')) {
-            if (!empty($_GET['s'])) {
-                $query->set('s', sanitize_text_field($_GET['s']));
-                $query->set('post_type', 'post');
-                $category = get_category_by_slug('what-we-think');
-                if ($category) {
-                    $query->set('cat', $category->term_id);
-                }
-            }
-        }
-    }
-    return $query;
-}
-add_action('pre_get_posts', 'search_what_we_think');
