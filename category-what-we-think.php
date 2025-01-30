@@ -9,7 +9,7 @@
         <div class="row my-2">
             <div class="col search-input">
                 <div class="div input-with-icon">
-                    <input type="text" name="s" id="searchInput" placeholder="Search bar" />
+                    <input name="s" id="searchInput" placeholder="Search bar" />
                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 11.0833C4.75 10.2089 5.45889 9.5 6.33333 9.5H31.6667C32.5411 9.5 33.25 10.2089 33.25 11.0833C33.25 11.9578 32.5411 12.6667 31.6667 12.6667H6.33333C5.45889 12.6667 4.75 11.9578 4.75 11.0833ZM9.5 19C9.5 18.1255 10.2089 17.4167 11.0833 17.4167H26.9167C27.7911 17.4167 28.5 18.1255 28.5 19C28.5 19.8745 27.7911 20.5833 26.9167 20.5833H11.0833C10.2089 20.5833 9.5 19.8745 9.5 19ZM14.25 26.9167C14.25 26.0422 14.9589 25.3333 15.8333 25.3333H22.1667C23.0411 25.3333 23.75 26.0422 23.75 26.9167C23.75 27.7911 23.0411 28.5 22.1667 28.5H15.8333C14.9589 28.5 14.25 27.7911 14.25 26.9167Z" fill="black" />
                     </svg>
@@ -29,7 +29,6 @@
         'post_type' => 'post',
         's' => $search_term,
         'cat' => get_category_by_slug('what-we-think')->term_id,
-        'posts_per_page' => 10,
     );
 
     $query = new WP_Query($args);
