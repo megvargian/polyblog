@@ -433,27 +433,13 @@ function isMob(){
 }
 
 function search_what_we_think($query) {
-    if ($query->is_search && !is_admin()) {
-
-    // debug
-    if ($query->is_main_query()) {
-        echo '<pre>';
-        print_r($query->query_vars);
-        echo '</pre>';
-    }
-
-        if (isset($_GET['cat']) && $_GET['cat'] === 'what-we-think') {
-            $category = get_category_by_slug('what-we-think');
-            if ($category) {
-                $query->set('cat', $category->term_id);
+    if ($query->is_search && !is_admin() && $query->is_main_query()) {
+        if (is_category('what-we-think')) {
+            if (!empty($_GET['s'])) {
+                $query->set('s', sanitize_text_field($_GET['s']));
+                $query->set('post_type', 'post');
+                $query->set('cat', get_category_by_slug('what-we-think')->term_id);
             }
-        }
-
-        if (isset($_GET['s']) && !empty($_GET['s'])) {
-            
-            $query->set('s', $_GET['s']);
-            $query->set('post_type', 'post');
-            $query->set('posts_per_page', -1);
         }
     }
     return $query;
