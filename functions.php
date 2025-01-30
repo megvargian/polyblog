@@ -438,7 +438,7 @@ function search_what_we_think($query) {
             if (!empty($_GET['s'])) {
                 $query->set('s', sanitize_text_field($_GET['s']));
                 $query->set('post_type', 'post');
-                $query->set('cat', get_category_by_slug('what-we-think')->term_id);
+                // $query->set('cat', get_category_by_slug('what-we-think')->term_id);
             }
         }
     }
