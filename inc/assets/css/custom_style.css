@@ -1785,6 +1785,9 @@ body.hide_scroll {
   text-align: left;
   color: #fff;
 }
+.single-author-page .ar-bold {
+  text-align: right !important;
+}
 .single-author-page .white-line {
   border-bottom: 6px solid #fff;
   width: 100%;
