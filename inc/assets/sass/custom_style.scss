@@ -1786,6 +1786,13 @@ body.hide_scroll {
       justify-self: center;
       background-color: #ed4101;
 
+      .card-body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
       .thumbnail {
         width: 100%;
         padding: 8px;
