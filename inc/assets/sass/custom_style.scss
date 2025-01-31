@@ -1969,6 +1969,9 @@ body.hide_scroll{
     font-size: 4rem;
     text-align: left;
     color: #fff;
+    .ar-bold{
+      text-align: left !important;
+    }
   }
   .ar-bold{
     text-align: right !important;
