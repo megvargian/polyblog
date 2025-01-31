@@ -805,6 +805,9 @@
   .our-segements-page h5 {
     font-size: 1rem;
   }
+  .our-segements-page img {
+    border-radius: 10px;
+  }
 }
 @media (max-width: 470px) {
   .message-for-editor-section .container-fluid img {
