@@ -520,6 +520,15 @@
 		  font-size: 2rem;
 		}
 	}
+	// our segements page
+	.our-segements-page{
+		p{
+		  font-size: 1rem;
+		}
+		h5{
+		  font-size: 1.4rem;
+		}
+	}
 }
 
 @media (max-width: 767px){
@@ -904,6 +913,15 @@
 	}
 	.last-footer-section{
 		.en, .ar{
+		  font-size: 1rem;
+		}
+	}
+	// our segements page
+	.our-segements-page{
+		p{
+		  font-size: .8rem;
+		}
+		h5{
 		  font-size: 1rem;
 		}
 	}

@@ -511,6 +511,12 @@
   .last-footer-section .en, .last-footer-section .ar {
     font-size: 2rem;
   }
+  .our-segements-page p {
+    font-size: 1rem;
+  }
+  .our-segements-page h5 {
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -791,6 +797,12 @@
     font-size: 0.8rem;
   }
   .last-footer-section .en, .last-footer-section .ar {
+    font-size: 1rem;
+  }
+  .our-segements-page p {
+    font-size: 0.8rem;
+  }
+  .our-segements-page h5 {
     font-size: 1rem;
   }
 }

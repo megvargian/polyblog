@@ -7,7 +7,7 @@ get_header();
 ?>
 <section class="our-segements-page">
     <div class="container">
-        <div class="row pt-2 mb-5">
+        <div class="row pt-2 mb-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
@@ -113,7 +113,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="white-line"></div>
+        <div class="white-line mb-5"></div>
     </section>
 </section>
 <?php
