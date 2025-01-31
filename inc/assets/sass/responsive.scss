@@ -497,6 +497,9 @@
 				span {
 					text-align: center;
 				}
+				.ar-bold{
+					text-align: center !important;
+				}
 			}
 			p{
 				text-align: center;
@@ -892,6 +895,9 @@
 		}
 		.authors-article{
 			p{
+				font-size: .8rem;
+			}
+			a{
 				font-size: .8rem;
 			}
 		}

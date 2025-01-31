@@ -493,6 +493,9 @@
   .single-author-page .author-title h1 span {
     text-align: center;
   }
+  .single-author-page .author-title h1 .ar-bold {
+    text-align: center !important;
+  }
   .single-author-page .author-title p {
     text-align: center;
   }
@@ -782,6 +785,9 @@
     font-size: 1.4rem;
   }
   .single-author-page .authors-article p {
+    font-size: 0.8rem;
+  }
+  .single-author-page .authors-article a {
     font-size: 0.8rem;
   }
   .last-footer-section .en, .last-footer-section .ar {
