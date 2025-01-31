@@ -20,7 +20,7 @@
   .search-authors-page h1 span {
     font-size: 3rem;
   }
-  .single-author-page h2 span {
+  .single-author-page h2 {
     font-size: 3rem;
   }
   .footer-container button {
@@ -478,7 +478,7 @@
   .search-authors-page h1 .en-bold {
     letter-spacing: 10px;
   }
-  .single-author-page h2 span {
+  .single-author-page h2 {
     font-size: 2rem;
   }
   .single-author-page h2 .en-bold {
@@ -492,6 +492,12 @@
   }
   .single-author-page .bg-black-sec {
     padding: 0.5rem 4rem;
+  }
+  .single-author-page .authors-article {
+    border-radius: 20px;
+  }
+  .single-author-page .authors-article p {
+    font-size: 1rem;
   }
   .last-footer-section .en, .last-footer-section .ar {
     font-size: 2rem;
@@ -606,7 +612,7 @@
   .search-authors-page .single-author-block .view-more-btn {
     font-size: 0.8rem;
   }
-  .single-author-page h2 span {
+  .single-author-page h2 {
     font-size: 1.5rem;
   }
   .single-author-page h2 .en-bold {
@@ -614,6 +620,9 @@
   }
   .single-author-page .bg-black-sec {
     padding: 0.5rem 2.5rem;
+  }
+  .single-author-page .author-title h1 span {
+    font-size: 1.8rem;
   }
   .last-footer-section .en, .last-footer-section .ar {
     font-size: 1.5rem;
@@ -745,17 +754,23 @@
   .search-authors-page .bg-black {
     padding: 1rem 2rem;
   }
-  .single-author-page h2 span {
+  .single-author-page h2 {
     font-size: 1.2rem;
   }
   .single-author-page h2 .en-bold {
-    letter-spacing: 5px;
+    letter-spacing: 0px;
   }
   .single-author-page .bg-black {
     padding: 1rem 2rem;
   }
   .single-author-page .bg-black-sec {
     padding: 0.5rem 1.5rem;
+  }
+  .single-author-page .author-title h1 span {
+    font-size: 1.4rem;
+  }
+  .single-author-page .authors-article p {
+    font-size: 0.8rem;
   }
   .last-footer-section .en, .last-footer-section .ar {
     font-size: 1rem;

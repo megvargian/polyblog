@@ -23,7 +23,7 @@ get_header();
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
             </div>
             <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
-                <div>
+                <div class="pt-lg-0 pt-sm-4 pt-2">
                     <h1 class="text-lg-left text-center">
                         <span class="en-bold d-block">Dr. Ramzi Abou Ismail</span>
                         <span class="ar-bold d-block">د. رمزي أبو اسماعيل</span>
@@ -32,22 +32,22 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row text-left mt-4 mb-5 bg-black-sec">
+        <div class="row text-left mt-4 mb-5 bg-black-sec mx-lg-0 mx-1">
             <div class="col-6 text-left">
-                <h2>
-                    <span class="en-bold">Articles</span>
+                <h2 class="en-bold">
+                    Articles
                 </h2>
             </div>
             <div class="col-6 text-right">
-                <h2>
-                    <span class="ar-bold">مقالات</span>
+                <h2 class="ar-bold">
+                    مقالات
                 </h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12 mb-5">
                 <div class="authors-article">
-                    <div class="row px-5 py-3">
+                    <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
                             <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
                         </div>
@@ -62,7 +62,7 @@ get_header();
             </div>
             <div class="col-12 mb-5">
                 <div class="authors-article">
-                    <div class="row px-5 py-3">
+                    <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
                             <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
                         </div>
