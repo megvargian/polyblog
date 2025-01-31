@@ -20,6 +20,9 @@
   .search-authors-page h1 span {
     font-size: 3rem;
   }
+  .single-author-page h2 span {
+    font-size: 3rem;
+  }
   .single-author-page h2 {
     font-size: 3rem;
   }
@@ -478,6 +481,9 @@
   .search-authors-page h1 .en-bold {
     letter-spacing: 10px;
   }
+  .single-author-page h2 span {
+    font-size: 2rem;
+  }
   .single-author-page h2 {
     font-size: 2rem;
   }
@@ -611,6 +617,9 @@
   }
   .search-authors-page .single-author-block .view-more-btn {
     font-size: 0.8rem;
+  }
+  .single-author-page h2 span {
+    font-size: 1.5rem;
   }
   .single-author-page h2 {
     font-size: 1.5rem;
@@ -753,6 +762,9 @@
   }
   .search-authors-page .bg-black {
     padding: 1rem 2rem;
+  }
+  .single-author-page h2 span {
+    font-size: 1.2rem;
   }
   .single-author-page h2 {
     font-size: 1.2rem;

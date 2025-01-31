@@ -67,7 +67,7 @@ get_header();
                             <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-right px-3">
+                            <div class="text-right">
                                 <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
                                 <a class="en-regular" href="#">Read More</a>
                             </div>
