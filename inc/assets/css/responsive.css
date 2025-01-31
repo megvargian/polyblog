@@ -17,7 +17,7 @@
     height: auto;
     width: 100%;
   }
-  .search-authors-page h1 span {
+  .search-authors-page h1 span, .our-segements-page h1 span {
     font-size: 3rem;
   }
   .single-author-page h2 span {
@@ -475,10 +475,10 @@
   .message-for-editor-section .container-fluid p {
     font-size: 1rem;
   }
-  .search-authors-page h1 span {
+  .search-authors-page h1 span, .our-segements-page h1 span {
     font-size: 2rem;
   }
-  .search-authors-page h1 .en-bold {
+  .search-authors-page h1 .en-bold, .our-segements-page h1 .en-bold {
     letter-spacing: 10px;
   }
   .single-author-page h2 span {
@@ -606,19 +606,19 @@
     width: 250px;
     height: 250px;
   }
-  .search-authors-page h1 span {
+  .search-authors-page h1 span, .our-segements-page h1 span {
     font-size: 1.5rem;
   }
-  .search-authors-page h1 .en-bold {
+  .search-authors-page h1 .en-bold, .our-segements-page h1 .en-bold {
     letter-spacing: 8px;
   }
-  .search-authors-page .single-author-block h4 {
+  .search-authors-page .single-author-block h4, .our-segements-page .single-author-block h4 {
     font-size: 1rem;
   }
-  .search-authors-page .single-author-block p {
+  .search-authors-page .single-author-block p, .our-segements-page .single-author-block p {
     font-size: 0.75rem;
   }
-  .search-authors-page .single-author-block .view-more-btn {
+  .search-authors-page .single-author-block .view-more-btn, .our-segements-page .single-author-block .view-more-btn {
     font-size: 0.8rem;
   }
   .single-author-page h2 span {
@@ -757,13 +757,13 @@
   .custom-padding-right {
     padding-right: 0;
   }
-  .search-authors-page h1 span {
+  .search-authors-page h1 span, .our-segements-page h1 span {
     font-size: 1.2rem;
   }
-  .search-authors-page h1 .en-bold {
+  .search-authors-page h1 .en-bold, .our-segements-page h1 .en-bold {
     letter-spacing: 5px;
   }
-  .search-authors-page .bg-black {
+  .search-authors-page .bg-black, .our-segements-page .bg-black {
     padding: 1rem 2rem;
   }
   .single-author-page h2 span {
