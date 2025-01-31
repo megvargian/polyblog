@@ -19,7 +19,7 @@ get_header();
             </div>
         </div>
         <div class="row author-title">
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 px-md-0 px-5">
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
             </div>
             <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
@@ -93,7 +93,7 @@ get_header();
                 <div class="white-line"></div>
             </div>
         </div>
-        <div class="row pb-3 pt-5 mt-5 last-footer-section">
+        <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
             <div class="col-12 text-center">
                 <div>
                     <h3 class="en-regular en">Youth-led, Lebanese political media</h3>

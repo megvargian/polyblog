@@ -486,6 +486,19 @@
 		h2 .en-bold{
 			letter-spacing: 10px;
 		}
+		.author-title{
+			h1{
+				span {
+					text-align: center;
+				}
+			}
+			p{
+				text-align: center;
+			}
+		}
+		.bg-black-sec{
+			padding: .5rem 4rem;
+		}
 	}
 	.last-footer-section{
 		.en, .ar{
@@ -642,6 +655,9 @@
 		}
 		h2 .en-bold{
 			letter-spacing: 8px;
+		}
+		.bg-black-sec{
+			padding: .5rem 2.5rem;
 		}
 	}
 	.last-footer-section{
@@ -838,6 +854,9 @@
 		}
 		.bg-black{
 			padding: 1rem 2rem;
+		}
+		.bg-black-sec{
+			padding: .5rem 1.5rem;
 		}
 	}
 	.last-footer-section{
