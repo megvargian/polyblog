@@ -33,6 +33,12 @@
 			font-size: 3rem;
 		}
 	}
+	//single authors authors
+	.single-author-page{
+		h2 span {
+			font-size: 3rem;
+		}
+	}
 	//footer
 	.footer-container{
 		button{
@@ -472,6 +478,15 @@
 			letter-spacing: 10px;
 		}
 	}
+	//single authors authors
+	.single-author-page{
+		h2 span {
+			font-size: 2rem;
+		}
+		h2 .en-bold{
+			letter-spacing: 10px;
+		}
+	}
 	.last-footer-section{
 		.en, .ar{
 		  font-size: 2rem;
@@ -618,6 +633,15 @@
 			.view-more-btn{
 				font-size: .8rem;
 			}
+		}
+	}
+	//single authors authors
+	.single-author-page{
+		h2 span {
+			font-size: 1.5rem;
+		}
+		h2 .en-bold{
+			letter-spacing: 8px;
 		}
 	}
 	.last-footer-section{
@@ -798,6 +822,18 @@
 			font-size: 1.2rem;
 		}
 		h1 .en-bold{
+			letter-spacing: 5px;
+		}
+		.bg-black{
+			padding: 1rem 2rem;
+		}
+	}
+	//single authors authors
+	.single-author-page{
+		h2 span{
+			font-size: 1.2rem;
+		}
+		h2 .en-bold{
 			letter-spacing: 5px;
 		}
 		.bg-black{

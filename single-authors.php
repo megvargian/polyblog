@@ -3,7 +3,7 @@ get_header();
 ?>
 <section class="single-author-page">
     <div class="container">
-        <div class="row pt-2 mb-5">
+        <div class="row pt-2 mb-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
@@ -19,12 +19,12 @@ get_header();
             </div>
         </div>
         <div class="row author-title">
-            <div class="col-4">
+            <div class="col-lg-4 col-12">
                 <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
             </div>
-            <div class="col-7 text-left justify-content-center d-flex align-items-center">
+            <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
                 <div>
-                    <h1 class="text-left">
+                    <h1 class="text-lg-left text-center">
                         <span class="en-bold d-block">Dr. Ramzi Abou Ismail</span>
                         <span class="ar-bold d-block">د. رمزي أبو اسماعيل</span>
                     </h1>
@@ -76,7 +76,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="row py-5">
+        <div class="row py-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
@@ -88,7 +88,7 @@ get_header();
                 </a>
             </div>
         </div>
-        <div class="row pt-5">
+        <div class="row pt-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
             </div>
