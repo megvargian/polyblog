@@ -68,7 +68,7 @@
 
 @media screen and (max-width: 991px) {
 	// mobile menu
-	.menu_on_mobile{
+	#menu_mobile {
 		display: none !important;
 		width: 100%;
 		height: 100dvh;
@@ -76,13 +76,30 @@
 		top: 0px;
 		left: 0px;
 		transform: translateX(-100dvw);
-		transition: cubic-bezier(0.32, 0.17, 0, 1) 1s;
+		visibility: hidden;
+		transition:
+			transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+			opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+			visibility 0s linear 1s;
 		background-color: #ec4100;
 		text-align: right;
 		font-size: 20px;
 		text-align: center;
 		z-index: 11;
 		padding: 0px 30px;
+	}
+
+	#menu_mobile.visible {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+		transition: 
+		transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+		opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+		visibility 0s;
+	}
+
+	.menu_on_mobile{
 		.page_font{
 			font-size: 30px;
 			margin-bottom: 10px;
