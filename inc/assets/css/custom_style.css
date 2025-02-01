@@ -1562,6 +1562,9 @@ body.hide_scroll {
        text-align-last: end !important;
 }
 
+.what-we-think-container .mobile {
+  display: none;
+}
 .what-we-think-container .search-page-title {
   color: #fff;
 }

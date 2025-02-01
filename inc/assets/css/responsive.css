@@ -339,6 +339,7 @@
     text-transform: uppercase;
     padding: 0.5rem 0.7rem;
     text-align: center;
+    width: -moz-fit-content;
     width: fit-content;
     background-color: #ec4100;
     border-radius: 10px;
@@ -425,7 +426,8 @@
     font-size: 1rem;
   }
   .single-featured-article-container .align-text-arabic {
-    text-align-last: start;
+    -moz-text-align-last: start;
+         text-align-last: start;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -649,6 +651,12 @@
 @media (max-width: 575px) {
   .site-title {
     font-size: 1.5rem;
+  }
+  .what-we-think-container .desktop {
+    display: none;
+  }
+  .what-we-think-container .mobile {
+    display: flex;
   }
   .single-author-article-swiper-section .single-author-img {
     width: 100%;

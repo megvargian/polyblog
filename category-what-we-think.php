@@ -24,7 +24,7 @@
         <input type="hidden" name="cat" value="what-we-think" />
     </form>
     <div class="what-we-think-posts">
-        <div class="row my-4">
+        <div class="row my-4 desktop">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 my-2">
@@ -78,6 +78,9 @@
                         </div>
                     </div>
                     <?php if ($wp_query->current_post % 2 == 1) : ?>
+        </div>
+        <div class="row my-4 mobile">
+            <h2>test mobile</h2>
         </div>
         <div class="row my-4">
         <?php endif; ?>
