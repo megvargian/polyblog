@@ -5,7 +5,7 @@
             <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
         </div>
     </div>
-    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
+    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/category/what-we-think?cat=what-we-think&')); ?>">
         <div class="row my-2">
             <div class="col search-input">
                 <div class="div input-with-icon">
