@@ -82,7 +82,7 @@
         <div class="row my-4 mobile">
             <h2>test mobile</h2>
         </div>
-        <div class="row my-4">
+        <div class="row my-4 desktop">
         <?php endif; ?>
     <?php endwhile; ?>
 <?php else : ?>
