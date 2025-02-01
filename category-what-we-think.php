@@ -22,10 +22,10 @@
             </div>
         </div>
     </form>
-    <?php if (have_posts()) : ?>
-        <div class="what-we-think-posts">
-            <div class="row my-4">
-                <?php while ($query->have_posts()) : $query->the_post(); ?>
+    <div class="what-we-think-posts">
+        <div class="row my-4">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 my-2">
                         <div class="card">
                             <?php
@@ -62,7 +62,7 @@
                                         </p>
                                     </div>
                                     <?php
-                                        $author = get_field('author');
+                                    $author = get_field('author');
                                     ?>
                                     <div class="col-5 author-info">
                                         <a href="<?php echo get_permalink($author); ?>">
@@ -76,18 +76,16 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ($query->current_post % 2 == 1) : ?>
-            </div>
-            <div class="row my-4">
-            <?php endif; ?>
-        <?php endwhile; ?>
-            </div>
+                    <?php if ($wp_query->current_post % 2 == 1) : ?>
         </div>
-    <?php else : ?>
-        <p>No posts found for this search.</p>
-    <?php endif;
-    wp_reset_postdata();
-    ?>
+        <div class="row my-4">
+        <?php endif; ?>
+    <?php endwhile; ?>
+<?php else : ?>
+    <p>No posts found in this category.</p>
+<?php endif; ?>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>
 <script>
