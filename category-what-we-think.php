@@ -24,9 +24,9 @@
         <input type="hidden" name="cat" value="what-we-think" />
     </form>
     <div class="what-we-think-posts">
-        <div class="row my-4 desktop">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="row my-4 desktop">
                     <div class="col-md-6 my-2">
                         <div class="card">
                             <?php
@@ -77,18 +77,16 @@
                             </div>
                         </div>
                     </div>
-                    <?php if ($wp_query->current_post % 2 == 1) : ?>
-                    <?php endif; ?>
-                <?php endwhile; ?>
-        </div>
-        <div class="row my-4 mobile">
-            <h2>test mobile</h2>
-        </div>
-        <div class="row my-4">
-        <?php else : ?>
-            <p>No posts found in this category.</p>
-        <?php endif; ?>
-        </div>
+                </div>
+                <div class="row my-4 mobile">
+                    <h2>test mobile</h2>
+                </div>
+            <?php endwhile; ?>
+            <div class="row my-4">
+            <?php else : ?>
+                <p>No posts found in this category.</p>
+            <?php endif; ?>
+            </div>
     </div>
 </div>
 <?php get_footer(); ?>
