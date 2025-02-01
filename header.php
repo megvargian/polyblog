@@ -183,8 +183,13 @@ $header_video_url = get_field('header_video', 'option');
         });
 
 		$('#menu-button').on('click', function() {
-			console.log('menu button click')
-			$('.menu_on_mobile').toggle();
+			const menu = $('.menu_on_mobile');
+        
+			if (menu.css('display') === 'none') {
+				menu.attr('style', 'display: block !important');
+			} else {
+				menu.attr('style', 'display: none !important');
+			}
 		});
 	});
 </script>
