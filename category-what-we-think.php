@@ -22,18 +22,7 @@
             </div>
         </div>
     </form>
-    <!-- <?php
-    $search_term = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
-
-    $args = array(
-        'post_type' => 'post',
-        's' => $search_term,
-        'cat' => get_category_by_slug('what-we-think')->term_id,
-    );
-
-    $query = new WP_Query($args);
-
-    if ($query->have_posts()) : ?> -->
+    <?php if (have_posts()) : ?>
         <div class="what-we-think-posts">
             <div class="row my-4">
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
@@ -94,12 +83,11 @@
         <?php endwhile; ?>
             </div>
         </div>
-    <!-- <?php else : ?>
+    <?php else : ?>
         <p>No posts found for this search.</p>
     <?php endif;
     wp_reset_postdata();
-    ?> -->
-
+    ?>
 </div>
 <?php get_footer(); ?>
 <script>
