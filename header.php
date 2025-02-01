@@ -181,5 +181,9 @@ $header_video_url = get_field('header_video', 'option');
             $('.menu_on_mobile').toggleClass('active');
 			$(".arrow-right").toggleClass('active');
         });
+
+		$('#menu-button').on('click', function() {
+			$('#menu_mobile').toggle();
+		});
 	});
 </script>
