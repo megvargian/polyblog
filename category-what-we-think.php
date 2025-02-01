@@ -25,8 +25,8 @@
     </form>
     <div class="what-we-think-posts">
         <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
-                <div class="row my-4 desktop">
+            <div class="row my-4 desktop">
+                <?php while (have_posts()) : the_post(); ?>
                     <div class="col-md-6 my-2">
                         <div class="card">
                             <?php
@@ -77,11 +77,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row my-4 mobile">
+                <?php endwhile; ?>
+            </div>
+            <div class="row my-4 mobile">
+                <?php while (have_posts()) : the_post(); ?>
                     <h2>test mobile</h2>
-                </div>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
+            </div>
             <div class="row my-4">
             <?php else : ?>
                 <p>No posts found in this category.</p>
