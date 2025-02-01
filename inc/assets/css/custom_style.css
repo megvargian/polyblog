@@ -1566,7 +1566,7 @@ body.hide_scroll {
   display: none;
 }
 .what-we-think-container .mobile .swiper {
-  width: 240px;
+  width: 66%;
 }
 .what-we-think-container .mobile .swiper-slide {
   border-radius: 18px;
