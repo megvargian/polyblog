@@ -98,6 +98,7 @@
     </div>
 </div>
 <?php get_footer(); ?>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     document.getElementById('searchButton').addEventListener('click', function() {
         document.querySelector('.search-form').submit();
