@@ -10,14 +10,13 @@
 
 get_header(); ?>
 
-<section id="primary" class="content-area col-sm-12 col-lg-8">
+<!-- <section id="primary" class="content-area col-sm-12 col-lg-8">
 	<main id="main" class="site-main" role="main">
 
 		<?php
 		if (have_posts()) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf(esc_html__('Search Results for: %s', 'wp-bootstrap-starter'), '<span>' . get_search_query() . '</span>'); ?></h1>
 			</header>
 
 		<?php
@@ -34,9 +33,14 @@ get_header(); ?>
 
 		endif; ?>
 	</main>
-</section>
+</section> -->
 
 <div class="container what-we-think-container">
+	<div class="row">
+		<div class="col">
+			<h1 class="search-page-title"><?php printf(esc_html__('Search Results for: %s', 'wp-bootstrap-starter'), '<span>' . get_search_query() . '</span>'); ?></h1>
+		</div>
+	</div>
 	<?php
 	$search_term = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
 	$search_category = isset($_GET['cat']) ? sanitize_text_field($_GET['cat']) : '';
