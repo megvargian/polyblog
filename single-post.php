@@ -35,7 +35,7 @@ if (have_posts()):
             <div class="single-post-featured-image">
                 <div class="row single-article-header-button-container">
                     <div class="col d-flex justify-content-center align-items-center">
-                        <a href="http://polybloglb.com/" target="_blank">
+                        <a href="https://polybloglb.com/category/what-we-think/" target="_blank">
                             <div class="bg-black">
                                 <p class="en">what we think</p>
                                 <p class="ar">شــــــو منفكــــــر</p>

@@ -49,7 +49,7 @@ $header_video_url = get_field('header_video', 'option');
 						</video>
 						<div <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
 							<div class="col d-flex justify-content-center align-items-center">
-								<a href="http://polybloglb.com/" target="_blank">
+								<a href="https://polybloglb.com/category/what-we-think/" target="_blank">
 									<div class="bg-black">
 										<p class="en">what we think</p>
 										<p class="ar">شــــــو منفكــــــر</p>
@@ -124,7 +124,7 @@ $header_video_url = get_field('header_video', 'option');
                         <div>
                             <?php //foreach($header_fields as $key => $menu_item){
                                     //if($menu_item['general_image'] == '' && $menu_item['has_child'] == false){?>
-							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el" href="https://polybloglb.com/category/what-we-think/">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
