@@ -80,9 +80,15 @@
                 <?php endwhile; ?>
             </div>
             <div class="row my-4 mobile">
-                <?php while (have_posts()) : the_post(); ?>
-                    <h2>test mobile</h2>
-                <?php endwhile; ?>
+                <div class="col">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <?php while (have_posts()) : the_post(); ?>
+                                <div class="swiper-slide">Slide 1</div>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row my-4">
             <?php else : ?>
@@ -95,5 +101,10 @@
 <script>
     document.getElementById('searchButton').addEventListener('click', function() {
         document.querySelector('.search-form').submit();
+    });
+
+    const swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
     });
 </script>
