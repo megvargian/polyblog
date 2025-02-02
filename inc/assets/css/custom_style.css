@@ -1650,7 +1650,6 @@ body.hide_scroll {
 .what-we-think-container .what-we-think-posts .card .card-body .category-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: flex-start;
   gap: 8px;
 }
@@ -1675,11 +1674,15 @@ body.hide_scroll {
 }
 .what-we-think-container .what-we-think-posts .card .card-body .article-date {
   color: #fff;
+  font-size: 1.1cqw;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .author-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 8px;
+}
+.what-we-think-container .what-we-think-posts .card .card-body .author-info .tags {
+  font-size: 1.1cqw;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .author-image {
   width: 100%;
