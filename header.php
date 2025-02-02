@@ -175,7 +175,7 @@ $header_video_url = get_field('header_video', 'option');
 <script>
 	jQuery(document).ready(function ($) {
 		$('.menu_mobile_nav').click(function(event) {
-            // $(this).toggleClass('active');
+            $(this).toggleClass('active');
             $('html, body').toggleClass('hide_scroll');
             $('.menu_on_mobile').toggleClass('active');
 			$('.menu_on_mobile').toggleClass('visible');
