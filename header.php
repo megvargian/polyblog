@@ -174,12 +174,15 @@ $header_video_url = get_field('header_video', 'option');
             </div>
 <script>
 	jQuery(document).ready(function ($) {
-		$('#menu-button').click(function(event) {
-            // $(this).toggleClass('active');
-            // $('html, body').toggleClass('hide_scroll');
-            // $('.menu_on_mobile').toggleClass('active');
-			// $('.menu_on_mobile').toggleClass('visible');
-			// $(".arrow-right").toggleClass('active');
-        });
+		// $('#menu-button').click(function() {
+        //     // $(this).toggleClass('active');
+        //     // $('html, body').toggleClass('hide_scroll');
+        //     // $('.menu_on_mobile').toggleClass('active');
+		// 	// $('.menu_on_mobile').toggleClass('visible');
+		// 	// $(".arrow-right").toggleClass('active');
+        // });
+		$("#menu-button").click(function() {
+			alert("Button clicked!");
+		});
 	});
 </script>
