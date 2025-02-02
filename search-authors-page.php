@@ -85,11 +85,11 @@ get_header();
 	jQuery(document).ready(function ($) {
         var swiper = new Swiper('.search-authors-swiper', {
             loop: true,
-            centeredSlides: true,
             slidesPerView: 2,
             spaceBetween: 20,
             grid: {
-                rows: 2, // Two rows
+                rows: 2,
+                fill: 'row', // Ensures correct row filling (optional)
             },
             breakpoints: {
                 // when window width is >= 320px
