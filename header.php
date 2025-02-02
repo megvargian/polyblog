@@ -182,8 +182,8 @@ $header_video_url = get_field('header_video', 'option');
 			$(".arrow-right").toggleClass('active');
         });
 
-		$('#menu-button').on('click', function() {
-			$('#menu_mobile').toggleClass('visible');
-		});
+		// $('#menu-button').on('click', function() {
+		// 	$('#menu_mobile').toggleClass('visible');
+		// });
 	});
 </script>

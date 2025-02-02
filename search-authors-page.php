@@ -84,7 +84,7 @@ get_header();
 <script>
 	jQuery(document).ready(function ($) {
         var swiper = new Swiper('.search-authors-swiper', {
-            loop: true,
+            loop: false,
             slidesPerView: 2,
             spaceBetween: 20,
             grid: {
