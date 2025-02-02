@@ -2043,8 +2043,14 @@ body.hide_scroll {
         .author-info {
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
+          align-items: flex-end;
+          gap: 8px;
           color: #ED4101;
+
+          .tags {
+            font-size: 1.1cqw;
+            color: #fff;
+          }
         }
 
         .author-image {

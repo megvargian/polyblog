@@ -1828,8 +1828,13 @@ body.hide_scroll {
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .author-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 8px;
   color: #ED4101;
+}
+.how-we-see-it-container .how-we-see-it-posts .card .card-body .author-info .tags {
+  font-size: 1.1cqw;
+  color: #fff;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .author-image {
   width: 100%;
