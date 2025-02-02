@@ -1950,9 +1950,11 @@ body.hide_scroll {
     @keyframes expanded-card-body {
       0% {
         width: 100%;
+        transform: translateX(0);
       }
       100% {
         width: 115%;
+        transform: translateX(-7.5%);
       }
     }
 
