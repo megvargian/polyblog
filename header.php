@@ -179,6 +179,7 @@ $header_video_url = get_field('header_video', 'option');
             $(this).toggleClass('active');
             $('html, body').toggleClass('hide_scroll');
             $('.menu_on_mobile').toggleClass('active');
+			$('.menu_on_mobile').toggleClass('visible');
 			$(".arrow-right").toggleClass('active');
         });
 
