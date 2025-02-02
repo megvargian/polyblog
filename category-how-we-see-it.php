@@ -42,7 +42,7 @@
                                 <h5 class="card-title align-text-arabic">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h5>
-                                <div class="row">
+                                <div class="row" style="display: inline-block;">
                                     <div class="col-4 category-buttons">
                                         <div>
                                             <?php
