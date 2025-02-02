@@ -183,8 +183,7 @@ $header_video_url = get_field('header_video', 'option');
         });
 
 		$('#menu-button').on('click', function() {
-			const menu = $('#menu_mobile');
-			menu.toggleClass('visible');
+			$('#menu_mobile').toggleClass('visible');
 		});
 	});
 </script>
