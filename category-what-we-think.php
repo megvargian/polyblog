@@ -76,13 +76,13 @@
                                         <div class="row">
                                             <div class="col">
                                                 <a href="<?php echo get_permalink($author); ?>">
-                                                    <p class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></p>
+                                                    <h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <p>tag 1 / tag 2 / tag 3</p>
+                                                <p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
                                             </div>
                                         </div>
                                     </div>
