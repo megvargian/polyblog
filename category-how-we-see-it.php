@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container what-we-think-container">
+<div class="container how-we-see-it-container">
     <div class="row">
         <div class="col">
             <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/02/how-we-see-it.png" alt="what we think" />
@@ -23,7 +23,7 @@
         </div>
         <input type="hidden" name="cat" value="how-we-see-it" />
     </form>
-    <div class="what-we-think-posts">
+    <div class="how-we-see-it-posts">
         <?php if (have_posts()) : ?>
             <div class="row my-4 desktop">
                 <?php while (have_posts()) : the_post(); ?>
