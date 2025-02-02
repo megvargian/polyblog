@@ -1764,15 +1764,21 @@ body.hide_scroll {
   background-color: transparent;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
+  position: absolute;
   flex-direction: column;
   justify-content: space-between;
+  bottom: 10%;
+  width: 100%;
+  height: 17%;
+  max-height: 100%;
+  border-radius: 32px;
   transform-origin: center;
   animation: expanded-card-body 2s forwards;
   background-color: #000;
+}
+.how-we-see-it-container .how-we-see-it-posts .card .card-body .card-content {
+  margin: 0 5%;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .thumbnail {
   width: 100%;
