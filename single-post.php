@@ -91,11 +91,13 @@ if (have_posts()):
             </div>
             <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
-                    <?php foreach ($categories as $category) { ?>
-                        <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
-                            <?php echo esc_html($category->name); ?>
-                        </button>
-                    <?php } ?>
+                    <?php foreach ($categories as $category) {
+                        if ($category->slug == 'arabic' || $category->slug == 'english') { ?>
+                            <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
+                                <?php echo esc_html($category->name); ?>
+                            </button>
+                    <?php }
+                    } ?>
                     <?php
                     echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
