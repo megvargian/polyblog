@@ -56,7 +56,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</div>
 							<div class="col d-flex justify-content-center align-items-center">
-								<a href="http://polybloglb.com/" target="_blank">
+								<a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
 									<div class="bg-black">
 										<p class="en">how we see it</p>
 										<p class="ar">كيــف منشــوف</p>
@@ -132,7 +132,7 @@ $header_video_url = get_field('header_video', 'option');
 									</div>
 								</div>
 							</a>
-							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el" href="https://polybloglb.com/category/how-we-see-it/">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">

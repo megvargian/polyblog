@@ -42,7 +42,7 @@ if (have_posts()):
                         </a>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
-                        <a href="http://polybloglb.com/" target="_blank">
+                        <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
                             <div class="bg-black">
                                 <p class="en">how we see it</p>
                                 <p class="ar">كيــف منشــوف</p>
