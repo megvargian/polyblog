@@ -160,26 +160,6 @@ if(!isMob()){ ?>
 <?php } ?>
 <script>
 jQuery(document).ready(function($) {
-    // $('input, textarea').focus(function () {
-    //     $(this).attr('placeholder', '');
-    // })
-    $('#languages').select2({
-        placeholder: "Select languages",
-        allowClear: true
-    });
-    $('#languages').on('change', function(){
-        var count = $('#select2-languages-container li').length;
-        if(count>0){
-            $('.select2-search__field').addClass('d-none');
-        } else {
-            $('.select2-search__field').removeClass('d-none');
-        }
-        console.log('Number of <li> tags:', count);
-    });
-
-    // $('textarea').focus(function () {
-    //     $(this).attr('placeholder', '');
-    // })
     const swiperMobileContactForm = new Swiper('.contact-us-swiper-mobile', {
         slidesPerView: 1,
         spaceBetween: 30,
