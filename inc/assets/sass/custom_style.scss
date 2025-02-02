@@ -1974,6 +1974,7 @@ body.hide_scroll {
         justify-content: space-between;
         transform-origin: center;
         animation: expanded-card-body 2s forwards;
+        background-color: #000;
       }
 
       .thumbnail {
@@ -1987,6 +1988,8 @@ body.hide_scroll {
         font-weight: 700;
         opacity: 1;
         transition: 0.3s ease-in-out;
+        color: #ED4101;
+        border-radius: 38px;
       }
 
       .thumbnail:hover, .card-title:hover {
@@ -2016,30 +2019,31 @@ body.hide_scroll {
           }
 
           .english {
-            background-color: #000;
+            background-color: #ED4101;
             color: #fff;
           }
 
           .arabic {
-            background-color: #000;
-            color: #ed4101;
+            background-color: #fff;
+            color: #000;
           }
         }
 
         .article-date {
-          color: #fff;
+          color: #ED4101;
         }
 
         .author-info {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+          color: #ED4101;
         }
 
         .author-image {
           width: 100%;
           border-radius: 100%;
-          border: 2px solid #000;
+          border: 2px solid #ED4101;
         }
       }
     }

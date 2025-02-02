@@ -1771,6 +1771,7 @@ body.hide_scroll {
   justify-content: space-between;
   transform-origin: center;
   animation: expanded-card-body 2s forwards;
+  background-color: #000;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .thumbnail {
   width: 100%;
@@ -1782,6 +1783,8 @@ body.hide_scroll {
   font-weight: 700;
   opacity: 1;
   transition: 0.3s ease-in-out;
+  color: #ED4101;
+  border-radius: 38px;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .thumbnail:hover, .how-we-see-it-container .how-we-see-it-posts .card .card-title:hover {
   opacity: 0.8;
@@ -1806,25 +1809,26 @@ body.hide_scroll {
   transition: 0.3s;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .category-buttons .english {
-  background-color: #000;
+  background-color: #ED4101;
   color: #fff;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .category-buttons .arabic {
-  background-color: #000;
-  color: #ed4101;
+  background-color: #fff;
+  color: #000;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .article-date {
-  color: #fff;
+  color: #ED4101;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .author-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  color: #ED4101;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .author-image {
   width: 100%;
   border-radius: 100%;
-  border: 2px solid #000;
+  border: 2px solid #ED4101;
 }
 
 .align-text-arabic {
