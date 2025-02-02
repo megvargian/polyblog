@@ -277,7 +277,7 @@
 </footer>
 <div class="modal fade custom-modal" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
+        <div class="modal-content border-0">
             <div class="modal-header">
                 <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal"
                     aria-label="Close"></button>

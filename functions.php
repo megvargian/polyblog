@@ -148,7 +148,7 @@ function wp_bootstrap_starter_scripts() {
     wp_enqueue_script('polyblog-swiper-js', get_template_directory_uri() . '/inc/assets/js/swiper.min.js', array(), '1', true );
 
     // jquery visibale
-    wp_enqueue_script('queryvisible-js', get_template_directory_uri() . '/inc/assets/js/jquery.visible.js', array(), '1', true );
+    // wp_enqueue_script('queryvisible-js', get_template_directory_uri() . '/inc/assets/js/jquery.visible.js', array(), '1', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
