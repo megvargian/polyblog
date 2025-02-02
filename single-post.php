@@ -120,7 +120,7 @@ if (have_posts()):
                             </div>
                         </div>
                         <div class="col-2">
-                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                            <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author_id); ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     </div>
                 </div>
