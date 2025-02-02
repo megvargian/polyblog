@@ -1866,10 +1866,13 @@ body.hide_scroll {
         .author-info {
           display: flex;
           flex-direction: column;
+          align-items: flex-end;
           gap: 8px;
+          color: #000;
 
           .tags {
             font-size: 1.1cqw;
+            color: #000;
           }
         }
 

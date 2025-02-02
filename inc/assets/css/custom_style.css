@@ -1679,10 +1679,13 @@ body.hide_scroll {
 .what-we-think-container .what-we-think-posts .card .card-body .author-info {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 8px;
+  color: #000;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .author-info .tags {
   font-size: 1.1cqw;
+  color: #000;
 }
 .what-we-think-container .what-we-think-posts .card .card-body .author-image {
   width: 100%;
