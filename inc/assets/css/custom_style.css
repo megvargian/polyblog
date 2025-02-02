@@ -1638,11 +1638,6 @@ body.hide_scroll {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.what-we-think-container .what-we-think-posts .card .card-title {
-  font-weight: 700;
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
 .what-we-think-container .what-we-think-posts .card .thumbnail:hover, .what-we-think-container .what-we-think-posts .card .card-title:hover {
   opacity: 0.8;
   transition: 0.3s;
@@ -1785,13 +1780,6 @@ body.hide_scroll {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.how-we-see-it-container .how-we-see-it-posts .card .card-title {
-  font-weight: 700;
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-  color: #ED4101;
-  border-radius: 38px;
-}
 .how-we-see-it-container .how-we-see-it-posts .card .thumbnail:hover, .how-we-see-it-container .how-we-see-it-posts .card .card-title:hover {
   opacity: 0.8;
   transition: 0.3s;
@@ -1799,7 +1787,6 @@ body.hide_scroll {
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .category-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: flex-start;
   gap: 8px;
 }
@@ -1824,6 +1811,7 @@ body.hide_scroll {
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .article-date {
   color: #ED4101;
+  font-size: 1.1cqw;
 }
 .how-we-see-it-container .how-we-see-it-posts .card .card-body .author-info {
   display: flex;

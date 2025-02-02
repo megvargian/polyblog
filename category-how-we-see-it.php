@@ -39,9 +39,6 @@
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <h5 class="card-title align-text-arabic">
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h5>
                                 <div class="row">
                                     <div class="col-4 category-buttons">
                                         <div class="row">
@@ -111,9 +108,6 @@
                                             </div>
                                         <?php endif; ?>
                                         <div class="card-body">
-                                            <h5 class="card-title align-text-arabic">
-                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                            </h5>
                                             <div class="row">
                                                 <div class="col-4 category-buttons">
                                                     <div>

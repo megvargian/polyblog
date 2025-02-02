@@ -1816,12 +1816,6 @@ body.hide_scroll {
         transition: 0.3s ease-in-out;
       }
 
-      .card-title {
-        font-weight: 700;
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-      }
-
       .thumbnail:hover, .card-title:hover {
         opacity: 0.8;
         transition: 0.3s;
@@ -1991,14 +1985,6 @@ body.hide_scroll {
         transition: 0.3s ease-in-out;
       }
 
-      .card-title {
-        font-weight: 700;
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-        color: #ED4101;
-        border-radius: 38px;
-      }
-
       .thumbnail:hover, .card-title:hover {
         opacity: 0.8;
         transition: 0.3s;
@@ -2008,7 +1994,6 @@ body.hide_scroll {
         .category-buttons {
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
           align-items: flex-start;
           gap: 8px;
 
@@ -2038,6 +2023,7 @@ body.hide_scroll {
 
         .article-date {
           color: #ED4101;
+          font-size: 1.1cqw;
         }
 
         .author-info {
