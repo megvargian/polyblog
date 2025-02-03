@@ -26,8 +26,12 @@ $author_posts_args = array(
     'post__not_in' => array($post_id),
 );
 $author_posts_query = new WP_Query($author_posts_args);
-$language_info = apply_filters('wpml_get_language_information', null, $post_id);
-echo '<pre>'; print_r($language_info); echo '</pre>';
+$translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+if ($translations) {
+    foreach ($translations as $lang => $translation) {
+        echo "Language: " . $lang . " - Post ID: " . $translation->element_id . "<br>";
+    }
+}
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
