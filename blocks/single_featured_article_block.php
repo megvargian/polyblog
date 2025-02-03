@@ -80,13 +80,6 @@ if ($featured_articles): ?>
                                 <a class="position-relative" href="<?php echo esc_url($article_link); ?>">
                                     <img class="d-block w-100 h-100" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                                     <div class="categories-mobile d-lg-none d-flex">
-                                        <?php if ($categories) {
-                                            foreach ($categories as $category) { ?>
-                                                <span class="category mx-1">
-                                                    <?php echo esc_html($category->name) === 'ENGLISH' ? substr($category->name, 0, 2) : mb_substr($category->name, 0, 1, "UTF-8"); ?>
-                                                </span>
-                                            <?php }
-                                        } ?>
                                         <?php
                                         if ($translations) {
                                             foreach ($translations as $lang => $translation) { ?>

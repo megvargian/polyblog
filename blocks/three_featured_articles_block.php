@@ -81,6 +81,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                 $categories = get_the_category();
                                 $article_thumbnail = get_field('article_thumbnail', get_the_ID());
                                 $count++;
+                                $translations = get_translations(get_the_ID());
                                 ?>
                                 <div class="swiper-slide p-1 bg-gray">
                                     <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
@@ -90,12 +91,15 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                                 <span class="ar-regular">شو منفكر</span>
                                             </div>
                                             <div class="categories d-sm-flex d-none">
-                                                <span class="category en-regular">
-                                                    EN
-                                                </span>
-                                                <span class="category ar-regular">
-                                                    ع
-                                                </span>
+                                                <?php
+                                                    if ($translations) {
+                                                        foreach ($translations as $lang => $translation) { ?>
+                                                            <span class="category <?php echo $lang . '-regular'; ?>">
+                                                                <?php echo esc_html($lang == 'en' ? 'EN' : 'ع'); ?>
+                                                            </span>
+                                                        <?php }
+                                                    }
+                                                ?>
                                             </div>
                                         </div>
                                         <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
@@ -106,12 +110,15 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                         </div>
                                         <div class="hover-cat hover-cat-bottom justify-content-end d-sm-none d-flex">
                                             <div class="categories">
-                                                <span class="category en-regular">
-                                                    EN
-                                                </span>
-                                                <span class="category ar-regular">
-                                                    ع
-                                                </span>
+                                                <?php
+                                                    if ($translations) {
+                                                        foreach ($translations as $lang => $translation) { ?>
+                                                            <span class="category <?php echo $lang . '-regular'; ?>">
+                                                                <?php echo esc_html($lang == 'en' ? 'EN' : 'ع'); ?>
+                                                            </span>
+                                                        <?php }
+                                                    }
+                                                ?>
                                             </div>
                                         </div>
                                     </a>
