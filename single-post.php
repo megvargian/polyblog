@@ -14,7 +14,6 @@ $post_id = get_the_ID();
 $author_post_id = get_field('author');
 $author_id = get_post_field('post_author', $author_post_id);
 $author_name = get_the_title($author_post_id);
-$author_image = get_field('author_profile', $author_post_id);
 $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
@@ -43,7 +42,7 @@ if (have_posts()):
                         </a>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
-                        <a href="http://polybloglb.com/" target="_blank">
+                        <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
                             <div class="bg-black">
                                 <p class="en">how we see it</p>
                                 <p class="ar">كيــف منشــوف</p>
@@ -92,11 +91,13 @@ if (have_posts()):
             </div>
             <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
-                    <?php foreach ($categories as $category) { ?>
-                        <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
-                            <?php echo esc_html($category->name); ?>
-                        </button>
-                    <?php } ?>
+                    <?php foreach ($categories as $category) {
+                        if ($category->slug == 'arabic' || $category->slug == 'english') { ?>
+                            <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
+                                <?php echo esc_html($category->name); ?>
+                            </button>
+                    <?php }
+                    } ?>
                     <?php
                     echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
@@ -120,7 +121,7 @@ if (have_posts()):
                             </div>
                         </div>
                         <div class="col-2">
-                            <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                            <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author_post_id); ?>" alt="<?php echo $author_title ?>" />
                         </div>
                     </div>
                 </div>
@@ -144,7 +145,7 @@ if (have_posts()):
             </div>
             <div class="row py-2 author-tags-container-mobile">
                 <div class="col">
-                    <img class="author-image" src="<?php echo $author_image ?>" alt="<?php echo $author_title ?>" />
+                    <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author_post_id); ?>" alt="<?php echo $author_title ?>" />
                 </div>
                 <div class="col author-info-container">
                     <h2 class="author-name"><strong><?php echo $author_name; ?></strong></h2>

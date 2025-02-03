@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-<div class="container what-we-think-container">
+<div class="container how-we-see-it-container">
     <div class="row">
         <div class="col">
-            <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
+            <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/02/how-we-see-it.png" alt="what we think" />
         </div>
     </div>
-    <form role="search" method="get" class="search-form desktop" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
+    <form role="search" method="get" class="search-form desktop" action="<?php echo esc_url(home_url('/category/how-we-see-it/')); ?>">
         <div class="row my-2">
             <div class="col search-input">
                 <div class="div input-with-icon">
@@ -21,9 +21,9 @@
                 </button>
             </div>
         </div>
-        <input type="hidden" name="cat" value="what-we-think" />
+        <input type="hidden" name="cat" value="how-we-see-it" />
     </form>
-    <div class="what-we-think-posts">
+    <div class="how-we-see-it-posts">
         <?php if (have_posts()) : ?>
             <div class="row my-4 desktop">
                 <?php while (have_posts()) : the_post(); ?>
@@ -39,7 +39,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row card-content">
                                     <div class="col-4 category-buttons">
                                         <div class="row">
                                             <div class="col">
@@ -108,49 +108,33 @@
                                             </div>
                                         <?php endif; ?>
                                         <div class="card-body">
-                                            <div class="row">
+                                            <div class="row card-content">
                                                 <div class="col-4 category-buttons">
-                                                    <div class="row">
-                                                        <div class="col">
-
-                                                            <?php
-                                                            $categories = get_the_category();
-                                                            foreach ($categories as $category) {
-                                                                if ($category->slug == 'arabic' || $category->slug == 'english') {
-                                                            ?>
-                                                                    <button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
-                                                                        <strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
-                                                                    </button>
-                                                            <?php
-                                                                }
+                                                    <div>
+                                                        <?php
+                                                        $categories = get_the_category();
+                                                        foreach ($categories as $category) {
+                                                            if ($category->slug == 'arabic' || $category->slug == 'english') {
+                                                        ?>
+                                                                <button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
+                                                                    <strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+                                                                </button>
+                                                        <?php
                                                             }
-                                                            ?>
-                                                        </div>
+                                                        }
+                                                        ?>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <p class="article-date">
-                                                                <?php echo get_the_date('d/m/Y'); ?>
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                                    <p class="article-date">
+                                                        <?php echo get_the_date('d/m/Y'); ?>
+                                                    </p>
                                                 </div>
                                                 <?php
                                                 $author = get_field('author');
                                                 ?>
                                                 <div class="col-5 author-info">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <a href="<?php echo get_permalink($author); ?>">
-                                                                <h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
-                                                        </div>
-                                                    </div>
+                                                    <a href="<?php echo get_permalink($author); ?>">
+                                                        <h4 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h4>
+                                                    </a>
                                                 </div>
                                                 <div class="col-3">
                                                     <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author); ?>" alt="<?php echo get_the_title($author); ?>" />

@@ -15,7 +15,6 @@ $rows = array_chunk($authors_list, 4);
                     <?php
                     $author_id = $author['author'];
                     $author_title = get_the_title($author_id);
-                    $author_image = get_field('author_profile', $author_id);
                     $author_expertise = get_field('expertise', $author_id);
                     $author_link = get_permalink($author_id);
                     ?>
@@ -23,7 +22,7 @@ $rows = array_chunk($authors_list, 4);
                         <a href="<?php echo $author_link; ?>" target="_blank">
                             <div class="single-author-container">
                                 <div class="author-image">
-                                    <img class="img-fluid" src="<?php echo $author_image ?>"
+                                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
                                         alt="<?php echo $author_title ?>" />
                                 </div>
                                 <p><?php echo esc_html($author_title); ?></p>
@@ -56,7 +55,6 @@ $rows = array_chunk($authors_list, 4);
                     <?php
                     $author_id = $author['author'];
                     $author_title = get_the_title($author_id);
-                    $author_image = get_field('author_profile', $author_id);
                     $author_expertise = get_field('expertise', $author_id);
                     $author_link = get_permalink($author_id);
                     ?>
@@ -64,7 +62,7 @@ $rows = array_chunk($authors_list, 4);
                         <a href="<?php echo $author_link; ?>" target="_blank">
                             <div class="single-author-container">
                                 <div class="author-image">
-                                    <img class="img-fluid" src="<?php echo $author_image ?>"
+                                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
                                         alt="<?php echo $author_title ?>" />
                                 </div>
                             </div>
