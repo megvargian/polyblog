@@ -72,6 +72,7 @@ if ($featured_articles): ?>
                     $categories = get_the_category($article);
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
+                    $translations = get_translations($article);
                     ?>
                     <div class="swiper-slide">
                         <div class="row single-featured-article-container py-4">
@@ -86,13 +87,20 @@ if ($featured_articles): ?>
                                                 </span>
                                             <?php }
                                         } ?>
+                                        <?php
+                                        if ($translations) {
+                                            foreach ($translations as $lang => $translation) { ?>
+                                                <span class="category mx-1">
+                                                    <?php echo esc_html($lang == 'en' ? substr('ENGLISH', 0, 2) : mb_substr('عربي', 0, 1, "UTF-8")); ?>
+                                                </span>
+                                            <?php }
+                                        } ?>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-5 right-container">
                                 <div class="categories d-lg-flex d-none">
                                     <?php
-                                        $translations = get_translations($article);
                                         if ($translations) {
                                             foreach ($translations as $lang => $translation) { ?>
                                                 <span class="category">
@@ -165,7 +173,6 @@ if ($featured_articles): ?>
         for(let i=0; i<texts.length; i++){
             if(isArabic(texts[i].innerText)){
                 $(texts[i]).addClass('ar-regular');
-                console.log(`The detected language is: ${texts[i]}`);
             } else {
                 $(texts[i]).addClass('en-regular');
             }
