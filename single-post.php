@@ -133,11 +133,17 @@ if (have_posts()):
             </div>
             <div class="row py-2 single-article-header-mobile">
                 <div class="col category-buttons">
-                    <?php foreach ($categories as $category) { ?>
-                        <button type="button">
-                            <strong><?php echo $category->name == 'ENGLISH' ? 'EN' : 'ع'; ?></strong>
-                        </button>
-                    <?php } ?>
+                    <?php
+                        if ($translations) {
+                            foreach ($translations as $lang => $translation) {
+                                ?>
+                                    <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang);?>">
+                                        <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?>
+                                    </a>
+                                <?php
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="col published-date">
                     <?php

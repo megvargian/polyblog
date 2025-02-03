@@ -1517,6 +1517,7 @@ body.hide_scroll {
       .arabic {
         background-color: #fff;
         color: #000;
+        margin-right: 10px;
       }
     }
 
@@ -1555,7 +1556,7 @@ body.hide_scroll {
       color: #ed4101
     }
 
-    button {
+    a {
       font-size: 14px;
       padding: 0 12px;
       border: none;
@@ -1566,7 +1567,7 @@ body.hide_scroll {
       color: #000;
     }
 
-    button:hover {
+    a:hover {
       opacity: 0.8;
       transition: 0.3s;
     }
