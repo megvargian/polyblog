@@ -164,7 +164,7 @@ if (have_posts()):
                     </div>
                 </div>
             </div>
-            <div class="row py-2 px-lg-5 px-1 main-content">
+            <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo UCL_LANGUAGE_CODE == 'en' ? 'ltr': 'rtl'; ?>">
                 <div class="col-4 d-lg-block d-none"></div>
                 <div class="col p-lg-5 px-2 align-text-arabic">
                     <?php the_content(); ?>
