@@ -1496,7 +1496,7 @@ body.hide_scroll {
         color: #ed4101
       }
 
-      button {
+      a {
         padding: 0 12px;
         border: none;
         border-radius: 8px;
@@ -1504,7 +1504,7 @@ body.hide_scroll {
         transition: 0.3s ease-in-out;
       }
 
-      button:hover {
+      a:hover {
         opacity: 0.8;
         transition: 0.3s;
       }

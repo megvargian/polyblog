@@ -94,9 +94,10 @@ if (have_posts()):
                     <?php
                     if ($translations) {
                         foreach ($translations as $lang => $translation) {
+                            echo $translation->element_id;
                             ?>
-                                <a href="<?php echo get_permalink($translation->element_id);?>" class="<?php echo $lang == 'en' ? 'english' : 'arabic'; ?>">
-                                    <?php echo esc_html($lang == 'en' ? 'ENGLISH' : 'عربي'); ?>
+                                <a href="<?php echo get_permalink($translation->element_id);?>" class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
+                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
                                 </a>
                             <?php
                         }
