@@ -27,10 +27,12 @@ if ($featured_articles): ?>
                             </div>
                             <div class="col-7 p-5 right-container">
                                 <div class="categories">
-                                    <?php if ($categories) {
-                                        foreach ($categories as $category) { ?>
+                                    <?php
+                                    $translations = get_translations($article);
+                                    if ($translations) {
+                                        foreach ($translations as $lang => $translation) { ?>
                                             <span class="category">
-                                                <?php echo esc_html($category->name); ?>
+                                                <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
                                             </span>
                                         <?php }
                                     } ?>
@@ -89,13 +91,15 @@ if ($featured_articles): ?>
                             </div>
                             <div class="col-5 right-container">
                                 <div class="categories d-lg-flex d-none">
-                                    <?php if ($categories) {
-                                        foreach ($categories as $category) { ?>
-                                            <span class="category">
-                                                <?php echo esc_html($category->name); ?>
-                                            </span>
-                                        <?php }
-                                    } ?>
+                                    <?php
+                                        $translations = get_translations($article);
+                                        if ($translations) {
+                                            foreach ($translations as $lang => $translation) { ?>
+                                                <span class="category">
+                                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                                                </span>
+                                            <?php }
+                                        } ?>
                                 </div>
                                 <div class="title align-text-arabic">
                                     <a class="d-none d-lg-block" href="<?php echo esc_url($article_link); ?>">

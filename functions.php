@@ -435,3 +435,9 @@ function get_language_shortcode() {
     return apply_filters( 'wpml_current_language', null );
 }
 add_shortcode( 'language', 'get_language_shortcode' );
+
+function get_translations($post_id){
+    $original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar');
+    $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
+    return $translations;
+}

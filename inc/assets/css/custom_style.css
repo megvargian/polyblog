@@ -1439,6 +1439,7 @@ body.hide_scroll {
   transition: 0.3s ease-in-out;
   background-color: #fff;
   color: #000;
+  margin-right: 5px;
 }
 .single-post-container .single-article-header-mobile a:hover {
   opacity: 0.8;

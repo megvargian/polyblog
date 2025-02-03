@@ -26,7 +26,7 @@ $author_posts_args = array(
     'post__not_in' => array($post_id),
 );
 $author_posts_query = new WP_Query($author_posts_args);
-$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar'); // Get original ID in English
+$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar');
 $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
 if (have_posts()):
     while (have_posts()):
