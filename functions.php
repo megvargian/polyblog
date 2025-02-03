@@ -430,3 +430,8 @@ function trim_words_with_limits($text, $word_limit = 20) {
 function isMob(){
     return is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 }
+
+function get_language_shortcode() {
+    return apply_filters( 'wpml_current_language', null );
+}
+add_shortcode( 'language', 'get_language_shortcode' );
