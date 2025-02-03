@@ -27,11 +27,6 @@ $author_posts_args = array(
 );
 $author_posts_query = new WP_Query($author_posts_args);
 $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
-if ($translations) {
-    foreach ($translations as $lang => $translation) {
-        echo "Language: " . $lang . " - Post ID: " . $translation->element_id . "<br>";
-    }
-}
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
@@ -96,13 +91,17 @@ if (have_posts()):
             </div>
             <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
-                    <?php foreach ($categories as $category) {
-                        if ($category->slug == 'arabic' || $category->slug == 'english') { ?>
-                            <button type="button" class="<?php echo $category->name == 'ENGLISH' ? 'english' : 'arabic'; ?>">
-                                <?php echo esc_html($category->name); ?>
-                            </button>
-                    <?php }
-                    } ?>
+                    <?php
+                    if ($translations) {
+                        foreach ($translations as $lang => $translation) {
+                            ?>
+                                <a href="<?php echo get_permalink($translation->element_id);?>" class="<?php echo $lang == 'en' ? 'english' : 'arabic'; ?>">
+                                    <?php echo esc_html($lang == 'en' ? 'ENGLISH' : 'عربي'); ?>
+                                </a>
+                            <?php
+                        }
+                    }
+                    ?>
                     <?php
                     echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
