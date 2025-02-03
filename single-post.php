@@ -26,8 +26,8 @@ $author_posts_args = array(
     'post__not_in' => array($post_id),
 );
 $author_posts_query = new WP_Query($author_posts_args);
-echo apply_filters('wpml_object_id', $post_id, 'post', true, do_shortcode('[language]')); // Get original ID in English
-$translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar'); // Get original ID in English
+$translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
@@ -78,7 +78,6 @@ if (have_posts()):
                 <?php the_post_thumbnail('full'); ?>
             </div>
         <?php endif; ?>
-        <pre><?php print_r($translations);?></pre>
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
