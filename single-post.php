@@ -77,6 +77,7 @@ if (have_posts()):
                 <?php the_post_thumbnail('full'); ?>
             </div>
         <?php endif; ?>
+        <pre><?php print_r($translations);?></pre>
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
@@ -239,7 +240,8 @@ if (have_posts()):
                 });
             });
         </script>
-<?php endwhile;
+<?php
+    endwhile;
 endif;
 ?>
 <?php
