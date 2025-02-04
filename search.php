@@ -207,4 +207,14 @@ get_header(); ?>
 	?>
 </div>
 <?php
-get_footer();
+get_footer(); ?>
+<script>
+	const swiper = new Swiper(".mySwiper", {
+		effect: "cards",
+		grabCursor: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+</script>
