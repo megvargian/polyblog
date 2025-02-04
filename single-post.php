@@ -37,14 +37,16 @@ if (defined('ICL_SITEPRESS_VERSION')) {
     echo "WPML is not active.";
 }
 
+global $sitepress;
+$trid = $sitepress->get_element_trid($post_id, 'post');
+
 if ($trid) {
-    $translations = $sitepress->get_element_translations($trid, 'post');
-    var_dump($translations);
+    echo "TRID: " . $trid;
 } else {
-    echo "No translations found.";
+    echo "No TRID found for this post.";
 }
-echo '<pre>';print_r($translations);echo'</pre>';
-echo '<pre>';print_r($post_id);echo'</pre>';
+// echo '<pre>';print_r($translations);echo'</pre>';
+// echo '<pre>';print_r($post_id);echo'</pre>';
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
