@@ -1573,6 +1573,26 @@ body.hide_scroll {
 .what-we-think-container .mobile .swiper-slide {
   border-radius: 18px;
 }
+.what-we-think-container .mobile .swiper-button-next {
+  width: 44px;
+  position: relative;
+  left: 66%;
+  top: 30px;
+  background-color: #000;
+  border-radius: 100%;
+  border: 30px solid black;
+  transform: scale(0.8);
+}
+.what-we-think-container .mobile .swiper-button-prev {
+  width: 44px;
+  position: relative;
+  left: 20%;
+  top: 10px;
+  background-color: #000;
+  border-radius: 100%;
+  border: 30px solid black;
+  transform: scale(0.8);
+}
 .what-we-think-container .search-page-title {
   color: #fff;
 }
@@ -1694,6 +1714,26 @@ body.hide_scroll {
 }
 .how-we-see-it-container .mobile .swiper-slide {
   border-radius: 18px;
+}
+.how-we-see-it-container .mobile .swiper-button-next {
+  width: 44px;
+  position: relative;
+  left: 66%;
+  top: 30px;
+  background-color: #000;
+  border-radius: 100%;
+  border: 30px solid black;
+  transform: scale(0.8);
+}
+.how-we-see-it-container .mobile .swiper-button-prev {
+  width: 44px;
+  position: relative;
+  left: 20%;
+  top: 10px;
+  background-color: #000;
+  border-radius: 100%;
+  border: 30px solid black;
+  transform: scale(0.8);
 }
 .how-we-see-it-container .search-page-title {
   color: #fff;

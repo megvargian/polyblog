@@ -1741,6 +1741,28 @@ body.hide_scroll {
     .swiper-slide {
       border-radius: 18px;
     }
+
+    .swiper-button-next {
+      width: 44px;
+      position: relative;
+      left: 66%;
+      top: 30px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
+    }
+
+    .swiper-button-prev {
+      width: 44px;
+      position: relative;
+      left: 20%;
+      top: 10px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
+    }
   }
 
   .search-page-title {
@@ -1894,6 +1916,28 @@ body.hide_scroll {
 
     .swiper-slide {
       border-radius: 18px;
+    }
+
+    .swiper-button-next {
+      width: 44px;
+      position: relative;
+      left: 66%;
+      top: 30px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
+    }
+
+    .swiper-button-prev {
+      width: 44px;
+      position: relative;
+      left: 20%;
+      top: 10px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
     }
   }
 
