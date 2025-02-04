@@ -31,6 +31,11 @@ $tags = get_the_tags();
 // var_dump($translations);
 global $sitepress;
 $trid = $sitepress->get_element_trid($post_id, 'post');
+if (defined('ICL_SITEPRESS_VERSION')) {
+    echo "WPML is active and version: " . ICL_SITEPRESS_VERSION;
+} else {
+    echo "WPML is not active.";
+}
 
 if ($trid) {
     $translations = $sitepress->get_element_translations($trid, 'post');
