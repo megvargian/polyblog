@@ -55,7 +55,7 @@ get_header(); ?>
 
 	if ($query->have_posts()) : ?>
 		<div class="what-we-think-posts">
-			<div class="row my-4">
+			<div class="row my-4 desktop">
 				<?php while ($query->have_posts()) : $query->the_post(); ?>
 					<div class="col-md-6 my-2">
 						<div class="card">
