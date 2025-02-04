@@ -1587,7 +1587,7 @@ body.hide_scroll {
   width: 44px;
   position: relative;
   left: 20%;
-  top: 10px;
+  top: -6px;
   background-color: #000;
   border-radius: 100%;
   border: 30px solid black;
@@ -1729,7 +1729,7 @@ body.hide_scroll {
   width: 44px;
   position: relative;
   left: 20%;
-  top: 10px;
+  top: -6px;
   background-color: #000;
   border-radius: 100%;
   border: 30px solid black;
