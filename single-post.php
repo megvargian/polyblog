@@ -82,11 +82,11 @@ if (have_posts()):
             <div class="row py-2">
                 <div class="col">
                     <?php foreach ($categories as $category) {
-                        if ($category->slug === 'what-we-think') { ?>
+                        if ($category->slug === 'what-we-think' || $category-> slug === 'what-we-think-en') { ?>
                             <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
                                     class="arabic"><strong>شــــــو منفكــــــر</strong></span></a>
                         <?php   }
-                        if ($category->slug === 'how-we-see-it') { ?>
+                        if ($category->slug === 'how-we-see-it' || $category->slug === 'how-we-see-it-en') { ?>
                             <a href="https://polybloglb.com/category/how-we-see-it/" type="button" class="what-we-think w-100"><span class="english"><strong>HOW WE SEE IT</strong></span><span
                                     class="arabic"><strong>كيــف منشــوف</strong></span></a>
 
