@@ -86,7 +86,7 @@ if (have_posts()):
                             <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
                                     class="arabic"><strong>شــــــو منفكــــــر</strong></span></a>
                         <?php   }
-                        if ($category->slug === 'what-we-think') { ?>
+                        if ($category->slug === 'how-we-see-it') { ?>
                             <a href="https://polybloglb.com/category/how-we-see-it/" type="button" class="what-we-think w-100"><span class="english"><strong>HOW WE SEE IT</strong></span><span
                                     class="arabic"><strong>كيــف منشــوف</strong></span></a>
 
