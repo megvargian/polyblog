@@ -1,8 +1,13 @@
 <?php get_header(); ?>
 <div class="container what-we-think-container">
-    <div class="row">
+    <div class="row desktop">
         <div class="col">
             <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
+        </div>
+    </div>
+    <div class="row mobile">
+        <div class="col header">
+            <img src="https://polybloglb.com/wp-content/uploads/2025/02/outwriters.png" alt="our writers" />
         </div>
     </div>
     <form role="search" method="get" class="search-form desktop" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">

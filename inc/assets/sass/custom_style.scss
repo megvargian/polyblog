@@ -1734,6 +1734,14 @@ body.hide_scroll {
   .mobile {
     display: none;
 
+    .header {
+      text-align: center !important;
+
+      img {
+        width: 66% !important;
+      }
+    }
+
     .swiper {
       padding: 0 12.5%;
     }
@@ -1931,6 +1939,14 @@ body.hide_scroll {
 .how-we-see-it-container {
   .mobile {
     display: none;
+
+    .header {
+      text-align: center !important;
+
+      img {
+        width: 66% !important;
+      }
+    }
 
     .swiper {
       padding: 0 12.5%;
