@@ -121,7 +121,7 @@ get_header(); ?>
 					</div>
 					<?php if ($query->current_post % 2 == 1) : ?>
 			</div>
-			<div class="row my-4">
+			<div class="row my-4 desktop">
 			<?php endif; ?>
 		<?php endwhile; ?>
 			</div>
