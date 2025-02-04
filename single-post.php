@@ -18,14 +18,14 @@ $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 
-$author_posts_args = array(
-    'author' => $author_id,
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'posts_per_page' => -3,
-    'post__not_in' => array($post_id),
-);
-$author_posts_query = new WP_Query($author_posts_args);
+// $author_posts_args = array(
+//     'author' => $author_id,
+//     'post_type' => 'post',
+//     'post_status' => 'publish',
+//     'posts_per_page' => -3,
+//     'post__not_in' => array($post_id),
+// );
+// $author_posts_query = new WP_Query($author_posts_args);
 $original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar');
 $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
 if (have_posts()):
@@ -81,8 +81,18 @@ if (have_posts()):
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
-                    <button type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
-                            class="arabic"><strong>شــــــو منفكــــــر</strong></span></button>
+                    <?php foreach ($categories as $category) {
+                        if ($category->slug === 'what-we-think') { ?>
+                            <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
+                                    class="arabic"><strong>شــــــو منفكــــــر</strong></span></a>
+                        <?php   }
+                        if ($category->slug === 'what-we-think') { ?>
+                            <a href="https://polybloglb.com/category/how-we-see-it/" type="button" class="what-we-think w-100"><span class="english"><strong>HOW WE SEE IT</strong></span><span
+                                    class="arabic"><strong>كيــف منشــوف</strong></span></a>
+
+                    <?php }
+                    } ?>
+
                 </div>
             </div>
             <div class="row py-2">
@@ -95,11 +105,11 @@ if (have_posts()):
                     <?php
                     if ($translations) {
                         foreach ($translations as $lang => $translation) {
-                            ?>
-                                <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang);?>" class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
-                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
-                                </a>
-                            <?php
+                    ?>
+                            <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang); ?>" class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
+                                <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                            </a>
+                    <?php
                         }
                     }
                     ?>
@@ -134,15 +144,15 @@ if (have_posts()):
             <div class="row py-2 single-article-header-mobile">
                 <div class="col category-buttons">
                     <?php
-                        if ($translations) {
-                            foreach ($translations as $lang => $translation) {
-                                ?>
-                                    <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang);?>">
-                                        <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?>
-                                    </a>
-                                <?php
-                            }
+                    if ($translations) {
+                        foreach ($translations as $lang => $translation) {
+                    ?>
+                            <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang); ?>">
+                                <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?>
+                            </a>
+                    <?php
                         }
+                    }
                     ?>
                 </div>
                 <div class="col published-date">
