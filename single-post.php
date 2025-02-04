@@ -81,7 +81,7 @@ if (have_posts()):
         <div class="container-fluid px-4 single-post-container">
             <div class="row py-2">
                 <div class="col">
-                    <?php foreach ($categories as $category) { echo $category;
+                    <?php foreach ($categories as $category) {
                         if ($category->slug === 'what-we-think') { ?>
                             <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
                                     class="arabic"><strong>شــــــو منفكــــــر</strong></span></a>
