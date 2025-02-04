@@ -1593,6 +1593,9 @@ body.hide_scroll {
   border: 30px solid black;
   transform: scale(0.8);
 }
+.what-we-think-container .mobile .swiper-button-prev:after, .what-we-think-container .mobile .swiper-button-next:after {
+  transform: scale(0.6);
+}
 .what-we-think-container .search-page-title {
   color: #fff;
 }
@@ -1734,6 +1737,9 @@ body.hide_scroll {
   border-radius: 100%;
   border: 30px solid black;
   transform: scale(0.8);
+}
+.how-we-see-it-container .mobile .swiper-button-prev:after, .how-we-see-it-container .mobile .swiper-button-next:after {
+  transform: scale(0.6);
 }
 .how-we-see-it-container .search-page-title {
   color: #fff;
