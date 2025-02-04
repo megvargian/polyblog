@@ -133,7 +133,7 @@
                                                 ?>
                                                 <div class="col-5 author-info">
                                                     <a href="<?php echo get_permalink($author); ?>">
-                                                        <h4 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h4>
+                                                        <h6 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h6>
                                                     </a>
                                                 </div>
                                                 <div class="col-3">

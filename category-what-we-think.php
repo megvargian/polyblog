@@ -141,7 +141,7 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <a href="<?php echo get_permalink($author); ?>">
-                                                                <h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
+                                                                <h6 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h6>
                                                             </a>
                                                         </div>
                                                     </div>

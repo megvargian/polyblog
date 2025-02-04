@@ -1767,6 +1767,24 @@ body.hide_scroll {
     .swiper-button-prev:after, .swiper-button-next:after {
       transform: scale(0.6);
     }
+
+    .category-buttons {
+      button {
+        padding: 0;
+
+        strong {
+          font-size: 2cqw;
+        }
+      }
+
+      .article-date {
+        font-size: 1.8cqw;
+      }
+    }
+
+    .tags {
+      font-size: 1.8cqw;
+    }
   }
 
   .search-page-title {

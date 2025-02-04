@@ -1596,6 +1596,18 @@ body.hide_scroll {
 .what-we-think-container .mobile .swiper-button-prev:after, .what-we-think-container .mobile .swiper-button-next:after {
   transform: scale(0.6);
 }
+.what-we-think-container .mobile .category-buttons button {
+  padding: 0;
+}
+.what-we-think-container .mobile .category-buttons button strong {
+  font-size: 2cqw;
+}
+.what-we-think-container .mobile .category-buttons .article-date {
+  font-size: 1.8cqw;
+}
+.what-we-think-container .mobile .tags {
+  font-size: 1.8cqw;
+}
 .what-we-think-container .search-page-title {
   color: #fff;
 }
