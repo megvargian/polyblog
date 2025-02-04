@@ -69,36 +69,48 @@ get_header(); ?>
 								</div>
 							<?php endif; ?>
 							<div class="card-body">
-								<h5 class="card-title align-text-arabic">
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</h5>
 								<div class="row">
 									<div class="col-4 category-buttons">
-										<div>
-											<?php
-											$categories = get_the_category();
-											foreach ($categories as $category) {
-												if ($category->slug == 'arabic' || $category->slug == 'english') {
-											?>
-													<button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
-														<strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
-													</button>
-											<?php
+										<div class="row">
+											<div class="col">
+												<?php
+												$categories = get_the_category();
+												foreach ($categories as $category) {
+													if ($category->slug == 'arabic' || $category->slug == 'english') {
+												?>
+														<button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
+															<strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+														</button>
+												<?php
+													}
 												}
-											}
-											?>
+												?>
+											</div>
 										</div>
-										<p class="article-date">
-											<?php echo get_the_date('d/m/Y'); ?>
-										</p>
+										<div class="row">
+											<div class="col">
+												<p class="article-date">
+													<?php echo get_the_date('d/m/Y'); ?>
+												</p>
+											</div>
+										</div>
 									</div>
 									<?php
 									$author = get_field('author');
 									?>
 									<div class="col-5 author-info">
-										<a href="<?php echo get_permalink(get_field('author')); ?>">
-											<h4 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h4>
-										</a>
+										<div class="row">
+											<div class="col">
+												<a href="<?php echo get_permalink($author); ?>">
+													<h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
+												</a>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
+											</div>
+										</div>
 									</div>
 									<div class="col-3">
 										<img class="author-image" src="<?php echo get_the_post_thumbnail_url($author); ?>" alt="<?php echo get_the_title($author); ?>" />
