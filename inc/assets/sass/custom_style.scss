@@ -2057,14 +2057,15 @@ body.hide_scroll {
             padding: 0 12px;
             border: none;
             border-radius: 8px;
-            opacity: 1;
-            transition: 0.3s ease-in-out;
+            cursor: default;
+            // opacity: 1;
+            // transition: 0.3s ease-in-out;
           }
 
-          button:hover {
-            opacity: 0.8;
-            transition: 0.3s;
-          }
+          // button:hover {
+          //   opacity: 0.8;
+          //   transition: 0.3s;
+          // }
 
           .english {
             background-color: #ED4101;

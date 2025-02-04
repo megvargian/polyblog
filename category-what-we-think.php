@@ -112,7 +112,6 @@
                                                 <div class="col-4 category-buttons">
                                                     <div class="row">
                                                         <div class="col">
-
                                                             <?php
                                                             $categories = get_the_category();
                                                             foreach ($categories as $category) {
