@@ -26,8 +26,11 @@ $tags = get_the_tags();
 //     'post__not_in' => array($post_id),
 // );
 // $author_posts_query = new WP_Query($author_posts_args);
-$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true, 'ar');
-$translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
+$translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
+var_dump($translations);
+echo '<pre>';print_r($translations);echo'</pre>';
+echo '<pre>';print_r($original_post_id);echo'</pre>';
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
