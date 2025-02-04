@@ -1753,6 +1753,18 @@ body.hide_scroll {
 .how-we-see-it-container .mobile .swiper-button-prev:after, .how-we-see-it-container .mobile .swiper-button-next:after {
   transform: scale(0.6);
 }
+.how-we-see-it-container .mobile .category-buttons button {
+  padding: 0 6px !important;
+}
+.how-we-see-it-container .mobile .category-buttons button strong {
+  font-size: 2cqw !important;
+}
+.how-we-see-it-container .mobile .category-buttons .article-date {
+  font-size: 1.8cqw !important;
+}
+.how-we-see-it-container .mobile .tags {
+  font-size: 1.8cqw !important;
+}
 .how-we-see-it-container .search-page-title {
   color: #fff;
 }

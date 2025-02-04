@@ -1965,6 +1965,24 @@ body.hide_scroll {
     .swiper-button-prev:after, .swiper-button-next:after {
       transform: scale(0.6);
     }
+
+    .category-buttons {
+      button {
+        padding: 0 6px !important;
+
+        strong {
+          font-size: 2cqw !important;
+        }
+      }
+
+      .article-date {
+        font-size: 1.8cqw !important;
+      }
+    }
+
+    .tags {
+      font-size: 1.8cqw !important;
+    }
   }
 
   .search-page-title {
