@@ -26,11 +26,20 @@ $tags = get_the_tags();
 //     'post__not_in' => array($post_id),
 // );
 // $author_posts_query = new WP_Query($author_posts_args);
-$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
-$translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
-var_dump($translations);
+// $original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
+// $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
+// var_dump($translations);
+global $sitepress;
+$trid = $sitepress->get_element_trid($post_id, 'post');
+
+if ($trid) {
+    $translations = $sitepress->get_element_translations($trid, 'post');
+    var_dump($translations);
+} else {
+    echo "No translations found.";
+}
 echo '<pre>';print_r($translations);echo'</pre>';
-echo '<pre>';print_r($original_post_id);echo'</pre>';
+echo '<pre>';print_r($post_id);echo'</pre>';
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
