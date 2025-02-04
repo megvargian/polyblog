@@ -1597,16 +1597,16 @@ body.hide_scroll {
   transform: scale(0.6);
 }
 .what-we-think-container .mobile .category-buttons button {
-  padding: 0;
+  padding: 0 6px !important;
 }
 .what-we-think-container .mobile .category-buttons button strong {
-  font-size: 2cqw;
+  font-size: 2cqw !important;
 }
 .what-we-think-container .mobile .category-buttons .article-date {
-  font-size: 1.8cqw;
+  font-size: 1.8cqw !important;
 }
 .what-we-think-container .mobile .tags {
-  font-size: 1.8cqw;
+  font-size: 1.8cqw !important;
 }
 .what-we-think-container .search-page-title {
   color: #fff;

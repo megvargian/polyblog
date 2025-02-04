@@ -1770,20 +1770,20 @@ body.hide_scroll {
 
     .category-buttons {
       button {
-        padding: 0;
+        padding: 0 6px !important;
 
         strong {
-          font-size: 2cqw;
+          font-size: 2cqw !important;
         }
       }
 
       .article-date {
-        font-size: 1.8cqw;
+        font-size: 1.8cqw !important;
       }
     }
 
     .tags {
-      font-size: 1.8cqw;
+      font-size: 1.8cqw !important;
     }
   }
 
