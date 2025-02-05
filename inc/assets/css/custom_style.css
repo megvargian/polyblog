@@ -354,16 +354,19 @@ body.hide_scroll {
 }
 .side-header .side-header-menu {
   background-color: transparent;
+  position: absolute;
+  right: 4%;
+  top: 20%;
 }
 .side-header .side-header-menu .single-side-header {
-  background-color: #000;
-  cursor: pointer;
+  margin-bottom: 10px;
 }
 .side-header .side-header-menu .single-side-header a {
   display: block;
+  background-color: #000;
   width: 100%;
   height: 100%;
-  padding: 1rem 3rem;
+  padding: 0.5rem 2.5rem;
   border-radius: 40px;
 }
 .side-header .side-header-menu .single-side-header a p {
@@ -371,10 +374,10 @@ body.hide_scroll {
   color: #fff;
   text-align: center;
 }
-.side-header .side-header-menu .single-side-header:hover {
+.side-header .side-header-menu .single-side-header a:hover {
   background-color: #87ED06;
 }
-.side-header .side-header-menu .single-side-header:hover a p {
+.side-header .side-header-menu .single-side-header a:hover p {
   color: #fff;
 }
 

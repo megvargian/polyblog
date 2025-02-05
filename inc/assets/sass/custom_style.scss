@@ -337,14 +337,17 @@ body.hide_scroll {
   }
   .side-header-menu{
     background-color: transparent;
+    position: absolute;
+    right: 4%;
+    top: 20%;
     .single-side-header{
-      background-color: #000;
-      cursor: pointer;
+      margin-bottom: 10px;
       a{
         display: block;
+        background-color: #000;
         width: 100%;
         height: 100%;
-        padding: 1rem 3rem;
+        padding: .5rem 2.5rem;
         border-radius: 40px;
         p{
           font-size: 1.5rem;
@@ -352,10 +355,8 @@ body.hide_scroll {
           text-align: center;
         }
       }
-    }
-    .single-side-header:hover{
-      background-color: #87ED06;
-      a{
+      a:hover{
+        background-color: #87ED06;
         p{
           color: #fff;
         }
