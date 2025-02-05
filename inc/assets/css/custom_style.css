@@ -338,11 +338,13 @@ body.hide_scroll {
   cursor: pointer;
   right: 0;
   top: 20%;
-  background-color: #ED4101;
   border-radius: 24px;
+  z-index: 1;
 }
 .side-header .main-side-button {
   padding: 10rem 0.3rem;
+  background-color: #ED4101;
+  z-index: 2;
 }
 .side-header .side-header-arrow {
   width: 20px;
@@ -357,6 +359,7 @@ body.hide_scroll {
   position: absolute;
   right: 4%;
   top: 20%;
+  z-index: -1;
 }
 .side-header .side-header-menu .single-side-header {
   margin-bottom: 10px;
@@ -373,12 +376,13 @@ body.hide_scroll {
   font-size: 1.5rem;
   color: #fff;
   text-align: center;
+  margin-bottom: -2px;
 }
 .side-header .side-header-menu .single-side-header a:hover {
   background-color: #87ED06;
 }
 .side-header .side-header-menu .single-side-header a:hover p {
-  color: #fff;
+  color: #000;
 }
 
 .home-video-header-container {
