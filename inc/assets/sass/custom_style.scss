@@ -319,12 +319,13 @@ body.hide_scroll {
 }
 .side-header{
   position: fixed;
+  cursor: pointer;
   right: 0;
   top: 20%;
   background-color: #ED4101;
   border-radius: 24px;
   .main-side-button{
-    padding: 8rem .3rem;
+    padding: 10rem .3rem;
   }
   .side-header-arrow{
     width: 20px;
@@ -333,6 +334,33 @@ body.hide_scroll {
   .side-header-arrow.active{
     transform: rotate(180deg);
 		transition: ease-in;
+  }
+  .side-header-menu{
+    background-color: transparent;
+    .single-side-header{
+      background-color: #000;
+      cursor: pointer;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 3rem;
+        border-radius: 40px;
+        p{
+          font-size: 1.5rem;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+    .single-side-header:hover{
+      background-color: #87ED06;
+      a{
+        p{
+          color: #fff;
+        }
+      }
+    }
   }
 }
 .home-video-header-container {

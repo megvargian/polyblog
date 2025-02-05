@@ -177,6 +177,40 @@ $header_video_url = get_field('header_video', 'option');
 					<div class="d-flex justify-content-center align-items-center main-side-button">
 						<img class="side-header-arrow" src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg" alt="side-header-arrow">
 					</div>
+					<div class="side-header-menu">
+						<ul>
+							<li class="single-side-header d-block">
+								<a href="#">
+									<p class="en-regular">what we think</p>
+									<p class="ar-regualr">شــــــو منفكــــــر</p>
+								</a>
+							</li>
+							<li class="single-side-header d-block">
+								<a href="#">
+									<p class="en-regular">how we see it</p>
+									<p class="ar-regular">كيــف منشــوف</p>
+								</a>
+							</li>
+							<li class="single-side-header d-block">
+								<a href="#">
+									<p class="en-regular">Our segments</p>
+									<p class="ar-regular">فقـــــــــــــــــراتنا </p>
+								</a>
+							</li>
+							<li class="single-side-header d-block">
+								<a href="#">
+									<p class="en-regular">our productions</p>
+									<p class="ar-regular">انـــــــــتاجــــــــاتــــــنا</p>
+								</a>
+							</li>
+							<li class="single-side-header d-block">
+								<a href="#">
+									<p class="en-regular">GET TO KNOW US</p>
+									<p class="ar-regular">تعـــــــرف/ي علينـــا </p>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			<?php } ?>
 <script>
