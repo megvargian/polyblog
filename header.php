@@ -26,7 +26,7 @@ $header_video_url = get_field('header_video', 'option');
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site main_page_wrapper">
-		<div id="content" class="site-content">
+		<div id="content" class="site-content position-relative">
 			<div class="site-title">
 				<a href="http://polybloglb.com/">
 					<p class="en">Politics, not news</p>
@@ -172,6 +172,11 @@ $header_video_url = get_field('header_video', 'option');
                     </div>
                 </div>
             </div>
+			<?php if(!is_front_page() || !is_single('post')){ ?>
+				<div class="d-lg-block d-none side-header">
+
+				</div>
+			<?php } ?>
 <script>
 	jQuery(document).ready(function ($) {
 		$('#menu-button').click(function() {

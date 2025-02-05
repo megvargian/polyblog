@@ -333,6 +333,21 @@ body.hide_scroll {
   font-family: "Vazirmatn-Bold";
 }
 
+.side-header {
+  position: fixed;
+  right: 0;
+  top: 20%;
+  background-color: #ED4101;
+  border-radius: 24px;
+}
+.side-header .main-side-button {
+  padding: 5rem 1rem;
+}
+.side-header .side-header-arrow {
+  width: 30px;
+  height: 30px;
+}
+
 .home-video-header-container {
   display: flex;
   flex-direction: column;
