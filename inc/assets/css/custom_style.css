@@ -358,7 +358,7 @@ body.hide_scroll {
   background-color: transparent;
   position: absolute;
   right: 4%;
-  top: 20%;
+  top: 0%;
   z-index: -1;
 }
 .side-header .side-header-menu .single-side-header {
@@ -373,7 +373,7 @@ body.hide_scroll {
   border-radius: 40px;
 }
 .side-header .side-header-menu .single-side-header a p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
   text-align: center;
   margin-bottom: -2px;
