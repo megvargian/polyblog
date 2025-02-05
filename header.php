@@ -222,7 +222,7 @@ $header_video_url = get_field('header_video', 'option');
 			$('.menu_on_mobile').toggleClass('visible');
 			$(".arrow-right").toggleClass('active');
         });
-		$('.side-header').click(function() {
+		$('.main-side-button').click(function() {
 			$('.side-header-arrow').toggleClass('active');
 			$('.side-header-menu').toggleClass('d-none');
 		});
