@@ -189,7 +189,7 @@ $header_video_url = get_field('header_video', 'option');
 			$(".arrow-right").toggleClass('active');
         });
 		$('.side-header').click(function() {
-			$('.side-header-arrow').addClass('active');
+			$('.side-header-arrow').toggleClass('active');
 		});
 	});
 </script>
