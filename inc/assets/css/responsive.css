@@ -347,7 +347,6 @@
     text-transform: uppercase;
     padding: 0.5rem 0.7rem;
     text-align: center;
-    width: -moz-fit-content;
     width: fit-content;
     background-color: #ec4100;
     border-radius: 10px;
@@ -434,8 +433,7 @@
     font-size: 1rem;
   }
   .single-featured-article-container .align-text-arabic {
-    -moz-text-align-last: start;
-         text-align-last: start;
+    text-align-last: start;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -793,6 +791,9 @@
   }
   .search-authors-page .bg-black, .our-segements-page .bg-black {
     padding: 1rem 2rem;
+  }
+  .search-authors-page .hovered-single-author:hover, .our-segements-page .hovered-single-author:hover {
+    scale: 1.04;
   }
   .single-author-page h2 span {
     font-size: 1.2rem;
