@@ -174,7 +174,9 @@ $header_video_url = get_field('header_video', 'option');
             </div>
 			<?php if(!is_front_page() || !is_single('post')){ ?>
 				<div class="d-lg-block d-none side-header">
-
+					<div class="d-flex justify-content-center align-items-center main-side-button">
+						<img class="side-header-arrow" src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg" alt="side-header-arrow">
+					</div>
 				</div>
 			<?php } ?>
 <script>
