@@ -335,7 +335,6 @@ body.hide_scroll {
 
 .side-header {
   position: fixed;
-  cursor: pointer;
   right: 0;
   top: 20%;
   border-radius: 24px;
@@ -345,6 +344,7 @@ body.hide_scroll {
   padding: 10rem 0.3rem;
   background-color: #ED4101;
   z-index: 2;
+  cursor: pointer;
 }
 .side-header .side-header-arrow {
   width: 20px;
@@ -383,6 +383,9 @@ body.hide_scroll {
 }
 .side-header .side-header-menu .single-side-header a:hover p {
   color: #000;
+}
+.side-header .side-header-menu .single-side-header:last-child() {
+  margin-bottom: 0;
 }
 
 .home-video-header-container {

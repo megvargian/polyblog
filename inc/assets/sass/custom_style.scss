@@ -319,7 +319,6 @@ body.hide_scroll {
 }
 .side-header{
   position: fixed;
-  cursor: pointer;
   right: 0;
   top: 20%;
   border-radius: 24px;
@@ -328,6 +327,7 @@ body.hide_scroll {
     padding: 10rem .3rem;
     background-color: #ED4101;
     z-index: 2;
+    cursor: pointer;
   }
   .side-header-arrow{
     width: 20px;
@@ -343,6 +343,7 @@ body.hide_scroll {
     right: 4%;
     top: 0%;
     z-index: -1;
+
     .single-side-header{
       margin-bottom: 10px;
       a{
@@ -365,6 +366,9 @@ body.hide_scroll {
           color: #000;
         }
       }
+    }
+    .single-side-header:last-child(){
+      margin-bottom: 0;
     }
   }
 }
