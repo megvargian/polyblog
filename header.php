@@ -172,7 +172,7 @@ $header_video_url = get_field('header_video', 'option');
                     </div>
                 </div>
             </div>
-			<?php if(!is_front_page() || !is_single('post')){ ?>
+			<?php if(!(is_front_page() || ( is_single() && get_post_type() === 'post' ))){ ?>
 				<div class="d-lg-block d-none side-header">
 					<div class="d-flex justify-content-center align-items-center main-side-button">
 						<img class="side-header-arrow" src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg" alt="side-header-arrow">
@@ -188,5 +188,8 @@ $header_video_url = get_field('header_video', 'option');
 			$('.menu_on_mobile').toggleClass('visible');
 			$(".arrow-right").toggleClass('active');
         });
+		$('.side-header').click(function() {
+			$('.side-header-arrow').addClass('active');
+		});
 	});
 </script>
