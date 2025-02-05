@@ -360,6 +360,8 @@ body.hide_scroll {
   right: 4%;
   top: 0%;
   z-index: -1;
+  transform: translateX(100%);
+  transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1), opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s;
 }
 .side-header .side-header-menu .single-side-header {
   margin-bottom: 10px;
@@ -386,6 +388,10 @@ body.hide_scroll {
 }
 .side-header .side-header-menu .single-side-header:last-child() {
   margin-bottom: 0;
+}
+.side-header .side-header-menu.active {
+  transform: translateX(0);
+  transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1), opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s;
 }
 
 .home-video-header-container {
