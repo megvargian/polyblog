@@ -26,27 +26,9 @@ $tags = get_the_tags();
 //     'post__not_in' => array($post_id),
 // );
 // $author_posts_query = new WP_Query($author_posts_args);
-// $original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
-// $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
-// var_dump($translations);
-global $sitepress;
-$trid = $sitepress->get_element_trid($post_id, 'post');
-if (defined('ICL_SITEPRESS_VERSION')) {
-    echo "WPML is active and version: " . ICL_SITEPRESS_VERSION;
-} else {
-    echo "WPML is not active.";
-}
-
-global $sitepress;
-$trid = $sitepress->get_element_trid($post_id, 'post');
-
-if ($trid) {
-    echo "TRID: " . $trid;
-} else {
-    echo "No TRID found for this post.";
-}
-// echo '<pre>';print_r($translations);echo'</pre>';
-// echo '<pre>';print_r($post_id);echo'</pre>';
+$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
+$translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
+var_dump($translations);
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
