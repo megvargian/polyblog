@@ -177,7 +177,7 @@ $header_video_url = get_field('header_video', 'option');
 					<div class="d-flex justify-content-center align-items-center main-side-button">
 						<img class="side-header-arrow" src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg" alt="side-header-arrow">
 					</div>
-					<div class="side-header-menu">
+					<div class="side-header-menu d-none">
 						<ul>
 							<li class="single-side-header d-block">
 								<a href="#">
@@ -224,6 +224,7 @@ $header_video_url = get_field('header_video', 'option');
         });
 		$('.side-header').click(function() {
 			$('.side-header-arrow').toggleClass('active');
+			$('.side-header-menu').toggleClass('d-none');
 		});
 	});
 </script>
