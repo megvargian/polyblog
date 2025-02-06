@@ -26,7 +26,10 @@ $tags = get_the_tags();
 //     'post__not_in' => array($post_id),
 // );
 // $author_posts_query = new WP_Query($author_posts_args);
-$original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
+$current_language = apply_filters('wpml_current_language', null);
+$second_lang_post= apply_filters('wpml_object_id', $post_id, 'post', true, $current_language === 'ar' ? 'en' : 'ar');
+echo $second_lang_post;
+echo $current_language;
 $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
 if (have_posts()):
     while (have_posts()):
