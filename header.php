@@ -64,7 +64,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</div>
 							<div class="col d-flex justify-content-center align-items-center">
-								<a href="http://polybloglb.com/" target="_blank">
+								<a href="http://polybloglb.com/our-segements" target="_blank">
 									<div class="bg-black">
 										<p class="en">Our segments</p>
 										<p class="ar">فقـــــــــــــــــراتنا </p>
@@ -180,31 +180,31 @@ $header_video_url = get_field('header_video', 'option');
 					<div class="side-header-menu">
 						<ul>
 							<li class="single-side-header d-block">
-								<a href="#">
+								<a href="https://polybloglb.com/category/what-we-think/">
 									<p class="en-regular">what we think</p>
 									<p class="ar-regualr">شــــــو منفكــــــر</p>
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="#">
+								<a href="https://polybloglb.com/category/how-we-see-it/">
 									<p class="en-regular">how we see it</p>
 									<p class="ar-regular">كيــف منشــوف</p>
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="#">
+								<a href="http://polybloglb.com/our-segements">
 									<p class="en-regular">Our segments</p>
 									<p class="ar-regular">فقـــــــــــــــــراتنا </p>
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="#">
+								<a href="http://polybloglb.com/">
 									<p class="en-regular">our productions</p>
 									<p class="ar-regular">انـــــــــتاجــــــــاتــــــنا</p>
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="#">
+								<a href="http://polybloglb.com/">
 									<p class="en-regular">GET TO KNOW US</p>
 									<p class="ar-regular">تعـــــــرف/ي علينـــا </p>
 								</a>
