@@ -77,12 +77,13 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     if ($query->have_posts()) {
                         while ($query->have_posts()) {
                             $query->the_post();
+                            $post_id = get_the_ID();
                             $article_title = get_the_title();
                             $article_link = get_permalink();
                             $categories = get_the_category();
-                            $article_thumbnail = get_field('article_thumbnail', get_the_ID());
+                            $article_thumbnail = get_field('article_thumbnail', $post_id);
                             $count++;
-                            $translations = get_translations(get_the_ID());
+                            $translations = get_translations($post_id);
                     ?>
                             <div class="swiper-slide p-1 bg-gray">
                                 <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
@@ -95,7 +96,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                             <?php
                                             if ($translations) {
                                                 foreach ($translations as $lang) {
-                                                    $translated_id = apply_filters('wpml_object_id', get_the_ID(), 'post', false, $lang['code']);
+                                                    $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
                                                         <span class="category <?php echo $lang['code'] . '-regular'; ?>">
@@ -118,7 +119,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                             <?php
                                             if ($translations) {
                                                 foreach ($translations as $lang) {
-                                                    $translated_id = apply_filters('wpml_object_id', get_the_ID(), 'post', false, $lang['code']);
+                                                    $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
                                                         <span class="category <?php echo $lang['code'] . '-regular'; ?>">
