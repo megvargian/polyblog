@@ -18,7 +18,6 @@ $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 $languages = get_translations($post_id);
-echo '<pre>'; print_r($languages); echo '</pre>';
 
 if (have_posts()):
     while (have_posts()):
@@ -97,12 +96,12 @@ if (have_posts()):
                     <?php
                     if ($languages) {
                         foreach ($languages as $lang) {
-                            $translated_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $lang['code'] );
+                            $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                             if ($translated_id) {
                     ?>
-                            <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
-                                <?php echo esc_html($lang['code'] == 'ar' ? 'عربي' : 'ENGLISH'); ?>
-                            </a>
+                                <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                    <?php echo esc_html($lang['code'] == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                                </a>
                     <?php
                             }
                         }
@@ -141,11 +140,14 @@ if (have_posts()):
                     <?php
                     if ($languages) {
                         foreach ($languages as $lang) {
+                            $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                            if ($translated_id) {
                     ?>
-                            <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
-                                <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?>
-                            </a>
+                                <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                    <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?>
+                                </a>
                     <?php
+                            }
                         }
                     }
                     ?>

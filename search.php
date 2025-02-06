@@ -79,11 +79,14 @@ get_header(); ?>
 												<?php
 												if ($languages) {
 													foreach ($languages as $lang) {
+														$translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+														if ($translated_id) {
 												?>
-														<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
-															<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
-														</button>
+															<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+																<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
+															</button>
 												<?php
+														}
 													}
 												}
 												?>
@@ -154,11 +157,14 @@ get_header(); ?>
 															<?php
 															if ($languages) {
 																foreach ($languages as $lang) {
+																	$translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+																	if ($translated_id) {
 															?>
-																	<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
-																		<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
-																	</button>
+																		<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+																			<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
+																		</button>
 															<?php
+																	}
 																}
 															}
 															?>
