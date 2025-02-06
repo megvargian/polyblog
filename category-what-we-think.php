@@ -37,7 +37,8 @@
                             <?php
                             $post_id = get_the_ID();
                             $article_thumbnail = get_field('article_thumbnail');
-                            $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+                            // $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+                            $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
 
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
@@ -52,11 +53,11 @@
                                         <div class="row">
                                             <div class="col">
                                                 <?php
-                                                if ($translations) {
-                                                    foreach ($translations as $lang => $translation) {
+                                                if ($languages) {
+                                                    foreach ($languages as $lang) {
                                                 ?>
-                                                        <button class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
-                                                            <strong> <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?></strong>
+                                                        <button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                                            <strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
                                                         </button>
                                                 <?php
                                                     }
@@ -108,7 +109,8 @@
                                         <?php
                                         $post_id = get_the_ID();
                                         $article_thumbnail = get_field('article_thumbnail');
-                                        $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+                                        // $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+                                        $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
 
                                         if ($article_thumbnail) : ?>
                                             <div class="card-img-top">
@@ -123,11 +125,11 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <?php
-                                                            if ($translations) {
-                                                                foreach ($translations as $lang => $translation) {
+                                                            if ($languages) {
+                                                                foreach ($languages as $lang) {
                                                             ?>
-                                                                    <button class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
-                                                                        <strong> <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?></strong>
+                                                                    <button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                                                        <strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
                                                                     </button>
                                                             <?php
                                                                 }

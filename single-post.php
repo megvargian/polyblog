@@ -18,32 +18,7 @@ $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 
-// $author_posts_args = array(
-//     'author' => $author_id,
-//     'post_type' => 'post',
-//     'post_status' => 'publish',
-//     'posts_per_page' => -3,
-//     'post__not_in' => array($post_id),
-// );
-// $author_posts_query = new WP_Query($author_posts_args);
-
-$languages = apply_filters( 'wpml_active_languages', null, 'orderby=id&order=desc' );
-echo '<pre>'; print_r($languages); echo'</pre>';
-foreach ( $languages as $lang ) {
-    // Get the translation of the current post in the language
-    $translated_post_id = apply_filters( 'wpml_object_id', $current_post_id, 'post', false, $lang['code'] );
-    echo 'LANG<pre>'; echo $lang; echo '</pre>';
-
-    // Check if the post exists in the language
-    if ( $translated_post_id ) {
-        // Get the title and URL of the translated post
-        $translated_post_title = get_the_title( $translated_post_id );
-        $translated_post_url = get_permalink( $translated_post_id );
-
-        // You can output or do something with the translated post data
-        echo '<a href="' . esc_url( $translated_post_url ) . '">' . esc_html( $translated_post_title ) . '</a><br>';
-    }
-}
+$languages = apply_filters('wpml_active_languages', null, 'orderby=id&order=asc');
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
@@ -98,7 +73,7 @@ if (have_posts()):
             <div class="row py-2">
                 <div class="col">
                     <?php foreach ($categories as $category) {
-                        if ($category->slug === 'what-we-think' || $category-> slug === 'what-we-think-en') { ?>
+                        if ($category->slug === 'what-we-think' || $category->slug === 'what-we-think-en') { ?>
                             <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span class="english"><strong>WHAT WE THINK</strong></span><span
                                     class="arabic"><strong>شــــــو منفكــــــر</strong></span></a>
                         <?php   }
