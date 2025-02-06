@@ -42,7 +42,7 @@ if (have_posts()):
                         </a>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
-                        <a href="http://polybloglb.com/" target="_blank">
+                        <a href="http://polybloglb.com/our-segements" target="_blank">
                             <div class="bg-black">
                                 <p class="en">Our segments</p>
                                 <p class="ar">فقـــــــــــــــــراتنا </p>
@@ -50,7 +50,7 @@ if (have_posts()):
                         </a>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
-                        <a href="http://polybloglb.com/" target="_blank">
+                        <a href="http://polybloglb.com/#youtube-playlist-bg" target="_blank">
                             <div class="bg-black">
                                 <p class="en">our productions</p>
                                 <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>

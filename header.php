@@ -227,15 +227,15 @@ $header_video_url = get_field('header_video', 'option');
 			$('.side-header-menu').toggleClass('active');
 		});
 		$(".our-production-button").click(function(e){
-			e.preventDefault(); // Prevent default anchor behavior
-			$('#menu-button').removeClass('active');
-			$('html, body').removeClass('hide_scroll');
-            $('.menu_on_mobile').removeClass('active');
-			$('.menu_on_mobile').removeClass('visible');
-			$(".arrow-right").removeClass('active');
-			$('.side-header-arrow').removeClass('active');
-			$('.side-header-menu').removeClass('active');
 			<?php if(is_front_page()){?>
+				e.preventDefault(); // Prevent default anchor behavior
+				$('#menu-button').removeClass('active');
+				$('html, body').removeClass('hide_scroll');
+				$('.menu_on_mobile').removeClass('active');
+				$('.menu_on_mobile').removeClass('visible');
+				$(".arrow-right").removeClass('active');
+				$('.side-header-arrow').removeClass('active');
+				$('.side-header-menu').removeClass('active');
 				let target = $(".youtube-playlist-bg"); // The section to scroll to
 				$("html, body").animate({
 					scrollTop: target.offset().top
