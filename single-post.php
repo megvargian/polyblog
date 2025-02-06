@@ -28,9 +28,11 @@ $tags = get_the_tags();
 // $author_posts_query = new WP_Query($author_posts_args);
 
 $languages = apply_filters( 'wpml_active_languages', null, 'orderby=id&order=desc' );
+echo '<pre>'; print_r($languages); echo'</pre>';
 foreach ( $languages as $lang ) {
     // Get the translation of the current post in the language
     $translated_post_id = apply_filters( 'wpml_object_id', $current_post_id, 'post', false, $lang['code'] );
+    echo 'LANG<pre>'; echo $lang; echo '</pre>';
 
     // Check if the post exists in the language
     if ( $translated_post_id ) {
