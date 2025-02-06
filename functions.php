@@ -437,6 +437,7 @@ function get_language_shortcode() {
 add_shortcode( 'language', 'get_language_shortcode' );
 
 function get_translations($post_id){
-    $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
+    // $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
+    $languages = apply_filters('wpml_post_language_details', null, $post_id);
     return $languages;
 }
