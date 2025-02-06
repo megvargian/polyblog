@@ -141,7 +141,7 @@ $header_video_url = get_field('header_video', 'option');
 									</div>
 								</div>
 							</a>
-							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el" href="https://polybloglb.com/our-segements">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
@@ -150,7 +150,7 @@ $header_video_url = get_field('header_video', 'option');
 									</div>
 								</div>
 							</a>
-							<a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el our-production-button" href="#<?php //echo $menu_item['url'] ?>">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
@@ -198,7 +198,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="http://polybloglb.com/">
+								<a href="#" class="our-production-button">
 									<p class="en-regular">our productions</p>
 									<p class="ar-regular">انـــــــــتاجــــــــاتــــــنا</p>
 								</a>
@@ -228,10 +228,17 @@ $header_video_url = get_field('header_video', 'option');
 		});
 		$(".our-production-button").click(function(e){
 			e.preventDefault(); // Prevent default anchor behavior
+			$('#menu-button').removeClass('active');
+			$('html, body').removeClass('hide_scroll');
+            $('.menu_on_mobile').removeClass('active');
+			$('.menu_on_mobile').removeClass('visible');
+			$(".arrow-right").removeClass('active');
+			$('.side-header-arrow').removeClass('active');
+			$('.side-header-menu').removeClass('active');
 			let target = $(".youtube-playlist-bg"); // The section to scroll to
 			$("html, body").animate({
 				scrollTop: target.offset().top
-			}, 800, function(){
+			}, 1000, function(){
 				target.addClass("highlight"); // Add class after scrolling
 			});
 		});
