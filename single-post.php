@@ -18,7 +18,7 @@ $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 $languages = get_translations($post_id);
-echo '<pre>'; echo $languages; echo '</pre>';
+echo '<pre>'; print_r($languages); echo '</pre>';
 
 if (have_posts()):
     while (have_posts()):
