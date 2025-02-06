@@ -29,10 +29,11 @@ $tags = get_the_tags();
 $current_language = apply_filters('wpml_current_language', null);
 $get_second_lang = $current_language === 'ar' ? 'en' : 'ar';
 $second_lang_post= apply_filters('wpml_object_id', $post_id, 'post', true, $get_second_lang);
-echo $second_lang_post;
-echo $current_language;
-echo $get_second_lang;
-$translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+
+$translations_original = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+$translation_sec = apply_filters('wpml_get_element_translations', null, $second_lang_post, 'post');
+echo '<pre>'; print_r($translations_original); echo '</pre>';
+echo '<pre>'; print_r($translation_sec); echo '</pre>';
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
