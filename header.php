@@ -235,12 +235,14 @@ $header_video_url = get_field('header_video', 'option');
 			$(".arrow-right").removeClass('active');
 			$('.side-header-arrow').removeClass('active');
 			$('.side-header-menu').removeClass('active');
-			let target = $(".youtube-playlist-bg"); // The section to scroll to
-			$("html, body").animate({
-				scrollTop: target.offset().top
-			}, 1000, function(){
-				target.addClass("highlight"); // Add class after scrolling
-			});
+			<?php if(is_front_page()){?>
+				let target = $(".youtube-playlist-bg"); // The section to scroll to
+				$("html, body").animate({
+					scrollTop: target.offset().top
+				}, 1000, function(){
+					target.addClass("highlight"); // Add class after scrolling
+				});
+			<?php }?>
 		});
 	});
 </script>
