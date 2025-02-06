@@ -95,7 +95,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                             <?php
                                             if ($translations) {
                                                 foreach ($translations as $lang => $translation) {
-                                                    $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                                    $translated_id = apply_filters('wpml_object_id', get_the_ID(), 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
                                                         <span class="category <?php echo $lang . '-regular'; ?>">

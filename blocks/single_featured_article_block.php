@@ -32,7 +32,7 @@ if ($featured_articles): ?>
                                     $translations = get_translations($article);
                                     if ($translations) {
                                         foreach ($translations as $lang => $translation) {
-                                            $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                            $translated_id = apply_filters('wpml_object_id', $article, 'post', false, $lang['code']);
                                             if ($translated_id) {
                                     ?>
                                                 <span class="category">
@@ -88,7 +88,7 @@ if ($featured_articles): ?>
                                         <?php
                                         if ($translations) {
                                             foreach ($translations as $lang => $translation) {
-                                                $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                                $translated_id = apply_filters('wpml_object_id', $article, 'post', false, $lang['code']);
                                                 if ($translated_id) {
                                         ?>
                                                     <span class="category mx-1">
