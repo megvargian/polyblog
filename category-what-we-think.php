@@ -35,8 +35,12 @@
                     <div class="col-md-6 my-2">
                         <div class="card">
                             <?php
+                            $post_id = get_the_ID();
                             $article_thumbnail = get_field('article_thumbnail');
+                            $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+
                             if ($article_thumbnail) : ?>
+                            <?php echo "<pre>$translations<pre>"; ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
                                         <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php the_title(); ?>" class="img-fluid">
