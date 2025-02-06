@@ -97,11 +97,14 @@ if (have_posts()):
                     <?php
                     if ($languages) {
                         foreach ($languages as $lang) {
+                            $translated_id = apply_filters( 'wpml_object_id', $post_id, 'post', false, $lang['code'] );
+                            if ($translated_id) {
                     ?>
                             <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
                                 <?php echo esc_html($lang['code'] == 'ar' ? 'عربي' : 'ENGLISH'); ?>
                             </a>
                     <?php
+                            }
                         }
                     }
                     ?>
