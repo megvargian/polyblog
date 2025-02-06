@@ -150,7 +150,7 @@ $header_video_url = get_field('header_video', 'option');
 									</div>
 								</div>
 							</a>
-							<a class="d-block my-3 page_font animated_menu_el our-production-button" href="#<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el our-production-button" href="https://polybloglb.com/#<?php //echo $menu_item['url'] ?>">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
