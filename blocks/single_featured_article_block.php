@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HomePage Single Featured Article Block Template
  */
@@ -17,7 +18,7 @@ if ($featured_articles): ?>
                     $categories = get_the_category($article);
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
-                    ?>
+                ?>
                     <div class="col-12">
                         <div class="row single-featured-article-container ar-bold">
                             <div class="col-5">
@@ -30,11 +31,15 @@ if ($featured_articles): ?>
                                     <?php
                                     $translations = get_translations($article);
                                     if ($translations) {
-                                        foreach ($translations as $lang => $translation) { ?>
-                                            <span class="category">
-                                                <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
-                                            </span>
-                                        <?php }
+                                        foreach ($translations as $lang => $translation) {
+                                            $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                            if ($translated_id) {
+                                    ?>
+                                                <span class="category">
+                                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                                                </span>
+                                    <?php }
+                                        }
                                     } ?>
                                 </div>
                                 <div class="title align-text-arabic">
@@ -73,7 +78,7 @@ if ($featured_articles): ?>
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
                     $translations = get_translations($article);
-                    ?>
+                ?>
                     <div class="swiper-slide">
                         <div class="row single-featured-article-container py-4">
                             <div class="col-7">
@@ -82,11 +87,15 @@ if ($featured_articles): ?>
                                     <div class="categories-mobile d-lg-none d-flex">
                                         <?php
                                         if ($translations) {
-                                            foreach ($translations as $lang => $translation) { ?>
-                                                <span class="category mx-1">
-                                                    <?php echo esc_html($lang == 'en' ? substr('ENGLISH', 0, 2) : mb_substr('عربي', 0, 1, "UTF-8")); ?>
-                                                </span>
-                                            <?php }
+                                            foreach ($translations as $lang => $translation) {
+                                                $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                                if ($translated_id) {
+                                        ?>
+                                                    <span class="category mx-1">
+                                                        <?php echo esc_html($lang == 'en' ? substr('ENGLISH', 0, 2) : mb_substr('عربي', 0, 1, "UTF-8")); ?>
+                                                    </span>
+                                        <?php }
+                                            }
                                         } ?>
                                     </div>
                                 </a>
@@ -94,13 +103,13 @@ if ($featured_articles): ?>
                             <div class="col-5 right-container">
                                 <div class="categories d-lg-flex d-none">
                                     <?php
-                                        if ($translations) {
-                                            foreach ($translations as $lang => $translation) { ?>
-                                                <span class="category">
-                                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
-                                                </span>
-                                            <?php }
-                                        } ?>
+                                    if ($translations) {
+                                        foreach ($translations as $lang => $translation) { ?>
+                                            <span class="category">
+                                                <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                                            </span>
+                                    <?php }
+                                    } ?>
                                 </div>
                                 <div class="title align-text-arabic">
                                     <a class="d-none d-lg-block" href="<?php echo esc_url($article_link); ?>">
@@ -128,7 +137,7 @@ if ($featured_articles): ?>
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
 
                 }
                 ?>
@@ -139,37 +148,38 @@ if ($featured_articles): ?>
             <div class="white-line" style="border-bottom: 5px solid #fff; width: 100%"></div>
         </div>
     </section>
-<script>
-	jQuery(document).ready(function ($) {
-        var swiper = new Swiper('.swiper-featured-articles-block', {
-            slidesPerView: 1,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-        function isArabic(text) {
-            // Regular expression for Arabic characters
-            const arabicRegex = /[\u0600-\u06FF]/;
-            // Regular expression for English characters
-            const englishRegex = /[A-Za-z]/;
+    <script>
+        jQuery(document).ready(function($) {
+            var swiper = new Swiper('.swiper-featured-articles-block', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
 
-            if (arabicRegex.test(text)) {
-                return true;
-            } else if (englishRegex.test(text)) {
-                return false;
-            } else {
-                return false;
+            function isArabic(text) {
+                // Regular expression for Arabic characters
+                const arabicRegex = /[\u0600-\u06FF]/;
+                // Regular expression for English characters
+                const englishRegex = /[A-Za-z]/;
+
+                if (arabicRegex.test(text)) {
+                    return true;
+                } else if (englishRegex.test(text)) {
+                    return false;
+                } else {
+                    return false;
+                }
             }
-        }
-        // add class depending on innerText from .category class
-        const texts = $(".category");
-        for(let i=0; i<texts.length; i++){
-            if(isArabic(texts[i].innerText)){
-                $(texts[i]).addClass('ar-regular');
-            } else {
-                $(texts[i]).addClass('en-regular');
+            // add class depending on innerText from .category class
+            const texts = $(".category");
+            for (let i = 0; i < texts.length; i++) {
+                if (isArabic(texts[i].innerText)) {
+                    $(texts[i]).addClass('ar-regular');
+                } else {
+                    $(texts[i]).addClass('en-regular');
+                }
             }
-        }
         });
-</script>
+    </script>
 <?php endif; ?>
