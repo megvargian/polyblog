@@ -37,8 +37,7 @@
                             <?php
                             $post_id = get_the_ID();
                             $article_thumbnail = get_field('article_thumbnail');
-                            // $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
-                            $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
+                            $languages = get_translations($post_id);
 
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
@@ -109,8 +108,7 @@
                                         <?php
                                         $post_id = get_the_ID();
                                         $article_thumbnail = get_field('article_thumbnail');
-                                        // $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
-                                        $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
+                                        $languages = get_translations($post_id);
 
                                         if ($article_thumbnail) : ?>
                                             <div class="card-img-top">

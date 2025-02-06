@@ -17,8 +17,8 @@ $author_name = get_the_title($author_post_id);
 $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
+$languages = get_translations($post_id);
 
-$languages = apply_filters('wpml_active_languages', null, 'orderby=id&order=asc');
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
