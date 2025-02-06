@@ -26,14 +26,22 @@ $tags = get_the_tags();
 //     'post__not_in' => array($post_id),
 // );
 // $author_posts_query = new WP_Query($author_posts_args);
-$current_language = apply_filters('wpml_current_language', null);
-$get_second_lang = $current_language === 'ar' ? 'en' : 'ar';
-$second_lang_post= apply_filters('wpml_object_id', $post_id, 'post', true, $get_second_lang);
 
-$translations_original = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
-$translation_sec = apply_filters('wpml_get_element_translations', null, $second_lang_post, 'post');
-echo '<pre>'; print_r($translations_original); echo '</pre>';
-echo '<pre>'; print_r($translation_sec); echo '</pre>';
+$languages = apply_filters( 'wpml_active_languages', null, 'orderby=id&order=desc' );
+foreach ( $languages as $lang ) {
+    // Get the translation of the current post in the language
+    $translated_post_id = apply_filters( 'wpml_object_id', $current_post_id, 'post', false, $lang['code'] );
+
+    // Check if the post exists in the language
+    if ( $translated_post_id ) {
+        // Get the title and URL of the translated post
+        $translated_post_title = get_the_title( $translated_post_id );
+        $translated_post_url = get_permalink( $translated_post_id );
+
+        // You can output or do something with the translated post data
+        echo '<a href="' . esc_url( $translated_post_url ) . '">' . esc_html( $translated_post_title ) . '</a><br>';
+    }
+}
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
