@@ -28,7 +28,6 @@ $tags = get_the_tags();
 // $author_posts_query = new WP_Query($author_posts_args);
 $original_post_id = apply_filters('wpml_object_id', $post_id, 'post', true);
 $translations = apply_filters('wpml_get_element_translations', null, $original_post_id, 'post');
-var_dump($translations);
 if (have_posts()):
     while (have_posts()):
         the_post(); ?>
