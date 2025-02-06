@@ -72,7 +72,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</div>
 							<div class="col d-flex justify-content-center align-items-center">
-								<a href="http://polybloglb.com/" target="_blank">
+								<a href="#" class="our-production-button">
 									<div class="bg-black">
 										<p class="en">our productions</p>
 										<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
@@ -225,6 +225,15 @@ $header_video_url = get_field('header_video', 'option');
 		$('.main-side-button').click(function() {
 			$('.side-header-arrow').toggleClass('active');
 			$('.side-header-menu').toggleClass('active');
+		});
+		$(".our-production-button").click(function(e){
+			e.preventDefault(); // Prevent default anchor behavior
+			let target = $(".youtube-playlist-bg"); // The section to scroll to
+			$("html, body").animate({
+				scrollTop: target.offset().top
+			}, 800, function(){
+				target.addClass("highlight"); // Add class after scrolling
+			});
 		});
 	});
 </script>
