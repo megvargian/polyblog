@@ -38,12 +38,19 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                     <span class="ar-regular">شو منفكر</span>
                                 </div>
                                 <div class="categories d-sm-flex d-none">
-                                    <span class="category en-regular">
-                                        EN
-                                    </span>
-                                    <span class="category ar-regular">
-                                        ع
-                                    </span>
+                                    <?php
+                                        if ($translations) {
+                                            foreach ($translations as $lang) {
+                                                $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                                if ($translated_id) {
+                                        ?>
+                                                <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                    <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
+                                                </span>
+                                        <?php }
+                                            }
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
@@ -54,12 +61,19 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                             </div>
                             <div class="hover-cat hover-cat-bottom justify-content-end d-sm-none d-flex">
                                 <div class="categories">
-                                    <span class="category en-regular">
-                                        EN
-                                    </span>
-                                    <span class="category ar-regular">
-                                        ع
-                                    </span>
+                                    <?php
+                                        if ($translations) {
+                                            foreach ($translations as $lang) {
+                                                $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                                                if ($translated_id) {
+                                        ?>
+                                                <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                    <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
+                                                </span>
+                                        <?php }
+                                            }
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </a>
@@ -99,9 +113,9 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                                     $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
-                                                        <span class="category <?php echo $lang['code'] . '-regular'; ?>">
-                                                            <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
-                                                        </span>
+                                                    <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                        <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
+                                                    </span>
                                             <?php }
                                                 }
                                             }
@@ -177,7 +191,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
         //     $(this).addClass('hovered');
         //     window.location.href = $(this).find('.position-relative').attr('href');
         // });
-        <?php // } 
+        <?php // }
         ?>
     });
 </script>
