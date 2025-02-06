@@ -31,12 +31,12 @@ if ($featured_articles): ?>
                                     <?php
                                     $translations = get_translations($article);
                                     if ($translations) {
-                                        foreach ($translations as $lang => $translation) {
+                                        foreach ($translations as $lang) {
                                             $translated_id = apply_filters('wpml_object_id', $article, 'post', false, $lang['code']);
                                             if ($translated_id) {
                                     ?>
                                                 <span class="category">
-                                                    <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                                                    <?php echo esc_html($lang['code'] == 'ar' ? 'عربي' : 'ENGLISH'); ?>
                                                 </span>
                                     <?php }
                                         }
@@ -87,12 +87,12 @@ if ($featured_articles): ?>
                                     <div class="categories-mobile d-lg-none d-flex">
                                         <?php
                                         if ($translations) {
-                                            foreach ($translations as $lang => $translation) {
+                                            foreach ($translations as $lang) {
                                                 $translated_id = apply_filters('wpml_object_id', $article, 'post', false, $lang['code']);
                                                 if ($translated_id) {
                                         ?>
                                                     <span class="category mx-1">
-                                                        <?php echo esc_html($lang == 'en' ? substr('ENGLISH', 0, 2) : mb_substr('عربي', 0, 1, "UTF-8")); ?>
+                                                        <?php echo esc_html($lang['code'] == 'en' ? substr('ENGLISH', 0, 2) : mb_substr('عربي', 0, 1, "UTF-8")); ?>
                                                     </span>
                                         <?php }
                                             }

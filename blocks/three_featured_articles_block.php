@@ -94,12 +94,12 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                                         <div class="categories d-sm-flex d-none">
                                             <?php
                                             if ($translations) {
-                                                foreach ($translations as $lang => $translation) {
+                                                foreach ($translations as $lang) {
                                                     $translated_id = apply_filters('wpml_object_id', get_the_ID(), 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
-                                                        <span class="category <?php echo $lang . '-regular'; ?>">
-                                                            <?php echo esc_html($lang == 'en' ? 'EN' : 'ع'); ?>
+                                                        <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                            <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
                                                         </span>
                                             <?php }
                                                 }
