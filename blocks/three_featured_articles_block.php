@@ -24,6 +24,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
                     $query->the_post();
+                    $post_id = get_the_ID();
                     $article_title = get_the_title();
                     $article_link = get_permalink();
                     $categories = get_the_category();
