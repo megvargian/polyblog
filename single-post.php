@@ -119,11 +119,11 @@ if (have_posts()):
             <div class="row py-2 single-article-header-desktop">
                 <div class="col-4 col-sm-3 category-buttons">
                     <?php
-                    if ($translations) {
-                        foreach ($translations as $lang => $translation) {
+                    if ($languages) {
+                        foreach ($languages as $lang) {
                     ?>
-                            <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang); ?>" class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
-                                <?php echo esc_html($lang == 'ar' ? 'عربي' : 'ENGLISH'); ?>
+                            <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                <?php echo esc_html($lang['code'] == 'ar' ? 'عربي' : 'ENGLISH'); ?>
                             </a>
                     <?php
                         }
@@ -160,11 +160,11 @@ if (have_posts()):
             <div class="row py-2 single-article-header-mobile">
                 <div class="col category-buttons">
                     <?php
-                    if ($translations) {
-                        foreach ($translations as $lang => $translation) {
+                    if ($languages) {
+                        foreach ($languages as $lang) {
                     ?>
-                            <a href="<?php echo apply_filters('wpml_permalink', get_permalink($translation->element_id), $lang); ?>">
-                                <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?>
+                            <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+                                <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?>
                             </a>
                     <?php
                         }
