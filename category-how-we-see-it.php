@@ -35,7 +35,10 @@
                     <div class="col-md-6 my-2">
                         <div class="card">
                             <?php
+                            $post_id = get_the_ID();
                             $article_thumbnail = get_field('article_thumbnail');
+                            $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+
                             if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
                                     <a href="<?php the_permalink(); ?>">
@@ -49,12 +52,11 @@
                                         <div class="row">
                                             <div class="col">
                                                 <?php
-                                                $categories = get_the_category();
-                                                foreach ($categories as $category) {
-                                                    if ($category->slug == 'arabic' || $category->slug == 'english') {
+                                                if ($translations) {
+                                                    foreach ($translations as $lang => $translation) {
                                                 ?>
-                                                        <button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
-                                                            <strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+                                                        <button class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
+                                                            <strong> <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?></strong>
                                                         </button>
                                                 <?php
                                                     }
@@ -104,7 +106,10 @@
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <?php
+                                        $post_id = get_the_ID();
                                         $article_thumbnail = get_field('article_thumbnail');
+                                        $translations = apply_filters('wpml_get_element_translations', null, $post_id, 'post');
+
                                         if ($article_thumbnail) : ?>
                                             <div class="card-img-top">
                                                 <a href="<?php the_permalink(); ?>">
@@ -117,12 +122,11 @@
                                                 <div class="col-4 category-buttons">
                                                     <div>
                                                         <?php
-                                                        $categories = get_the_category();
-                                                        foreach ($categories as $category) {
-                                                            if ($category->slug == 'arabic' || $category->slug == 'english') {
+                                                        if ($translations) {
+                                                            foreach ($translations as $lang => $translation) {
                                                         ?>
-                                                                <button type="button" class="<?php echo $category->slug == 'english' ? 'english' : 'arabic'; ?>">
-                                                                    <strong><?php echo $category->slug == 'english' ? 'EN' : 'ع'; ?></strong>
+                                                                <button class="<?php echo $lang == 'ar' ? 'arabic' : 'english'; ?>">
+                                                                    <strong> <?php echo esc_html($lang == 'ar' ? 'ع' : 'EN'); ?></strong>
                                                                 </button>
                                                         <?php
                                                             }
