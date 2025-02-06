@@ -29,6 +29,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                     $article_link = get_permalink();
                     $categories = get_the_category();
                     $article_thumbnail = get_field('article_thumbnail', get_the_ID());
+                    $translations = get_translations($post_id);
                     $count++;
             ?>
                     <div class="col-4 p-1 bg-gray">
