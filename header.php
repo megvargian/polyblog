@@ -72,7 +72,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</div>
 							<div class="col d-flex justify-content-center align-items-center">
-								<a href="#" class="our-production-button">
+								<a href="http://polybloglb.com/#youtube-playlist-bg" class="our-production-button">
 									<div class="bg-black">
 										<p class="en">our productions</p>
 										<p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
@@ -150,7 +150,7 @@ $header_video_url = get_field('header_video', 'option');
 									</div>
 								</div>
 							</a>
-							<a class="d-block my-3 page_font animated_menu_el our-production-button" href="https://polybloglb.com/#<?php //echo $menu_item['url'] ?>">
+							<a class="d-block my-3 page_font animated_menu_el our-production-button" href="http://polybloglb.com/#youtube-playlist-bg<?php //echo $menu_item['url'] ?>">
 								<div class="menu_item">
 									<?php //echo $menu_item['label']?>
 									<div class="bg-black">
@@ -198,7 +198,7 @@ $header_video_url = get_field('header_video', 'option');
 								</a>
 							</li>
 							<li class="single-side-header d-block">
-								<a href="#" class="our-production-button">
+								<a href="http://polybloglb.com/#youtube-playlist-bg" class="our-production-button">
 									<p class="en-regular">our productions</p>
 									<p class="ar-regular">انـــــــــتاجــــــــاتــــــنا</p>
 								</a>

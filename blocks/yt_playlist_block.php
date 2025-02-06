@@ -5,7 +5,7 @@
 
 $yt_playlist_block = get_fields();
 ?>
-<section class="w-100 youtube-playlist-bg">
+<section class="w-100 youtube-playlist-bg" id="youtube-playlist-bg">
     <div class="container py-4">
         <div class="row justify-content-between">
             <div class="col">
