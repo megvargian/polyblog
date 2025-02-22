@@ -1908,92 +1908,6 @@ body.hide_scroll {
       transition: 0.3s;
     }
   }
-
-  .what-we-think-posts {
-    .card {
-      max-width: 80%;
-      width: 100%;
-      height: 100%;
-      justify-self: center;
-      background-color: #ed4101;
-
-      .card-body {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .thumbnail {
-        width: 100%;
-        padding: 8px;
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-      }
-
-      .thumbnail:hover, .card-title:hover {
-        opacity: 0.8;
-        transition: 0.3s;
-      }
-
-      .card-body {
-        .category-buttons {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 8px;
-
-          button {
-            padding: 0 12px;
-            border: none;
-            border-radius: 8px;
-            cursor: default;
-            // opacity: 1;
-            // transition: 0.3s ease-in-out;
-          }
-
-          // button:hover {
-          //   opacity: 0.8;
-          //   transition: 0.3s;
-          // }
-
-          .english {
-            background-color: #000;
-            color: #fff;
-          }
-
-          .arabic {
-            background-color: #000;
-            color: #ed4101;
-          }
-        }
-
-        .article-date {
-          color: #fff;
-          font-size: 1.1cqw;
-        }
-
-        .author-info {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          gap: 8px;
-          color: #000;
-
-          .tags {
-            font-size: 1.1cqw;
-            color: #000;
-          }
-        }
-
-        .author-image {
-          width: 100%;
-          border-radius: 100%;
-          border: 2px solid #000;
-        }
-      }
-    }
-  }
 }
 
 .how-we-see-it-container {
@@ -2114,8 +2028,89 @@ body.hide_scroll {
       transition: 0.3s;
     }
   }
+}
 
-  .how-we-see-it-posts {
+.category-posts {
+  .category-card-desktop {
+    .card {
+      max-width: 80%;
+      width: 100%;
+      height: 100%;
+      justify-self: center;
+      background-color: #ed4101;
+
+      .card-body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .thumbnail {
+        width: 100%;
+        padding: 8px;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+
+      .thumbnail:hover, .card-title:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+
+      .card-body {
+        .category-buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+
+          button {
+            padding: 0 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: default;
+          }
+
+          .english {
+            background-color: #000;
+            color: #fff;
+          }
+
+          .arabic {
+            background-color: #000;
+            color: #ed4101;
+          }
+        }
+
+        .article-date {
+          color: #fff;
+          font-size: 1.1cqw;
+        }
+
+        .author-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 8px;
+          color: #000;
+
+          .tags {
+            font-size: 1.1cqw;
+            color: #000;
+          }
+        }
+
+        .author-image {
+          width: 100%;
+          border-radius: 100%;
+          border: 2px solid #000;
+        }
+      }
+    }
+  }
+
+  .category-card-mobile {
     @keyframes expanded-card-body {
       0% {
         width: 100%;
@@ -2149,7 +2144,6 @@ body.hide_scroll {
         background-color: #000;
 
         .card-content {
-          // max-width: 100%;
           margin: 0 5%;
         }
       }
@@ -2178,14 +2172,7 @@ body.hide_scroll {
             border: none;
             border-radius: 8px;
             cursor: default;
-            // opacity: 1;
-            // transition: 0.3s ease-in-out;
           }
-
-          // button:hover {
-          //   opacity: 0.8;
-          //   transition: 0.3s;
-          // }
 
           .english {
             background-color: #ED4101;

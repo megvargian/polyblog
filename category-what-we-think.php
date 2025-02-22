@@ -28,11 +28,11 @@
         </div>
         <input type="hidden" name="cat" value="what-we-think" />
     </form>
-    <div class="what-we-think-posts">
+    <div class="category-posts">
         <?php if (have_posts()) : ?>
             <div class="row my-4 desktop">
                 <?php while (have_posts()) : the_post(); ?>
-                    <div class="col-md-6 my-2">
+                    <div class="category-card-desktop col-md-6 my-2">
                         <div class="card">
                             <?php
                             $post_id = get_the_ID();
@@ -106,7 +106,7 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_posts()) : the_post(); ?>
-                                <div class="swiper-slide">
+                                <div class="category-card-mobile swiper-slide">
                                     <div class="card">
                                         <?php
                                         $post_id = get_the_ID();

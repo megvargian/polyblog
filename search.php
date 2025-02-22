@@ -54,10 +54,10 @@ get_header(); ?>
 	$query = new WP_Query($args);
 
 	if ($query->have_posts()) : ?>
-		<div class="what-we-think-posts">
+		<div class="category-posts">
 			<div class="row my-4 desktop">
 				<?php while ($query->have_posts()) : $query->the_post(); ?>
-					<div class="col-md-6 my-2">
+					<div class="category-card-desktop col-md-6 my-2">
 						<div class="card">
 							<?php
 							$post_id = get_the_ID();
@@ -135,7 +135,7 @@ get_header(); ?>
 					<div class="swiper mySwiper">
 						<div class="swiper-wrapper">
 							<?php while (have_posts()) : the_post(); ?>
-								<div class="swiper-slide">
+								<div class="category-card-mobile swiper-slide">
 									<div class="card">
 										<?php
 										$post_id = get_the_ID();
