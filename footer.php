@@ -165,24 +165,35 @@
                             <span class="en-regular">about us</span>
                             <span class="ar-regular">معلومات عنا</span>
                         </button>
-                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                            Editorial line
+                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                            data-bs-target="#contact-us">
+                            <span class="en-regular">Editorial line</span>
+                            <span class="ar-regular">الخط التحريري</span>
                         </button>
-                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
+                        <!-- <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             Join our collective
-                        </button>
-                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                            Meet our voices
+                        </button> -->
+                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                            data-bs-target="#contact-us">
+                            <span class="en-regular">Meet our voices</span>
+                            <span class="ar-regular">تعرف على أصواتنا</span>
                         </button>
                         <div class="d-block d-lg-none">
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Mission
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+
+                                <span class="en-regular">Mission</span>
+                                <span class="ar-regular"> مهمة</span>
                             </button>
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Vision
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+                                <span class="en-regular">Vision</span>
+                                <span class="ar-regular"> رؤية</span>
                             </button>
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Causes
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+                                <span class="en-regular">Causes</span>
+                                <span class="ar-regular"> الأسباب</span>
                             </button>
                         </div>
                         <div class="row d-lg-flex d-none">
@@ -267,14 +278,21 @@
                     </div>
                     <div class="col-3 px-1 d-lg-block d-none">
                         <div class="custom-rotate">
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Mission
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+                                <span class="en-regular">Mission</span>
+                                <span class="ar-regular"> مهمة</span>
                             </button>
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Vision
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+
+                                <span class="en-regular">Vision</span>
+                                <span class="ar-regular">رؤية</span>
                             </button>
-                            <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                Causes
+                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#contact-us">
+                                <span class="en-regular">Causes</span>
+                                <span class="ar-regular">الأسباب</span>
                             </button>
                         </div>
                         <div class="row">
