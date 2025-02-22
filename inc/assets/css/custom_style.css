@@ -1907,12 +1907,10 @@ body.hide_scroll {
 }
 .category-posts .category-card-desktop .card .card-body {
   display: flex;
-  position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  bottom: 0;
   width: 100%;
-  height: 20%;
+  height: 33%;
   max-height: 100%;
   border-radius: 32px;
   transform-origin: center;
@@ -1923,6 +1921,7 @@ body.hide_scroll {
   margin: 0 5%;
 }
 .category-posts .category-card-desktop .card .article-title {
+  text-align: end;
   color: #fff;
 }
 .category-posts .category-card-desktop .card .thumbnail {
@@ -1930,6 +1929,7 @@ body.hide_scroll {
   padding: 8px;
   opacity: 1;
   transition: 0.3s ease-in-out;
+  margin-bottom: -30px;
 }
 .category-posts .category-card-desktop .card .thumbnail:hover, .category-posts .category-card-desktop .card .card-title:hover {
   opacity: 0.8;
