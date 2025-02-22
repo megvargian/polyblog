@@ -137,6 +137,20 @@
     </div>
 </section>
 <?php }?>
+<?php if (is_front_page()) {?>
+<section>
+    <div class="container">
+        <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
+            <div class="col-12 text-center">
+                <div>
+                    <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
+                    <h3 class="ar-regular ar">منصة إعلامية سياسية شبابية ولبنانية</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php } ?>
 </div><!-- #content -->
 </div><!-- #page -->
 <footer
