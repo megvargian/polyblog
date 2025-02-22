@@ -1635,7 +1635,7 @@ body.hide_scroll {
   width: 66% !important;
 }
 .what-we-think-container .mobile .swiper {
-  padding: 0 12.5%;
+  padding: 0 6%;
 }
 .what-we-think-container .mobile .swiper-slide {
   border-radius: 18px;
@@ -1735,7 +1735,7 @@ body.hide_scroll {
   width: 66% !important;
 }
 .how-we-see-it-container .mobile .swiper {
-  padding: 0 12.5%;
+  padding: 0 6%;
 }
 .how-we-see-it-container .mobile .swiper-slide {
   border-radius: 18px;
