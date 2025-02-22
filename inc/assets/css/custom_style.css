@@ -1859,6 +1859,11 @@ body.hide_scroll {
   border: none;
   border-radius: 8px;
   cursor: default;
+  height: 24px;
+  line-height: 24px;
+}
+.category-posts .category-card-mobile .card .card-body .category-buttons button strong {
+  line-height: normal;
 }
 .category-posts .category-card-mobile .card .card-body .category-buttons .english {
   background-color: #000;
@@ -1947,6 +1952,11 @@ body.hide_scroll {
   border: none;
   border-radius: 8px;
   cursor: default;
+  height: 24px;
+  line-height: 24px;
+}
+.category-posts .category-card-desktop .card .card-body .category-buttons button strong {
+  line-height: normal;
 }
 .category-posts .category-card-desktop .card .card-body .category-buttons .english {
   background-color: #ED4101;

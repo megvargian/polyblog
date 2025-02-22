@@ -2070,6 +2070,12 @@ body.hide_scroll {
             border: none;
             border-radius: 8px;
             cursor: default;
+            height: 24px;
+            line-height: 24px;
+
+            strong {
+              line-height: normal;
+            }
           }
 
           .english {
@@ -2179,6 +2185,12 @@ body.hide_scroll {
             border: none;
             border-radius: 8px;
             cursor: default;
+            height: 24px;
+            line-height: 24px;
+
+            strong {
+              line-height: normal;
+            }
           }
 
           .english {
