@@ -36,7 +36,6 @@
                         <div class="card">
                             <?php
                             $post_id = get_the_ID();
-                            $post_title = get_the_title($post_id);
                             $article_thumbnail = get_field('article_thumbnail');
                             $languages = get_translations($post_id);
 
@@ -51,7 +50,7 @@
                                 <div class="card-content">
                                     <div class="row article-title">
                                         <div class="col">
-                                            <h3><?php $post_title; ?></h3>
+                                            <h3><?php echo $post_title; ?></h3>
                                         </div>
                                     </div>
                                     <div class="row">
