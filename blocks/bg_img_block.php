@@ -11,8 +11,8 @@ $bg_img_block = get_fields();
     <a href="<?php echo $bg_img_block['main_image_url'] ?>">
         <img class="w-100 d-block" src="<?php echo $bg_img_block['main_image']; ?>"
             alt="<?php echo $bg_img_block['main_image']; ?>">
-        <img class="position-absolute" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/cursor.gif"
-            alt="cursor">
+        <img class="position-absolute cursor-gif-class"
+            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/cursor.gif" alt="cursor">
     </a>
     <?php } else { ?>
     <img class="w-100 d-block" src="<?php echo $bg_img_block['main_image']; ?>"
