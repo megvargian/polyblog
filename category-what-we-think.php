@@ -47,7 +47,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row card-content">
                                     <div class="col-4 category-buttons">
                                         <div class="row">
                                             <div class="col">
