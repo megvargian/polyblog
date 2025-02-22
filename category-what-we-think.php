@@ -50,7 +50,7 @@
                                 <div class="card-content">
                                     <div class="row article-title">
                                         <div class="col">
-                                            <h3><?php echo $post_title; ?></h3>
+                                            <h3><?php echo esc_html($post_title); ?></h3>
                                         </div>
                                     </div>
                                     <div class="row">
