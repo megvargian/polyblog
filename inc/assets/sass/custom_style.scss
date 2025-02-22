@@ -2031,7 +2031,7 @@ body.hide_scroll {
 }
 
 .category-posts {
-  .category-card-desktop {
+  .category-card-mobile {
     .card {
       max-width: 80%;
       width: 100%;
@@ -2110,7 +2110,7 @@ body.hide_scroll {
     }
   }
 
-  .category-card-mobile {
+  .category-card-desktop {
     @keyframes expanded-card-body {
       0% {
         width: 100%;
