@@ -13,23 +13,27 @@ $yt_playlist_block = get_fields();
                 <p></p>
             </div>
             <div class="col">
-                <h3 class="ar-bold" style="line-height: 1.27">انتاجاتنـــــــــــــــــــــ <br> ـــــا الخاصـــــــــــــة</h3>
+                <h3 class="ar-bold" style="line-height: 1.27">انتاجاتنـــــــــــــــــــــ <br> ـــــا
+                    الخاصـــــــــــــة</h3>
             </div>
         </div>
         <div class="row custom-min-height">
             <div class="col d-flex justify-content-center align-items-center">
-                <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                <img class="youtube-playlist-btn"
+                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                    alt="YouTube">
             </div>
         </div>
         <div class="row justify-content-between align-items-center">
             <div class="col">
-                <p class="en-regular">polyblog reduces special <br> contenpolyblog reduces <br> special content...t...</p>
+                <p class="en-regular">polyblog reduces special <br> contenpolyblog reduces <br> special content...t...
+                </p>
                 <p></p>
             </div>
             <div class="col">
                 <p class="ar-regular">انتاجاتنـــــــــــــــــــــ <br>
-ـــــا الخاصـــــــــــــةانتاجاتنـــــــــــــــــــــ <br>
-ـــــا الخاصـــــــــــــة</p>
+                    ـــــا الخاصـــــــــــــةانتاجاتنـــــــــــــــــــــ <br>
+                    ـــــا الخاصـــــــــــــة</p>
             </div>
         </div>
     </div>
@@ -38,16 +42,17 @@ $yt_playlist_block = get_fields();
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
                     <!-- <img class="youtube-playlist-btn" src="<?php //echo $yt_playlist_block['title']; ?>" alt="YouTube"> -->
-                     <div class="d-block">
+                    <div class="d-block">
                         <p class="en-bold">ASSAHA</p>
                         <p class="ar-bold">الســـــاحة</p>
-                     </div>
+                    </div>
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $yt_playlist_block['yt_link'] ?>" target="_blank">
                     <img class="youtube-playlist-btn"
-                        src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                        src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                        alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
@@ -69,7 +74,9 @@ $yt_playlist_block = get_fields();
             <div class="swiper-wrapper">
                 <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
-                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                        <img class="youtube-playlist-btn"
+                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                            alt="YouTube">
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -80,11 +87,20 @@ $yt_playlist_block = get_fields();
                                 View more
                             </a>
                         </div>
+                        <div class="d-block">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
+                                perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
+                                minima, magni dicta ad alias nisi veniam consequatur dolore?
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
-                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                        <img class="youtube-playlist-btn"
+                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                            alt="YouTube">
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -95,11 +111,20 @@ $yt_playlist_block = get_fields();
                                 View more
                             </a>
                         </div>
+                        <div class="d-block">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
+                                perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
+                                minima, magni dicta ad alias nisi veniam consequatur dolore?
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide large-slide">
                     <div class="youtube-video-link">
-                        <img class="youtube-playlist-btn" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg" alt="YouTube">
+                        <img class="youtube-playlist-btn"
+                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                            alt="YouTube">
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -109,6 +134,13 @@ $yt_playlist_block = get_fields();
                             <a href="#" class="view-more-btn">
                                 View more
                             </a>
+                        </div>
+                        <div class="d-block">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
+                                perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
+                                minima, magni dicta ad alias nisi veniam consequatur dolore?
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -119,14 +151,14 @@ $yt_playlist_block = get_fields();
 </section>
 
 <script>
-    jQuery(document).ready(function ($) {
-        var swiper = new Swiper('.youtube-production-slider', {
-            slidesPerView: 2,
-            spaceBetween: 10,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination-youtube-production-slider',
-            },
-        });
+jQuery(document).ready(function($) {
+    var swiper = new Swiper('.youtube-production-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination-youtube-production-slider',
+        },
     });
+});
 </script>
