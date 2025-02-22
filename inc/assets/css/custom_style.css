@@ -1921,6 +1921,7 @@ body.hide_scroll {
   margin: 0 5%;
 }
 .category-posts .category-card-desktop .card .article-title {
+  height: 66%;
   text-align: end;
   color: #fff;
 }
