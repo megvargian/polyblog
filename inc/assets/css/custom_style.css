@@ -1922,6 +1922,9 @@ body.hide_scroll {
 .category-posts .category-card-desktop .card .card-body .card-content {
   margin: 0 5%;
 }
+.category-posts .category-card-desktop .card .article-title {
+  color: #fff;
+}
 .category-posts .category-card-desktop .card .thumbnail {
   width: 100%;
   padding: 8px;
