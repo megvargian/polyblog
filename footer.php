@@ -139,8 +139,8 @@
 <?php }?>
 <?php if (is_front_page()) {?>
 <section style="background-color: #181617;">
-    <div class="container">
-        <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
+    <div class="container pt-md-5">
+        <div class="row pb-md-3 pb-5 pt-md-5 last-footer-section">
             <div class="col-12 text-center">
                 <div>
                     <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
