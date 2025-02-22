@@ -139,7 +139,7 @@
 <?php }?>
 <?php if (is_front_page()) {?>
 <section style="background-color: #181617;">
-    <div class="container pt-md-5">
+    <div class="container pt-5">
         <div class="row pb-md-3 pb-5 pt-md-5 last-footer-section">
             <div class="col-12 text-center">
                 <div>
@@ -159,7 +159,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 col-12 px-3">
+                    <div class="col-lg-8 col-md-12 col-12 px-3">
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
                             data-bs-target="#contact-us">
                             <span class="en-regular">about us</span>
