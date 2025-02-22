@@ -36,6 +36,7 @@
                         <div class="card">
                             <?php
                             $post_id = get_the_ID();
+                            $post_title = get_the_title($post_id);
                             $article_thumbnail = get_field('article_thumbnail');
                             $languages = get_translations($post_id);
 
