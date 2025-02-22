@@ -1803,7 +1803,7 @@ body.hide_scroll {
     }
 
     .swiper {
-      padding: 0 12.5%;
+      padding: 0 6%;
     }
 
     .swiper-slide {
@@ -1908,8 +1908,130 @@ body.hide_scroll {
       transition: 0.3s;
     }
   }
+}
 
-  .what-we-think-posts {
+.how-we-see-it-container {
+  .mobile {
+    display: none;
+
+    .header {
+      text-align: center !important;
+
+      img {
+        width: 66% !important;
+      }
+    }
+
+    .swiper {
+      padding: 0 6%;
+    }
+
+    .swiper-slide {
+      border-radius: 18px;
+    }
+
+    .swiper-button-next {
+      width: 44px;
+      position: relative;
+      left: 66%;
+      top: 30px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
+    }
+
+    .swiper-button-prev {
+      width: 44px;
+      position: relative;
+      left: 20%;
+      top: -6px;
+      background-color: #000;
+      border-radius: 100%;
+      border: 30px solid black;
+      transform: scale(0.8);
+    }
+
+    .swiper-button-prev:after, .swiper-button-next:after {
+      transform: scale(0.6);
+    }
+
+    .category-buttons {
+      button {
+        padding: 0 6px !important;
+
+        strong {
+          font-size: 2cqw !important;
+        }
+      }
+
+      .article-date {
+        font-size: 1.8cqw !important;
+      }
+    }
+
+    .tags {
+      font-size: 1.8cqw !important;
+    }
+  }
+
+  .search-page-title {
+    color: #fff;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .search-input {
+    display: flex;
+    justify-content: center;
+
+    .input-with-icon {
+      position: relative;
+      width: 33%;
+
+      input {
+        width: 100%;
+        padding: 5px;
+        padding-right: 30px;
+        padding-left: 20px;
+        border: none;
+        border-radius: 24px;
+        font-weight: 700;
+      }
+
+      input::placeholder {
+        color: #141213;
+        font-weight: 700;
+      }
+
+      svg {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .search-btn {
+      padding: 4px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 50px;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+
+    .search-btn:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+}
+
+.category-posts {
+  .category-card-mobile {
     .card {
       max-width: 80%;
       width: 100%;
@@ -1948,14 +2070,13 @@ body.hide_scroll {
             border: none;
             border-radius: 8px;
             cursor: default;
-            // opacity: 1;
-            // transition: 0.3s ease-in-out;
-          }
+            height: 24px;
+            line-height: 24px;
 
-          // button:hover {
-          //   opacity: 0.8;
-          //   transition: 0.3s;
-          // }
+            strong {
+              line-height: normal;
+            }
+          }
 
           .english {
             background-color: #000;
@@ -1994,128 +2115,8 @@ body.hide_scroll {
       }
     }
   }
-}
 
-.how-we-see-it-container {
-  .mobile {
-    display: none;
-
-    .header {
-      text-align: center !important;
-
-      img {
-        width: 66% !important;
-      }
-    }
-
-    .swiper {
-      padding: 0 12.5%;
-    }
-
-    .swiper-slide {
-      border-radius: 18px;
-    }
-
-    .swiper-button-next {
-      width: 44px;
-      position: relative;
-      left: 66%;
-      top: 30px;
-      background-color: #000;
-      border-radius: 100%;
-      border: 30px solid black;
-      transform: scale(0.8);
-    }
-
-    .swiper-button-prev {
-      width: 44px;
-      position: relative;
-      left: 20%;
-      top: -6px;
-      background-color: #000;
-      border-radius: 100%;
-      border: 30px solid black;
-      transform: scale(0.8);
-    }
-
-    .swiper-button-prev:after, .swiper-button-next:after {
-      transform: scale(0.6);
-    }
-
-    .category-buttons {
-      button {
-        padding: 0 6px !important;
-
-        strong {
-          font-size: 2cqw !important;
-        }
-      }
-
-      .article-date {
-        font-size: 1.8cqw !important;
-      }
-    }
-
-    .tags {
-      font-size: 1.8cqw !important;
-    }
-  }
-
-  .search-page-title {
-    color: #fff;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .search-input {
-    display: flex;
-    justify-content: center;
-
-    .input-with-icon {
-      position: relative;
-      width: 33%;
-
-      input {
-        width: 100%;
-        padding: 5px;
-        padding-right: 30px;
-        padding-left: 20px;
-        border: none;
-        border-radius: 24px;
-        font-weight: 700;
-      }
-
-      input::placeholder {
-        color: #141213;
-        font-weight: 700;
-      }
-
-      svg {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-    .search-btn {
-      padding: 4px;
-      margin-left: 10px;
-      border: none;
-      border-radius: 50px;
-      opacity: 1;
-      transition: 0.3s ease-in-out;
-    }
-
-    .search-btn:hover {
-      opacity: 0.8;
-      transition: 0.3s;
-    }
-  }
-
-  .how-we-see-it-posts {
+  .category-card-desktop {
     @keyframes expanded-card-body {
       0% {
         width: 100%;
@@ -2136,12 +2137,12 @@ body.hide_scroll {
 
       .card-body {
         display: flex;
-        position: absolute;
+        // position: absolute;
         flex-direction: column;
         justify-content: space-between;
-        bottom: 0;
+        // bottom: 0;
         width: 100%;
-        height: 20%;
+        height: 33%;
         max-height: 100%;
         border-radius: 32px;
         transform-origin: center;
@@ -2149,9 +2150,14 @@ body.hide_scroll {
         background-color: #000;
 
         .card-content {
-          // max-width: 100%;
           margin: 0 5%;
         }
+      }
+
+      .article-title {
+        height: 33%;
+        text-align: end;
+        color: #fff;
       }
 
       .thumbnail {
@@ -2159,6 +2165,7 @@ body.hide_scroll {
         padding: 8px;
         opacity: 1;
         transition: 0.3s ease-in-out;
+        margin-bottom: -30px;
       }
 
       .thumbnail:hover, .card-title:hover {
@@ -2178,14 +2185,13 @@ body.hide_scroll {
             border: none;
             border-radius: 8px;
             cursor: default;
-            // opacity: 1;
-            // transition: 0.3s ease-in-out;
-          }
+            height: 24px;
+            line-height: 24px;
 
-          // button:hover {
-          //   opacity: 0.8;
-          //   transition: 0.3s;
-          // }
+            strong {
+              line-height: normal;
+            }
+          }
 
           .english {
             background-color: #ED4101;

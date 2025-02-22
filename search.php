@@ -54,13 +54,14 @@ get_header(); ?>
 	$query = new WP_Query($args);
 
 	if ($query->have_posts()) : ?>
-		<div class="what-we-think-posts">
+		<div class="category-posts">
 			<div class="row my-4 desktop">
 				<?php while ($query->have_posts()) : $query->the_post(); ?>
-					<div class="col-md-6 my-2">
+					<div class="category-card-desktop col-md-6 my-2">
 						<div class="card">
 							<?php
 							$post_id = get_the_ID();
+							$post_title = get_the_title($post_id);
 							$article_thumbnail = get_field('article_thumbnail');
 							$languages = get_translations($post_id);
 
@@ -72,53 +73,60 @@ get_header(); ?>
 								</div>
 							<?php endif; ?>
 							<div class="card-body">
-								<div class="row">
-									<div class="col-4 category-buttons">
-										<div class="row">
-											<div class="col">
-												<?php
-												if ($languages) {
-													foreach ($languages as $lang) {
-														$translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
-														if ($translated_id) {
-												?>
-															<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
-																<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
-															</button>
-												<?php
+								<div class="card-content">
+									<div class="row article-title">
+										<div class="col">
+											<h3><?php echo esc_html($post_title); ?></h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-4 category-buttons">
+											<div class="row">
+												<div class="col">
+													<?php
+													if ($languages) {
+														foreach ($languages as $lang) {
+															$translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+															if ($translated_id) {
+													?>
+																<button class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
+																	<strong> <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?></strong>
+																</button>
+													<?php
+															}
 														}
 													}
-												}
-												?>
+													?>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<p class="article-date">
+														<?php echo get_the_date('d/m/Y'); ?>
+													</p>
+												</div>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col">
-												<p class="article-date">
-													<?php echo get_the_date('d/m/Y'); ?>
-												</p>
+										<?php
+										$author = get_field('author');
+										?>
+										<div class="col-5 author-info">
+											<div class="row">
+												<div class="col">
+													<a href="<?php echo get_permalink($author); ?>">
+														<h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
+													</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col">
+													<p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
+												</div>
 											</div>
 										</div>
-									</div>
-									<?php
-									$author = get_field('author');
-									?>
-									<div class="col-5 author-info">
-										<div class="row">
-											<div class="col">
-												<a href="<?php echo get_permalink($author); ?>">
-													<h5 class="align-text-arabic"><strong><?php echo get_the_title($author); ?></strong></h5>
-												</a>
-											</div>
+										<div class="col-3">
+											<img class="author-image" src="<?php echo get_the_post_thumbnail_url($author); ?>" alt="<?php echo get_the_title($author); ?>" />
 										</div>
-										<div class="row">
-											<div class="col">
-												<p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-3">
-										<img class="author-image" src="<?php echo get_the_post_thumbnail_url($author); ?>" alt="<?php echo get_the_title($author); ?>" />
 									</div>
 								</div>
 							</div>
@@ -135,7 +143,7 @@ get_header(); ?>
 					<div class="swiper mySwiper">
 						<div class="swiper-wrapper">
 							<?php while (have_posts()) : the_post(); ?>
-								<div class="swiper-slide">
+								<div class="category-card-mobile swiper-slide">
 									<div class="card">
 										<?php
 										$post_id = get_the_ID();
