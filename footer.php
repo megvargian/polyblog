@@ -138,7 +138,7 @@
 </section>
 <?php }?>
 <?php if (is_front_page()) {?>
-<section>
+<section style="background-color: #181617;">
     <div class="container">
         <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
             <div class="col-12 text-center">
@@ -162,6 +162,7 @@
                     <div class="col-lg-8 col-md-10 col-12 px-3">
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             about us
+                            <span class="ar-regular">معلومات عنا</span>
                         </button>
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
                             Editorial line
