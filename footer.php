@@ -160,8 +160,9 @@
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 col-12 px-3">
-                        <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                            about us
+                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                            data-bs-target="#contact-us">
+                            <span class="en-regular">about us</span>
                             <span class="ar-regular">معلومات عنا</span>
                         </button>
                         <button data-bs-toggle="modal" data-bs-target="#contact-us">
