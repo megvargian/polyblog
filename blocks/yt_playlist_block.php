@@ -111,7 +111,7 @@ $yt_playlist_block = get_fields();
                                 View more
                             </a>
                         </div>
-                        <div class="d-block">
+                        <div class="d-block  mx-2">
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
                                 perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
@@ -135,7 +135,7 @@ $yt_playlist_block = get_fields();
                                 View more
                             </a>
                         </div>
-                        <div class="d-block">
+                        <div class="d-block  mx-2">
                             <p>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
                                 perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
