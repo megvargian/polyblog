@@ -36,7 +36,7 @@ $header_video_url = get_field('header_video', 'option');
                 <div class="white-line d-block d-lg-none"></div>
             </div>
             <div id="menu-button" class="responsive-menu-button menu_mobile_nav">
-                <p>on the agenda</p>
+                <div class="en-regular">on the agenda</div>
                 <img class="arrow-right"
                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg"
                     alt="on the agenda">
