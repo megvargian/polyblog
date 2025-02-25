@@ -61,93 +61,28 @@ $header_fields = get_fields('options');
                             </a>
                         </div>
                         <?php } ?>
-                        <!-- <div class="col d-flex justify-content-center align-items-center">
-                            <a href="https://polybloglb.com/category/what-we-think/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">what we think</p>
-                                    <p class="ar">شــــــو منفكــــــر</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">how we see it</p>
-                                    <p class="ar">كيــف منشــوف</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/our-segements" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">Our segments</p>
-                                    <p class="ar">فقـــــــــــــــــراتنا </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/#youtube-playlist-bg" class="our-production-button">
-                                <div class="bg-black">
-                                    <p class="en">our productions</p>
-                                    <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="http://polybloglb.com/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">GET TO KNOW US</p>
-                                    <p class="ar">تعـــــــرف/ي علينـــا </p>
-                                </div>
-                            </a>
-                        </div> -->
                     </div>
                     <?php } ?>
                     <?php if (is_front_page()) { ?>
                 </div>
                 <?php } ?>
             </div>
-            <!-- <div class="modal fade side-menu-modal" id="sideMenuModal" tabindex="-1" aria-labelledby="side-menu-modal"
-				aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-body">
-							<button>
-								<img src="http://polybloglb.com/wp-content/uploads/2024/12/what_we_think2.png" alt="What we think">
-							</button>
-							<button>
-								<img src="http://polybloglb.com/wp-content/uploads/2024/12/get_to_know_us2.png" alt="get to know us">
-							</button>
-							<button>
-								<img src="http://polybloglb.com/wp-content/uploads/2024/12/how_we_see_it2.png" alt="how we see it">
-							</button>
-							<button>
-								<img src="http://polybloglb.com/wp-content/uploads/2024/12/our_productions2.png" alt="our productions">
-							</button>
-							<button>
-								<img src="http://polybloglb.com/wp-content/uploads/2024/12/our_segments2.png" alt="our segments">
-							</button>
-						</div>
-					</div>
-				</div>
-			</div> -->
             <div id="menu_mobile" class="menu_on_mobile d-block d-lg-none">
                 <div class="menu_on_mobile_wrapper">
                     <div class="menu_on_mobile_inner_wrapper" style="position: relative;">
                         <div>
-                            <?php //foreach($header_fields as $key => $menu_item){
-                                    //if($menu_item['general_image'] == '' && $menu_item['has_child'] == false){?>
+                            <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
                             <a class="d-block my-3 page_font animated_menu_el"
-                                href="https://polybloglb.com/category/what-we-think/">
+                                href="<?php echo $menu_item['menu_item']['url']; ?>">
                                 <div class="menu_item">
-                                    <?php //echo $menu_item['label']?>
                                     <div class="bg-black">
-                                        <p class="en">what we think</p>
-                                        <p class="ar">شــــــو منفكــــــر</p>
+                                        <p class="en"><?php echo $menu_item['menu_item']['en_text']; ?></p>
+                                        <p class="ar"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
                                     </div>
                                 </div>
                             </a>
-                            <a class="d-block my-3 page_font animated_menu_el"
+                            <?php } ?>
+                            <!-- <a class="d-block my-3 page_font animated_menu_el"
                                 href="https://polybloglb.com/category/how-we-see-it/">
                                 <div class="menu_item">
                                     <?php //echo $menu_item['label']?>
@@ -185,7 +120,7 @@ $header_fields = get_fields('options');
                                         <p class="ar">تعـــــــرف/ي علينـــا </p>
                                     </div>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -199,7 +134,15 @@ $header_fields = get_fields('options');
                 </div>
                 <div class="side-header-menu">
                     <ul>
+                        <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
                         <li class="single-side-header d-block">
+                            <a href="<?php echo $menu_item['menu_item']['url']; ?>">
+                                <p class="en-regular"><?php echo $menu_item['menu_item']['en_text']; ?></p>
+                                <p class="ar-regualr"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
+                            </a>
+                        </li>
+                        <?php } ?>
+                        <!-- <li class="single-side-header d-block">
                             <a href="https://polybloglb.com/category/what-we-think/">
                                 <p class="en-regular">what we think</p>
                                 <p class="ar-regualr">شــــــو منفكــــــر</p>
@@ -228,7 +171,7 @@ $header_fields = get_fields('options');
                                 <p class="en-regular">GET TO KNOW US</p>
                                 <p class="ar-regular">تعـــــــرف/ي علينـــا </p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
