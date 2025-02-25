@@ -25,8 +25,8 @@ $header_video_url = get_field('header_video', 'option');
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="page" class="site main_page_wrapper">
-        <div id="content" class="site-content position-relative">
+    <div id="page" class="site main_page_wrapper position-relative">
+        <div id="content" class="site-content ">
             <div class="site-title">
                 <a href="http://polybloglb.com/">
                     <p class="en">Politics, not news</p>

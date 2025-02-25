@@ -1260,7 +1260,7 @@ body.hide_scroll {
   overflow: hidden;
   overflow: auto;
   top: 3%;
-  left: -12%;
+  left: -5%;
   cursor: pointer;
   z-index: 20;
   transition: top 0.3s ease;
@@ -1285,8 +1285,8 @@ body.hide_scroll {
 
 .fixed-menu-button {
   position: fixed;
-  top: 40px;
-  left: 15px;
+  top: 80px;
+  left: -20px;
 }
 
 .side-menu-modal {
