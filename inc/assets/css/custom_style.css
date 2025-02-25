@@ -1268,7 +1268,7 @@ body.hide_scroll {
   padding: 1rem 0.5rem;
   background-color: #eb4201;
 }
-.responsive-menu-button p {
+.responsive-menu-button .en-regular-button {
   writing-mode: vertical-lr;
   text-transform: uppercase;
   color: #fff;
