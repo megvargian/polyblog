@@ -9,7 +9,6 @@
  * @package WP_Bootstrap_Starter
  */
 
-$header_video_url = get_fields('header_video', 'option');
 $header_fields = get_fields('options');
 ?>
 <!DOCTYPE html>
@@ -82,45 +81,6 @@ $header_fields = get_fields('options');
                                 </div>
                             </a>
                             <?php } ?>
-                            <!-- <a class="d-block my-3 page_font animated_menu_el"
-                                href="https://polybloglb.com/category/how-we-see-it/">
-                                <div class="menu_item">
-                                    <?php //echo $menu_item['label']?>
-                                    <div class="bg-black">
-                                        <p class="en">how we see it</p>
-                                        <p class="ar">كيــف منشــوف</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="d-block my-3 page_font animated_menu_el"
-                                href="https://polybloglb.com/our-segements">
-                                <div class="menu_item">
-                                    <?php //echo $menu_item['label']?>
-                                    <div class="bg-black">
-                                        <p class="en">Our segments</p>
-                                        <p class="ar">فقـــــــــــــــــراتنا </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="d-block my-3 page_font animated_menu_el our-production-button"
-                                href="http://polybloglb.com/#youtube-playlist-bg<?php //echo $menu_item['url'] ?>">
-                                <div class="menu_item">
-                                    <?php //echo $menu_item['label']?>
-                                    <div class="bg-black">
-                                        <p class="en">our productions</p>
-                                        <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="d-block my-3 page_font animated_menu_el" href="<?php //echo $menu_item['url'] ?>">
-                                <div class="menu_item">
-                                    <?php //echo $menu_item['label']?>
-                                    <div class="bg-black">
-                                        <p class="en">GET TO KNOW US</p>
-                                        <p class="ar">تعـــــــرف/ي علينـــا </p>
-                                    </div>
-                                </div>
-                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -142,36 +102,6 @@ $header_fields = get_fields('options');
                             </a>
                         </li>
                         <?php } ?>
-                        <!-- <li class="single-side-header d-block">
-                            <a href="https://polybloglb.com/category/what-we-think/">
-                                <p class="en-regular">what we think</p>
-                                <p class="ar-regualr">شــــــو منفكــــــر</p>
-                            </a>
-                        </li>
-                        <li class="single-side-header d-block">
-                            <a href="https://polybloglb.com/category/how-we-see-it/">
-                                <p class="en-regular">how we see it</p>
-                                <p class="ar-regular">كيــف منشــوف</p>
-                            </a>
-                        </li>
-                        <li class="single-side-header d-block">
-                            <a href="http://polybloglb.com/our-segements">
-                                <p class="en-regular">Our segments</p>
-                                <p class="ar-regular">فقـــــــــــــــــراتنا </p>
-                            </a>
-                        </li>
-                        <li class="single-side-header d-block">
-                            <a href="http://polybloglb.com/#youtube-playlist-bg" class="our-production-button">
-                                <p class="en-regular">our productions</p>
-                                <p class="ar-regular">انـــــــــتاجــــــــاتــــــنا</p>
-                            </a>
-                        </li>
-                        <li class="single-side-header d-block">
-                            <a href="http://polybloglb.com/">
-                                <p class="en-regular">GET TO KNOW US</p>
-                                <p class="ar-regular">تعـــــــرف/ي علينـــا </p>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -206,6 +136,24 @@ $header_fields = get_fields('options');
                         target.addClass("highlight"); // Add class after scrolling
                     });
                     <?php }?>
+                });
+                const button = document.getElementById('menu-button');
+                const initialPosition = button.offsetTop;
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', () => {
+                    const currentScroll = window.scrollY;
+
+                    if (currentScroll > initialPosition) {
+                        button.classList.add('fixed-menu-button');
+                    } else {
+                        button.classList.remove('fixed-menu-button');
+                    }
+
+                    if (currentScroll < lastScrollTop) {
+                        button.classList.remove('fixed-button');
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
                 });
             });
             </script>

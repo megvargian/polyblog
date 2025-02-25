@@ -8,6 +8,9 @@
  *
  * @package WP_Bootstrap_Starter
  */
+$general_fields = get_fields('options');
+$footer_menu = $general_fields['footer']['footer_menu'];
+$footer_social_links = $general_fields['footer']['footer_social_links'];
 ?>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
@@ -170,9 +173,6 @@
                             <span class="en-regular">Editorial line</span>
                             <span class="ar-regular">الخط التحريري</span>
                         </button>
-                        <!-- <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                            Join our collective
-                        </button> -->
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
                             data-bs-target="#contact-us">
                             <span class="en-regular">Meet our voices</span>
@@ -181,7 +181,6 @@
                         <div class="d-block d-lg-none">
                             <button class="d-flex justify-content-between" data-bs-toggle="modal"
                                 data-bs-target="#contact-us">
-
                                 <span class="en-regular">Mission</span>
                                 <span class="ar-regular"> مهمة</span>
                             </button>
@@ -214,7 +213,7 @@
                                         Follow us !
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <a href="#">
+                                        <a href="<?php echo $footer_social_links['insta_url']; ?>">
                                             <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer.svg"
                                                 alt="instagram">
@@ -222,7 +221,7 @@
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer_fill.svg"
                                                 alt="instagram">
                                         </a>
-                                        <a href="#">
+                                        <a href="<?php echo $footer_social_links['x_url']; ?>">
                                             <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer.svg"
                                                 alt="X">
@@ -232,7 +231,7 @@
                                         </a>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <a href="#">
+                                        <a href="<?php echo $footer_social_links['fb_url']; ?>">
                                             <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer.svg"
                                                 alt="facebook">
@@ -240,7 +239,7 @@
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer_fill.svg"
                                                 alt="facebook">
                                         </a>
-                                        <a href="#">
+                                        <a href="<?php echo $footer_social_links['youtube_url']; ?>">
                                             <img class="w-100 empty"
                                                 src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer.svg"
                                                 alt="youtube">
@@ -329,7 +328,6 @@
     </div>
 </div>
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri(); ?>/inc/assets/js/custom-scripts/show-menu-button.js"></script>
 </body>
 
 </html>
