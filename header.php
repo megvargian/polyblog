@@ -35,13 +35,12 @@ $header_video_url = get_field('header_video', 'option');
                 </a>
                 <div class="white-line d-block d-lg-none"></div>
             </div>
-            <a id="menu-button" class="responsive-menu-button menu_mobile_nav" data-bs-toggle="modal"
-                data-bs-target="#sideMenuModal">
+            <div id="menu-button" class="responsive-menu-button menu_mobile_nav">
                 <p>on the agenda</p>
                 <img class="arrow-right"
                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg"
                     alt="on the agenda">
-            </a>
+            </div>
             <div id="home-video-header-container"
                 <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
                 <?php if (is_front_page()) { ?>
