@@ -1344,8 +1344,8 @@ body.hide_scroll {
   border-radius: 24px;
   padding: 1rem 0.5rem;
   background-color: #eb4201;
+  rotate: 90deg;
   .en-regular-button {
-    writing-mode: vertical-lr;
     text-transform: uppercase;
     color: #fff;
     font-family: $en-regular;
