@@ -51,7 +51,17 @@ $header_fields = get_fields('options');
                     </video>
                     <div
                         <?php echo is_front_page() ? 'class="row header-button-container-with-video"' : 'class="row header-button-container-without-video"'; ?>>
+                        <?php foreach ($header_fields['header_menu'] as $menu_item) {?>
                         <div class="col d-flex justify-content-center align-items-center">
+                            <a href="<?php echo $menu_item['menu_item']['url']; ?>" target="_blank">
+                                <div class="bg-black">
+                                    <p class="en"><?php echo $menu_item['menu_item']['en_text']; ?></p>
+                                    <p class="ar"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
+                                </div>
+                            </a>
+                        </div>
+                        <?php } ?>
+                        <!-- <div class="col d-flex justify-content-center align-items-center">
                             <a href="https://polybloglb.com/category/what-we-think/" target="_blank">
                                 <div class="bg-black">
                                     <p class="en">what we think</p>
@@ -90,7 +100,7 @@ $header_fields = get_fields('options');
                                     <p class="ar">تعـــــــرف/ي علينـــا </p>
                                 </div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <?php } ?>
                     <?php if (is_front_page()) { ?>
