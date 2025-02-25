@@ -46,7 +46,7 @@ $header_fields = get_fields('options');
                 <?php if (is_front_page()) { ?>
                 <div class="video-container">
                     <video class="video" width="100%" autoplay loop muted>
-                        <source src="<?php echo esc_url($header_video_url); ?>" type="video/mp4">
+                        <source src="<?php echo esc_url($header_fields['header_video']); ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <div
