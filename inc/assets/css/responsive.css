@@ -333,7 +333,7 @@
     cursor: pointer;
   }
   .responsive-menu-button {
-    display: block;
+    display: flex;
     cursor: pointer;
   }
   .swiper-featured-articles-block .swiper-pagination-bullet-active {
