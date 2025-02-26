@@ -11,6 +11,8 @@
 $general_fields = get_fields('options');
 $footer_menu = $general_fields['footer']['footer_menu'];
 $footer_social_links = $general_fields['footer']['footer_social_links'];
+$upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 0, 3);
+$rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 6);
 ?>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
@@ -163,8 +165,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12 col-12 px-3">
-                        <?php foreach ($footer_menu as $key => $menu_item) {
-                            if($key == 3) { break; }
+                        <?php foreach ($upper_side_three_index as $key => $menu_item) {
                             if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
@@ -179,23 +180,23 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                             <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                         </a>
                         <?php }} ?>
-                        <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                            data-bs-target="#contact-us">
-                            <span class="en-regular">about us</span>
-                            <span class="ar-regular">معلومات عنا</span>
-                        </button>
-                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                            data-bs-target="#contact-us">
-                            <span class="en-regular">Editorial line</span>
-                            <span class="ar-regular">الخط التحريري</span>
-                        </button>
-                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                            data-bs-target="#contact-us">
-                            <span class="en-regular">Meet our voices</span>
-                            <span class="ar-regular">تعرف على أصواتنا</span>
-                        </button> -->
                         <div class="d-block d-lg-none">
+                            <?php foreach ($rotated_side_three_index_menu as $key => $menu_item) {
+                            if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
                             <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
+                                <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                                <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                            </button>
+                            <?php } else { ?>
+                            <a class="d-flex justify-content-between"
+                                href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                                <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                            </a>
+                            <?php }} ?>
+                            <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
                                 data-bs-target="#contact-us">
                                 <span class="en-regular">Mission</span>
                                 <span class="ar-regular"> مهمة</span>
@@ -209,7 +210,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                                 data-bs-target="#contact-us">
                                 <span class="en-regular">Causes</span>
                                 <span class="ar-regular"> الأسباب</span>
-                            </button>
+                            </button> -->
                         </div>
                         <div class="row d-lg-flex d-none">
                             <div class="col-6">
@@ -293,7 +294,22 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                     </div>
                     <div class="col-3 px-1 d-lg-block d-none">
                         <div class="custom-rotate">
+                            <?php foreach ($rotated_side_three_index_menu as $key => $menu_item) {
+                            if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
                             <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                                data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
+                                <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                                <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                            </button>
+                            <?php } else { ?>
+                            <a class="d-flex justify-content-between"
+                                href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                                <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                            </a>
+                            <?php }} ?>
+                            <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
                                 data-bs-target="#contact-us">
                                 <span class="en-regular">Mission</span>
                                 <span class="ar-regular"> مهمة</span>
@@ -308,7 +324,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                                 data-bs-target="#contact-us">
                                 <span class="en-regular">Causes</span>
                                 <span class="ar-regular">الأسباب</span>
-                            </button>
+                            </button> -->
                         </div>
                         <div class="row">
                             <button class="full text-center custom-width donate" data-bs-toggle="modal"
