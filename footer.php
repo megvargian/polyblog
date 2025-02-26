@@ -163,6 +163,22 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
             <div class="col-lg-8 col-md-10 col-12 justify-content-center d-flex">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12 col-12 px-3">
+                        <?php foreach ($footer_menu as $key => $menu_item) {
+                            echo $key;
+                            if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
+                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                            data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['ar_text']));?>">
+                            <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                            <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                        </button>
+                        <?php } else { ?>
+                        <a class="d-flex justify-content-between"
+                            href="<?php echo $menu_item['footer_item']['url']; ?>">
+                            <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
+                            <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
+                        </a>
+                        <?php }} ?>
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
                             data-bs-target="#contact-us">
                             <span class="en-regular">about us</span>

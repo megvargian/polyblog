@@ -717,7 +717,8 @@ body.hide_scroll {
 //footer
 .footer-container {
   font-family: $en-regular;
-  button {
+  button,
+  a {
     padding: 1rem 0.8rem;
     border: 2px solid $sec_color;
     width: 100%;
@@ -728,14 +729,16 @@ body.hide_scroll {
     text-align: left;
     text-transform: uppercase;
   }
-  button:hover {
+  button,
+  a:hover {
     background-color: $sec_color;
     color: $bg_black;
   }
   .custom-rotate {
     display: flex;
     gap: 10px;
-    button {
+    button,
+    a {
       padding: 1rem 0.8rem;
       border: 2px solid $sec_color;
       width: 100%;
@@ -749,7 +752,8 @@ body.hide_scroll {
       width: fit-content;
       height: 23rem;
     }
-    button:hover {
+    button,
+    a:hover {
       background-color: $sec_color;
       color: $bg_black;
     }
@@ -810,11 +814,13 @@ body.hide_scroll {
 }
 .footer-container-default {
   background-color: $bg_black;
-  button {
+  button,
+  a {
     background-color: $bg_black;
   }
   .custom-rotate {
-    button {
+    button,
+    a {
       background-color: $bg_black;
     }
   }
@@ -824,11 +830,13 @@ body.hide_scroll {
 }
 .footer-container-color {
   background-color: #412bba;
-  button {
+  button,
+  a {
     background-color: #412bba;
   }
   .custom-rotate {
-    button {
+    button,
+    a {
       background-color: #412bba;
     }
   }

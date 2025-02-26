@@ -701,7 +701,8 @@ body.hide_scroll {
 .footer-container {
   font-family: "Lexend-Regular";
 }
-.footer-container button {
+.footer-container button,
+.footer-container a {
   padding: 1rem 0.8rem;
   border: 2px solid #87ed06;
   width: 100%;
@@ -712,7 +713,8 @@ body.hide_scroll {
   text-align: left;
   text-transform: uppercase;
 }
-.footer-container button:hover {
+.footer-container button,
+.footer-container a:hover {
   background-color: #87ed06;
   color: #181617;
 }
@@ -720,7 +722,8 @@ body.hide_scroll {
   display: flex;
   gap: 10px;
 }
-.footer-container .custom-rotate button {
+.footer-container .custom-rotate button,
+.footer-container .custom-rotate a {
   padding: 1rem 0.8rem;
   border: 2px solid #87ed06;
   width: 100%;
@@ -734,7 +737,8 @@ body.hide_scroll {
   width: fit-content;
   height: 23rem;
 }
-.footer-container .custom-rotate button:hover {
+.footer-container .custom-rotate button,
+.footer-container .custom-rotate a:hover {
   background-color: #87ed06;
   color: #181617;
 }
@@ -789,10 +793,12 @@ body.hide_scroll {
 .footer-container-default {
   background-color: #181617;
 }
-.footer-container-default button {
+.footer-container-default button,
+.footer-container-default a {
   background-color: #181617;
 }
-.footer-container-default .custom-rotate button {
+.footer-container-default .custom-rotate button,
+.footer-container-default .custom-rotate a {
   background-color: #181617;
 }
 .footer-container-default .full:hover {
@@ -802,10 +808,12 @@ body.hide_scroll {
 .footer-container-color {
   background-color: #412bba;
 }
-.footer-container-color button {
+.footer-container-color button,
+.footer-container-color a {
   background-color: #412bba;
 }
-.footer-container-color .custom-rotate button {
+.footer-container-color .custom-rotate button,
+.footer-container-color .custom-rotate a {
   background-color: #412bba;
 }
 .footer-container-color .full:hover {
