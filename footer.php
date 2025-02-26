@@ -12,9 +12,10 @@ $general_fields = get_fields('options');
 $footer_menu = $general_fields['footer']['footer_menu'];
 $footer_social_links = $general_fields['footer']['footer_social_links'];
 $upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 0, 3);
-$rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 6);
+$rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 3);
+$two_in_the_same_row_buttons = array_slice($general_fields['footer']['footer_menu'], 6, 2);
+$last_button = array_slice($general_fields['footer']['footer_menu'], 7, 1);
 ?>
-<pre><?php print_r($rotated_side_three_index_menu); ?></pre>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
     <div class="container-fluid">
@@ -200,12 +201,24 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                         </div>
                         <div class="row d-lg-flex d-none">
                             <div class="col-6">
-                                <button data-bs-toggle="modal" data-bs-target="#contact-us">
+                                <?php foreach ($two_in_the_same_row_buttons as $key => $menu_item) {
+                                        if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
+                                <button data-bs-toggle="modal"
+                                    data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
+                                </button>
+                                <?php } else { ?>
+                                <a class="a-button" href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
+                                </a>
+                                <?php }} ?>
+                                <!-- <button data-bs-toggle="modal" data-bs-target="#contact-us">
                                     contact us
                                 </button>
                                 <button class="full" data-bs-toggle="modal" data-bs-target="#contact-us">
                                     Be our advocate
-                                </button>
+                                </button> -->
                             </div>
                             <div class="col-6 justify-content-center d-flex position-relative outer-phone">
                                 <img class="d-block w-100"
@@ -255,26 +268,50 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                             </div>
                         </div>
                         <div class="row gx-2 d-lg-none d-flex">
+                            <?php foreach ($two_in_the_same_row_buttons as $key => $menu_item) {
+                                        if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
                             <div class="col-6">
-                                <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                    contact us
+                                <button data-bs-toggle="modal"
+                                    data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </button>
                             </div>
+                            <?php } else { ?>
                             <div class="col-6">
+                                <a class="a-button" href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
+                                </a>
+                            </div>
+                            <?php }} ?>
+
+                            <!-- <div class="col-6">
                                 <button class="full" data-bs-toggle="modal" data-bs-target="#contact-us">
                                     Be our advocate
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="row gx-2 d-lg-none d-flex justify-content-center">
                             <div class="col-12">
+                                <?php foreach ($last_button as $key => $menu_item) {
+                                        if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
                                 <button class="full text-center custom-width w-100 donate" data-bs-toggle="modal"
-                                    data-bs-target="#contact-us">
+                                    data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
                                     <img class="heart"
                                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
                                         alt="heart-donate">
-                                    Donate
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </button>
+                                <?php } else { ?>
+                                <a class="full text-center custom-width w-100 donate a-button"
+                                    href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                    <img class="heart"
+                                        src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
+                                        alt="heart-donate">
+                                    <?php echo $menu_item['footer_item']['en_text']; ?>
+                                </a>
+                                <?php }} ?>
                             </div>
                         </div>
                     </div>
@@ -297,13 +334,32 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                             <?php }} ?>
                         </div>
                         <div class="row">
-                            <button class="full text-center custom-width donate" data-bs-toggle="modal"
+                            <!-- <button class="full text-center custom-width donate" data-bs-toggle="modal"
                                 data-bs-target="#contact-us">
                                 <img class="heart"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
                                     alt="heart-donate">
                                 Donate
+                            </button> -->
+                            <?php foreach ($last_button as $key => $menu_item) {
+                                        if($menu_item['footer_item']['ispopuptext_or_url']){
+                             ?>
+                            <button class="full text-center custom-width donate" data-bs-toggle="modal"
+                                data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
+                                <img class="heart"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
+                                    alt="heart-donate">
+                                <?php echo $menu_item['footer_item']['en_text']; ?>
                             </button>
+                            <?php } else { ?>
+                            <a class="full text-center custom-width donate a-button"
+                                href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                <img class="heart"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
+                                    alt="heart-donate">
+                                <?php echo $menu_item['footer_item']['en_text']; ?>
+                            </a>
+                            <?php }} ?>
                         </div>
                     </div>
                 </div>
