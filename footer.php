@@ -168,7 +168,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                             if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                            data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['ar_text']));?>">
+                            data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
                             <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
                             <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                         </button>
