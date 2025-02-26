@@ -179,7 +179,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                             <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                         </a>
                         <?php }} ?>
-                        <button class="d-flex justify-content-between" data-bs-toggle="modal"
+                        <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
                             data-bs-target="#contact-us">
                             <span class="en-regular">about us</span>
                             <span class="ar-regular">معلومات عنا</span>
@@ -193,7 +193,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                             data-bs-target="#contact-us">
                             <span class="en-regular">Meet our voices</span>
                             <span class="ar-regular">تعرف على أصواتنا</span>
-                        </button>
+                        </button> -->
                         <div class="d-block d-lg-none">
                             <button class="d-flex justify-content-between" data-bs-toggle="modal"
                                 data-bs-target="#contact-us">
@@ -325,6 +325,26 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
         </div>
     </div>
 </footer>
+<?php foreach ($footer_menu as $key => $menu_item) {
+    if($menu_item['footer_item']['ispopuptext_or_url']){
+        ?>
+<div class="modal fade custom-modal"
+    id="<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>" tabindex="-1"
+    aria-labelledby="<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>Label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+            <div class="modal-header">
+                <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <?php echo $menu_item['footer_item']['pop_up_text'];?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php }} ?>
 <div class="modal fade custom-modal" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0">
