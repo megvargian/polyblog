@@ -164,7 +164,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-12 col-12 px-3">
                         <?php foreach ($footer_menu as $key => $menu_item) {
-                            echo $key;
+                            if($key == 2) { break; }
                             if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
                         <button class="d-flex justify-content-between" data-bs-toggle="modal"
