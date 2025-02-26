@@ -214,12 +214,6 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                                     <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </a>
                                 <?php }} ?>
-                                <!-- <button data-bs-toggle="modal" data-bs-target="#contact-us">
-                                    contact us
-                                </button>
-                                <button class="full" data-bs-toggle="modal" data-bs-target="#contact-us">
-                                    Be our advocate
-                                </button> -->
                             </div>
                             <div class="col-6 justify-content-center d-flex position-relative outer-phone">
                                 <img class="d-block w-100"
@@ -286,12 +280,6 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                                 </a>
                             </div>
                             <?php }} ?>
-
-                            <!-- <div class="col-6">
-                                <button class="full" data-bs-toggle="modal" data-bs-target="#contact-us">
-                                    Be our advocate
-                                </button>
-                            </div> -->
                         </div>
                         <div class="row gx-2 d-lg-none d-flex justify-content-center">
                             <div class="col-12">
@@ -336,13 +324,6 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                             <?php }} ?>
                         </div>
                         <div class="row">
-                            <!-- <button class="full text-center custom-width donate" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <img class="heart"
-                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/heart-green.svg"
-                                    alt="heart-donate">
-                                Donate
-                            </button> -->
                             <?php foreach ($last_button as $key => $menu_item) {
                                         if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
@@ -389,24 +370,6 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
     </div>
 </div>
 <?php }} ?>
-<div class="modal fade custom-modal" id="contact-us" tabindex="-1" aria-labelledby="contact-usLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0">
-            <div class="modal-header">
-                <button type="button" class="btn-close m-0 remove-border-onFocus" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit.
-                Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus
-                quaerat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus sit ipsa tenetur magnam fugit.
-                Laborum, iure nulla nisi dolores alias ipsum sit tempora ab cumque corporis incidunt, repellendus
-                quaerat!
-            </div>
-        </div>
-    </div>
-</div>
 <?php wp_footer(); ?>
 </body>
 
