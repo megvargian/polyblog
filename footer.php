@@ -14,7 +14,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
 $upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 0, 3);
 $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 3);
 $two_in_the_same_row_buttons = array_slice($general_fields['footer']['footer_menu'], 6, 2);
-$last_button = array_slice($general_fields['footer']['footer_menu'], 7, 1);
+$last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
 ?>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
