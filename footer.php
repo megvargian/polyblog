@@ -204,12 +204,13 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                                 <?php foreach ($two_in_the_same_row_buttons as $key => $menu_item) {
                                         if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
-                                <button data-bs-toggle="modal"
+                                <button class="<?php echo $key == 1 ? 'full' : '' ?>" data-bs-toggle="modal"
                                     data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
                                     <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </button>
                                 <?php } else { ?>
-                                <a class="a-button" href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                <a class="a-button <?php echo $key == 1 ? 'full' : '' ?>"
+                                    href="<?php echo $menu_item['footer_item']['url']; ?>">
                                     <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </a>
                                 <?php }} ?>
@@ -272,14 +273,15 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                                         if($menu_item['footer_item']['ispopuptext_or_url']){
                              ?>
                             <div class="col-6">
-                                <button data-bs-toggle="modal"
+                                <button class="<?php echo $key == 1 ? 'full' : '' ?>" data-bs-toggle="modal"
                                     data-bs-target="#<?php echo strtolower(str_replace(' ', '-', $menu_item['footer_item']['en_text']));?>">
                                     <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </button>
                             </div>
                             <?php } else { ?>
                             <div class="col-6">
-                                <a class="a-button" href="<?php echo $menu_item['footer_item']['url']; ?>">
+                                <a class="a-button <?php echo $key == 1 ? 'full' : '' ?>"
+                                    href="<?php echo $menu_item['footer_item']['url']; ?>">
                                     <?php echo $menu_item['footer_item']['en_text']; ?>
                                 </a>
                             </div>
