@@ -14,6 +14,7 @@ $footer_social_links = $general_fields['footer']['footer_social_links'];
 $upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 0, 3);
 $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 6);
 ?>
+<pre><?php print_r($rotated_side_three_index_menu); ?></pre>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
     <div class="container-fluid">
@@ -174,7 +175,7 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                             <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                         </button>
                         <?php } else { ?>
-                        <a class="d-flex justify-content-between"
+                        <a class="d-flex justify-content-between a-button"
                             href="<?php echo $menu_item['footer_item']['url']; ?>">
                             <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
                             <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
@@ -190,27 +191,12 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                                 <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                             </button>
                             <?php } else { ?>
-                            <a class="d-flex justify-content-between"
+                            <a class="d-flex justify-content-between a-button"
                                 href="<?php echo $menu_item['footer_item']['url']; ?>">
                                 <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
                                 <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                             </a>
                             <?php }} ?>
-                            <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <span class="en-regular">Mission</span>
-                                <span class="ar-regular"> مهمة</span>
-                            </button>
-                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <span class="en-regular">Vision</span>
-                                <span class="ar-regular"> رؤية</span>
-                            </button>
-                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <span class="en-regular">Causes</span>
-                                <span class="ar-regular"> الأسباب</span>
-                            </button> -->
                         </div>
                         <div class="row d-lg-flex d-none">
                             <div class="col-6">
@@ -303,28 +289,12 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
                                 <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                             </button>
                             <?php } else { ?>
-                            <a class="d-flex justify-content-between"
+                            <a class="d-flex justify-content-between a-button"
                                 href="<?php echo $menu_item['footer_item']['url']; ?>">
                                 <span class="en-regular"><?php echo $menu_item['footer_item']['en_text']; ?></span>
                                 <span class="ar-regular"><?php echo $menu_item['footer_item']['ar_text']; ?></span>
                             </a>
                             <?php }} ?>
-                            <!-- <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <span class="en-regular">Mission</span>
-                                <span class="ar-regular"> مهمة</span>
-                            </button>
-                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-
-                                <span class="en-regular">Vision</span>
-                                <span class="ar-regular">رؤية</span>
-                            </button>
-                            <button class="d-flex justify-content-between" data-bs-toggle="modal"
-                                data-bs-target="#contact-us">
-                                <span class="en-regular">Causes</span>
-                                <span class="ar-regular">الأسباب</span>
-                            </button> -->
                         </div>
                         <div class="row">
                             <button class="full text-center custom-width donate" data-bs-toggle="modal"

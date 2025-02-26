@@ -712,7 +712,7 @@ body.hide_scroll {
   text-align: left;
   text-transform: uppercase;
 }
-.footer-container a {
+.footer-container .a-button {
   padding: 1rem 0.8rem;
   border: 2px solid #87ed06;
   width: 100%;
@@ -727,7 +727,7 @@ body.hide_scroll {
   background-color: #87ed06;
   color: #181617;
 }
-.footer-container a:hover {
+.footer-container .a-button :hover {
   background-color: #87ed06;
   color: #181617;
 }
@@ -825,13 +825,13 @@ body.hide_scroll {
 .footer-container-default button {
   background-color: #181617;
 }
-.footer-container-default a {
+.footer-container-default .a-button {
   background-color: #181617;
 }
 .footer-container-default .custom-rotate button {
   background-color: #181617;
 }
-.footer-container-default .custom-rotate a {
+.footer-container-default .custom-rotate .a-button {
   background-color: #181617;
 }
 .footer-container-default .full:hover {
@@ -844,13 +844,13 @@ body.hide_scroll {
 .footer-container-color button {
   background-color: #412bba;
 }
-.footer-container-color a {
+.footer-container-color .a-button {
   background-color: #412bba;
 }
 .footer-container-color .custom-rotate button {
   background-color: #412bba;
 }
-.footer-container-color .custom-rotate a {
+.footer-container-color .custom-rotate .a-button {
   background-color: #412bba;
 }
 .footer-container-color .full:hover {

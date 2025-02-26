@@ -728,7 +728,7 @@ body.hide_scroll {
     text-align: left;
     text-transform: uppercase;
   }
-  a {
+  .a-button {
     padding: 1rem 0.8rem;
     border: 2px solid $sec_color;
     width: 100%;
@@ -743,7 +743,7 @@ body.hide_scroll {
     background-color: $sec_color;
     color: $bg_black;
   }
-  a:hover {
+  .a-button :hover {
     background-color: $sec_color;
     color: $bg_black;
   }
@@ -846,14 +846,14 @@ body.hide_scroll {
   button {
     background-color: $bg_black;
   }
-  a {
+  .a-button {
     background-color: $bg_black;
   }
   .custom-rotate {
     button {
       background-color: $bg_black;
     }
-    a {
+    .a-button {
       background-color: $bg_black;
     }
   }
@@ -866,14 +866,14 @@ body.hide_scroll {
   button {
     background-color: #412bba;
   }
-  a {
+  .a-button {
     background-color: #412bba;
   }
   .custom-rotate {
     button {
       background-color: #412bba;
     }
-    a {
+    .a-button {
       background-color: #412bba;
     }
   }
