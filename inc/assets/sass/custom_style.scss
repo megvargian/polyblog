@@ -717,7 +717,17 @@ body.hide_scroll {
 //footer
 .footer-container {
   font-family: $en-regular;
-  button,
+  button {
+    padding: 1rem 0.8rem;
+    border: 2px solid $sec_color;
+    width: 100%;
+    font-size: 20px;
+    color: $sec_color;
+    border-radius: 35px;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+  }
   a {
     padding: 1rem 0.8rem;
     border: 2px solid $sec_color;
@@ -729,7 +739,10 @@ body.hide_scroll {
     text-align: left;
     text-transform: uppercase;
   }
-  button,
+  button:hover {
+    background-color: $sec_color;
+    color: $bg_black;
+  }
   a:hover {
     background-color: $sec_color;
     color: $bg_black;
@@ -737,7 +750,20 @@ body.hide_scroll {
   .custom-rotate {
     display: flex;
     gap: 10px;
-    button,
+    button {
+      padding: 1rem 0.8rem;
+      border: 2px solid $sec_color;
+      width: 100%;
+      font-size: 20px;
+      color: $sec_color;
+      border-radius: 35px;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+      writing-mode: vertical-lr; /* Makes text vertical */
+      width: fit-content;
+      height: 23rem;
+    }
     a {
       padding: 1rem 0.8rem;
       border: 2px solid $sec_color;
@@ -752,8 +778,11 @@ body.hide_scroll {
       width: fit-content;
       height: 23rem;
     }
-    button,
     a:hover {
+      background-color: $sec_color;
+      color: $bg_black;
+    }
+    button:hover {
       background-color: $sec_color;
       color: $bg_black;
     }
@@ -814,12 +843,16 @@ body.hide_scroll {
 }
 .footer-container-default {
   background-color: $bg_black;
-  button,
+  button {
+    background-color: $bg_black;
+  }
   a {
     background-color: $bg_black;
   }
   .custom-rotate {
-    button,
+    button {
+      background-color: $bg_black;
+    }
     a {
       background-color: $bg_black;
     }
@@ -830,12 +863,16 @@ body.hide_scroll {
 }
 .footer-container-color {
   background-color: #412bba;
-  button,
+  button {
+    background-color: #412bba;
+  }
   a {
     background-color: #412bba;
   }
   .custom-rotate {
-    button,
+    button {
+      background-color: #412bba;
+    }
     a {
       background-color: #412bba;
     }

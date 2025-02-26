@@ -701,7 +701,17 @@ body.hide_scroll {
 .footer-container {
   font-family: "Lexend-Regular";
 }
-.footer-container button,
+.footer-container button {
+  padding: 1rem 0.8rem;
+  border: 2px solid #87ed06;
+  width: 100%;
+  font-size: 20px;
+  color: #87ed06;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
 .footer-container a {
   padding: 1rem 0.8rem;
   border: 2px solid #87ed06;
@@ -713,7 +723,10 @@ body.hide_scroll {
   text-align: left;
   text-transform: uppercase;
 }
-.footer-container button,
+.footer-container button:hover {
+  background-color: #87ed06;
+  color: #181617;
+}
 .footer-container a:hover {
   background-color: #87ed06;
   color: #181617;
@@ -722,7 +735,20 @@ body.hide_scroll {
   display: flex;
   gap: 10px;
 }
-.footer-container .custom-rotate button,
+.footer-container .custom-rotate button {
+  padding: 1rem 0.8rem;
+  border: 2px solid #87ed06;
+  width: 100%;
+  font-size: 20px;
+  color: #87ed06;
+  border-radius: 35px;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  writing-mode: vertical-lr; /* Makes text vertical */
+  width: fit-content;
+  height: 23rem;
+}
 .footer-container .custom-rotate a {
   padding: 1rem 0.8rem;
   border: 2px solid #87ed06;
@@ -737,8 +763,11 @@ body.hide_scroll {
   width: fit-content;
   height: 23rem;
 }
-.footer-container .custom-rotate button,
 .footer-container .custom-rotate a:hover {
+  background-color: #87ed06;
+  color: #181617;
+}
+.footer-container .custom-rotate button:hover {
   background-color: #87ed06;
   color: #181617;
 }
@@ -793,11 +822,15 @@ body.hide_scroll {
 .footer-container-default {
   background-color: #181617;
 }
-.footer-container-default button,
+.footer-container-default button {
+  background-color: #181617;
+}
 .footer-container-default a {
   background-color: #181617;
 }
-.footer-container-default .custom-rotate button,
+.footer-container-default .custom-rotate button {
+  background-color: #181617;
+}
 .footer-container-default .custom-rotate a {
   background-color: #181617;
 }
@@ -808,11 +841,15 @@ body.hide_scroll {
 .footer-container-color {
   background-color: #412bba;
 }
-.footer-container-color button,
+.footer-container-color button {
+  background-color: #412bba;
+}
 .footer-container-color a {
   background-color: #412bba;
 }
-.footer-container-color .custom-rotate button,
+.footer-container-color .custom-rotate button {
+  background-color: #412bba;
+}
 .footer-container-color .custom-rotate a {
   background-color: #412bba;
 }
