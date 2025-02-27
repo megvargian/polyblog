@@ -6,14 +6,6 @@
 $single_author_article_swiper_block = get_fields();
 $all_articles = $single_author_article_swiper_block['articles'];
 ?>
-<pre><?php print_r($all_articles);?></pre>
-<?php
-echo $all_articles[0]['article'];
-foreach ($all_articles as $key => $value) {
-    echo $value['article'];
-}
-
-?>
 <section class="py-5 single-author-article-swiper-section">
     <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
@@ -32,26 +24,26 @@ foreach ($all_articles as $key => $value) {
                     <div class="swiper-slide single-red-border">
                         <div class="row">
                             <div class="col-6 custom-padding-right">
-                                <img class="w-100 h-100 d-block single-red-border-right" src="<?php //echo $featured_image; ?>" alt="<?php //echo $article_title; ?>">
+                                <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo $article_title; ?>">
                             </div>
                             <div class="col-6 custom-padding-left">
                                 <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
                                     <div class="inner-author mx-auto">
                                         <p class="text-left d-md-block d-none">
-                                            <?php //echo $author_excpert; ?>
+                                            <?php echo $author_excpert; ?>
                                         </p>
-                                        <img class="single-author-img d-flex mx-auto" src="<?php //echo $author_image; ?>" alt="<?php //echo $author_title; ?>">
-                                        <h6 class="pt-3 text-center"><?php //echo $author_title; ?></h6>
+                                        <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
+                                        <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <? } ?>
+                <?php } ?>
                 <!-- <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6 custom-padding-right">
-                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
+                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6 custom-padding-left">
                             <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
@@ -59,7 +51,7 @@ foreach ($all_articles as $key => $value) {
                                     <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
-                                    <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
+                                    <img class="single-author-img d-flex mx-auto" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
                                     <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
@@ -69,7 +61,7 @@ foreach ($all_articles as $key => $value) {
                 <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6">
-                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
+                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6 custom-padding-left">
                             <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
@@ -77,7 +69,7 @@ foreach ($all_articles as $key => $value) {
                                     <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
-                                    <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
+                                    <img class="single-author-img d-flex mx-auto" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
                                     <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
@@ -87,7 +79,7 @@ foreach ($all_articles as $key => $value) {
                 <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6">
-                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
+                            <img class="w-100 h-100 d-block single-red-border-right" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/single-article-img.png" alt="article-title">
                         </div>
                         <div class="col-6 custom-padding-left">
                             <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
@@ -95,7 +87,7 @@ foreach ($all_articles as $key => $value) {
                                     <p class="text-left d-md-block d-none">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque exercitationem qui laboriosam quasi ducimus fuga atque tenetur maiores quaerat, suscipit, vel similique porro, officiis harum pariatur sapiente. Nihil, deleniti?
                                     </p>
-                                    <img class="single-author-img d-flex mx-auto" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
+                                    <img class="single-author-img d-flex mx-auto" src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/profile.png" alt="">
                                     <h6 class="pt-3 text-center">Name of the Author</h6>
                                 </div>
                             </div>
