@@ -32,13 +32,17 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                     $article_thumbnail = get_field('article_thumbnail', $post_id);
                     $translations = get_translations($post_id);
                     $count++;
+                    $get_first_category_id = $categories[0] -> term_id;
+                    $get_fields_cat = get_fields($get_first_category_id);
             ?>
+                    <pre><?php print_r($categories); ?></pre>
+
                     <div class="col-4 p-1 bg-gray">
                         <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
                             <div class="hover-cat">
                                 <div class="cat">
-                                    <span class="en-bold">what we think</span>
-                                    <span class="ar-regular">شو منفكر</span>
+                                    <span class="en-bold"><?php echo $get_fields_cat['en_title']; ?></span>
+                                    <span class="ar-regular"><?php echo $get_fields_cat['ar_title']; ?></span>
                                 </div>
                                 <div class="categories d-sm-flex d-none">
                                     <?php
@@ -98,6 +102,7 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                             $article_thumbnail = get_field('article_thumbnail', $post_id);
                             $count++;
                             $translations = get_translations($post_id);
+                            $get_first_category_id = '';
                     ?>
                             <div class="swiper-slide p-1 bg-gray">
                                 <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
