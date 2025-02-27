@@ -16,18 +16,15 @@ $args = array(
 $query = new WP_Query($args);
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 $three_feature_article_block_fields = get_fields();
-$first_three_articles = array_slice($three_feature_article_block_fields['articles'], 0, 3);
+$all_articles = $three_feature_article_block_fields['articles'];
+$first_three_articles = array_slice($all_articles, 0, 3);
 ?>
 <section id="three-featured-articles-block" class="my-5 pb-sm-0 pb-5 three-featured-articles-block-container">
     <div class="container d-none d-lg-block">
         <div class="row position-relative z-1 custom-desktop-padding">
             <?php
             $count = 0;
-            // if ($query->have_posts()) {
                 foreach ($first_three_articles as $key => $article) {
-                    # code...
-                //  ($query->have_posts()) {
-                    // $query->the_post();
                     $post_id = $article['article'];
                     $article_title = get_the_title($post_id);
                     $article_link = get_permalink($post_id);
@@ -93,13 +90,11 @@ $first_three_articles = array_slice($three_feature_article_block_fields['article
                 <div class="swiper-wrapper">
                     <?php
                     $count = 0;
-                    if ($query->have_posts()) {
-                        while ($query->have_posts()) {
-                            $query->the_post();
-                            $post_id = get_the_ID();
-                            $article_title = get_the_title();
-                            $article_link = get_permalink();
-                            $categories = get_the_category();
+                    foreach ($all_articles as $key => $article) {
+                            $post_id = $article['article'];
+                            $article_title = get_the_title($post_id);
+                            $article_link = get_permalink($post_id);
+                            $categories = get_the_category($post_id);
                             $article_thumbnail = get_field('article_thumbnail', $post_id);
                             $count++;
                             $translations = get_translations($post_id);
@@ -153,7 +148,6 @@ $first_three_articles = array_slice($three_feature_article_block_fields['article
                                 </a>
                             </div>
                         <?php } ?>
-                    <?php } ?>
                 </div>
             </div>
             <div class="swiper-button-prev swiper-button-prev-last-part-three-featured-articles-block"></div>
@@ -187,16 +181,6 @@ $first_three_articles = array_slice($three_feature_article_block_fields['article
                     $(this).find('.position-relative').attr('disabled', true);
                 }
             );
-        <?php  }
-        //else {
-        ?>
-        // $('.swiper-slide-active .article-container').click(function() {
-        //     $('.article-container').removeClass('hovered');
-        //     $(this).find('.position-relative').attr('disabled', false);
-        //     $(this).addClass('hovered');
-        //     window.location.href = $(this).find('.position-relative').attr('href');
-        // });
-        <?php // }
-        ?>
+        <?php } ?>
     });
 </script>
