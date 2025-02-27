@@ -36,7 +36,7 @@ if(isMob()){
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.author_swiper_block', {
-                loop: true,
+                loop: false,
                 slidesPerView: 4,
                 navigation: {
                     nextEl: '.swiper-button-next-last-part-author',

@@ -155,7 +155,7 @@ jQuery(document).ready(function($) {
     var swiper = new Swiper('.youtube-production-slider', {
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        loop: false,
         pagination: {
             el: '.swiper-pagination-youtube-production-slider',
         },

@@ -15,20 +15,24 @@ $args = array(
 
 $query = new WP_Query($args);
 $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+$three_feature_article_block_fields = get_fields();
+$first_three_articles = array_slice($three_feature_article_block_fields['articles'], 0, 3);
 ?>
 <section id="three-featured-articles-block" class="my-5 pb-sm-0 pb-5 three-featured-articles-block-container">
     <div class="container d-none d-lg-block">
         <div class="row position-relative z-1 custom-desktop-padding">
             <?php
             $count = 0;
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $post_id = get_the_ID();
-                    $article_title = get_the_title();
-                    $article_link = get_permalink();
-                    $categories = get_the_category();
-                    $article_thumbnail = get_field('article_thumbnail', get_the_ID());
+            // if ($query->have_posts()) {
+                foreach ($first_three_articles as $key => $article) {
+                    # code...
+                //  ($query->have_posts()) {
+                    // $query->the_post();
+                    $post_id = $article['article'];
+                    $article_title = get_the_title($post_id);
+                    $article_link = get_permalink($post_id);
+                    $categories = get_the_category($post_id);
+                    $article_thumbnail = get_field('article_thumbnail', $post_id);
                     $translations = get_translations($post_id);
                     $count++;
             ?>
@@ -81,7 +85,6 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
                         </a>
                     </div>
                 <?php } ?>
-            <?php } ?>
         </div>
     </div>
     <div class="container d-lg-none d-block">
@@ -162,7 +165,7 @@ $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
 <script>
     jQuery(document).ready(function($) {
         var swiper = new Swiper('.three-featured-articles-block-swiper', {
-            loop: true,
+            loop: false,
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 20,
