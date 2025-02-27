@@ -18,16 +18,15 @@ foreach ($all_articles as $key => $value) {
     <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
             <div class="swiper-wrapper">
-                <?php //foreach ($all_articles as $article) {
-                        // $article_id = $article['article'];
-                        // echo $article_id;
-                        // $article_title = get_the_title($article_id);
-                        // $get_article_fields = get_fields($article_id);
-                        // $author_id = $get_article_fields['author'];
-                        // $featured_image = $get_article_fields['article_thumbnail'];
-                        // $author_image = get_the_post_thumbnail_url($author_id);
-                        // $author_title = get_the_title($author_id);
-                        // $author_excpert = get_the_excerpt($author_id);
+                <?php foreach ($all_articles as $key => $value) {
+                        $article_id = $value['article'];
+                        $article_title = get_the_title($article_id);
+                        $get_article_fields = get_fields($article_id);
+                        $author_id = $get_article_fields['author'];
+                        $featured_image = $get_article_fields['article_thumbnail'];
+                        $author_image = get_the_post_thumbnail_url($author_id);
+                        $author_title = get_the_title($author_id);
+                        $author_excpert = get_the_excerpt($author_id);
 
                     ?>
                     <div class="swiper-slide single-red-border">
@@ -48,7 +47,7 @@ foreach ($all_articles as $key => $value) {
                             </div>
                         </div>
                     </div>
-                <? //} ?>
+                <? } ?>
                 <!-- <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6 custom-padding-right">
