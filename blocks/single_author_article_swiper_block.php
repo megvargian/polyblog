@@ -7,7 +7,13 @@ $single_author_article_swiper_block = get_fields();
 $all_articles = $single_author_article_swiper_block['articles'];
 ?>
 <pre><?php print_r($all_articles);?></pre>
-<?php echo $all_articles[0]['article']; ?>
+<?php
+echo $all_articles[0]['article'];
+foreach ($all_articles as $key => $value) {
+    echo $value['article'];
+}
+
+?>
 <section class="py-5 single-author-article-swiper-section">
     <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
