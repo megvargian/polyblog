@@ -13,10 +13,9 @@ $all_articles = $single_author_article_swiper_block['articles'];
                 <?php foreach ($all_articles as $key => $article) {
                         $article_id = $article['article'];
                         $article_title = get_the_title($article_id);
-                        $featured_image = get_the_post_thumbnail_url( $article_id);
                         $get_article_fields = get_fields($article_id);
-
                         $author_id = $get_article_fields['author'];
+                        $featured_image = $get_article_fields['article_thumbnail'];
                         $author_image = get_the_post_thumbnail_url($author_id);
                         $author_title = get_the_title($author_id);
                         $author_excpert = get_the_excerpt($author_id);
@@ -33,8 +32,8 @@ $all_articles = $single_author_article_swiper_block['articles'];
                                         <p class="text-left d-md-block d-none">
                                             <?php echo $author_excpert; ?>
                                         </p>
-                                        <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title ?>">
-                                        <h6 class="pt-3 text-center"><?php echo $author_title ?></h6>
+                                        <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
+                                        <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
                                     </div>
                                 </div>
                             </div>
