@@ -1244,6 +1244,7 @@ body.hide_scroll {
   border-radius: 20px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  aspect-ratio: 515/606;
 }
 .single-author-article-swiper-section .single-author-img {
   border-radius: 100%;
