@@ -7,13 +7,14 @@ $single_author_article_swiper_block = get_fields();
 $all_articles = $single_author_article_swiper_block['articles'];
 ?>
 <pre><?php print_r($all_articles);?></pre>
+<?php echo $all_articles[0]['article']; ?>
 <section class="py-5 single-author-article-swiper-section">
     <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
             <div class="swiper-wrapper">
-                <?php foreach ($all_articles as $article) {
-                        $article_id = $article['article'];
-                        echo $article_id;
+                <?php //foreach ($all_articles as $article) {
+                        // $article_id = $article['article'];
+                        // echo $article_id;
                         // $article_title = get_the_title($article_id);
                         // $get_article_fields = get_fields($article_id);
                         // $author_id = $get_article_fields['author'];
@@ -41,7 +42,7 @@ $all_articles = $single_author_article_swiper_block['articles'];
                             </div>
                         </div>
                     </div>
-                <? } ?>
+                <? //} ?>
                 <!-- <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6 custom-padding-right">
