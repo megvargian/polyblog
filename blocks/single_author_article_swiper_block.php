@@ -11,7 +11,7 @@ $all_articles = $single_author_article_swiper_block['articles'];
     <div class="container position-relative">
         <div class="swiper single-author-article-swiper">
             <div class="swiper-wrapper">
-                <?php foreach ($all_articles as $article) {
+                <?php //foreach ($all_articles as $article) {
                         // $article_id = $article['article'];
                         // echo $article_id;
                         // $article_title = get_the_title($article_id);
@@ -41,7 +41,7 @@ $all_articles = $single_author_article_swiper_block['articles'];
                             </div>
                         </div>
                     </div>
-                <? } ?>
+                <? //} ?>
                 <!-- <div class="swiper-slide single-red-border">
                     <div class="row">
                         <div class="col-6 custom-padding-right">
