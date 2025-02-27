@@ -33,7 +33,7 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                     $translations = get_translations($post_id);
                     $count++;
                     $get_first_category_id = $categories[0] -> term_id;
-                    $get_fields_cat = get_fields($get_first_category_id);
+                    $get_fields_cat = get_fields('category_' .$get_first_category_id);
             ?>
                     <pre><?php print_r($categories); ?></pre>
 
