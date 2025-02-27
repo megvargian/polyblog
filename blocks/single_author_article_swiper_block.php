@@ -1,6 +1,6 @@
 <?php
 /**
- * HomePage Author Single Author Article Swiper Block
+ * Single Author Article Swiper Block
  */
 
 $single_author_article_swiper_block = get_fields();
