@@ -128,7 +128,7 @@
                                         <div class="card-body">
                                             <div class="row article-title">
                                                 <div class="col">
-                                                    <h3><?php echo esc_html($post_title); ?></h3>
+                                                    <h3><?php echo esc_html(trim_words_with_limits($post_title)); ?></h3>
                                                 </div>
                                             </div>
                                             <div class="row card-content">
