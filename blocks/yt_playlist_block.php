@@ -71,7 +71,7 @@ $row = $yt_playlist_block['one_row_youtube_section'];
             </div>
         </div>
     </div>
-    <div class="container-fluid d-lg-none d-block py-4 position-relative">
+    <!-- <div class="container-fluid d-lg-none d-block py-4 position-relative">
         <div class="swiper youtube-production-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -149,10 +149,10 @@ $row = $yt_playlist_block['one_row_youtube_section'];
             </div>
         </div>
         <div class="swiper-pagination-youtube-production-slider"></div>
-    </div>
+    </div> -->
 </section>
 
-<script>
+<!-- <script>
 jQuery(document).ready(function($) {
     var swiper = new Swiper('.youtube-production-slider', {
         slidesPerView: 1,
@@ -163,4 +163,4 @@ jQuery(document).ready(function($) {
         },
     });
 });
-</script>
+</script> -->
