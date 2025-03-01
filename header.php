@@ -85,7 +85,10 @@ $header_fields = get_fields('options');
                     </div>
                 </div>
             </div>
-            <?php if(!(is_front_page() || ( is_single() && get_post_type() === 'post' ))){ ?>
+            <?php if(!( is_single() && get_post_type() === 'post' )){ ?>
+                <?php if (is_front_page()) { ?>
+                    <div id="scrollDiv">
+                <?php } ?>
             <div class="d-lg-block d-none side-header">
                 <div class="d-flex justify-content-center align-items-center main-side-button">
                     <img class="side-header-arrow"
@@ -105,6 +108,9 @@ $header_fields = get_fields('options');
                     </ul>
                 </div>
             </div>
+                <?php if (is_front_page()) { ?>
+                    </div>
+                <?php } ?>
             <?php } ?>
             <script>
             jQuery(document).ready(function($) {

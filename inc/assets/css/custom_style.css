@@ -305,6 +305,10 @@ body.hide_scroll {
   font-family: "Vazirmatn-Bold";
 }
 
+#scrollDiv {
+  display: none;
+}
+
 .side-header {
   position: fixed;
   right: 0;

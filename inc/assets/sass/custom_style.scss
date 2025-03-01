@@ -318,6 +318,9 @@ body.hide_scroll {
 .ar-bold {
   font-family: $ar-bold;
 }
+#scrollDiv {
+  display: none;
+}
 .side-header {
   position: fixed;
   right: 0;
