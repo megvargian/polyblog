@@ -314,6 +314,28 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Our Segements Block One',
+                'title'             => __('Our Segements Block One'),
+                'description'       => __('This is the Block One of Our Segements'),
+                'render_template'   => 'blocks/our-segements/Block_1.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
+        acf_register_block_type(
+            array(
+                'name'              => 'Our Segements Block Two',
+                'title'             => __('Our Segements Block Two'),
+                'description'       => __('This is the Block Two of Our Segements'),
+                'render_template'   => 'blocks/our-segements/Block_2.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
 
