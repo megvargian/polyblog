@@ -440,19 +440,3 @@ function get_translations($post_id){
     $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
     return $languages;
 }
-
-function detect_scroll_position() {
-    wp_enqueue_script('jquery');
-    wp_add_inline_script('jquery', '
-        jQuery(document).ready(function($) {
-            $(window).on("scroll", function() {
-                if ($(window).scrollTop() > $(window).height()) {
-                    $("#scrollDiv").fadeIn();
-                } else {
-                    $("#scrollDiv").fadeOut();
-                }
-            });
-        });
-    ');
-}
-add_action('wp_detect_scroll_position', 'detect_scroll_position');

@@ -160,6 +160,12 @@ $header_fields = get_fields('options');
                     }
 
                     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+                    if ($(window).scrollTop() > $(window).height()) {
+                        $("#scrollDiv").fadeIn();
+                    } else {
+                        $("#scrollDiv").fadeOut();
+                    }
                 });
             });
             </script>
