@@ -54,7 +54,7 @@ $yt_featured_vids_block = get_fields();
                     <div class="swiper-slide">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="d-block">
-                                <div class="youtube-full-circle" style="background-img: url: (<?php echo $yt_slide['image_view_more']; ?>)"></div>
+                                <img class="youtube-full-circle" src="<?php echo $yt_slide['image_view_more']; ?>">
                                 <a href="<?php echo $yt_slide['button_link']; ?>" class="view-more-btn">
                                     <?php echo $yt_slide['button_text']; ?>
                                 </a>
