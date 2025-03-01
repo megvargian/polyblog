@@ -43,7 +43,7 @@ $yt_featured_vids_block = get_fields();
                     if($yt_slide['youtube_video_or_view_more_section']){?>
                     <div class="swiper-slide">
                         <a href="<?php echo $yt_slide['link']; ?>">
-                            <div class="youtube-video-link" style="background-img: url: (<?php echo $yt_slide['image'] ?>)">
+                            <div class="youtube-video-link" style="background-img: url: (<?php echo $yt_slide['image']; ?>)">
                                 <img class="youtube-playlist-btn"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                                     alt="YouTube">
@@ -54,16 +54,14 @@ $yt_featured_vids_block = get_fields();
                     <div class="swiper-slide">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="d-block">
-                                <div class="youtube-full-circle"></div>
-                                <a href="#" class="view-more-btn">
-                                    View more
+                                <div class="youtube-full-circle" style="background-img: url: (<?php echo $yt_slide['image_view_more']; ?>)"></div>
+                                <a href="<?php echo $yt_slide['button_link']; ?>" class="view-more-btn">
+                                    <?php echo $yt_slide['button_text']; ?>
                                 </a>
                             </div>
                             <div class="d-block mx-3">
                                 <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia at molestias,
-                                    perspiciatis voluptatem libero deleniti facilis quod laborum in, labore obcaecati
-                                    minima, magni dicta ad alias nisi veniam consequatur dolore?
+                                    <?php echo $yt_slide['paragraph']; ?>
                                 </p>
                             </div>
                         </div>
