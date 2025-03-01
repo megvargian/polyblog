@@ -43,7 +43,8 @@ $yt_featured_vids_block = get_fields();
                     if($yt_slide['youtube_video_or_view_more_section']){?>
                     <div class="swiper-slide">
                         <a href="<?php echo $yt_slide['link']; ?>">
-                            <div class="youtube-video-link" style="background-img: url: (<?php echo $yt_slide['image']; ?>)">
+                            <div class="youtube-video-link">
+                                <img class="bg-image" src="<?php echo $yt_slide['image']; ?>" alt="youtube">
                                 <img class="youtube-playlist-btn"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                                     alt="YouTube">
@@ -54,7 +55,7 @@ $yt_featured_vids_block = get_fields();
                     <div class="swiper-slide">
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="d-block">
-                                <img class="youtube-full-circle" src="<?php echo $yt_slide['image_view_more']; ?>">
+                                <img class="youtube-full-circle" src="<?php echo $yt_slide['image_view_more']; ?>" alt="youtube">
                                 <a href="<?php echo $yt_slide['button_link']; ?>" class="view-more-btn">
                                     <?php echo $yt_slide['button_text']; ?>
                                 </a>
