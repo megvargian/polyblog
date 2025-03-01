@@ -42,11 +42,13 @@ $yt_featured_vids_block = get_fields();
                 <?php foreach ($yt_featured_vids_block['mobile_section']['youtube_slides'] as $key => $yt_slide) {
                     if($yt_slide['youtube_video_or_view_more_section']){?>
                     <div class="swiper-slide">
-                        <div class="youtube-video-link">
-                            <img class="youtube-playlist-btn"
-                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
-                                alt="YouTube">
-                        </div>
+                        <a href="<?php echo $yt_slide['link']; ?>">
+                            <div class="youtube-video-link" style="background-img: url: (<?php echo $yt_slide['image'] ?>)">
+                                <img class="youtube-playlist-btn"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                                    alt="YouTube">
+                            </div>
+                        </a>
                     </div>
                  <?php } else { ?>
                     <div class="swiper-slide">
