@@ -18,7 +18,7 @@
     width: 100%;
   }
   .search-authors-page h1 span,
-  .our-segements-page h1 span {
+  .our-segments-page h1 span {
     font-size: 3rem;
   }
   .single-author-page h2 span {
@@ -349,7 +349,6 @@
     text-transform: uppercase;
     padding: 0.5rem 0.7rem;
     text-align: center;
-    width: -moz-fit-content;
     width: fit-content;
     background-color: #ec4100;
     border-radius: 10px;
@@ -436,8 +435,7 @@
     font-size: 1rem;
   }
   .single-featured-article-container .align-text-arabic {
-    -moz-text-align-last: start;
-         text-align-last: start;
+    text-align-last: start;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -488,11 +486,11 @@
     font-size: 1rem;
   }
   .search-authors-page h1 span,
-  .our-segements-page h1 span {
+  .our-segments-page h1 span {
     font-size: 2rem;
   }
   .search-authors-page h1 .en-bold,
-  .our-segements-page h1 .en-bold {
+  .our-segments-page h1 .en-bold {
     letter-spacing: 10px;
   }
   .single-author-page h2 span {
@@ -526,10 +524,10 @@
   .last-footer-section .ar {
     font-size: 2rem;
   }
-  .our-segements-page p {
+  .our-segments-page p {
     font-size: 1rem;
   }
-  .our-segements-page h5 {
+  .our-segments-page h5 {
     font-size: 1.4rem;
   }
 }
@@ -628,23 +626,23 @@
     height: 250px;
   }
   .search-authors-page h1 span,
-  .our-segements-page h1 span {
+  .our-segments-page h1 span {
     font-size: 1.5rem;
   }
   .search-authors-page h1 .en-bold,
-  .our-segements-page h1 .en-bold {
+  .our-segments-page h1 .en-bold {
     letter-spacing: 8px;
   }
   .search-authors-page .single-author-block h4,
-  .our-segements-page .single-author-block h4 {
+  .our-segments-page .single-author-block h4 {
     font-size: 1rem;
   }
   .search-authors-page .single-author-block p,
-  .our-segements-page .single-author-block p {
+  .our-segments-page .single-author-block p {
     font-size: 0.75rem;
   }
   .search-authors-page .single-author-block .view-more-btn,
-  .our-segements-page .single-author-block .view-more-btn {
+  .our-segments-page .single-author-block .view-more-btn {
     font-size: 0.8rem;
   }
   .single-author-page h2 span {
@@ -797,19 +795,19 @@
     padding-right: 0;
   }
   .search-authors-page h1 span,
-  .our-segements-page h1 span {
+  .our-segments-page h1 span {
     font-size: 1.2rem;
   }
   .search-authors-page h1 .en-bold,
-  .our-segements-page h1 .en-bold {
+  .our-segments-page h1 .en-bold {
     letter-spacing: 5px;
   }
   .search-authors-page .bg-black,
-  .our-segements-page .bg-black {
+  .our-segments-page .bg-black {
     padding: 1rem 2rem;
   }
   .search-authors-page .hovered-single-author:hover,
-  .our-segements-page .hovered-single-author:hover {
+  .our-segments-page .hovered-single-author:hover {
     scale: 1.04;
   }
   .single-author-page h2 span {
@@ -840,13 +838,13 @@
   .last-footer-section .ar {
     font-size: 1rem;
   }
-  .our-segements-page p {
+  .our-segments-page p {
     font-size: 0.8rem;
   }
-  .our-segements-page h5 {
+  .our-segments-page h5 {
     font-size: 1rem;
   }
-  .our-segements-page img {
+  .our-segments-page img {
     border-radius: 10px;
   }
 }

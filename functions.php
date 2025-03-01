@@ -316,10 +316,10 @@ function my_acf_init_block_types()
         );
         acf_register_block_type(
             array(
-                'name'              => 'Our Segements Block One',
-                'title'             => __('Our Segements Block One'),
-                'description'       => __('This is the Block One of Our Segements'),
-                'render_template'   => 'blocks/our-segements/Block_1.php',
+                'name'              => 'Our Segments Block One',
+                'title'             => __('Our Segments Block One'),
+                'description'       => __('This is the Block One of Our Segments'),
+                'render_template'   => 'blocks/our-segments/Block_1.php',
                 'category'          => 'formatting',
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
@@ -327,10 +327,10 @@ function my_acf_init_block_types()
         );
         acf_register_block_type(
             array(
-                'name'              => 'Our Segements Block Two',
-                'title'             => __('Our Segements Block Two'),
-                'description'       => __('This is the Block Two of Our Segements'),
-                'render_template'   => 'blocks/our-segements/Block_2.php',
+                'name'              => 'Our Segments Block Two',
+                'title'             => __('Our Segments Block Two'),
+                'description'       => __('This is the Block Two of Our Segments'),
+                'render_template'   => 'blocks/our-segments/Block_2.php',
                 'category'          => 'formatting',
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),

@@ -1,11 +1,11 @@
 <?php
 /**
- * Template Name: Our Segements Page
+ * Template Name: Our Segments Page
  */
 
 get_header();
 ?>
-<section class="our-segements-page">
+<section class="our-segments-page">
     <div class="container">
         <div class="row pt-2 mb-5 d-lg-flex d-none">
             <div class="col-12">
