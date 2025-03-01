@@ -126,6 +126,11 @@
                                             </div>
                                         <?php endif; ?>
                                         <div class="card-body">
+                                            <div class="row article-title">
+                                                <div class="col">
+                                                    <h3><?php echo esc_html($post_title); ?></h3>
+                                                </div>
+                                            </div>
                                             <div class="row card-content">
                                                 <div class="col-4 category-buttons">
                                                     <div>
