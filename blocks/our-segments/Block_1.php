@@ -7,7 +7,7 @@ $block_one_fields = get_fields();
 ?>
 <section>
     <div class="container">
-        <div class="row pb-5">
+        <div class="row py-5">
             <div class="col-12 pb-5">
                 <img class="d-md-block d-none w-100" src="<?php echo $block_one_fields['desktop_image']; ?>" alt="desktop_image">
                 <img class="d-md-none d-block w-100" src="<?php echo $block_one_fields['mobile_image']; ?>" alt="mobile_image">
