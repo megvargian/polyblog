@@ -16,14 +16,19 @@ get_header();
             <div class="col-12">
                 <div class="bg-black">
                     <h1>
-                        <span class="en-bold">OUR SEGEMENTS</span>
+                        <span class="en-bold"><?php the_title(); ?></span>
                         <span class="ar-bold">كيــــف منشـــوف</span>
                     </h1>
                 </div>
             </div>
         </div>
     </div>
-    <section>
+    <?php
+    while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+    ?>
+    <!-- <section>
         <div class="container">
             <div class="row pb-5">
                 <div class="col-12 pb-5">
@@ -118,7 +123,7 @@ get_header();
             </div>
         </div>
         <div class="white-line mb-5"></div>
-    </section>
+    </section> -->
 </section>
 <?php
 get_footer();
