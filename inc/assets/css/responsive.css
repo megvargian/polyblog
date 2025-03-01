@@ -349,6 +349,7 @@
     text-transform: uppercase;
     padding: 0.5rem 0.7rem;
     text-align: center;
+    width: -moz-fit-content;
     width: fit-content;
     background-color: #ec4100;
     border-radius: 10px;
@@ -435,7 +436,8 @@
     font-size: 1rem;
   }
   .single-featured-article-container .align-text-arabic {
-    text-align-last: start;
+    -moz-text-align-last: start;
+         text-align-last: start;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

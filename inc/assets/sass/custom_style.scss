@@ -2207,11 +2207,15 @@ body.hide_scroll {
 
         .card-content {
           margin: 0 5%;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
         }
       }
 
       .article-title {
-        height: 33%;
+        margin-bottom: 12px;
         text-align: end;
         color: #fff;
       }
