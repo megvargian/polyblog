@@ -221,7 +221,7 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
                                     alt="phone">
                                 <div class="inner-phone">
                                     <p>
-                                        Follow us !
+                                        Follow us
                                     </p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="<?php echo $footer_social_links['insta_url']; ?>">
