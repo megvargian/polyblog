@@ -2115,6 +2115,12 @@ body.hide_scroll {
       }
 
       .card-body {
+        .article-title {
+          margin-bottom: 12px;
+          text-align: end;
+          color: #000;
+        }
+
         .category-buttons {
           display: flex;
           flex-direction: column;

@@ -1923,6 +1923,11 @@ body.hide_scroll {
   opacity: 0.8;
   transition: 0.3s;
 }
+.category-posts .category-card-mobile .card .card-body .article-title {
+  margin-bottom: 12px;
+  text-align: end;
+  color: #000;
+}
 .category-posts .category-card-mobile .card .card-body .category-buttons {
   display: flex;
   flex-direction: column;
