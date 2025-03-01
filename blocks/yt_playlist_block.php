@@ -4,17 +4,21 @@
  */
 
 $yt_playlist_block = get_fields();
+$row = $yt_playlist_block['one_row_youtube_section'];
 ?>
 <section class="w-100 youtube-playlist-bg" id="youtube-playlist-bg">
     <div class="container py-4">
         <div class="row justify-content-between">
             <div class="col">
-                <h3 class="en-bold">our special <br> productions</h3>
+                <h3 class="en-bold">
+                    <?php echo $yt_playlist_block['en_title']; ?>
+                </h3>
                 <p></p>
             </div>
             <div class="col">
-                <h3 class="ar-bold" style="line-height: 1.27">انتاجاتنـــــــــــــــــــــ <br> ـــــا
-                    الخاصـــــــــــــة</h3>
+                <h3 class="ar-bold" style="line-height: 1.27">
+                    <?php echo $yt_playlist_block['ar_title']; ?>
+                </h3>
             </div>
         </div>
         <div class="row custom-min-height">
@@ -26,44 +30,42 @@ $yt_playlist_block = get_fields();
         </div>
         <div class="row justify-content-between align-items-center">
             <div class="col">
-                <p class="en-regular">polyblog reduces special <br> contenpolyblog reduces <br> special content...t...
+                <p class="en-regular"><?php echo $yt_playlist_block['en_subtitle']; ?>
                 </p>
                 <p></p>
             </div>
             <div class="col">
-                <p class="ar-regular">انتاجاتنـــــــــــــــــــــ <br>
-                    ـــــا الخاصـــــــــــــةانتاجاتنـــــــــــــــــــــ <br>
-                    ـــــا الخاصـــــــــــــة</p>
+                <p class="ar-regular">
+                    <?php echo $yt_playlist_block['ar_subtitle']; ?>
+                </p>
             </div>
         </div>
     </div>
     <div class="container-fluid d-lg-block d-none">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $yt_playlist_block['title_link'] ?>" target="_blank">
-                    <!-- <img class="youtube-playlist-btn" src="<?php //echo $yt_playlist_block['title']; ?>" alt="YouTube"> -->
+                <a href="<?php echo $row['title_link'] ?>" target="_blank">
                     <div class="d-block">
-                        <p class="en-bold">ASSAHA</p>
-                        <p class="ar-bold">الســـــاحة</p>
+                        <p class="en-bold"><?php echo $row['en_title'];?></p>
+                        <p class="ar-bold"><?php echo $row['ar_title'];?></p>
                     </div>
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $yt_playlist_block['yt_link'] ?>" target="_blank">
+                <a href="<?php echo $row['youtube_link'] ?>" target="_blank">
                     <img class="youtube-playlist-btn"
                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                         alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <img class="youtube_featured_image" src="<?php echo $yt_playlist_block['yt_image']; ?>" alt="YouTube">
+                <img class="youtube_featured_image" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $yt_playlist_block['episodes_link'] ?>" target="_blank">
-                    <!-- <img class="youtube-playlist-btn" src="<?php //echo $yt_playlist_block['episodes']; ?>" alt="YouTube"> -->
+                <a href="<?php echo $row['episode_url'] ?>" target="_blank">
                     <div class="bg-black">
-                        <p class="en-regular">7 Episodes</p>
-                        <p class="ar-regular">٧ حلقــات</p>
+                        <p class="en-regular"><?php echo $row['en_title_episode'] ?></p>
+                        <p class="ar-regular"><?php echo $row['ar_title_episode'] ?></p>
                     </div>
                 </a>
             </div>
