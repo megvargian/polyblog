@@ -408,6 +408,11 @@ body.hide_scroll {
   background-color: #000;
   width: 100%;
   padding: 0 1.5rem;
+  transition: all 0.3s ease;
+}
+.home-video-header-container .video-container .header-button-container-with-video .bg-black:hover {
+  transition: all 0.3s ease;
+  scale: 1.1;
 }
 .home-video-header-container .video-container .header-button-container-with-video a {
   width: 100%;
@@ -1431,6 +1436,11 @@ body.hide_scroll {
   background-color: #000;
   width: 100%;
   padding: 0 1.5rem;
+  transition: all 0.3s ease;
+}
+.single-article-header-button-container .bg-black:hover {
+  transition: all 0.3s ease;
+  scale: 1.1;
 }
 .single-article-header-button-container a {
   width: 100%;

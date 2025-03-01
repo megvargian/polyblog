@@ -420,6 +420,11 @@ body.hide_scroll {
         background-color: #000;
         width: 100%;
         padding: 0 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .bg-black:hover {
+        transition: all 0.3s ease;
+        scale: 1.1;
       }
       a {
         width: 100%;
@@ -1522,6 +1527,11 @@ body.hide_scroll {
     background-color: #000;
     width: 100%;
     padding: 0 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .bg-black:hover {
+    transition: all 0.3s ease;
+    scale: 1.1;
   }
   a {
     width: 100%;
