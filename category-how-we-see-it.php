@@ -1,13 +1,15 @@
-<?php get_header(); ?>
+<?php get_header();
+$cat_fields = get_fields();
+?>
 <div class="container how-we-see-it-container">
-    <div class="row desktop">
-        <div class="col">
-            <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/02/how-we-see-it.png" alt="what we think" />
-        </div>
-    </div>
-    <div class="row mobile">
-        <div class="col header">
-            <img src="https://polybloglb.com/wp-content/uploads/2025/02/outwriters.png" alt="our writers" />
+    <div class="row text-center py-5">
+        <div class="col-12">
+            <div class="main-header-cat">
+                <h1>
+                    <span class="en-bold"><?php echo $cat_fields['en_title']; ?></span>
+                    <span class="ar-bold"><?php echo $cat_fields['ar_title']; ?></span>
+                </h1>
+            </div>
         </div>
     </div>
     <form role="search" method="get" class="search-form desktop" action="<?php echo esc_url(home_url('/category/how-we-see-it/')); ?>">

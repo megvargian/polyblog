@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 <div class="container what-we-think-container">
-    <div class="row desktop">
-        <div class="col">
-            <img class="header" src="https://polybloglb.com/wp-content/uploads/2025/01/what-we-think.png" alt="what we think" />
-        </div>
-    </div>
-    <div class="row mobile">
-        <div class="col header">
-            <img src="https://polybloglb.com/wp-content/uploads/2025/02/outwriters.png" alt="our writers" />
+    <div class="row text-center py-5">
+        <div class="col-12">
+            <div class="main-header-cat">
+                <h1>
+                    <span class="en-bold"><?php echo $cat_fields['en_title']; ?></span>
+                    <span class="ar-bold"><?php echo $cat_fields['ar_title']; ?></span>
+                </h1>
+            </div>
         </div>
     </div>
     <form role="search" method="get" class="search-form desktop" action="<?php echo esc_url(home_url('/category/what-we-think/')); ?>">
