@@ -112,7 +112,7 @@ $cat_fields = get_fields('category_' . $category_id);
             </div>
             <div class="row my-4 mobile">
                 <div class="col">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper" style="overflow: hidden !important;">
                         <div class="swiper-wrapper">
                             <?php while (have_posts()) : the_post(); ?>
                                 <div class="category-card-mobile swiper-slide">
