@@ -4,6 +4,7 @@
  */
 
 get_header();
+$page_fields = get_fields();
 ?>
 <section class="our-segments-page">
     <div class="container">
@@ -17,7 +18,7 @@ get_header();
                 <div class="bg-black">
                     <h1>
                         <span class="en-bold"><?php the_title(); ?></span>
-                        <span class="ar-bold">كيــــف منشـــوف</span>
+                        <span class="ar-bold"><?php echo $page_fields['ar_title']; ?></span>
                     </h1>
                 </div>
             </div>
