@@ -821,6 +821,12 @@
   .custom-padding-right {
     padding-right: 0;
   }
+  .search-authors-page .main-header-cat,
+  .our-segments-page .main-header-cat,
+  .how-we-see-it-container .main-header-cat,
+  .what-we-think-container .main-header-cat {
+    padding: 2rem 3rem;
+  }
   .search-authors-page h1 span,
   .our-segments-page h1 span,
   .how-we-see-it-container h1 span,
