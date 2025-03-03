@@ -29,7 +29,7 @@
   .single-author-page h2 {
     font-size: 3rem;
   }
-  .footer-container button {
+  .footer-container button, .footer-container .a-button {
     font-size: 16px;
   }
   .footer-container .outer-phone .inner-phone p {
@@ -552,7 +552,7 @@
   .site-title {
     font-size: 2rem;
   }
-  .footer-container button {
+  .footer-container button, .footer-container .a-button {
     font-size: 14px;
   }
   .footer-container .donate .heart {
@@ -746,7 +746,7 @@
     height: 200px;
     border: 2px solid #000;
   }
-  .footer-container button {
+  .footer-container button, .footer-container .a-button {
     font-size: 12px;
   }
   .footer-container .donate .heart {
