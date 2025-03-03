@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$category_id = get_queried_object_id();
+$cat_fields = get_fields('category_' . $category_id);
+?>
 <div class="container what-we-think-container">
     <div class="row text-center py-5">
         <div class="col-12">
