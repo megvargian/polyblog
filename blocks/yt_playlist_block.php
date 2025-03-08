@@ -23,7 +23,7 @@ $header_fields = get_fields('options');
             </div>
         </div>
         <div class="row custom-min-height">
-            <video class="video" width="100%" autoplay loop muted>
+            <video class="video w-100" width="100%" autoplay loop muted>
                 <source src="<?php echo esc_url($header_fields['header_video']); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

@@ -582,6 +582,11 @@ body.hide_scroll {
 .youtube-playlist-bg .custom-min-height {
   min-height: 500px;
 }
+.youtube-playlist-bg .custom-min-height .video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .youtube-playlist-bg .youtube-playlist-button-col {
   align-content: center;
 }
