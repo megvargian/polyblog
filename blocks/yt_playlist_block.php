@@ -27,10 +27,12 @@ $header_fields = get_fields('options');
                 <source src="<?php echo esc_url($header_fields['header_video']); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="col d-flex justify-content-center align-items-center">
-                <img class="youtube-playlist-btn"
-                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
-                    alt="YouTube">
+            <div class="col d-flex justify-content-center align-items-center yt-icon">
+                <a href="#">
+                    <img class="youtube-playlist-btn d-block"
+                        src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
+                        alt="YouTube">
+                </a>
             </div>
         </div>
         <div class="row justify-content-between align-items-center">
