@@ -5,7 +5,6 @@
 
 $yt_playlist_block = get_fields();
 $row = $yt_playlist_block['one_row_youtube_section'];
-$header_fields = get_fields('options');
 ?>
 <section class="w-100 youtube-playlist-bg" id="youtube-playlist-bg">
     <div class="container py-4">
@@ -22,13 +21,13 @@ $header_fields = get_fields('options');
                 </h3>
             </div>
         </div>
-        <div class="row custom-min-height">
+        <div class="row custom-min-height mb-3">
             <video class="video w-100" width="100%" autoplay loop muted>
-                <source src="<?php echo esc_url($header_fields['header_video']); ?>" type="video/mp4">
+                <source src="<?php echo esc_url($yt_playlist_block['video']); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="col d-flex justify-content-center align-items-center yt-icon">
-                <a href="#">
+                <a href="<?php echo $yt_playlist_block['youtube_link']; ?>">
                     <img class="youtube-playlist-btn d-block"
                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                         alt="YouTube">
@@ -51,7 +50,7 @@ $header_fields = get_fields('options');
     <div class="container-fluid d-lg-block d-none">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['title_link'] ?>" target="_blank">
+                <a href="<?php echo $row['main_link'] ?>" target="_blank">
                     <div class="d-block">
                         <p class="en-bold"><?php echo $row['en_title'];?></p>
                         <p class="ar-bold"><?php echo $row['ar_title'];?></p>
@@ -59,17 +58,19 @@ $header_fields = get_fields('options');
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['youtube_link'] ?>" target="_blank">
+                <a href="<?php echo $row['main_link'] ?>" target="_blank">
                     <img class="youtube-playlist-btn"
                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                         alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <img class="youtube_featured_image" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
+                <a href="<?php echo $row['main_link'] ?>">
+                    <img class="youtube_featured_image" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
+                </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['episode_url'] ?>" target="_blank">
+                <a href="<?php echo $row['main_link'] ?>" target="_blank">
                     <div class="bg-black">
                         <p class="en-regular"><?php echo $row['en_title_episode'] ?></p>
                         <p class="ar-regular"><?php echo $row['ar_title_episode'] ?></p>
