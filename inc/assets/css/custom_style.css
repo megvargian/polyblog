@@ -597,6 +597,16 @@ body.hide_scroll {
 .youtube-playlist-bg .youtube-playlist-button-col {
   align-content: center;
 }
+.youtube-playlist-bg .youtube-playlist-button-col a {
+  width: 100%;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.youtube-playlist-bg .youtube-playlist-button-col a:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  scale: 1.1;
+}
 .youtube-playlist-bg .youtube-playlist-button-col .youtube_featured_image {
   width: 100%;
   padding: 12px 0;

@@ -59,19 +59,19 @@ $row = $yt_playlist_block['one_row_youtube_section'];
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $row['main_link'] ?>" target="_blank">
-                    <img class="youtube-playlist-btn"
+                    <img class="youtube-playlist-btn d-block"
                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                         alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $row['main_link'] ?>">
-                    <img class="youtube_featured_image" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
+                    <img class="youtube_featured_image d-block" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a href="<?php echo $row['main_link'] ?>" target="_blank">
-                    <div class="bg-black">
+                    <div class="bg-black d-block">
                         <p class="en-regular"><?php echo $row['en_title_episode'] ?></p>
                         <p class="ar-regular"><?php echo $row['ar_title_episode'] ?></p>
                     </div>
