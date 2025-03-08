@@ -50,27 +50,27 @@ $row = $yt_playlist_block['one_row_youtube_section'];
     <div class="container-fluid d-lg-block d-none">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['main_link'] ?>" target="_blank">
+                <a class="justify-content-center d-flex align-items-center" href="<?php echo $row['main_link'] ?>" target="_blank">
                     <div class="d-block">
-                        <p class="en-bold"><?php echo $row['en_title'];?></p>
-                        <p class="ar-bold"><?php echo $row['ar_title'];?></p>
+                        <p class="en-bold text-center"><?php echo $row['en_title'];?></p>
+                        <p class="ar-bold text-center"><?php echo $row['ar_title'];?></p>
                     </div>
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['main_link'] ?>" target="_blank">
+                <a class="justify-content-center d-flex align-items-center" href="<?php echo $row['main_link'] ?>" target="_blank">
                     <img class="youtube-playlist-btn d-block"
                         src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
                         alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['main_link'] ?>">
+                <a class="justify-content-center d-flex align-items-center" href="<?php echo $row['main_link'] ?>">
                     <img class="youtube_featured_image d-block" src="<?php echo $row['featured_image']; ?>" alt="YouTube">
                 </a>
             </div>
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
-                <a href="<?php echo $row['main_link'] ?>" target="_blank">
+                <a class="justify-content-center d-flex align-items-center" href="<?php echo $row['main_link'] ?>" target="_blank">
                     <div class="bg-black d-block">
                         <p class="en-regular"><?php echo $row['en_title_episode'] ?></p>
                         <p class="ar-regular"><?php echo $row['ar_title_episode'] ?></p>
