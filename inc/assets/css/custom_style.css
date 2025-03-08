@@ -1397,11 +1397,11 @@ body.hide_scroll {
   box-shadow: none !important;
 }
 
-.custom-modal .modal-content {
+.custom-modal .modal-content, .custom-modal-board-advisors .modal-content {
   background-color: transparent;
   border-radius: 20px;
 }
-.custom-modal .modal-body {
+.custom-modal .modal-body, .custom-modal-board-advisors .modal-body {
   background-color: #171717;
   border: 3px solid #87ed06;
   border-radius: 50px;
@@ -1411,17 +1411,24 @@ body.hide_scroll {
   padding: 3rem;
   text-align: center;
 }
-.custom-modal .modal-header {
+.custom-modal .modal-header, .custom-modal-board-advisors .modal-header {
   border: none !important;
   padding: 1rem 0;
 }
-.custom-modal .modal-header .btn-close {
+.custom-modal .modal-header .btn-close, .custom-modal-board-advisors .modal-header .btn-close {
   opacity: 1;
   background-color: #87ed06;
   border-radius: 100%;
 }
-.custom-modal .modal-header .btn-close:focus {
+.custom-modal .modal-header .btn-close:focus, .custom-modal-board-advisors .modal-header .btn-close:focus {
   box-shadow: none !important;
+}
+
+.custom-modal-board-advisors .modal-body {
+  border: 3px solid #eb4201;
+}
+.custom-modal-board-advisors .modal-header .btn-close {
+  background-color: #eb4201;
 }
 
 .single-article-header-button-container {

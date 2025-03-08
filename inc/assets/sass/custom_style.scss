@@ -1476,7 +1476,7 @@ body.hide_scroll {
 }
 
 // make modal different for footer
-.custom-modal {
+.custom-modal, .custom-modal-board-advisors {
   .modal-content {
     background-color: transparent;
     border-radius: 20px;
@@ -1501,6 +1501,16 @@ body.hide_scroll {
     }
     .btn-close:focus {
       box-shadow: none !important;
+    }
+  }
+}
+.custom-modal-board-advisors{
+  .modal-body {
+    border: 3px solid #eb4201;
+  }
+  .modal-header {
+    .btn-close {
+      background-color: #eb4201;
     }
   }
 }

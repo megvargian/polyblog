@@ -60,7 +60,7 @@ $rows = array_chunk($authors_list, 4);
     </div>
     <?php foreach ($rows as $row) { ?>
         <?php foreach ($row as $author) { ?>
-            <div class="modal fade custom-modal"
+            <div class="modal fade custom-modal-board-advisors"
                 id="<?php echo "modal-" . strtolower(str_replace(' ', '-', $author['title'])); ?>" tabindex="-1"
                 aria-labelledby="<?php echo "modal-" . strtolower(str_replace(' ', '-', $author['title'])); ?>Label"
                 aria-hidden="true">
