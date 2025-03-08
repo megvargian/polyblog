@@ -5,6 +5,7 @@
 
 $yt_playlist_block = get_fields();
 $row = $yt_playlist_block['one_row_youtube_section'];
+$header_fields = get_fields('options');
 ?>
 <section class="w-100 youtube-playlist-bg" id="youtube-playlist-bg">
     <div class="container py-4">
@@ -22,6 +23,10 @@ $row = $yt_playlist_block['one_row_youtube_section'];
             </div>
         </div>
         <div class="row custom-min-height">
+            <video class="video" width="100%" autoplay loop muted>
+                <source src="<?php echo esc_url($header_fields['header_video']); ?>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="col d-flex justify-content-center align-items-center">
                 <img class="youtube-playlist-btn"
                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube-production-icon.svg"
