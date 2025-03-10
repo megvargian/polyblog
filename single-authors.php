@@ -1,6 +1,7 @@
 <?php
 get_header();
 $get_all_single_authors_fields = get_fields();
+$author_id = get_the_ID();
 // get all articles assign to this author
 $args = array(
     'post_type'         =>      'post',
