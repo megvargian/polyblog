@@ -23,8 +23,8 @@ $query = new WP_Query($args);
             <div class="col-12">
                 <div class="bg-black">
                     <h1>
-                        <span class="en-bold">MEET OUR VOICES</span>
-                        <span class="ar-bold">تعـــــــــرف على أصــــــــــــــــــواتنا</span>
+                        <span class="en-bold"><?php echo the_title(); ?></span>
+                        <span class="ar-bold"><?php echo get_field('ar_title'); ?></span>
                     </h1>
                 </div>
             </div>
@@ -36,6 +36,7 @@ $query = new WP_Query($args);
                     $author_id = get_the_ID();
                     $get_title = get_the_title($author_id);
                     $ar_title = get_field('ar_author_name', $author_id);
+                    $tags = get_the_tags($author_id);
 
             ?>
             <div class="col-4 text-center mb-4 hovered-single-author">
@@ -44,7 +45,15 @@ $query = new WP_Query($args);
                         <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
                             alt="<?php echo $get_title; ?>">
                         <h4 class="ar-bold pt-2"><?php echo $ar_title; ?></h4>
-                        <p class="ar-regular">السياسة / الشرق الأوسط / الحرب</p>
+                        <?php if($tags){?>
+                        <p class="ar-regular">
+                            <?php
+                                foreach ($tags as $tag) {
+                                    echo esc_html($tag->name) '/';
+                                }
+                            ?>
+                        </p>
+                        <?php } ?>
                         <a class="mt-3 view-more-btn en-regular" href="<?php echo get_permalink($author_id); ?>">View
                             Profile</a>
                     </div>
@@ -59,20 +68,39 @@ $query = new WP_Query($args);
         <div class="row justify-content-center d-lg-none d-flex">
             <div class="swiper search-authors-swiper">
                 <div class="swiper-wrapper">
-                    <?php for($i=0; $i<15; $i++){ ?>
+                    <?php if ( $query -> have_posts() ) :
+                            while ( $query -> have_posts() ) : $query -> the_post();
+                                $author_id = get_the_ID();
+                                $get_title = get_the_title($author_id);
+                                $ar_title = get_field('ar_author_name', $author_id);
+                                $tags = get_the_tags($author_id);
+                    ?>
                     <div class="swiper-slide text-center mb-4 hovered-single-author">
                         <div class="single-author-block d-flex justify-content-center align-items-center p-4">
                             <div>
-                                <img class="d-block w-100"
-                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png"
-                                    alt="">
-                                <h4 class="ar-bold pt-2">د. رمزي أبو اسماعيل</h4>
-                                <p class="ar-regular">السياسة / الشرق الأوسط / الحرب</p>
-                                <a class="mt-3 view-more-btn en-regular" href="#">View Profile</a>
+                                <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
+                                    alt="<?php echo $get_title; ?>">
+                                <h4 class="ar-bold pt-2"><?php echo $ar_title; ?></h4>
+                                <?php if($tags){?>
+                                <p class="ar-regular">
+                                    <?php
+                                foreach ($tags as $tag) {
+                                    echo esc_html($tag->name) '/';
+                                }
+                            ?>
+                                </p>
+                                <?php } ?>
+                                <a class="mt-3 view-more-btn en-regular"
+                                    href="<?php echo get_permalink($author_id); ?>">View
+                                    Profile</a>
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();// Restore original Post Data
+                    endif;
+                    ?>
                 </div>
             </div>
         </div>
@@ -94,14 +122,6 @@ $query = new WP_Query($args);
                 <div class="white-line"></div>
             </div>
         </div>
-        <!-- <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
-            <div class="col-12 text-center">
-                <div>
-                    <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
-                    <h3 class="ar-regular ar">منصة إعلامية سياسية شبابية ولبنانية</h3>
-                </div>
-            </div>
-        </div> -->
     </div>
 </section>
 <script>
