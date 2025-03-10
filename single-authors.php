@@ -1,5 +1,6 @@
 <?php
 get_header();
+$get_all_single_authors_fields = get_fields();
 ?>
 <section class="single-author-page">
     <div class="container">
@@ -26,10 +27,14 @@ get_header();
             <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
                 <div class="pt-lg-0 pt-sm-4 pt-2">
                     <h1 class="text-lg-left text-center">
-                        <span class="en-bold d-block">Dr. Ramzi Abou Ismail</span>
-                        <span class="ar-bold d-block">د. رمزي أبو اسماعيل</span>
+                        <span class="en-bold d-block">
+                            <?php the_title(); ?>
+                        </span>
+                        <span class="ar-bold d-block">
+                            <?php echo $get_all_single_authors_fields['ar_author_name']; ?>
+                        </span>
                     </h1>
-                    <p class="en-regular mt-2">Socio-Political Activist</p>
+                    <p class="en-regular mt-2"><?php echo $get_all_single_authors_fields['author_title']; ?></p>
                 </div>
             </div>
         </div>
