@@ -11,6 +11,7 @@ $args = array(
     'orderby'           =>      'date',
 );
 $query = new WP_Query($args);
+$search_authors_fields = get_fields();
 ?>
 <section class="search-authors-page">
     <div class="container">
@@ -24,7 +25,7 @@ $query = new WP_Query($args);
                 <div class="bg-black">
                     <h1>
                         <span class="en-bold"><?php echo the_title(); ?></span>
-                        <span class="ar-bold"><?php echo get_field('ar_title'); ?></span>
+                        <span class="ar-bold"><?php echo $search_authors_fields['ar_title']; ?></span>
                     </h1>
                 </div>
             </div>
@@ -84,10 +85,10 @@ $query = new WP_Query($args);
                                 <?php if($tags){?>
                                 <p class="ar-regular">
                                     <?php
-                                foreach ($tags as $tag) {
-                                    echo esc_html($tag->name) '/';
-                                }
-                            ?>
+                                    foreach ($tags as $tag) {
+                                        echo esc_html($tag->name) '/';
+                                    }
+                                ?>
                                 </p>
                                 <?php } ?>
                                 <a class="mt-3 view-more-btn en-regular"
