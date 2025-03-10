@@ -34,15 +34,19 @@ $query = new WP_Query($args);
                 if ( $query -> have_posts() ) :
                     while ( $query -> have_posts() ) : $query -> the_post();
                     $author_id = get_the_ID();
+                    $get_title = get_the_title($author_id);
+                    $ar_title = get_field('ar_author_name', $author_id);
+
             ?>
             <div class="col-4 text-center mb-4 hovered-single-author">
                 <div class="single-author-block d-flex justify-content-center align-items-center p-4">
                     <div>
-                        <img class="d-block w-100"
-                            src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
-                        <h4 class="ar-bold pt-2">د. رمزي أبو اسماعيل</h4>
+                        <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
+                            alt="<?php echo $get_title; ?>">
+                        <h4 class="ar-bold pt-2"><?php echo $ar_title; ?></h4>
                         <p class="ar-regular">السياسة / الشرق الأوسط / الحرب</p>
-                        <a class="mt-3 view-more-btn en-regular" href="#">View Profile</a>
+                        <a class="mt-3 view-more-btn en-regular" href="<?php echo get_permalink($author_id); ?>">View
+                            Profile</a>
                     </div>
                 </div>
             </div>

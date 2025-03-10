@@ -73,7 +73,7 @@ endif;
             <?php foreach ($current_author_posts as $article_id) {
                     $article_link = get_permalink($article_id);
                     $article_title = get_the_title($article_id);
-                    $get_image = get_the_post_thumbnail_url( $article_id);
+                    $get_image = get_field('article_thumbnail', $article_id) != '' ? get_field('article_thumbnail', $article_id) : get_the_post_thumbnail_url($article_id);
                     $get_excerpt = get_the_excerpt($article_id);
 
             ?>
@@ -95,28 +95,6 @@ endif;
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-12 mb-5">
-                <div class="authors-article">
-                    <div class="row px-lg-5 px-3 py-3">
-                        <div class="col-5">
-                            <img class="d-block w-100"
-                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png"
-                                alt="">
-                        </div>
-                        <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-right">
-                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد
-                                    أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن
-                                    لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة
-                                    حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار
-                                    المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه
-                                    الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
-                                <a class="en-regular" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <?php } ?>
         </div>
         <div class="row py-5 d-lg-flex d-none">
