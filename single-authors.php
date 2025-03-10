@@ -32,8 +32,8 @@ endif;
             <div class="col-12">
                 <div class="bg-black">
                     <h2>
-                        <span class="en-bold">HOW WE SEE IT</span>
-                        <span class="ar-bold">كيــــف منشـــوف</span>
+                        <span class="en-bold"><?php echo $get_all_single_authors_fields['en_page_title']; ?></span>
+                        <span class="ar-bold"><?php echo $get_all_single_authors_fields['ar_page_title']; ?></span>
                     </h2>
                 </div>
             </div>
