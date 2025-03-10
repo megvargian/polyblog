@@ -1,6 +1,24 @@
 <?php
 get_header();
 $get_all_single_authors_fields = get_fields();
+// get all articles assign to this author
+$args = array(
+    'post_type'         =>      'post',
+    'posts_per_page'    =>      -1,
+    'order'             =>      'DSC',
+    'orderby'           =>      'date',
+);
+$query = new WP_Query($args);
+$current_author_posts = array();
+if ( $query -> have_posts() ) :
+    while ( $query -> have_posts() ) : $query -> the_post();
+        $post_custom_fields = get_fields(get_the_ID());
+        if($post_custom_fields['author'] == $author_id ):
+            array_push($current_author_posts, get_the_ID());
+        endif;
+    endwhile;
+    wp_reset_postdata();// Restore original Post Data
+endif;
 ?>
 <section class="single-author-page">
     <div class="container">
@@ -51,7 +69,32 @@ $get_all_single_authors_fields = get_fields();
             </div>
         </div>
         <div class="row">
+            <?php foreach ($current_author_posts as $article_id) {
+                    $article_link = get_permalink($article_id);
+                    $article_title = get_the_title($article_id);
+                    $get_image = get_the_post_thumbnail_url( $article_id);
+                    $get_excerpt = get_the_excerpt($article_id);
+
+            ?>
             <div class="col-12 mb-5">
+                <div class="authors-article">
+                    <div class="row px-lg-5 px-3 py-3">
+                        <div class="col-5">
+                            <img class="d-block w-100" src="<?php echo $get_image; ?>"
+                                alt="<?php echo $article_title; ?>">
+                        </div>
+                        <div class="col-7 d-flex justify-content-center align-items-center">
+                            <div class="text-right">
+                                <p class="ar-regular mb-5">
+                                    <?php echo $get_excerpt; ?>
+                                </p>
+                                <a class="en-regular" href="<?php echo $article_link; ?>">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-12 mb-5">
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
@@ -72,29 +115,8 @@ $get_all_single_authors_fields = get_fields();
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 mb-5">
-                <div class="authors-article">
-                    <div class="row px-lg-5 px-3 py-3">
-                        <div class="col-5">
-                            <img class="d-block w-100"
-                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png"
-                                alt="">
-                        </div>
-                        <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-right">
-                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد
-                                    أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن
-                                    لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة
-                                    حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار
-                                    المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه
-                                    الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
-                                <a class="en-regular" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
+            <?php } ?>
         </div>
         <div class="row py-5 d-lg-flex d-none">
             <div class="col-12">
