@@ -15,6 +15,7 @@ $upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 
 $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 3);
 $two_in_the_same_row_buttons = array_slice($general_fields['footer']['footer_menu'], 6, 2);
 $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
+$footer_banner = $general_fields['footer']['footer_banner'];
 ?>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
@@ -144,14 +145,14 @@ $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
     </div>
 </section>
 <?php }?>
-<?php if (is_front_page()) {?>
-<section style="background-color: #181617;">
+<?php if (is_front_page() || is_single('authors') || is_page(293)) {?>
+<section style="<?php echo is_front_page() ? 'background-color: #181617;': ''; ?>">
     <div class="container pt-5">
-        <div class="row pb-md-3 pb-5 pt-md-5 last-footer-section">
+        <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
             <div class="col-12 text-center">
                 <div>
-                    <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
-                    <h3 class="ar-regular ar">منصة إعلامية سياسية شبابية ولبنانية</h3>
+                    <h3 class="en-regular en"><?php echo $footer_banner['en_title'];?></h3>
+                    <h3 class="ar-regular ar"><?php echo $footer_banner['ar_title'];?></h3>
                 </div>
             </div>
         </div>

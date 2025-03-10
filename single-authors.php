@@ -20,7 +20,8 @@ get_header();
         </div>
         <div class="row author-title">
             <div class="col-lg-4 col-12 px-md-0 px-5">
-                <img class="d-block single-article-img" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
+                <img class="d-block single-article-img"
+                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
             </div>
             <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
                 <div class="pt-lg-0 pt-sm-4 pt-2">
@@ -49,11 +50,18 @@ get_header();
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
-                            <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
+                            <img class="d-block w-100"
+                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png"
+                                alt="">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
                             <div class="text-right">
-                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
+                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد
+                                    أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن
+                                    لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة
+                                    حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار
+                                    المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه
+                                    الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
                                 <a class="en-regular" href="#">Read More</a>
                             </div>
                         </div>
@@ -64,11 +72,18 @@ get_header();
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
-                            <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png" alt="">
+                            <img class="d-block w-100"
+                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/single-author-article-img.png"
+                                alt="">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
                             <div class="text-right">
-                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار  لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
+                                <p class="ar-regular mb-5">لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن لا بد
+                                    أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول لكن
+                                    لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة
+                                    حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه الأفكار
+                                    المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه الأفكار لكن لا بد أن أوضح لك أن كل هذه
+                                    الأفكار المغلوطة حول لكن لا بد أن أوضح لك أن كل هذه </p>
                                 <a class="en-regular" href="#">Read More</a>
                             </div>
                         </div>
@@ -84,21 +99,14 @@ get_header();
         <div class="row publish-with-us-img justify-content-center">
             <div class="col-7 py-5">
                 <a href="http://polybloglb.com">
-                    <img class="w-100 d-block" src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
+                    <img class="w-100 d-block"
+                        src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
                 </a>
             </div>
         </div>
         <div class="row pt-5 d-lg-flex d-none">
             <div class="col-12">
                 <div class="white-line"></div>
-            </div>
-        </div>
-        <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
-            <div class="col-12 text-center">
-                <div>
-                    <h3 class="en-regular en">Youth-led, Lebanese political media</h3>
-                    <h3 class="ar-regular ar">منصة إعلامية سياسية شبابية ولبنانية</h3>
-                </div>
             </div>
         </div>
     </div>
