@@ -146,7 +146,7 @@ $footer_banner = $general_fields['footer']['footer_banner'];
 </section>
 <?php }?>
 <?php if (is_front_page() || is_single('authors') || is_page(293)) {?>
-<section style="<?php echo is_front_page() ? 'background-color: #181617;': ''; ?>">
+<section style="background-color:<?php echo is_front_page() ? '#181617;': '#412bba;';?>">
     <div class="container pt-5">
         <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
             <div class="col-12 text-center">
