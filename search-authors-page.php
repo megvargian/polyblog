@@ -37,7 +37,7 @@ $search_authors_fields = get_fields();
                     $author_id = get_the_ID();
                     $get_title = get_the_title($author_id);
                     $ar_title = get_field('ar_author_name', $author_id);
-                    $tags = get_the_tags($author_id);
+                    $tags = get_the_tags();
 
             ?>
             <div class="col-4 text-center mb-4 hovered-single-author">
@@ -74,7 +74,7 @@ $search_authors_fields = get_fields();
                                 $author_id = get_the_ID();
                                 $get_title = get_the_title($author_id);
                                 $ar_title = get_field('ar_author_name', $author_id);
-                                $tags = get_the_tags($author_id);
+                                $tags = get_the_tags();
                     ?>
                     <div class="swiper-slide text-center mb-4 hovered-single-author">
                         <div class="single-author-block d-flex justify-content-center align-items-center p-4">
