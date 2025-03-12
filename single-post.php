@@ -18,6 +18,7 @@ $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
 $tags = get_the_tags();
 $languages = get_translations($post_id);
+$header_fields = get_fields('options');
 
 if (have_posts()):
     while (have_posts()):
@@ -25,15 +26,17 @@ if (have_posts()):
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
+        <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
         <div class="col d-flex justify-content-center align-items-center">
-            <a href="https://polybloglb.com/category/what-we-think/" target="_blank">
+            <a href="<?php echo $menu_item['menu_item']['url']; ?>" target="_blank">
                 <div class="bg-black">
-                    <p class="en">what we think</p>
-                    <p class="ar">شــــــو منفكــــــر</p>
+                    <p class="en"><?php echo $menu_item['menu_item']['en_text']; ?></p>
+                    <p class="ar"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
                 </div>
             </a>
         </div>
-        <div class="col d-flex justify-content-center align-items-center">
+        <?php } ?>
+        <!-- <div class="col d-flex justify-content-center align-items-center">
             <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
                 <div class="bg-black">
                     <p class="en">how we see it</p>
@@ -64,7 +67,7 @@ if (have_posts()):
                     <p class="ar">تعـــــــرف/ي علينـــا </p>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
     <?php the_post_thumbnail('full'); ?>
 </div>
