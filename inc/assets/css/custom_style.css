@@ -526,7 +526,7 @@ body.hide_scroll {
 .single-featured-article-container .right-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .single-featured-article-container .right-container .categories {
   display: flex;
@@ -1419,11 +1419,13 @@ body.hide_scroll {
   box-shadow: none !important;
 }
 
-.custom-modal .modal-content, .custom-modal-board-advisors .modal-content {
+.custom-modal .modal-content,
+.custom-modal-board-advisors .modal-content {
   background-color: transparent;
   border-radius: 20px;
 }
-.custom-modal .modal-body, .custom-modal-board-advisors .modal-body {
+.custom-modal .modal-body,
+.custom-modal-board-advisors .modal-body {
   background-color: #171717;
   border: 3px solid #87ed06;
   border-radius: 50px;
@@ -1433,16 +1435,19 @@ body.hide_scroll {
   padding: 3rem;
   text-align: center;
 }
-.custom-modal .modal-header, .custom-modal-board-advisors .modal-header {
+.custom-modal .modal-header,
+.custom-modal-board-advisors .modal-header {
   border: none !important;
   padding: 1rem 0;
 }
-.custom-modal .modal-header .btn-close, .custom-modal-board-advisors .modal-header .btn-close {
+.custom-modal .modal-header .btn-close,
+.custom-modal-board-advisors .modal-header .btn-close {
   opacity: 1;
   background-color: #87ed06;
   border-radius: 100%;
 }
-.custom-modal .modal-header .btn-close:focus, .custom-modal-board-advisors .modal-header .btn-close:focus {
+.custom-modal .modal-header .btn-close:focus,
+.custom-modal-board-advisors .modal-header .btn-close:focus {
   box-shadow: none !important;
 }
 

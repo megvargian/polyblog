@@ -348,8 +348,10 @@ body.hide_scroll {
     top: 0%;
     z-index: -1;
     transform: translateX(100%);
-    transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1),
-      opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s;
+    transition:
+      transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+      opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+      visibility 0s;
     .single-side-header {
       margin-bottom: 10px;
       a {
@@ -379,8 +381,10 @@ body.hide_scroll {
   }
   .side-header-menu.active {
     transform: translateX(0);
-    transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1),
-      opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s;
+    transition:
+      transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+      opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+      visibility 0s;
   }
 }
 .home-video-header-container {
@@ -515,7 +519,7 @@ body.hide_scroll {
   .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     .categories {
       display: flex;
@@ -583,7 +587,7 @@ body.hide_scroll {
       height: 100%;
       border-radius: 75px;
     }
-    .yt-icon{
+    .yt-icon {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -591,7 +595,7 @@ body.hide_scroll {
   }
   .youtube-playlist-button-col {
     align-content: center;
-    a{
+    a {
       width: 100%;
       opacity: 1;
       transition: 0.3s ease-in-out;
@@ -929,7 +933,9 @@ body.hide_scroll {
     img {
       display: block;
       width: 100%;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
       filter: grayscale(100%);
     }
     .hover-text {
@@ -1497,7 +1503,8 @@ body.hide_scroll {
 }
 
 // make modal different for footer
-.custom-modal, .custom-modal-board-advisors {
+.custom-modal,
+.custom-modal-board-advisors {
   .modal-content {
     background-color: transparent;
     border-radius: 20px;
@@ -1525,7 +1532,7 @@ body.hide_scroll {
     }
   }
 }
-.custom-modal-board-advisors{
+.custom-modal-board-advisors {
   .modal-body {
     border: 3px solid #eb4201;
   }
@@ -1888,7 +1895,7 @@ body.hide_scroll {
 }
 
 .what-we-think-container {
-  .main-header-cat{
+  .main-header-cat {
     background-color: #ee4200;
     border-radius: 150px;
     padding: 2rem 6rem;
@@ -2021,7 +2028,7 @@ body.hide_scroll {
 }
 
 .how-we-see-it-container {
-  .main-header-cat{
+  .main-header-cat {
     background-color: #ee4200;
     border-radius: 150px;
     padding: 2rem 6rem;
