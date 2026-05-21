@@ -1,11 +1,11 @@
-$main_color: #FFDD00;
+$main_color: #ffdd00;
 $main_color_faded: rgba(125, 36, 53, 0.2);
 
-$sec_color: #87ed06;
+$sec_color: #c90500;
 
-$grey_color: rgb(178,178,178);
+$grey_color: rgb(178, 178, 178);
 
-$header_opening_hours: #B2B2B2;
+$header_opening_hours: #b2b2b2;
 
 $text_color: #194e91;
 
@@ -15,47 +15,46 @@ $text_black: #000;
 $bg_white: #fff;
 $bg_black: #181617;
 
-$transition_time: .3s;
-
+$transition_time: 0.3s;
 
 @mixin transition_c($transition_time) {
-	transition: $transition_time;
+  transition: $transition_time;
 }
 
 @mixin transition() {
-	-webkit-transition: $transition_time;
-	-moz-transition: $transition_time;
-	transition: $transition_time;
+  -webkit-transition: $transition_time;
+  -moz-transition: $transition_time;
+  transition: $transition_time;
 }
 @mixin transform($data) {
-	-webkit-transform: $data;
-	-ms-transform: $data;
-	transform: $data;
+  -webkit-transform: $data;
+  -ms-transform: $data;
+  transform: $data;
 }
 @mixin bg_cover {
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 @mixin bg_cover_c($position) {
-	background-size: cover;
-	background-position: $position;
-	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+  background-repeat: no-repeat;
 }
-@mixin absolute_center($width, $height){
-	width: $width;
-	height: $height;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -($height/2);
-	margin-left: -($width/2);
+@mixin absolute_center($width, $height) {
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($height/2);
+  margin-left: -($width/2);
 }
 
 // fonts
-$en-bold:			    	"Lexend-Bold";
-$en-regular: 				"Lexend-Regular";
-$en-light: 					"Lexend-Light";
-$ar-bold: 					"Vazirmatn-Bold";
-$ar-light: 					"Vazirmatn-Light";
-$ar-regular: 				"Vazirmatn-Regular";
+$en-bold: "Lexend-Bold";
+$en-regular: "Lexend-Regular";
+$en-light: "Lexend-Light";
+$ar-bold: "Vazirmatn-Bold";
+$ar-light: "Vazirmatn-Light";
+$ar-regular: "Vazirmatn-Regular";

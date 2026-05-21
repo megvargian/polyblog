@@ -31,7 +31,7 @@
   .search-authors-page,
   .our-segments-page,
   .how-we-see-it-container,
-  .what-we-think-container{
+  .what-we-think-container {
     h1 span {
       font-size: 3rem;
     }
@@ -47,7 +47,8 @@
   }
   //footer
   .footer-container {
-    button, .a-button {
+    button,
+    .a-button {
       font-size: 16px;
     }
     .outer-phone {
@@ -80,8 +81,10 @@
     left: 0px;
     transform: translateX(-100dvw);
     visibility: hidden !important;
-    transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1),
-      opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s linear 1s;
+    transition:
+      transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+      opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+      visibility 0s linear 1s;
     background-color: #ec4100;
     text-align: right;
     font-size: 20px;
@@ -94,8 +97,10 @@
     transform: translateX(0);
     opacity: 1;
     visibility: visible !important;
-    transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1),
-      opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s;
+    transition:
+      transform 1s cubic-bezier(0.32, 0.17, 0, 1),
+      opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
+      visibility 0s;
   }
 
   .menu_on_mobile {
@@ -280,7 +285,7 @@
   .site-title {
     font-size: 2.5rem;
     padding: 16px 10px;
-    color: #87ed06;
+    color: #c90500;
     a {
       justify-content: space-between;
     }
@@ -395,7 +400,7 @@
       display: flex;
       z-index: 1;
       position: relative;
-      .bg-image{
+      .bg-image {
         z-index: 2;
         width: 100%;
         height: 100%;
@@ -573,7 +578,8 @@
     font-size: 2rem;
   }
   .footer-container {
-    button, .a-button {
+    button,
+    .a-button {
       font-size: 14px;
     }
     .donate {
@@ -819,7 +825,8 @@
     }
   }
   .footer-container {
-    button, .a-button {
+    button,
+    .a-button {
       font-size: 12px;
     }
     .donate {
