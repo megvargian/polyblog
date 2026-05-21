@@ -47,18 +47,20 @@ if ($featured_articles): ?>
                                 <?php echo esc_html($title); ?>
                             </a>
                         </div>
-                        <div class="author-tags">
+                        <!-- <div class="author-tags">
                             <div class="author">
-                                <p><?php echo esc_html($author_name); ?></p>
+                                <p><?php // echo esc_html($author_name); ?></p>
                             </div>
                             <div class="tags">
-                                <?php if ($tags) {
-                                            foreach ($tags as $tag) {
-                                                echo esc_html($tag->name) . ' ';
-                                            }
-                                        } ?>
+                                <?php
+                                    // if ($tags) {
+                                    //     foreach ($tags as $tag) {
+                                    //         echo esc_html($tag->name) . ' ';
+                                    //     }
+                                    // }
+                                ?>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
