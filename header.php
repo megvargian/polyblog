@@ -20,6 +20,18 @@ $header_fields = get_fields('options');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <?php
+    $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    if ( $current_lang === 'en' ) {
+        $meta_description = 'Deep analytical coverage of Lebanese politics, state sovereignty, and regional security. Expert analysis on governance, geopolitics, and policy impact.';
+        $meta_keywords    = 'Lebanon, Lebanese, politics, news, political, analysis, governance, Middle East, policy, state, sovereignty, security, regional, geopolitics, south, war, government, Joseph Aoun, Nawaf Salam, Nabih Berri, Parliament, beirut, tripoli';
+    } else {
+        $meta_description = 'تغطية تحليلية معمّقة للسياسة اللبنانية، وسيادة الدولة، والأمن الإقليمي. تحليلات متخصصة حول الحوكمة، والجيوسياسة، وتأثير السياسات العامة.';
+        $meta_keywords    = 'لبنان، لبناني، سياسة، أخبار، تحليل سياسي، حوكمة، الشرق الأوسط، سياسات عامة، الدولة، السيادة، الأمن، إقليمي، جيوسياسة، الجنوب، الحرب، الحكومة، جوزيف عون، نواف سلام، نبيه بري، البرلمان، بيروت، طرابلس';
+    }
+    ?>
+    <meta name="description" content="<?php echo esc_attr( $meta_description ); ?>">
+    <meta name="keywords" content="<?php echo esc_attr( $meta_keywords ); ?>">
     <?php wp_head(); ?>
 </head>
 

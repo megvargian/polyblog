@@ -382,32 +382,32 @@ function single_post_load_more_posts() {
                 $author_post_content_preview = wp_trim_words(get_the_content(), 20, '...');
                 $author_post_publish_date = get_the_date('M. j, Y');
                 ?>
-               <a href="<?php the_permalink(); ?>" target="_blank">
-                                        <div class="row my-2 p-4 author-post-container align-text-arabic">
-                                            <div class="col author-post-thumbnail-container">
-                                                <img src="<?php echo esc_url($author_post_featured_image); ?>" />
-                                            </div>
-                                            <div class="col author-post-details-container">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="title"><?php the_title(); ?></p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="preview"><?php echo esc_html($author_post_content_preview); ?></p>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col details-container">
-                                                        <small><?php echo $author_name; ?></small>
-                                                        <small><?php echo esc_html($author_post_publish_date); ?></small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                <?php
+<a href="<?php the_permalink(); ?>" target="_blank">
+    <div class="row my-2 p-4 author-post-container align-text-arabic">
+        <div class="col author-post-thumbnail-container">
+            <img src="<?php echo esc_url($author_post_featured_image); ?>" />
+        </div>
+        <div class="col author-post-details-container">
+            <div class="row">
+                <div class="col">
+                    <p class="title"><?php the_title(); ?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="preview"><?php echo esc_html($author_post_content_preview); ?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col details-container">
+                    <small><?php echo $author_name; ?></small>
+                    <small><?php echo esc_html($author_post_publish_date); ?></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<?php
             endwhile;
         else:
             echo '';
@@ -440,3 +440,26 @@ function get_translations($post_id){
     $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
     return $languages;
 }
+
+// WPML-aware site title and tagline
+function polyblog_document_title_parts( $title ) {
+    $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    $title['site'] = ( $lang === 'en' ) ? 'Polyblog Lebanon' : 'بوليبلوغ لبنان';
+    if ( isset( $title['tagline'] ) ) {
+        $title['tagline'] = ( $lang === 'en' ) ? 'Politics, not news' : 'سياسة مش أخبار';
+    }
+    return $title;
+}
+add_filter( 'document_title_parts', 'polyblog_document_title_parts' );
+
+function polyblog_bloginfo_name( $output, $show ) {
+    $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    if ( $show === 'name' ) {
+        return ( $lang === 'en' ) ? 'Polyblog Lebanon' : 'بوليبلوغ لبنان';
+    }
+    if ( $show === 'description' ) {
+        return ( $lang === 'en' ) ? 'Politics, not news' : 'سياسة مش أخبار';
+    }
+    return $output;
+}
+add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
