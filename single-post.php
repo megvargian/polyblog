@@ -20,7 +20,7 @@ if (have_posts()):
         $author_id = get_post_field('post_author', $author_post_id);
         $author_name = get_the_title($author_post_id);
         $author_link = get_permalink($author_post_id);
-        $categories = get_the_category();
+        // $categories = get_the_category();
         // $tags = get_the_tags() ?: array();
         //$languages = get_translations($post_id);
         $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
@@ -77,19 +77,19 @@ if (have_posts()):
 <div class="container-fluid px-4 single-post-container">
     <div class="row py-2">
         <div class="col">
-            <?php foreach ($categories as $category) {
-                        if ($category->slug === 'what-we-think' || $category->slug === 'what-we-think-en') { ?>
+            <!-- <?php //foreach ($categories as $category) {
+                        //if ($category->slug === 'what-we-think' || $category->slug === 'what-we-think-en') { ?>
             <a href="https://polybloglb.com/category/what-we-think/" type="button" class="what-we-think w-100"><span
                     class="english"><strong>WHAT WE THINK</strong></span><span class="arabic"><strong>شــــــو
                         منفكــــــر</strong></span></a>
-            <?php   }
-                        if ($category->slug === 'how-we-see-it' || $category->slug === 'how-we-see-it-en') { ?>
+            <?php   //}
+                       // if ($category->slug === 'how-we-see-it' || $category->slug === 'how-we-see-it-en') { ?>
             <a href="https://polybloglb.com/category/how-we-see-it/" type="button" class="what-we-think w-100"><span
                     class="english"><strong>HOW WE SEE IT</strong></span><span class="arabic"><strong>كيــف
                         منشــوف</strong></span></a>
 
-            <?php }
-                    } ?>
+            <?php //}
+                    //} ?> -->
 
         </div>
     </div>
