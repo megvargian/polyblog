@@ -22,7 +22,12 @@ $header_fields = get_fields('options');
 
 if (have_posts()):
     while (have_posts()):
-        the_post(); ?>
+        the_post();
+        $is_arabic    = preg_match('/[\x{0600}-\x{06FF}]/u', get_the_title());
+        $content_dir   = $is_arabic ? 'rtl' : 'ltr';
+        $content_align = $is_arabic ? 'text-right' : 'text-left';
+        $content_font  = $is_arabic ? 'ar-bold' : 'en-bold';
+        ?>
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
@@ -93,7 +98,8 @@ if (have_posts()):
     </div>
     <div class="row py-2">
         <div class="col">
-            <h1 class="align-text-arabic"><?php the_title(); ?></h1>
+            <h1 class="<?php echo $content_align . ' ' . $content_font; ?>" dir="<?php echo $content_dir; ?>">
+                <?php the_title(); ?></h1>
         </div>
     </div>
     <div class="row py-2 single-article-header-desktop">
@@ -197,10 +203,9 @@ if (have_posts()):
             </div>
         </div>
     </div>
-    <div class="row py-2 px-lg-5 px-1 main-content"
-        dir="<?php echo do_shortcode('[language]') == 'en' ? 'rtl' : 'ltr'; ?>">
+    <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo $content_dir; ?>">
         <div class="col-4 d-lg-block d-none"></div>
-        <div class="col p-lg-5 px-2 align-text-arabic">
+        <div class="col p-lg-5 px-2 <?php echo $content_align; ?>">
             <?php the_content(); ?>
         </div>
     </div>
