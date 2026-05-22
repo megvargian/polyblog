@@ -526,7 +526,7 @@ body.hide_scroll {
 .single-featured-article-container .right-container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
 }
 .single-featured-article-container .right-container .categories {
   display: flex;

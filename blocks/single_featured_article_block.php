@@ -55,6 +55,7 @@ if ($featured_articles): ?>
                                 <?php echo wp_trim_words(get_the_excerpt($article), 30, '...'); ?>
                             </div>
                         </div>
+                        <div></div>
                         <!-- <div class="author-tags">
                             <div class="author">
                                 <p><?php // echo esc_html($author_name); ?></p>

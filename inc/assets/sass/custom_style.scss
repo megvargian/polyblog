@@ -519,7 +519,7 @@ body.hide_scroll {
   .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
 
     .categories {
       display: flex;
