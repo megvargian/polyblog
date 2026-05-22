@@ -16,10 +16,10 @@ if (have_posts()):
     while (have_posts()):
         the_post();
         $post_id = get_the_ID();
-        $author_post_id = get_field('author');
-        $author_id = get_post_field('post_author', $author_post_id);
-        $author_name = get_the_title($author_post_id);
-        $author_link = get_permalink($author_post_id);
+        // $author_post_id = get_field('author');
+        // $author_id = get_post_field('post_author', $author_post_id);
+        // $author_name = get_the_title($author_post_id);
+        // $author_link = get_permalink($author_post_id);
         // $categories = get_the_category();
         // $tags = get_the_tags() ?: array();
         //$languages = get_translations($post_id);
@@ -121,11 +121,11 @@ if (have_posts()):
         <div class="col-8 col-sm-9">
             <div class="row">
                 <div class="col-10 author-tags-container">
-                    <a href="<?php echo $author_link; ?>">
+                    <!-- <a href="<?php //echo $author_link; ?>">
                         <h2 class="author-name">
-                            <strong><?php echo $author_name; ?></strong>
+                            <strong><?php //echo $author_name; ?></strong>
                         </h2>
-                    </a>
+                    </a> -->
                     <div class="tags">
                         <p>
                             <?php
@@ -141,8 +141,9 @@ if (have_posts()):
                     </div>
                 </div>
                 <div class="col-2">
-                    <img class="author-image" src="<?php echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
-                        alt="<?php echo esc_attr($author_title); ?>" />
+                    <img class="author-image"
+                        src="<?php //echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
+                        alt="<?php //echo esc_attr($author_title); ?>" />
                 </div>
             </div>
         </div>
@@ -173,15 +174,15 @@ if (have_posts()):
     </div>
     <div class="row py-2 author-tags-container-mobile">
         <div class="col">
-            <img class="author-image" src="<?php echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
-                alt="<?php echo esc_attr($author_title); ?>" />
+            <img class="author-image" src="<?php //echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
+                alt="<?php //echo esc_attr($author_title); ?>" />
         </div>
         <div class="col author-info-container">
-            <a href="<?php echo esc_url($author_link); ?>">
+            <!-- <a href="<?php //echo esc_url($author_link); ?>">
                 <h2 class="author-name">
-                    <strong><?php echo esc_html($author_name); ?></strong>
+                    <strong><?php //echo esc_html($author_name); ?></strong>
                 </h2>
-            </a>
+            </a> -->
             <div class="tags">
                 <p>
                     <?php
@@ -217,16 +218,16 @@ if (have_posts()):
     </div>
 </div>
 <?php
-    $total_posts_query = new WP_Query(array(
-        'author' => $author_id,
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-    ));
+    // $total_posts_query = new WP_Query(array(
+    //     'author' => $author_id,
+    //     'post_type' => 'post',
+    //     'post_status' => 'publish',
+    //     'posts_per_page' => -1,
+    // ));
 
-    if ($total_posts_query->have_posts()):
-        $total_posts = $total_posts_query->found_posts;
-    endif;
+    // if ($total_posts_query->have_posts()):
+    //     $total_posts = $total_posts_query->found_posts;
+    // endif;
 ?>
 <script>
 jQuery(document).ready(function($) {
@@ -252,7 +253,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response) {
-                    let totalPosts = <?php echo $total_posts; ?>;
+                    let totalPosts = <?php // echo $total_posts; ?>;
                     $('#single-post-author-posts').append(response);
                     button.data('offset', offset + 3);
 
