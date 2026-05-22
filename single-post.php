@@ -39,37 +39,37 @@ if (have_posts()):
         </div>
         <?php } ?>
         <!-- <div class="col d-flex justify-content-center align-items-center">
-            <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
-                <div class="bg-black">
-                    <p class="en">how we see it</p>
-                    <p class="ar">كيــف منشــوف</p>
-                </div>
-            </a>
-        </div>
-        <div class="col d-flex justify-content-center align-items-center">
-            <a href="http://polybloglb.com/our-segements" target="_blank">
-                <div class="bg-black">
-                    <p class="en">Our segments</p>
-                    <p class="ar">فقـــــــــــــــــراتنا </p>
-                </div>
-            </a>
-        </div>
-        <div class="col d-flex justify-content-center align-items-center">
-            <a href="http://polybloglb.com/#youtube-playlist-bg" target="_blank">
-                <div class="bg-black">
-                    <p class="en">our productions</p>
-                    <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
-                </div>
-            </a>
-        </div>
-        <div class="col d-flex justify-content-center align-items-center">
-            <a href="http://polybloglb.com/" target="_blank">
-                <div class="bg-black">
-                    <p class="en">GET TO KNOW US</p>
-                    <p class="ar">تعـــــــرف/ي علينـــا </p>
-                </div>
-            </a>
-        </div> -->
+                <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
+                    <div class="bg-black">
+                        <p class="en">how we see it</p>
+                        <p class="ar">كيــف منشــوف</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a href="http://polybloglb.com/our-segements" target="_blank">
+                    <div class="bg-black">
+                        <p class="en">Our segments</p>
+                        <p class="ar">فقـــــــــــــــــراتنا </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a href="http://polybloglb.com/#youtube-playlist-bg" target="_blank">
+                    <div class="bg-black">
+                        <p class="en">our productions</p>
+                        <p class="ar">انـــــــــتاجــــــــاتــــــنا</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a href="http://polybloglb.com/" target="_blank">
+                    <div class="bg-black">
+                        <p class="en">GET TO KNOW US</p>
+                        <p class="ar">تعـــــــرف/ي علينـــا </p>
+                    </div>
+                </a>
+            </div> -->
     </div>
     <?php the_post_thumbnail('full'); ?>
 </div>
@@ -141,8 +141,8 @@ if (have_posts()):
                     </div>
                 </div>
                 <div class="col-2">
-                    <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author_post_id); ?>"
-                        alt="<?php echo $author_title ?>" />
+                    <img class="author-image" src="<?php echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
+                        alt="<?php echo esc_attr($author_title); ?>" />
                 </div>
             </div>
         </div>
@@ -150,19 +150,19 @@ if (have_posts()):
     <div class="row py-2 single-article-header-mobile">
         <div class="col category-buttons">
             <?php
-                    if ($languages) {
-                        foreach ($languages as $lang) {
-                            $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
-                            if ($translated_id) {
+                if ($languages) {
+                    foreach ($languages as $lang) {
+                        $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
+                        if ($translated_id) {
                     ?>
             <a href="<?php echo $lang['url']; ?>" class="<?php echo $lang['code'] == 'ar' ? 'arabic' : 'english'; ?>">
                 <?php echo esc_html($lang['code'] == 'ar' ? 'ع' : 'EN'); ?>
             </a>
             <?php
-                            }
                         }
                     }
-                    ?>
+                }
+            ?>
         </div>
         <div class="col published-date">
             <?php
@@ -175,13 +175,13 @@ if (have_posts()):
     </div>
     <div class="row py-2 author-tags-container-mobile">
         <div class="col">
-            <img class="author-image" src="<?php echo get_the_post_thumbnail_url($author_post_id); ?>"
-                alt="<?php echo $author_title ?>" />
+            <img class="author-image" src="<?php echo esc_url(get_the_post_thumbnail_url($author_post_id)); ?>"
+                alt="<?php echo esc_attr($author_title); ?>" />
         </div>
         <div class="col author-info-container">
-            <a href="<?php echo $author_link; ?>">
+            <a href="<?php echo esc_url($author_link); ?>">
                 <h2 class="author-name">
-                    <strong><?php echo $author_name; ?></strong>
+                    <strong><?php echo esc_html($author_name); ?></strong>
                 </h2>
             </a>
             <div class="tags">
