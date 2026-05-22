@@ -129,7 +129,7 @@ if (have_posts()):
                             <?php
                                     $total_tags = count($tags);
                                     foreach ($tags as $index => $tag) {
-                                        echo esc_html($tag->name);
+                                        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
                                         if ($index < $total_tags - 1) {
                                             echo ' / ';
                                         }
@@ -187,7 +187,7 @@ if (have_posts()):
                     <?php
                             $total_tags = count($tags);
                             foreach ($tags as $index => $tag) {
-                                echo esc_html($tag->name);
+                                echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
                                 if ($index < $total_tags - 1) {
                                     echo ' / ';
                                 }
