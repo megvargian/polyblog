@@ -10,19 +10,21 @@
 
 get_header(); ?>
 <?php
-$post_id = get_the_ID();
-$author_post_id = get_field('author');
-$author_id = get_post_field('post_author', $author_post_id);
-$author_name = get_the_title($author_post_id);
-$author_link = get_permalink($author_post_id);
-$categories = get_the_category();
-$tags = get_the_tags();
-$languages = get_translations($post_id);
 $header_fields = get_fields('options');
 
 if (have_posts()):
     while (have_posts()):
-        the_post(); ?>
+        the_post();
+        $post_id = get_the_ID();
+        $author_post_id = get_field('author');
+        $author_id = get_post_field('post_author', $author_post_id);
+        $author_name = get_the_title($author_post_id);
+        $author_link = get_permalink($author_post_id);
+        $categories = get_the_category();
+        $tags = get_the_tags() ?: array();
+        $languages = get_translations($post_id);
+        $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+?>
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
@@ -197,8 +199,7 @@ if (have_posts()):
             </div>
         </div>
     </div>
-    <div class="row py-2 px-lg-5 px-1 main-content"
-        dir="<?php echo do_shortcode('[language]') == 'en' ? 'rtl' : 'ltr'; ?>">
+    <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo $current_lang === 'en' ? 'ltr' : 'rtl'; ?>">
         <div class="col-4 d-lg-block d-none"></div>
         <div class="col p-lg-5 px-2 align-text-arabic">
             <?php the_content(); ?>
@@ -218,17 +219,17 @@ if (have_posts()):
     </div>
 </div>
 <?php
-        $total_posts_query = new WP_Query(array(
-            'author' => $author_id,
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => -1,
-        ));
+    $total_posts_query = new WP_Query(array(
+        'author' => $author_id,
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+    ));
 
-        if ($total_posts_query->have_posts()):
-            $total_posts = $total_posts_query->found_posts;
-        endif;
-        ?>
+    if ($total_posts_query->have_posts()):
+        $total_posts = $total_posts_query->found_posts;
+    endif;
+?>
 <script>
 jQuery(document).ready(function($) {
     let authorPostsCount = 3;
