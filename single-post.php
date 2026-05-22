@@ -23,7 +23,7 @@ if (have_posts()):
         // $categories = get_the_category();
         // $tags = get_the_tags() ?: array();
         //$languages = get_translations($post_id);
-        $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+        // $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
 ?>
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
@@ -253,7 +253,7 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 if (response) {
-                    let totalPosts = <?php // echo $total_posts; ?>;
+                    let totalPosts = <?php // echo $total_posts; ?> '';
                     $('#single-post-author-posts').append(response);
                     button.data('offset', offset + 3);
 
