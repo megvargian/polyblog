@@ -21,7 +21,7 @@ if (have_posts()):
         $author_name = get_the_title($author_post_id);
         $author_link = get_permalink($author_post_id);
         $categories = get_the_category();
-        $tags = get_the_tags() ?: array();
+        // $tags = get_the_tags() ?: array();
         //$languages = get_translations($post_id);
         $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
 ?>
@@ -129,13 +129,13 @@ if (have_posts()):
                     <div class="tags">
                         <p>
                             <?php
-                                    $total_tags = count($tags);
-                                    foreach ($tags as $index => $tag) {
-                                        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                        if ($index < $total_tags - 1) {
-                                            echo ' / ';
-                                        }
-                                    }
+                                    // $total_tags = count($tags);
+                                    // foreach ($tags as $index => $tag) {
+                                    //     echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                                    //     if ($index < $total_tags - 1) {
+                                    //         echo ' / ';
+                                    //     }
+                                    // }
                                     ?>
                         </p>
                     </div>
@@ -185,13 +185,13 @@ if (have_posts()):
             <div class="tags">
                 <p>
                     <?php
-                        $total_tags = count($tags);
-                        foreach ($tags as $index => $tag) {
-                            echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                            if ($index < $total_tags - 1) {
-                                echo ' / ';
-                            }
-                        }
+                        // $total_tags = count($tags);
+                        // foreach ($tags as $index => $tag) {
+                        //     echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                        //     if ($index < $total_tags - 1) {
+                        //         echo ' / ';
+                        //     }
+                        // }
                     ?>
                 </p>
             </div>
