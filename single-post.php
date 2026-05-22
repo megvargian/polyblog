@@ -12,9 +12,9 @@
 <?php
 // $header_fields = get_fields('options');
 
-if (have_posts()):
-    while (have_posts()):
-        the_post();
+// if (have_posts()):
+//     while (have_posts()):
+//         the_post();
         // $post_id = get_the_ID();
         // $author_post_id = get_field('author');
         // $author_id = get_post_field('post_author', $author_post_id);
@@ -271,8 +271,8 @@ jQuery(document).ready(function($) {
 });
 </script>
 <?php
-    endwhile;
-endif;
+//     endwhile;
+// endif;
 ?>
 <?php
-get_footer();
+//get_footer();
