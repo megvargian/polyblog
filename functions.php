@@ -443,7 +443,8 @@ function get_translations($post_id){
 
 // WPML-aware site title and tagline
 function polyblog_document_title_parts( $title ) {
-    $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    // $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    $lang = 'en';
     $title['site'] = ( $lang === 'en' ) ? 'Polyblog Lebanon' : 'بوليبلوغ لبنان';
     if ( isset( $title['tagline'] ) ) {
         $title['tagline'] = ( $lang === 'en' ) ? 'Politics, not news' : 'سياسة مش أخبار';
@@ -453,7 +454,8 @@ function polyblog_document_title_parts( $title ) {
 add_filter( 'document_title_parts', 'polyblog_document_title_parts' );
 
 function polyblog_bloginfo_name( $output, $show ) {
-    $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    // $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    $lang = 'en'
     if ( $show === 'name' ) {
         return ( $lang === 'en' ) ? 'Polyblog Lebanon' : 'بوليبلوغ لبنان';
     }

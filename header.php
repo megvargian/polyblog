@@ -21,7 +21,8 @@ $header_fields = get_fields('options');
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php
-    $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    // $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
+    $current_lang = 'en';
     if ( $current_lang === 'en' ) {
         $meta_description = 'Deep analytical coverage of Lebanese politics, state sovereignty, and regional security. Expert analysis on governance, geopolitics, and policy impact.';
         $meta_keywords    = 'Lebanon, Lebanese, politics, news, political, analysis, governance, Middle East, policy, state, sovereignty, security, regional, geopolitics, south, war, government, Joseph Aoun, Nawaf Salam, Nabih Berri, Parliament, beirut, tripoli';
@@ -98,31 +99,31 @@ $header_fields = get_fields('options');
                 </div>
             </div>
             <?php if(!( is_single() && get_post_type() === 'post' )){ ?>
-                <?php if (is_front_page()) { ?>
-                    <div id="scrollDiv">
+            <?php if (is_front_page()) { ?>
+            <div id="scrollDiv">
                 <?php } ?>
-            <div class="d-lg-block d-none side-header">
-                <div class="d-flex justify-content-center align-items-center main-side-button">
-                    <img class="side-header-arrow"
-                        src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg"
-                        alt="side-header-arrow">
-                </div>
-                <div class="side-header-menu">
-                    <ul>
-                        <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
-                        <li class="single-side-header d-block">
-                            <a href="<?php echo $menu_item['menu_item']['url']; ?>">
-                                <p class="en-regular"><?php echo $menu_item['menu_item']['en_text']; ?></p>
-                                <p class="ar-regualr"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
-                            </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
-                <?php if (is_front_page()) { ?>
+                <div class="d-lg-block d-none side-header">
+                    <div class="d-flex justify-content-center align-items-center main-side-button">
+                        <img class="side-header-arrow"
+                            src="<?php echo get_template_directory_uri();?>/inc/assets/icons/side-header-arrow.svg"
+                            alt="side-header-arrow">
                     </div>
-                <?php } ?>
+                    <div class="side-header-menu">
+                        <ul>
+                            <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
+                            <li class="single-side-header d-block">
+                                <a href="<?php echo $menu_item['menu_item']['url']; ?>">
+                                    <p class="en-regular"><?php echo $menu_item['menu_item']['en_text']; ?></p>
+                                    <p class="ar-regualr"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+                <?php if (is_front_page()) { ?>
+            </div>
+            <?php } ?>
             <?php } ?>
             <script>
             jQuery(document).ready(function($) {
