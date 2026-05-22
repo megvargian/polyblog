@@ -16,7 +16,7 @@ $author_id = get_post_field('post_author', $author_post_id);
 $author_name = get_the_title($author_post_id);
 $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
-$tags = get_the_tags();
+$tags = get_the_tags() ?: [];
 $languages = get_translations($post_id);
 $header_fields = get_fields('options');
 
@@ -26,7 +26,7 @@ if (have_posts()):
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
-        <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
+        <?php foreach( (array) ($header_fields['header_menu'] ?? []) as $key => $menu_item){ ?>
         <div class="col d-flex justify-content-center align-items-center">
             <a href="<?php echo $menu_item['menu_item']['url']; ?>" target="_blank">
                 <div class="bg-black">
