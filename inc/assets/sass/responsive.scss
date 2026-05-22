@@ -85,7 +85,7 @@
       transform 1s cubic-bezier(0.32, 0.17, 0, 1),
       opacity 1s cubic-bezier(0.32, 0.17, 0, 1),
       visibility 0s linear 1s;
-    background-color: #ec4100;
+    background-color: #c90500;
     text-align: right;
     font-size: 20px;
     text-align: center;
@@ -330,7 +330,7 @@
   }
   .swiper-featured-articles-block {
     .swiper-pagination-bullet-active {
-      background-color: #ec4100 !important;
+      background-color: #c90500 !important;
     }
     .swiper-pagination-bullet {
       background-color: #d9d9d9;
@@ -343,7 +343,7 @@
       padding: 0.5rem 0.7rem;
       text-align: center;
       width: fit-content;
-      background-color: #ec4100;
+      background-color: #c90500;
       border-radius: 10px;
       float: right;
     }
@@ -359,7 +359,7 @@
       align-items: center;
       margin-top: 20px;
       .swiper-pagination-bullet-active {
-        background-color: #ec4100 !important;
+        background-color: #c90500 !important;
       }
       .swiper-pagination-bullet {
         background-color: #d9d9d9;
@@ -380,7 +380,7 @@
       }
       .view-more-btn {
         border-radius: 10px;
-        background-color: #ec4100;
+        background-color: #c90500;
         color: #fff;
         font-family: $en-regular;
         text-transform: uppercase;
@@ -424,7 +424,7 @@
   }
   .swiper-mobile-single-author-article-pagination {
     .swiper-pagination-bullet-active {
-      background-color: #ec4100 !important;
+      background-color: #c90500 !important;
     }
     .swiper-pagination-bullet {
       background-color: #d9d9d9;
@@ -590,7 +590,7 @@
   }
   //contact form
   .contact-us-section {
-    background-color: #ec4100;
+    background-color: #c90500;
     input,
     textarea,
     label {
@@ -602,13 +602,13 @@
         background-color: #171717;
         h4 {
           font-size: 1.2rem;
-          color: #ec4100;
+          color: #c90500;
           text-transform: uppercase;
         }
         .next-button {
           outline: none;
           border: none;
-          background-color: #ec4100;
+          background-color: #c90500;
           color: #fff;
           font-family: $en-bold;
           text-align: center;
@@ -628,7 +628,7 @@
         }
         .langs {
           p {
-            border: 1px solid #ec4100;
+            border: 1px solid #c90500;
             border-radius: 30px;
             padding: 0.75rem 1rem;
             font-size: 1rem;
@@ -638,7 +638,7 @@
             margin: 0;
           }
           p.active {
-            background-color: #ec4100;
+            background-color: #c90500;
           }
         }
         .mobile-social-links {
@@ -650,7 +650,7 @@
     }
     .swiper-mobile-pagination {
       .swiper-pagination-bullet-active {
-        background-color: #ec4100 !important;
+        background-color: #c90500 !important;
       }
       .swiper-pagination-bullet {
         background-color: #d9d9d9;
@@ -793,7 +793,7 @@
   }
 
   .author-block-container {
-    color: #ec4100;
+    color: #c90500;
     .single-red-border {
       border: 2px solid #621a01;
     }

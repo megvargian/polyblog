@@ -944,7 +944,7 @@ body.hide_scroll {
   justify-content: space-between;
   align-items: center;
   padding: 0.35rem 0.4rem;
-  background-color: #ec4100;
+  background-color: #c90500;
 }
 .three-featured-articles-block-container .article-container .cat span {
   font-size: 0.7rem;
@@ -1018,7 +1018,7 @@ body.hide_scroll {
   background-color: #171717;
   width: 100% !important;
   border-radius: 35px;
-  border: 2px solid #ec4100;
+  border: 2px solid #c90500;
   font-size: 1.2rem;
   padding: 1rem 0.8rem;
   margin-bottom: 5px;
@@ -1068,7 +1068,7 @@ body.hide_scroll {
 }
 .contact-us-section .langs-desktop p.active,
 .contact-us-section-light .langs-desktop p.active {
-  background-color: #ec4100;
+  background-color: #c90500;
   color: #fff;
 }
 .contact-us-section .select2-results,
@@ -1164,7 +1164,7 @@ body.hide_scroll {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #ec4100 !important;
+  background-color: #c90500 !important;
 }
 
 .select2-container--default .select2-results > .select2-results__options {
@@ -1176,7 +1176,7 @@ body.hide_scroll {
 }
 
 .author-block-container {
-  color: #ec4100;
+  color: #c90500;
 }
 .author-block-container .single-author-col {
   display: flex;
@@ -1228,7 +1228,7 @@ body.hide_scroll {
 }
 
 .message-for-editor-section .container-fluid {
-  background-color: #ec4100;
+  background-color: #c90500;
 }
 .message-for-editor-section .container-fluid p {
   color: #fff;
@@ -1382,7 +1382,7 @@ body.hide_scroll {
   flex-direction: column;
   justify-content: center;
   height: 85vh;
-  background-color: rgba(236, 65, 0, 0.8);
+  background-color: rgba(201, 5, 0, 0.8);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   color: #fff;

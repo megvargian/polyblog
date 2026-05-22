@@ -972,7 +972,7 @@ body.hide_scroll {
       justify-content: space-between;
       align-items: center;
       padding: 0.35rem 0.4rem;
-      background-color: #ec4100;
+      background-color: #c90500;
       span {
         font-size: 0.7rem;
       }
@@ -1092,7 +1092,7 @@ body.hide_scroll {
     background-color: #171717;
     width: 100% !important;
     border-radius: 35px;
-    border: 2px solid #ec4100;
+    border: 2px solid #c90500;
     font-size: 1.2rem;
     padding: 1rem 0.8rem;
     margin-bottom: 5px;
@@ -1137,7 +1137,7 @@ body.hide_scroll {
       cursor: pointer;
     }
     p.active {
-      background-color: #ec4100;
+      background-color: #c90500;
       color: #fff;
     }
   }
@@ -1225,7 +1225,7 @@ body.hide_scroll {
 }
 .select2-container--default
   .select2-results__option--highlighted.select2-results__option--selectable {
-  background-color: #ec4100 !important;
+  background-color: #c90500 !important;
 }
 .select2-container--default .select2-results > .select2-results__options {
   background-color: #e3e1e2 !important;
@@ -1236,7 +1236,7 @@ body.hide_scroll {
 }
 // author block section
 .author-block-container {
-  color: #ec4100;
+  color: #c90500;
   .single-author-col {
     display: flex;
     justify-content: center;
@@ -1296,7 +1296,7 @@ body.hide_scroll {
 // message-for-editor-section
 .message-for-editor-section {
   .container-fluid {
-    background-color: #ec4100;
+    background-color: #c90500;
     p {
       color: #fff;
       font-size: 1.2rem;
@@ -1461,7 +1461,7 @@ body.hide_scroll {
       flex-direction: column;
       justify-content: center;
       height: 85vh;
-      background-color: #ec4100cc;
+      background-color: #c90500cc;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
       color: #fff;

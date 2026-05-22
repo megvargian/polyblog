@@ -55,7 +55,7 @@
     transform: translateX(-100dvw);
     visibility: hidden !important;
     transition: transform 1s cubic-bezier(0.32, 0.17, 0, 1), opacity 1s cubic-bezier(0.32, 0.17, 0, 1), visibility 0s linear 1s;
-    background-color: #ec4100;
+    background-color: #c90500;
     text-align: right;
     font-size: 20px;
     text-align: center;
@@ -340,7 +340,7 @@
     cursor: pointer;
   }
   .swiper-featured-articles-block .swiper-pagination-bullet-active {
-    background-color: #ec4100 !important;
+    background-color: #c90500 !important;
   }
   .swiper-featured-articles-block .swiper-pagination-bullet {
     background-color: #d9d9d9;
@@ -353,7 +353,7 @@
     padding: 0.5rem 0.7rem;
     text-align: center;
     width: fit-content;
-    background-color: #ec4100;
+    background-color: #c90500;
     border-radius: 10px;
     float: right;
   }
@@ -368,7 +368,7 @@
     margin-top: 20px;
   }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider .swiper-pagination-bullet-active {
-    background-color: #ec4100 !important;
+    background-color: #c90500 !important;
   }
   .youtube-playlist-bg .swiper-pagination-youtube-production-slider .swiper-pagination-bullet {
     background-color: #d9d9d9;
@@ -386,7 +386,7 @@
   }
   .youtube-playlist-bg .youtube-production-slider .view-more-btn {
     border-radius: 10px;
-    background-color: #ec4100;
+    background-color: #c90500;
     color: #fff;
     font-family: "Lexend-Regular";
     text-transform: uppercase;
@@ -426,7 +426,7 @@
     font-size: 1rem;
   }
   .swiper-mobile-single-author-article-pagination .swiper-pagination-bullet-active {
-    background-color: #ec4100 !important;
+    background-color: #c90500 !important;
   }
   .swiper-mobile-single-author-article-pagination .swiper-pagination-bullet {
     background-color: #d9d9d9;
@@ -563,7 +563,7 @@
     width: 65px;
   }
   .contact-us-section {
-    background-color: #ec4100;
+    background-color: #c90500;
   }
   .contact-us-section input,
   .contact-us-section textarea,
@@ -576,13 +576,13 @@
   }
   .contact-us-section .container form h4 {
     font-size: 1.2rem;
-    color: #ec4100;
+    color: #c90500;
     text-transform: uppercase;
   }
   .contact-us-section .container form .next-button {
     outline: none;
     border: none;
-    background-color: #ec4100;
+    background-color: #c90500;
     color: #fff;
     font-family: "Lexend-Bold";
     text-align: center;
@@ -599,7 +599,7 @@
     margin: 0;
   }
   .contact-us-section .container form .langs p {
-    border: 1px solid #ec4100;
+    border: 1px solid #c90500;
     border-radius: 30px;
     padding: 0.75rem 1rem;
     font-size: 1rem;
@@ -609,13 +609,13 @@
     margin: 0;
   }
   .contact-us-section .container form .langs p.active {
-    background-color: #ec4100;
+    background-color: #c90500;
   }
   .contact-us-section .container form .mobile-social-links li p {
     margin-bottom: 0;
   }
   .contact-us-section .swiper-mobile-pagination .swiper-pagination-bullet-active {
-    background-color: #ec4100 !important;
+    background-color: #c90500 !important;
   }
   .contact-us-section .swiper-mobile-pagination .swiper-pagination-bullet {
     background-color: #d9d9d9;
@@ -728,7 +728,7 @@
     border: 2px solid #621a01;
   }
   .author-block-container {
-    color: #ec4100;
+    color: #c90500;
   }
   .author-block-container .single-red-border {
     border: 2px solid #621a01;
