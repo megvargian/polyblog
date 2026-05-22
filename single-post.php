@@ -15,7 +15,7 @@ get_header(); ?>
 if (have_posts()):
     while (have_posts()):
         the_post();
-        $post_id = get_the_ID();
+        // $post_id = get_the_ID();
         // $author_post_id = get_field('author');
         // $author_id = get_post_field('post_author', $author_post_id);
         // $author_name = get_the_title($author_post_id);
@@ -25,7 +25,7 @@ if (have_posts()):
         //$languages = get_translations($post_id);
         // $current_lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
 ?>
-<?php if (has_post_thumbnail()): ?>
+<?php //if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
         <!-- <?php //foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
@@ -71,7 +71,7 @@ if (have_posts()):
                 </a>
             </div> -->
     </div>
-    <?php the_post_thumbnail('full'); ?>
+    <?php // the_post_thumbnail('full'); ?>
 </div>
 <?php endif; ?>
 <div class="container-fluid px-4 single-post-container">
@@ -95,7 +95,7 @@ if (have_posts()):
     </div>
     <div class="row py-2">
         <div class="col">
-            <h1 class="align-text-arabic"><?php the_title(); ?></h1>
+            <h1 class="align-text-arabic"><?php // the_title(); ?></h1>
         </div>
     </div>
     <div class="row py-2 single-article-header-desktop">
@@ -115,7 +115,7 @@ if (have_posts()):
                         // }
                     ?>
             <?php
-                    echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
+                    // echo '<p class="published-date">' . get_the_date('d/m/Y') . '</p>';
                     ?>
         </div>
         <div class="col-8 col-sm-9">
@@ -166,7 +166,7 @@ if (have_posts()):
             ?>
         </div>
         <div class="col published-date">
-            <?php echo '<p>' . get_the_date('d/m/Y') . '</p>'; ?>
+            <?php // echo '<p>' . get_the_date('d/m/Y') . '</p>'; ?>
         </div>
     </div>
     <div class="row py-4 white-divider">
@@ -201,7 +201,7 @@ if (have_posts()):
     <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php // echo $current_lang === 'en' ? 'ltr' : 'rtl'; ?>">
         <div class="col-4 d-lg-block d-none"></div>
         <div class="col p-lg-5 px-2 align-text-arabic">
-            <?php the_content(); ?>
+            <?php // the_content(); ?>
         </div>
     </div>
     <div class="row py-4 white-divider">
