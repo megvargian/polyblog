@@ -8,7 +8,7 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+//get_header(); ?>
 <?php
 // $header_fields = get_fields('options');
 
