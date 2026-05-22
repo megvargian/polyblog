@@ -455,7 +455,7 @@ add_filter( 'document_title_parts', 'polyblog_document_title_parts' );
 
 function polyblog_bloginfo_name( $output, $show ) {
     // $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
-    $lang = 'en'
+    $lang = 'en';
     if ( $show === 'name' ) {
         return ( $lang === 'en' ) ? 'Polyblog Lebanon' : 'بوليبلوغ لبنان';
     }
