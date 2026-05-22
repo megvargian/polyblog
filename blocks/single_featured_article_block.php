@@ -18,6 +18,9 @@ if ($featured_articles): ?>
                     $categories = get_the_category($article);
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
+                    $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $title);
+                    $align_class = $is_arabic ? 'text-end' : 'text-start'; // Bootstrap RTL/LTR
+                    $dir = $is_arabic ? 'rtl' : 'ltr';
                 ?>
             <div class="col-12">
                 <div class="row single-featured-article-container ar-bold">
@@ -42,10 +45,14 @@ if ($featured_articles): ?>
                                         }
                                     } ?>
                         </div>
-                        <div class="title align-text-arabic">
-                            <a href="<?php echo esc_url($article_link); ?>">
+                        <div class="title <?php echo $is_arabic ? 'align-text-arabic' : ''; ?>">
+                            <a href="<?php echo esc_url($article_link); ?>"
+                                class="<?php echo esc_attr($align_class); ?>" dir="<?php echo esc_attr($dir); ?>">
                                 <?php echo esc_html($title); ?>
                             </a>
+                            <div class="excerpt">
+                                <?php echo wp_trim_words(get_the_excerpt($article), 30, '...'); ?>
+                            </div>
                         </div>
                         <!-- <div class="author-tags">
                             <div class="author">

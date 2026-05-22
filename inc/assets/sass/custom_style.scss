@@ -519,7 +519,7 @@ body.hide_scroll {
   .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
 
     .categories {
       display: flex;
@@ -539,6 +539,7 @@ body.hide_scroll {
       color: #fff;
       font-size: 3rem;
       line-height: 1.2;
+      margin-top: 3rem;
     }
 
     .author-tags {
@@ -548,6 +549,11 @@ body.hide_scroll {
       color: #fff;
       font-size: 1.5rem;
     }
+  }
+  .excerpt {
+    padding-top: 15px;
+    color: #fff;
+    font-size: 1.2rem;
   }
 }
 

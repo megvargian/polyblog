@@ -526,7 +526,7 @@ body.hide_scroll {
 .single-featured-article-container .right-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 .single-featured-article-container .right-container .categories {
   display: flex;
@@ -544,6 +544,7 @@ body.hide_scroll {
   color: #fff;
   font-size: 3rem;
   line-height: 1.2;
+  margin-top: 3rem;
 }
 .single-featured-article-container .right-container .author-tags {
   display: flex;
@@ -551,6 +552,11 @@ body.hide_scroll {
   justify-content: space-between;
   color: #fff;
   font-size: 1.5rem;
+}
+.single-featured-article-container .excerpt {
+  padding-top: 15px;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 .single-featured-article-container:hover img {
