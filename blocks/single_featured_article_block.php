@@ -50,7 +50,8 @@ if ($featured_articles): ?>
                                 class="<?php echo esc_attr($align_class); ?>" dir="<?php echo esc_attr($dir); ?>">
                                 <?php echo esc_html($title); ?>
                             </a>
-                            <div class="excerpt">
+                            <div class="excerpt <?php echo esc_attr($align_class); ?>"
+                                dir="<?php echo esc_attr($dir); ?>">
                                 <?php echo wp_trim_words(get_the_excerpt($article), 30, '...'); ?>
                             </div>
                         </div>
