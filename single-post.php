@@ -204,10 +204,11 @@ if (have_posts()):
         </div>
     </div>
     <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo $content_dir; ?>">
-        <div class="col-4 d-lg-block d-none"></div>
+        <?php echo $is_arabic ? '' : '<div class="col-4 d-lg-block d-none"></div>'; ?>
         <div class="col p-lg-5 px-2 <?php echo $content_align; ?>">
             <?php the_content(); ?>
         </div>
+        <?php echo $is_arabic ? '<div class="col-4 d-lg-block d-none"></div>' : ''; ?>
     </div>
     <div class="row py-4 white-divider">
         <div class="col"></div>
