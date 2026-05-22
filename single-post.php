@@ -10,7 +10,7 @@
 
 get_header(); ?>
 <?php
-$header_fields = get_fields('options');
+// $header_fields = get_fields('options');
 
 if (have_posts()):
     while (have_posts()):
@@ -28,16 +28,16 @@ if (have_posts()):
 <?php if (has_post_thumbnail()): ?>
 <div class="single-post-featured-image">
     <div class="row single-article-header-button-container">
-        <?php foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
+        <!-- <?php //foreach($header_fields['header_menu'] as $key => $menu_item){ ?>
         <div class="col d-flex justify-content-center align-items-center">
-            <a href="<?php echo $menu_item['menu_item']['url']; ?>" target="_blank">
+            <a href="<?php //echo $menu_item['menu_item']['url']; ?>" target="_blank">
                 <div class="bg-black">
-                    <p class="en"><?php echo $menu_item['menu_item']['en_text']; ?></p>
-                    <p class="ar"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
+                    <p class="en"><?php //echo $menu_item['menu_item']['en_text']; ?></p>
+                    <p class="ar"><?php //echo $menu_item['menu_item']['ar_text']; ?></p>
                 </div>
             </a>
-        </div>
-        <?php } ?>
+        </div> -->
+        <?php // } ?>
         <!-- <div class="col d-flex justify-content-center align-items-center">
                 <a href="https://polybloglb.com/category/how-we-see-it/" target="_blank">
                     <div class="bg-black">
@@ -198,7 +198,7 @@ if (have_posts()):
             </div>
         </div>
     </div>
-    <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo $current_lang === 'en' ? 'ltr' : 'rtl'; ?>">
+    <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php // echo $current_lang === 'en' ? 'ltr' : 'rtl'; ?>">
         <div class="col-4 d-lg-block d-none"></div>
         <div class="col p-lg-5 px-2 align-text-arabic">
             <?php the_content(); ?>
