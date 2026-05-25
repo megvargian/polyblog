@@ -27,7 +27,7 @@ $yt_featured_vids_block = get_fields();
                 </p>
             </div>
             <div class="col youtube-featured-vid-texts-col text-right">
-                <p>
+                <p style="direction: rtl;">
                     <?php echo $yt_featured_vids_block['text_top'] ?>
                 </p>
                 <!-- <p>
