@@ -76,6 +76,7 @@ endif;
                     $article_title = get_the_title($article_id);
                     $get_image = get_field('article_thumbnail', $article_id) != '' ? get_field('article_thumbnail', $article_id) : get_the_post_thumbnail_url($article_id);
                     $get_excerpt = get_the_excerpt($article_id);
+                    $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $get_excerpt);
 
             ?>
             <div class="col-12 mb-5">
@@ -86,8 +87,9 @@ endif;
                                 alt="<?php echo $article_title; ?>">
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-right">
-                                <p class="ar-regular mb-5">
+                            <div class="text-<?php echo $is_arabic ? 'right' : 'left'; ?>">
+                                <p class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5"
+                                    dir="<?php echo $is_arabic ? 'rtl' : 'ltr'; ?>">
                                     <?php echo $get_excerpt; ?>
                                 </p>
                                 <a class="en-regular" href="<?php echo $article_link; ?>">Read More</a>
