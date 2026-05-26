@@ -41,7 +41,8 @@ endif;
         <div class="row author-title">
             <div class="col-lg-4 col-12 px-md-0 px-5">
                 <img class="d-block single-article-img"
-                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/demo-profile.png" alt="">
+                    src="<?php echo get_the_post_thumbnail_url($author_id) ? get_the_post_thumbnail_url($author_id) : get_template_directory_uri() . '/inc/assets/images/demo-profile.png'; ?>"
+                    alt="<?php echo $get_all_single_authors_fields['author_title']; ?>">
             </div>
             <div class="col-lg-7 col-12 text-left justify-content-center d-flex align-items-center">
                 <div class="pt-lg-0 pt-sm-4 pt-2">
