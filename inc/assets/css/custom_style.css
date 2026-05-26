@@ -1349,7 +1349,7 @@ body.hide_scroll {
   transition: top 0.3s ease;
   border-radius: 24px;
   padding: 0.5rem 1rem;
-  background-color: #eb4201;
+  background-color: #c90500;
   rotate: 90deg;
 }
 .responsive-menu-button .en-regular-button {
@@ -1458,10 +1458,10 @@ body.hide_scroll {
 }
 
 .custom-modal-board-advisors .modal-body {
-  border: 3px solid #eb4201;
+  border: 3px solid #c90500;
 }
 .custom-modal-board-advisors .modal-header .btn-close {
-  background-color: #eb4201;
+  background-color: #c90500;
 }
 
 .single-article-header-button-container {
