@@ -216,7 +216,7 @@ $footer_banner = $general_fields['footer']['footer_banner'];
                                 </a>
                                 <?php }} ?>
                             </div>
-                            <div class="col-6 justify-content-center d-flex position-relative outer-phone">
+                            <div class="col-8 justify-content-center d-flex position-relative outer-phone">
                                 <img class="d-block w-100"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group.svg"
                                     alt="phone">
