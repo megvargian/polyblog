@@ -203,9 +203,20 @@ if (have_posts()):
             </div>
         </div>
     </div>
+    <div class="row py-2 single-post-font-controls-row">
+        <div class="col px-lg-5 px-2 d-flex justify-content-end">
+            <div class="single-post-font-controls" role="group" aria-label="Text size controls">
+                <button type="button" id="single-post-font-decrease" aria-label="Decrease text size">-</button>
+                <span class="single-post-font-controls-label">A</span>
+                <button type="button" id="single-post-font-increase" aria-label="Increase text size">+</button>
+            </div>
+        </div>
+    </div>
     <div class="row py-2 px-lg-5 px-1 main-content" dir="<?php echo $content_dir; ?>">
-        <div class="col p-lg-5 px-2 <?php echo $content_align; ?>">
-            <?php the_content(); ?>
+        <div class="col p-lg-5 px-2 <?php echo $content_align; ?> single-post-readable-content">
+            <div class="single-post-readable-content-inner">
+                <?php the_content(); ?>
+            </div>
         </div>
         <div class="col-4 d-lg-block d-none"></div>
     </div>
@@ -237,6 +248,60 @@ if (have_posts()):
 <script>
 jQuery(document).ready(function($) {
     let authorPostsCount = 3;
+    const MIN_FONT_SIZE = 14;
+    const MAX_FONT_SIZE = 28;
+    const FONT_SIZE_STEP = 2;
+    const STORAGE_KEY = 'polyblog_single_post_font_size';
+    const $content = $('.single-post-readable-content-inner');
+    const $increaseButton = $('#single-post-font-increase');
+    const $decreaseButton = $('#single-post-font-decrease');
+
+    function clampFontSize(fontSize) {
+        return Math.min(MAX_FONT_SIZE, Math.max(MIN_FONT_SIZE, fontSize));
+    }
+
+    function updateFontButtons(fontSize) {
+        $increaseButton.prop('disabled', fontSize >= MAX_FONT_SIZE);
+        $decreaseButton.prop('disabled', fontSize <= MIN_FONT_SIZE);
+    }
+
+    function applyFontSize(fontSize) {
+        const clampedFontSize = clampFontSize(fontSize);
+        $content.css('font-size', clampedFontSize + 'px');
+        updateFontButtons(clampedFontSize);
+
+        try {
+            localStorage.setItem(STORAGE_KEY, String(clampedFontSize));
+        } catch (error) {
+            // Keep working even if storage is unavailable.
+        }
+    }
+
+    if ($content.length) {
+        const defaultFontSize = parseFloat($content.css('font-size')) || 18;
+        let savedFontSize = defaultFontSize;
+
+        try {
+            const storedValue = parseFloat(localStorage.getItem(STORAGE_KEY));
+            if (!isNaN(storedValue)) {
+                savedFontSize = storedValue;
+            }
+        } catch (error) {
+            // Ignore storage read errors.
+        }
+
+        applyFontSize(savedFontSize);
+
+        $increaseButton.on('click', function() {
+            const currentSize = parseFloat($content.css('font-size')) || defaultFontSize;
+            applyFontSize(currentSize + FONT_SIZE_STEP);
+        });
+
+        $decreaseButton.on('click', function() {
+            const currentSize = parseFloat($content.css('font-size')) || defaultFontSize;
+            applyFontSize(currentSize - FONT_SIZE_STEP);
+        });
+    }
 
     $('#single-post-load-more').on('click', function() {
         const button = $(this);
