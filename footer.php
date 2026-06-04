@@ -201,7 +201,6 @@ $footer_banner = $general_fields['footer']['footer_banner'];
                             <?php }} ?>
                         </div>
                         <div class="row d-lg-flex d-none">
-                            <div class="col-6"></div>
                             <div class="col-6">
                                 <?php foreach ($two_in_the_same_row_buttons as $key => $menu_item) {
                                         if($menu_item['footer_item']['ispopuptext_or_url']){
