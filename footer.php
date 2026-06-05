@@ -16,6 +16,7 @@ $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_m
 $two_in_the_same_row_buttons = array_slice($general_fields['footer']['footer_menu'], 6, 2);
 $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
 $footer_banner = $general_fields['footer']['footer_banner'];
+$is_author_search_page = is_page(293);
 ?>
 <?php if (is_single('post')) {?>
 <section class="py-4 d-md-block d-none contact-us-section-light">
@@ -217,13 +218,57 @@ $footer_banner = $general_fields['footer']['footer_banner'];
                                 <?php }} ?>
                             </div>
                             <div class="col-8 justify-content-center d-flex position-relative outer-phone">
+                                <?php if($is_author_search_page) {?>
+                                <img class="d-block w-100"
+                                    src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group-white.svg"
+                                    alt="phone">
+                                <?php } else { ?>
                                 <img class="d-block w-100"
                                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Group.svg"
                                     alt="phone">
+                                <?php } ?>
                                 <div class="inner-phone">
                                     <p>
                                         Follow us
                                     </p>
+                                    <?php if($is_author_search_page) {?>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="<?php echo $footer_social_links['insta_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer_white.svg"
+                                                alt="instagram">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/instagram_footer_fill_white.svg"
+                                                alt="instagram">
+                                        </a>
+                                        <a href="<?php echo $footer_social_links['x_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer_white.svg"
+                                                alt="X">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/twitter_footer_fill_white.svg"
+                                                alt="X">
+                                        </a>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="<?php echo $footer_social_links['fb_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer_white.svg"
+                                                alt="facebook">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/facebook_footer_fill_white.svg"
+                                                alt="facebook">
+                                        </a>
+                                        <a href="<?php echo $footer_social_links['youtube_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer_white.svg"
+                                                alt="youtube">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/youtube_footer_fill_white.svg"
+                                                alt="youtube">
+                                        </a>
+                                    </div>
+                                    <?php } else { ?>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <a href="<?php echo $footer_social_links['insta_url']; ?>">
                                             <img class="w-100 empty"
@@ -260,6 +305,7 @@ $footer_banner = $general_fields['footer']['footer_banner'];
                                                 alt="youtube">
                                         </a>
                                     </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
