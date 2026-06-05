@@ -2398,3 +2398,127 @@ body.hide_scroll {
   bottom: 10%;
   width: 90px;
 }
+
+.page-template-search-authors-page-php .last-footer-section .ar {
+  color: #fff !important;
+}
+.page-template-search-authors-page-php .footer-container {
+  font-family: "Lexend-Regular";
+}
+.page-template-search-authors-page-php .footer-container button {
+  padding: 1rem 0.8rem;
+  border: 2px solid #fff;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.page-template-search-authors-page-php .footer-container .a-button {
+  padding: 1rem 0.8rem;
+  border: 2px solid #fff;
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.page-template-search-authors-page-php .footer-container button:hover {
+  background-color: #c90500;
+  color: #fff;
+}
+.page-template-search-authors-page-php .footer-container .a-button:hover {
+  background-color: #c90500;
+  color: #fff;
+}
+.page-template-search-authors-page-php .footer-container .custom-rotate {
+  display: flex;
+  gap: 10px;
+}
+.page-template-search-authors-page-php .footer-container .custom-rotate button {
+  padding: 1rem 0.8rem;
+  border: 2px solid #fff;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 35px;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  writing-mode: vertical-lr; /* Makes text vertical */
+  width: fit-content;
+  height: 23rem;
+}
+.page-template-search-authors-page-php .footer-container .custom-rotate a {
+  padding: 1rem 0.8rem;
+  border: 2px solid #fff;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 35px;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  writing-mode: vertical-lr; /* Makes text vertical */
+  width: fit-content;
+  height: 23rem;
+}
+.page-template-search-authors-page-php .footer-container .custom-rotate a:hover {
+  background-color: #c90500;
+  color: #fff;
+}
+.page-template-search-authors-page-php .footer-container .custom-rotate button:hover {
+  background-color: #c90500;
+  color: #fff;
+}
+.page-template-search-authors-page-php .footer-container .full {
+  background-color: #fff !important;
+  color: #000 !important;
+  writing-mode: horizontal-tb;
+}
+.page-template-search-authors-page-php .footer-container .full:hover {
+  color: #fff !important;
+}
+.page-template-search-authors-page-php .footer-container .custom-width {
+  width: 13rem;
+  margin-left: 6px;
+}
+.page-template-search-authors-page-php .footer-container .donate {
+  position: relative;
+}
+.page-template-search-authors-page-php .footer-container .donate .heart {
+  width: 85px;
+  height: 50px;
+  position: absolute;
+  bottom: -40%;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone {
+  position: absolute;
+  top: 14%;
+  z-index: 3;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone p {
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone img {
+  height: 55px;
+  margin-bottom: 15px;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone a:hover .empty {
+  display: none;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone a:hover .fill {
+  display: block;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone a .empty {
+  display: block;
+}
+.page-template-search-authors-page-php .footer-container .outer-phone .inner-phone a .fill {
+  display: none;
+}

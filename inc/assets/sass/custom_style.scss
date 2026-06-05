@@ -2638,3 +2638,136 @@ body.hide_scroll {
   bottom: 10%;
   width: 90px;
 }
+
+
+.page-template-search-authors-page-php{
+  .last-footer-section .ar{
+    color: #fff !important;
+  }
+  .footer-container {
+    font-family: $en-regular;
+    button {
+      padding: 1rem 0.8rem;
+      border: 2px solid $text_white;
+      width: 100%;
+      font-size: 20px;
+      color: $text_white;
+      border-radius: 35px;
+      margin-bottom: 10px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    .a-button {
+      padding: 1rem 0.8rem;
+      border: 2px solid $text_white;
+      width: 100%;
+      font-size: 1rem;
+      color: $text_white;
+      border-radius: 35px;
+      margin-bottom: 10px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background-color: $sec_color;
+      color: $text_white;
+    }
+    .a-button:hover {
+      background-color: $sec_color;
+      color: $text_white;
+    }
+    .custom-rotate {
+      display: flex;
+      gap: 10px;
+      button {
+        padding: 1rem 0.8rem;
+        border: 2px solid $text_white;
+        width: 100%;
+        font-size: 20px;
+        color: $text_white;
+        border-radius: 35px;
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
+        writing-mode: vertical-lr; /* Makes text vertical */
+        width: fit-content;
+        height: 23rem;
+      }
+      a {
+        padding: 1rem 0.8rem;
+        border: 2px solid $text_white;
+        width: 100%;
+        font-size: 20px;
+        color: $text_white;
+        border-radius: 35px;
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
+        writing-mode: vertical-lr; /* Makes text vertical */
+        width: fit-content;
+        height: 23rem;
+      }
+      a:hover {
+        background-color: $sec_color;
+        color: $text_white;
+      }
+      button:hover {
+        background-color: $sec_color;
+        color: $text_white;
+      }
+    }
+    .full {
+      background-color: $text_white !important;
+      color: #000 !important;
+      writing-mode: horizontal-tb;
+    }
+    .full:hover {
+      color: $text_white !important;
+    }
+    .custom-width {
+      width: 13rem;
+      margin-left: 6px;
+    }
+    .donate {
+      position: relative;
+      .heart {
+        width: 85px;
+        height: 50px;
+        position: absolute;
+        bottom: -40%;
+      }
+    }
+    .outer-phone {
+      .inner-phone {
+        position: absolute;
+        top: 14%;
+        z-index: 3;
+        p {
+          font-size: 35px;
+          color: $text_white;
+          text-align: center;
+        }
+        img {
+          height: 55px;
+          margin-bottom: 15px;
+        }
+        a:hover {
+          .empty {
+            display: none;
+          }
+          .fill {
+            display: block;
+          }
+        }
+        a {
+          .empty {
+            display: block;
+          }
+          .fill {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

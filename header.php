@@ -48,10 +48,10 @@ $header_fields = get_fields('options');
                 <div class="white-line d-block d-lg-none"></div>
             </div>
             <div id="menu-button" class="responsive-menu-button menu_mobile_nav">
-                <div class="en-regular-button">on the agenda</div>
+                <div class="en-regular-button">Menu</div>
                 <img class="arrow-right"
                     src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/black-arrow.svg"
-                    alt="on the agenda">
+                    alt="Menu">
             </div>
             <div id="home-video-header-container"
                 <?php echo is_front_page() ? 'class="home-video-header-container"' : ''; ?>>
