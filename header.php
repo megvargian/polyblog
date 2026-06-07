@@ -42,6 +42,88 @@ $header_fields = get_fields('options');
     ?>
     <meta name="description" content="<?php echo esc_attr( $meta_description ); ?>">
     <meta name="keywords" content="<?php echo esc_attr( $meta_keywords ); ?>">
+
+    <?php
+    // --- Open Graph & Twitter Card meta tags for social media sharing ---
+    $og_site_name    = get_bloginfo('name');
+    $og_url          = esc_url( ( is_ssl() ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+    $og_type         = 'website';
+    $og_title        = get_bloginfo('name');
+    $og_description  = $meta_description;
+    $og_image        = '';
+    $og_image_width  = '';
+    $og_image_height = '';
+
+    if ( is_singular('post') ) {
+        // Single article page
+        setup_postdata( $GLOBALS['post'] );
+        $og_type        = 'article';
+        $og_title       = get_the_title();
+        $og_url         = get_permalink();
+        $raw_excerpt    = get_the_excerpt();
+        $og_description = $raw_excerpt ? wp_strip_all_tags( $raw_excerpt ) : $meta_description;
+
+        if ( has_post_thumbnail() ) {
+            $thumb      = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+            $og_image        = $thumb[0];
+            $og_image_width  = $thumb[1];
+            $og_image_height = $thumb[2];
+        }
+    } elseif ( is_singular('authors') ) {
+        // Single author page
+        $og_type        = 'profile';
+        $og_title       = get_the_title();
+        $og_url         = get_permalink();
+        $author_fields  = get_fields();
+        // Use bio fields if available, fall back to site description
+        $bio_en = isset($author_fields['author_bio_en']) ? $author_fields['author_bio_en'] : '';
+        $bio_ar = isset($author_fields['author_bio_ar']) ? $author_fields['author_bio_ar'] : '';
+        $bio    = $bio_en ? $bio_en : ( $bio_ar ? $bio_ar : '' );
+        $og_description = $bio ? wp_strip_all_tags( $bio ) : $meta_description;
+
+        if ( has_post_thumbnail() ) {
+            $thumb           = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+            $og_image        = $thumb[0];
+            $og_image_width  = $thumb[1];
+            $og_image_height = $thumb[2];
+        }
+    }
+
+    // Fallback: use site logo or first available image
+    if ( ! $og_image ) {
+        $custom_logo_id = get_theme_mod('custom_logo');
+        if ( $custom_logo_id ) {
+            $logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+            if ( $logo_src ) {
+                $og_image = $logo_src[0];
+            }
+        }
+    }
+    ?>
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type"        content="<?php echo esc_attr( $og_type ); ?>">
+    <meta property="og:url"         content="<?php echo esc_url( $og_url ); ?>">
+    <meta property="og:site_name"   content="<?php echo esc_attr( $og_site_name ); ?>">
+    <meta property="og:title"       content="<?php echo esc_attr( $og_title ); ?>">
+    <meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>">
+    <?php if ( $og_image ) : ?>
+    <meta property="og:image"       content="<?php echo esc_url( $og_image ); ?>">
+    <?php if ( $og_image_width )  : ?><meta property="og:image:width"  content="<?php echo esc_attr( $og_image_width ); ?>"><?php endif; ?>
+    <?php if ( $og_image_height ) : ?><meta property="og:image:height" content="<?php echo esc_attr( $og_image_height ); ?>"><?php endif; ?>
+    <meta property="og:image:alt"   content="<?php echo esc_attr( $og_title ); ?>">
+    <?php endif; ?>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="<?php echo esc_attr( $og_title ); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr( $og_description ); ?>">
+    <?php if ( $og_image ) : ?>
+    <meta name="twitter:image"       content="<?php echo esc_url( $og_image ); ?>">
+    <meta name="twitter:image:alt"   content="<?php echo esc_attr( $og_title ); ?>">
+    <?php endif; ?>
+    <!-- End social meta tags -->
+
     <?php wp_head(); ?>
 </head>
 
