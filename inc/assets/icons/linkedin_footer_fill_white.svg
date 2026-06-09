@@ -3,8 +3,8 @@
   <defs>
     <style>
       .st0, .st1 {
-        fill: #fff;
-        stroke: #c90500;
+        fill: #;
+        stroke: #fff;
         stroke-miterlimit: 10;
       }
       .st1 {
