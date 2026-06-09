@@ -3,7 +3,7 @@
   <defs>
     <style>
       .st0, .st1 {
-        fill: #;
+        fill: #c90500;
         stroke: #fff;
         stroke-miterlimit: 10;
       }
