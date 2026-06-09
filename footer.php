@@ -305,6 +305,24 @@ $is_author_search_page = is_page(293);
                                                 alt="youtube">
                                         </a>
                                     </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="<?php echo $footer_social_links['linkedin_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/linkedin_footer.svg"
+                                                alt="linkedin">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/linkedin_footer_fill.svg"
+                                                alt="linkedin">
+                                        </a>
+                                        <a href="<?php echo $footer_social_links['tiktok_url']; ?>">
+                                            <img class="w-100 empty"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/tiktok_footer.svg"
+                                                alt="tiktok">
+                                            <img class="w-100 fill"
+                                                src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/tiktok_footer_fill.svg"
+                                                alt="tiktok">
+                                        </a>
+                                    </div>
                                     <?php } ?>
                                 </div>
                             </div>
