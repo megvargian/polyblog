@@ -4,7 +4,7 @@
     <style>
       .st0, .st1 {
         fill: #fff;
-        stroke: none;
+        stroke: #c90500;
         stroke-miterlimit: 10;
       }
       .st1 {
