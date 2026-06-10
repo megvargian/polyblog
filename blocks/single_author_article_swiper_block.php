@@ -34,7 +34,7 @@ $all_articles = $single_author_article_swiper_block['articles'];
                                         <p class="text-left d-md-block d-none">
                                             <?php echo $author_excpert; ?>
                                         </p>
-                                        <a href="<?php echo get_permalink($article_id); ?>" class="text-decoration-none">
+                                        <a href="<?php echo get_permalink($author_id); ?>" class="text-decoration-none">
                                             <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
                                             <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
                                         </a>
