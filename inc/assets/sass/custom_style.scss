@@ -2769,3 +2769,16 @@ body.hide_scroll {
     }
   }
 }
+
+/* Chrome, Safari, Edge */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* Firefox 19+ */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+/* Internet Explorer 10 */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}

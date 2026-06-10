@@ -2520,3 +2520,18 @@ body.hide_scroll {
 .page-template-search-authors-page-php .footer-container .outer-phone .inner-phone a .fill {
   display: none;
 }
+
+/* Chrome, Safari, Edge */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* Firefox 19+ */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* Internet Explorer 10 */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
