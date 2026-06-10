@@ -24,7 +24,9 @@ $all_articles = $single_author_article_swiper_block['articles'];
                     <div class="swiper-slide single-red-border">
                         <div class="row">
                             <div class="col-6 custom-padding-right">
-                                <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo $article_title; ?>">
+                                <a href="<?php echo get_permalink($article_id); ?>">
+                                    <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo $article_title; ?>">
+                                </a>
                             </div>
                             <div class="col-6 custom-padding-left">
                                 <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
@@ -32,8 +34,10 @@ $all_articles = $single_author_article_swiper_block['articles'];
                                         <p class="text-left d-md-block d-none">
                                             <?php echo $author_excpert; ?>
                                         </p>
-                                        <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
-                                        <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
+                                        <a href="<?php echo get_permalink($article_id); ?>" class="text-decoration-none">
+                                            <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
+                                            <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
