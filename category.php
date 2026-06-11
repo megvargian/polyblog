@@ -43,6 +43,7 @@ $cat_fields = get_fields('category_' . $category_id);
                             $post_title = get_the_title($post_id);
                             $article_thumbnail = get_field('article_thumbnail');
                             $languages = get_translations($post_id);
+                            $tags = get_the_tags($post_id);
 
                             if ($article_thumbnail) : ?>
                     <div class="card-img-top">
@@ -103,7 +104,16 @@ $cat_fields = get_fields('category_' . $category_id);
                                     </div>
                                     <div class="row">
                                         <div class="col">
-                                            <p class="tags align-text-arabic">tag 1 / tag 2 / tag 3</p>
+                                            <?php if ($tags) : ?>
+                                            <p class="tags align-text-arabic">
+                                                <?php
+                                                        $tag_names = array_map(function($tag) {
+                                                            return $tag->name;
+                                                        }, $tags);
+                                                        echo esc_html(implode(' / ', $tag_names));
+                                                    ?>
+                                            </p>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
