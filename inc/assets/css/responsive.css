@@ -19,6 +19,7 @@
   }
   .search-authors-page h1 span,
   .our-segments-page h1 span,
+  .get-to-know-us-page h1 span,
   .how-we-see-it-container h1 span,
   .what-we-think-container h1 span {
     font-size: 3rem;
@@ -503,12 +504,14 @@
   }
   .search-authors-page h1 span,
   .our-segments-page h1 span,
+  .get-to-know-us-page h1 span,
   .how-we-see-it-container h1 span,
   .what-we-think-container h1 span {
     font-size: 2rem;
   }
   .search-authors-page h1 .en-bold,
   .our-segments-page h1 .en-bold,
+  .get-to-know-us-page h1 .en-bold,
   .how-we-see-it-container h1 .en-bold,
   .what-we-think-container h1 .en-bold {
     letter-spacing: 10px;
@@ -544,10 +547,10 @@
   .last-footer-section .ar {
     font-size: 2rem;
   }
-  .our-segments-page p {
+  .our-segments-page p, .get-to-know-us-page p {
     font-size: 1rem;
   }
-  .our-segments-page h5 {
+  .our-segments-page h5, .get-to-know-us-page h5 {
     font-size: 1.4rem;
   }
 }
@@ -648,30 +651,35 @@
   }
   .search-authors-page h1 span,
   .our-segments-page h1 span,
+  .get-to-know-us-page h1 span,
   .how-we-see-it-container h1 span,
   .what-we-think-container h1 span {
     font-size: 1.5rem;
   }
   .search-authors-page h1 .en-bold,
   .our-segments-page h1 .en-bold,
+  .get-to-know-us-page h1 .en-bold,
   .how-we-see-it-container h1 .en-bold,
   .what-we-think-container h1 .en-bold {
     letter-spacing: 8px;
   }
   .search-authors-page .single-author-block h4,
   .our-segments-page .single-author-block h4,
+  .get-to-know-us-page .single-author-block h4,
   .how-we-see-it-container .single-author-block h4,
   .what-we-think-container .single-author-block h4 {
     font-size: 1rem;
   }
   .search-authors-page .single-author-block p,
   .our-segments-page .single-author-block p,
+  .get-to-know-us-page .single-author-block p,
   .how-we-see-it-container .single-author-block p,
   .what-we-think-container .single-author-block p {
     font-size: 0.75rem;
   }
   .search-authors-page .single-author-block .view-more-btn,
   .our-segments-page .single-author-block .view-more-btn,
+  .get-to-know-us-page .single-author-block .view-more-btn,
   .how-we-see-it-container .single-author-block .view-more-btn,
   .what-we-think-container .single-author-block .view-more-btn {
     font-size: 0.8rem;
@@ -828,30 +836,35 @@
   }
   .search-authors-page .main-header-cat,
   .our-segments-page .main-header-cat,
+  .get-to-know-us-page .main-header-cat,
   .how-we-see-it-container .main-header-cat,
   .what-we-think-container .main-header-cat {
     padding: 2rem 3rem;
   }
   .search-authors-page h1 span,
   .our-segments-page h1 span,
+  .get-to-know-us-page h1 span,
   .how-we-see-it-container h1 span,
   .what-we-think-container h1 span {
     font-size: 1.2rem;
   }
   .search-authors-page h1 .en-bold,
   .our-segments-page h1 .en-bold,
+  .get-to-know-us-page h1 .en-bold,
   .how-we-see-it-container h1 .en-bold,
   .what-we-think-container h1 .en-bold {
     letter-spacing: 5px;
   }
   .search-authors-page .bg-black,
   .our-segments-page .bg-black,
+  .get-to-know-us-page .bg-black,
   .how-we-see-it-container .bg-black,
   .what-we-think-container .bg-black {
     padding: 1rem 2rem;
   }
   .search-authors-page .hovered-single-author:hover,
   .our-segments-page .hovered-single-author:hover,
+  .get-to-know-us-page .hovered-single-author:hover,
   .how-we-see-it-container .hovered-single-author:hover,
   .what-we-think-container .hovered-single-author:hover {
     scale: 1.04;
@@ -884,13 +897,13 @@
   .last-footer-section .ar {
     font-size: 1rem;
   }
-  .our-segments-page p {
+  .our-segments-page p, .get-to-know-us-page p {
     font-size: 0.8rem;
   }
-  .our-segments-page h5 {
+  .our-segments-page h5, .get-to-know-us-page h5 {
     font-size: 1rem;
   }
-  .our-segments-page img {
+  .our-segments-page img, .get-to-know-us-page img {
     border-radius: 10px;
   }
 }
