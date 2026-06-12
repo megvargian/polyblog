@@ -47,7 +47,7 @@ if ($featured_articles): ?>
                                     } ?>
                         </div>
                         <div class="title <?php echo esc_attr($align_class); ?>">
-                            <a href="<?php echo esc_url($article_link); ?>"
+                            <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>"
                                 class="<?php echo esc_attr($align_class); ?>" dir="<?php echo esc_attr($dir); ?>">
                                 <?php echo esc_html($title); ?>
                             </a>
