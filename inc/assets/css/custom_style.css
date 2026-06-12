@@ -2354,43 +2354,43 @@ body.hide_scroll {
   padding: 0.5rem 2rem;
 }
 
-.our-segments-page, .get-to-know-us-page {
+.our-segments-page, .get-to-know-us-page, .our-production-page {
   background-color: #131313;
 }
-.our-segments-page .bg-black, .get-to-know-us-page .bg-black {
+.our-segments-page .bg-black, .get-to-know-us-page .bg-black, .our-production-page .bg-black {
   background-color: #c90500;
   border-radius: 150px;
   padding: 2rem 6rem;
 }
-.our-segments-page h1 span, .get-to-know-us-page h1 span {
+.our-segments-page h1 span, .get-to-know-us-page h1 span, .our-production-page h1 span {
   display: block;
   font-size: 4rem;
   text-align: left;
   color: #fff;
 }
-.our-segments-page .white-line, .get-to-know-us-page .white-line {
+.our-segments-page .white-line, .get-to-know-us-page .white-line, .our-production-page .white-line {
   border-bottom: 6px solid #fff;
   width: 100%;
 }
-.our-segments-page p, .get-to-know-us-page p {
+.our-segments-page p, .get-to-know-us-page p, .our-production-page p {
   font-size: 1.2rem;
   color: #fff;
 }
-.our-segments-page h5, .get-to-know-us-page h5 {
+.our-segments-page h5, .get-to-know-us-page h5, .our-production-page h5 {
   font-size: 1.8rem;
   color: #fff;
 }
-.our-segments-page img, .get-to-know-us-page img {
+.our-segments-page img, .get-to-know-us-page img, .our-production-page img {
   border-radius: 25px;
 }
-.our-segments-page .bg-orange-section, .get-to-know-us-page .bg-orange-section {
+.our-segments-page .bg-orange-section, .get-to-know-us-page .bg-orange-section, .our-production-page .bg-orange-section {
   background-color: #c90500;
 }
-.our-segments-page .bg-orange-section .custom-border-radius, .get-to-know-us-page .bg-orange-section .custom-border-radius {
+.our-segments-page .bg-orange-section .custom-border-radius, .get-to-know-us-page .bg-orange-section .custom-border-radius, .our-production-page .bg-orange-section .custom-border-radius {
   border-radius: 50px;
   background-color: #181617;
 }
-.our-segments-page h2, .get-to-know-us-page h2 {
+.our-segments-page h2, .get-to-know-us-page h2, .our-production-page h2 {
   color: #fff;
 }
 

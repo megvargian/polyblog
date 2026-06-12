@@ -1,11 +1,11 @@
 <?php
 /**
- * Template Name: Get to Know Us Page
+ * Template Name: Our Production Page
  */
 
 get_header();
 ?>
-<section class="get-to-know-us-page">
+<section class="our-production-page">
     <div class="container">
         <div class="row pt-2 mb-5 d-lg-flex d-none">
             <div class="col-12">
