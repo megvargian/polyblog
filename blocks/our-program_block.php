@@ -37,10 +37,10 @@ $bg_img_block = get_fields();
     <section class="our-production-block-content py-5">
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-md-5 col-12">
+                <div class="col-lg-5 col-12">
                     <img class="w-100" src="<?php echo $bg_img_block['logo'] ?>" alt="<?php echo $bg_img_block['title'] ?>">
                 </div>
-                <div class="col-md-5 col-12 text-right">
+                <div class="col-lg-5 col-12 text-right">
                     <h2 class="en-bold mb-4">
                         <?php echo $bg_img_block['title'] ?>
                     </h2>
