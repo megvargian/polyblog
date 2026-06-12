@@ -23,11 +23,17 @@ $page_fields = get_fields();
             </div>
         </div>
     </div>
-    <?php
-    while ( have_posts() ) : the_post();
-        the_content();
-    endwhile;
-    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <?php
+                    while ( have_posts() ) : the_post();
+                        the_content();
+                    endwhile;
+                ?>
+            </div>
+        </div>
+    </div>
 </section>
 <?php
 get_footer();
