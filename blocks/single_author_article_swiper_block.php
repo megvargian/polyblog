@@ -19,12 +19,13 @@ $all_articles = $single_author_article_swiper_block['articles'];
                         $author_image = get_the_post_thumbnail_url($author_id);
                         $author_title = get_the_title($author_id);
                         $author_excpert = get_the_excerpt($author_id);
+                        $is_youtube_video = get_field('youtube_url', $article_id);
 
                     ?>
                     <div class="swiper-slide single-red-border">
                         <div class="row">
                             <div class="col-6 custom-padding-right">
-                                <a href="<?php echo get_permalink($article_id); ?>">
+                                <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink($article_id); ?>">
                                     <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo $article_title; ?>">
                                 </a>
                             </div>

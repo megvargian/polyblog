@@ -34,9 +34,10 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                     $count++;
                     $get_first_category_id = $categories[0] -> term_id;
                     $get_fields_cat = get_fields('category_' .$get_first_category_id);
+                    $is_youtube_video = get_field('youtube_url', $post_id);
             ?>
                     <div class="col-4 p-1 bg-gray">
-                        <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
+                        <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>" target="_blank" disabled>
                             <div class="hover-cat">
                                 <div class="cat">
                                     <span class="en-bold"><?php echo $get_fields_cat['en_title']; ?></span>
@@ -102,9 +103,10 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                             $translations = get_translations($post_id);
                             $get_first_category_id = $categories[0] -> term_id;
                             $get_fields_cat = get_fields('category_' .$get_first_category_id);
+                            $is_youtube_video = get_field('youtube_url', $post_id);
                     ?>
                             <div class="swiper-slide p-1 bg-gray">
-                                <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $article_link; ?>" target="_blank" disabled>
+                                <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>" target="_blank" disabled>
                                     <div class="hover-cat">
                                         <div class="cat">
                                             <span class="en-bold"><?php echo $get_fields_cat['en_title']; ?></span>

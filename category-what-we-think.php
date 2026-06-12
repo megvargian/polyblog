@@ -39,15 +39,16 @@ $cat_fields = get_fields('category_' . $category_id);
             <div class="category-card-desktop col-md-6 my-2">
                 <div class="card">
                     <?php
-                            $post_id = get_the_ID();
-                            $post_title = get_the_title($post_id);
-                            $article_thumbnail = get_field('article_thumbnail');
-                            $languages = get_translations($post_id);
-                            $tags = get_the_tags($post_id);
+                        $post_id = get_the_ID();
+                        $post_title = get_the_title($post_id);
+                        $article_thumbnail = get_field('article_thumbnail');
+                        $languages = get_translations($post_id);
+                        $tags = get_the_tags($post_id);
+                        $is_youtube_video = get_field('youtube_url', $post_id);
 
-                            if ($article_thumbnail) : ?>
+                        if ($article_thumbnail) : ?>
                     <div class="card-img-top">
-                        <a href="<?php the_permalink(); ?>">
+                        <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink(); ?>">
                             <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>"
                                 alt="<?php the_title(); ?>" class="img-fluid">
                         </a>
@@ -139,10 +140,11 @@ $cat_fields = get_fields('category_' . $category_id);
                                         $post_title = get_the_title($post_id);
                                         $article_thumbnail = get_field('article_thumbnail');
                                         $languages = get_translations($post_id);
+                                        $is_youtube_video = get_field('youtube_url', $post_id);
 
                                         if ($article_thumbnail) : ?>
                                 <div class="card-img-top">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink(); ?>">
                                         <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>"
                                             alt="<?php the_title(); ?>" class="img-fluid">
                                     </a>

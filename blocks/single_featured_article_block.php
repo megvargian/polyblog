@@ -18,6 +18,7 @@ if ($featured_articles): ?>
                     $categories = get_the_category($article);
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
+                    $is_youtube_video = get_field('youtube_url', $article);
                     $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $title);
                     $align_class = $is_arabic ? 'text-end' : 'text-start'; // Bootstrap RTL/LTR
                     $dir = $is_arabic ? 'rtl' : 'ltr';
@@ -25,7 +26,7 @@ if ($featured_articles): ?>
             <div class="col-12">
                 <div class="row single-featured-article-container ar-bold">
                     <div class="col-5">
-                        <a href="<?php echo esc_url($article_link); ?>">
+                        <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                             <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
                         </a>
                     </div>
@@ -89,6 +90,7 @@ if ($featured_articles): ?>
                     $author_name = get_the_title(get_field('author', $article));
                     $thumbnail = get_field('article_thumbnail', $article);
                     $translations = get_translations($article);
+                    $is_youtube_video = get_field('youtube_url', $article);
                 ?>
             <div class="swiper-slide">
                 <div class="row single-featured-article-container py-4">
@@ -124,13 +126,13 @@ if ($featured_articles): ?>
                                     } ?>
                         </div>
                         <div class="title align-text-arabic">
-                            <a class="d-none d-lg-block" href="<?php echo esc_url($article_link); ?>">
+                            <a class="d-none d-lg-block" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <?php echo esc_html($title); ?>
                             </a>
-                            <a class="d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
+                            <a class="d-block d-lg-none" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <?php echo trim_words_with_limits(get_the_excerpt($article), 25); ?>
                             </a>
-                            <a class="read-more-btn d-block d-lg-none" href="<?php echo esc_url($article_link); ?>">
+                            <a class="read-more-btn d-block d-lg-none" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 read more
                             </a>
                         </div>

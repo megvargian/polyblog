@@ -63,12 +63,13 @@ endif;
                     $text_dir      = $is_arabic ? 'rtl' : 'ltr';
                     $align_class   = $is_arabic ? 'text-right' : 'text-left';
                     $font_class    = $is_arabic ? 'ar-regular' : 'en-regular';
+                    $is_youtube_video = get_field('youtube_url', $article_id);
             ?>
             <div class="col-12 mb-5">
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
-                            <a href="<?php echo esc_url($article_link); ?>">
+                            <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <img class="d-block w-100" src="<?php echo esc_url($get_image); ?>"
                                     alt="<?php echo esc_attr($article_title); ?>">
                             </a>
@@ -83,7 +84,7 @@ endif;
                                 <p class="<?php echo $font_class; ?> mb-5">
                                     <?php echo wp_trim_words($get_excerpt, 30, '...'); ?>
                                 </p>
-                                <a class="en-regular" href="<?php echo esc_url($article_link); ?>">Read More</a>
+                                <a class="en-regular" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">Read More</a>
                             </div>
                         </div>
                     </div>
