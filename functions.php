@@ -336,6 +336,17 @@ function my_acf_init_block_types()
                 'keywords'          => array('testimonial', 'quote'),
             )
         );
+        acf_register_block_type(
+            array(
+                'name'              => 'Our Program Block',
+                'title'             => __('Our Program Block'),
+                'description'       => __('This is the Our Program Block'),
+                'render_template'   => 'blocks/our-program_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'admin-comments',
+                'keywords'          => array('testimonial', 'quote'),
+            )
+        );
 	}
 }
 
