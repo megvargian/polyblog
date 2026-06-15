@@ -42,18 +42,18 @@ $bg_img_block = get_fields();
                 </div>
                 <div class="col-lg-5 col-12 text-left">
                     <h2 class="en-bold mb-4">
-                        <?php echo $bg_img_block['title_ar'] ?>
-                    </h2>
-                    <p>
-                        <?php echo $bg_img_block['content_ar'] ?>
-                    </p>
-                </div>
-                <div class="col-lg-5 col-12 text-right">
-                    <h2 class="en-bold mb-4">
                         <?php echo $bg_img_block['title_en'] ?>
                     </h2>
                     <p>
                         <?php echo $bg_img_block['content_en'] ?>
+                    </p>
+                </div>
+                <div class="col-lg-5 col-12 text-right">
+                    <h2 class="en-bold mb-4">
+                        <?php echo $bg_img_block['title_ar'] ?>
+                    </h2>
+                    <p>
+                        <?php echo $bg_img_block['content_ar'] ?>
                     </p>
                 </div>
             </div>
