@@ -1341,7 +1341,7 @@ body.hide_scroll {
   overflow: hidden;
   overflow: auto;
   top: 120px;
-  left: -6%;
+  left: -2%;
   cursor: pointer;
   z-index: 20;
   transition: top 0.3s ease;

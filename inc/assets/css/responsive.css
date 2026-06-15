@@ -906,6 +906,9 @@
   .our-segments-page img, .get-to-know-us-page img, .our-production-page img {
     border-radius: 10px;
   }
+  .responsive-menu-button {
+    left: -6%;
+  }
 }
 @media (max-width: 470px) {
   .message-for-editor-section .container-fluid img {
