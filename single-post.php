@@ -226,7 +226,7 @@ if (have_posts()):
     <div class="row publish-with-us-img">
         <div class="col">
             <a href="http://polybloglb.com/#contact-us-section"><img class="py-5"
-                    src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" /></a>
+                    src="https://polybloglb.com/wp-content/uploads/2026/06/publish-with-us.jpg.jpeg" /></a>
         </div>
     </div>
     <div class="row py-4 white-divider">
