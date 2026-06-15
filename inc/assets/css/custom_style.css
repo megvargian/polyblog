@@ -2346,7 +2346,7 @@ body.hide_scroll {
   color: #fff;
   font-size: 1.5rem;
 }
-.single-author-page .authors-article a {
+.single-author-page .authors-article .read-more {
   color: #fff;
   background-color: #ffdb0b;
   font-size: 1rem;

@@ -84,7 +84,7 @@ endif;
                                 <p class="<?php echo $font_class; ?> mb-5">
                                     <?php echo wp_trim_words($get_excerpt, 30, '...'); ?>
                                 </p>
-                                <a class="en-regular" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">Read More</a>
+                                <a class="en-regular read-more" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -104,9 +104,9 @@ endif;
         </div>
         <div class="row publish-with-us-img justify-content-center">
             <div class="col-7 py-5">
-                <a href="http://polybloglb.com">
+                <a href="http://polybloglb.com/#contact-us-section">
                     <img class="w-100 d-block"
-                        src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
+                        src="https://polybloglb.com/wp-content/uploads/2026/06/publish-with-us.jpg.jpeg" />
                 </a>
             </div>
         </div>

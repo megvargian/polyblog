@@ -112,9 +112,9 @@ $search_authors_fields = get_fields();
         </div>
         <div class="row publish-with-us-img justify-content-center">
             <div class="col-7 py-5">
-                <a href="http://polybloglb.com">
+                <a href="http://polybloglb.com/#contact-us-section">
                     <img class="w-100 d-block"
-                        src="https://polybloglb.com/wp-content/uploads/2025/01/publishwithus.png" />
+                        src="https://polybloglb.com/wp-content/uploads/2026/06/publish-with-us.jpg.jpeg" />
                 </a>
             </div>
         </div>
