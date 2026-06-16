@@ -59,10 +59,17 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                                     ?>
                                 </div>
                             </div>
-                            <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
+                            <div class="position-relative">
+                                <?php if($is_youtube_video) : ?>
+                                    <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                        <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                    </svg>
+                                <?php endif; ?>
+                                <img class="d-block w-100" src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php echo esc_attr($article_title); ?>">
+                            </div>
                             <div class="hover-text">
                                 <p>
-                                    <?php echo $article_title; ?>
+                                    <?php echo esc_html($article_title); ?>
                                 </p>
                             </div>
                             <div class="hover-cat hover-cat-bottom justify-content-end d-sm-none d-flex">
@@ -109,8 +116,8 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                                 <a class="article-container w-100 d-block <?php echo $count == 2 ? 'hovered' : ''; ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>" target="_blank" disabled>
                                     <div class="hover-cat">
                                         <div class="cat">
-                                            <span class="en-bold"><?php echo $get_fields_cat['en_title']; ?></span>
-                                            <span class="ar-regular"><?php echo $get_fields_cat['ar_title']; ?></span>
+                                            <span class="en-bold"><?php echo esc_html($get_fields_cat['en_title']); ?></span>
+                                            <span class="ar-regular"><?php echo esc_html($get_fields_cat['ar_title']); ?></span>
                                         </div>
                                         <div class="categories d-sm-flex d-none">
                                             <?php
@@ -119,7 +126,7 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                                                     $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
-                                                    <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                    <span class="category <?php echo esc_attr($lang['code'] . '-regular'); ?>">
                                                         <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
                                                     </span>
                                             <?php }
@@ -128,10 +135,17 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                                             ?>
                                         </div>
                                     </div>
-                                    <img class="d-block w-100" src="<?php echo $article_thumbnail; ?>" alt="<?php echo $article_title; ?>">
+                                    <div class="position-relative">
+                                        <img class="d-block w-100" src="<?php echo esc_url($article_thumbnail); ?>" alt="<?php echo esc_attr($article_title); ?>">
+                                        <?php if($is_youtube_video) : ?>
+                                            <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                                <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                            </svg>
+                                        <?php endif; ?>
+                                    </div>
                                     <div class="hover-text">
                                         <p>
-                                            <?php echo $article_title; ?>
+                                            <?php echo esc_html($article_title); ?>
                                         </p>
                                     </div>
                                     <div class="hover-cat hover-cat-bottom justify-content-end d-sm-none d-flex">
@@ -142,7 +156,7 @@ $first_three_articles = array_slice($all_articles, 0, 3);
                                                     $translated_id = apply_filters('wpml_object_id', $post_id, 'post', false, $lang['code']);
                                                     if ($translated_id) {
                                             ?>
-                                                        <span class="category <?php echo $lang['code'] . '-regular'; ?>">
+                                                        <span class="category <?php echo esc_attr($lang['code'] . '-regular'); ?>">
                                                             <?php echo esc_html($lang['code'] == 'en' ? 'EN' : 'ع'); ?>
                                                         </span>
                                             <?php }
