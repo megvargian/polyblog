@@ -69,7 +69,10 @@ endif;
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
-                            <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                            <a class="<?php echo $is_youtube_video ? 'w-100 h-100 position-relative' : ''; ?> " href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                                <?php if($is_youtube_video) : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/play.svg" alt="play" class="play-icon position-absolute">
+                                <?php endif; ?>
                                 <img class="d-block w-100" src="<?php echo esc_url($get_image); ?>"
                                     alt="<?php echo esc_attr($article_title); ?>">
                             </a>
@@ -77,7 +80,7 @@ endif;
                         <div class="col-7 d-flex justify-content-center align-items-center">
                             <div class="<?php echo $align_class; ?>" dir="<?php echo $text_dir; ?>">
                                 <h3 class="<?php echo $font_class; ?> mb-3">
-                                    <a href="<?php echo esc_url($article_link); ?>">
+                                    <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                         <?php echo esc_html($article_title); ?>
                                     </a>
                                 </h3>

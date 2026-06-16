@@ -2783,5 +2783,17 @@ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
 }
 /* Internet Explorer 10 */
 input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
-  color: transparent !important;
+  color: transparent !important
+}
+
+.play-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
