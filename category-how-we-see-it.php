@@ -47,10 +47,15 @@ $cat_fields = get_fields('category_' . $category_id);
                             $is_youtube_video = get_field('youtube_url', $post_id);
 
                             if ($article_thumbnail) : ?>
-                    <div class="card-img-top">
+                    <div class="card-img-top <?php echo $is_youtube_video ? 'position-relative' : ''; ?>">
                         <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url(get_permalink()); ?>">
+                             <?php if($is_youtube_video) : ?>
+                                <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                    <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                </svg>
+                            <?php endif; ?>
                             <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>"
-                                alt="<?php the_title(); ?>" class="img-fluid">
+                                alt="<?php echo esc_attr($post_title); ?>" class="img-fluid">
                         </a>
                     </div>
                     <?php endif; ?>
@@ -137,15 +142,21 @@ $cat_fields = get_fields('category_' . $category_id);
                             <div class="card">
                                 <?php
                                         $post_id = get_the_ID();
+                                        $post_title = get_the_title($post_id);
                                         $article_thumbnail = get_field('article_thumbnail');
                                         $languages = get_translations($post_id);
                                         $is_youtube_video = get_field('youtube_url', $post_id);
 
                                         if ($article_thumbnail) : ?>
-                                <div class="card-img-top">
+                                <div class="card-img-top <?php echo $is_youtube_video ? 'position-relative' : ''; ?>">
                                     <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url(get_permalink()); ?>">
+                                        <?php if($is_youtube_video) : ?>
+                                            <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                                <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                            </svg>
+                                        <?php endif; ?>
                                         <img class="thumbnail" src="<?php echo esc_url($article_thumbnail); ?>"
-                                            alt="<?php the_title(); ?>" class="img-fluid">
+                                            alt="<?php echo esc_attr($post_title); ?>" class="img-fluid">
                                     </a>
                                 </div>
                                 <?php endif; ?>

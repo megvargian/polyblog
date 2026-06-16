@@ -25,19 +25,24 @@ $all_articles = $single_author_article_swiper_block['articles'];
                     <div class="swiper-slide single-red-border">
                         <div class="row">
                             <div class="col-6 custom-padding-right">
-                                <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink($article_id); ?>">
-                                    <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo $article_title; ?>">
+                                <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink($article_id); ?>"  class="<?php echo $is_youtube_video ? 'w-100 h-100 position-relative' : ''; ?>">
+                                    <?php if($is_youtube_video) : ?>
+                                        <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                            <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                        </svg>
+                                    <?php endif; ?>
+                                    <img class="w-100 h-100 d-block single-red-border-right" src="<?php echo $featured_image; ?>" alt="<?php echo esc_attr($article_title); ?>">
                                 </a>
                             </div>
                             <div class="col-6 custom-padding-left">
                                 <div class="d-flex justify-content-center align-items-center px-sm-5 p-2 h-100">
                                     <div class="inner-author mx-auto">
                                         <p class="text-left d-md-block d-none">
-                                            <?php echo $author_excpert; ?>
+                                            <?php echo esc_html($author_excpert); ?>
                                         </p>
                                         <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : get_permalink($article_id); ?>" class="text-decoration-none">
-                                            <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo $author_title; ?>">
-                                            <h6 class="pt-3 text-center"><?php echo $author_title; ?></h6>
+                                            <img class="single-author-img d-flex mx-auto" src="<?php echo $author_image; ?>" alt="<?php echo esc_attr($author_title); ?>">
+                                            <h6 class="pt-3 text-center"><?php echo esc_html($author_title); ?></h6>
                                         </a>
                                     </div>
                                 </div>
