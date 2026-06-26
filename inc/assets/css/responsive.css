@@ -780,8 +780,8 @@
   .youtube-playlist-bg .custom-min-height .video {
     border-radius: 15px;
   }
-  .youtube-playlist-bg .custom-min-height .yt-icon {
-    display: none;
+  .youtube-playlist-bg .youtube-video-link .youtube-playlist-btn {
+    display: none !important;
   }
   .single-post-container .what-we-think {
     line-height: 10px;

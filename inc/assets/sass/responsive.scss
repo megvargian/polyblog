@@ -860,8 +860,12 @@
       .video {
         border-radius: 15px;
       }
-      .yt-icon {
-        display: none;
+    }
+  }
+  .youtube-playlist-bg {
+    .youtube-video-link {
+      .youtube-playlist-btn {
+        display: none !important;
       }
     }
   }
