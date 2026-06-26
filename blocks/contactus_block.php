@@ -5,7 +5,7 @@
 
 $contactus_fields = get_fields();
 if(!isMob()){ ?>
-    <section id="contact-us-section" class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
+    <section id="contact-us-section" dir="ltr" class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
         <div class="container-fluid">
                 <!-- <div class="row justify-content-center">
                     <div class="col-5">
