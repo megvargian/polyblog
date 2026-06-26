@@ -164,14 +164,6 @@ $header_fields = get_fields('options');
                             </a>
                         </div>
                         <?php } ?>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <a href="https://polybloglb.com/category/on-the-side/" target="_blank">
-                                <div class="bg-black">
-                                    <p class="en">On the side</p>
-                                    <p class="ar">عَ الهامش</p>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                     <?php } ?>
                     <?php if (is_front_page()) { ?>
