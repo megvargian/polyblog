@@ -5,7 +5,7 @@
 
 $contactus_fields = get_fields();
 if(!isMob()){ ?>
-    <section id="contact-us-section" dir="ltr" class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
+    <section id="contact-us-section" class="py-4 d-md-block d-none <?php echo $contactus_fields['light_mode'] ? 'contact-us-section-light' : 'contact-us-section' ;?>">
         <div class="container-fluid">
                 <!-- <div class="row justify-content-center">
                     <div class="col-5">
@@ -52,7 +52,7 @@ if(!isMob()){ ?>
         </div>
     </section>
 <?php } else { ?>
-    <section class="py-4 contact-us-section d-lg-none">
+    <section class="py-4 contact-us-section d-lg-none" dir="ltr">
         <div class="container d-block">
             <!-- <form action="/" class="p-3 py-5 position-relative">
                 <div class="swiper contact-us-swiper-mobile">
