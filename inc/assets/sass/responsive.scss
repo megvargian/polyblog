@@ -855,6 +855,15 @@
     h3 {
       font-size: 1.25rem;
     }
+    .custom-min-height {
+      min-height: auto;
+      .video {
+        border-radius: 15px;
+      }
+      .yt-icon {
+        display: none;
+      }
+    }
   }
 
   .single-post-container {

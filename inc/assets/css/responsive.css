@@ -774,6 +774,15 @@
   .youtube-playlist-bg h3 {
     font-size: 1.25rem;
   }
+  .youtube-playlist-bg .custom-min-height {
+    min-height: auto;
+  }
+  .youtube-playlist-bg .custom-min-height .video {
+    border-radius: 15px;
+  }
+  .youtube-playlist-bg .custom-min-height .yt-icon {
+    display: none;
+  }
   .single-post-container .what-we-think {
     line-height: 10px;
     min-height: 10px;
