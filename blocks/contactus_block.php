@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
     const swiperMobileContactForm = new Swiper('.contact-us-swiper-mobile', {
         slidesPerView: 1,
         spaceBetween: 30,
-        dir: 'rtl',
+        dir: 'ltr',
         pagination: {
             el: '.swiper-mobile-pagination',
             type: 'bullets',
