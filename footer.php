@@ -11,13 +11,7 @@
 $general_fields = get_fields('options');
 $footer_menu = $general_fields['footer']['footer_menu'];
 $footer_social_links = $general_fields['footer']['footer_social_links'];
-echo '<pre>';
-print_r($footer_social_links);
-echo '</pre>';
 $upper_side_three_index = array_slice($general_fields['footer']['footer_menu'], 0, 3);
-echo '<pre>';
-print_r($upper_side_three_index);
-echo '</pre>';
 $rotated_side_three_index_menu = array_slice($general_fields['footer']['footer_menu'], 3, 3);
 $two_in_the_same_row_buttons = array_slice($general_fields['footer']['footer_menu'], 6, 2);
 $last_button = array_slice($general_fields['footer']['footer_menu'], 8, 1);
