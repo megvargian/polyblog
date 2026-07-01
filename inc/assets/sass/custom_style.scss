@@ -718,12 +718,6 @@ body.hide_scroll {
   .swiper-slide:hover {
     opacity: 0.8;
     transition: 0.3s;
-
-    .author-image {
-      img {
-        filter: sepia(0.45) hue-rotate(-48deg) saturate(16) brightness(2);
-      }
-    }
   }
 
   .custom-swiper-button-prev,
