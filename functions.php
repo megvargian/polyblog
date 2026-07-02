@@ -507,9 +507,19 @@ function get_translations($post_id){
 
 // Allow ACF post pickers to list posts from all WPML languages.
 function polyblog_acf_all_languages_query($args, $field, $post_id) {
-    // WPML recognizes both 'all' and empty; set both-compatible defaults.
-    $args['lang'] = 'all';
-    $args['suppress_filters'] = false;
+    // Bypass WPML language filtering so ACF pickers include every language.
+    $args['suppress_filters'] = true;
+
+    // Keep broad post visibility for selectors.
+    if (empty($args['post_status'])) {
+        $args['post_status'] = array('publish');
+    }
+
+    // Remove language-specific arguments if they were injected upstream.
+    if (isset($args['lang'])) {
+        unset($args['lang']);
+    }
+
     return $args;
 }
 
