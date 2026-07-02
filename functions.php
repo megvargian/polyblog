@@ -452,6 +452,49 @@ function get_translations($post_id){
     return $languages;
 }
 
+// Allow ACF post pickers to list posts from all WPML languages.
+function polyblog_acf_post_object_all_languages($args, $field, $post_id) {
+    $args['lang'] = '';
+    return $args;
+}
+add_filter('acf/fields/post_object/query/name=article', 'polyblog_acf_post_object_all_languages', 10, 3);
+add_filter('acf/fields/post_object/query/name=articles', 'polyblog_acf_post_object_all_languages', 10, 3);
+
+function polyblog_acf_relationship_all_languages($args, $field, $post_id) {
+    $args['lang'] = '';
+    return $args;
+}
+add_filter('acf/fields/relationship/query/name=article', 'polyblog_acf_relationship_all_languages', 10, 3);
+add_filter('acf/fields/relationship/query/name=articles', 'polyblog_acf_relationship_all_languages', 10, 3);
+
+// Return all published WPML translation post IDs for a given post.
+function polyblog_get_wpml_post_ids($post_id) {
+    $post_id = (int) $post_id;
+    if (!$post_id) {
+        return array();
+    }
+
+    $trid = apply_filters('wpml_element_trid', null, $post_id, 'post_post');
+    if (!$trid) {
+        return array($post_id);
+    }
+
+    $translations = apply_filters('wpml_get_element_translations', null, $trid, 'post_post');
+    if (empty($translations) || !is_array($translations)) {
+        return array($post_id);
+    }
+
+    $ids = array();
+    foreach ($translations as $translation) {
+        if (!empty($translation->element_id) && $translation->post_status === 'publish') {
+            $ids[] = (int) $translation->element_id;
+        }
+    }
+
+    $ids = array_values(array_unique($ids));
+    return !empty($ids) ? $ids : array($post_id);
+}
+
 // WPML-aware site title and tagline
 function polyblog_document_title_parts( $title ) {
     // $lang = defined('ICL_LANGUAGE_CODE') ? ICL_LANGUAGE_CODE : 'ar';
