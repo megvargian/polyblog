@@ -448,8 +448,61 @@ function get_language_shortcode() {
 add_shortcode( 'language', 'get_language_shortcode' );
 
 function get_translations($post_id){
-    $languages = apply_filters('wpml_active_languages', null, $post_id, 'orderby=id&order=asc');
-    return $languages;
+    $post_id = (int) $post_id;
+    if (!$post_id) {
+        return array();
+    }
+
+    $post = get_post($post_id);
+    if (!$post) {
+        return array();
+    }
+
+    $element_type = 'post_' . $post->post_type;
+    $trid = apply_filters('wpml_element_trid', null, $post_id, $element_type);
+    $current_lang = apply_filters('wpml_current_language', null);
+
+    if (!$trid) {
+        $fallback_code = $current_lang ? $current_lang : 'en';
+        return array(
+            $fallback_code => array(
+                'code' => $fallback_code,
+                'url' => get_permalink($post_id),
+                'translated_id' => $post_id,
+                'active' => 1,
+            ),
+        );
+    }
+
+    $wpml_translations = apply_filters('wpml_get_element_translations', null, $trid, $element_type);
+    if (empty($wpml_translations) || !is_array($wpml_translations)) {
+        $fallback_code = $current_lang ? $current_lang : 'en';
+        return array(
+            $fallback_code => array(
+                'code' => $fallback_code,
+                'url' => get_permalink($post_id),
+                'translated_id' => $post_id,
+                'active' => 1,
+            ),
+        );
+    }
+
+    $translations = array();
+    foreach ($wpml_translations as $lang_code => $translation) {
+        if (empty($translation->element_id) || $translation->post_status !== 'publish') {
+            continue;
+        }
+
+        $translated_id = (int) $translation->element_id;
+        $translations[$lang_code] = array(
+            'code' => $lang_code,
+            'url' => get_permalink($translated_id),
+            'translated_id' => $translated_id,
+            'active' => $current_lang === $lang_code ? 1 : 0,
+        );
+    }
+
+    return $translations;
 }
 
 // Allow ACF post pickers to list posts from all WPML languages.
