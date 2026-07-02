@@ -506,19 +506,22 @@ function get_translations($post_id){
 }
 
 // Allow ACF post pickers to list posts from all WPML languages.
-function polyblog_acf_post_object_all_languages($args, $field, $post_id) {
-    $args['lang'] = '';
+function polyblog_acf_all_languages_query($args, $field, $post_id) {
+    // WPML recognizes both 'all' and empty; set both-compatible defaults.
+    $args['lang'] = 'all';
+    $args['suppress_filters'] = false;
     return $args;
 }
-add_filter('acf/fields/post_object/query/name=article', 'polyblog_acf_post_object_all_languages', 10, 3);
-add_filter('acf/fields/post_object/query/name=articles', 'polyblog_acf_post_object_all_languages', 10, 3);
 
-function polyblog_acf_relationship_all_languages($args, $field, $post_id) {
-    $args['lang'] = '';
-    return $args;
-}
-add_filter('acf/fields/relationship/query/name=article', 'polyblog_acf_relationship_all_languages', 10, 3);
-add_filter('acf/fields/relationship/query/name=articles', 'polyblog_acf_relationship_all_languages', 10, 3);
+// Global filters: apply to every Post Object / Relationship field, regardless of field name.
+add_filter('acf/fields/post_object/query', 'polyblog_acf_all_languages_query', 20, 3);
+add_filter('acf/fields/relationship/query', 'polyblog_acf_all_languages_query', 20, 3);
+
+// Keep optional name-specific hooks for compatibility with existing field names.
+add_filter('acf/fields/post_object/query/name=article', 'polyblog_acf_all_languages_query', 20, 3);
+add_filter('acf/fields/post_object/query/name=articles', 'polyblog_acf_all_languages_query', 20, 3);
+add_filter('acf/fields/relationship/query/name=article', 'polyblog_acf_all_languages_query', 20, 3);
+add_filter('acf/fields/relationship/query/name=articles', 'polyblog_acf_all_languages_query', 20, 3);
 
 // Return all published WPML translation post IDs for a given post.
 function polyblog_get_wpml_post_ids($post_id) {
