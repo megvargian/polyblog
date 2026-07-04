@@ -433,6 +433,72 @@ function single_post_load_more_posts() {
 add_action('wp_ajax_single_post_load_more_posts', 'single_post_load_more_posts');
 add_action('wp_ajax_nopriv_single_post_load_more_posts', 'single_post_load_more_posts');
 
+function search_authors_load_more() {
+    $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
+
+    $args = array(
+        'post_type'      => 'authors',
+        'post_status'    => 'publish',
+        'posts_per_page' => 4,
+        'offset'         => $offset,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    );
+
+    $query = new WP_Query($args);
+
+    if (!$query->have_posts()) {
+        wp_send_json_success(array(
+            'html'  => '',
+            'count' => 0,
+        ));
+    }
+
+    ob_start();
+    $count = 0;
+
+    while ($query->have_posts()) {
+        $query->the_post();
+
+        $author_id = get_the_ID();
+        $get_title = get_the_title($author_id);
+        $ar_title = get_field('ar_author_name', $author_id);
+        $tags = get_the_tags($author_id);
+        ?>
+<div class="text-center mb-4 hovered-single-author">
+    <div class="single-author-block d-flex justify-content-center align-items-center p-4">
+        <div>
+            <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
+                alt="<?php echo esc_attr($get_title); ?>">
+            <h4 class="ar-bold pt-2"><?php echo esc_html($ar_title); ?></h4>
+            <?php if ($tags) { ?>
+            <p class="ar-regular">
+                <?php
+                foreach ($tags as $tag) {
+                    echo esc_html($tag->name) . '/';
+                }
+                ?>
+            </p>
+            <?php } ?>
+            <a class="mt-3 view-more-btn en-regular" href="<?php echo get_permalink($author_id); ?>">View Profile</a>
+        </div>
+    </div>
+</div>
+<?php
+        $count++;
+    }
+
+    wp_reset_postdata();
+
+    wp_send_json_success(array(
+        'html'  => ob_get_clean(),
+        'count' => $count,
+    ));
+}
+
+add_action('wp_ajax_search_authors_load_more', 'search_authors_load_more');
+add_action('wp_ajax_nopriv_search_authors_load_more', 'search_authors_load_more');
+
 function trim_words_with_limits($text, $word_limit = 20) {
     $words = wp_trim_words($text, $word_limit, '...');
     return $words;

@@ -41,6 +41,20 @@ $authors_list = $author_swiper_block['authors_list'];
                 nextEl: '.swiper-button-next-last-part-author',
                 prevEl: '.swiper-button-prev-last-part-author',
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1300: {
+                    slidesPerView: 4,
+                },
+            },
         });
     });
 </script>
