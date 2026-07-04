@@ -1521,17 +1521,6 @@ body.hide_scroll {
   object-position: center center;
 }
 
-.single-post-featured-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(201, 5, 0, 0.3607843137);
-  pointer-events: none;
-}
-
 .single-post-container .what-we-think {
   width: 100%;
   min-height: 50px;

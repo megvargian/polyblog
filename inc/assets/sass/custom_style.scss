@@ -1606,16 +1606,16 @@ body.hide_scroll {
   }
 }
 
-.single-post-featured-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #c905005c;
-  pointer-events: none;
-}
+// .single-post-featured-image::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #c905005c;
+//   pointer-events: none;
+// }
 
 .single-post-container {
   .what-we-think {
