@@ -101,8 +101,16 @@ if ($featured_articles): ?>
                 <div class="row single-featured-article-container py-4">
                     <div class="col-7">
                         <div class="position-relative">
-                            <img class="d-block w-100 h-100" src="<?php echo esc_url($thumbnail); ?>"
-                                alt="<?php echo esc_attr($title); ?>" />
+                            <!-- <img class="d-block w-100 h-100" src="<?php //echo esc_url($thumbnail); ?>"
+                                alt="<?php // echo esc_attr($title); ?>" /> -->
+                            <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>" class="<?php echo $is_youtube_video ? 'w-100 h-100 position-relative d-block' : ''; ?>">
+                                <?php if($is_youtube_video) : ?>
+                                    <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                        <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                    </svg>
+                                <?php endif; ?>
+                                <img class="d-block w-100 h-100" src="<?php echo esc_url($thumbnail); ?>" alt="<?php echo esc_attr($title); ?>" />
+                            </a>
                             <div class="categories-mobile d-lg-none d-flex">
                                 <?php
                                         if ($translations) {

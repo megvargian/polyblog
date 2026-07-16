@@ -35,7 +35,11 @@ $authors_list = $author_swiper_block['authors_list'];
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const swiper = new Swiper('.author_swiper_block', {
-            loop: false,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: true,
+            },
             slidesPerView: 4,
             navigation: {
                 nextEl: '.swiper-button-next-last-part-author',
