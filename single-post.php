@@ -77,8 +77,8 @@ if (have_posts()):
     </div>
     <?php if ($get_mobile_image){ ?>
         <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="mobile-feature-image w-100 d-block d-lg-none" />
-    <?php } else { ?>
-        <div class="w-100">
+    <?php } else if(isMob()) { ?>
+        <div class="d-none d-lg-block w-100">
             <?php the_post_thumbnail('full'); ?>
         </div>
     <?php  } ?>
