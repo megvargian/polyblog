@@ -51,7 +51,7 @@ $search_authors_fields = get_fields();
                     $tags = get_the_tags($author_id);
 
             ?>
-            <div class="col-4 text-center mb-4 hovered-single-author px-4">
+            <div class="col-4 text-center mb-5 hovered-single-author px-4">
                 <div class="single-author-block d-flex justify-content-center align-items-center p-4">
                     <div>
                         <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($author_id); ?>"
