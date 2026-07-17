@@ -147,7 +147,7 @@ $is_author_search_page = is_page(293);
 </section>
 <?php }?>
 <?php if (is_front_page() || is_single('authors') || is_page(293)) {?>
-<section style="background-color:<?php echo is_front_page() ? '#181617;': '#412bba;';?>">
+<section style="background-color:<?php echo is_front_page() ? '#181617;': '#3a1dd9;';?>">
     <div class="container pt-5">
         <div class="row pb-md-3 pb-5 pt-md-5 mt-md-5 last-footer-section">
             <div class="col-12 text-center">
