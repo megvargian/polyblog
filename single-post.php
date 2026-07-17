@@ -19,6 +19,7 @@ $categories = get_the_category();
 $tags = get_the_tags() ?: [];
 $languages = get_translations($post_id);
 $header_fields = get_fields('options');
+$get_mobile_image = get_field('mobile_feature_image');
 
 if (have_posts()):
     while (have_posts()):
@@ -74,7 +75,16 @@ if (have_posts()):
             </a>
         </div> -->
     </div>
-    <?php the_post_thumbnail('full'); ?>
+    <?php if ($get_mobile_image){ ?>
+        <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="mobile-feature-image w-100 d-block d-lg-none" />
+    <?php } else { ?>
+        <div class="w-100">
+            <?php the_post_thumbnail('full'); ?>
+        </div>
+    <?php  } ?>
+    <div class="d-none d-lg-block w-100">
+        <?php the_post_thumbnail('full'); ?>
+    </div>
 </div>
 <?php endif; ?>
 <div class="container-fluid px-4 single-post-container">
