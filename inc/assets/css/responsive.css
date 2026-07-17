@@ -553,7 +553,7 @@
   .our-segments-page h5, .get-to-know-us-page h5, .our-production-page h5 {
     font-size: 1.4rem;
   }
-  .single-article-header-button-container {
+  .single-post-featured-image .single-article-header-button-container {
     display: none;
   }
 }
