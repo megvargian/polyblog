@@ -553,6 +553,9 @@
   .our-segments-page h5, .get-to-know-us-page h5, .our-production-page h5 {
     font-size: 1.4rem;
   }
+  .single-article-header-button-container {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .site-title {
@@ -743,9 +746,6 @@
   }
   .author-block-container .single-red-border-left {
     border-left: 2px solid #621a01;
-  }
-  .single-article-header-button-container {
-    display: none;
   }
   .single-featured-article-container .title {
     font-size: 1rem !important;

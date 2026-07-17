@@ -573,6 +573,9 @@
       font-size: 1.4rem;
     }
   }
+  .single-article-header-button-container {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -803,10 +806,6 @@
     .single-red-border-left {
       border-left: 2px solid #621a01;
     }
-  }
-
-  .single-article-header-button-container {
-    display: none;
   }
 
   .single-featured-article-container {
