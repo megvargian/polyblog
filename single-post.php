@@ -75,16 +75,18 @@ if (have_posts()):
             </a>
         </div> -->
     </div>
-    <?php if ($get_mobile_image){ ?>
+    <?php if ($get_mobile_image && isMob()) { ?>
         <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="mobile-feature-image w-100 d-block d-lg-none" />
     <?php } else if(isMob()) { ?>
-        <div class="d-none d-lg-block w-100">
+        <div class="w-100">
             <?php the_post_thumbnail('full'); ?>
         </div>
-    <?php  } ?>
-    <div class="d-none d-lg-block w-100">
-        <?php the_post_thumbnail('full'); ?>
-    </div>
+    <?php } else { ?>
+        <div class="w-100">
+            <?php the_post_thumbnail('full'); ?>
+        </div>
+    <?php } ?>
+
 </div>
 <?php endif; ?>
 <div class="container-fluid px-4 single-post-container">
