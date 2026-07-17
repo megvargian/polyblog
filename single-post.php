@@ -85,8 +85,7 @@ if (have_posts()):
             <?php the_post_thumbnail('full'); ?>
         </div>
     <?php } else { ?>
-        <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="mobile-feature-image w-100 d-block d-lg-none" />
-        <div class="w-100 d-none d-lg-block">
+        <div class="w-100">
             <?php the_post_thumbnail('full'); ?>
         </div>
     <?php } ?>
