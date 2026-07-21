@@ -243,3 +243,21 @@ th {
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'NotoKufiArabic-Bold';
+	src:  url('inc/assets/fonts/NotoKufiArabic-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoKufiArabic-Light';
+	src:  url('inc/assets/fonts/NotoKufiArabic-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoKufiArabic-Regular';
+	src:  url('inc/assets/fonts/NotoKufiArabic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
