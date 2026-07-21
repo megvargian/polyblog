@@ -312,6 +312,14 @@ body.hide_scroll {
 .en-bold {
   font-family: $en-bold;
 }
+.ar,
+.arabic,
+.ar-regular,
+.ar-regualr,
+[dir="rtl"],
+:lang(ar) {
+  font-family: $ar-regular;
+}
 .ar-regular {
   font-family: $ar-regular;
 }

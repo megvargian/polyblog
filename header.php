@@ -205,7 +205,7 @@ $header_fields = get_fields('options');
                             <li class="single-side-header d-block">
                                 <a href="<?php echo $menu_item['menu_item']['url']; ?>">
                                     <p class="en-regular"><?php echo $menu_item['menu_item']['en_text']; ?></p>
-                                    <p class="ar-regualr"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
+                                    <p class="ar-regular"><?php echo $menu_item['menu_item']['ar_text']; ?></p>
                                 </a>
                             </li>
                             <?php } ?>

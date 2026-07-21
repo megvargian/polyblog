@@ -326,6 +326,15 @@ body.hide_scroll {
   font-family: "Lexend-Bold";
 }
 
+.ar,
+.arabic,
+.ar-regular,
+.ar-regualr,
+[dir=rtl],
+:lang(ar) {
+  font-family: "NotoKufiArabic-Regular";
+}
+
 .ar-regular {
   font-family: "NotoKufiArabic-Regular";
 }
