@@ -44,9 +44,6 @@ $block_next_id = $block_unique_id . '-next';
 								</a>
 								<div class="featured-vid-card-content">
 									<h3 class="featured-vid-card-title"><?php echo esc_html($slide_text); ?></h3>
-									<a class="featured-vid-card-link" href="<?php echo esc_url($slide_url); ?>" target="_blank" rel="noopener noreferrer">
-										<?php esc_html_e('Watch video', 'polyblog'); ?>
-									</a>
 								</div>
 							</article>
 						</div>
