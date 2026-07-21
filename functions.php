@@ -239,6 +239,17 @@ function my_acf_init_block_types()
         );
         acf_register_block_type(
             array(
+                'name'              => 'featured-vids-swiper-block',
+                'title'             => __('Featured Vids Swiper Block'),
+                'description'       => __('Desktop-only featured videos swiper with image, title and link'),
+                'render_template'   => 'blocks/featured_vids_swiper_block.php',
+                'category'          => 'formatting',
+                'icon'              => 'format-video',
+                'keywords'          => array('featured', 'videos', 'swiper'),
+            )
+        );
+        acf_register_block_type(
+            array(
                 'name'              => 'Message from Editor Block',
                 'title'             => __('Message from Editor Block'),
                 'description'       => __('This is the Message from Editor Block of Homepage'),
