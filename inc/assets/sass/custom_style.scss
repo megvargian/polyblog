@@ -817,17 +817,10 @@ body.hide_scroll {
   .featured-vids-swiper-next {
     width: 50px;
     height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.5);
     top: 40%;
     transition: background-color 0.25s ease;
   }
 
-  .featured-vids-swiper-prev:hover,
-  .featured-vids-swiper-next:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
 
   .featured-vids-swiper-prev {
     left: -64px;
