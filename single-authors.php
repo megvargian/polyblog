@@ -98,7 +98,7 @@ endif;
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
                             <div class="text-<?php echo $is_arabic ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic ? 'rtl' : 'ltr'; ?>">
-                                <a class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5 d-block text-decoration-none"
+                                <a class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5 d-block text-decoration-none text-white"
                                     href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
                                     <?php echo esc_html($get_excerpt); ?>
                                 </a>
