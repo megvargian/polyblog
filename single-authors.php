@@ -102,7 +102,7 @@ endif;
                                     href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
                                     <?php echo esc_html($get_excerpt); ?>
                                 </a>
-                                <a class="en-regular" href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>Read More</a>
+                                <a class="en-regular text-white" href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>Read More</a>
                             </div>
                         </div>
                     </div>
