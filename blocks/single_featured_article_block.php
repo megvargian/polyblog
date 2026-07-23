@@ -148,7 +148,7 @@ if ($featured_articles): ?>
                             <a class="d-block d-lg-none <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <?php echo trim_words_with_limits(get_the_excerpt($article), 25); ?>
                             </a>
-                            <a class="read-more-btn d-block d-lg-none <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                            <a class="read-more-btn d-block d-lg-none mt-4 <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 read more
                             </a>
                         </div>
