@@ -46,7 +46,7 @@ $row = $yt_playlist_block['one_row_youtube_section'];
             </div>
         </div>
     </div>
-    <div class="container-fluid d-lg-block d-none">
+    <!-- <div class="container-fluid d-lg-block d-none">
         <div class="row justify-content-center">
             <div class="col youtube-playlist-button-col justify-content-center d-flex align-items-center">
                 <a class="justify-content-center d-flex align-items-center" href="<?php echo $row['main_link'] ?>"
@@ -81,7 +81,7 @@ $row = $yt_playlist_block['one_row_youtube_section'];
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- <div class="container-fluid d-lg-none d-block py-4 position-relative">
         <div class="swiper youtube-production-slider">
             <div class="swiper-wrapper">
