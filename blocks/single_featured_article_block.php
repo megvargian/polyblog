@@ -96,6 +96,9 @@ if ($featured_articles): ?>
                     $thumbnail = get_field('article_thumbnail', $article);
                     $translations = get_translations($article);
                     $is_youtube_video = get_field('youtube_url', $article);
+                    $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $title);
+                    $align_class = $is_arabic ? 'text-end' : 'text-start';
+                    $dir = $is_arabic ? 'rtl' : 'ltr';
                 ?>
             <div class="swiper-slide">
                 <div class="row single-featured-article-container py-4">
@@ -138,14 +141,14 @@ if ($featured_articles): ?>
                             <?php }
                                     } ?>
                         </div>
-                        <div class="title align-text-arabic">
-                            <a class="d-none d-lg-block" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                        <div class="title <?php echo esc_attr($align_class); ?>" dir="<?php echo esc_attr($dir); ?>">
+                            <a class="d-none d-lg-block <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <?php echo esc_html($title); ?>
                             </a>
-                            <a class="d-block d-lg-none" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                            <a class="d-block d-lg-none <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 <?php echo trim_words_with_limits(get_the_excerpt($article), 25); ?>
                             </a>
-                            <a class="read-more-btn d-block d-lg-none" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
+                            <a class="read-more-btn d-block d-lg-none <?php echo esc_attr($align_class); ?>" href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link); ?>">
                                 read more
                             </a>
                         </div>

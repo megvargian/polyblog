@@ -77,22 +77,32 @@ endif;
                     $get_image = get_field('article_thumbnail', $article_id) != '' ? get_field('article_thumbnail', $article_id) : get_the_post_thumbnail_url($article_id);
                     $get_excerpt = get_the_excerpt($article_id);
                     $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $get_excerpt);
+                    $is_youtube_video = get_field('youtube_url', $article_id);
+                    $target_url = $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link);
+                    $link_target = $is_youtube_video ? ' target="_blank" rel="noopener noreferrer"' : '';
 
             ?>
             <div class="col-12 mb-5">
                 <div class="authors-article">
                     <div class="row px-lg-5 px-3 py-3">
                         <div class="col-5">
-                            <img class="d-block w-100" src="<?php echo $get_image; ?>"
-                                alt="<?php echo $article_title; ?>">
+                            <a class="position-relative d-block" href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
+                                <img class="d-block w-100" src="<?php echo esc_url($get_image); ?>"
+                                    alt="<?php echo esc_attr($article_title); ?>">
+                                <?php if ($is_youtube_video) : ?>
+                                    <svg id="Layer_1" class="play-icon position-absolute" alt="play" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.9 500">
+                                        <path class="st0" fill="#fff" d="M81.5,11.05C36.54-14.83,0,6.32,0,58.23v382.88c0,51.93,36.54,73.05,81.5,47.26l334.67-191.96c44.98-25.79,44.98-67.68,0-93.49L81.5,11.05ZM81.5,11.05"/>
+                                    </svg>
+                                <?php endif; ?>
+                            </a>
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-<?php echo $is_arabic ? 'right' : 'left'; ?>">
-                                <p class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5"
-                                    dir="<?php echo $is_arabic ? 'rtl' : 'ltr'; ?>">
-                                    <?php echo $get_excerpt; ?>
-                                </p>
-                                <a class="en-regular" href="<?php echo $article_link; ?>">Read More</a>
+                            <div class="text-<?php echo $is_arabic ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic ? 'rtl' : 'ltr'; ?>">
+                                <a class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5 d-block text-decoration-none"
+                                    href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
+                                    <?php echo esc_html($get_excerpt); ?>
+                                </a>
+                                <a class="en-regular" href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>Read More</a>
                             </div>
                         </div>
                     </div>
