@@ -571,9 +571,10 @@ function get_translations($post_id){
         }
 
         $translated_id = (int) $translation->element_id;
+        $raw_url = get_permalink($translated_id);
         $translations[$lang_code] = array(
             'code' => $lang_code,
-            'url' => get_permalink($translated_id),
+            'url' => apply_filters('wpml_permalink', $raw_url, $lang_code),
             'translated_id' => $translated_id,
             'active' => $current_lang === $lang_code ? 1 : 0,
         );
