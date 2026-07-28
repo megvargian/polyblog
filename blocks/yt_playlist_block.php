@@ -28,7 +28,15 @@ $row = $yt_playlist_block['one_row_youtube_section'];
                     <source src="<?php //echo esc_url($yt_playlist_block['video']); ?>" type="video/mp4">
                     Your browser does not support the video tag.
                 </video> -->
-                <iframe class="video w-100 h-100" src="https://www.youtube.com/embed/MW0_ZDw2FHY" title="<?php echo $yt_playlist_block['en_title']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe
+                    class="video w-100 h-100"
+                    src="https://www.youtube.com/embed/MW0_ZDw2FHY?autoplay=1&mute=1&playsinline=1&rel=0"
+                    title="<?php echo esc_attr($yt_playlist_block['en_title']); ?>"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
             </a>
             <!-- <div class="col d-flex justify-content-center align-items-center yt-icon">
                 <a href="<?php //echo $yt_playlist_block['youtube_link']; ?>">
