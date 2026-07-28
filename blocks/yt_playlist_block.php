@@ -23,7 +23,12 @@ $row = $yt_playlist_block['one_row_youtube_section'];
         </div>
         <div class="row custom-min-height mb-3">
             <a href="<?php echo esc_url($yt_playlist_block['youtube_link']); ?>" target="_blank" rel="noopener noreferrer" class="d-block w-100">
-                <img class="video w-100" src="<?php echo esc_url($yt_playlist_block['video']); ?>" alt="YouTube Playlist" style="cursor: pointer; display: block;">
+                <!-- <img class="video w-100" src="<?php //echo esc_url($yt_playlist_block['video']); ?>" alt="YouTube Playlist" style="cursor: pointer; display: block;"> -->
+                <!-- <video class="video" width="100%" autoplay loop muted>
+                    <source src="<?php //echo esc_url($yt_playlist_block['video']); ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+                <iframe class="video w-100 h-100" src="<?php echo esc_url($yt_playlist_block['youtube_link']); ?>" title="<?php echo $yt_playlist_block['en_title']; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </a>
             <!-- <div class="col d-flex justify-content-center align-items-center yt-icon">
                 <a href="<?php //echo $yt_playlist_block['youtube_link']; ?>">
