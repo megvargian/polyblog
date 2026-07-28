@@ -21,6 +21,9 @@ $block_next_id = $block_unique_id . '-next';
 						$slide_image = isset($slide['image']) ? $slide['image'] : '';
 						$slide_text = isset($slide['text']) ? $slide['text'] : '';
 						$slide_url = isset($slide['link']) ? $slide['link'] : '';
+						$is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $slide_text);
+						$align_class = $is_arabic ? 'text-end' : 'text-start'; // Bootstrap RTL/LTR
+                    	$dir = $is_arabic ? 'rtl' : 'ltr';
 
 						if (is_array($slide_image)) {
 							$image_url = isset($slide_image['url']) ? $slide_image['url'] : '';
