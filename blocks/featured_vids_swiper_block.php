@@ -46,7 +46,7 @@ $block_next_id = $block_unique_id . '-next';
 									</svg>
 								</a>
 								<div class="featured-vid-card-content">
-									<h3 class="featured-vid-card-title"><?php echo esc_html($slide_text); ?></h3>
+									<h3 class="featured-vid-card-title <?php echo esc_attr($align_class); ?>" dir="<?php echo esc_attr($dir); ?>"><?php echo esc_html($slide_text); ?></h3>
 								</div>
 							</article>
 						</div>
