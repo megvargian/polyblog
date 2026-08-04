@@ -130,8 +130,8 @@ function wp_bootstrap_starter_scripts() {
 
     wp_enqueue_style( 'polyblog-swiper', get_template_directory_uri() . '/inc/assets/css/swiper.min.css' );
 
-    wp_enqueue_style( 'polyblog-custom_style', get_template_directory_uri() . '/inc/assets/css/custom_style.css', array(), '1.39' );
-    wp_enqueue_style( 'polyblog-responsive_style', get_template_directory_uri() . '/inc/assets/css/responsive.css', array(), '1.39' );
+    wp_enqueue_style( 'polyblog-custom_style', get_template_directory_uri() . '/inc/assets/css/custom_style.css', array(), '1.40' );
+    wp_enqueue_style( 'polyblog-responsive_style', get_template_directory_uri() . '/inc/assets/css/responsive.css', array(), '1.40' );
 
 
     // Internet Explorer HTML5 support
