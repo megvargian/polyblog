@@ -1957,7 +1957,7 @@ body.hide_scroll {
   transform: translateY(-50%);
 }
 .what-we-think-container .search-input .search-btn {
-  padding: 4px;
+  padding: 4px 7px;
   margin-left: 10px;
   border: none;
   border-radius: 50px;

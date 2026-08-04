@@ -2,6 +2,27 @@
 get_header();
 $category_id = get_queried_object_id();
 $cat_fields = get_fields('category_' . $category_id);
+
+// Build a cross-language query: collect every WPML translation of this category term.
+$_cat_trid = apply_filters('wpml_element_trid', null, $category_id, 'tax_category');
+$_cat_ids  = array($category_id);
+if ($_cat_trid) {
+    $_cat_xlations = apply_filters('wpml_get_element_translations', null, $_cat_trid, 'tax_category');
+    if (is_array($_cat_xlations)) {
+        foreach ($_cat_xlations as $_xl) {
+            if (!empty($_xl->element_id)) $_cat_ids[] = (int) $_xl->element_id;
+        }
+    }
+}
+$cat_query = new WP_Query(array(
+    'post_type'        => 'post',
+    'post_status'      => 'publish',
+    'posts_per_page'   => -1,
+    'category__in'     => array_unique($_cat_ids),
+    'suppress_filters' => true,
+    'orderby'          => 'date',
+    'order'            => 'DESC',
+));
 ?>
 <div class="container how-we-see-it-container">
     <div class="row text-center py-5">
@@ -33,10 +54,10 @@ $cat_fields = get_fields('category_' . $category_id);
         <input type="hidden" name="cat" value="how-we-see-it" />
     </form>
     <div class="category-posts">
-        <?php if (have_posts()) : ?>
+        <?php if ($cat_query->have_posts()) : ?>
         <?php $cat_post_count = 0; ?>
         <div class="row my-4 desktop">
-            <?php while (have_posts()) : the_post(); $cat_post_count++; ?>
+            <?php while ($cat_query->have_posts()) : $cat_query->the_post(); $cat_post_count++; ?>
             <?php
                             $post_id = get_the_ID();
                             $post_title = get_the_title($post_id);
@@ -144,11 +165,12 @@ $cat_fields = get_fields('category_' . $category_id);
             </div>
         </div>
         <?php endif; ?>
+        <?php $cat_query->rewind_posts(); ?>
         <div class="row my-4 mobile">
             <div class="col">
                 <div class="swiper mySwiper" style="overflow: hidden !important;">
                     <div class="swiper-wrapper">
-                        <?php while (have_posts()) : the_post();
+                        <?php while ($cat_query->have_posts()) : $cat_query->the_post();
                                         $post_id = get_the_ID();
                                         $post_title = get_the_title($post_id);
                                         $is_arabic = (bool) preg_match('/[\x{0600}-\x{06FF}]/u', $post_title);
@@ -236,6 +258,7 @@ $cat_fields = get_fields('category_' . $category_id);
         </div>
     </div>
 </div>
+<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
 <script>
 document.getElementById('searchButton').addEventListener('click', function() {
