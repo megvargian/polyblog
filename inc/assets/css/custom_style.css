@@ -2273,6 +2273,25 @@ body.hide_scroll {
   text-align-last: end;
 }
 
+.cat-post-hidden {
+  display: none !important;
+}
+
+.load-more-btn {
+  padding: 12px 40px;
+  background-color: #000;
+  color: #ffdb0b;
+  border: 2px solid #ffdb0b;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.load-more-btn:hover {
+  background-color: #ffdb0b;
+  color: #000;
+}
+
 .swiper-authors-block .swiper-button-prev:after,
 .swiper-authors-block .swiper-button-next:after {
   color: #fff;

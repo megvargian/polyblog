@@ -34,8 +34,9 @@ $cat_fields = get_fields('category_' . $category_id);
     </form>
     <div class="category-posts">
         <?php if (have_posts()) : ?>
+        <?php $cat_post_count = 0; ?>
         <div class="row my-4 desktop">
-            <?php while (have_posts()) : the_post(); ?>
+            <?php while (have_posts()) : the_post(); $cat_post_count++; ?>
             <?php
                             $post_id = get_the_ID();
                             $post_title = get_the_title($post_id);
@@ -47,7 +48,7 @@ $cat_fields = get_fields('category_' . $category_id);
                             $tags = get_the_tags($post_id);
                             $is_youtube_video = get_field('youtube_url', $post_id);
                         ?>
-            <div class="category-card-desktop col-md-6 my-2">
+            <div class="category-card-desktop col-md-6 my-2<?php echo $cat_post_count > 6 ? ' cat-post-hidden' : ''; ?>">
                 <div class="card" dir="<?php echo $content_dir; ?>">
                     <?php if ($article_thumbnail) : ?>
                     <div class="card-img-top <?php echo $is_youtube_video ? 'position-relative' : ''; ?>">
@@ -137,6 +138,13 @@ $cat_fields = get_fields('category_' . $category_id);
             </div>
             <?php endwhile; ?>
         </div>
+        <?php if ($cat_post_count > 6) : ?>
+        <div class="row my-4 text-center load-more-container desktop">
+            <div class="col">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+        <?php endif; ?>
         <div class="row my-4 mobile">
             <div class="col">
                 <div class="swiper mySwiper" style="overflow: hidden !important;">
@@ -258,6 +266,18 @@ $cat_fields = get_fields('category_' . $category_id);
 document.getElementById('searchButton').addEventListener('click', function() {
     document.querySelector('.search-form').submit();
 });
+
+(function() {
+    var btn = document.querySelector('.load-more-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+        var hidden = document.querySelectorAll('.cat-post-hidden');
+        Array.from(hidden).slice(0, 6).forEach(function(el) {
+            el.classList.remove('cat-post-hidden');
+        });
+        if (!document.querySelector('.cat-post-hidden')) btn.style.display = 'none';
+    });
+})();
 
 const swiper = new Swiper(".mySwiper", {
     effect: "cards",

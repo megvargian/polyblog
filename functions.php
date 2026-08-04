@@ -668,5 +668,6 @@ add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
 add_action('pre_get_posts', function($query) {
     if (!is_admin() && $query->is_main_query() && $query->is_category()) {
         $query->set('suppress_filters', true);
+        $query->set('posts_per_page', -1);
     }
 });
