@@ -664,10 +664,46 @@ function polyblog_bloginfo_name( $output, $show ) {
 }
 add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
 
-// Show posts from all WPML languages on category archive pages.
+// Show posts from all WPML language variants on category archive pages.
+// WPML stores each language's category as a separate term_id, so we must
+// resolve all translated term IDs and query by all of them together.
 add_action('pre_get_posts', function($query) {
     if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+
+        // Resolve the current category term_id from whatever query var is set.
+        $cat_id = 0;
+        if ($query->get('cat')) {
+            $cat_id = abs((int) $query->get('cat'));
+        } elseif ($query->get('category_name')) {
+            $term = get_term_by('slug', $query->get('category_name'), 'category');
+            if ($term) $cat_id = $term->term_id;
+        } elseif (!empty($query->get('category__in'))) {
+            $cat_id = (int) reset((array) $query->get('category__in'));
+        }
+
+        if ($cat_id) {
+            // Collect term IDs for every WPML translation of this category.
+            $trid = apply_filters('wpml_element_trid', null, $cat_id, 'tax_category');
+            $all_ids = array($cat_id);
+            if ($trid) {
+                $xlations = apply_filters('wpml_get_element_translations', null, $trid, 'tax_category');
+                if (is_array($xlations)) {
+                    foreach ($xlations as $xl) {
+                        if (!empty($xl->element_id)) {
+                            $all_ids[] = (int) $xl->element_id;
+                        }
+                    }
+                }
+            }
+            // Query posts from any of the translated category term IDs.
+            $query->set('category__in', array_unique($all_ids));
+            // Clear the original vars so they do not conflict.
+            $query->set('category_name', '');
+            $query->set('cat', 0);
+        }
+
+        // Bypass WPML's SQL-level language filter so posts from all languages appear.
         $query->set('suppress_filters', true);
         $query->set('posts_per_page', -1);
     }
-});
+}, 99); // priority 99 runs after WPML's own pre_get_posts hooks
