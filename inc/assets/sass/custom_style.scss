@@ -2393,7 +2393,17 @@ body.hide_scroll {
   }
 
   .category-card-desktop {
-    @keyframes expanded-card-body {
+    @keyframes expanded-card-body-ltr {
+      0% {
+        width: 100%;
+        transform: translateX(0);
+      }
+      100% {
+        width: 115%;
+        transform: translateX(-7.5%);
+      }
+    }
+    @keyframes expanded-card-body-rtl {
       0% {
         width: 100%;
         transform: translateX(0);
@@ -2422,7 +2432,7 @@ body.hide_scroll {
         max-height: 100%;
         border-radius: 32px;
         transform-origin: center;
-        animation: expanded-card-body 2s forwards;
+        animation: expanded-card-body-ltr 2s forwards;
         background-color: #000;
 
         .card-content {
@@ -2431,6 +2441,12 @@ body.hide_scroll {
           flex-direction: column;
           height: 100%;
           justify-content: space-between;
+        }
+      }
+
+      &[dir="rtl"] {
+        .card-body {
+          animation: expanded-card-body-rtl 2s forwards;
         }
       }
 

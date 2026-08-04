@@ -36,17 +36,20 @@ $cat_fields = get_fields('category_' . $category_id);
         <?php if (have_posts()) : ?>
         <div class="row my-4 desktop">
             <?php while (have_posts()) : the_post(); ?>
-            <div class="category-card-desktop col-md-6 my-2">
-                <div class="card">
-                    <?php
+            <?php
                             $post_id = get_the_ID();
                             $post_title = get_the_title($post_id);
+                            $is_arabic = (bool) preg_match('/[\x{0600}-\x{06FF}]/u', $post_title);
+                            $content_dir = $is_arabic ? 'rtl' : 'ltr';
+                            $text_align  = $is_arabic ? 'text-right' : 'text-left';
                             $article_thumbnail = get_field('article_thumbnail');
                             $languages = get_translations($post_id);
                             $tags = get_the_tags($post_id);
                             $is_youtube_video = get_field('youtube_url', $post_id);
-
-                            if ($article_thumbnail) : ?>
+                        ?>
+            <div class="category-card-desktop col-md-6 my-2">
+                <div class="card" dir="<?php echo $content_dir; ?>">
+                    <?php if ($article_thumbnail) : ?>
                     <div class="card-img-top <?php echo $is_youtube_video ? 'position-relative' : ''; ?>">
                         <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url(get_permalink()); ?>">
                              <?php if($is_youtube_video) : ?>
@@ -63,7 +66,7 @@ $cat_fields = get_fields('category_' . $category_id);
                         <div class="card-content">
                             <div class="row article-title">
                                 <div class="col">
-                                    <h3><?php echo esc_html($post_title); ?></h3>
+                                    <h3 class="<?php echo $text_align; ?>"><?php echo esc_html($post_title); ?></h3>
                                 </div>
                             </div>
                             <div class="row">
@@ -102,7 +105,7 @@ $cat_fields = get_fields('category_' . $category_id);
                                     <div class="row">
                                         <div class="col">
                                             <a href="<?php echo get_permalink($author); ?>">
-                                                <h5 class="align-text-arabic">
+                                                <h5 class="<?php echo $text_align; ?>">
                                                     <strong><?php echo get_the_title($author); ?></strong>
                                                 </h5>
                                             </a>
@@ -111,7 +114,7 @@ $cat_fields = get_fields('category_' . $category_id);
                                     <?php if($tags){ ?>
                                     <div class="row">
                                         <div class="col">
-                                            <p class="tags align-text-arabic">
+                                            <p class="tags <?php echo $text_align; ?>">
                                                 <?php
                                                     foreach ($tags as $tag) {
                                                         echo esc_html($tag->name) .'/';
@@ -137,17 +140,19 @@ $cat_fields = get_fields('category_' . $category_id);
             <div class="col">
                 <div class="swiper mySwiper" style="overflow: hidden !important;">
                     <div class="swiper-wrapper">
-                        <?php while (have_posts()) : the_post(); ?>
-                        <div class="category-card-mobile swiper-slide">
-                            <div class="card">
-                                <?php
+                        <?php while (have_posts()) : the_post();
                                         $post_id = get_the_ID();
                                         $post_title = get_the_title($post_id);
+                                        $is_arabic = (bool) preg_match('/[\x{0600}-\x{06FF}]/u', $post_title);
+                                        $content_dir = $is_arabic ? 'rtl' : 'ltr';
+                                        $text_align  = $is_arabic ? 'text-right' : 'text-left';
                                         $article_thumbnail = get_field('article_thumbnail');
                                         $languages = get_translations($post_id);
                                         $is_youtube_video = get_field('youtube_url', $post_id);
-
-                                        if ($article_thumbnail) : ?>
+                                ?>
+                        <div class="category-card-mobile swiper-slide">
+                            <div class="card" dir="<?php echo $content_dir; ?>">
+                                <?php if ($article_thumbnail) : ?>
                                 <div class="card-img-top <?php echo $is_youtube_video ? 'position-relative' : ''; ?>">
                                     <a href="<?php echo $is_youtube_video ? esc_url($is_youtube_video) : esc_url(get_permalink()); ?>">
                                         <?php if($is_youtube_video) : ?>
@@ -163,7 +168,7 @@ $cat_fields = get_fields('category_' . $category_id);
                                 <div class="card-body">
                                     <div class="row article-title">
                                         <div class="col">
-                                            <h3><?php echo esc_html(trim_words_with_limits($post_title)); ?></h3>
+                                            <h3 class="<?php echo $text_align; ?>"><?php echo esc_html(trim_words_with_limits($post_title)); ?></h3>
                                         </div>
                                     </div>
                                     <div class="row card-content">
@@ -195,7 +200,7 @@ $cat_fields = get_fields('category_' . $category_id);
                                                 ?>
                                         <div class="col-5 author-info">
                                             <a href="<?php echo get_permalink($author); ?>">
-                                                <h6 class="align-text-arabic">
+                                                <h6 class="<?php echo $text_align; ?>">
                                                     <strong><?php echo get_the_title($author); ?></strong>
                                                 </h6>
                                             </a>

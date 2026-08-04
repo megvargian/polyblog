@@ -663,3 +663,10 @@ function polyblog_bloginfo_name( $output, $show ) {
     return $output;
 }
 add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
+
+// Show posts from all WPML languages on category archive pages.
+add_action('pre_get_posts', function($query) {
+    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+        $query->set('suppress_filters', true);
+    }
+});
