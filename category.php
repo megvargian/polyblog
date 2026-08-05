@@ -19,8 +19,6 @@ if ($translated_id && $translated_id != $current_category->term_id) {
 
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => -1,
-
     'tax_query' => array(
         array(
             'taxonomy' => 'category',
@@ -29,8 +27,8 @@ $args = array(
         ),
     ),
 
-    // Important
-    'suppress_filters' => true,
+    // Show posts in all languages
+    'lang' => '',
 );
 
 $query = new WP_Query($args);

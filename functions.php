@@ -672,31 +672,31 @@ add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
 //     }
 // }, 99);
 
-add_action('pre_get_posts', function ($query) {
+// add_action('pre_get_posts', function ($query) {
 
-    if (is_admin() || !$query->is_main_query() || !is_category()) {
-        return;
-    }
+//     if (is_admin() || !$query->is_main_query() || !is_category()) {
+//         return;
+//     }
 
-    $category = get_queried_object();
+//     $category = get_queried_object();
 
-    $category_ids = array($category->term_id);
+//     $category_ids = array($category->term_id);
 
-    $translated = apply_filters(
-        'wpml_object_id',
-        $category->term_id,
-        'category',
-        false,
-        'en'
-    );
+//     $translated = apply_filters(
+//         'wpml_object_id',
+//         $category->term_id,
+//         'category',
+//         false,
+//         'en'
+//     );
 
-    if ($translated && $translated != $category->term_id) {
-        $category_ids[] = $translated;
-    }
+//     if ($translated && $translated != $category->term_id) {
+//         $category_ids[] = $translated;
+//     }
 
-    $query->set('category__in', $category_ids);
+//     $query->set('category__in', $category_ids);
 
-    // Disable WPML language filtering
-    $query->set('suppress_filters', true);
+//     // Disable WPML language filtering
+//     $query->set('suppress_filters', true);
 
-});
+// });
