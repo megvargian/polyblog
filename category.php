@@ -34,19 +34,29 @@ $args = array(
 $query = new WP_Query($args);
 
 
-$current_category = get_queried_object();
+// $current_category = get_queried_object();
 
-echo 'Current category ID: ' . $current_category->term_id . '<br>';
+// echo 'Current category ID: ' . $current_category->term_id . '<br>';
 
-$translated = apply_filters(
-    'wpml_object_id',
-    $current_category->term_id,
-    'category',
-    false,
-    'en'
-);
+// $translated = apply_filters(
+//     'wpml_object_id',
+//     $current_category->term_id,
+//     'category',
+//     false,
+//     'en'
+// );
 
-var_dump($translated);
+// var_dump($translated);
+
+
+$args = [
+    'post_type' => 'post',
+    'lang'      => 'en',
+];
+
+$query = new WP_Query($args);
+
+echo $query->found_posts;
 ?>
 <div class="container what-we-think-container">
     <div class="row text-center py-5">
