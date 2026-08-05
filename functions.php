@@ -666,8 +666,37 @@ add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
 
 // Suppress WPML's SQL-level language filter on category archives;
 // templates build their own cross-language WP_Query.
-add_action('pre_get_posts', function($query) {
-    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
-        $query->set('suppress_filters', true);
+// add_action('pre_get_posts', function($query) {
+//     if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+//         $query->set('suppress_filters', true);
+//     }
+// }, 99);
+
+add_action('pre_get_posts', function ($query) {
+
+    if (is_admin() || !$query->is_main_query() || !is_category()) {
+        return;
     }
-}, 99);
+
+    $category = get_queried_object();
+
+    $category_ids = array($category->term_id);
+
+    $translated = apply_filters(
+        'wpml_object_id',
+        $category->term_id,
+        'category',
+        false,
+        'en'
+    );
+
+    if ($translated && $translated != $category->term_id) {
+        $category_ids[] = $translated;
+    }
+
+    $query->set('category__in', $category_ids);
+
+    // Disable WPML language filtering
+    $query->set('suppress_filters', true);
+
+});
