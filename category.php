@@ -32,6 +32,21 @@ $args = array(
 );
 
 $query = new WP_Query($args);
+
+
+$current_category = get_queried_object();
+
+echo 'Current category ID: ' . $current_category->term_id . '<br>';
+
+$translated = apply_filters(
+    'wpml_object_id',
+    $current_category->term_id,
+    'category',
+    false,
+    'en'
+);
+
+var_dump($translated);
 ?>
 <div class="container what-we-think-container">
     <div class="row text-center py-5">
