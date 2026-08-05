@@ -20,14 +20,7 @@ if ($translated_id && $translated_id != $current_category->term_id) {
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => -1,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'category',
-            'field'    => 'term_id',
-            'terms'    => $category_ids,
-        ),
-    ),
-
+    'category__in'   => $category_ids,
     // Show posts in all languages
     'lang' => '',
 );
