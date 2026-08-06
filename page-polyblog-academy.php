@@ -173,10 +173,13 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
 
     $edu_label  = $pd['education'] === 'other' ? 'Other: ' . $pd['edu_other'] : $pd['education'];
     $email_data = array_merge( $pd, [ 'education' => $edu_label ] );
-    $headers    = [ 'Content-Type: text/html; charset=UTF-8' ];
+    $headers    = [
+        'Content-Type: text/html; charset=UTF-8',
+        'From: PolyBlog Academy <noreply@polybloglb.com>',
+    ];
 
     wp_mail(
-        get_option( 'admin_email' ),
+        'kouyoumdjianmike@gmail.com',
         'New PolyBlog Academy Application – ' . $pd['full_name'],
         polyblog_academy_admin_email( $email_data ),
         $headers
