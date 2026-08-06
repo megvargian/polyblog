@@ -122,7 +122,74 @@ if ( ! function_exists( 'academy_val' ) ) {
         return esc_attr( $data[ $key ] ?? '' );
     }
 }
+// ─── AJAX form handler — intercepts POST before HTML output, returns JSON ──
+if ( 'POST' === $_SERVER['REQUEST_METHOD']
+    && ! empty( $_POST['academy_nonce'] )
+    && ! empty( $_POST['is_ajax'] ) ) {
 
+    if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['academy_nonce'] ) ), 'polyblog_academy_form' ) ) {
+        wp_send_json_error( [ 'message' => 'Security check failed.' ] );
+    }
+
+    $pd = [
+        'full_name'      => sanitize_text_field( wp_unslash( $_POST['full_name']       ?? '' ) ),
+        'dob'            => sanitize_text_field( wp_unslash( $_POST['dob']             ?? '' ) ),
+        'gender'         => sanitize_text_field( wp_unslash( $_POST['gender']          ?? '' ) ),
+        'residence'      => sanitize_text_field( wp_unslash( $_POST['residence']       ?? '' ) ),
+        'education'      => sanitize_text_field( wp_unslash( $_POST['education']       ?? '' ) ),
+        'edu_other'      => sanitize_text_field( wp_unslash( $_POST['edu_other']       ?? '' ) ),
+        'field_of_study' => sanitize_text_field( wp_unslash( $_POST['field_of_study']  ?? '' ) ),
+        'occupation'     => sanitize_text_field( wp_unslash( $_POST['occupation']      ?? '' ) ),
+        'mobile'         => sanitize_text_field( wp_unslash( $_POST['mobile']          ?? '' ) ),
+        'email'          => sanitize_email(      wp_unslash( $_POST['applicant_email'] ?? '' ) ),
+        'commitment'     => isset( $_POST['commitment'] ),
+        'motivation'     => sanitize_textarea_field( wp_unslash( $_POST['motivation']  ?? '' ) ),
+    ];
+
+    $errs = [];
+    if ( empty( $pd['full_name'] ) )      $errs['full_name']       = 'Full Name is required. / الاسم مطلوب.';
+    if ( empty( $pd['dob'] ) )            $errs['dob']             = 'Date of Birth is required. / تاريخ الولادة مطلوب.';
+    if ( empty( $pd['gender'] ) )         $errs['gender']          = 'Please select your gender. / يرجى تحديد الجنس.';
+    if ( empty( $pd['residence'] ) )      $errs['residence']       = 'Place of Residence is required. / مكان السكن مطلوب.';
+    if ( empty( $pd['education'] ) )      $errs['education']       = 'Please select your education level. / يرجى تحديد المستوى التعليمي.';
+    if ( $pd['education'] === 'other' && empty( $pd['edu_other'] ) )
+                                          $errs['edu_other']       = 'Please specify your education. / يرجى التحديد.';
+    if ( empty( $pd['field_of_study'] ) ) $errs['field_of_study']  = 'Field of Study is required. / الاختصاص مطلوب.';
+    if ( empty( $pd['occupation'] ) )     $errs['occupation']      = 'Occupation is required. / المهنة مطلوبة.';
+    if ( empty( $pd['mobile'] ) )         $errs['mobile']          = 'Mobile Number is required. / رقم الهاتف مطلوب.';
+    if ( empty( $pd['email'] ) )          $errs['applicant_email'] = 'Email Address is required. / البريد مطلوب.';
+    elseif ( ! is_email( $pd['email'] ) ) $errs['applicant_email'] = 'Please enter a valid email. / بريد غير صحيح.';
+    if ( ! $pd['commitment'] )            $errs['commitment']      = 'Please confirm your commitment. / يرجى التأكيد.';
+    if ( empty( $pd['motivation'] ) ) {
+        $errs['motivation'] = 'Motivation is required. / الدافع مطلوب.';
+    } else {
+        $wc = count( preg_split( '/\s+/u', trim( $pd['motivation'] ), -1, PREG_SPLIT_NO_EMPTY ) );
+        if ( $wc > 250 ) $errs['motivation'] = 'Exceeds 250 words (current: ' . $wc . ').';
+    }
+
+    if ( ! empty( $errs ) ) {
+        wp_send_json_error( [ 'fields' => $errs ] );
+    }
+
+    $edu_label  = $pd['education'] === 'other' ? 'Other: ' . $pd['edu_other'] : $pd['education'];
+    $email_data = array_merge( $pd, [ 'education' => $edu_label ] );
+    $headers    = [ 'Content-Type: text/html; charset=UTF-8' ];
+
+    wp_mail(
+        get_option( 'admin_email' ),
+        'New PolyBlog Academy Application – ' . $pd['full_name'],
+        polyblog_academy_admin_email( $email_data ),
+        $headers
+    );
+    wp_mail(
+        $pd['email'],
+        'Thank You for Applying – PolyBlog Academy | شكراً لتقديمك إلى أكاديمية بوليبلوغ',
+        polyblog_academy_thankyou_email( $pd['full_name'] ),
+        $headers
+    );
+
+    wp_send_json_success( [ 'message' => 'Application submitted successfully.' ] );
+}
 // ─── Inline page styles via wp_head ──────────────────────────────────────────
 add_action( 'wp_head', function () {
     if ( ! is_page_template( 'page-polyblog-academy.php' ) ) {
@@ -379,86 +446,26 @@ add_action( 'wp_head', function () {
     .academy-options label { width: 100%; }
     .academy-submit-btn { width: 100%; justify-content: center; padding: 14px 24px; }
 }
+/* Per-field validation error messages */
+.field-error {
+    display: none;
+    font-family: "Lexend-Regular", sans-serif;
+    font-size: 0.73rem;
+    color: #ff5f5f;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+.field-error.visible { display: block; }
+.academy-form input.is-invalid,
+.academy-form textarea.is-invalid { border-color: #c90500 !important; background-color: #1e1216 !important; }
+.academy-options.is-invalid label { border-color: #c90500; }
+.academy-commitment.is-invalid { border-color: #c90500 !important; }
+.academy-submit-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; pointer-events: none; }
+.btn-spinner { display:inline-block; width:14px; height:14px; border:2px solid #141213; border-top-color:transparent; border-radius:50%; animation:spin .7s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
 </style>
     <?php
 }, 20 );
-
-// ─── Form Processing ──────────────────────────────────────────────────────────
-$academy_submitted = false;
-$academy_error     = false;
-$academy_error_msg = '';
-$pd                = []; // repopulate data on error
-
-if ( 'POST' === $_SERVER['REQUEST_METHOD'] && ! empty( $_POST['academy_nonce'] ) ) {
-
-    if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['academy_nonce'] ) ), 'polyblog_academy_form' ) ) {
-        $academy_error     = true;
-        $academy_error_msg = 'Security check failed. Please refresh the page and try again.';
-    } else {
-        $pd = [
-            'full_name'      => sanitize_text_field( wp_unslash( $_POST['full_name']       ?? '' ) ),
-            'dob'            => sanitize_text_field( wp_unslash( $_POST['dob']             ?? '' ) ),
-            'gender'         => sanitize_text_field( wp_unslash( $_POST['gender']          ?? '' ) ),
-            'residence'      => sanitize_text_field( wp_unslash( $_POST['residence']       ?? '' ) ),
-            'education'      => sanitize_text_field( wp_unslash( $_POST['education']       ?? '' ) ),
-            'edu_other'      => sanitize_text_field( wp_unslash( $_POST['edu_other']       ?? '' ) ),
-            'field_of_study' => sanitize_text_field( wp_unslash( $_POST['field_of_study']  ?? '' ) ),
-            'occupation'     => sanitize_text_field( wp_unslash( $_POST['occupation']      ?? '' ) ),
-            'mobile'         => sanitize_text_field( wp_unslash( $_POST['mobile']          ?? '' ) ),
-            'email'          => sanitize_email(      wp_unslash( $_POST['applicant_email'] ?? '' ) ),
-            'commitment'     => isset( $_POST['commitment'] ),
-            'motivation'     => sanitize_textarea_field( wp_unslash( $_POST['motivation']  ?? '' ) ),
-        ];
-
-        // Required-field check
-        $empty = empty( $pd['full_name'] )  || empty( $pd['dob'] )       || empty( $pd['gender'] )    ||
-                 empty( $pd['residence'] )  || empty( $pd['education'] )  || empty( $pd['field_of_study'] ) ||
-                 empty( $pd['occupation'] ) || empty( $pd['mobile'] )     || empty( $pd['email'] )     ||
-                 ! $pd['commitment']        || empty( $pd['motivation'] );
-
-        if ( $pd['education'] === 'other' && empty( $pd['edu_other'] ) ) {
-            $empty = true;
-        }
-
-        if ( $empty ) {
-            $academy_error     = true;
-            $academy_error_msg = 'Please fill in all required fields and confirm your commitment. / يرجى تعبئة جميع الحقول المطلوبة وتأكيد الالتزام.';
-        } elseif ( ! is_email( $pd['email'] ) ) {
-            $academy_error     = true;
-            $academy_error_msg = 'Please enter a valid email address. / يرجى إدخال بريد إلكتروني صحيح.';
-        } else {
-            $wc = count( preg_split( '/\s+/u', trim( $pd['motivation'] ), -1, PREG_SPLIT_NO_EMPTY ) );
-            if ( $wc > 250 ) {
-                $academy_error     = true;
-                $academy_error_msg = 'Your motivation response exceeds 250 words (current: ' . $wc . ').';
-            }
-        }
-
-        if ( ! $academy_error ) {
-            $edu_label  = $pd['education'] === 'other' ? 'Other: ' . $pd['edu_other'] : $pd['education'];
-            $email_data = array_merge( $pd, [ 'education' => $edu_label ] );
-            $headers    = [ 'Content-Type: text/html; charset=UTF-8' ];
-
-            // Admin notification
-            wp_mail(
-                get_option( 'admin_email' ),
-                'New PolyBlog Academy Application – ' . $pd['full_name'],
-                polyblog_academy_admin_email( $email_data ),
-                $headers
-            );
-
-            // Applicant thank-you
-            wp_mail(
-                $pd['email'],
-                'Thank You for Applying – PolyBlog Academy | شكراً لتقديمك إلى أكاديمية بوليبلوغ',
-                polyblog_academy_thankyou_email( $pd['full_name'] ),
-                $headers
-            );
-
-            $academy_submitted = true;
-        }
-    }
-}
 
 get_header();
 ?>
@@ -526,9 +533,8 @@ get_header();
                 </div>
             </div>
 
-            <?php if ( $academy_submitted ) : ?>
-            <!-- ✓ Success state -->
-            <div class="row">
+            <!-- ✓ Success state – revealed by JS after AJAX -->
+            <div class="row" id="academy-success-state" style="display:none;">
                 <div class="col-lg-8 col-12 mx-auto">
                     <div class="academy-alert is-success">
                         <span class="academy-success-icon">&#10003;</span>
@@ -542,19 +548,7 @@ get_header();
                 </div>
             </div>
 
-            <?php else : ?>
-
-            <?php if ( $academy_error ) : ?>
-            <div class="row">
-                <div class="col-lg-8 col-12 mx-auto">
-                    <div class="academy-alert is-error" id="academy-error-msg">
-                        <?php echo esc_html( $academy_error_msg ); ?>
-                    </div>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <div class="row">
+            <div class="row" id="academy-form-row">
                 <div class="col-lg-8 col-12 mx-auto">
                     <form method="POST" class="academy-form" id="academy-application-form" novalidate>
                         <?php wp_nonce_field( 'polyblog_academy_form', 'academy_nonce' ); ?>
@@ -568,8 +562,8 @@ get_header();
                                 <span class="q-ar">الاسم الكامل <sup>*</sup></span>
                             </label>
                             <input type="text" id="full_name" name="full_name" required autocomplete="name"
-                                   value="<?php echo academy_val( 'full_name', $pd ); ?>"
                                    placeholder="Enter your full name · أدخل اسمك الكامل">
+                            <span class="field-error" id="error-full_name"></span>
                         </div>
 
                         <!-- ── 2. Date of Birth ──────────────────────────── -->
@@ -579,8 +573,8 @@ get_header();
                                 <span class="q-en">Date of Birth <sup>*</sup></span>
                                 <span class="q-ar">تاريخ الولادة <sup>*</sup></span>
                             </label>
-                            <input type="date" id="dob" name="dob" required
-                                   value="<?php echo academy_val( 'dob', $pd ); ?>">
+                            <input type="date" id="dob" name="dob" required>
+                            <span class="field-error" id="error-dob"></span>
                         </div>
 
                         <!-- ── 3. Gender ─────────────────────────────────── -->
@@ -590,23 +584,21 @@ get_header();
                                 <span class="q-en">Gender <sup>*</sup></span>
                                 <span class="q-ar">الجنس <sup>*</sup></span>
                             </span>
-                            <?php $sel_gender = academy_val( 'gender', $pd ); ?>
-                            <ul class="academy-options">
+                            <ul class="academy-options" data-group="gender">
                                 <li>
                                     <label>
-                                        <input type="radio" name="gender" value="Male / ذكر" required
-                                               <?php checked( $sel_gender, 'Male / ذكر' ); ?>>
+                                        <input type="radio" name="gender" value="Male / ذكر" required>
                                         <span>Male / ذكر</span>
                                     </label>
                                 </li>
                                 <li>
                                     <label>
-                                        <input type="radio" name="gender" value="Female / أنثى"
-                                               <?php checked( $sel_gender, 'Female / أنثى' ); ?>>
+                                        <input type="radio" name="gender" value="Female / أنثى">
                                         <span>Female / أنثى</span>
                                     </label>
                                 </li>
                             </ul>
+                            <span class="field-error" id="error-gender"></span>
                         </div>
 
                         <!-- ── 4. Place of Residence ────────────────────── -->
@@ -617,8 +609,8 @@ get_header();
                                 <span class="q-ar">مكان السكن <sup>*</sup></span>
                             </label>
                             <input type="text" id="residence" name="residence" required
-                                   value="<?php echo academy_val( 'residence', $pd ); ?>"
                                    placeholder="City / District · المدينة / المنطقة">
+                            <span class="field-error" id="error-residence"></span>
                         </div>
 
                         <!-- ── 5. Education Level ────────────────────────── -->
@@ -637,24 +629,23 @@ get_header();
                                 'phd'         => 'PhD / دكتوراه',
                                 'other'       => 'Other / غيره',
                             ];
-                            $sel_edu = $pd['education'] ?? '';
                             ?>
-                            <ul class="academy-options">
+                            <ul class="academy-options" data-group="education">
                                 <?php foreach ( $edu_options as $val => $label ) : ?>
                                 <li>
                                     <label>
                                         <input type="radio" name="education" value="<?php echo esc_attr( $val ); ?>"
-                                               class="edu-radio" required
-                                               <?php checked( $sel_edu, $val ); ?>>
+                                               class="edu-radio" required>
                                         <span><?php echo esc_html( $label ); ?></span>
                                     </label>
                                 </li>
                                 <?php endforeach; ?>
                             </ul>
-                            <div id="edu-other-wrap"<?php echo $sel_edu === 'other' ? ' style="display:block;"' : ''; ?>>
+                            <span class="field-error" id="error-education"></span>
+                            <div id="edu-other-wrap">
                                 <input type="text" id="edu_other" name="edu_other"
-                                       value="<?php echo academy_val( 'edu_other', $pd ); ?>"
                                        placeholder="Please specify / يرجى التحديد">
+                                <span class="field-error" id="error-edu_other"></span>
                             </div>
                         </div>
 
@@ -666,8 +657,8 @@ get_header();
                                 <span class="q-ar">الاختصاص <sup>*</sup></span>
                             </label>
                             <input type="text" id="field_of_study" name="field_of_study" required
-                                   value="<?php echo academy_val( 'field_of_study', $pd ); ?>"
                                    placeholder="e.g. Journalism, Political Science · مثلاً: صحافة، علوم سياسية">
+                            <span class="field-error" id="error-field_of_study"></span>
                         </div>
 
                         <!-- ── 7. Current Occupation ─────────────────────── -->
@@ -678,8 +669,8 @@ get_header();
                                 <span class="q-ar">الوظيفة الحالية / المهنة <sup>*</sup></span>
                             </label>
                             <input type="text" id="occupation" name="occupation" required
-                                   value="<?php echo academy_val( 'occupation', $pd ); ?>"
                                    placeholder="e.g. Student, Journalist, Freelancer · مثلاً: طالب، صحفي، مستقل">
+                            <span class="field-error" id="error-occupation"></span>
                         </div>
 
                         <!-- ── 8. Mobile Number ──────────────────────────── -->
@@ -690,8 +681,8 @@ get_header();
                                 <span class="q-ar">رقم الهاتف <sup>*</sup></span>
                             </label>
                             <input type="tel" id="mobile" name="mobile" required autocomplete="tel"
-                                   value="<?php echo academy_val( 'mobile', $pd ); ?>"
                                    placeholder="+961 XX XXX XXX">
+                            <span class="field-error" id="error-mobile"></span>
                         </div>
 
                         <!-- ── 9. Email Address ──────────────────────────── -->
@@ -702,8 +693,8 @@ get_header();
                                 <span class="q-ar">البريد الإلكتروني <sup>*</sup></span>
                             </label>
                             <input type="email" id="applicant_email" name="applicant_email" required autocomplete="email"
-                                   value="<?php echo academy_val( 'email', $pd ); ?>"
                                    placeholder="your@email.com">
+                            <span class="field-error" id="error-applicant_email"></span>
                         </div>
 
                         <!-- ── 10. Commitment ────────────────────────────── -->
@@ -717,10 +708,10 @@ get_header();
                                 <p class="en-text">I confirm my commitment to attend the full training program and, if selected, to actively participate in the internship program and fulfill its requirements.</p>
                                 <p class="ar-text">أؤكد التزامي بحضور البرنامج التدريبي كاملاً، وفي حال تم اختياري، ألتزم بالمشاركة في برنامج التدريب العملي واستيفاء متطلباته.</p>
                                 <div class="confirm-row">
-                                    <input type="checkbox" id="commitment" name="commitment" required
-                                           <?php checked( $pd['commitment'] ?? false, true ); ?>>
+                                    <input type="checkbox" id="commitment" name="commitment" required>
                                     <label for="commitment">I confirm and agree / أؤكد وأوافق</label>
                                 </div>
+                                <span class="field-error" id="error-commitment"></span>
                             </div>
                         </div>
 
@@ -734,8 +725,9 @@ get_header();
                             <p class="motivation-hint en-hint">Please tell us why you would like to join the PolyBlog Academy Digital Journalism Program. What motivates you to apply, and what do you hope to gain from the training sessions and internship? <em>(Maximum 250 words)</em></p>
                             <p class="motivation-hint ar-hint">يرجى إخبارنا لماذا ترغب/ترغبين في الانضمام إلى برنامج أكاديمية بوليبلوغ للصحافة الرقمية. ما الذي يدفعك للتقديم، وما الذي تتوقع/ين اكتسابه من الجلسات التدريبية وبرنامج التدريب العملي؟ <em>(250 كلمة كحدّ أقصى)</em></p>
                             <textarea id="motivation" name="motivation" required
-                                      placeholder="Write your response here… · اكتب إجابتك هنا…"><?php echo esc_textarea( $pd['motivation'] ?? '' ); ?></textarea>
+                                      placeholder="Write your response here… · اكتب إجابتك هنا…"></textarea>
                             <div class="word-counter" id="word-counter">0 / 250 words</div>
+                            <span class="field-error" id="error-motivation"></span>
                         </div>
 
                         <!-- ── Submit ────────────────────────────────────── -->
@@ -752,7 +744,6 @@ get_header();
                     </form>
                 </div>
             </div><!-- /.row -->
-            <?php endif; // end !$academy_submitted ?>
 
         </div><!-- /.container -->
     </section>
@@ -763,7 +754,13 @@ get_header();
 (function () {
     'use strict';
 
-    // Education "Other" toggle
+    var form       = document.getElementById('academy-application-form');
+    var formRow    = document.getElementById('academy-form-row');
+    var successRow = document.getElementById('academy-success-state');
+    var ta         = document.getElementById('motivation');
+    var counter    = document.getElementById('word-counter');
+
+    // ── Education "Other" toggle ─────────────────────────────────────────
     document.querySelectorAll('.edu-radio').forEach(function (r) {
         r.addEventListener('change', function () {
             var wrap = document.getElementById('edu-other-wrap');
@@ -771,49 +768,212 @@ get_header();
         });
     });
 
-    // Word counter for motivation textarea
-    var ta      = document.getElementById('motivation');
-    var counter = document.getElementById('word-counter');
+    // ── Word counter ─────────────────────────────────────────────────────
+    function countWords(str) {
+        return str.trim() === '' ? 0 : str.trim().split(/\s+/).length;
+    }
     function updateCount() {
         if (!ta || !counter) return;
-        var words = ta.value.trim() === '' ? 0 : ta.value.trim().split(/\s+/).length;
-        counter.textContent = words + ' / 250 words';
-        counter.classList.toggle('over-limit', words > 250);
+        var w = countWords(ta.value);
+        counter.textContent = w + ' / 250 words';
+        counter.classList.toggle('over-limit', w > 250);
     }
     if (ta) { ta.addEventListener('input', updateCount); updateCount(); }
 
-    // Client-side guard before submit
-    var form = document.getElementById('academy-application-form');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            var valid = true;
-
-            // Radio groups must have a selection
-            ['gender', 'education'].forEach(function (name) {
-                if (!form.querySelector('input[name="' + name + '"]:checked')) valid = false;
-            });
-
-            // Commitment checkbox
-            var cb = form.querySelector('#commitment');
-            if (cb && !cb.checked) valid = false;
-
-            // Word count
-            if (ta) {
-                var wc = ta.value.trim() === '' ? 0 : ta.value.trim().split(/\s+/).length;
-                if (wc > 250) valid = false;
-            }
-
-            if (!valid) {
-                e.preventDefault();
-                var errEl = document.getElementById('academy-error-msg');
-                if (errEl) {
-                    window.scrollTo({ top: errEl.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
-                } else {
-                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
+    // ── Per-field error helpers ──────────────────────────────────────────
+    function clearErrors() {
+        form.querySelectorAll('.field-error').forEach(function (el) {
+            el.textContent = '';
+            el.classList.remove('visible');
+        });
+        form.querySelectorAll('.is-invalid').forEach(function (el) {
+            el.classList.remove('is-invalid');
         });
     }
+
+    function showError(fieldId, msg) {
+        var errEl = document.getElementById('error-' + fieldId);
+        if (errEl) {
+            errEl.textContent = msg;
+            errEl.classList.add('visible');
+        }
+        // Highlight the offending control
+        var input = form.querySelector('#' + fieldId);
+        if (input) {
+            input.classList.add('is-invalid');
+        }
+        // For radio groups, highlight every option label border via the list
+        var group = form.querySelector('.academy-options[data-group="' + fieldId + '"]');
+        if (group) group.classList.add('is-invalid');
+        // For commitment
+        if (fieldId === 'commitment') {
+            var block = form.querySelector('.academy-commitment');
+            if (block) block.classList.add('is-invalid');
+        }
+    }
+
+    // ── Client-side validation ───────────────────────────────────────────
+    function validate() {
+        var errs = {};
+
+        var fn = form.querySelector('#full_name');
+        if (!fn || !fn.value.trim()) errs['full_name'] = 'Full Name is required. / الاسم مطلوب.';
+
+        var dob = form.querySelector('#dob');
+        if (!dob || !dob.value) errs['dob'] = 'Date of Birth is required. / تاريخ الولادة مطلوب.';
+
+        if (!form.querySelector('input[name="gender"]:checked'))
+            errs['gender'] = 'Please select your gender. / يرجى تحديد الجنس.';
+
+        var res = form.querySelector('#residence');
+        if (!res || !res.value.trim()) errs['residence'] = 'Place of Residence is required. / مكان السكن مطلوب.';
+
+        var eduChecked = form.querySelector('input[name="education"]:checked');
+        if (!eduChecked) {
+            errs['education'] = 'Please select your education level. / يرجى تحديد المستوى التعليمي.';
+        } else if (eduChecked.value === 'other') {
+            var eduOther = form.querySelector('#edu_other');
+            if (!eduOther || !eduOther.value.trim())
+                errs['edu_other'] = 'Please specify your education. / يرجى التحديد.';
+        }
+
+        var fos = form.querySelector('#field_of_study');
+        if (!fos || !fos.value.trim()) errs['field_of_study'] = 'Field of Study is required. / الاختصاص مطلوب.';
+
+        var occ = form.querySelector('#occupation');
+        if (!occ || !occ.value.trim()) errs['occupation'] = 'Occupation is required. / المهنة مطلوبة.';
+
+        var mob = form.querySelector('#mobile');
+        if (!mob || !mob.value.trim()) errs['mobile'] = 'Mobile Number is required. / رقم الهاتف مطلوب.';
+
+        var email = form.querySelector('#applicant_email');
+        if (!email || !email.value.trim()) {
+            errs['applicant_email'] = 'Email Address is required. / البريد مطلوب.';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+            errs['applicant_email'] = 'Please enter a valid email. / بريد غير صحيح.';
+        }
+
+        var cb = form.querySelector('#commitment');
+        if (!cb || !cb.checked) errs['commitment'] = 'Please confirm your commitment. / يرجى التأكيد.';
+
+        if (!ta || !ta.value.trim()) {
+            errs['motivation'] = 'Motivation is required. / الدافع مطلوب.';
+        } else if (countWords(ta.value) > 250) {
+            errs['motivation'] = 'Exceeds 250 words (current: ' + countWords(ta.value) + ').';
+        }
+
+        return errs;
+    }
+
+    // ── Apply errors and scroll to first ────────────────────────────────
+    function applyErrors(errs) {
+        clearErrors();
+        var firstEl = null;
+        Object.keys(errs).forEach(function (key) {
+            showError(key, errs[key]);
+            if (!firstEl) {
+                firstEl = document.getElementById('error-' + key)
+                       || form.querySelector('#' + key)
+                       || form.querySelector('.academy-options[data-group="' + key + '"]');
+            }
+        });
+        if (firstEl) {
+            var top = firstEl.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+    }
+
+    // ── Submit handler ───────────────────────────────────────────────────
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var errs = validate();
+        if (Object.keys(errs).length > 0) {
+            applyErrors(errs);
+            return;
+        }
+
+        clearErrors();
+
+        // Button loading state
+        var btn      = form.querySelector('.academy-submit-btn');
+        var btnLabel = btn.querySelector('span');
+        var btnOrig  = btnLabel ? btnLabel.textContent : 'Submit Application';
+        btn.disabled = true;
+        if (btnLabel) btnLabel.textContent = 'Sending…';
+        btn.insertAdjacentHTML('beforeend', '<span class="btn-spinner"></span>');
+
+        // Build FormData and flag as AJAX
+        var fd = new FormData(form);
+        fd.append('is_ajax', '1');
+
+        fetch(window.location.href, {
+            method: 'POST',
+            body: fd,
+            credentials: 'same-origin'
+        })
+        .then(function (r) {
+            if (!r.ok) throw new Error('Network error ' + r.status);
+            return r.json();
+        })
+        .then(function (data) {
+            if (data.success) {
+                // Show success, hide form
+                if (formRow)    formRow.style.display    = 'none';
+                if (successRow) {
+                    successRow.style.display = 'block';
+                    var top = successRow.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            } else {
+                // Server returned per-field errors
+                var spinner = btn.querySelector('.btn-spinner');
+                if (spinner) spinner.remove();
+                btn.disabled = false;
+                if (btnLabel) btnLabel.textContent = btnOrig;
+
+                if (data.data && data.data.fields) {
+                    applyErrors(data.data.fields);
+                } else {
+                    var msg = (data.data && data.data.message) || 'Submission failed. Please try again.';
+                    var firstErr = form.querySelector('.field-error');
+                    if (firstErr) { firstErr.textContent = msg; firstErr.classList.add('visible'); }
+                }
+            }
+        })
+        .catch(function () {
+            var spinner = btn.querySelector('.btn-spinner');
+            if (spinner) spinner.remove();
+            btn.disabled = false;
+            if (btnLabel) btnLabel.textContent = btnOrig;
+            // Show a generic error on the motivation field as a fallback
+            var gen = document.getElementById('error-motivation');
+            if (gen) { gen.textContent = 'Network error. Please check your connection and try again.'; gen.classList.add('visible'); }
+        });
+    });
+
+    // ── Clear field error on user interaction ────────────────────────────
+    form.querySelectorAll('input, textarea').forEach(function (el) {
+        el.addEventListener('input', function () {
+            var errEl = document.getElementById('error-' + el.id);
+            if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+            el.classList.remove('is-invalid');
+        });
+        if (el.type === 'radio' || el.type === 'checkbox') {
+            el.addEventListener('change', function () {
+                var groupName = el.getAttribute('name');
+                var errEl = document.getElementById('error-' + groupName)
+                         || document.getElementById('error-' + el.id);
+                if (errEl) { errEl.textContent = ''; errEl.classList.remove('visible'); }
+                var group = form.querySelector('.academy-options[data-group="' + groupName + '"]');
+                if (group) group.classList.remove('is-invalid');
+                var block = form.querySelector('.academy-commitment');
+                if (block) block.classList.remove('is-invalid');
+            });
+        }
+    });
 })();
 </script>
 
