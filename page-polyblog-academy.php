@@ -478,7 +478,6 @@ get_header();
     <!-- ═══ Program Description ════════════════════════════════════════════ -->
     <section class="py-0">
         <div class="container">
-            test
 
             <!-- Desktop top white line -->
             <div class="row pt-2 mb-4 d-lg-flex d-none">
