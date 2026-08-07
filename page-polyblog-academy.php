@@ -178,20 +178,32 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
         'From: PolyBlog Academy <noreply@polybloglb.com>',
     ];
 
-    wp_mail(
+    $admin_sent = wp_mail(
         'kouyoumdjianmike@gmail.com',
         'New PolyBlog Academy Application – ' . $pd['full_name'],
-        polyblog_academy_admin_email( $email_data ),
-        $headers
-    );
-    wp_mail(
-        $pd['email'],
-        'Thank You for Applying – PolyBlog Academy | شكراً لتقديمك إلى أكاديمية بوليبلوغ',
-        polyblog_academy_thankyou_email( $pd['full_name'] ),
+        polyblog_academy_admin_email($email_data),
         $headers
     );
 
-    wp_send_json_success( [ 'message' => 'Application submitted successfully.' ] );
+    $user_sent = wp_mail(
+        $pd['email'],
+        'Thank You for Applying – PolyBlog Academy',
+        polyblog_academy_thankyou_email($pd['full_name']),
+        $headers
+    );
+
+    error_log('Admin mail: ' . ($admin_sent ? 'SUCCESS' : 'FAILED'));
+    error_log('User mail: ' . ($user_sent ? 'SUCCESS' : 'FAILED'));
+
+    if (!$admin_sent || !$user_sent) {
+        wp_send_json_error([
+            'message' => 'Unable to send email.'
+        ]);
+    }
+
+    wp_send_json_success([
+        'message' => 'Application submitted successfully.'
+    ]);
 }
 // ─── Inline page styles via wp_head ──────────────────────────────────────────
 add_action( 'wp_head', function () {
