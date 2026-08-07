@@ -427,6 +427,7 @@ add_action( 'wp_head', function () {
 }
 .academy-submit-btn:hover { background-color: #fff; transform: translateY(-2px); }
 .academy-submit-note { margin-top: 0.7rem; font-family: "NotoKufiArabic-Regular", sans-serif; font-size: 0.78rem; color: #777; direction: rtl; }
+.academy-general-error { display:none; background-color:rgba(201,5,0,.1); border:1px solid #c90500; border-radius:5px; padding:0.9rem 1.2rem; margin-bottom:1rem; font-family:"Lexend-Regular",sans-serif; font-size:0.85rem; color:#ff5f5f; text-align:center; }
 
 /* Alerts */
 .academy-alert { padding: 1.2rem 1.5rem; border-radius: 5px; margin-bottom: 2rem; font-size: 0.88rem; line-height: 1.65; }
@@ -501,8 +502,8 @@ get_header();
                 <div class="col-12 academy-title-block">
                     <div class="academy-title-pill">
                         <h1>
-                            <span class="en-bold">PolyBlog Academy</span>
-                            <span class="ar-bold">أكاديمية بوليبلوغ</span>
+                            <span class="en-bold">PolyBlog Media Workshops</span>
+                            <span class="ar-bold">ورش بوليبلوغ الإعلامية</span>
                         </h1>
                     </div>
                     <div class="academy-partner-badge">
@@ -557,7 +558,7 @@ get_header();
                             <span class="en-bold">Application Received!</span>
                             <span class="ar-bold">تم استلام طلبك!</span>
                         </h3>
-                        <p class="en-text">Thank you for applying to the PolyBlog Academy Digital Journalism Program. A confirmation email has been sent to your inbox. Our team will review all applications and contact shortlisted candidates directly.</p>
+                        <p class="en-text">Thank you for applying to the PolyBlog Media Workshops Digital Journalism Program. A confirmation email has been sent to your inbox. Our team will review all applications and contact shortlisted candidates directly.</p>
                         <p class="ar-text">شكراً لتقديمك إلى برنامج أكاديمية بوليبلوغ للصحافة الرقمية. تم إرسال رسالة تأكيد إلى بريدك الإلكتروني. سيقوم فريقنا بمراجعة الطلبات والتواصل مع المرشحين المختارين مباشرةً.</p>
                     </div>
                 </div>
@@ -737,7 +738,7 @@ get_header();
                                 <span class="q-en">Motivation &amp; Expectations <sup>*</sup></span>
                                 <span class="q-ar">الدافع والتوقعات <sup>*</sup></span>
                             </label>
-                            <p class="motivation-hint en-hint">Please tell us why you would like to join the PolyBlog Academy Digital Journalism Program. What motivates you to apply, and what do you hope to gain from the training sessions and internship? <em>(Maximum 250 words)</em></p>
+                            <p class="motivation-hint en-hint">Please tell us why you would like to join the PolyBlog Media Workshops Digital Journalism Program. What motivates you to apply, and what do you hope to gain from the training sessions and internship? <em>(Maximum 250 words)</em></p>
                             <p class="motivation-hint ar-hint">يرجى إخبارنا لماذا ترغب/ترغبين في الانضمام إلى برنامج أكاديمية بوليبلوغ للصحافة الرقمية. ما الذي يدفعك للتقديم، وما الذي تتوقع/ين اكتسابه من الجلسات التدريبية وبرنامج التدريب العملي؟ <em>(250 كلمة كحدّ أقصى)</em></p>
                             <textarea id="motivation" name="motivation" required
                                       placeholder="Write your response here… · اكتب إجابتك هنا…"></textarea>
@@ -746,6 +747,7 @@ get_header();
                         </div>
 
                         <!-- ── Submit ────────────────────────────────────── -->
+                        <div class="academy-general-error" id="academy-general-error"></div>
                         <div class="academy-submit-wrap">
                             <button type="submit" class="academy-submit-btn">
                                 <span>Submit Application</span>
@@ -794,6 +796,14 @@ get_header();
         counter.classList.toggle('over-limit', w > 250);
     }
     if (ta) { ta.addEventListener('input', updateCount); updateCount(); }
+
+    // Open native date picker on any click (some browsers only open it via the icon)
+    var dobInput = document.getElementById('dob');
+    if (dobInput) {
+        dobInput.addEventListener('click', function () {
+            try { this.showPicker(); } catch (e) {}
+        });
+    }
 
     // ── Per-field error helpers ──────────────────────────────────────────
     function clearErrors() {
@@ -911,6 +921,8 @@ get_header();
         }
 
         clearErrors();
+        var genErr = document.getElementById('academy-general-error');
+        if (genErr) genErr.style.display = 'none';
 
         // Button loading state
         var btn      = form.querySelector('.academy-submit-btn');
@@ -953,8 +965,8 @@ get_header();
                     applyErrors(data.data.fields);
                 } else {
                     var msg = (data.data && data.data.message) || 'Submission failed. Please try again.';
-                    var firstErr = form.querySelector('.field-error');
-                    if (firstErr) { firstErr.textContent = msg; firstErr.classList.add('visible'); }
+                    var gen = document.getElementById('academy-general-error');
+                    if (gen) { gen.textContent = msg; gen.style.display = 'block'; }
                 }
             }
         })
@@ -963,9 +975,8 @@ get_header();
             if (spinner) spinner.remove();
             btn.disabled = false;
             if (btnLabel) btnLabel.textContent = btnOrig;
-            // Show a generic error on the motivation field as a fallback
-            var gen = document.getElementById('error-motivation');
-            if (gen) { gen.textContent = 'Network error. Please check your connection and try again.'; gen.classList.add('visible'); }
+            var gen = document.getElementById('academy-general-error');
+            if (gen) { gen.textContent = 'Network error. Please check your connection and try again.'; gen.style.display = 'block'; }
         });
     });
 
