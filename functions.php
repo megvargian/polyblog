@@ -706,6 +706,10 @@ if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
     require_once get_template_directory() . '/inc/smtp-config.php';
 }
 
+add_action( 'wp_mail_failed', function ( $error ) {
+    error_log( '[wp_mail_failed] ' . implode( ' | ', $error->get_error_messages() ) );
+} );
+
 if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
     add_action( 'phpmailer_init', function ( $phpmailer ) {
         $phpmailer->isSMTP();

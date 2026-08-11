@@ -192,12 +192,19 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
         $headers
     );
 
-    error_log('Admin mail: ' . ($admin_sent ? 'SUCCESS' : 'FAILED'));
-    error_log('User mail: ' . ($user_sent ? 'SUCCESS' : 'FAILED'));
+    global $phpmailer;
+    $smtp_error = ! empty( $phpmailer->ErrorInfo ) ? $phpmailer->ErrorInfo : 'No PHPMailer error info.';
 
-    if (!$admin_sent || !$user_sent) {
+    error_log('Academy admin mail: ' . ($admin_sent ? 'SUCCESS' : 'FAILED'));
+    error_log('Academy user mail:  ' . ($user_sent  ? 'SUCCESS' : 'FAILED'));
+    if ( ! $admin_sent || ! $user_sent ) {
+        error_log('PHPMailer ErrorInfo: ' . $smtp_error);
+    }
+
+    if ( ! $admin_sent || ! $user_sent ) {
         wp_send_json_error([
-            'message' => 'Unable to send email.'
+            'message' => 'Unable to send email. Check browser console for SMTP details.',
+            'smtp_error' => $smtp_error,
         ]);
     }
 
@@ -965,6 +972,9 @@ get_header();
                     applyErrors(data.data.fields);
                 } else {
                     var msg = (data.data && data.data.message) || 'Submission failed. Please try again.';
+                    if (data.data && data.data.smtp_error) {
+                        console.error('[PolyBlog Academy] SMTP error:', data.data.smtp_error);
+                    }
                     var gen = document.getElementById('academy-general-error');
                     if (gen) { gen.textContent = msg; gen.style.display = 'block'; }
                 }
