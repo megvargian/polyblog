@@ -710,16 +710,16 @@ add_action( 'wp_mail_failed', function ( $error ) {
     error_log( '[wp_mail_failed] ' . implode( ' | ', $error->get_error_messages() ) );
 } );
 
-if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
-    add_action( 'phpmailer_init', function ( $phpmailer ) {
-        $phpmailer->isSMTP();
-        $phpmailer->Host       = POLYBLOG_SMTP_HOST;
-        $phpmailer->SMTPAuth   = true;
-        $phpmailer->Port       = POLYBLOG_SMTP_PORT;
-        $phpmailer->SMTPSecure = POLYBLOG_SMTP_SECURE;
-        $phpmailer->Username   = POLYBLOG_SMTP_USER;
-        $phpmailer->Password   = POLYBLOG_SMTP_PASS;
-        $phpmailer->From       = POLYBLOG_SMTP_FROM;
-        $phpmailer->FromName   = POLYBLOG_SMTP_NAME;
-    } );
-}
+// if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
+//     add_action( 'phpmailer_init', function ( $phpmailer ) {
+//         $phpmailer->isSMTP();
+//         $phpmailer->Host       = POLYBLOG_SMTP_HOST;
+//         $phpmailer->SMTPAuth   = true;
+//         $phpmailer->Port       = POLYBLOG_SMTP_PORT;
+//         $phpmailer->SMTPSecure = POLYBLOG_SMTP_SECURE;
+//         $phpmailer->Username   = POLYBLOG_SMTP_USER;
+//         $phpmailer->Password   = POLYBLOG_SMTP_PASS;
+//         $phpmailer->From       = POLYBLOG_SMTP_FROM;
+//         $phpmailer->FromName   = POLYBLOG_SMTP_NAME;
+//     } );
+// }
