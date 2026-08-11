@@ -706,20 +706,16 @@ if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
     require_once get_template_directory() . '/inc/smtp-config.php';
 }
 
-add_action( 'wp_mail_failed', function ( $error ) {
-    error_log( '[wp_mail_failed] ' . implode( ' | ', $error->get_error_messages() ) );
-} );
-
-// if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
-//     add_action( 'phpmailer_init', function ( $phpmailer ) {
-//         $phpmailer->isSMTP();
-//         $phpmailer->Host       = POLYBLOG_SMTP_HOST;
-//         $phpmailer->SMTPAuth   = true;
-//         $phpmailer->Port       = POLYBLOG_SMTP_PORT;
-//         $phpmailer->SMTPSecure = POLYBLOG_SMTP_SECURE;
-//         $phpmailer->Username   = POLYBLOG_SMTP_USER;
-//         $phpmailer->Password   = POLYBLOG_SMTP_PASS;
-//         $phpmailer->From       = POLYBLOG_SMTP_FROM;
-//         $phpmailer->FromName   = POLYBLOG_SMTP_NAME;
-//     } );
-// }
+if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
+    add_action( 'phpmailer_init', function ( $phpmailer ) {
+        $phpmailer->isSMTP();
+        $phpmailer->Host       = 'smtppro.zoho.com';
+        $phpmailer->SMTPAuth   = true;
+        $phpmailer->Port       = 465;
+        $phpmailer->SMTPSecure = 'ssl';
+        $phpmailer->Username   = 'hello@polybloglb.com';
+        $phpmailer->Password   = 'S3$lyiuo';
+        $phpmailer->From       = 'hello@polybloglb.com';
+        $phpmailer->FromName   = 'PolyBlog';
+    } );
+}
