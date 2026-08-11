@@ -711,8 +711,8 @@ if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
         $phpmailer->isSMTP();
         $phpmailer->Host       = 'smtppro.zoho.com';
         $phpmailer->SMTPAuth   = true;
-        $phpmailer->Port       = 465;
-        $phpmailer->SMTPSecure = 'ssl';
+        $phpmailer->Port       = 587;
+        $phpmailer->SMTPSecure = 'tls';
         $phpmailer->Username   = 'hello@polybloglb.com';
         $phpmailer->Password   = 'S3$lyiuo';
         $phpmailer->From       = 'hello@polybloglb.com';
