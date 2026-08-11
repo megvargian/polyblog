@@ -700,3 +700,22 @@ add_filter( 'bloginfo', 'polyblog_bloginfo_name', 10, 2 );
 //     $query->set('suppress_filters', true);
 
 // });
+
+// ─── SMTP configuration via PHPMailer ──────────────────────────────────────
+if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
+    require_once get_template_directory() . '/inc/smtp-config.php';
+}
+
+if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
+    add_action( 'phpmailer_init', function ( $phpmailer ) {
+        $phpmailer->isSMTP();
+        $phpmailer->Host       = POLYBLOG_SMTP_HOST;
+        $phpmailer->SMTPAuth   = true;
+        $phpmailer->Port       = POLYBLOG_SMTP_PORT;
+        $phpmailer->SMTPSecure = POLYBLOG_SMTP_SECURE;
+        $phpmailer->Username   = POLYBLOG_SMTP_USER;
+        $phpmailer->Password   = POLYBLOG_SMTP_PASS;
+        $phpmailer->From       = POLYBLOG_SMTP_FROM;
+        $phpmailer->FromName   = POLYBLOG_SMTP_NAME;
+    } );
+}

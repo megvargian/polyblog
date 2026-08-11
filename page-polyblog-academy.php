@@ -175,7 +175,7 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
     $email_data = array_merge( $pd, [ 'education' => $edu_label ] );
     $headers    = [
         'Content-Type: text/html; charset=UTF-8',
-        'From: PolyBlog Academy <noreply@polybloglb.com>',
+        'From: PolyBlog <hello@polybloglb.com>',
     ];
 
     $admin_sent = wp_mail(
