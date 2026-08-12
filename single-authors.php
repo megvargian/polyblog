@@ -99,12 +99,14 @@ endif;
                             </a>
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-<?php echo $is_arabic_content ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic_content ? 'rtl' : 'ltr'; ?>">
+                            <div class="text-<?php echo $is_arabic_content ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic_content ? 'rtl' : 'ltr'; ?>" style="text-align: <?php echo $is_arabic_content ? 'right' : 'left'; ?>;">
                                 <a class="<?php echo $is_arabic_title ? 'ar-bold' : 'en-bold'; ?> mb-3 d-block text-decoration-none text-white"
+                                    style="font-size: 1.35rem; line-height: 1.45; text-align: <?php echo $is_arabic_title ? 'right' : 'left'; ?>;"
                                     href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
                                     <?php echo esc_html($article_title); ?>
                                 </a>
                                 <a class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5 d-block text-decoration-none text-white"
+                                    style="text-align: <?php echo $is_arabic ? 'right' : 'left'; ?>;"
                                     href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
                                     <?php echo esc_html($get_excerpt); ?>
                                 </a>
