@@ -76,7 +76,9 @@ endif;
                     $article_title = get_the_title($article_id);
                     $get_image = get_field('article_thumbnail', $article_id) != '' ? get_field('article_thumbnail', $article_id) : get_the_post_thumbnail_url($article_id);
                     $get_excerpt = get_the_excerpt($article_id);
+                    $is_arabic_title = preg_match('/[\x{0600}-\x{06FF}]/u', $article_title);
                     $is_arabic = preg_match('/[\x{0600}-\x{06FF}]/u', $get_excerpt);
+                    $is_arabic_content = $is_arabic_title || $is_arabic;
                     $is_youtube_video = get_field('youtube_url', $article_id);
                     $target_url = $is_youtube_video ? esc_url($is_youtube_video) : esc_url($article_link);
                     $link_target = $is_youtube_video ? ' target="_blank" rel="noopener noreferrer"' : '';
@@ -97,7 +99,11 @@ endif;
                             </a>
                         </div>
                         <div class="col-7 d-flex justify-content-center align-items-center">
-                            <div class="text-<?php echo $is_arabic ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic ? 'rtl' : 'ltr'; ?>">
+                            <div class="text-<?php echo $is_arabic_content ? 'right' : 'left'; ?>" dir="<?php echo $is_arabic_content ? 'rtl' : 'ltr'; ?>">
+                                <a class="<?php echo $is_arabic_title ? 'ar-bold' : 'en-bold'; ?> mb-3 d-block text-decoration-none text-white"
+                                    href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
+                                    <?php echo esc_html($article_title); ?>
+                                </a>
                                 <a class="<?php echo $is_arabic ? 'ar-regular' : 'en-regular'; ?> mb-5 d-block text-decoration-none text-white"
                                     href="<?php echo $target_url; ?>"<?php echo $link_target; ?>>
                                     <?php echo esc_html($get_excerpt); ?>
@@ -116,7 +122,7 @@ endif;
             </div>
         </div>
         <div class="row publish-with-us-img justify-content-center">
-            <div class="col-7 py-5">
+            <div class="col-12 py-5">
                 <a href="http://polybloglb.com/#contact-us-section">
                     <img class="w-100 d-block"
                         src="https://polybloglb.com/wp-content/uploads/2026/06/publish-with-us.jpg.jpeg" />
