@@ -45,10 +45,10 @@ $header_fields = get_fields('options');
 
     <?php
     // --- Open Graph & Twitter Card meta tags for social media sharing ---
-    $og_site_name    = get_bloginfo('name');
+    $og_site_name    = 'Polyblog Lebanon';
     $og_url          = esc_url( ( is_ssl() ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
     $og_type         = 'website';
-    $og_title        = get_bloginfo('name');
+    $og_title        = 'Polyblog Lebanon';
     $og_description  = $meta_description;
     $og_image        = '';
     $og_image_width  = '';
@@ -58,7 +58,6 @@ $header_fields = get_fields('options');
         // Single article page
         setup_postdata( $GLOBALS['post'] );
         $og_type        = 'article';
-        $og_title       = get_the_title();
         $og_url         = get_permalink();
         $raw_excerpt    = get_the_excerpt();
         $og_description = $raw_excerpt ? wp_strip_all_tags( $raw_excerpt ) : $meta_description;
@@ -72,7 +71,6 @@ $header_fields = get_fields('options');
     } elseif ( is_singular('authors') ) {
         // Single author page
         $og_type        = 'profile';
-        $og_title       = get_the_title();
         $og_url         = get_permalink();
         $author_fields  = get_fields();
         // Use bio fields if available, fall back to site description
@@ -132,9 +130,9 @@ $header_fields = get_fields('options');
         <div id="content" class="site-content ">
             <div class="site-title">
                 <a href="http://polybloglb.com/">
-                    <p class="en"><?php echo $header_fields['header_top_headline']['en_text']; ?></p>
+                    <p class="en">Polyblog Lebanon</p>
                     <div class="white-line d-none d-lg-flex"></div>
-                    <p class="ar"><?php echo $header_fields['header_top_headline']['ar_text']; ?></p>
+                    <p class="ar">بوليبلوغ لبنان</p>
                 </a>
                 <div class="white-line d-block d-lg-none"></div>
             </div>
