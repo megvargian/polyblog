@@ -131,6 +131,22 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
         wp_send_json_error( [ 'message' => 'Security check failed.' ] );
     }
 
+    // Honeypot: real users leave this blank; bots fill it.
+    if ( ! empty( $_POST['website'] ) ) {
+        wp_send_json_success( [ 'message' => 'Application submitted successfully.' ] );
+    }
+
+    // Timestamp token: reject if submitted in under 3 s or token is tampered.
+    $raw_token = sanitize_text_field( wp_unslash( $_POST['form_token'] ?? '' ) );
+    $token_parts = explode( '|', $raw_token, 2 );
+    if ( count( $token_parts ) !== 2
+        || ! hash_equals( hash_hmac( 'sha256', $token_parts[0], wp_salt( 'auth' ) ), $token_parts[1] )
+        || ( time() - (int) $token_parts[0] ) < 3
+        || ( time() - (int) $token_parts[0] ) > 3600
+    ) {
+        wp_send_json_error( [ 'message' => 'Security check failed. Please reload and try again.' ] );
+    }
+
     $pd = [
         'full_name'      => sanitize_text_field( wp_unslash( $_POST['full_name']       ?? '' ) ),
         'dob'            => sanitize_text_field( wp_unslash( $_POST['dob']             ?? '' ) ),
@@ -291,6 +307,9 @@ add_action( 'wp_head', function () {
 .academy-form-title h2 { margin: 0; }
 .academy-form-title .en-bold { display: block; font-size: clamp(1.1rem,2.5vw,1.8rem); color: #fff; text-transform: uppercase; letter-spacing: 4px; }
 .academy-form-title .ar-bold { display: block; font-size: clamp(0.95rem,2vw,1.3rem); color: #ffdb0b; margin-top: 0.45rem; }
+
+/* Honeypot trap — must be invisible to real users */
+.hp-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 
 /* Required note */
 .academy-req-note { font-family: "Lexend-Regular", sans-serif; font-size: 0.8rem; color: #777; display: block; margin-bottom: 2rem; }
@@ -574,7 +593,17 @@ get_header();
             <div class="row" id="academy-form-row">
                 <div class="col-lg-8 col-12 mx-auto">
                     <form method="POST" class="academy-form" id="academy-application-form" novalidate>
-                        <?php wp_nonce_field( 'polyblog_academy_form', 'academy_nonce' ); ?>
+                        <?php
+                        wp_nonce_field( 'polyblog_academy_form', 'academy_nonce' );
+                        $ts = time();
+                        $token = $ts . '|' . hash_hmac( 'sha256', (string) $ts, wp_salt( 'auth' ) );
+                        ?>
+                        <input type="hidden" name="form_token" value="<?php echo esc_attr( $token ); ?>">
+                        <!-- Honeypot: hidden from real users, visible to bots -->
+                        <div class="hp-trap" aria-hidden="true" tabindex="-1">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <span class="academy-req-note"><sup>*</sup> Required / مطلوب</span>
 
                         <!-- ── 1. Full Name ──────────────────────────────── -->
