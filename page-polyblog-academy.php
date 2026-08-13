@@ -179,7 +179,7 @@ if ( 'POST' === $_SERVER['REQUEST_METHOD']
     ];
 
     $admin_sent = wp_mail(
-        'kouyoumdjianmike@gmail.com',
+        'polybloglb@gmail.com',
         'New PolyBlog Academy Application – ' . $pd['full_name'],
         polyblog_academy_admin_email($email_data),
         $headers
