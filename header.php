@@ -130,9 +130,9 @@ $header_fields = get_fields('options');
         <div id="content" class="site-content ">
             <div class="site-title">
                 <a href="http://polybloglb.com/">
-                    <p class="en">Polyblog Lebanon</p>
+                    <p class="en"><?php echo $header_fields['header_top_headline']['en_text']; ?></p>
                     <div class="white-line d-none d-lg-flex"></div>
-                    <p class="ar">بوليبلوغ لبنان</p>
+                    <p class="ar"><?php echo $header_fields['header_top_headline']['ar_text']; ?></p>
                 </a>
                 <div class="white-line d-block d-lg-none"></div>
             </div>
