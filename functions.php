@@ -708,13 +708,19 @@ if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
 if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
     add_action( 'phpmailer_init', function ( $phpmailer ) {
         $phpmailer->isSMTP();
-        $phpmailer->Host       = 'smtppro.zoho.com';
+        $phpmailer->Host       = POLYBLOG_SMTP_HOST;
         $phpmailer->SMTPAuth   = true;
-        $phpmailer->Port       = 587;
-        $phpmailer->SMTPSecure = 'tls';
-        $phpmailer->Username   = 'hello@polybloglb.com';
-        $phpmailer->Password   = 'S3$lyiuo';
-        $phpmailer->From       = 'hello@polybloglb.com';
-        $phpmailer->FromName   = 'PolyBlog';
+        $phpmailer->Port       = POLYBLOG_SMTP_PORT;
+        $phpmailer->SMTPSecure = POLYBLOG_SMTP_SECURE;
+        $phpmailer->Username   = POLYBLOG_SMTP_USER;
+        $phpmailer->Password   = POLYBLOG_SMTP_PASS;
+        $phpmailer->From       = POLYBLOG_SMTP_FROM;
+        $phpmailer->FromName   = POLYBLOG_SMTP_NAME;
+        $phpmailer->CharSet    = 'UTF-8';
+        // Log the full SMTP conversation to the PHP error log for debugging.
+        $phpmailer->SMTPDebug  = 2;
+        $phpmailer->Debugoutput = static function ( string $str, int $level ) {
+            error_log( 'SMTP (' . $level . '): ' . trim( $str ) );
+        };
     } );
 }
