@@ -707,8 +707,8 @@ if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
 
 if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
     // Force the From address for every wp_mail() call — must come before phpmailer_init.
-    add_filter( 'wp_mail_from',      fn() => POLYBLOG_SMTP_FROM );
-    add_filter( 'wp_mail_from_name', fn() => POLYBLOG_SMTP_NAME );
+    add_filter( 'wp_mail_from',      fn() => 'hello@polybloglb.com' );
+    add_filter( 'wp_mail_from_name', fn() => 'PolyBlog' );
 
     add_action( 'phpmailer_init', function ( $phpmailer ) {
         $phpmailer->isSMTP();
@@ -774,26 +774,24 @@ function polyblog_handle_contact_form(): void {
         wp_send_json_error( [ 'errors' => $errors ], 422 );
     }
 
-    $admin_to  = defined( 'POLYBLOG_SMTP_FROM' ) ? POLYBLOG_SMTP_FROM : get_option( 'admin_email' );
-    $site_name = defined( 'POLYBLOG_SMTP_NAME' ) ? POLYBLOG_SMTP_NAME : get_bloginfo( 'name' );
-    $data      = compact( 'name', 'email', 'country', 'phone', 'social', 'interests', 'writings', 'languages', 'pitch' );
+    $data = compact( 'name', 'email', 'country', 'phone', 'social', 'interests', 'writings', 'languages', 'pitch' );
 
     wp_mail(
-        $admin_to,
+        'hello@polybloglb.com',
         'New Contributor Submission: ' . $name,
         polyblog_contact_admin_email( $data ),
         [
             'Content-Type: text/html; charset=UTF-8',
-            'From: ' . $site_name . ' <' . $admin_to . '>',
+            'From: PolyBlog <hello@polybloglb.com>',
             'Reply-To: ' . $name . ' <' . $email . '>',
         ]
     );
 
     wp_mail(
         $email,
-        'Thank you for reaching out to ' . $site_name . '!',
-        polyblog_contact_thankyou_email( $name, $site_name ),
-        [ 'Content-Type: text/html; charset=UTF-8', 'From: ' . $site_name . ' <' . $admin_to . '>' ]
+        'Thank you for reaching out to PolyBlog!',
+        polyblog_contact_thankyou_email( $name, 'PolyBlog' ),
+        [ 'Content-Type: text/html; charset=UTF-8', 'From: PolyBlog <hello@polybloglb.com>' ]
     );
 
     wp_send_json_success( [ 'message' => 'Your message has been sent! We will get back to you soon.' ] );
