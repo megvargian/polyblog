@@ -778,7 +778,11 @@ function polyblog_handle_contact_form(): void {
         $admin_to,
         'New Contributor Submission: ' . $name,
         polyblog_contact_admin_email( $data ),
-        [ 'Content-Type: text/html; charset=UTF-8', 'Reply-To: ' . $name . ' <' . $email . '>' ]
+        [
+            'Content-Type: text/html; charset=UTF-8',
+            'From: ' . $site_name . ' <' . $admin_to . '>',
+            'Reply-To: ' . $name . ' <' . $email . '>',
+        ]
     );
 
     wp_mail(
