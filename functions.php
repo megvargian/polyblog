@@ -724,3 +724,124 @@ if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
         };
     } );
 }
+
+// ─── Contact Form AJAX Handler ──────────────────────────────────────────────
+add_action( 'wp_ajax_polyblog_contact',        'polyblog_handle_contact_form' );
+add_action( 'wp_ajax_nopriv_polyblog_contact', 'polyblog_handle_contact_form' );
+
+function polyblog_handle_contact_form(): void {
+    if ( ! check_ajax_referer( 'polyblog_contact_nonce', 'pb_nonce', false ) ) {
+        wp_send_json_error( [ 'message' => 'Security check failed.' ], 403 );
+    }
+
+    $name      = sanitize_text_field( wp_unslash( $_POST['pb_name']      ?? '' ) );
+    $email     = sanitize_email(      wp_unslash( $_POST['pb_email']     ?? '' ) );
+    $country   = sanitize_text_field( wp_unslash( $_POST['pb_country']   ?? '' ) );
+    $phone     = sanitize_text_field( wp_unslash( $_POST['pb_phone']     ?? '' ) );
+    $social    = sanitize_text_field( wp_unslash( $_POST['pb_social']    ?? '' ) );
+    $interests = sanitize_text_field( wp_unslash( $_POST['pb_interests'] ?? '' ) );
+    $writings  = sanitize_text_field( wp_unslash( $_POST['pb_writings']  ?? '' ) );
+    $languages = sanitize_text_field( wp_unslash( $_POST['pb_languages'] ?? '' ) );
+    $pitch     = sanitize_textarea_field( wp_unslash( $_POST['pb_pitch'] ?? '' ) );
+    // Mobile-only social fields
+    $instagram = sanitize_text_field( wp_unslash( $_POST['pb_instagram'] ?? '' ) );
+    $facebook  = sanitize_text_field( wp_unslash( $_POST['pb_facebook']  ?? '' ) );
+    $twitter   = sanitize_text_field( wp_unslash( $_POST['pb_twitter']   ?? '' ) );
+    $youtube   = sanitize_text_field( wp_unslash( $_POST['pb_youtube']   ?? '' ) );
+
+    if ( empty( $social ) ) {
+        $parts  = array_filter( [
+            $instagram ? 'Instagram: ' . $instagram : '',
+            $facebook  ? 'Facebook: '  . $facebook  : '',
+            $twitter   ? 'Twitter: '   . $twitter   : '',
+            $youtube   ? 'YouTube: '   . $youtube   : '',
+        ] );
+        $social = implode( ', ', $parts );
+    }
+
+    $errors = [];
+    if ( empty( $name ) )                          $errors['pb_name']      = 'Name is required.';
+    if ( empty( $email ) || ! is_email( $email ) ) $errors['pb_email']     = 'A valid email address is required.';
+    if ( empty( $phone ) )                         $errors['pb_phone']     = 'Phone number is required.';
+    if ( empty( $interests ) )                     $errors['pb_interests'] = 'Areas of interest are required.';
+    if ( empty( $pitch ) )                         $errors['pb_pitch']     = 'Please write your pitch.';
+
+    if ( ! empty( $errors ) ) {
+        wp_send_json_error( [ 'errors' => $errors ], 422 );
+    }
+
+    $admin_to  = defined( 'POLYBLOG_SMTP_FROM' ) ? POLYBLOG_SMTP_FROM : get_option( 'admin_email' );
+    $site_name = defined( 'POLYBLOG_SMTP_NAME' ) ? POLYBLOG_SMTP_NAME : get_bloginfo( 'name' );
+    $data      = compact( 'name', 'email', 'country', 'phone', 'social', 'interests', 'writings', 'languages', 'pitch' );
+
+    wp_mail(
+        $admin_to,
+        'New Contributor Submission: ' . $name,
+        polyblog_contact_admin_email( $data ),
+        [ 'Content-Type: text/html; charset=UTF-8', 'Reply-To: ' . $name . ' <' . $email . '>' ]
+    );
+
+    wp_mail(
+        $email,
+        'Thank you for reaching out to ' . $site_name . '!',
+        polyblog_contact_thankyou_email( $name, $site_name ),
+        [ 'Content-Type: text/html; charset=UTF-8', 'From: ' . $site_name . ' <' . $admin_to . '>' ]
+    );
+
+    wp_send_json_success( [ 'message' => 'Your message has been sent! We will get back to you soon.' ] );
+}
+
+function polyblog_contact_admin_email( array $d ): string {
+    $phone_full = trim( esc_html( $d['country'] ) . ' ' . esc_html( $d['phone'] ) );
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
+.wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.hdr{background:#111;padding:28px 30px;text-align:center}
+.hdr h1{color:#fff;margin:0;font-size:20px;letter-spacing:.5px}
+.hdr span{color:#c9a84c}
+.body{padding:28px 30px}
+.field{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #eee}
+.field label{display:block;font-weight:700;color:#666;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.field p{margin:0;color:#111;font-size:15px}
+.pitch{background:#f8f8f8;border-left:3px solid #c9a84c;padding:14px 16px;white-space:pre-wrap;font-size:14px;line-height:1.6;color:#333}
+.ftr{background:#111;padding:14px;text-align:center;color:#666;font-size:11px}
+</style></head><body><div class="wrap">
+<div class="hdr"><h1>New Submission &mdash; <span>PolyBlog</span></h1></div>
+<div class="body">
+<div class="field"><label>Name</label><p>' . esc_html( $d['name'] ) . '</p></div>
+<div class="field"><label>Email</label><p>' . esc_html( $d['email'] ) . '</p></div>
+<div class="field"><label>Phone</label><p>' . $phone_full . '</p></div>
+<div class="field"><label>Social Media</label><p>' . ( $d['social'] ? esc_html( $d['social'] ) : '&mdash;' ) . '</p></div>
+<div class="field"><label>Areas of Interest</label><p>' . esc_html( $d['interests'] ) . '</p></div>
+<div class="field"><label>Previous Writings</label><p>' . ( $d['writings'] ? esc_html( $d['writings'] ) : '&mdash;' ) . '</p></div>
+<div class="field"><label>Languages</label><p>' . ( $d['languages'] ? esc_html( $d['languages'] ) : '&mdash;' ) . '</p></div>
+<div class="field" style="border-bottom:none"><label>Pitch</label><div class="pitch">' . esc_html( $d['pitch'] ) . '</div></div>
+</div>
+<div class="ftr">PolyBlog &mdash; Contributor Submission</div>
+</div></body></html>';
+}
+
+function polyblog_contact_thankyou_email( string $name, string $site_name ): string {
+    $year = gmdate( 'Y' );
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
+.wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.hdr{background:#111;padding:44px 30px;text-align:center}
+.hdr h1{color:#fff;margin:0 0 8px;font-size:28px}
+.hdr p{color:#c9a84c;margin:0;font-size:13px;letter-spacing:.5px}
+.body{padding:36px 30px;color:#333;font-size:15px;line-height:1.7}
+.body h2{color:#111;margin-top:0;font-size:18px}
+.cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#111;color:#fff;text-decoration:none;border-radius:4px;font-size:14px}
+.ftr{background:#f0f0f0;padding:16px;text-align:center;color:#aaa;font-size:11px}
+</style></head><body><div class="wrap">
+<div class="hdr"><h1>Thank You!</h1><p>We&rsquo;ve received your submission</p></div>
+<div class="body">
+<h2>Hi ' . esc_html( $name ) . ',</h2>
+<p>Thank you for reaching out to <strong>' . esc_html( $site_name ) . '</strong>! We&rsquo;ve received your submission and our team will review it carefully.</p>
+<p>We&rsquo;ll get back to you as soon as possible. In the meantime, feel free to explore our latest content.</p>
+<a href="https://polybloglb.com" class="cta">Visit PolyBlog</a>
+<p style="margin-top:24px">Warm regards,<br><strong>The PolyBlog Team</strong></p>
+</div>
+<div class="ftr">&copy; ' . $year . ' PolyBlog. All rights reserved.</div>
+</div></body></html>';
+}
