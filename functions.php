@@ -706,6 +706,10 @@ if ( file_exists( get_template_directory() . '/inc/smtp-config.php' ) ) {
 }
 
 if ( defined( 'POLYBLOG_SMTP_HOST' ) ) {
+    // Force the From address for every wp_mail() call — must come before phpmailer_init.
+    add_filter( 'wp_mail_from',      fn() => POLYBLOG_SMTP_FROM );
+    add_filter( 'wp_mail_from_name', fn() => POLYBLOG_SMTP_NAME );
+
     add_action( 'phpmailer_init', function ( $phpmailer ) {
         $phpmailer->isSMTP();
         $phpmailer->Host       = POLYBLOG_SMTP_HOST;
