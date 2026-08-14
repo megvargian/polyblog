@@ -47,7 +47,7 @@ if(!isMob()){ ?>
                     </div>
                 </div> -->
             <div class="form_validation_parent">
-                <form id="polyblog-contact-desktop" novalidate>
+                <form id="polyblog-contact-desktop" novalidate dir="rtl">
                     <?php wp_nonce_field( 'polyblog_contact_nonce', 'pb_nonce' ); ?>
                     <div class="row justify-content-center">
                         <div class="col-5">
@@ -74,7 +74,7 @@ if(!isMob()){ ?>
                                     <li class="mx-2 ar-regular"><p>&#1593;&#1585;&#1576;&#1610;</p></li>
                                     <li class="en-regular"><p>French</p></li>
                                 </ul>
-                                <label for="languages">:I CAN WRITE IN</label>
+                                <label for="languages" style="text-align: left;">:I CAN WRITE IN</label>
                             </div>
                             <input type="hidden" name="pb_languages" class="hidden-input" value="">
                         </div>
@@ -85,8 +85,8 @@ if(!isMob()){ ?>
                         <div class="col-1 d-flex justify-content-center align-items-center">
                             <button type="submit" class="submit-button">
                                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/assets/images/send-icon.svg" alt="submit-icon">
+                                <span class="contact-form-submit-btn text-center" style="font-family:'Lexend-Bold'; display: flex; justify-content: center; ">Submit</span>
                             </button>
-                            <span class="contact-form-submit-btn text-center" style="font-family:'Lexend-Bold'; display: flex; justify-content: center; ">Submit</span>
                         </div>
                     </div>
                 </form>
