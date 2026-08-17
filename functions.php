@@ -766,6 +766,7 @@ function polyblog_handle_contact_form(): void {
     $errors = [];
     if ( empty( $name ) )                          $errors['pb_name']      = 'Name is required.';
     if ( empty( $email ) || ! is_email( $email ) ) $errors['pb_email']     = 'A valid email address is required.';
+    if ( empty( $country ) )                       $errors['pb_country']   = 'Country is required.';
     if ( empty( $phone ) )                         $errors['pb_phone']     = 'Phone number is required.';
     if ( empty( $interests ) )                     $errors['pb_interests'] = 'Areas of interest are required.';
     if ( empty( $pitch ) )                         $errors['pb_pitch']     = 'Please write your pitch.';
