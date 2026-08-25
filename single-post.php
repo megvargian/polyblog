@@ -15,7 +15,7 @@ $author_post_id = get_field('author');
 $author_id = get_post_field('post_author', $author_post_id);
 $secondary_author_id = get_field('secondary_author', $post_id);
 if($secondary_author_id) {
-    $secondatauthor_name = get_the_title($secondary_author_id);
+    $secondary_author_name = get_the_title($secondary_author_id);
     $secondary_author_link = get_permalink($secondary_author_id);
 }
 $author_name = get_the_title($author_post_id);
@@ -194,7 +194,7 @@ if (have_posts()):
                 </div>
                 <div class="col-2">
                     <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
-                        alt="<?php echo $secondary_author_title ?>" />
+                        alt="<?php echo $secondary_author_name; ?>" />
                 </div>
             </div>
             <?php } ?>
