@@ -178,6 +178,19 @@ if (have_posts()):
                             <strong><?php echo $secondary_author_name; ?></strong>
                         </h2>
                     </a>
+                    <div class="tags">
+                        <p>
+                            <?php
+                                $total_tags = count($tags);
+                                foreach ($tags as $index => $tag) {
+                                    echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                                    if ($index < $total_tags - 1) {
+                                        echo ' / ';
+                                    }
+                                }
+                            ?>
+                        </p>
+                    </div>
                 </div>
                 <div class="col-2">
                     <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
