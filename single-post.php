@@ -13,6 +13,11 @@ get_header(); ?>
 $post_id = get_the_ID();
 $author_post_id = get_field('author');
 $author_id = get_post_field('post_author', $author_post_id);
+$secondary_author_id = get_field('secondary_author', $post_id);
+if($secondary_author_id) {
+    $secondatauthor_name = get_the_title($secondary_author_id);
+    $secondary_author_link = get_permalink($secondary_author_id);
+}
 $author_name = get_the_title($author_post_id);
 $author_link = get_permalink($author_post_id);
 $categories = get_the_category();
@@ -76,18 +81,19 @@ if (have_posts()):
         </div> -->
     </div>
     <?php if ($get_mobile_image && isMob()) { ?>
-        <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" class="mobile-feature-image w-100 d-block d-lg-none" />
-        <div class="w-100 d-none d-lg-block">
-            <?php the_post_thumbnail('full'); ?>
-        </div>
+    <img src="<?php echo esc_url($get_mobile_image); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"
+        class="mobile-feature-image w-100 d-block d-lg-none" />
+    <div class="w-100 d-none d-lg-block">
+        <?php the_post_thumbnail('full'); ?>
+    </div>
     <?php } else if(isMob()) { ?>
-        <div class="w-100">
-            <?php the_post_thumbnail('full'); ?>
-        </div>
+    <div class="w-100">
+        <?php the_post_thumbnail('full'); ?>
+    </div>
     <?php } else { ?>
-        <div class="w-100">
-            <?php the_post_thumbnail('full'); ?>
-        </div>
+    <div class="w-100">
+        <?php the_post_thumbnail('full'); ?>
+    </div>
     <?php } ?>
 
 </div>
@@ -148,14 +154,14 @@ if (have_posts()):
                     <div class="tags">
                         <p>
                             <?php
-                                    $total_tags = count($tags);
-                                    foreach ($tags as $index => $tag) {
-                                        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                        if ($index < $total_tags - 1) {
-                                            echo ' / ';
-                                        }
+                                $total_tags = count($tags);
+                                foreach ($tags as $index => $tag) {
+                                    echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                                    if ($index < $total_tags - 1) {
+                                        echo ' / ';
                                     }
-                                    ?>
+                                }
+                            ?>
                         </p>
                     </div>
                 </div>
@@ -164,6 +170,21 @@ if (have_posts()):
                         alt="<?php echo $author_title ?>" />
                 </div>
             </div>
+            <?php if($secondary_author_id) { ?>
+            <div class="row">
+                <div class="col-10 author-tags-container">
+                    <a href="<?php echo $secondary_author_link; ?>">
+                        <h2 class="author-name">
+                            <strong><?php echo $secondary_author_name; ?></strong>
+                        </h2>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
+                        alt="<?php echo $secondary_author_title ?>" />
+                </div>
+            </div>
+            <?php } ?>
         </div>
     </div>
     <div class="row py-2 single-article-header-mobile">
@@ -206,14 +227,14 @@ if (have_posts()):
             <div class="tags">
                 <p>
                     <?php
-                            $total_tags = count($tags);
-                            foreach ($tags as $index => $tag) {
-                                echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                if ($index < $total_tags - 1) {
-                                    echo ' / ';
-                                }
+                        $total_tags = count($tags);
+                        foreach ($tags as $index => $tag) {
+                            echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                            if ($index < $total_tags - 1) {
+                                echo ' / ';
                             }
-                            ?>
+                        }
+                    ?>
                 </p>
             </div>
         </div>
