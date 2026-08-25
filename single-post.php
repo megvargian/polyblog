@@ -152,19 +152,6 @@ if (have_posts()):
                                 <strong><?php echo $secondary_author_name; ?></strong>
                             </h2>
                         </a>
-                        <div class="tags">
-                            <p>
-                                <?php
-                                    $total_tags = count($tags);
-                                    foreach ($tags as $index => $tag) {
-                                        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                        if ($index < $total_tags - 1) {
-                                            echo ' / ';
-                                        }
-                                    }
-                                ?>
-                            </p>
-                        </div>
                     </div>
                     <div class="col-2">
                         <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
@@ -249,9 +236,7 @@ if (have_posts()):
                 </p>
             </div>
         </div>
-    </div>
-    <?php if($secondary_author_id) { ?>
-        <div class="row pb-2 author-tags-container-mobile">
+        <?php if($secondary_author_id) { ?>
             <div class="col">
                 <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
                     alt="<?php echo $secondary_author_name ?>" />
@@ -262,22 +247,9 @@ if (have_posts()):
                         <strong><?php echo $secondary_author_name; ?></strong>
                     </h2>
                 </a>
-                <div class="tags">
-                    <p>
-                        <?php
-                            $total_tags = count($tags);
-                            foreach ($tags as $index => $tag) {
-                                echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                if ($index < $total_tags - 1) {
-                                    echo ' / ';
-                                }
-                            }
-                        ?>
-                    </p>
-                </div>
             </div>
-        </div>
-    <?php } ?>
+        <?php } ?>
+    </div>
     <div class="row py-2 single-post-font-controls-row">
         <div class="col px-lg-5 px-2 d-flex justify-content-end">
             <div class="single-post-font-controls" role="group" aria-label="Text size controls">
