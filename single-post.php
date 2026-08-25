@@ -145,7 +145,33 @@ if (have_posts()):
         </div>
         <div class="col-8 col-sm-9">
             <div class="row">
-                <div class="col-10 author-tags-container">
+                <?php if($secondary_author_id) { ?>
+                    <div class="col author-tags-container">
+                        <a href="<?php echo $secondary_author_link; ?>">
+                            <h2 class="author-name">
+                                <strong><?php echo $secondary_author_name; ?></strong>
+                            </h2>
+                        </a>
+                        <div class="tags">
+                            <p>
+                                <?php
+                                    $total_tags = count($tags);
+                                    foreach ($tags as $index => $tag) {
+                                        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
+                                        if ($index < $total_tags - 1) {
+                                            echo ' / ';
+                                        }
+                                    }
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
+                            alt="<?php echo $secondary_author_name; ?>" />
+                    </div>
+                <?php } ?>
+                <div class="col author-tags-container">
                     <a href="<?php echo $author_link; ?>">
                         <h2 class="author-name">
                             <strong><?php echo $author_name; ?></strong>
@@ -170,34 +196,6 @@ if (have_posts()):
                         alt="<?php echo $author_title ?>" />
                 </div>
             </div>
-            <?php if($secondary_author_id) { ?>
-            <div class="row">
-                <div class="col-10 author-tags-container">
-                    <a href="<?php echo $secondary_author_link; ?>">
-                        <h2 class="author-name">
-                            <strong><?php echo $secondary_author_name; ?></strong>
-                        </h2>
-                    </a>
-                    <div class="tags">
-                        <p>
-                            <?php
-                                $total_tags = count($tags);
-                                foreach ($tags as $index => $tag) {
-                                    echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
-                                    if ($index < $total_tags - 1) {
-                                        echo ' / ';
-                                    }
-                                }
-                            ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <img class="author-image" src="<?php echo get_the_post_thumbnail_url($secondary_author_id); ?>"
-                        alt="<?php echo $secondary_author_name; ?>" />
-                </div>
-            </div>
-            <?php } ?>
         </div>
     </div>
     <div class="row py-2 single-article-header-mobile">
