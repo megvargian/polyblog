@@ -59,6 +59,7 @@ $header_fields = get_fields('options');
         setup_postdata( $GLOBALS['post'] );
         $og_type        = 'article';
         $og_url         = get_permalink();
+        $og_title       = get_the_title();
         $raw_excerpt    = get_the_excerpt();
         $og_description = $raw_excerpt ? wp_strip_all_tags( $raw_excerpt ) : $meta_description;
 
@@ -72,6 +73,7 @@ $header_fields = get_fields('options');
         // Single author page
         $og_type        = 'profile';
         $og_url         = get_permalink();
+        $og_title       = get_the_title();
         $author_fields  = get_fields();
         // Use bio fields if available, fall back to site description
         $bio_en = isset($author_fields['author_bio_en']) ? $author_fields['author_bio_en'] : '';

@@ -1827,6 +1827,31 @@ body.hide_scroll {
   text-align: justify !important;
   text-align-last: end !important;
 }
+.single-post-container .single-post-share-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.single-post-container .single-post-share-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  color: #fff;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+.single-post-container .single-post-share-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.single-post-container .single-post-share-icon:hover {
+  opacity: 0.7;
+}
+
 .single-post-container .single-post-font-controls {
   display: inline-flex;
   align-items: center;
