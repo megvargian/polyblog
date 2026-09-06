@@ -55,6 +55,60 @@ $pb_country_codes = [
     'Venezuela' => '+58', 'Vietnam' => '+84', 'Yemen' => '+967', 'Zambia' => '+260',
     'Zimbabwe' => '+263',
 ];
+
+/**
+ * Resolve the visitor's real IP address, respecting common proxy headers.
+ */
+if ( ! function_exists( 'pb_get_visitor_ip' ) ) {
+    function pb_get_visitor_ip(): string {
+        foreach ( [ 'HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR' ] as $key ) {
+            if ( ! empty( $_SERVER[ $key ] ) ) {
+                $ip = trim( explode( ',', sanitize_text_field( wp_unslash( $_SERVER[ $key ] ) ) )[0] );
+                if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+                    return $ip;
+                }
+            }
+        }
+        return '';
+    }
+}
+
+/**
+ * Look up the visitor's country name from their IP via a free geo-IP API, cached per IP.
+ */
+if ( ! function_exists( 'pb_get_country_by_ip' ) ) {
+    function pb_get_country_by_ip( string $ip ): string {
+        if ( '' === $ip || ! filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE ) ) {
+            return '';
+        }
+        $cache_key = 'pb_geoip_' . md5( $ip );
+        $cached    = get_transient( $cache_key );
+        if ( false !== $cached ) {
+            return $cached;
+        }
+        $response = wp_remote_get( 'https://ipapi.co/' . rawurlencode( $ip ) . '/json/', [ 'timeout' => 3 ] );
+        $country  = '';
+        if ( ! is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
+            $body = json_decode( wp_remote_retrieve_body( $response ), true );
+            if ( ! empty( $body['country_name'] ) && empty( $body['error'] ) ) {
+                $country = sanitize_text_field( $body['country_name'] );
+            }
+        }
+        set_transient( $cache_key, $country, 12 * HOUR_IN_SECONDS );
+        return $country;
+    }
+}
+
+$pb_default_country_value = '';
+try {
+    $pb_visitor_country = pb_get_country_by_ip( pb_get_visitor_ip() );
+    if ( '' !== $pb_visitor_country && isset( $pb_country_codes[ $pb_visitor_country ] ) ) {
+        $pb_default_country_value = $pb_visitor_country . ' (' . $pb_country_codes[ $pb_visitor_country ] . ')';
+    }
+} catch ( \Throwable $e ) {
+    // Detection is best-effort; leave the field empty on any failure.
+    $pb_default_country_value = '';
+}
 ?>
 <style>
 .pb-error{color:#e74c3c;font-size:11px;display:block;margin-top:3px}
@@ -112,7 +166,7 @@ if(!isMob()){ ?>
                                     <span class="pb-error" data-for="pb_phone"></span>
                                 </div>
                                 <div class="col-4 padding-left-0">
-                                    <input type="text" name="pb_country" list="pb-country-options-desktop" autocomplete="country" placeholder="country" aria-label="Search country name" required>
+                                    <input type="text" name="pb_country" list="pb-country-options-desktop" autocomplete="country" placeholder="country" aria-label="Search country name" value="<?php echo esc_attr( $pb_default_country_value ); ?>" required>
                                     <datalist id="pb-country-options-desktop">
                                         <?php foreach ( $pb_country_codes as $country_name => $country_code ) { ?>
                                             <option value="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>"></option>
@@ -260,7 +314,7 @@ if(!isMob()){ ?>
                                     <span class="pb-error" data-for="pb_email"></span>
                                     <div class="row px-0">
                                         <div class="col-4 padding-left-0">
-                                            <input type="text" name="pb_country" list="pb-country-options-mobile" autocomplete="country" placeholder="country" aria-label="Search country name" required>
+                                            <input type="text" name="pb_country" list="pb-country-options-mobile" autocomplete="country" placeholder="country" aria-label="Search country name" value="<?php echo esc_attr( $pb_default_country_value ); ?>" required>
                                             <datalist id="pb-country-options-mobile">
                                                 <?php foreach ( $pb_country_codes as $country_name => $country_code ) { ?>
                                                     <option value="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>"></option>
