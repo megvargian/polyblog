@@ -5,6 +5,7 @@
 
 get_header();
 $header_fields = get_fields('option');
+if(isMob()) {
 ?>
 <div class="video-container d-block d-md-none">
     <video class="video" width="100%" autoplay loop muted>
@@ -13,6 +14,7 @@ $header_fields = get_fields('option');
     </video>
 </div>
 <?php
+}
 while ( have_posts() ) : the_post();
     the_content();
 endwhile;
