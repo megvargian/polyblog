@@ -152,6 +152,24 @@ function wp_bootstrap_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 
+/**
+ * Send baseline security headers (clickjacking, HSTS, cross-origin isolation).
+ */
+if ( ! function_exists( 'polyblog_security_headers' ) ) {
+	function polyblog_security_headers() {
+		if ( headers_sent() ) {
+			return;
+		}
+		header( 'X-Frame-Options: SAMEORIGIN' );
+		header( "Content-Security-Policy: frame-ancestors 'self'" );
+		header( 'Cross-Origin-Opener-Policy: same-origin-allow-popups' );
+		if ( is_ssl() ) {
+			header( 'Strict-Transport-Security: max-age=31536000; includeSubDomains' );
+		}
+	}
+}
+add_action( 'send_headers', 'polyblog_security_headers' );
+
 
 function wp_bootstrap_starter_password_form() {
     global $post;
