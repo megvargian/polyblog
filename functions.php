@@ -229,6 +229,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Background Image Block of Homepage'),
                 'render_template'   => 'blocks/bg_img_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -240,6 +244,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the YouTube Playlist Block of Homepage'),
                 'render_template'   => 'blocks/yt_playlist_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode' => false,
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -251,6 +259,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the YouTube Featured Videos Block of Homepage'),
                 'render_template'   => 'blocks/yt_featured_vids_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode' => false,
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -262,6 +274,10 @@ function my_acf_init_block_types()
                 'description'       => __('Desktop-only featured videos swiper with image, title and link'),
                 'render_template'   => 'blocks/featured_vids_swiper_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode' => false,
+                ),
                 'icon'              => 'format-video',
                 'keywords'          => array('featured', 'videos', 'swiper'),
             )
@@ -273,6 +289,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Message from Editor Block of Homepage'),
                 'render_template'   => 'blocks/message_from_editor_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit',
+                'supports'        => array(
+                    'mode' => false,
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -284,6 +304,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Contact us Block of Homepage'),
                 'render_template'   => 'blocks/contactus_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -295,6 +319,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Single featured article block of Homepage'),
                 'render_template'   => 'blocks/single_featured_article_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -306,6 +334,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Author Swiper Block of Homepage'),
                 'render_template'   => 'blocks/author_swiper_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -317,6 +349,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Author Block of Homepage'),
                 'render_template'   => 'blocks/author_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -328,6 +364,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Single Author Article Swiper Block of Homepage'),
                 'render_template'   => 'blocks/single_author_article_swiper_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -339,6 +379,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Three featured articles block of Homepage'),
                 'render_template'   => 'blocks/three_featured_articles_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -350,6 +394,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Block One of Our Segments'),
                 'render_template'   => 'blocks/our-segments/Block_1.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -361,6 +409,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Block Two of Our Segments'),
                 'render_template'   => 'blocks/our-segments/Block_2.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
@@ -372,6 +424,10 @@ function my_acf_init_block_types()
                 'description'       => __('This is the Our Program Block'),
                 'render_template'   => 'blocks/our-program_block.php',
                 'category'          => 'formatting',
+                'mode'            => 'edit', // <- the important line
+                'supports'        => array(
+                    'mode' => false, // hides the preview/edit toggle
+                ),
                 'icon'              => 'admin-comments',
                 'keywords'          => array('testimonial', 'quote'),
             )
