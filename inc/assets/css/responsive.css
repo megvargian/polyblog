@@ -573,8 +573,13 @@
   }
   .contact-us-section input,
   .contact-us-section textarea,
+  .contact-us-section select[name="pb_country"],
   .contact-us-section label {
     margin-bottom: 15px;
+  }
+  .contact-us-section select[name="pb_country"] {
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem 0.75rem 0.5rem;
   }
   .contact-us-section .container form {
     border-radius: 40px;

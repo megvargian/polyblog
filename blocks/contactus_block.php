@@ -99,17 +99,14 @@ if ( ! function_exists( 'pb_get_country_by_ip' ) ) {
     }
 }
 
-$pb_default_country_value = '';
 $pb_default_country_name  = '';
 try {
     $pb_visitor_country = pb_get_country_by_ip( pb_get_visitor_ip() );
     if ( '' !== $pb_visitor_country && isset( $pb_country_codes[ $pb_visitor_country ] ) ) {
         $pb_default_country_name  = $pb_visitor_country;
-        $pb_default_country_value = $pb_visitor_country . ' (' . $pb_country_codes[ $pb_visitor_country ] . ')';
     }
 } catch ( \Throwable $e ) {
     // Detection is best-effort; leave the field empty on any failure.
-    $pb_default_country_value = '';
     $pb_default_country_name  = '';
 }
 ?>
@@ -317,12 +314,12 @@ if(!isMob()){ ?>
                                     <span class="pb-error" data-for="pb_email"></span>
                                     <div class="row px-0">
                                         <div class="col-4 padding-left-0">
-                                            <input type="text" name="pb_country" list="pb-country-options-mobile" autocomplete="country" placeholder="country" aria-label="Search country name" value="<?php echo esc_attr( $pb_default_country_value ); ?>" required>
-                                            <datalist id="pb-country-options-mobile">
+                                        <select name="pb_country" aria-label="Country" required>
+                                            <option value="" data-label="Country">Country</option>
                                                 <?php foreach ( $pb_country_codes as $country_name => $country_code ) { ?>
-                                                    <option value="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>"></option>
+                                                <option value="<?php echo esc_attr( $country_code ); ?>" data-label="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>" <?php selected( $pb_default_country_name, $country_name ); ?>><?php echo esc_html( $country_name . ' (' . $country_code . ')' ); ?></option>
                                                 <?php } ?>
-                                            </datalist>
+                                        </select>
                                             <span class="pb-error" data-for="pb_country"></span>
                                         </div>
                                         <div class="col-8">
@@ -386,24 +383,24 @@ if(!isMob()){ ?>
 <script>
 jQuery(document).ready(function ($) {
 
-    // Show country names and codes in the desktop dropdown, but only the code when closed.
-    var $desktopCountry = $('#polyblog-contact-desktop [name="pb_country"]');
-    function updateDesktopCountryLabels(showLabels) {
-        $desktopCountry.find('option').each(function () {
+    // Show country names and codes in the dropdown, but only the code when closed.
+    var $countrySelects = $('#polyblog-contact-desktop, #polyblog-contact-mobile').find('[name="pb_country"]');
+    function updateCountryLabels(showLabels) {
+        $countrySelects.find('option').each(function () {
             var $option = $(this);
             var label = $option.attr('data-label');
             $option.text(showLabels || !this.selected ? label : (this.value || label));
         });
     }
-    updateDesktopCountryLabels(false);
-    $desktopCountry.on('focus', function () {
-        updateDesktopCountryLabels(true);
+    updateCountryLabels(false);
+    $countrySelects.on('focus', function () {
+        updateCountryLabels(true);
     }).on('blur', function () {
-        updateDesktopCountryLabels(false);
+        updateCountryLabels(false);
     });
-    $('#polyblog-contact-desktop').on('reset', function () {
+    $('#polyblog-contact-desktop, #polyblog-contact-mobile').on('reset', function () {
         window.setTimeout(function () {
-            updateDesktopCountryLabels(false);
+            updateCountryLabels(false);
         });
     });
 

@@ -1114,10 +1114,12 @@ body.hide_scroll {
 }
 .contact-us-section input,
 .contact-us-section textarea,
+.contact-us-section select[name="pb_country"],
 .contact-us-section label,
 .contact-us-section .select2,
 .contact-us-section-light input,
 .contact-us-section-light textarea,
+.contact-us-section-light select[name="pb_country"],
 .contact-us-section-light label,
 .contact-us-section-light .select2 {
   font-family: "Lexend-Bold";
@@ -1129,6 +1131,19 @@ body.hide_scroll {
   padding: 1rem 0.8rem;
   margin-bottom: 5px;
   text-transform: uppercase;
+  color: #fff;
+}
+.contact-us-section select[name="pb_country"],
+.contact-us-section-light select[name="pb_country"] {
+  background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position: calc(100% - 1rem) 50%, calc(100% - 0.65rem) 50%;
+  background-repeat: no-repeat;
+  background-size: 0.35rem 0.35rem;
+  cursor: pointer;
+}
+.contact-us-section select[name="pb_country"] option,
+.contact-us-section-light select[name="pb_country"] option {
+  background-color: #171717;
   color: #fff;
 }
 .contact-us-section label,
@@ -1254,6 +1269,7 @@ body.hide_scroll {
 }
 .contact-us-section-light input,
 .contact-us-section-light textarea,
+.contact-us-section-light select[name="pb_country"],
 .contact-us-section-light label,
 .contact-us-section-light .select2 {
   color: #000 !important;
@@ -1264,6 +1280,13 @@ body.hide_scroll {
 }
 .contact-us-section-light input::placeholder {
   color: #000 !important;
+}
+.contact-us-section-light select[name="pb_country"] {
+  background-image: linear-gradient(45deg, transparent 50%, #000 50%), linear-gradient(135deg, #000 50%, transparent 50%);
+}
+.contact-us-section-light select[name="pb_country"] option {
+  background-color: #e3e1e2;
+  color: #000;
 }
 .contact-us-section-light .select2-search .select2-search__field {
   color: #000 !important;

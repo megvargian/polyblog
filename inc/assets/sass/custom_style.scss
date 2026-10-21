@@ -1202,6 +1202,7 @@ body.hide_scroll {
   color: #fff;
   input,
   textarea,
+  select[name="pb_country"],
   label,
   .select2 {
     font-family: $en-bold;
@@ -1213,6 +1214,21 @@ body.hide_scroll {
     padding: 1rem 0.8rem;
     margin-bottom: 5px;
     text-transform: uppercase;
+    color: #fff;
+  }
+  select[name="pb_country"] {
+    background-image:
+      linear-gradient(45deg, transparent 50%, #fff 50%),
+      linear-gradient(135deg, #fff 50%, transparent 50%);
+    background-position:
+      calc(100% - 1rem) 50%,
+      calc(100% - 0.65rem) 50%;
+    background-repeat: no-repeat;
+    background-size: 0.35rem 0.35rem;
+    cursor: pointer;
+  }
+  select[name="pb_country"] option {
+    background-color: #171717;
     color: #fff;
   }
   label {
@@ -1324,6 +1340,7 @@ body.hide_scroll {
   color: #000 !important;
   input,
   textarea,
+  select[name="pb_country"],
   label,
   .select2 {
     color: #000 !important;
@@ -1334,6 +1351,15 @@ body.hide_scroll {
   }
   input::placeholder {
     color: #000 !important;
+  }
+  select[name="pb_country"] {
+    background-image:
+      linear-gradient(45deg, transparent 50%, #000 50%),
+      linear-gradient(135deg, #000 50%, transparent 50%);
+  }
+  select[name="pb_country"] option {
+    background-color: #e3e1e2;
+    color: #000;
   }
   .select2-search .select2-search__field {
     color: #000 !important;

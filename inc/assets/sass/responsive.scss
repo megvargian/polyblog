@@ -600,8 +600,13 @@
     background-color: #c90500;
     input,
     textarea,
+    select[name="pb_country"],
     label {
       margin-bottom: 15px;
+    }
+    select[name="pb_country"] {
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem 0.75rem 0.5rem;
     }
     .container {
       form {
