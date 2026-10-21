@@ -100,14 +100,17 @@ if ( ! function_exists( 'pb_get_country_by_ip' ) ) {
 }
 
 $pb_default_country_value = '';
+$pb_default_country_name  = '';
 try {
     $pb_visitor_country = pb_get_country_by_ip( pb_get_visitor_ip() );
     if ( '' !== $pb_visitor_country && isset( $pb_country_codes[ $pb_visitor_country ] ) ) {
+        $pb_default_country_name  = $pb_visitor_country;
         $pb_default_country_value = $pb_visitor_country . ' (' . $pb_country_codes[ $pb_visitor_country ] . ')';
     }
 } catch ( \Throwable $e ) {
     // Detection is best-effort; leave the field empty on any failure.
     $pb_default_country_value = '';
+    $pb_default_country_name  = '';
 }
 ?>
 <style>
@@ -166,12 +169,12 @@ if(!isMob()){ ?>
                                     <span class="pb-error" data-for="pb_phone"></span>
                                 </div>
                                 <div class="col-4 padding-left-0">
-                                    <input type="text" name="pb_country" list="pb-country-options-desktop" autocomplete="country" placeholder="country" aria-label="Search country name" value="<?php echo esc_attr( $pb_default_country_value ); ?>" required>
-                                    <datalist id="pb-country-options-desktop">
+                                    <select name="pb_country" aria-label="Country" required>
+                                        <option value="" data-label="Country">Country</option>
                                         <?php foreach ( $pb_country_codes as $country_name => $country_code ) { ?>
-                                            <option value="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>"></option>
+                                            <option value="<?php echo esc_attr( $country_code ); ?>" data-label="<?php echo esc_attr( $country_name . ' (' . $country_code . ')' ); ?>" <?php selected( $pb_default_country_name, $country_name ); ?>><?php echo esc_html( $country_name . ' (' . $country_code . ')' ); ?></option>
                                         <?php } ?>
-                                    </datalist>
+                                    </select>
                                     <span class="pb-error" data-for="pb_country"></span>
                                 </div>
                             </div>
@@ -190,7 +193,7 @@ if(!isMob()){ ?>
                             <input type="hidden" name="pb_languages" class="hidden-input" value="">
                         </div>
                         <div class="col-5 custom-text-size-for-placeholder">
-                            <textarea name="pb_pitch" class="h-100" placeholder="Write your pitch here" required></textarea>
+                            <textarea name="pb_pitch" class="h-100" placeholder="Write your pitch here" required dir="ltr"></textarea>
                             <span class="pb-error" data-for="pb_pitch"></span>
                         </div>
                         <div class="col-1 d-flex justify-content-center align-items-center">
@@ -382,6 +385,27 @@ if(!isMob()){ ?>
 <?php } ?>
 <script>
 jQuery(document).ready(function ($) {
+
+    // Show country names and codes in the desktop dropdown, but only the code when closed.
+    var $desktopCountry = $('#polyblog-contact-desktop [name="pb_country"]');
+    function updateDesktopCountryLabels(showLabels) {
+        $desktopCountry.find('option').each(function () {
+            var $option = $(this);
+            var label = $option.attr('data-label');
+            $option.text(showLabels || !this.selected ? label : (this.value || label));
+        });
+    }
+    updateDesktopCountryLabels(false);
+    $desktopCountry.on('focus', function () {
+        updateDesktopCountryLabels(true);
+    }).on('blur', function () {
+        updateDesktopCountryLabels(false);
+    });
+    $('#polyblog-contact-desktop').on('reset', function () {
+        window.setTimeout(function () {
+            updateDesktopCountryLabels(false);
+        });
+    });
 
     // ── Error helpers ──────────────────────────────────────────────────────
     function pbValidate($scope, $form) {
