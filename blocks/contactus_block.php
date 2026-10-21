@@ -520,3 +520,9 @@ jQuery(document).ready(function ($) {
     });
 });
 </script>
+
+<style>
+    .contact-us-section-light select[name="pb_country"]{
+        padding: .85rem !important
+    }
+</style>
