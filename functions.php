@@ -875,17 +875,17 @@ function polyblog_handle_contact_form(): void {
 function polyblog_contact_admin_email( array $d ): string {
     $phone_full = trim( esc_html( $d['country'] ) . ' ' . esc_html( $d['phone'] ) );
     return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
-body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
+body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
 .wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-.hdr{background:#111;padding:28px 30px;text-align:center}
-.hdr h1{color:#fff;margin:0;font-size:20px;letter-spacing:.5px}
-.hdr span{color:#c9a84c}
+.hdr{background:#181617;padding:28px 30px;text-align:center}
+.hdr h1{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#fff;margin:0;font-size:20px;letter-spacing:.5px}
+.hdr span{color:#ffdd00}
 .body{padding:28px 30px}
 .field{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #eee}
-.field label{display:block;font-weight:700;color:#666;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.field p{margin:0;color:#111;font-size:15px}
-.pitch{background:#f8f8f8;border-left:3px solid #c9a84c;padding:14px 16px;white-space:pre-wrap;font-size:14px;line-height:1.6;color:#333}
-.ftr{background:#111;padding:14px;text-align:center;color:#666;font-size:11px}
+.field label{display:block;font-weight:700;color:#c90500;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.field p{margin:0;color:#181617;font-size:15px}
+.pitch{background:#fff9d9;border-left:3px solid #ffdd00;padding:14px 16px;white-space:pre-wrap;font-size:14px;line-height:1.6;color:#181617}
+.ftr{background:#181617;padding:14px;text-align:center;color:#fff;font-size:11px}
 </style></head><body><div class="wrap">
 <div class="hdr"><h1>New Submission &mdash; <span>PolyBlog</span></h1></div>
 <div class="body">
@@ -905,15 +905,15 @@ body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
 function polyblog_contact_thankyou_email( string $name, string $site_name ): string {
     $year = gmdate( 'Y' );
     return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
-body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
+body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
 .wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-.hdr{background:#111;padding:44px 30px;text-align:center}
-.hdr h1{color:#fff;margin:0 0 8px;font-size:28px}
-.hdr p{color:#c9a84c;margin:0;font-size:13px;letter-spacing:.5px}
-.body{padding:36px 30px;color:#333;font-size:15px;line-height:1.7}
-.body h2{color:#111;margin-top:0;font-size:18px}
-.cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#111;color:#fff;text-decoration:none;border-radius:4px;font-size:14px}
-.ftr{background:#f0f0f0;padding:16px;text-align:center;color:#aaa;font-size:11px}
+.hdr{background:#181617;padding:44px 30px;text-align:center}
+.hdr h1{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#fff;margin:0 0 8px;font-size:28px}
+.hdr p{color:#ffdd00;margin:0;font-size:13px;letter-spacing:.5px}
+.body{padding:36px 30px;color:#181617;font-size:15px;line-height:1.7}
+.body h2{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#c90500;margin-top:0;font-size:18px}
+.cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#c90500;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif}
+.ftr{background:#181617;padding:16px;text-align:center;color:#fff;font-size:11px}
 </style></head><body><div class="wrap">
 <div class="hdr"><h1>Thank You!</h1><p>We&rsquo;ve received your submission</p></div>
 <div class="body">
