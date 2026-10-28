@@ -878,6 +878,7 @@ function polyblog_contact_admin_email( array $d ): string {
 body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
 .wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 .hdr{background:#181617;padding:28px 30px;text-align:center}
+.pb-email-logo-dark{display:none!important}
 .hdr h1{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#fff;margin:0;font-size:20px;letter-spacing:.5px}
 .hdr span{color:#ffdd00}
 .body{padding:28px 30px}
@@ -886,8 +887,9 @@ body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;mar
 .field p{margin:0;color:#181617;font-size:15px}
 .pitch{background:#fff9d9;border-left:3px solid #ffdd00;padding:14px 16px;white-space:pre-wrap;font-size:14px;line-height:1.6;color:#181617}
 .ftr{background:#181617;padding:14px;text-align:center;color:#fff;font-size:11px}
+@media (prefers-color-scheme: dark){.pb-email-logo-light{display:none!important}.pb-email-logo-dark{display:block!important}}
 </style></head><body><div class="wrap">
-<div class="hdr"><h1>New Submission &mdash; <span>PolyBlog</span></h1></div>
+<div class="hdr">' . polyblog_email_logo() . '<h1>New Submission &mdash; <span>PolyBlog</span></h1></div>
 <div class="body">
 <div class="field"><label>Name</label><p>' . esc_html( $d['name'] ) . '</p></div>
 <div class="field"><label>Email</label><p>' . esc_html( $d['email'] ) . '</p></div>
@@ -908,14 +910,16 @@ function polyblog_contact_thankyou_email( string $name, string $site_name ): str
 body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px}
 .wrap{max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 .hdr{background:#181617;padding:44px 30px;text-align:center}
+.pb-email-logo-dark{display:none!important}
 .hdr h1{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#fff;margin:0 0 8px;font-size:28px}
 .hdr p{color:#ffdd00;margin:0;font-size:13px;letter-spacing:.5px}
 .body{padding:36px 30px;color:#181617;font-size:15px;line-height:1.7}
 .body h2{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#c90500;margin-top:0;font-size:18px}
 .cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#ffdd00;color:#181617;text-decoration:none;border-radius:4px;font-size:14px;font-weight:700;font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif}
 .ftr{background:#181617;padding:16px;text-align:center;color:#fff;font-size:11px}
+@media (prefers-color-scheme: dark){.pb-email-logo-light{display:none!important}.pb-email-logo-dark{display:block!important}}
 </style></head><body><div class="wrap">
-<div class="hdr"><h1>Thank You!</h1><p>We&rsquo;ve received your submission</p></div>
+<div class="hdr">' . polyblog_email_logo() . '<h1>Thank You!</h1><p>We&rsquo;ve received your submission</p></div>
 <div class="body">
 <h2>Hi ' . esc_html( $name ) . ',</h2>
 <p>Thank you for reaching out to <strong>' . esc_html( $site_name ) . '</strong>! We&rsquo;ve received your submission and our team will review it carefully.</p>
@@ -925,4 +929,11 @@ body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;mar
 </div>
 <div class="ftr">&copy; ' . $year . ' PolyBlog. All rights reserved.</div>
 </div></body></html>';
+}
+
+function polyblog_email_logo(): string {
+    return '<div style="margin:0 0 18px;text-align:center;">'
+        . '<img class="pb-email-logo-light" src="https://polybloglb.com/wp-content/uploads/2026/10/polyblog-red.png" alt="PolyBlog" width="160" style="display:block;width:160px;max-width:100%;height:auto;margin:0 auto;border:0;">'
+        . '<img class="pb-email-logo-dark" src="https://polybloglb.com/wp-content/uploads/2026/10/polyblog-white.png" alt="" width="160" style="display:none;width:160px;max-width:100%;height:auto;margin:0 auto;border:0;">'
+        . '</div>';
 }

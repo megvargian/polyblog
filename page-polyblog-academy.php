@@ -25,11 +25,15 @@ if ( ! function_exists( 'polyblog_academy_admin_email' ) ) {
               <td style="padding:11px 22px;border-bottom:1px solid #252225;font-family:Arial,sans-serif;font-size:13px;color:#fff;">' . $val . '</td>
             </tr>';
         }
-        return '<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
+        return '<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+.pb-email-logo-dark{display:none!important}
+@media (prefers-color-scheme: dark){.pb-email-logo-light{display:none!important}.pb-email-logo-dark{display:block!important}}
+</style></head>
 <body style="margin:0;padding:0;background:#0d0c0d;">
 <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#0d0c0d">
 <tr><td align="center" style="padding:40px 16px;">
 <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+  <tr><td align="center" style="background:#141213;padding:20px 28px 8px;">' . polyblog_email_logo() . '</td></tr>
   <tr><td style="background:#ffdb0b;padding:9px 28px;">
     <span style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#141213;">PolyBlog Academy</span>
   </td></tr>
@@ -59,11 +63,15 @@ if ( ! function_exists( 'polyblog_academy_thankyou_email' ) ) {
     function polyblog_academy_thankyou_email( string $name ) : string {
         $first = esc_html( explode( ' ', trim( $name ) )[0] );
         $full  = esc_html( $name );
-        return '<!DOCTYPE html><html><head><meta charset="UTF-8"></head>
+        return '<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+.pb-email-logo-dark{display:none!important}
+@media (prefers-color-scheme: dark){.pb-email-logo-light{display:none!important}.pb-email-logo-dark{display:block!important}}
+</style></head>
 <body style="margin:0;padding:0;background:#0d0c0d;">
 <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#0d0c0d">
 <tr><td align="center" style="padding:40px 16px;">
 <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+  <tr><td align="center" style="background:#141213;padding:20px 28px 8px;">' . polyblog_email_logo() . '</td></tr>
   <tr><td style="background:#ffdb0b;padding:9px 28px;">
     <span style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#141213;">PolyBlog Academy</span>
   </td></tr>
