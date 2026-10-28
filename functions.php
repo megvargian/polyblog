@@ -912,7 +912,7 @@ body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;mar
 .hdr p{color:#ffdd00;margin:0;font-size:13px;letter-spacing:.5px}
 .body{padding:36px 30px;color:#181617;font-size:15px;line-height:1.7}
 .body h2{font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif;color:#c90500;margin-top:0;font-size:18px}
-.cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#c90500;color:#fff;text-decoration:none;border-radius:4px;font-size:14px;font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif}
+.cta{display:inline-block;margin:20px 0 10px;padding:12px 30px;background:#ffdd00;color:#181617;text-decoration:none;border-radius:4px;font-size:14px;font-weight:700;font-family:"Lexend-Bold","Lexend-Regular",Lexend,Arial,sans-serif}
 .ftr{background:#181617;padding:16px;text-align:center;color:#fff;font-size:11px}
 </style></head><body><div class="wrap">
 <div class="hdr"><h1>Thank You!</h1><p>We&rsquo;ve received your submission</p></div>
@@ -920,7 +920,7 @@ body{font-family:"Lexend-Regular",Lexend,Arial,sans-serif;background:#f5f5f5;mar
 <h2>Hi ' . esc_html( $name ) . ',</h2>
 <p>Thank you for reaching out to <strong>' . esc_html( $site_name ) . '</strong>! We&rsquo;ve received your submission and our team will review it carefully.</p>
 <p>We&rsquo;ll get back to you as soon as possible. In the meantime, feel free to explore our latest content.</p>
-<a href="https://polybloglb.com" class="cta">Visit PolyBlog</a>
+<a href="https://polybloglb.com" class="cta" style="background-color:#ffdd00;color:#181617;font-weight:700">Visit PolyBlog</a>
 <p style="margin-top:24px">Warm regards,<br><strong>The PolyBlog Team</strong></p>
 </div>
 <div class="ftr">&copy; ' . $year . ' PolyBlog. All rights reserved.</div>
